@@ -2,9 +2,9 @@
 /*
 # ...except these folders/files
 !/datapacks/
-!/resourcepack/*
+!/resourcepack/
 !/resourcepack.zip
-!/project_assets/*
+!/project_assets/
 !.gitignore
 !/world_files/
 !/.github/workflows
