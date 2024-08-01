@@ -1,2 +1,0 @@
-scoreboard players set @s Class 9
-tellraw @p {"text":"\nSelected Class Mechanic","color":"dark_gray","bold":true,"extra":[{"text":"\na loadout focused on constructing turrets\n\nLoadout:\n","color":"gray","bold":false},{"translate":"double_chambered_scattergun"},{"text":"\n"},{"translate":"turret"},{"text":"\n"},{"translate":"wrench"},{"text":"\n"},{"translate":"last_resort"}]}

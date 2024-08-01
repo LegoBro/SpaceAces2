@@ -1,2 +1,0 @@
-scoreboard players set @s Class 6
-tellraw @p {"text":"\nSelected Class Healer","color":"dark_gray","bold":true,"extra":[{"text":"\na loadout focused entirely on healing\n\nLoadout:\n","color":"gray","bold":false},{"translate":"heal_pistol"},{"text":"\n"},{"translate":"angry_medic"},{"text":"\n"},{"translate":"over_heal_machine"},{"text":"\n"},{"translate":"days_work"}]}
