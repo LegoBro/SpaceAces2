@@ -1,0 +1,49 @@
+{
+  "id":6,
+  "name":"Healer",
+  "description":"a loadout focused entirely on healing",
+  "health":150,
+  "speed":130,
+  "aim_speed":110,
+  "item_color":"light_purple",
+  "helmet_color":"16716527",
+  "style": ["Sustainer","light_purple"],
+  "primary": {
+    "type":"gun",
+    "name":"heal_pistol",
+    "ammo":12,
+    "projectile_amount":1,
+    "delay":4,
+    "reload":25,
+    "sounds": {
+      "shoot":"gun.heal_pistol",
+      "reload":"gun.reload"
+    },
+    "projectile": {
+      "name":"heal_pistol",
+      "damage":7,
+      "speed":0,
+      "falloff":1,
+      "falloffstart":20,
+      "heal":10,
+      "inaccuracy":0
+    }
+  },
+  "secondary": {
+    "name":"angry_medic",
+    "duration":100,
+    "recharge":300,
+    "lore_lines":3
+  },
+  "tertiary": {
+    "name":"over_heal_machine",
+    "duration":200,
+    "recharge":400,
+    "lore_lines":2
+  },
+  "passive":{
+    "name":"days_work",
+    "lore_lines":2,
+    "command":"execute if entity @s[scores={last_shot=1..}] run function classes:healer/days_work/run"
+  }
+}

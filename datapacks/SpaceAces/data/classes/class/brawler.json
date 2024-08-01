@@ -1,0 +1,50 @@
+{
+  "id":7,
+  "name":"Brawler",
+  "description":"a tanky melee loadout",
+  "health":400,
+  "speed":90,
+  "aim_speed":100,
+  "item_color":"gold",
+  "helmet_color":"16743705",
+  "style": ["Guardian","green"],
+  "primary": {
+    "type":"melee",
+    "name":"plasma_sword",
+    "ammo":12,
+    "projectile_amount":1,
+    "delay":10,
+    "reload":40,
+    "display":"particle minecraft:sweep_attack ~ ~ ~",
+    "offset":"positioned ^ ^ ^1 positioned ~ ~1.5 ~ ",
+    "eff_range":3,
+    "sounds": {
+      "swipe":"entity.player.attack.sweep",
+      "reload":"minecraft:entity.illusioner.mirror_move"
+    },
+    "swipe": {
+      "damage":35,
+      "falloff":100,
+      "falloffstart":4,
+      "heal":0
+    }
+  },
+  "secondary": {
+    "name":"sword_throw",
+    "duration":5,
+    "recharge":100,
+    "lore_lines":3
+  },
+  "tertiary": {
+    "name":"spin_slash",
+    "duration":11,
+    "recharge":400,
+    "lore_lines":3,
+    "type":"repeat"
+  },
+  "passive":{
+    "name":"final_stance",
+    "lore_lines":2,
+    "command":"function classes:brawler/position/run"
+  }
+}

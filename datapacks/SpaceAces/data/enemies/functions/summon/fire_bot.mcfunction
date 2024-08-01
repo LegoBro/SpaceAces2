@@ -1,0 +1,2 @@
+summon endermite ~ ~ ~ {PersistenceRequired:1b,CustomNameVisible:1b,Team:"red",Health:20f,Tags:["entity","hb_mine_runner","fire_bot","bot","weak","init"],CustomName:"{\"text\":\"Fire Bot\"}",Attributes:[{Name:generic.max_health,Base:20},{Name:generic.follow_range,Base:128},{Name:generic.movement_speed,Base:.5},{Name:generic.attack_damage,Base:5},{Name:generic.armor,Base:0},{Name:generic.armor_toughness,Base:0}]}
+execute as @e[team=red,tag=bot,distance=...1,tag=init] at @s run function enemies:summon/init

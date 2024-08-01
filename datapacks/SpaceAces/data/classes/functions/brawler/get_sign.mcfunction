@@ -1,0 +1,1 @@
+give @p minecraft:oak_sign{display:{Name:"brawler"},BlockEntityTag:{Text2:"{\"text\":\"Brawler\",\"color\":\"gold\",\"bold\":true,\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function classes:brawler/select\"}}",Text3:"{\"text\":\"Guardian\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function classes:reselect\"}}"}}

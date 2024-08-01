@@ -1,0 +1,2 @@
+scoreboard players set @s Class 7
+tellraw @p {"text":"\nSelected Class Brawler","color":"dark_gray","bold":true,"extra":[{"text":"\na tanky melee loadout\n\nLoadout:\n","color":"gray","bold":false},{"translate":"plasma_sword"},{"text":"\n"},{"translate":"sword_throw"},{"text":"\n"},{"translate":"spin_slash"},{"text":"\n"},{"translate":"final_stance"}]}

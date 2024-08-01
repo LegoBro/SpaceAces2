@@ -1,0 +1,15 @@
+function classes:scout/get_sign
+function classes:soldier/get_sign
+function classes:sniper/get_sign
+function classes:bomber/get_sign
+function classes:gunner/get_sign
+function classes:healer/get_sign
+function classes:brawler/get_sign
+function classes:mobility/get_sign
+function classes:mechanic/get_sign
+function classes:scientist/get_sign
+function classes:infiltraitor/get_sign
+function classes:pyro/get_sign
+function classes:seeker/get_sign
+function classes:shocksmith/get_sign
+function classes:rocketeer/get_sign

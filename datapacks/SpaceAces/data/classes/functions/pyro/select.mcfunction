@@ -1,0 +1,2 @@
+scoreboard players set @s Class 12
+tellraw @p {"text":"\nSelected Class Pyro","color":"dark_gray","bold":true,"extra":[{"text":"\na tanky, fiery loadout\n\nLoadout:\n","color":"gray","bold":false},{"translate":"hot_air_blower"},{"text":"\n"},{"translate":"fire_bomb"},{"text":"\n"},{"translate":"immunity"},{"text":"\n"},{"translate":"turn_up"}]}
