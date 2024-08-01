@@ -1,0 +1,49 @@
+{
+  "id":11,
+  "name":"Infiltraitor",
+  "description":"a loadout focused on hiding behind enemy lines",
+  "health":100,
+  "speed":130,
+  "aim_speed":115,
+  "item_color":"gray",
+  "helmet_color":"16777215",
+  "style": ["Striker","red"],
+  "primary": {
+    "type":"gun",
+    "name":"plasma_pistol",
+    "ammo":6,
+    "projectile_amount":1,
+    "delay":15,
+    "reload":35,
+    "sounds": {
+      "shoot":"gun.heavy_pistol",
+      "reload":"gun.reload"
+    },
+    "projectile": {
+      "name":"heavy_pistol",
+      "damage":50,
+      "speed":0,
+      "falloff":1,
+      "falloffstart":40,
+      "heal":0,
+      "inaccuracy":0
+    }
+  },
+  "secondary": {
+    "name":"cloak",
+    "duration":100,
+    "recharge":200,
+    "lore_lines":2
+  },
+  "tertiary": {
+    "name":"jammer",
+    "duration":5,
+    "recharge":300,
+    "lore_lines":4
+  },
+  "passive":{
+    "name":"recloak",
+    "lore_lines":2,
+    "command":"function classes:infiltraitor/recloak/run"
+  }
+}

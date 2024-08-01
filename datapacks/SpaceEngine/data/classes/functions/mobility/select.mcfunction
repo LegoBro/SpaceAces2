@@ -1,0 +1,2 @@
+scoreboard players set @s Class 8
+tellraw @p {"text":"\nSelected Class Mobility","color":"dark_gray","bold":true,"extra":[{"text":"\na loadout based on vertical movement\n\nLoadout:\n","color":"gray","bold":false},{"translate":"unstable_surge_rifle"},{"text":"\n"},{"translate":"warp"},{"text":"\n"},{"translate":"flash_grenade"},{"text":"\n"},{"translate":"power_pants"}]}

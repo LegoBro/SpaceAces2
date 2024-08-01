@@ -1,0 +1,1 @@
+give @p minecraft:oak_sign{display:{Name:"pyro"},BlockEntityTag:{Text2:"{\"text\":\"Pyro\",\"color\":\"gold\",\"bold\":true,\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function classes:pyro/select\"}}",Text3:"{\"text\":\"Guardian\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function classes:reselect\"}}"}}

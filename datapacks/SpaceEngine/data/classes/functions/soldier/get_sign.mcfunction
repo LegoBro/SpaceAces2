@@ -1,0 +1,1 @@
+give @p minecraft:oak_sign{display:{Name:"soldier"},BlockEntityTag:{Text2:"{\"text\":\"Soldier\",\"color\":\"dark_blue\",\"bold\":true,\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function classes:soldier/select\"}}",Text3:"{\"text\":\"Striker\",\"color\":\"red\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function classes:reselect\"}}"}}

@@ -1,0 +1,2 @@
+scoreboard players set @s Class 4
+tellraw @p {"text":"\nSelected Class Bomber","color":"dark_gray","bold":true,"extra":[{"text":"\na very explosive loadout\n\nLoadout:\n","color":"gray","bold":false},{"translate":"plasma_grenade_launcher"},{"text":"\n"},{"translate":"sticky_bomb"},{"text":"\n"},{"translate":"detonator"},{"text":"\n"},{"translate":"bomb_voyage"}]}

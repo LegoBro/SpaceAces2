@@ -1,0 +1,2 @@
+scoreboard players set @s Class 13
+tellraw @p {"text":"\nSelected Class Seeker","color":"dark_gray","bold":true,"extra":[{"text":"\na loadout focused on seeking single enemies\n\nLoadout:\n","color":"gray","bold":false},{"translate":"plasma_spreader"},{"text":"\n"},{"translate":"poison_jab"},{"text":"\n"},{"translate":"slow_field"},{"text":"\n"},{"translate":"weak_glow"}]}

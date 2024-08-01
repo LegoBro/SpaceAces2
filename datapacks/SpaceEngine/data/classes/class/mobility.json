@@ -1,0 +1,49 @@
+{
+  "id":8,
+  "name":"Mobility",
+  "description":"a loadout based on vertical movement",
+  "health":150,
+  "speed":130,
+  "aim_speed":120,
+  "item_color":"green",
+  "helmet_color":"3669775",
+  "style": ["Striker","red"],
+  "primary": {
+    "type":"gun",
+    "name":"unstable_surge_rifle",
+    "ammo":15,
+    "projectile_amount":1,
+    "delay":3,
+    "reload":50,
+    "sounds": {
+      "shoot":"gun.rifle",
+      "reload":"gun.reload"
+    },
+    "projectile": {
+      "name":"unstable_rifle",
+      "damage":15,
+      "speed":0,
+      "falloff":2,
+      "falloffstart":15,
+      "heal":0,
+      "inaccuracy":1
+    }
+  },
+  "secondary": {
+    "name":"warp",
+    "duration":1,
+    "recharge":100,
+    "lore_lines":2
+  },
+  "tertiary": {
+    "name":"flash_grenade",
+    "duration":10,
+    "recharge":160,
+    "lore_lines":2
+  },
+  "passive":{
+    "name":"power_pants",
+    "lore_lines":2,
+    "command":"effect give @s jump_boost 1 1 true"
+  }
+}
