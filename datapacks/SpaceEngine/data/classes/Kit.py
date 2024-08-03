@@ -5,7 +5,7 @@ from Ability import Ability
 
 class Kit:
     def __init__(self, yaml):
-        self.path = f"./functions/{yaml['name']}/"
+        self.path = f"./function/{yaml['name']}/"
         self.id = yaml["id"]
         self.name = yaml["name"]
         self.description = yaml["description"]
@@ -19,6 +19,7 @@ class Kit:
         self.abilities = []
         for ability in yaml["abilities"]:
             self.abilities.append(Ability(ability))
+            
             pass
         print(self.abilities)
         pass
@@ -31,14 +32,16 @@ class Kit:
 
         tick = "## Ticking function for class (generated)"
         tick += f'\nscoreboard players set @s maxHealth {self.health}'
-        tick += f'\nitem replace entity @s[tag=!invis,scores={{crouching=0}},gamemode=!spectator] armor.head with minecraft:leather_helmet{{HideFlags:63,AttributeModifiers:[{{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:{(self.speed - 100 ) / 100},Operation:2,UUID:[I;-801381860,1374964116,-1510517210,267107606]}}],Unbreakable:1,display:{{color:{self.helmet_color}}},Enchantments:[{{id:"minecraft:binding_curse",lvl:1}}]}}'
-        tick += f'\nitem replace entity @s[tag=!invis,scores={{crouching=1..}},gamemode=!spectator] armor.head with minecraft:leather_helmet{{HideFlags:63,AttributeModifiers:[{{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:${(self.aim_speed - 100 ) / 100},Operation:2,UUID:[I;-801381860,1374964116,-1510517210,267107606]}}],Unbreakable:1,display:{{color:{self.helmet_color}}},Enchantments:[{{id:"minecraft:binding_curse",lvl:1}}]}}'
+        tick += f'\nitem replace entity @s[gamemode=!spectator,tag=!invis,scores={{crouching=0}}] armor.head with leather_helmet[unbreakable={{show_in_tooltip:false}},enchantments={{levels:{{"minecraft:binding_curse":1}},show_in_tooltip:false}},enchantment_glint_override=false,attribute_modifiers={{modifiers:[{{id:"movement_speed",type:"generic.movement_speed",amount:{(self.speed - 100 ) / 100},operation:"add_multiplied_base",slot:"head"}}],show_in_tooltip:false}},dyed_color={self.helmet_color}] 1'
+        #tick += f'\nitem replace entity @s[tag=!invis,scores={{crouching=0}},gamemode=!spectator] armor.head with minecraft:leather_helmet{{HideFlags:63,AttributeModifiers:[{{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:{(self.speed - 100 ) / 100},Operation:2,UUID:[I;-801381860,1374964116,-1510517210,267107606]}}],Unbreakable:1,display:{{color:{self.helmet_color}}},Enchantments:[{{id:"minecraft:binding_curse",lvl:1}}]}}'
+        tick += f'\nitem replace entity @s[gamemode=!spectator,tag=!invis,scores={{crouching=1..}}] armor.head with leather_helmet[unbreakable={{show_in_tooltip:false}},enchantments={{levels:{{"minecraft:binding_curse":1}},show_in_tooltip:false}},enchantment_glint_override=false,attribute_modifiers={{modifiers:[{{id:"movement_speed",type:"generic.movement_speed",amount:{(self.aim_speed - 100 ) / 100},operation:"add_multiplied_base",slot:"head"}}],show_in_tooltip:false}},dyed_color={self.helmet_color}] 1'
+        #tick += f'\nitem replace entity @s[tag=!invis,scores={{crouching=1..}},gamemode=!spectator] armor.head with minecraft:leather_helmet{{HideFlags:63,AttributeModifiers:[{{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:${(self.aim_speed - 100 ) / 100},Operation:2,UUID:[I;-801381860,1374964116,-1510517210,267107606]}}],Unbreakable:1,display:{{color:{self.helmet_color}}},Enchantments:[{{id:"minecraft:binding_curse",lvl:1}}]}}'
         #tick += f'execute if entity @s[scores={{activate_second=0}}] run item replace entity @s hotbar.1 with carrot_on_a_stick{{display:{{Name:"{{\"translate\":\"\"}}",Lore:["${secondaryLore}"]}},HideFlags:63,CustomModelData:${11000001+(10000*self.id)},Unbreakable:1}}'
         #tick += f'execute if entity @s[scores={{activate_second=1..}}] run item replace entity @s hotbar.1 with gray_dye'
         tick += f''
         tick += f''
         for ability in self.abilities: # Loop through abilities to handle them and add their stuff to the main tick function
-            ability.createFiles(self.path)
+            ability.createFiles(self.path, self.name)
             tick += f'\nexecute if entity @s[scores={{SelectedItem={ability.slot}}}] run function classes:{self.name}/{ability.name}/holding'
             tick += f'\nfunction classes:{self.name}/{ability.name}/display'
 

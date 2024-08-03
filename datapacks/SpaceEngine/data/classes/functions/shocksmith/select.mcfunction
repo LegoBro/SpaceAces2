@@ -1,2 +1,0 @@
-scoreboard players set @s Class 14
-tellraw @p {"text":"\nSelected Class Shocksmith","color":"dark_gray","bold":true,"extra":[{"text":"\nan energy focused support loadout\n\nLoadout:\n","color":"gray","bold":false},{"translate":"shock_hopper"},{"text":"\n"},{"translate":"stun"},{"text":"\n"},{"translate":"energy_sap"},{"text":"\n"},{"translate":"energy_dispersion"}]}

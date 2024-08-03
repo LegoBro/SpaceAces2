@@ -28,22 +28,22 @@ weapon:
     inaccuracy: 0
 abilities:
   - boost:
-    name: "boost"
-    style: "single_use"
-    slot: "1"
-    duration: 20
-    recharge: 60
-    lore_lines: 2
+      name: "boost"
+      style: "single_use"
+      slot: "1"
+      duration: 20
+      recharge: 60
+      lore_lines: 2
   - launch:
-    name: "launch"
-    style: "single_use"
-    slot: "2"
-    duration: 5
-    recharge: 200
-    lore_lines: 2
+      name: "launch"
+      style: "single_use"
+      slot: "2"
+      duration: 5
+      recharge: 200
+      lore_lines: 2
   - passive:
-    name: "adrenaline"
-    style: "passive"
-    slot: "3"
-    lore_lines: 3
-    command: "function classes:scout/adrenaline/run"
+      name: "adrenaline"
+      style: "passive"
+      slot: "3"
+      lore_lines: 3
+      command: "function classes:scout/adrenaline/run"

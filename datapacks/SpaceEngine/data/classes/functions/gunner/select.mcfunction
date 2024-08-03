@@ -1,2 +1,0 @@
-scoreboard players set @s Class 5
-tellraw @p {"text":"\nSelected Class Gunner","color":"dark_gray","bold":true,"extra":[{"text":"\na tanky, high firepower loadout\n\nLoadout:\n","color":"gray","bold":false},{"translate":"plasma_cannon"},{"text":"\n"},{"translate":"infinite_ammo"},{"text":"\n"},{"translate":"large_heal"},{"text":"\n"},{"translate":"top"}]}
