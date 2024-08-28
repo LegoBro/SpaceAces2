@@ -1,7 +1,7 @@
 # ignore everything...
 /*
 # ...except these folders/files
-/datapacks/**
+!/datapacks/**
 !/resourcepack/**
 !/resourcepack.zip
 !/project_assets/**
