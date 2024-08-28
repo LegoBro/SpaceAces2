@@ -1,0 +1,53 @@
+{
+  "id":12,
+  "name":"Pyro",
+  "description":"a tanky, fiery loadout",
+  "health":300,
+  "speed":95,
+  "aim_speed":95,
+  "item_color":"gold",
+  "helmet_color":"15202048",
+  "style": ["Guardian","green"],
+  "primary": {
+    "type":"launcher",
+    "name":"hot_air_blower",
+    "ammo":25,
+    "projectile_amount":1,
+    "delay":3,
+    "reload":100,
+    "fire_angle":0,
+    "sounds": {
+      "shoot":"minecraft:item.firecharge.use",
+      "reload":"gun.reload"
+    },
+    "projectile": {
+      "name":"hot_air",
+      "damage":5,
+      "speed":1.5,
+      "arc_rate":-5,
+      "falloff":1,
+      "falloffstart":5,
+      "heal":0,
+      "inaccuracy":5,
+      "model":11120004,
+      "impact_command":"function classes:pyro/hot_air_impact"
+    }
+  },
+  "secondary": {
+    "name":"fire_bomb",
+    "duration":100,
+    "recharge":300,
+    "lore_lines":2
+  },
+  "tertiary": {
+    "name":"immunity",
+    "duration":100,
+    "recharge":240,
+    "lore_lines":2
+  },
+  "passive":{
+    "name":"turn_up",
+    "lore_lines":2,
+    "command":"execute if score @s fire matches 1.. run effect give @s speed 1 1 true"
+  }
+}

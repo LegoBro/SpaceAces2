@@ -1,0 +1,21 @@
+#Displays the current maps and creates signs for them
+function help:83fd453cc17677f836eb423b2e652aafa11703b4bf1d1efe9f003fcdc03b3f93
+
+item replace entity @e[type=minecraft:armor_stand,tag=map_display_0] armor.head with minecraft:player_head[minecraft:profile={id:[I;-1978461553,900286104,-1962547148,1755042368],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjdhZDk2Y2IyYTRiMTRkMDE2MWYyODc5OTRkM2RiMTg3YWZkODcxNjRmMzk4N2I4N2U3ZjExOGQxZjU4NzkifX19"}]}]
+function help:bb5bc762f3ba90147b04a29478ea1e2a098948e72205e2e56b0286be155e5d24
+
+item replace entity @e[type=minecraft:armor_stand,tag=map_display_1] armor.head with minecraft:player_head[minecraft:profile={id:[I;-390367052,-1969533757,-1809310301,-1667706241],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDRiY2NmYmRhZmRlNDk1YjU3NDhiYzg0YTU0NzczNWU5MGYwNzYzODFhMTBjZmQxYzkyZGJiMDdjMWZkNWIifX19"}]}]
+function help:74a2b36de1e1dfd22f80352ff0315da6a80c80a749466b956a9b3a81d2330934
+
+item replace entity @e[type=minecraft:armor_stand,tag=map_display_2] armor.head with minecraft:player_head[minecraft:profile={id:[I;-271253769,723536704,-1997209812,-2116513330],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmE0YzRhZGZmYWJiNjM4ZTNlNDFhOTM5YjRkZjE1ZWYzODA4MGMxNmMzNzkwODExOTExZGFkZjYyNjEzZDYifX19"}]}]
+function help:ea6ad07031f9030f17e98479a2ef0ffb394877a448834e38ef7d4022256518b7
+
+item replace entity @e[type=minecraft:armor_stand,tag=map_display_3] armor.head with minecraft:player_head[minecraft:profile={id:[I;-551318515,-702788273,-2065171603,1390687630],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmFhZDZmZmFmNmZiOWE4ZWVhOGYzZGJlYTZkZGYzNDcyYTBhNTQ2YjVlMTk0YmQ1NWI0MzNiZDlkMTU4OTMwIn19fQ=="}]}]
+function help:91c1d09b6c8d03f9b728215eb038955d26d80207581bc745b8f4c0d46255040f
+
+item replace entity @e[type=minecraft:armor_stand,tag=map_display_4] armor.head with minecraft:player_head[minecraft:profile={id:[I;-7137246,-868987506,-1567040519,-1783015231],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2RiYWMxYmUwOWNiNGI1MzQzZGFiOTM0NTA4MDI3NzQ2MmZiOGQxYmIxOTEwOTg0YTM0NDQ3NzExYTRiMGMzNCJ9fX0="}]}]
+function help:6f1467cbb71557f805b7ff7aef93232b4cdfb360a155989eee0790e98c33d13c
+function help:242650a31d5259f867f158be2c411273bde5150f8e3ada0963de050184c4c631
+function help:58d7001a352e84ce21e8b400cf9bc3a4cc04f32a6f84a09371eae8ee870899fa
+function help:0be5ea805f8df92dd7d398e586fa592b3781a0ca782f6075494ae3149e117405
+return 1

@@ -1,0 +1,50 @@
+{
+  "id":2,
+  "name":"Soldier",
+  "description":"a perfectly balanced loadout",
+  "health":150,
+  "speed":125,
+  "aim_speed":90,
+  "item_color":"dark_blue",
+  "helmet_color":"176",
+  "style": ["Striker","red"],
+  "primary": {
+    "type":"gun",
+    "name":"surge_rifle",
+    "ammo":20,
+    "projectile_amount":1,
+    "delay":3,
+    "reload":50,
+    "sounds": {
+      "shoot":"gun.rifle",
+      "reload":"gun.reload"
+    },
+    "projectile": {
+      "name":"rifle",
+      "damage":12,
+      "speed":0,
+      "falloff":1,
+      "falloffstart":40,
+      "heal":0,
+      "inaccuracy":1
+    }
+  },
+  "secondary": {
+    "name":"plasma_grenade",
+    "duration":2,
+    "recharge":100,
+    "lore_lines":2
+  },
+  "tertiary": {
+    "name":"burst_heal",
+    "duration":20,
+    "recharge":200,
+    "lore_lines":2,
+    "type":"repeat"
+  },
+  "passive":{
+    "name":"prepared",
+    "lore_lines":2,
+    "command":"execute if entity @s[scores={totalShots=15..}] run function classes:soldier/prepared/run"
+  }
+}

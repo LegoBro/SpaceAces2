@@ -1,0 +1,4 @@
+data modify block 8 205 36 front_text.messages[0] set value '{"text":"","color":"black","type":"text"}'
+data modify block 8 205 36 front_text.messages[1] set value '{"text":"Random Mission","color":"dark_blue","bold":true,"clickEvent":{"action":"run_command","value":"/tellraw @a [\\"\\",{\\"text\\":\\"Selected Random Mission\\",\\"color\\":\\"dark_green\\",\\"bold\\":true,\\"type\\":\\"text\\"}]"},"type":"text"}'
+data modify block 8 205 36 front_text.messages[2] set value '{"text":"[Select]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set Maps Numbers -1"},"type":"text"}'
+return 1
