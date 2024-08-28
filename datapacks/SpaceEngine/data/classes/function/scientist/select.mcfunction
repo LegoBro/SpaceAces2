@@ -1,3 +1,0 @@
-scoreboard players set @s Class 10
-tellraw @p {"text":"\nSelected Class Scientist","color":"dark_gray","bold":true,"extra":[{"text":"\na general support loadout\n\nLoadout:\n","color":"gray","bold":false,"type":"text"},{"translate":"chemsprayer"},{"text":"\n","type":"text"},{"translate":"healing_machine"},{"text":"\n","type":"text"},{"translate":"medicine"},{"text":"\n","type":"text"},{"translate":"biohazard"}],"type":"text"}
-return 1
