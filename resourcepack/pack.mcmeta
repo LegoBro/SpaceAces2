@@ -1,6 +1,6 @@
 {
-   "pack":{
-      "pack_format": 13,
-      "description": "Template Datapack Repository by Plagiatus: https://github.com/Plagiatus/MapmakingTemplate"
-   }
+    "pack": {
+        "pack_format": 34,
+        "description": "Space Aces Resource Pack"
+    }
 }

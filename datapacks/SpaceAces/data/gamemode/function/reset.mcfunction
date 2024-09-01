@@ -1,5 +1,6 @@
 ##Commands ran once game is Finished
 function help:a86d3a90d015d3656219ee1a185fad68072458ab4054a276c645a8ffb7a11736
+scoreboard objectives setdisplay sidebar
 execute as @a[tag=stats,tag=!escape,team=!red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☐\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ","color":"white","type":"text"},{"score":{"name":"@s","objective":"game_damage"},"color":"blue","type":"score"},{"text":"\nEnemies knocked down: ","color":"white","type":"text"},{"score":{"name":"@s","objective":"game_kills"},"color":"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ","color":"white","type":"text"},{"score":{"name":"@s","objective":"game_dmg_take"},"color":"dark_red","type":"score"},{"text":"\nYour healing last round: ","color":"white","type":"text"},{"score":{"name":"@s","objective":"game_healing"},"color":"green","type":"score"},{"text":"\n\n☑","font":"minecraft:stats","color":"white","type":"text"}]
 
 # Convert time Numbers into time.hours and time.minutes and time.seconds and time.milliseconds

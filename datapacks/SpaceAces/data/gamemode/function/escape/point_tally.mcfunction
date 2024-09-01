@@ -2,7 +2,7 @@
 
 scoreboard players set escape.time Numbers 30000
 scoreboard players operation escape.time Numbers -= time Numbers
-execute if score escape.time Numbers matches ..-1 run scoreboard players set escape.time 0
+execute if score escape.time Numbers matches ..-1 run scoreboard players set escape.time Numbers 1
 scoreboard players set escape.kills Numbers 0
 scoreboard players set escape.heals Numbers 0
 scoreboard players set escape.damage Numbers 0

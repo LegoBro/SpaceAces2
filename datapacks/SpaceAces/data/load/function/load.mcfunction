@@ -12,13 +12,12 @@ team modify red nametagVisibility hideForOtherTeams
 team modify blue friendlyFire false
 team modify red friendlyFire false
 team modify lobby friendlyFire false
-gamerule sendCommandFeedback false
+#gamerule sendCommandFeedback false
 setblock 0 1 0 minecraft:oak_sign
-scoreboard objectives setdisplay sidebar display
-scoreboard objectives setdisplay sidebar display
+#scoreboard objectives setdisplay sidebar display
 scoreboard objectives setdisplay below_name health
 scoreboard objectives setdisplay list health
 execute unless score Player_Amount Numbers matches 1.. run scoreboard players set Player_Amount Numbers 1
 scoreboard players set Maps Numbers -1
-
+schedule function gamemode:sign_display 5s
 return 1
