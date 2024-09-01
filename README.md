@@ -2,7 +2,8 @@
 A Minecraft Map about playing as custom characters with varying kits and abilities in a space themed war.
 
 # Update Phase (Version 3.3):
-## Bring Original Functionality Back
+## Bring Original Functionality Back ☑️
+Now Running in 1.21 successfully
 ## Optimize with new techniques
 ## Playtest and identify undesirable gameplay loops
 ## Release
