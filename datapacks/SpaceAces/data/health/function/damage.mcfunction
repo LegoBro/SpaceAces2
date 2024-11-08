@@ -38,8 +38,7 @@ scoreboard players operation @s[tag=!entity] displayHealth *= 10 Numbers
 scoreboard players operation @s[tag=!entity] displayHealth /= @s maxHealth
 
 #Armor
-execute if entity @s[tag=!entity,team=blue] run function health:update_armor_blue
-execute if entity @s[tag=!entity,team=red] run function health:update_armor_red
+execute if entity @s[tag=!entity] run function health:update
 
 #Run if you die
 execute if entity @s[gamemode=adventure,tag=!entity,tag=!escape,scores={health=..0}] at @s run function health:death

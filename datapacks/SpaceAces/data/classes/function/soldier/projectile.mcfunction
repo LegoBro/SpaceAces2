@@ -4,6 +4,7 @@ scoreboard players set @s falloff 1
 scoreboard players set @s falloffStart 40
 scoreboard players set @s speed 0
 scoreboard players operation @s j = @s speed
-scoreboard players set @s Numbers 1
-function projectile:spread
+execute store result storage projectile SpreadX float 0.5 run random value -3..3
+execute store result storage projectile SpreadY float 0.5 run random value -3..3
+function projectile:spread with storage projectile
 return 1

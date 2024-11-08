@@ -18,6 +18,7 @@ scoreboard objectives add i dummy
 scoreboard objectives add j dummy
 scoreboard objectives add falloff dummy
 scoreboard objectives add falloffStart dummy
+scoreboard objectives add falloffFloor dummy
 scoreboard objectives add speed dummy
 scoreboard objectives add damage dummy
 scoreboard objectives add 2xdamage dummy

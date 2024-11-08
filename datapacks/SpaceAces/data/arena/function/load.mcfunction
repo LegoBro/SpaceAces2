@@ -66,9 +66,7 @@ fill 20032 61 -64 20159 61 63 minecraft:barrier
 fill 20032 62 -64 20159 62 63 minecraft:barrier
 fill 20032 63 -64 20159 63 63 minecraft:barrier
 scoreboard players operation Map Numbers = Maps Numbers
-execute if score Map Numbers matches -1 run function scoreboard:rand_int
-execute if score Map Numbers matches -1 run scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=rng_one,limit=1] Numbers %= 5 Numbers
-execute if score Map Numbers matches -1 run scoreboard players operation Map Numbers = @e[type=minecraft:area_effect_cloud,tag=rng_one,limit=1] Numbers
+execute if score Map Numbers matches -1 store result score Map Numbers run random value 0..4
 
 # Determines which gamemode is to be loaded (dynamic)
 execute if score Gamemode Numbers matches 0 run function gamemode:duel/load

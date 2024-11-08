@@ -1,4 +1,4 @@
-## Standby for vis mine
+## Standby for firebomb
 particle minecraft:flame ~ ~1.5 ~ 0 0 0 0.1 25
 scoreboard players operation place_id id = @s id
 execute if entity @s[tag=blue] as @e[distance=..3,team=red] run function classes:pyro/fire_bomb/damage

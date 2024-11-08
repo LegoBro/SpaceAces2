@@ -17,8 +17,7 @@ scoreboard players operation @s displayHealth /= @s maxHealth
 
 
 #Armor
-execute if entity @s[tag=!entity,team=blue] run function health:update_armor_blue
-execute if entity @s[tag=!entity,team=red] run function health:update_armor_red
+execute if entity @s[tag=!entity] run function health:update
 execute if score @s health matches 901.. run scoreboard players set @s health 900
 
 return 1

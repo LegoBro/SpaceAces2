@@ -8,7 +8,7 @@ execute if entity @s[tag=training_1] run function tick:player/training_1
 execute if entity @s[tag=training_2] run function tick:player/training_2
 
 
-effect give @s minecraft:resistance 1000000 4 true
+effect give @s minecraft:resistance infinite 4 true
 
 # Branching dependant on teams
 execute if entity @s[team=lobby] at @s run function tick:player/lobby

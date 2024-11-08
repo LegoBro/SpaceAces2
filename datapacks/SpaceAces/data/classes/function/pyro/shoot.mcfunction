@@ -1,11 +1,10 @@
 
-summon minecraft:armor_stand ~ ~ ~ {Tags:["hot_air","raycast","grenade"],DisabledSlots:4144959,Invisible:1b,NoBasePlate:1b,Marker:1b,Small:1b,Pose:{Head:[180.0f,0.0f,0.0f]}}
-execute if entity @s[team=blue] run tag @e[type=minecraft:armor_stand,tag=grenade,sort=nearest,limit=1] add blue
-execute if entity @s[team=red] run tag @e[type=minecraft:armor_stand,tag=grenade,sort=nearest,limit=1] add red
-execute if entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] store result score @e[type=minecraft:armor_stand,sort=nearest,limit=1] damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
-execute if entity @s[scores={crouching=0}] run tp @e[tag=hot_air,sort=nearest,limit=1] ~ ~.6 ~ ~ ~0
-execute if entity @s[scores={crouching=1..}] run tp @e[tag=hot_air,sort=nearest,limit=1] ~ ~.26 ~ ~ ~0
-execute store result score @e[tag=hot_air,sort=nearest,limit=1] id run scoreboard players get @s id
-execute as @e[tag=hot_air,sort=nearest,limit=1] at @s positioned ~ ~1.25 ~ run function classes:pyro/projectile
+summon item_display ~ ~ ~ {Tags:["hot_air","raycast","grenade"],teleport_duration:1}
+execute if entity @s[team=blue] run tag @e[type=minecraft:item_display,tag=grenade,sort=nearest,limit=1,distance=..3] add blue
+execute if entity @s[team=red] run tag @e[type=minecraft:item_display,tag=grenade,sort=nearest,limit=1,distance=..3] add red
+execute if entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] store result score @e[type=minecraft:item_display,sort=nearest,limit=1,distance=..3] damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
+execute anchored eyes run tp @e[type=minecraft:item_display,tag=hot_air,sort=nearest,limit=1,distance=..3] ^ ^ ^ ~ ~
+execute store result score @e[type=minecraft:item_display,tag=hot_air,sort=nearest,limit=1,distance=..3] id run scoreboard players get @s id
+execute as @e[type=minecraft:item_display,tag=hot_air,sort=nearest,limit=1,distance=..3] at @s positioned ~ ~.25 ~ run function classes:pyro/projectile
 execute at @s run playsound minecraft:item.firecharge.use hostile @a ~ ~ ~
 return 1
