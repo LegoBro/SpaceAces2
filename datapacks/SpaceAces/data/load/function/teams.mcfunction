@@ -15,6 +15,12 @@ team modify red nametagVisibility hideForOtherTeams
 team add spectator
 team modify spectator color white
 team modify spectator prefix ["",{"text":"[Spectator] ","color":"white","bold":false}]
-team modify red nametagVisibility never
+team modify spectator nametagVisibility never
+
+team modify blue seeFriendlyInvisibles false
+team modify red seeFriendlyInvisibles false
+team modify blue friendlyFire false
+team modify red friendlyFire false
+team modify lobby friendlyFire false
 
 return 1

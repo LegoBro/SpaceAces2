@@ -23,7 +23,7 @@ tag @s remove in_game
 tag @s remove ready
 clear @s
 tag @s remove resistive
-attribute @s minecraft:generic.max_health base set 20
+attribute @s minecraft:max_health base set 20
 xp set @s 0 levels
 xp set @s 0 points
 title @s actionbar ""

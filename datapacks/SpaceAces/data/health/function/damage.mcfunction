@@ -24,8 +24,8 @@ execute at @s if score @s damage matches 1.. run data modify block 0 1 0 front_t
 execute at @s if score @s damage matches 1.. run data modify entity @e[tag=damage_indicator,tag=new,sort=nearest,limit=1] CustomName set from block 0 1 0 front_text.messages[0]
 execute at @s if score @s damage matches 1.. run tag @e[tag=damage_indicator,tag=new,sort=nearest,limit=1] remove new
 execute if score @s[tag=entity] damage matches 1.. run function health:entity
-execute at @s if score @s damage matches 1..49 run playsound minecraft:entity.generic.hurt player @a ~ ~ ~ 1 1 0
-execute at @s if score @s damage matches 50.. run playsound minecraft:entity.generic.hurt player @a ~ ~ ~ 1 .5 0
+execute at @s if score @s damage matches 1..49 run playsound minecraft:entity.hurt player @a ~ ~ ~ 1 1 0
+execute at @s if score @s damage matches 50.. run playsound minecraft:entity.hurt player @a ~ ~ ~ 1 .5 0
 scoreboard players reset @s damage
 tag @s remove indicator
 

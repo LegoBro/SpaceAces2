@@ -1,5 +1,5 @@
 #execute facing entity @p eyes run summon creeper ^ ^ ^1 {ExplosionRadius:2b,Fuse:0,ignited:1b}
-playsound minecraft:entity.generic.explode player @a ~ ~ ~ .5 1.5 0
+playsound minecraft:entity.explode player @a ~ ~ ~ .5 1.5 0
 particle minecraft:block{block_state:{Name:"minecraft:lime_stained_glass"}} ~ ~ ~ 1 1 1 0 25
 
 scoreboard players operation place_id id = @s id
