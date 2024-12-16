@@ -1,10 +1,10 @@
 ## Ticks for item frames
 
 # changes health pack models when they are charged/used
-execute if entity @s[tag=weak_health,scores={j=50},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000001},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000001},count:1}}
-execute if entity @s[tag=weak_health,scores={j=0},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000003},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000003},count:1}}
-execute if entity @s[tag=strong_health,scores={j=100},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000000},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000000},count:1}}
-execute if entity @s[tag=strong_health,scores={j=0},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000002},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000002},count:1}}
+execute if entity @s[tag=weak_health,scores={j=50},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/weak_heal_active"},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/weak_heal_active"},count:1}}
+execute if entity @s[tag=weak_health,scores={j=0},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/weak_heal_inactive"},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/weak_heal_inactive"},count:1}}
+execute if entity @s[tag=strong_health,scores={j=100},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/strong_heal_active"},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/strong_heal_active"},count:1}}
+execute if entity @s[tag=strong_health,scores={j=0},nbt=!{Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/strong_heal_inactive"},count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/strong_heal_inactive"},count:1}}
 execute if entity @s[nbt=!{ItemRotation:0b}] run data merge entity @s {ItemRotation:0b}
 
 # Health Packs

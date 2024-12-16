@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {Tags:["rocket","raycast","grenade","warp"],DisabledSlots:4144959,Invisible:1b,NoBasePlate:1b,ArmorItems:[{},{},{},{id:"minecraft:paper",components:{"minecraft:custom_model_data":11150004},count:1}]}
+summon minecraft:armor_stand ~ ~ ~ {Tags:["rocket","raycast","grenade","warp"],DisabledSlots:4144959,Invisible:1b,NoBasePlate:1b,ArmorItems:[{},{},{},{id:"minecraft:paper",components:{"item_model":"rocketeer/grenade"},count:1}]}
 execute if entity @s[team=blue] run tag @e[type=armor_stand,tag=rocket,sort=nearest,limit=1,distance=..3] add blue
 execute if entity @s[team=red] run tag @e[type=armor_stand,tag=rocket,sort=nearest,limit=1,distance=..3] add red
 execute store result score @e[type=armor_stand,tag=rocket,sort=nearest,limit=1,distance=..3] id run scoreboard players get @s id

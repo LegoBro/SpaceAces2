@@ -74,8 +74,8 @@ execute if score Gamemode Numbers matches 1 run function gamemode:tdm/load
 execute if score Gamemode Numbers matches 2 run function gamemode:setback/load
 execute if score Gamemode Numbers matches 3 run function gamemode:killstreak/load
 execute if score Gamemode Numbers matches 4 run function gamemode:escape/load
-execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:baked_potato",count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000002},count:1},Invulnerable:1b,Tags:["strong_health","health_pack"]}
-execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:potato",count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:custom_model_data":11000003},count:1},Invulnerable:1b,Tags:["weak_health","health_pack"]}
+execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:baked_potato",count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/strong_heal_inactive"},count:1},Invulnerable:1b,Tags:["strong_health","health_pack"]}
+execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:potato",count:1}}] run data merge entity @s {Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/weak_heal_inactive"},count:1},Invulnerable:1b,Tags:["weak_health","health_pack"]}
 execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:lapis_lazuli",count:1}}] run data merge entity @s {Item:{id:"minecraft:lapis_lazuli",count:1},Invulnerable:1b,Tags:["blue_spawn"]}
 execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:red_dye",count:1}}] run data merge entity @s {Item:{id:"minecraft:red_dye",count:1},Invulnerable:1b,Tags:["red_spawn"]}
 execute as @e[type=minecraft:item_frame,tag=!processed,nbt={Item:{id:"minecraft:bone_meal",count:1}}] run data merge entity @s {Item:{id:"minecraft:bone_meal",count:1},Invulnerable:1b,Tags:["general_spawn"]}
