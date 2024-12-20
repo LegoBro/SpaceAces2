@@ -1,0 +1,89 @@
+{
+    "parent": "item/secondary_item",
+    "textures": {
+        "layer0": "item/carrot_on_a_stick"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data":11000001}, "model": "item/empty"},
+      {"predicate": {"custom_model_data":11000002}, "model": "item/red_icon"},
+      {"predicate": {"custom_model_data":11000003}, "model": "item/green_icon"},
+
+      {"predicate": {"custom_model_data":11010000}, "model": "item/scout/surge_pistol"},
+      {"predicate": {"custom_model_data":11010001}, "model": "item/scout/1"},
+      {"predicate": {"custom_model_data":11010002}, "model": "item/scout/2"},
+      {"predicate": {"custom_model_data":11010003}, "model": "item/scout/3"},
+
+      {"predicate": {"custom_model_data":11020000}, "model": "item/soldier/surge_rifle"},
+      {"predicate": {"custom_model_data":11020001}, "model": "item/soldier/1"},
+      {"predicate": {"custom_model_data":11020002}, "model": "item/soldier/2"},
+      {"predicate": {"custom_model_data":11020003}, "model": "item/soldier/3"},
+
+      {"predicate": {"custom_model_data":11030000}, "model": "item/sniper/star_sniper"},
+      {"predicate": {"custom_model_data":11030001}, "model": "item/sniper/1"},
+      {"predicate": {"custom_model_data":11030002}, "model": "item/sniper/2"},
+      {"predicate": {"custom_model_data":11030003}, "model": "item/sniper/3"},
+
+      {"predicate": {"custom_model_data":11040000}, "model": "item/bomber/plasma_grenade_launcher"},
+      {"predicate": {"custom_model_data":11040001}, "model": "item/bomber/1"},
+      {"predicate": {"custom_model_data":11040002}, "model": "item/bomber/2"},
+      {"predicate": {"custom_model_data":11040003}, "model": "item/bomber/3"},
+
+      {"predicate": {"custom_model_data":11050000}, "model": "item/gunner/plasma_cannon"},
+      {"predicate": {"custom_model_data":11050001}, "model": "item/gunner/1"},
+      {"predicate": {"custom_model_data":11050002}, "model": "item/gunner/2"},
+      {"predicate": {"custom_model_data":11050003}, "model": "item/gunner/3"},
+
+      {"predicate": {"custom_model_data":11060000}, "model": "item/healer/heal_pistol"},
+      {"predicate": {"custom_model_data":11060001}, "model": "item/healer/1"},
+      {"predicate": {"custom_model_data":11060002}, "model": "item/healer/2"},
+      {"predicate": {"custom_model_data":11060003}, "model": "item/healer/3"},
+
+      {"predicate": {"custom_model_data":11070000}, "model": "item/brawler/plasma_sword"},
+      {"predicate": {"custom_model_data":11070001}, "model": "item/brawler/1"},
+      {"predicate": {"custom_model_data":11070002}, "model": "item/brawler/2"},
+      {"predicate": {"custom_model_data":11070003}, "model": "item/brawler/3"},
+
+      {"predicate": {"custom_model_data":11080000}, "model": "item/mobility/light_surge_rifle"},
+      {"predicate": {"custom_model_data":11080001}, "model": "item/mobility/1"},
+      {"predicate": {"custom_model_data":11080002}, "model": "item/mobility/2"},
+      {"predicate": {"custom_model_data":11080003}, "model": "item/mobility/3"},
+
+      {"predicate": {"custom_model_data":11090000}, "model": "item/mechanic/double_chambered_scattergun"},
+      {"predicate": {"custom_model_data":11090001}, "model": "item/mechanic/1"},
+      {"predicate": {"custom_model_data":11090002}, "model": "item/mechanic/2"},
+      {"predicate": {"custom_model_data":11090003}, "model": "item/mechanic/3"},
+
+      {"predicate": {"custom_model_data":11100000}, "model": "item/scientist/chemsprayer"},
+      {"predicate": {"custom_model_data":11100001}, "model": "item/scientist/1"},
+      {"predicate": {"custom_model_data":11100002}, "model": "item/scientist/2"},
+      {"predicate": {"custom_model_data":11100003}, "model": "item/scientist/3"},
+      {"predicate": {"custom_model_data":11100004}, "model": "item/scientist/chemical"},
+
+      {"predicate": {"custom_model_data":11110000}, "model": "item/infiltraitor/plasma_pistol"},
+      {"predicate": {"custom_model_data":11110001}, "model": "item/infiltraitor/1"},
+      {"predicate": {"custom_model_data":11110002}, "model": "item/infiltraitor/2"},
+      {"predicate": {"custom_model_data":11110003}, "model": "item/infiltraitor/3"},
+
+      {"predicate": {"custom_model_data":11120000}, "model": "item/pyro/hot_air_blower"},
+      {"predicate": {"custom_model_data":11120001}, "model": "item/pyro/1"},
+      {"predicate": {"custom_model_data":11120002}, "model": "item/pyro/2"},
+      {"predicate": {"custom_model_data":11120003}, "model": "item/pyro/3"},
+
+      {"predicate": {"custom_model_data":11130000}, "model": "item/seeker/plasma_spreader"},
+      {"predicate": {"custom_model_data":11130001}, "model": "item/seeker/1"},
+      {"predicate": {"custom_model_data":11130002}, "model": "item/seeker/2"},
+      {"predicate": {"custom_model_data":11130003}, "model": "item/seeker/3"},
+
+      {"predicate": {"custom_model_data":11140000}, "model": "item/shocksmith/shock_hopper"},
+      {"predicate": {"custom_model_data":11140001}, "model": "item/shocksmith/1"},
+      {"predicate": {"custom_model_data":11140002}, "model": "item/shocksmith/2"},
+      {"predicate": {"custom_model_data":11140003}, "model": "item/shocksmith/3"},
+      {"predicate": {"custom_model_data":11140004}, "model": "item/shocksmith/shock_grenade"},
+
+      {"predicate": {"custom_model_data":11150000}, "model": "item/rocketeer/rocket_launcher"},
+      {"predicate": {"custom_model_data":11150001}, "model": "item/rocketeer/1"},
+      {"predicate": {"custom_model_data":11150002}, "model": "item/rocketeer/2"},
+      {"predicate": {"custom_model_data":11150003}, "model": "item/rocketeer/3"},
+      {"predicate": {"custom_model_data":11150004}, "model": "item/rocketeer/rocket"}
+    ]
+}

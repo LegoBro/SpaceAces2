@@ -1,0 +1,126 @@
+{
+  "spaceship.takeoff": {
+   "sounds": [
+    {"name": "spaceship_takeoff",
+    "attenuation_distance":100}
+   ]
+  },"shutdown": {
+  "sounds": [
+   {"name": "shutdown"}
+  ]
+ },"gun.rifle": {
+ "sounds": [
+  {"name": "guns/rifle"}
+ ]
+},
+ "gun.pistol": {
+  "sounds": [
+   {"name": "guns/pistol"}
+  ]
+ },
+ "gun.reload": {
+  "sounds": [
+   {"name": "guns/reload"}
+  ]
+ },
+ "gun.heavy": {
+  "sounds": [
+   {"name": "guns/heavy"}
+  ]
+ },
+ "gun.plasma": {
+  "sounds": [
+   {"name": "guns/plasma"}
+  ]
+ },
+ "gun.launcher": {
+  "sounds": [
+   {"name": "guns/launcher"}
+  ]
+ },
+ "gun.shotgun": {
+  "sounds": [
+   {"name": "guns/shotgun"}
+  ]
+ },
+ "gun.heavy_shotgun": {
+  "sounds": [
+   {"name": "guns/heavy_shotgun"}
+  ]
+ },
+ "gun.heavy_pistol": {
+  "sounds": [
+   {"name": "guns/heavy_pistol"}
+  ]
+ },
+ "gun.rocket": {
+  "sounds": [
+   {"name": "guns/rocket"}
+  ]
+ },
+ "gun.heal_pistol": {
+  "sounds": [
+   {"name": "guns/heal_pistol"}
+  ]
+ },
+ "gun.shock_launcher": {
+  "sounds": [
+   {"name": "guns/shock_launcher"}
+  ]
+ },
+ "gun.chem_launcher": {
+  "sounds": [
+   {"name": "guns/chem_launcher"}
+  ]
+ },
+ "gun.hit": {
+  "sounds": [
+   {"name": "guns/hit"}
+  ]
+ },
+ "health_pack": {
+  "sounds": [
+   {"name": "general/health_pack"}
+  ]
+ },
+ "training_adviser": {
+  "sounds": [
+   {"name": "general/training_adviser"}
+  ]
+ },
+ "countdown": {
+  "sounds": [
+   {"name": "general/countdown"}
+  ]
+ },
+ "gunner_1": {
+  "sounds": [
+   {"name": "general/gunner_1"}
+  ]
+ },
+ "gunner_2": {
+  "sounds": [
+   {"name": "general/gunner_2"}
+  ]
+ },
+ "pilot": {
+  "sounds": [
+   {"name": "general/pilot"}
+  ]
+ },
+ "commander": {
+  "sounds": [
+   {"name": "general/commander"}
+  ]
+ },
+ "archiver": {
+  "sounds": [
+   {"name": "general/archiver"}
+  ]
+ },
+ "greeter": {
+  "sounds": [
+   {"name": "general/greeter"}
+  ]
+ }
+}

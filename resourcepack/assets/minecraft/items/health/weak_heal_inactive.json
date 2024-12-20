@@ -1,0 +1,6 @@
+{
+    "model": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/health/weak_heal_inactive"
+    }
+  }

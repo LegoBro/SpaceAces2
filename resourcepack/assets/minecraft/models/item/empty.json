@@ -1,0 +1,14 @@
+{
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.3, 0.3, 0.3],
+			"translation": [0, 2.5, 0]
+		},
+		"fixed": {
+			"scale": [1.9, 1.9, 1.9],
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -15]
+		}
+	}
+}
