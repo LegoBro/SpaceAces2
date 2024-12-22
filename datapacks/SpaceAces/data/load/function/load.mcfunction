@@ -5,7 +5,10 @@ function load:objectives
 function load:teams
 function gamemode:cycle
 
-#gamerule sendCommandFeedback false
+# Forcloads the game
+forceload add 20028 -68 20163 67
+
+gamerule sendCommandFeedback false
 setblock 0 1 0 minecraft:oak_sign
 #scoreboard objectives setdisplay sidebar display
 scoreboard objectives setdisplay below_name health

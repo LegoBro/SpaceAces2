@@ -173,8 +173,7 @@
   "plasma_cannon_lore": "a high-capacity but low damage blaster",
   "infinite_ammo": "§5Barrage",
   "infinite_ammo_lore1": "shoot incredibly fast for 1s",
-  "infinite_ammo_lore2": "§r - shoots 20 shots",
-  "infinite_ammo_lore2": "§r - each shot deals 8 damage",
+  "infinite_ammo_lore2": "§r - each shot deals 8 damage", 
   "infinite_ammo_lore3": "§r - fires many shots",
   "large_heal": "§5Large Heal",
   "large_heal_lore1": "a major health pack",
@@ -198,7 +197,7 @@
   "days_work_lore2": "§r - heal 2HP per ranged hit",
 
   "plasma_sword": "§6Phase Sword",
-  "plasmae_sword_lore": "a high-damage melee weapon",
+  "plasma_sword_lore": "a high-damage melee weapon",
   "sword_throw": "§6Sword Throw",
   "sword_throw_lore1": "don't throw your last one",
   "sword_throw_lore2": "§r - 1.2x speed for 1s",
