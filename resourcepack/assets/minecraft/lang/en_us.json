@@ -3,7 +3,7 @@
   "language.region": "United States",
   "language.code": "en_us",
 
-  "tutorial":"§f[§aTutorial§f]",
+  "tutorial":"§f[§aTutorial§f] ",
   "tutorial_0":" Your shield bar is the blue bar, as well as the number.  Your energy bar is the bar on the left that has batteries as icons.  Energy can be depleted from sprinting, as well as reloading your primary.  Once energy drops below half, it will automatically recharge up to the half point if you haven't sprinted for a short duration.  To further replenish energy, you can use some classes abilities, as well as health packs, if they are full.  Small health packs replenish 50 shield and a small amount of energy, while large health packs replenish 100 shield and a good amount of energy.  Health packs slowly charge over time, but you can heal from them before they are full.",
   "tutorial_1":" Your primary weapon is the most valuable part of your class loadout.  To fire it, use right click.  You can also reload by dropping your primary or abilities.  Destroy this robot to continue.",
   "tutorial_2":" Your abilities balance out your class.  Your first two abilities are active abilities, meaning they must be used (right click) to be activated.  Your third item is your passive ability, which is automatically activated.  Try to use your grenade and burst heal.",
