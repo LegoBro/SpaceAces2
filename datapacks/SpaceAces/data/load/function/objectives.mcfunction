@@ -3,10 +3,13 @@
 # Global
 scoreboard objectives add display dummy
 scoreboard objectives add Numbers dummy
+scoreboard objectives add settings dummy
+
 scoreboard objectives add id dummy
 scoreboard objectives add xpos dummy
 scoreboard objectives add ypos dummy
 scoreboard objectives add zpos dummy
+
 
 # Entity - Health
 scoreboard objectives add health dummy ["",{"text":"+","color":"green","bold":true,"type":"text"}]

@@ -2,5 +2,17 @@
     "pack": {
         "pack_format": 61,
         "description": "Space Aces game engine"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "recipe/.*"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "advancement/.*"
+            }
+        ]
     }
 }

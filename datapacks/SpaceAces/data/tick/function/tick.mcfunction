@@ -37,4 +37,7 @@ function gamemode:floating_heads
 # performs functions for the archive room
 function archives:main
 
+# Dev Mode!!!
+execute if score dev_mode settings matches 1.. run function dev:tick
+
 return 1

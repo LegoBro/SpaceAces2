@@ -19,6 +19,8 @@ execute if entity @s[scores={activate_third=295}] run function classes:infiltrai
 
 # Passive
 item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model="infiltraitor/3",minecraft:custom_name='{"color":"white","translate":"recloak"}',minecraft:lore=['{"color":"white","translate":"recloak_lore1"}','{"color":"white","translate":"recloak_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
+
+#item replace entity @s hotbar.4 with minecraft:turtle_scute[minecraft:item_model="infiltraitor/4",minecraft:custom_name='{"color":"white","text":"Projected Clone","italic": false}',minecraft:lore=['{"color":"white","translate":"recloak_lore1"}','{"color":"white","translate":"recloak_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 function classes:infiltraitor/recloak/run
 
 scoreboard players set @s maxHealth 100

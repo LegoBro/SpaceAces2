@@ -18,4 +18,5 @@ execute if score @s console matches 321 run function gamemode:console/321
 execute if score @s console matches 410 run function gamemode:console/410
 execute if score @s console matches 420 run function gamemode:console/420
 scoreboard players reset @s console
+#say console
 return 1

@@ -21,7 +21,7 @@ execute if entity @s[scores={activate_third=389}] run function classes:brawler/s
 item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model="brawler/3",minecraft:custom_name='{"color":"white","translate":"final_stance"}',minecraft:lore=['{"color":"white","translate":"final_stance_lore1"}','{"color":"white","translate":"final_stance_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 function classes:brawler/position/run
 
-scoreboard players set @s maxHealth 400
+scoreboard players set @s maxHealth 250
 
 item replace entity @s[scores={reload=0,shoot=0}] hotbar.0 with minecraft:carrot_on_a_stick[minecraft:item_model="brawler/0",minecraft:custom_name='{"translate":"plasma_sword"}',minecraft:lore=['{"color":"white","translate":"plasma_sword_lore"}','{"color":"white","italic":false,"text":" - damage: 35"}','{"color":"white","italic":false,"text":" - ammo: 12"}','{"color":"white","italic":false,"text":" - reload with speed: 2s"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 item replace entity @s[scores={reload=0,shoot=1..}] hotbar.0 with minecraft:paper[minecraft:item_model="brawler/0",minecraft:custom_name='{"translate":"plasma_sword"}',minecraft:lore=['{"color":"white","translate":"plasma_sword_lore"}','{"color":"white","italic":false,"text":" - damage: 35"}','{"color":"white","italic":false,"text":" - ammo: 12"}','{"color":"white","italic":false,"text":" - reload speed: 2s"}'],minecraft:hide_additional_tooltip={}]
