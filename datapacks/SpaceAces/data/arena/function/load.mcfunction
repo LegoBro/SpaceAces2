@@ -5,6 +5,10 @@ function help:90d92739d1c8bd13c3fc133acf334ebd20b3dc4f4d41d2005584ef55acf47dd9
 
 # Moon Base
 forceload add 1087 63 960 -64
+
+# Ruins
+forceload add 3011 52 3131 -58
+
 tag @e[type=marker,tag=!processed] add processed
 tag @a[tag=awaiting] add in_game
 tag @a[tag=awaiting] remove awaiting
