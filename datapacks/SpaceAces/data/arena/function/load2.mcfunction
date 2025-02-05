@@ -10,7 +10,5 @@ execute as @e[type=marker,tag=general_spawn_point] at @s run summon item_frame ~
 #execute as @e[type=marker,tag=general_spawn_point] run summon item_frame ~ ~ ~ {Item:{id:"minecraft:magenta_dye",count:1},Invulnerable:1b,Tags:["middle_red_spawn"]}
 #execute as @e[type=marker,tag=general_spawn_point] run summon item_frame ~ ~ ~ {Item:{id:"minecraft:cyan_dye",count:1},Invulnerable:1b,Tags:["middle_blue_spawn"]}
 #execute as @e[type=marker,tag=general_spawn_point] run summon item_frame ~ ~ ~ {Item:{id:"minecraft:light_blue_dye",count:1},Invulnerable:1b,Tags:["forward_blue_spawn"]}
-tag @e[type=marker,tag=!processed] add processed
-tag @a[tag=awaiting] add in_game
-tag @a[tag=awaiting] remove awaiting
+
 return 1

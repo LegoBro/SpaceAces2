@@ -1,9 +1,9 @@
 # ignore everything...
 /*
 # ...except these folders/files
-!/datapacks/**
-!/resourcepack/**
+!/datapacks
+!/resourcepack
 !/resourcepack.zip
-!/project_assets/**
+!/project_assets
 !.gitignore
 !/.github/workflows
