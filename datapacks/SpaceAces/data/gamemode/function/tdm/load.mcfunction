@@ -1,10 +1,10 @@
 # Loads tdm (dynamic)
 scoreboard players set ActiveMode Numbers 2
-execute if score Map Numbers matches 0 run function arena:load_ruins
-execute if score Map Numbers matches 1 run function arena:load_aqua_base
-execute if score Map Numbers matches 2 run function arena:load_dust_temple
-execute if score Map Numbers matches 3 run function arena:load_snow_bowl
-execute if score Map Numbers matches 4 run function arena:load_gray_caves
+#execute if score Map Numbers matches 0 run function arena:load_ruins
+#execute if score Map Numbers matches 1 run function arena:load_aqua_base
+#execute if score Map Numbers matches 2 run function arena:load_dust_temple
+#execute if score Map Numbers matches 3 run function arena:load_snow_bowl
+#execute if score Map Numbers matches 4 run function arena:load_gray_caves
 scoreboard players set blue_players Numbers 0
 scoreboard players set red_players Numbers 0
 execute as @a[tag=ready,team=blue] run scoreboard players add blue_players Numbers 1
