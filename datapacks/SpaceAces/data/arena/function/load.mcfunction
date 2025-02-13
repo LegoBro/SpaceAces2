@@ -7,8 +7,8 @@ execute if score Gamemode settings matches 0 run function gamemode:duel/load
 execute if score Gamemode settings matches 1 run function gamemode:tdm/load
 #execute if score Gamemode settings matches 2 run function gamemode:setback/load
 execute if score Gamemode settings matches 3 run function gamemode:killstreak/load
-execute if score Gamemode settings matches 4 run function gamemode:escape/load
-
+#execute if score Gamemode settings matches 4 run function gamemode:escape/load
+schedule function arena:clear 5s
 
 tag @e[type=marker,tag=!processed] add processed
 tag @a[tag=awaiting] add in_game

@@ -13,7 +13,7 @@ execute as @a[tag=in_game,scores={health=..0},team=red] run scoreboard players r
 
 gamemode spectator @a[tag=in_game,team=spectator]
 tag @a[tag=in_game,team=spectator] remove in_game
-execute as @a[tag=in_game,scores={health=..0}] run tp @s @e[type=minecraft:item_frame,tag=general_spawn,sort=random,limit=1]
+execute as @a[tag=in_game,scores={health=..0}] run tp @s @e[type=minecraft:marker,tag=general_spawn_point,sort=random,limit=1]
 execute at @a[tag=in_game,scores={health=..0}] run playsound minecraft:item.totem.use player @a ~ ~ ~ 50 2 1
 execute as @a[tag=in_game,scores={health=..0}] at @s run tp @s ~ ~ ~ 0 0
 execute as @a[tag=in_game,scores={health=..0}] at @s run function gamemode:respawn
