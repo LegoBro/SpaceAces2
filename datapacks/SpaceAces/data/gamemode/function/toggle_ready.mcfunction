@@ -11,7 +11,7 @@ execute if score RedPlay Numbers < TotPlay Numbers if score Mission Numbers matc
 tag @s remove temp
 scoreboard players reset @s rightClick
 
-execute if score Gamemode Numbers matches 4 run forceload add 30046 94 29857 -95
-execute unless score Gamemode Numbers matches 4 run forceload remove 30046 94 29857 -95
+execute if score Gamemode settings matches 4 run forceload add 30046 94 29857 -95
+execute unless score Gamemode settings matches 4 run forceload remove 30046 94 29857 -95
 
 return 1
