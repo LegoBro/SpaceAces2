@@ -13,7 +13,8 @@ give @s written_book[written_book_content={title:"Arena Teleports",author:"Admin
     {"text":"\\nDark Lair","color":"#242424","clickEvent":{"action":"run_command","value":"/tp @s 8191 100 0"}},\
     {"text":"\\nDust Temple","color":"#fdd78f","clickEvent":{"action":"run_command","value":"/tp @s 9215 100 0"}},\
     {"text":"\\nFarm","color":"#f3ff52","clickEvent":{"action":"run_command","value":"/tp @s 10239 100 0"}},\
-    {"text":"\\nGray Caves","color":"#616161","clickEvent":{"action":"run_command","value":"/tp @s 11263 100 0"}},\
+    {"text":"\\nGray Caves","color":"#616161","clickEvent":{"action":"run_command","value":"/tp @s 11263 100 0"}}\
+    ]','[\
     {"text":"\\nLayered","color":"#613400","clickEvent":{"action":"run_command","value":"/tp @s 12287 100 0"}},\
     {"text":"\\nMagma Forge","color":"#ff1515","clickEvent":{"action":"run_command","value":"/tp @s 13311 100 0"}},\
     {"text":"\\nReef Bunker","color":"#30e7ff","clickEvent":{"action":"run_command","value":"/tp @s 14335 100 0"}},\
