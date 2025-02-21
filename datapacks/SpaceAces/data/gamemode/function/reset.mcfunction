@@ -47,4 +47,6 @@ scoreboard players reset Enemies display
 execute positioned 29958 7 11 run kill @e[type=!minecraft:player,distance=..500,tag=!map_anchor,tag=!health_pack]
 execute unless entity @e[team=blue] unless entity @e[team=red] run function load:unload_teams
 
+forceload remove all
+
 return 1
