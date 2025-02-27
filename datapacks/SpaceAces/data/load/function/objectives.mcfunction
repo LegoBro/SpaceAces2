@@ -10,6 +10,8 @@ scoreboard objectives add xpos dummy
 scoreboard objectives add ypos dummy
 scoreboard objectives add zpos dummy
 
+# Gamemodes
+scoreboard objectives add payload dummy
 
 # Entity - Health
 scoreboard objectives add health dummy ["",{"text":"+","color":"green","bold":true,"type":"text"}]
