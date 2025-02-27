@@ -22,7 +22,7 @@ execute as @e[type=marker,tag=payload_increment] at @s run scoreboard players ad
 execute as @e[type=marker,tag=payload_decrement] at @s run scoreboard players remove @n[type=marker,tag=payload_path] payload 1
 
 # Pig Pathing :D
-execute as @e[type=pig,tag=payload_test] at @s run tp @s ^ ^ ^0.05 facing entity @n[type=marker,tag=active_payload_path]
+execute as @e[type=pig,tag=payload_test] at @s run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
 execute as @e[type=pig,tag=payload_test] at @s if score @s payload = @n[type=marker,tag=active_payload_path,distance=..0.05] payload run scoreboard players add @s payload 1
 tag @e[type=marker,tag=active_payload_path] remove active_payload_path
 execute as @e[type=marker,tag=payload_path] if score @s payload = @n[type=pig,tag=payload_test] payload run tag @s add active_payload_path
