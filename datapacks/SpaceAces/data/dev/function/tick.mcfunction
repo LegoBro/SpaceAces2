@@ -28,6 +28,10 @@ tag @e[type=marker,tag=active_payload_path] remove active_payload_path
 execute as @e[type=marker,tag=payload_path] if score @s payload = @n[type=pig,tag=payload_test] payload run tag @s add active_payload_path
 execute unless entity @n[type=marker,tag=active_payload_path] run kill @n[type=pig,tag=payload_test]
 execute unless entity @n[type=pig,tag=payload_test] at @n[type=marker,tag=payload_path,scores={payload=0}] run summon pig ~ ~ ~ {NoAI:1b,Tags:["payload_test"],Rotation:[0f,0f]}
+scoreboard players add @e[type=pig,tag=payload_test] payload 0
+
+execute as @e[tag=payload_path,tag=!active_payload_path] at @s positioned ~ ~1 ~ run particle flame
+execute as @e[tag=payload_path,tag=active_payload_path] at @s positioned ~ ~1 ~ run particle minecraft:soul_fire_flame
 
 ## Marker Killer
 execute as @e[type=marker,tag=kill_marker] at @s run kill @e[type=marker,limit=2,sort=nearest,distance=..1]
