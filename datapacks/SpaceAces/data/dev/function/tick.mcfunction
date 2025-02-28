@@ -15,33 +15,20 @@ execute as @e[tag=capture_point] at @s run particle minecraft:raid_omen
 
 
 ## Payload
+# safety in case the actual game is running
+execute unless entity @e[type=pig,tag=payload] run function dev:tick/payload
 
-execute as @n[type=marker,tag=payload_spawn_point_spawn] store result score @s payload if entity @e[type=marker,tag=payload_spawn_point,distance=..512]
-execute as @n[type=marker,tag=payload_spawn_point_spawn] run tag @s add payload_spawn_point
-execute as @n[type=marker,tag=payload_spawn_point_spawn] run tag @s remove payload_spawn_point_spawn
-
-# payload Path marker setup
-execute as @n[type=marker,tag=payload_path_spawn] store result score @s payload if entity @e[type=marker,tag=payload_path,distance=..512]
-execute as @n[type=marker,tag=payload_path_spawn] run tag @s add payload_path
-execute as @n[type=marker,tag=payload_path_spawn] run tag @s remove payload_path_spawn
-execute as @e[type=marker,tag=payload_increment] at @s run scoreboard players add @n[type=marker,tag=payload_path] payload 1
-execute as @e[type=marker,tag=payload_decrement] at @s run scoreboard players remove @n[type=marker,tag=payload_path] payload 1
-execute as @e[type=marker,tag=payload_checkpoint,tag=kill] at @s run tag @e[type=marker,tag=payload_path,distance=..1] add payload_checkpoint
-
-# Let player know
+# Other payload displays
 execute as @a[gamemode=creative] at @s if entity @n[type=marker,distance=..3,tag=payload_path] run title @s actionbar [{"color":"white","text":"Payload Path: "},{"color":"aqua","score":{"name":"@n[type=marker,tag=payload_path]","objective":"payload"}}]
-
-# Pig Pathing :D
-execute as @e[type=pig,tag=payload_test] at @s run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
-execute as @e[type=pig,tag=payload_test] at @s if score @s payload = @n[type=marker,tag=active_payload_path,distance=..0.1] payload run scoreboard players add @s payload 1
-tag @e[type=marker,tag=active_payload_path] remove active_payload_path
-execute as @e[type=marker,tag=payload_path] if score @s payload = @n[type=pig,tag=payload_test] payload run tag @s add active_payload_path
-execute unless entity @n[type=marker,tag=active_payload_path] run kill @n[type=pig,tag=payload_test]
-execute unless entity @n[type=pig,tag=payload_test] at @n[type=marker,tag=payload_path,scores={payload=0}] run summon pig ~ ~ ~ {NoAI:1b,Tags:["payload_test"],Rotation:[0f,0f]}
-scoreboard players add @e[type=pig,tag=payload_test] payload 0
-
 execute as @e[tag=payload_path,tag=!active_payload_path] at @s positioned ~ ~1 ~ run particle flame
 execute as @e[tag=payload_path,tag=active_payload_path] at @s positioned ~ ~1 ~ run particle minecraft:soul_fire_flame
+
+execute as @e[tag=active_blue_spawn_point] at @s run particle block_crumble{block_state:blue_concrete} ~ ~1 ~
+execute as @e[tag=active_red_spawn_point] at @s run particle block_crumble{block_state:red_concrete} ~ ~1 ~
+execute as @e[tag=payload_spawn_point] at @s run particle block_crumble{block_state:white_concrete} ~ ~1 ~
+
+execute as @e[tag=payload_checkpoint] at @s run particle minecraft:small_flame ~ ~1 ~ 0 1 0 0 3 normal
+
 
 ## Marker Killer
 execute as @e[type=marker,tag=kill_marker] at @s run kill @e[type=marker,limit=2,sort=nearest,distance=..1]
