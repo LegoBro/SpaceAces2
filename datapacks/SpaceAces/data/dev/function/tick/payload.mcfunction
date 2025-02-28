@@ -1,11 +1,11 @@
 ## Additional ticking for payload
 
-execute as @n[type=marker,tag=payload_spawn_point_spawn] store result score @s payload if entity @e[type=marker,tag=payload_spawn_point,distance=..512]
+execute as @n[type=marker,tag=payload_spawn_point_spawn] at @s store result score @s payload if entity @e[type=marker,tag=payload_spawn_point,distance=..512]
 execute as @n[type=marker,tag=payload_spawn_point_spawn] run tag @s add payload_spawn_point
 execute as @n[type=marker,tag=payload_spawn_point_spawn] run tag @s remove payload_spawn_point_spawn
 
 # payload Path marker setup
-execute as @n[type=marker,tag=payload_path_spawn] store result score @s payload if entity @e[type=marker,tag=payload_path,distance=..512]
+execute as @n[type=marker,tag=payload_path_spawn] at @s store result score @s payload if entity @e[type=marker,tag=payload_path,distance=..512]
 execute as @n[type=marker,tag=payload_path_spawn] run tag @s add payload_path
 execute as @n[type=marker,tag=payload_path_spawn] run tag @s remove payload_path_spawn
 execute as @e[type=marker,tag=payload_increment] at @s run scoreboard players add @n[type=marker,tag=payload_path] payload 1
