@@ -22,7 +22,7 @@ execute as @n[type=marker,tag=payload_path_spawn] run tag @s remove payload_path
 execute as @e[type=marker,tag=payload_increment] at @s run scoreboard players add @n[type=marker,tag=payload_path] payload 1
 execute as @e[type=marker,tag=payload_decrement] at @s run scoreboard players remove @n[type=marker,tag=payload_path] payload 1
 # Let player know
-execute as @a[gamemode=creative] at @s if entity @n[type=marker,distance=..3,tag=payload_path] run tellraw @s [{"color":"white","text":"Payload Path: "},{"color":"aqua","score":{"name":"@n[type=marker,tag=payload_path]","objective":"payload"}}]
+execute as @a[gamemode=creative] at @s if entity @n[type=marker,distance=..3,tag=payload_path] run title @s actionbar [{"color":"white","text":"Payload Path: "},{"color":"aqua","score":{"name":"@n[type=marker,tag=payload_path]","objective":"payload"}}]
 
 # Pig Pathing :D
 execute as @e[type=pig,tag=payload_test] at @s run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
