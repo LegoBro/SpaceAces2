@@ -15,6 +15,8 @@ scoreboard players set 250 Numbers 250
 scoreboard players set 1200 Numbers 1200
 scoreboard players set 72000 Numbers 72000
 
+scoreboard players set -1 Numbers -1
+
 scoreboard players set 1 Numbers 1
 scoreboard players set 15 Numbers 15
 scoreboard players set 350 Numbers 350

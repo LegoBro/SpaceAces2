@@ -7,4 +7,4 @@ give @s strider_spawn_egg[entity_data={id:"minecraft:marker",CustomNameVisible:1
 give @s ghast_spawn_egg[entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["general_spawn_point"]},custom_name='{"color":"#ffffff","italic":false,"text":"Spawn General Spawn Point"}'] 1
 
 
-give @s wither_skeleton_spawn_egg[entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["kill_marker"]},custom_name='{"color":"#494949","italic":false,"text":"Marker Killer"}'] 1
+function dev:get/marker_killer

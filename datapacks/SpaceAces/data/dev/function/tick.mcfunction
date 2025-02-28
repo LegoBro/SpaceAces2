@@ -13,6 +13,7 @@ execute as @e[tag=general_spawn_point] at @s run particle block_crumble{block_st
 # Capture Point
 execute as @e[tag=capture_point] at @s run particle minecraft:raid_omen
 
+
 ## Payload
 # payload marker setup
 execute as @n[type=marker,tag=payload_path_spawn] store result score @s payload if entity @e[type=marker,tag=payload_path]
@@ -20,6 +21,8 @@ execute as @n[type=marker,tag=payload_path_spawn] run tag @s add payload_path
 execute as @n[type=marker,tag=payload_path_spawn] run tag @s remove payload_path_spawn
 execute as @e[type=marker,tag=payload_increment] at @s run scoreboard players add @n[type=marker,tag=payload_path] payload 1
 execute as @e[type=marker,tag=payload_decrement] at @s run scoreboard players remove @n[type=marker,tag=payload_path] payload 1
+# Let player know
+execute as @a[gamemode=creative] at @s if entity @n[type=marker,distance=..3,tag=payload_path] run tellraw @s [{"color":"white","text":"Payload Path: "},{"color":"aqua","score":{"name":"@n[type=marker,tag=payload_path]","objective":"payload"}}]
 
 # Pig Pathing :D
 execute as @e[type=pig,tag=payload_test] at @s run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
