@@ -9,6 +9,14 @@ tag @e[type=marker,tag=active_payload_path] remove active_payload_path
 execute as @e[type=marker,tag=payload_path] if score @s payload = @n[type=pig,tag=payload] payload run tag @s add active_payload_path
 execute unless entity @n[type=marker,tag=active_payload_path] unless entity @a[team=blue,tag=winner] run function gamemode:blue_win
 
+# Red Timer
+scoreboard players remove timer Numbers 1
+scoreboard players operation #timerTemp Numbers = timer Numbers
+scoreboard players operation #timerTemp Numbers /= 20 Numbers
+scoreboard players operation TimeLeft display = #timerTemp Numbers
+
+execute if score timer Numbers matches ..0 as @n[type=pig,tag=payload] at @s unless entity @p[team=blue,distance=..3] run function gamemode:red_win
+
 # Respawning
 tp @a[tag=in_game,scores={health=..0},team=blue] 6 195 -1 90 0
 tp @a[tag=in_game,scores={health=..0},team=red] 10 195 -1 -90 0
