@@ -15,7 +15,7 @@ scoreboard players operation #timerTemp Numbers = timer Numbers
 scoreboard players operation #timerTemp Numbers /= 20 Numbers
 scoreboard players operation TimeLeft display = #timerTemp Numbers
 
-execute if score timer Numbers matches ..0 as @n[type=pig,tag=payload] at @s unless entity @p[team=blue,distance=..3] run function gamemode:red_win
+execute if score timer Numbers matches ..0 as @n[type=pig,tag=payload] at @s unless entity @p[team=blue,distance=..3] unless entity @a[tag=winner] run function gamemode:red_win
 
 # Respawning
 tp @a[tag=in_game,scores={health=..0},team=blue] 6 195 -1 90 0
