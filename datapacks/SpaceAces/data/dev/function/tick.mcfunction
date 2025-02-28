@@ -15,12 +15,19 @@ execute as @e[tag=capture_point] at @s run particle minecraft:raid_omen
 
 
 ## Payload
-# payload marker setup
-execute as @n[type=marker,tag=payload_path_spawn] store result score @s payload if entity @e[type=marker,tag=payload_path]
+
+execute as @n[type=marker,tag=payload_spawn_point_spawn] store result score @s payload if entity @e[type=marker,tag=payload_spawn_point,distance=..512]
+execute as @n[type=marker,tag=payload_spawn_point_spawn] run tag @s add payload_spawn_point
+execute as @n[type=marker,tag=payload_spawn_point_spawn] run tag @s remove payload_spawn_point_spawn
+
+# payload Path marker setup
+execute as @n[type=marker,tag=payload_path_spawn] store result score @s payload if entity @e[type=marker,tag=payload_path,distance=..512]
 execute as @n[type=marker,tag=payload_path_spawn] run tag @s add payload_path
 execute as @n[type=marker,tag=payload_path_spawn] run tag @s remove payload_path_spawn
 execute as @e[type=marker,tag=payload_increment] at @s run scoreboard players add @n[type=marker,tag=payload_path] payload 1
 execute as @e[type=marker,tag=payload_decrement] at @s run scoreboard players remove @n[type=marker,tag=payload_path] payload 1
+execute as @e[type=marker,tag=payload_checkpoint,tag=kill] at @s run tag @e[type=marker,tag=payload_path,distance=..1] add payload_checkpoint
+
 # Let player know
 execute as @a[gamemode=creative] at @s if entity @n[type=marker,distance=..3,tag=payload_path] run title @s actionbar [{"color":"white","text":"Payload Path: "},{"color":"aqua","score":{"name":"@n[type=marker,tag=payload_path]","objective":"payload"}}]
 
