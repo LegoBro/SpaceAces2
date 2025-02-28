@@ -1,5 +1,5 @@
 # Loads setback (dynamic)
-scoreboard players set ActiveMode Numbers 5
+scoreboard players set ActiveMode Numbers 6
 execute if score Map settings matches 0 run function arena:load/gray_caves
 
 scoreboard players set checkpoint Numbers 0
