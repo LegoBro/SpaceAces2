@@ -1,7 +1,7 @@
 ## Commands ran for payload
 
 # Payload, blue is always pushing
-execute as @n[type=pig,tag=payload] at @s if entity @p[team=blue,distance=..3] unless entity @a[team=red,distance=..3] run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
+execute as @n[type=pig,tag=payload] at @s if entity @p[team=blue,distance=..5] unless entity @a[team=red,distance=..5] run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
 
 execute as @e[type=pig,tag=payload] at @s if score @s payload = @n[type=marker,tag=active_payload_path,tag=payload_checkpoint,distance=..0.1] payload run function gamemode:payload/next_checkpoint
 execute as @e[type=pig,tag=payload] at @s if score @s payload = @n[type=marker,tag=active_payload_path,distance=..0.1] payload run scoreboard players add @s payload 1
@@ -15,7 +15,7 @@ scoreboard players operation #timerTemp Numbers = timer Numbers
 scoreboard players operation #timerTemp Numbers /= 20 Numbers
 scoreboard players operation TimeLeft display = #timerTemp Numbers
 
-execute if score timer Numbers matches ..0 as @n[type=pig,tag=payload] at @s unless entity @p[team=blue,distance=..3] unless entity @a[tag=winner] run function gamemode:red_win
+execute if score timer Numbers matches ..0 as @n[type=pig,tag=payload] at @s unless entity @p[team=blue,distance=..5] unless entity @a[tag=winner] run function gamemode:red_win
 
 # Respawning
 tp @a[tag=in_game,scores={health=..0},team=blue] 6 195 -1 90 0
