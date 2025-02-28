@@ -1,4 +1,5 @@
 scoreboard players add activePoint Numbers 1
+scoreboard players set point Numbers 0
 
 function gamemode:setback/update_captured_point
 
