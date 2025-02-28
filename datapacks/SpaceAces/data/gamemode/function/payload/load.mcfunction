@@ -6,7 +6,8 @@ scoreboard players set checkpoint Numbers 0
 function gamemode:payload/update_spawn_points
 
 # Spawn Payload
-execute unless entity @n[type=pig,tag=payload] at @n[type=marker,tag=payload_path,scores={payload=0}] run summon pig ~ ~ ~ {NoAI:1b,Tags:["payload_test"],Rotation:[0f,0f]}
+kill @e[type=pig]
+execute at @n[type=marker,tag=payload_path,scores={payload=0}] run summon pig ~ ~ ~ {NoAI:1b,Tags:["payload"],Rotation:[0f,0f]}
 scoreboard players add @e[type=pig,tag=payload] payload 0
 
 return 1
