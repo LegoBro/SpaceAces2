@@ -3,7 +3,7 @@ execute at @a[tag=in_game,scores={health=..0}] run playsound minecraft:item.tote
 team join spectator @a[tag=in_game,scores={health=..0}]
 gamemode spectator @a[tag=in_game,team=spectator]
 tag @a[tag=in_game,team=spectator] remove in_game
-execute unless entity @a[tag=in_game,team=blue] unless entity @a[tag=in_game,team=red] run scoreboard players set ActiveMode Numbers 0
+execute unless entity @a[tag=in_game,team=blue] unless entity @a[tag=in_game,team=red] run scoreboard players set ActiveMode Numbers -1
 execute if entity @a[tag=in_game,team=red] unless entity @a[tag=in_game,team=blue] unless entity @a[tag=winner] run function gamemode:red_win
 execute if entity @a[tag=in_game,team=blue] unless entity @a[tag=in_game,team=red] unless entity @a[tag=winner] run function gamemode:blue_win
 bossbar set main players

@@ -16,8 +16,8 @@ execute unless entity @a[tag=in_game] run function tick:no_in_game
 
 # Gamemode running/setup
 execute if score Mission Numbers matches 1.. run function gamemode:countdown
-execute if score ActiveMode Numbers matches 1.. if score Prestart Numbers matches ..119 run function gamemode:loading_gamemode
-execute if score ActiveMode Numbers matches 1.. unless score Prestart Numbers matches ..119 run function gamemode:running
+execute if score ActiveMode Numbers matches 0.. if score Prestart Numbers matches ..119 run function gamemode:loading_gamemode
+execute if score ActiveMode Numbers matches 0.. unless score Prestart Numbers matches ..119 run function gamemode:running with storage space_aces:gamemodes
 
 # if player is in training area
 execute if entity @a[tag=trainee] run function gamemode:training

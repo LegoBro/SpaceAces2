@@ -5,7 +5,7 @@ execute as @a[tag=in_game,scores={health=..0},team=blue] run tp @s @e[tag=blue_s
 execute as @a[tag=in_game,scores={health=..0},team=red] run tp @s @e[tag=red_spawn,limit=1]
 execute as @a[tag=in_game,scores={health=..0}] at @s run tp @s ~ ~ ~ 0 0
 execute as @a[tag=in_game,scores={health=..0}] at @s run function gamemode:respawn
-execute unless entity @a[tag=in_game,team=blue] unless entity @a[tag=in_game,team=red] run scoreboard players set ActiveMode Numbers 0
+execute unless entity @a[tag=in_game,team=blue] unless entity @a[tag=in_game,team=red] run scoreboard players set ActiveMode Numbers -1
 execute if score @r[tag=in_game,team=red] kills >= killstreakKills Numbers unless entity @a[tag=winner] run function gamemode:red_win
 execute if score @r[tag=in_game,team=blue] kills >= killstreakKills Numbers unless entity @a[tag=winner] run function gamemode:blue_win
 execute if entity @a[tag=in_game,team=red] unless entity @a[tag=in_game,team=blue] unless entity @a[tag=winner] run function gamemode:red_win

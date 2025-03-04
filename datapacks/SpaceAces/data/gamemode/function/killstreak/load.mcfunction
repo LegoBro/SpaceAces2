@@ -1,10 +1,5 @@
 # Loads killstreak (dynamic)
-scoreboard players set ActiveMode Numbers 4
-
-execute if score Map settings matches 0 run function arena:load/moon_base
-execute if score Map settings matches 1 run function arena:load/ruins
-execute if score Map settings matches 2 run function arena:load/penal_colony
-execute if score Map settings matches 3 run function arena:load/frigate
+scoreboard players set ActiveMode Numbers 3
 
 scoreboard players reset * kills
 return 1

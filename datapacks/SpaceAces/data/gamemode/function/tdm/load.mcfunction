@@ -1,11 +1,5 @@
 # Loads tdm (dynamic)
-scoreboard players set ActiveMode Numbers 2
-
-execute if score Map settings matches 0 run function arena:load/moon_base
-execute if score Map settings matches 1 run function arena:load/ruins
-execute if score Map settings matches 2 run function arena:load/penal_colony
-execute if score Map settings matches 3 run function arena:load/frigate
-
+scoreboard players set ActiveMode Numbers 1
 
 scoreboard players set blue_players Numbers 0
 scoreboard players set red_players Numbers 0

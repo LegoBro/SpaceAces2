@@ -1,5 +1,5 @@
 # Loads escape (dynamic)
-scoreboard players set ActiveMode Numbers 5
+scoreboard players set ActiveMode Numbers 4
 tag @a[tag=awaiting] add in_game
 tag @a[tag=in_game] remove awaiting
 bossbar set minecraft:main name ["",{"text":"Next Wave","color":"white","type":"text"}]

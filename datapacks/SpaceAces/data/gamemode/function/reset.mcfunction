@@ -33,7 +33,7 @@ execute as @a[team=spectator] run function load:spawn
 bossbar set blue players
 bossbar set red players
 bossbar set main players
-scoreboard players reset ActiveMode
+scoreboard players set ActiveMode Numbers -1
 scoreboard players reset * display
 tag @a[tag=ready] remove ready
 setblock 9 195 5 minecraft:oak_wall_sign[facing=east]

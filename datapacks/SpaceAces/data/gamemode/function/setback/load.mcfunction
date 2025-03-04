@@ -1,6 +1,5 @@
 # Loads setback (dynamic)
-scoreboard players set ActiveMode Numbers 3
-execute if score Map settings matches 0 run function arena:load/frigate
+scoreboard players set ActiveMode Numbers 2
 
 scoreboard players set respawnTime Numbers 0
 execute as @a[tag=ready] run scoreboard players add respawnTime Numbers 30
