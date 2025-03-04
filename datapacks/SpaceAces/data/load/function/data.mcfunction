@@ -7,102 +7,112 @@ data merge storage space_aces:gamemodes {\
 "min_players":2,\
 "rec_players":6,\
 "max_players":100,\
+"map":{\
+    "index":0,\
+    "name":"moon_base",\
+    "maps":[\
+        "moon_base",\
+        "penal_colony",\
+        "ruins",\
+        "frigate"\
+    ],\
+},\
 "gamemodes":[\
     {\
         "name":"duel",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"tdm",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"setback",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"killstreak",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"escape",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+        ],\
     },\
     {\
         "name":"payload",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "gray_caves"\
+        ],\
     },\
     {\
         "name":"lockout",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"ctf",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "ruins"\
+        ],\
     },\
     {\
         "name":"pd",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"aliens",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     },\
     {\
         "name":"ffa",\
-        "min_players":2\
+        "min_players":2,\
+        "maps": [\
+            "moon_base",\
+            "penal_colony",\
+            "ruins",\
+            "frigate"\
+        ],\
     }\
 ]}
-
-data merge storage space_aces:maps {\
-    "duel": [\
-        "moon_base",\
-        "penal_colony",\
-        "ruins",\
-        "frigate"\
-    ],\
-    "tdm": [\
-        "moon_base",\
-        "penal_colony",\
-        "ruins",\
-        "frigate"\
-    ],\
-    "setback": [\
-        "frigate"\
-    ],\
-    "killstreak": [\
-        "moon_base",\
-        "penal_colony",\
-        "ruins",\
-        "frigate"\
-    ],\
-    "escape": [\
-    ],\
-    "payload": [\
-        "gray_caves"\
-    ],\
-    "lockout": [\
-        "moon_base",\
-        "penal_colony",\
-        "ruins",\
-        "frigate"\
-    ],\
-    "ctf": [\
-        "ruins"\
-    ],\
-    "pd": [\
-        "moon_base"\
-    ],\
-    "aliens": [\
-        "moon_base",\
-        "penal_colony",\
-        "ruins",\
-        "frigate"\
-    ],\
-    "ffa": [\
-        "moon_base",\
-        "penal_colony",\
-        "ruins",\
-        "frigate"\
-    ]\
-}
