@@ -1,9 +1,11 @@
 function load:constants
+function load:objectives
 schedule function load:map_signs 5t
 schedule function load:spawn_displays 5t
-function load:objectives
+
 function load:teams
-function gamemode:cycle
+
+#function gamemode:cycle
 
 # Forcloads the game
 forceload add 20028 -68 20163 67
