@@ -1,5 +1,5 @@
 # Loads setback (dynamic)
-scoreboard players set ActiveMode Numbers 5
+scoreboard players set ActiveMode Numbers 4
 
 scoreboard players set checkpoint Numbers 0
 function gamemode:payload/update_spawn_points

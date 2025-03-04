@@ -56,16 +56,16 @@ data merge storage space_aces:gamemodes {\
         ],\
     },\
     {\
-        "name":"escape",\
-        "min_players":2,\
-        "maps": [\
-        ],\
-    },\
-    {\
         "name":"payload",\
         "min_players":2,\
         "maps": [\
             "gray_caves"\
+        ],\
+    },\
+    {\
+        "name":"escape",\
+        "min_players":2,\
+        "maps": [\
         ],\
     },\
     {\
