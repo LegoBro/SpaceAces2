@@ -13,4 +13,16 @@ kill @e[type=pig]
 execute at @n[type=marker,tag=payload_path,scores={payload=0}] run summon pig ~ ~ ~ {NoAI:1b,Tags:["payload"],Rotation:[0f,0f]}
 scoreboard players add @e[type=pig,tag=payload] payload 0
 
+## Calculate Distances, each checkpoint includes the checkpoints before it, so 3 is the full distance of the track
+
+scoreboard players set checkpoint.distance.1 Numbers 0
+scoreboard players set checkpoint.distance.2 Numbers 0
+scoreboard players set checkpoint.distance.3 Numbers 0
+
+execute as @e[type=marker,tag=payload_path] run scoreboard players operation checkpoint.distance.3 Numbers += @s payload.distance
+
+execute as @e[type=marker,tag=payload_path,tag=payload_checkpoint] run function gamemode:payload/load_checkpoint_distance
+
+
+
 return 1
