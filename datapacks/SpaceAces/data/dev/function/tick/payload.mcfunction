@@ -14,9 +14,9 @@ execute as @e[type=marker,tag=payload_checkpoint,tag=kill] at @s run tag @e[type
 
 # Pig Pathing :D
 execute as @e[type=pig,tag=payload_test] at @s run tp @s ^ ^ ^0.1 facing entity @n[type=marker,tag=active_payload_path]
-execute as @e[type=pig,tag=payload_test] at @s if score @s payload = @n[type=marker,tag=active_payload_path,distance=..0.1] payload run scoreboard players add @s payload 1
+execute as @e[type=pig,tag=payload_test] at @s if score @s payload = @n[type=marker,tag=active_payload_path,distance=..0.1] payload run function dev:payload/set_active_path
 tag @e[type=marker,tag=active_payload_path] remove active_payload_path
-execute as @e[type=marker,tag=payload_path] if score @s payload = @n[type=pig,tag=payload_test] payload run function dev:payload/set_active_path
+execute as @e[type=marker,tag=payload_path] if score @s payload = @n[type=pig,tag=payload_test] payload run tag @s add active_payload_path
 execute unless entity @n[type=marker,tag=active_payload_path] run kill @n[type=pig,tag=payload_test]
 execute unless entity @n[type=pig,tag=payload_test] at @n[type=marker,tag=payload_path,scores={payload=0}] run summon pig ~ ~ ~ {NoAI:1b,Tags:["payload_test"],Rotation:[0f,0f]}
 scoreboard players add @e[type=pig,tag=payload_test] payload 0
