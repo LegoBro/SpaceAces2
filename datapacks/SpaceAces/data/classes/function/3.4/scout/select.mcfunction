@@ -1,0 +1,3 @@
+scoreboard players set @s Class 1
+tellraw @p {"text":"\nSelected Class Scout","color":"dark_gray","bold":true,"extra":[{"text":"\na loadout focused entirely on speed\n\nLoadout:\n","color":"gray","bold":false,"type":"text"},{"translate":"surge_pistol"},{"text":"\n","type":"text"},{"translate":"boost"},{"text":"\n","type":"text"},{"translate":"launch"},{"text":"\n","type":"text"},{"translate":"adrenaline"}],"type":"text"}
+return 1

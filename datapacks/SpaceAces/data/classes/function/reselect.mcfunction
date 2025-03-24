@@ -1,3 +1,5 @@
+execute if score @s Class matches 1 run function classes:scout/select
+
 scoreboard players set @s reload 500000
 scoreboard players set @s totalShots 0
 scoreboard players set @s activate_second 0
