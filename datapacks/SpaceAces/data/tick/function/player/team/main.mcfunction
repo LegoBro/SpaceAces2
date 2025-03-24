@@ -15,7 +15,7 @@ execute if entity @s[x=3,y=195,z=-10,dx=11,dy=1,dz=15,tag=!awaiting,tag=!in_game
 # Changes the way items display
 function help:c5af7bf92237dfa52aeea9d27e400e4bcd6b3ed2e9d9b146a94fe228a7a3df67
 effect give @s minecraft:haste 1000000 100 true
-effect give @s minecraft:weakness 1000000 100 true
+#effect give @s minecraft:weakness 1000000 100 true
 
 # Nerf to sprinting
 effect give @s[scores={sprint=1..,energy=7..}] minecraft:hunger 1 30 true

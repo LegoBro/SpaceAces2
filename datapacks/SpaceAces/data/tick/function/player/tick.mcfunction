@@ -1,5 +1,6 @@
 ## Ticks as player
 # Sets up player
+function input:tick
 execute store result score @s SelectedItem run data get entity @s SelectedItemSlot
 execute if entity @s[tag=!spawned] at @s run function load:spawn
 execute if entity @s[tag=newb] run function tick:player/newb

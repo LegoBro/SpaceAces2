@@ -1,0 +1,10 @@
+{
+    "criteria": {
+      "interaction": {
+        "trigger": "minecraft:using_item"
+      }
+    },
+    "rewards": {
+      "function": "input:right_click"
+    }
+  }

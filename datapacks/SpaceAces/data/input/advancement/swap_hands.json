@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "interaction": {
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "function": "input:swap_hands_check"
+  }
+}

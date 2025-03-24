@@ -1,0 +1,1 @@
+summon interaction ~ ~ ~ {width:3f,height:3f,response:0b,Tags:["input.interaction"]}
