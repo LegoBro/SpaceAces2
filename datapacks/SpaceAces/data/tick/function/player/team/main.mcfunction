@@ -94,16 +94,16 @@ execute if score @s totalShots matches ..9 run data modify storage health:ammo t
 execute if score @s totalShots matches ..-1 run scoreboard players set @s totalShots 0
 
 ## Calculate secondary
-scoreboard players operation secondary Numbers = @s activate_second
-execute if score @s activate_second matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 2 0
+scoreboard players operation secondary Numbers = @s ability.1.cooldown
+execute if score @s ability.1.cooldown matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 2 0
 scoreboard players add secondary Numbers 20
 scoreboard players operation secondary Numbers /= 20 Numbers
 execute if score secondary Numbers matches 10.. run data modify storage health:secondary translate set value '{"translate": "space.1"}'
 execute if score secondary Numbers matches ..9 run data modify storage health:secondary translate set value '{"translate": "space.6"}'
 
 ## Calculate Tertiary
-scoreboard players operation tertiary Numbers = @s activate_third
-execute if score @s activate_third matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 1 0
+scoreboard players operation tertiary Numbers = @s ability.2.cooldown
+execute if score @s ability.2.cooldown matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 1 0
 scoreboard players add tertiary Numbers 20
 scoreboard players operation tertiary Numbers /= 20 Numbers
 execute if score tertiary Numbers matches 10.. run data modify storage health:tertiary translate set value '{"translate": "space.1"}'

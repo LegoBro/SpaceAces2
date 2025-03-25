@@ -6,8 +6,8 @@ scoreboard players operation Enemies display = enemiesLeft Numbers
 execute if score waveDelay Numbers matches ..0 run function gamemode:escape/wave/finder
 scoreboard players operation Energy display = currency Numbers
 scoreboard players operation Wave display = wave Numbers
-scoreboard players set @a[tag=escape,tag=no_2] activate_second 3
-scoreboard players set @a[tag=escape,tag=no_3] activate_third 3
+scoreboard players set @a[tag=escape,tag=no_2] ability.1.cooldown 3
+scoreboard players set @a[tag=escape,tag=no_3] ability.2.cooldown 3
 function help:67dbc8e600a8acbdaf649a934eab1431a03ac4eb5d64691ccf47d5a3b6051548
 function help:28f98be0d8c9a8d88f2529ae20beb7ae31a55203e8e9e464b6db2f30fbe18298
 execute as @a[tag=escape,team=blue] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 minecraft:air replace minecraft:creeper_head

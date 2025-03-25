@@ -1,21 +1,21 @@
 item replace entity @s[gamemode=!spectator,tag=!invis,scores={crouching=0}] armor.head with minecraft:leather_helmet[minecraft:attribute_modifiers={modifiers:[{type:"minecraft:movement_speed",id:"minecraft:d03be21c-51f4-4994-a5f7-56260febbd16",operation:"add_multiplied_total",amount:0.3d}]},minecraft:dyed_color={rgb:3669775},minecraft:enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:0b},minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 item replace entity @s[tag=!invis,scores={crouching=1..}] armor.head with minecraft:leather_helmet[minecraft:attribute_modifiers={modifiers:[{type:"minecraft:movement_speed",id:"minecraft:d03be21c-51f4-4994-a5f7-56260febbd16",operation:"add_multiplied_total",amount:0.2d}]},minecraft:dyed_color={rgb:3669775},minecraft:enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:0b},minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 
-execute if entity @s[scores={activate_second=0}] run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="mobility/1",minecraft:custom_name='{"color":"white","translate":"warp"}',minecraft:lore=['{"color":"white","translate":"warp_lore1"}','{"color":"white","translate":"warp_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
-execute if entity @s[scores={activate_second=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye
-scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] activate_second 100
+execute if entity @s[scores={ability.1.cooldown=0}] run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="mobility/1",minecraft:custom_name='{"color":"white","translate":"warp"}',minecraft:lore=['{"color":"white","translate":"warp_lore1"}','{"color":"white","translate":"warp_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
+execute if entity @s[scores={ability.1.cooldown=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye
+scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] ability.1.cooldown 100
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] rightClick
-execute if entity @s[scores={activate_second=100}] run function classes:mobility/warp/activate
-scoreboard players remove @s[scores={activate_second=1..}] activate_second 1
-execute if entity @s[scores={activate_second=99}] run function classes:mobility/warp/deactivate
+execute if entity @s[scores={ability.1.cooldown=100}] run function classes:mobility/warp/activate
+scoreboard players remove @s[scores={ability.1.cooldown=1..}] ability.1.cooldown 1
+execute if entity @s[scores={ability.1.cooldown=99}] run function classes:mobility/warp/deactivate
 
-execute if entity @s[scores={activate_third=0}] run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="mobility/2",minecraft:custom_name='{"color":"white","translate":"flash_grenade"}',minecraft:lore=['{"color":"white","translate":"flash_grenade_lore1"}','{"color":"white","translate":"flash_grenade_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
-execute if entity @s[scores={activate_third=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye
-scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] activate_third 160
+execute if entity @s[scores={ability.2.cooldown=0}] run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="mobility/2",minecraft:custom_name='{"color":"white","translate":"flash_grenade"}',minecraft:lore=['{"color":"white","translate":"flash_grenade_lore1"}','{"color":"white","translate":"flash_grenade_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
+execute if entity @s[scores={ability.2.cooldown=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye
+scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] ability.2.cooldown 160
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] rightClick
-execute if entity @s[scores={activate_third=160}] run function classes:mobility/flash_grenade/activate
-scoreboard players remove @s[scores={activate_third=1..}] activate_third 1
-execute if entity @s[scores={activate_third=150}] run function classes:mobility/flash_grenade/deactivate
+execute if entity @s[scores={ability.2.cooldown=160}] run function classes:mobility/flash_grenade/activate
+scoreboard players remove @s[scores={ability.2.cooldown=1..}] ability.2.cooldown 1
+execute if entity @s[scores={ability.2.cooldown=150}] run function classes:mobility/flash_grenade/deactivate
 
 # Passive
 item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model="mobility/3",minecraft:custom_name='{"color":"white","translate":"power_pants"}',minecraft:lore=['{"color":"white","translate":"power_pants_lore1"}','{"color":"white","translate":"power_pants_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]

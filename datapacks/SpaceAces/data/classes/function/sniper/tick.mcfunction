@@ -1,0 +1,1 @@
+function classes:sniper/base

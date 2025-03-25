@@ -5,8 +5,8 @@ scoreboard players set @s shoot 0
 scoreboard players set @s reload 500000
 scoreboard players set @s totalShots 0
 scoreboard players set @s Class 2
-scoreboard players set @s activate_second 0
-scoreboard players set @s activate_third 0
+scoreboard players set @s ability.1.cooldown 0
+scoreboard players set @s ability.2.cooldown 0
 scoreboard players set @s crouching 0
 scoreboard players set @s health 150
 scoreboard players set @s displayHealth 10

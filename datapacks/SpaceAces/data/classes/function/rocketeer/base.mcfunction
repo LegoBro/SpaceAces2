@@ -1,21 +1,21 @@
 item replace entity @s[gamemode=!spectator,tag=!invis,scores={crouching=0}] armor.head with minecraft:leather_helmet[minecraft:attribute_modifiers={modifiers:[{type:"minecraft:movement_speed",id:"minecraft:d03be21c-51f4-4994-a5f7-56260febbd16",operation:"add_multiplied_total",amount:-0.05d}]},minecraft:dyed_color={rgb:2774103},minecraft:enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:0b},minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 item replace entity @s[tag=!invis,scores={crouching=1..}] armor.head with minecraft:leather_helmet[minecraft:attribute_modifiers={modifiers:[{type:"minecraft:movement_speed",id:"minecraft:d03be21c-51f4-4994-a5f7-56260febbd16",operation:"add_multiplied_total",amount:-0.25d}]},minecraft:dyed_color={rgb:2774103},minecraft:enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:0b},minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
 
-execute if entity @s[scores={activate_second=0}] run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="rocketeer/1",minecraft:custom_name='{"color":"white","translate":"piercing_dart"}',minecraft:lore=['{"color":"white","translate":"piercing_dart_lore1"}','{"color":"white","translate":"piercing_dart_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
-execute if entity @s[scores={activate_second=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye
-scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] activate_second 100
+execute if entity @s[scores={ability.1.cooldown=0}] run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="rocketeer/1",minecraft:custom_name='{"color":"white","translate":"piercing_dart"}',minecraft:lore=['{"color":"white","translate":"piercing_dart_lore1"}','{"color":"white","translate":"piercing_dart_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
+execute if entity @s[scores={ability.1.cooldown=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye
+scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] ability.1.cooldown 100
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] rightClick
-execute if entity @s[scores={activate_second=100}] run function classes:rocketeer/piercing_dart/activate
-scoreboard players remove @s[scores={activate_second=1..}] activate_second 1
-execute if entity @s[scores={activate_second=90}] run function classes:rocketeer/piercing_dart/deactivate
+execute if entity @s[scores={ability.1.cooldown=100}] run function classes:rocketeer/piercing_dart/activate
+scoreboard players remove @s[scores={ability.1.cooldown=1..}] ability.1.cooldown 1
+execute if entity @s[scores={ability.1.cooldown=90}] run function classes:rocketeer/piercing_dart/deactivate
 
-execute if entity @s[scores={activate_third=0}] run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="rocketeer/2",minecraft:custom_name='{"color":"white","translate":"resist"}',minecraft:lore=['{"color":"white","translate":"resist_lore1"}','{"color":"white","translate":"resist_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
-execute if entity @s[scores={activate_third=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye
-scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] activate_third 400
+execute if entity @s[scores={ability.2.cooldown=0}] run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="rocketeer/2",minecraft:custom_name='{"color":"white","translate":"resist"}',minecraft:lore=['{"color":"white","translate":"resist_lore1"}','{"color":"white","translate":"resist_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]
+execute if entity @s[scores={ability.2.cooldown=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye
+scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] ability.2.cooldown 400
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] rightClick
-execute if entity @s[scores={activate_third=400}] run function classes:rocketeer/resist/activate
-scoreboard players remove @s[scores={activate_third=1..}] activate_third 1
-execute if entity @s[scores={activate_third=340}] run function classes:rocketeer/resist/deactivate
+execute if entity @s[scores={ability.2.cooldown=400}] run function classes:rocketeer/resist/activate
+scoreboard players remove @s[scores={ability.2.cooldown=1..}] ability.2.cooldown 1
+execute if entity @s[scores={ability.2.cooldown=340}] run function classes:rocketeer/resist/deactivate
 
 # Passive
 item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model="rocketeer/3",minecraft:custom_name='{"color":"white","translate":"rocket_boots"}',minecraft:lore=['{"color":"white","translate":"rocket_boots_lore1"}','{"color":"white","translate":"rocket_boots_lore2"}'],minecraft:unbreakable={show_in_tooltip:0b},minecraft:hide_additional_tooltip={}]

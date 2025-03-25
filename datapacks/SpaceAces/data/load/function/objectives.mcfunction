@@ -48,8 +48,8 @@ scoreboard objectives add totalShots dummy
 scoreboard objectives add activate_1 dummy
 scoreboard objectives add activate_2 dummy
 scoreboard objectives add activate_3 dummy
-scoreboard objectives add activate_second dummy
-scoreboard objectives add activate_third dummy
+scoreboard objectives add ability.1.cooldown dummy
+scoreboard objectives add ability.2.cooldown dummy
 scoreboard objectives add lowHealth dummy
 scoreboard objectives add lastHurter dummy
 scoreboard objectives add kills dummy
