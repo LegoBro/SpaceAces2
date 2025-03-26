@@ -9,4 +9,6 @@ execute unless predicate health:boots run function health:update_armor_blue
 execute if score @s energy matches ..9 run particle minecraft:block{block_state:{Name:"minecraft:yellow_concrete_powder"}} ~ ~1 ~ 0.1 0.1 0.1 0 5 force @a[distance=.5..,team=blue]
 execute if score @s displayHealth matches ..2 run particle minecraft:block{block_state:{Name:"minecraft:lapis_block"}} ~ ~1 ~ 0.1 0.1 0.1 0 5 force @a[distance=.5..,team=blue]
 
+scoreboard players set @s Team 1
+
 return 1

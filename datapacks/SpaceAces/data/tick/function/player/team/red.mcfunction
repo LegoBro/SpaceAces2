@@ -10,4 +10,6 @@ execute if score @s energy matches ..9 run particle minecraft:block{block_state:
 
 execute if score @s displayHealth matches ..2 run particle minecraft:block{block_state:{Name:"minecraft:lapis_block"}} ~ ~1 ~ 0.1 0.1 0.1 0 5 force @a[distance=.5..,team=red]
 
+scoreboard players set @s Team 2
+
 return 1

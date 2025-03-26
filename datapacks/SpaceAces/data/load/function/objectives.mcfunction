@@ -28,6 +28,7 @@ scoreboard objectives add invulnerable dummy
 
 # Player
 scoreboard objectives add Class dummy
+scoreboard objectives add Team dummy
 scoreboard objectives add rightClick minecraft.used:carrot_on_a_stick
 scoreboard objectives add reload minecraft.dropped:carrot_on_a_stick
 scoreboard objectives add displayHealth dummy
@@ -66,6 +67,7 @@ scoreboard objectives add falloffFloor dummy
 scoreboard objectives add speed dummy
 scoreboard objectives add raw_damage dummy
 scoreboard objectives add damage dummy
+scoreboard objectives add critMult dummy
 scoreboard objectives add 2xdamage dummy
 scoreboard objectives add fire_tick dummy
 scoreboard objectives add arcRate dummy

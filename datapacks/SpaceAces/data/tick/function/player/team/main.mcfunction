@@ -2,6 +2,7 @@
 # Rebranch into two specific teams
 execute if entity @s[team=blue] run function tick:player/team/blue
 execute if entity @s[team=red] run function tick:player/team/red
+execute store result score @s damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
 
 # Hitbox handling
 tag @s[tag=hb_player,scores={crouching=1}] add hb_crouched_player

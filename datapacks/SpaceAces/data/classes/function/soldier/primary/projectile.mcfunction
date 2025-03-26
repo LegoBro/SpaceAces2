@@ -1,4 +1,5 @@
 scoreboard players operation @s damage = class.soldier.primary.damage Numbers
+scoreboard players operation @s critMult = class.soldier.primary.critMult Numbers
 execute if entity @s[scores={damageMultiplier=-200..}] run function projectile:damage_multiplier
 scoreboard players operation @s falloff = class.soldier.primary.falloff Numbers
 scoreboard players operation @s falloffStart = class.soldier.primary.falloffStart Numbers

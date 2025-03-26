@@ -4,6 +4,7 @@ scoreboard players set class.scout.speed Numbers 140
 scoreboard players set class.scout.primary.reload Numbers 20
 scoreboard players set class.scout.primary.firerate Numbers 4
 scoreboard players set class.scout.primary.damage Numbers 20
+scoreboard players set class.scout.primary.critMult Numbers 200
 scoreboard players set class.scout.primary.falloff Numbers 1
 scoreboard players set class.scout.primary.falloffStart Numbers 20
 scoreboard players set class.scout.primary.speed Numbers 0

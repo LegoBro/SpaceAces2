@@ -1,22 +1,33 @@
-## Used when reloading (generated)
-execute if score @s totalShots matches 8.. run scoreboard players set @s reload 0
-item replace entity @s[scores={reload=0..4}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=29,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=4..8}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=27,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=8..11}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=25,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=11..15}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=22,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=15..18}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=20,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=18..22}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=18,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=22..25}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=16,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=25..29}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=13,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=29..33}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=11,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=33..36}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=9,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=36..40}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=6,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=40..43}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=4,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=43..47}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=2,minecraft:custom_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=47..50}] hotbar.0 with minecraft:golden_hoe[item_model="bomber/0",minecraft:damage=0,minecraft:custom_name='{"translate":"reloading"}']
-effect give @s[scores={reload=1}] minecraft:hunger 1 100 true
-scoreboard players add @s[scores={reload=1..}] reload 1
-scoreboard players set @s[scores={reload=50..}] totalShots 8
-execute if score @s reload matches 50.. run playsound minecraft:gun.reload hostile @a ~ ~ ~
-scoreboard players set @s[scores={reload=50..}] reload 0
-return 1
+## Reloads default stats
+scoreboard players set class.bomber.health Numbers 150
+scoreboard players set class.bomber.speed Numbers 100
+scoreboard players set class.bomber.primary.reload Numbers 30
+scoreboard players set class.bomber.primary.firerate Numbers 15
+scoreboard players set class.bomber.primary.damage Numbers 10
+scoreboard players set class.bomber.primary.critMult Numbers 150
+scoreboard players set class.bomber.primary.arcRate Numbers 10
+scoreboard players set class.bomber.primary.speed Numbers 10
+scoreboard players set class.bomber.primary.ammo Numbers 8
+
+scoreboard players set class.bomber.primary.explode_damage Numbers 35
+scoreboard players set class.bomber.primary.explode_critMult Numbers 100
+scoreboard players set class.bomber.primary.explode_falloff Numbers 7
+scoreboard players set class.bomber.primary.explode_falloffStart Numbers 0
+
+scoreboard players set class.bomber.secondary.reload Numbers 30
+scoreboard players set class.bomber.secondary.firerate Numbers 10
+scoreboard players set class.bomber.secondary.damage Numbers 5
+scoreboard players set class.bomber.secondary.critMult Numbers 150
+scoreboard players set class.bomber.secondary.arcRate Numbers 20
+scoreboard players set class.bomber.secondary.speed Numbers 10
+scoreboard players set class.bomber.secondary.ammo Numbers 4
+
+scoreboard players set class.bomber.secondary.detonate_damage Numbers 25
+scoreboard players set class.bomber.secondary.detonate_critMult Numbers 100
+scoreboard players set class.bomber.secondary.detonate_falloff Numbers 5
+scoreboard players set class.bomber.secondary.detonate_falloffStart Numbers 0
+
+scoreboard players set class.bomber.1.cooldown Numbers 20
+scoreboard players set class.bomber.1.duration Numbers 10
+scoreboard players set class.bomber.2.cooldown Numbers 20
+scoreboard players set class.bomber.2.duration Numbers 10

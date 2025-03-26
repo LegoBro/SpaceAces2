@@ -1,10 +1,10 @@
 ## Vis Mine becomes active
-summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["entity","standby_sticky_bomb","hb_player"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:paper",components:{"item_model":"bomber/sticky"},count:1}]}
-execute store result score @e[type=minecraft:armor_stand,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..1.5] id run scoreboard players get @s id
-execute if entity @s[tag=blue] run tag @e[type=minecraft:armor_stand,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..1.5] add blue
-execute if entity @s[tag=red] run tag @e[type=minecraft:armor_stand,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..1.5] add red
-scoreboard players set @e[type=minecraft:armor_stand,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..1.5] health 50
-execute if entity @s[tag=blue] run team join blue @e[type=minecraft:armor_stand,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..1.5]
-execute if entity @s[tag=red] run team join red @e[type=minecraft:armor_stand,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..1.5]
+summon item_display ~ ~ ~ {Tags:["entity","standby_sticky_bomb","hb_player"],teleport_duration:1}
+item replace entity @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=entity,distance=..3] container.0 with minecraft:paper[item_model="bomber/sticky"]
+scoreboard players operation @n[type=minecraft:item_display,tag=standby_sticky_bomb,sort=nearest,limit=1,distance=..3] Team = @s Team
+execute if entity @s[tag=blue] run team join blue @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=entity,distance=..3]
+execute if entity @s[tag=red] run team join red @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=entity,distance=..3]
+scoreboard players set @n[type=minecraft:item_display,tag=standby_sticky_bomb,distance=..3] health 50
+execute store result score @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=entity,distance=..3] id run scoreboard players get @s id
 
 return 1

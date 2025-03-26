@@ -1,4 +1,4 @@
-function classes:bomber/sticky_impact
+function classes:bomber/sticky_bomb/detonate
 kill @s
 
 return 1
