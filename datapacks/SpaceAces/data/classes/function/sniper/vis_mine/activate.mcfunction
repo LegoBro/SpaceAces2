@@ -7,4 +7,7 @@ execute store result score @e[type=minecraft:item_display,tag=vis_mine,sort=near
 execute as @e[type=minecraft:item_display,tag=vis_mine,sort=nearest,limit=1,distance=..3] at @s positioned ~ ~.25 ~ run function classes:sniper/vis_mine/projectile
 playsound minecraft:block.snow.break player @a ~ ~ ~ 1.0 2.0
 
+scoreboard players operation @s ability.2.cooldown = class.sniper.2.cooldown Numbers
+scoreboard players reset @s rightClick
+
 return 1
