@@ -7,4 +7,7 @@ execute store result score @e[type=minecraft:armor_stand,tag=poison_jab,sort=nea
 execute as @e[type=minecraft:armor_stand,tag=poison_jab,sort=nearest,limit=1,distance=..3] at @s positioned ~ ~1 ~ run function classes:seeker/poison_jab/projectile
 playsound minecraft:block.slime_block.break master @a ~ ~ ~ 1 2
 
+scoreboard players operation @s ability.1.cooldown = class.seeker.1.cooldown Numbers
+scoreboard players reset @s rightClick
+
 return 1

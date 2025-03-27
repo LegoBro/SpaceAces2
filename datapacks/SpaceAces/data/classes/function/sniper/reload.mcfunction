@@ -12,3 +12,8 @@ scoreboard players set class.sniper.1.cooldown Numbers 100
 scoreboard players set class.sniper.1.duration Numbers 100
 scoreboard players set class.sniper.2.cooldown Numbers 100
 scoreboard players set class.sniper.2.duration Numbers 95
+scoreboard players set class.sniper.2.damage Numbers 5
+scoreboard players set class.sniper.2.falloff Numbers 0
+scoreboard players set class.sniper.2.falloffStart Numbers 0
+scoreboard players set class.sniper.2.speed Numbers 0
+scoreboard players set class.sniper.2.ammo Numbers 3
