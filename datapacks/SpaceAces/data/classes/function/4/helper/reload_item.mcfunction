@@ -1,0 +1,2 @@
+## Library function to place item in player's inventory
+$item replace entity @s hotbar.0 with paper[item_model="$(model)",damage=$(value),max_damage=$(max),minecraft:max_stack_size=1,minecraft:custom_name='{"translate":"reloading"}']

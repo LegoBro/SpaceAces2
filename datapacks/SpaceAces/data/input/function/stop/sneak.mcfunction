@@ -1,3 +1,3 @@
 
-tag @s remove input.right
-tag @s add input.right.stop
+tag @s remove input.sneak
+tag @s add input.sneak.stop

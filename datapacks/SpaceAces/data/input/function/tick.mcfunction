@@ -1,9 +1,5 @@
 ## Ticking function for input collector
 
-# Remove tags from advancements
-tag @s remove input.left_click
-tag @s remove input.right_click
-tag @s remove input.swap_hands
 
 # Stop removal
 tag @s remove input.left.stop
@@ -52,4 +48,5 @@ execute if predicate input:sprint run tag @s[tag=!input.sprint] add input.sprint
 execute if predicate input:sprint run tag @s add input.sprint
 execute if entity @s[tag=input.sprint] unless predicate input:sprint run function input:stop/sprint
 
-execute as @n[type=interaction,tag=input.interaction] run function input:interaction_tick
+
+#execute as @n[type=interaction,tag=input.interaction] run function input:interaction_tick

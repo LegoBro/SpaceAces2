@@ -12,6 +12,6 @@ execute unless score @s damageMultiplier matches 0 run function projectile:damag
 
 scoreboard players operation @s j = @s speed
 
-execute run function projectile:ray
+function projectile:ray
 
 return 1

@@ -30,4 +30,6 @@ scoreboard players reset @s[scores={j=200..}] j
 # makes players in the lobby invulnerable
 scoreboard players set @s[x=8,y=200,z=8,distance=..250] invulnerable 100
 
+function input:adv_cleanup
+
 return 1
