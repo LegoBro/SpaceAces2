@@ -5,7 +5,7 @@ schedule function load:spawn_displays 5t
 
 function load:teams
 
-function classes:reload
+function class:reload
 
 #function gamemode:cycle
 

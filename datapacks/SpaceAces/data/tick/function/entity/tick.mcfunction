@@ -7,7 +7,7 @@ execute if entity @s[tag=raycast] at @s run return run function tick:raycast
 
 
 
-execute if entity @s[tag=class.deployable] run return run function classes:entity_tick
+execute if entity @s[tag=class.deployable] run return run function class:entity_tick
 
 # performs health functions
 execute if entity @s[tag=entity] at @s run function health:tick

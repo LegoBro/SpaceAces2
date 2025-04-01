@@ -17,7 +17,7 @@ execute if entity @s[team=!lobby,team=!spectator] at @s run function tick:player
 execute if entity @s[team=spectator] at @s run function tick:player/spectator
 
 # clears inventory of players
-execute if entity @s[gamemode=adventure] run function classes:clear_inventory
+execute if entity @s[gamemode=adventure] run function class:clear_inventory
 
 # prevents console/worm_hole from being triggered in game or as spectator
 

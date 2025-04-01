@@ -1,4 +1,4 @@
-execute if entity @e[type=minecraft:villager,tag=randomClass,tag=pilot] run function classes:random
+execute if entity @e[type=minecraft:villager,tag=randomClass,tag=pilot] run function class:random
 function help:b1b7b32c383cf7c8ae900b807469e3bc552abb04df1f75545c9693e4e338107d
 effect give @s minecraft:saturation 10 100 true
 function help:24fc4862c0a08d018da73012ad7c037ae4e8cef1fbd1cbcffc1c0576303046d2

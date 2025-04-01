@@ -1,2 +1,0 @@
-give @p minecraft:oak_sign[minecraft:block_entity_data={id:"minecraft:oak_sign",front_text:{messages:['""','{"text":"Scientist","color":"gray","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/function classes:scientist/select"},"type":"text"}','{"text":"Sustainer","color":"light_purple","clickEvent":{"action":"run_command","value":"/function classes:reselect"},"type":"text"}','""']}},minecraft:custom_name='"scientist"']
-return 1

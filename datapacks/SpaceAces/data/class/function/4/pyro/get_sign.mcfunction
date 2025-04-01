@@ -1,0 +1,2 @@
+give @p minecraft:oak_sign[minecraft:block_entity_data={id:"minecraft:oak_sign",front_text:{messages:['""','{"text":"Pyro","color":"gold","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/function class:pyro/select"},"type":"text"}','{"text":"Guardian","color":"green","clickEvent":{"action":"run_command","value":"/function class:reselect"},"type":"text"}','""']}},minecraft:custom_name='"pyro"']
+return 1

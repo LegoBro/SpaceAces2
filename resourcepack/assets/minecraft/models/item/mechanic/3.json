@@ -1,6 +1,0 @@
-{
-    "parent": "item/secondary_item",
-    "textures": {
-        "layer0": "item/mechanic/3"
-    }
-}
