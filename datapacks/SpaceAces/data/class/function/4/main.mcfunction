@@ -38,12 +38,12 @@ execute if entity @s[scores={resist=1..}] run function class:4/rocketeer/resist/
 execute if entity @s[scores={invulnerable=1..}] run function class:4/brawler/spin_slash/timer
 
 ## Display for active effects:
-item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:custom_name='{"translate":"effect.invis"}',minecraft:lore=['{"translate":"effect.invis.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:custom_name='{"translate":"effect.glowing"}',minecraft:lore=['{"translate":"effect.glowing.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:custom_name='{"translate":"effect.speed"}',minecraft:lore=['{"translate":"effect.speed.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:custom_name='{"translate":"effect.slowness"}',minecraft:lore=['{"translate":"effect.slowness.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:custom_name='{"translate":"effect.strength"}',minecraft:lore=['{"translate":"effect.strength.lore"}']]
-item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:custom_name='{"translate":"effect.over_heal"}',minecraft:lore=['{"translate":"effect.over_heal.lore"}']]
+item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:item_name='{"translate":"effect.invis"}',minecraft:lore=['{"translate":"effect.invis.lore"}']]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:item_name='{"translate":"effect.glowing"}',minecraft:lore=['{"translate":"effect.glowing.lore"}']]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:item_name='{"translate":"effect.speed"}',minecraft:lore=['{"translate":"effect.speed.lore"}']]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:item_name='{"translate":"effect.slowness"}',minecraft:lore=['{"translate":"effect.slowness.lore"}']]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:item_name='{"translate":"effect.strength"}',minecraft:lore=['{"translate":"effect.strength.lore"}']]
+item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:item_name='{"translate":"effect.over_heal"}',minecraft:lore=['{"translate":"effect.over_heal.lore"}']]
 
 # tick for health
 

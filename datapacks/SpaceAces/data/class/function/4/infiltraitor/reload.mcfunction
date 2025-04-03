@@ -1,28 +1,34 @@
 
 ## Reloads default stats
-scoreboard players set class.infiltraitor.health Numbers 100
-scoreboard players set class.infiltraitor.speed Numbers 125
-scoreboard players set class.infiltraitor.primary.reload Numbers 50
-scoreboard players set class.infiltraitor.primary.firerate Numbers 15
-scoreboard players set class.infiltraitor.primary.damage Numbers 45
-scoreboard players set class.infiltraitor.primary.critMult Numbers 150
-scoreboard players set class.infiltraitor.primary.falloff Numbers 2
-scoreboard players set class.infiltraitor.primary.falloffStart Numbers 15
-scoreboard players set class.infiltraitor.primary.speed Numbers 0
-scoreboard players set class.infiltraitor.primary.ammo Numbers 6
-scoreboard players set class.infiltraitor.1.cooldown Numbers 200
-scoreboard players set class.infiltraitor.1.duration Numbers 100
-scoreboard players set class.infiltraitor.2.cooldown Numbers 240
-scoreboard players set class.infiltraitor.2.duration Numbers 200
+execute store result score class.infiltraitor.health Numbers run data get storage space_aces:class infiltraitor.health
+execute store result score class.infiltraitor.speed Numbers run data get storage space_aces:class infiltraitor.speed
+execute store result score class.infiltraitor.primary.reload Numbers run data get storage space_aces:class infiltraitor.primary.reload 20
+execute store result score class.infiltraitor.primary.firerate Numbers run data get storage space_aces:class infiltraitor.primary.firerate
+execute store result score class.infiltraitor.primary.damage Numbers run data get storage space_aces:class infiltraitor.primary.damage
+execute store result score class.infiltraitor.primary.critMult Numbers run data get storage space_aces:class infiltraitor.primary.critMult 100
+execute store result score class.infiltraitor.primary.falloff Numbers run data get storage space_aces:class infiltraitor.primary.falloff
+execute store result score class.infiltraitor.primary.falloffStart Numbers run data get storage space_aces:class infiltraitor.primary.falloffStart
+execute store result score class.infiltraitor.primary.speed Numbers run data get storage space_aces:class infiltraitor.primary.speed
+execute store result score class.infiltraitor.primary.ammo Numbers run data get storage space_aces:class infiltraitor.primary.ammo
+
+execute store result score class.infiltraitor.1.cooldown Numbers run data get storage space_aces:class infiltraitor.1.cooldown
+execute store result score class.infiltraitor.1.duration Numbers run data get storage space_aces:class infiltraitor.1.duration
+
+execute store result score class.infiltraitor.2.cooldown Numbers run data get storage space_aces:class infiltraitor.2.cooldown
+execute store result score class.infiltraitor.2.duration Numbers run data get storage space_aces:class infiltraitor.2.duration
 
 
-scoreboard players set class.infiltraitor.2.damage Numbers 10
-scoreboard players set class.infiltraitor.2.critMult Numbers 100
-scoreboard players set class.infiltraitor.2.arcRate Numbers 30
-scoreboard players set class.infiltraitor.2.speed Numbers 8
+execute store result score class.infiltraitor.2.damage Numbers run data get storage space_aces:class infiltraitor.2.damage
+execute store result score class.infiltraitor.2.critMult Numbers run data get storage space_aces:class infiltraitor.2.critMult
+execute store result score class.infiltraitor.2.arcRate Numbers run data get storage space_aces:class infiltraitor.2.arcRate
+execute store result score class.infiltraitor.2.speed Numbers run data get storage space_aces:class infiltraitor.2.speed
+execute store result score class.infiltraitor.2.detonate_damage Numbers run data get storage space_aces:class infiltraitor.2.detonate_damage
+execute store result score class.infiltraitor.2.detonate_critMult Numbers run data get storage space_aces:class infiltraitor.2.detonate_critMult 100
+execute store result score class.infiltraitor.2.detonate_falloff Numbers run data get storage space_aces:class infiltraitor.2.detonate_falloff
+execute store result score class.infiltraitor.2.detonate_falloffStart Numbers run data get storage space_aces:class infiltraitor.2.detonate_falloffStart
+execute store result score class.infiltraitor.2.detonate_timer Numbers run data get storage space_aces:class infiltraitor.2.detonate_timer
 
-scoreboard players set class.infiltraitor.2.detonate_damage Numbers 50
-scoreboard players set class.infiltraitor.2.detonate_critMult Numbers 100
-scoreboard players set class.infiltraitor.2.detonate_falloff Numbers 8
-scoreboard players set class.infiltraitor.2.detonate_falloffStart Numbers 2
-scoreboard players set class.infiltraitor.2.detonate_timer Numbers 40
+## Non-setting variables
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/infiltraitor/primary",minecraft:item_name='{"translate":"class.infiltraitor.primary"}',minecraft:lore=['{"color":"white","italic":false,"translate":"class.infiltraitor.primary.lore"}'],minecraft:hide_additional_tooltip={}]
+function class:4/helper/load/create_primary with storage space_aces:class infiltraitor.primary
+item replace block 15 -52 0 container.0 from block 15 -63 0 container.0
