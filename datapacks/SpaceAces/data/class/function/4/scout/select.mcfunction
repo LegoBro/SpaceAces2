@@ -1,9 +1,8 @@
 scoreboard players set @s Class 1
 
 scoreboard players operation @s maxHealth = class.scout.health Numbers
-
-attribute @s movement_speed modifier remove class
-attribute @s movement_speed modifier add class .40 add_multiplied_base
+data modify storage class:speed speed set from storage space_aces:class scout.speed
+function class:4/helper/set/speed with storage class:speed
 
 # Helmet
 

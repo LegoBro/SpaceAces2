@@ -10,7 +10,7 @@ execute if entity @s[tag=turret] at @s run function tick:turret
 execute if entity @s[tag=healing_machine] at @s run function class:4/scientist/healing_machine/standby
 
 
-execute if entity @s[tag=thrown_sword] at @s run function class:4/brawler/sword_throw/standby
+execute if entity @s[tag=class.brawler.thrown_sword] at @s run function class:4/brawler/sword_throw/standby
 execute if entity @s[tag=active_fire_bomb] at @s run function class:4/pyro/fire_bomb/standby
 execute if entity @s[type=minecraft:armor_stand,tag=healing_machine_display] unless entity @s[type=minecraft:slime,distance=..1,tag=healing_machine] at @s run kill @s
 

@@ -1,3 +1,4 @@
-particle minecraft:heart ~ ~2 ~ 0 0 0 0 1 force @a
+particle minecraft:heart ~ ~ ~ 1 0 1 0 10 force @a
+playsound minecraft:health_pack player @a ~ ~ ~ 1 2 0
 
 return 1

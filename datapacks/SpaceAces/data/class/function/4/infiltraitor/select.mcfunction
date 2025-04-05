@@ -3,6 +3,6 @@ scoreboard players set @s Class 11
 
 
 scoreboard players operation @s maxHealth = class.infiltraitor.health Numbers
-attribute @s movement_speed modifier remove class
-attribute @s movement_speed modifier add class .25 add_multiplied_base
+data modify storage class:speed speed set from storage space_aces:class infiltraitor.speed
+function class:4/helper/set/speed with storage class:speed
 return 1

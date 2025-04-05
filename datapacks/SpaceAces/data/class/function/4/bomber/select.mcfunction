@@ -3,7 +3,7 @@ scoreboard players set @s Class 4
 
 scoreboard players operation @s maxHealth = class.bomber.health Numbers
 tag @s remove class.bomber.sticky_mode
-attribute @s movement_speed modifier remove class
-attribute @s movement_speed modifier add class 0 add_multiplied_base
+data modify storage class:speed speed set from storage space_aces:class bomber.speed
+function class:4/helper/set/speed with storage class:speed
 
 return 1

@@ -13,6 +13,8 @@ function class:4/helper/reload_item with storage class:reload
 # Reload Done
 $execute if score @s reload >= class.$(class).primary.reload Numbers run function class:4/$(class)/primary/reload
 
+execute if score @s SelectedItem matches 0 run scoreboard players reset @s rightClick
+
 return 1
 
 

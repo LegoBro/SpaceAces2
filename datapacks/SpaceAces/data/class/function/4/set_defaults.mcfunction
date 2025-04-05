@@ -3,7 +3,7 @@
 data merge storage space_aces:class {\
     scout:{\
         health: 100,\
-        speed: 140,\
+        speed: .40,\
         primary:{\
             reload: 1,\
             firerate: 4,\
@@ -21,7 +21,7 @@ data merge storage space_aces:class {\
     },\
     soldier:{\
         health: 150,\
-        speed: 110,\
+        speed: .10,\
         primary:{\
             reload: 2.5,\
             firerate: 4,\
@@ -43,7 +43,7 @@ data merge storage space_aces:class {\
     },\
     sniper:{\
         health: 150,\
-        speed: 110,\
+        speed: .10,\
         primary:{\
             reload: 1.25,\
             firerate: 8,\
@@ -75,7 +75,7 @@ data merge storage space_aces:class {\
     },\
     bomber:{\
         health: 150,\
-        speed: 100,\
+        speed: 0.0,\
         primary:{\
             reload: 1.5,\
             firerate: 15,\
@@ -113,7 +113,7 @@ data merge storage space_aces:class {\
     },\
     mobility:{\
         health: 125,\
-        speed: 120,\
+        speed: .20,\
         primary:{\
             reload: 1.5,\
             firerate: 8,\
@@ -136,7 +136,7 @@ data merge storage space_aces:class {\
     },\
     infiltraitor:{\
         health: 100,\
-        speed: 125,\
+        speed: .25,\
         primary:{\
             reload: 2.5,\
             firerate: 15,\
@@ -167,7 +167,7 @@ data merge storage space_aces:class {\
     },\
     seeker:{\
         health: 125,\
-        speed: 130,\
+        speed: .30,\
         primary:{\
             reload: 3,\
             firerate: 8,\
@@ -186,6 +186,214 @@ data merge storage space_aces:class {\
             speed: 12,\
             falloff: 1,\
             falloffStart: 20,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    gunner:{\
+        health: 300,\
+        speed: 0.0,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    brawler:{\
+        health: 300,\
+        speed: .10,\
+        primary:{\
+            firerate: 10,\
+            damage: 35,\
+            critMult: 1,\
+            falloff: 0,\
+            falloffStart: 0,\
+            speed: 0\
+        },\
+        1:{\
+            cooldown: 120,\
+            duration: 115,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+            jump_power: 20000\
+        },\
+        2:{\
+            cooldown: 150,\
+            duration: 100,\
+            damage: 10\
+        }\
+    },\
+    mechanic:{\
+        health: 300,\
+        speed: 100,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    pyro:{\
+        health: 300,\
+        speed: 100,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    rocketeer:{\
+        health: 300,\
+        speed: 100,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    healer:{\
+        health: 300,\
+        speed: 100,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    scientist:{\
+        health: 300,\
+        speed: 100,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
+        },\
+        2:{\
+            cooldown: 300,\
+            duration: 250\
+        }\
+    },\
+    shocksmith:{\
+        health: 300,\
+        speed: 100,\
+        primary:{\
+            reload: 3,\
+            firerate: 0,\
+            damage: 6,\
+            critMult: 1.5,\
+            falloff: 1,\
+            falloffStart: 25,\
+            speed: 0,\
+            ammo: 100\
+        },\
+        1:{\
+            cooldown: 240,\
+            duration: 200,\
+            damage: 75,\
+            critMult: 100,\
+            falloff: 15,\
+            falloffStart: 0,\
         },\
         2:{\
             cooldown: 300,\
