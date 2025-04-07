@@ -241,55 +241,54 @@ data merge storage space_aces:class {\
         2:{\
             cooldown: 150,\
             duration: 100,\
-            damage: 10\
+            damage: 10,\
+            maxUses: 2\
         }\
     },\
     mechanic:{\
-        health: 300,\
-        speed: 100,\
+        health: 200,\
+        speed: -0.05,\
         primary:{\
-            reload: 3,\
-            firerate: 0,\
-            damage: 6,\
+            reload: 1,\
+            firerate: 12,\
+            damage: 8,\
             critMult: 1.5,\
             falloff: 1,\
-            falloffStart: 25,\
+            falloffStart: 10,\
             speed: 0,\
-            ammo: 100\
+            ammo: 2,\
+            bullets: 6,\
+            spreadX: 25,\
+            spreadY: 25\
         },\
         1:{\
-            cooldown: 240,\
+            cooldown: 200,\
             duration: 200,\
-            damage: 75,\
-            critMult: 100,\
-            falloff: 15,\
-            falloffStart: 0,\
+            turret: {\
+                health: 150,\
+                }\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 100,\
+            duration: 30\
         }\
     },\
     pyro:{\
         health: 300,\
-        speed: 100,\
+        speed: -0.10,\
         primary:{\
             reload: 3,\
             firerate: 0,\
-            damage: 6,\
-            critMult: 1.5,\
-            falloff: 1,\
-            falloffStart: 25,\
-            speed: 0,\
-            ammo: 100\
+            damage: 5,\
+            critMult: 1,\
+            speed: 12,\
+            ammo: 50\
         },\
         1:{\
-            cooldown: 240,\
-            duration: 200,\
-            damage: 75,\
+            cooldown: 200,\
+            duration: 100,\
+            linger: 50,\
             critMult: 100,\
-            falloff: 15,\
-            falloffStart: 0,\
         },\
         2:{\
             cooldown: 300,\
@@ -297,17 +296,18 @@ data merge storage space_aces:class {\
         }\
     },\
     rocketeer:{\
-        health: 300,\
+        health: 250,\
         speed: 100,\
         primary:{\
-            reload: 3,\
-            firerate: 0,\
-            damage: 6,\
-            critMult: 1.5,\
-            falloff: 1,\
-            falloffStart: 25,\
-            speed: 0,\
-            ammo: 100\
+            reload: 1.5,\
+            firerate: 14,\
+            damage: 25,\
+            critMult: 1,\
+            speed: 16,\
+            ammo: 6,\
+            impact_damage: 30,\
+            impact_falloff: 10,\
+            impact_falloffStart: 1\
         },\
         1:{\
             cooldown: 240,\
@@ -323,17 +323,18 @@ data merge storage space_aces:class {\
         }\
     },\
     healer:{\
-        health: 300,\
-        speed: 100,\
+        health: 150,\
+        speed: 130,\
         primary:{\
-            reload: 3,\
-            firerate: 0,\
-            damage: 6,\
+            reload: 2,\
+            firerate: 10,\
+            damage: 4,\
+            healing: 4,\
             critMult: 1.5,\
             falloff: 1,\
-            falloffStart: 25,\
+            falloffStart: 20,\
             speed: 0,\
-            ammo: 100\
+            ammo: 30\
         },\
         1:{\
             cooldown: 240,\
@@ -349,7 +350,7 @@ data merge storage space_aces:class {\
         }\
     },\
     scientist:{\
-        health: 300,\
+        health: 175,\
         speed: 100,\
         primary:{\
             reload: 3,\
