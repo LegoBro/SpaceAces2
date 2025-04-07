@@ -20,7 +20,7 @@ execute unless entity @e[tag=map_display_6] run summon minecraft:armor_stand 4 2
 execute unless entity @e[tag=map_display_7] run summon minecraft:armor_stand 12 204.75 36 {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["reload.reset","map_display_7"]}
 execute unless entity @e[tag=map_display_8] run summon minecraft:armor_stand 4 204.75 36 {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["reload.reset","map_display_8"]}
 execute unless entity @e[tag=archive_display] run summon minecraft:armor_stand 8 214.75 -1 {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["reload.reset","archive_display"]}
-data modify block 9 215 1 front_text.messages[1] set value '{"text":">>>>>","color":"aqua","bold":true,"clickEvent":{"action":"run_command","value":"/scoreboard players add archive Numbers 1"},"type":"text"}'
-data modify block 7 215 1 front_text.messages[1] set value '{"text":"<<<<<","color":"aqua","bold":true,"clickEvent":{"action":"run_command","value":"/scoreboard players remove archive Numbers 1"},"type":"text"}'
+data modify block 9 215 1 front_text.messages[1] set value {text:">>>>>",color:"aqua","bold":true,click_event:{"action":"run_command",command:"/scoreboard players add archive Numbers 1"},"type":"text"}
+data modify block 7 215 1 front_text.messages[1] set value {text:"<<<<<",color:"aqua","bold":true,click_event:{"action":"run_command",command:"/scoreboard players remove archive Numbers 1"},"type":"text"}
 
 return 1

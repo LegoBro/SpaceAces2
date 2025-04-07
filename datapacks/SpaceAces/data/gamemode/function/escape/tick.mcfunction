@@ -29,7 +29,7 @@ execute as @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active] at @s if
 execute as @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active,tag=!glowing] at @s unless entity @p[distance=..25,tag=escape,team=blue] run function gamemode:escape/terminal_begin_glow
 execute as @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active,tag=glowing] at @s if entity @p[distance=..25,tag=escape,team=blue] run function gamemode:escape/terminal_end_glow
 
-execute as @a[tag=in_game,tag=escape] at @s if entity @e[type=minecraft:area_effect_cloud,distance=..5,tag=terminal,tag=active] run title @s subtitle {"translate":"near_terminal"}
+execute as @a[tag=in_game,tag=escape] at @s if entity @e[type=minecraft:area_effect_cloud,distance=..5,tag=terminal,tag=active] run title @s subtitle {translate:"near_terminal"}
 execute as @a[tag=in_game,tag=escape] at @s if entity @e[type=minecraft:area_effect_cloud,distance=..5,tag=terminal,tag=active] run title @s title ""
 execute store result score Terminals display if entity @e[type=minecraft:area_effect_cloud,tag=terminal,tag=!active]
 bossbar set minecraft:main name {"text":"Next Wave","type":"text"}

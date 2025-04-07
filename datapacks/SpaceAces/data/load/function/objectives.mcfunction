@@ -16,7 +16,7 @@ scoreboard objectives add payload.distance dummy
 scoreboard objectives add payload.check.id dummy
 
 # Entity - Health
-scoreboard objectives add health dummy ["",{"text":"+","color":"green","bold":true,"type":"text"}]
+scoreboard objectives add health dummy ["",{"text":"+",color:"green","bold":true,"type":"text"}]
 scoreboard objectives add maxHealth dummy
 scoreboard objectives add healing dummy
 

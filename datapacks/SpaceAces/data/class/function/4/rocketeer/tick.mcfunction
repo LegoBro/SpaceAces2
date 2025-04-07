@@ -16,7 +16,9 @@ execute if score @s ability.2.cooldown matches 1.. run function class:4/rocketee
 
 
 
-# Passive: Bomb Voyage
+# Passive: Rocket Boots
+execute unless predicate input:jump run effect clear @s slow_falling
+execute unless predicate input:on_ground if predicate input:jump run function class:4/rocketeer/rocket_boots/run
 
 
 

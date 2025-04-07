@@ -19,6 +19,6 @@ execute store result score class.mechanic.2.duration Numbers run data get storag
 
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/mechanic/primary",minecraft:item_name='{"translate":"class.mechanic.primary"}',minecraft:lore=['{"color":"white","italic":false,"translate":"class.mechanic.primary.lore"}'],minecraft:hide_additional_tooltip={}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/mechanic/primary",minecraft:item_name={translate:"class.mechanic.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class mechanic.primary
-item replace block 15 -55 0 container.0 from block 15 -63 0 container.0
+item replace block 15 -54 0 container.0 from block 15 -63 0 container.0

@@ -1,3 +1,3 @@
 scoreboard players set @s Class 4
-tellraw @p {"text":"\nSelected Class Bomber","color":"dark_gray","bold":true,"extra":[{"text":"\na very explosive loadout\n\nLoadout:\n","color":"gray","bold":false,"type":"text"},{"translate":"plasma_grenade_launcher"},{"text":"\n","type":"text"},{"translate":"sticky_bomb"},{"text":"\n","type":"text"},{"translate":"detonator"},{"text":"\n","type":"text"},{"translate":"bomb_voyage"}],"type":"text"}
+tellraw @p {"text":"\nSelected Class Bomber",color:"dark_gray","bold":true,"extra":[{"text":"\na very explosive loadout\n\nLoadout:\n",color:"gray","bold":false,"type":"text"},{translate:"plasma_grenade_launcher"},{"text":"\n","type":"text"},{translate:"sticky_bomb"},{"text":"\n","type":"text"},{translate:"detonator"},{"text":"\n","type":"text"},{translate:"bomb_voyage"}],"type":"text"}
 return 1

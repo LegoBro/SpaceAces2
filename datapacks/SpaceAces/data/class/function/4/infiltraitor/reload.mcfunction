@@ -29,6 +29,6 @@ execute store result score class.infiltraitor.2.detonate_falloffStart Numbers ru
 execute store result score class.infiltraitor.2.detonate_timer Numbers run data get storage space_aces:class infiltraitor.2.detonate_timer
 
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/infiltraitor/primary",minecraft:item_name='{"translate":"class.infiltraitor.primary"}',minecraft:lore=['{"color":"white","italic":false,"translate":"class.infiltraitor.primary.lore"}'],minecraft:hide_additional_tooltip={}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/infiltraitor/primary",minecraft:item_name={translate:"class.infiltraitor.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.infiltraitor.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class infiltraitor.primary
 item replace block 15 -52 0 container.0 from block 15 -63 0 container.0

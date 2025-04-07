@@ -282,7 +282,8 @@ data merge storage space_aces:class {\
             damage: 5,\
             critMult: 1,\
             speed: 12,\
-            ammo: 50\
+            ammo: 50,\
+            arcRate: -9\
         },\
         1:{\
             cooldown: 200,\
@@ -297,7 +298,7 @@ data merge storage space_aces:class {\
     },\
     rocketeer:{\
         health: 250,\
-        speed: 100,\
+        speed: 0.0,\
         primary:{\
             reload: 1.5,\
             firerate: 14,\
@@ -306,6 +307,7 @@ data merge storage space_aces:class {\
             speed: 16,\
             ammo: 6,\
             impact_damage: 30,\
+            impact_critMult: 1,\
             impact_falloff: 10,\
             impact_falloffStart: 1\
         },\
@@ -324,7 +326,7 @@ data merge storage space_aces:class {\
     },\
     healer:{\
         health: 150,\
-        speed: 130,\
+        speed: .30,\
         primary:{\
             reload: 2,\
             firerate: 10,\
@@ -351,16 +353,15 @@ data merge storage space_aces:class {\
     },\
     scientist:{\
         health: 175,\
-        speed: 100,\
+        speed: 0.10,\
         primary:{\
             reload: 3,\
-            firerate: 0,\
-            damage: 6,\
+            firerate: 6,\
+            damage: 15,\
             critMult: 1.5,\
-            falloff: 1,\
-            falloffStart: 25,\
-            speed: 0,\
-            ammo: 100\
+            speed: 16,\
+            arcRate: 6,\
+            ammo: 6\
         },\
         1:{\
             cooldown: 240,\
@@ -376,17 +377,17 @@ data merge storage space_aces:class {\
         }\
     },\
     shocksmith:{\
-        health: 300,\
-        speed: 100,\
+        health: 150,\
+        speed: 0.15,\
         primary:{\
-            reload: 3,\
-            firerate: 0,\
-            damage: 6,\
+            reload: 0,\
+            firerate: 4,\
+            damage: 3,\
             critMult: 1.5,\
             falloff: 1,\
             falloffStart: 25,\
             speed: 0,\
-            ammo: 100\
+            ammo: 1\
         },\
         1:{\
             cooldown: 240,\

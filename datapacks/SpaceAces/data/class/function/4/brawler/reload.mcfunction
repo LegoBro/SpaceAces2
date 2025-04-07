@@ -27,9 +27,9 @@ execute store result score class.brawler.2.maxUses Numbers run data get storage 
 execute store result score class.brawler.2.speed Numbers run data get storage space_aces:class brawler.2.speed
 
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/brawler/primary",minecraft:item_name='{"translate":"class.brawler.primary"}',minecraft:lore=['{"color":"white","italic":false,"translate":"class.brawler.primary.lore"}'],minecraft:hide_additional_tooltip={}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/brawler/primary",minecraft:item_name={translate:"class.brawler.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.brawler.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class brawler.primary
-item replace block 15 -52 0 container.0 from block 15 -63 0 container.0
+item replace block 15 -56 0 container.0 from block 15 -63 0 container.0
 
 ## Calculated on Reload, no need every tick:
 scoreboard players operation #test Numbers = class.brawler.2.maxUses Numbers

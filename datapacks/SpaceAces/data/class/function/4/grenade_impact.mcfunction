@@ -11,3 +11,4 @@ execute if entity @s[tag=rocket] run return run function class:4/rocketeer/rocke
 execute if entity @s[tag=chem] run return run function class:4/scientist/chem_impact
 execute if entity @s[tag=shock_grenade] run return run function class:4/shocksmith/shock_grenade_impact
 execute if entity @s[tag=fused_detonator] run return run function class:4/infiltraitor/fused_detonator/land
+execute if entity @s[tag=shockround,tag=projectile.impact.hitbox] run return run function class:4/shocksmith/primary/hit

@@ -22,8 +22,8 @@ execute if entity @a[tag=in_game,team=red] unless entity @a[tag=in_game,team=blu
 execute if entity @a[tag=in_game,team=blue] unless entity @a[tag=in_game,team=red] unless entity @a[tag=winner] run function gamemode:blue_win
 item replace entity @a[tag=in_game] hotbar.8 with minecraft:air
 
-execute if score blue_lives Numbers matches 0 run bossbar set minecraft:blue name ["",{"text":"IGSR Players Left","color":"blue","type":"text"}]
-execute if score red_lives Numbers matches 0 run bossbar set minecraft:red name ["",{"text":"RLU Players Left","color":"red","type":"text"}]
+execute if score blue_lives Numbers matches 0 run bossbar set minecraft:blue name ["",{"text":"IGSR Players Left",color:"blue","type":"text"}]
+execute if score red_lives Numbers matches 0 run bossbar set minecraft:red name ["",{"text":"RLU Players Left",color:"red","type":"text"}]
 
 execute if score blue_lives Numbers matches 0 store result bossbar minecraft:blue max run scoreboard players get blue_players Numbers
 execute if score red_lives Numbers matches 0 store result bossbar minecraft:red max run scoreboard players get red_players Numbers

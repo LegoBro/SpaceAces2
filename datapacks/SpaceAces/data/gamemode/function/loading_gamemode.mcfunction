@@ -3,7 +3,7 @@ item replace entity @a[tag=in_game] hotbar.8 with minecraft:air
 fill 7 195 5 9 195 5 minecraft:air replace minecraft:oak_wall_sign
 scoreboard players add Prestart Numbers 1
 execute if score Prestart Numbers matches 2 as @a[tag=in_game] at @s run playsound minecraft:countdown voice @s ~ ~ ~ 50 1 1
-bossbar set main name ["",{"text":"Loading...","color":"white","type":"text"}]
+bossbar set main name ["",{"text":"Loading...",color:"white","type":"text"}]
 bossbar set main players @a[tag=in_game]
 bossbar set main max 120
 execute store result bossbar main value run scoreboard players get Prestart Numbers
@@ -11,7 +11,7 @@ execute if score Prestart Numbers matches 120.. run bossbar set main players @a[
 execute if score Prestart Numbers matches 120.. unless score Gamemode settings matches 4 as @a[tag=in_game,team=blue] run tp @s @e[type=marker,tag=blue_spawn_point,sort=random,limit=1]
 execute if score Prestart Numbers matches 120.. if score Gamemode settings matches 4 run tp @a[tag=in_game] 30000 1 0
 # Entry message for escape mode
-execute if score Prestart Numbers matches 120.. if score Gamemode settings matches 4 run tellraw @a[tag=ready,tag=in_game] {"translate":"unlock_entry"}
+execute if score Prestart Numbers matches 120.. if score Gamemode settings matches 4 run tellraw @a[tag=ready,tag=in_game] {translate:"unlock_entry"}
 execute if score Prestart Numbers matches 120.. as @a[tag=in_game,team=red] run tp @s @e[type=marker,tag=red_spawn_point,sort=random,limit=1]
 execute if score Prestart Numbers matches 119 as @a[tag=in_game] at @s run function gamemode:respawn
 scoreboard players set @a[tag=in_game] game_damage 0

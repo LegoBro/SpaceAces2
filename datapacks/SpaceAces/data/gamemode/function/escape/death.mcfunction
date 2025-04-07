@@ -1,6 +1,6 @@
 title @a[tag=escape] times 0 50 10
 title @a[tag=escape] subtitle ""
-title @a[tag=escape] title ["",{"text":"All Players Down!","color":"dark_red","type":"text"}]
+title @a[tag=escape] title ["",{"text":"All Players Down!",color:"dark_red","type":"text"}]
 scoreboard players remove @p[tag=escape] i 1
 execute if score @p[tag=escape] i matches ..-200 run function gamemode:reset
 kill @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active]

@@ -7,8 +7,8 @@ execute as @a[tag=ready,team=blue] run scoreboard players add blue_players Numbe
 execute as @a[tag=ready,team=red] run scoreboard players add red_players Numbers 1
 scoreboard players operation blue_lives Numbers = TDMLives Numbers
 scoreboard players operation red_lives Numbers = TDMLives Numbers
-bossbar set minecraft:blue name ["",{"text":"IGSR Lives Left","color":"blue","type":"text"}]
-bossbar set minecraft:red name ["",{"text":"RLU Lives Left","color":"red","type":"text"}]
+bossbar set minecraft:blue name ["",{"text":"IGSR Lives Left",color:"blue","type":"text"}]
+bossbar set minecraft:red name ["",{"text":"RLU Lives Left",color:"red","type":"text"}]
 execute store result bossbar minecraft:blue max run scoreboard players get TDMLives Numbers
 execute store result bossbar minecraft:red max run scoreboard players get TDMLives Numbers
 return 1

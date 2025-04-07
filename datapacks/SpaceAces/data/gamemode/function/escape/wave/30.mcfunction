@@ -1,7 +1,7 @@
 #Commands for wave 30 (dynamic)
 scoreboard players set waveDelay Numbers 825
 execute at @e[type=minecraft:item_frame,tag=spawner,tag=active,sort=random,limit=1] run function enemies:summon/poison_bot
-tellraw @a[tag=escape] {"translate":"poison_bot"}
+tellraw @a[tag=escape] {translate:"poison_bot"}
 execute at @e[type=minecraft:item_frame,tag=spawner,tag=active,sort=random,limit=1] run function enemies:summon/poison_bot
 execute at @e[type=minecraft:item_frame,tag=spawner,tag=active,sort=random,limit=1] run function enemies:summon/poison_bot
 execute at @e[type=minecraft:item_frame,tag=spawner,tag=active,sort=random,limit=1] run function enemies:summon/poison_bot

@@ -1,22 +1,25 @@
-## Used when reloading (generated)
-execute if score @s totalShots matches 25.. run scoreboard players set @s reload 0
-item replace entity @s[scores={reload=0..8}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=29,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=8..15}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=27,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=15..22}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=25,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=22..29}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=22,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=29..36}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=20,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=36..43}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=18,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=43..50}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=16,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=50..58}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=13,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=58..65}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=11,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=65..72}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=9,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=72..79}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=6,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=79..86}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=4,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=86..93}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=2,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=93..100}] hotbar.0 with minecraft:golden_hoe[item_model="pyro/0",minecraft:damage=0,minecraft:item_name='{"translate":"reloading"}']
-effect give @s[scores={reload=1}] minecraft:hunger 1 100 true
-scoreboard players add @s[scores={reload=1..}] reload 1
-scoreboard players set @s[scores={reload=100..}] totalShots 25
-execute if score @s reload matches 100.. run playsound minecraft:gun.reload hostile @a ~ ~ ~
-scoreboard players set @s[scores={reload=100..}] reload 0
-return 1
+## Reloads default stats
+execute store result score class.pyro.health Numbers run data get storage space_aces:class pyro.health
+execute store result score class.pyro.speed Numbers run data get storage space_aces:class pyro.speed
+execute store result score class.pyro.primary.reload Numbers run data get storage space_aces:class pyro.primary.reload 20
+execute store result score class.pyro.primary.firerate Numbers run data get storage space_aces:class pyro.primary.firerate
+execute store result score class.pyro.primary.damage Numbers run data get storage space_aces:class pyro.primary.damage
+execute store result score class.pyro.primary.critMult Numbers run data get storage space_aces:class pyro.primary.critMult 100
+execute store result score class.pyro.primary.falloff Numbers run data get storage space_aces:class pyro.primary.falloff
+execute store result score class.pyro.primary.falloffStart Numbers run data get storage space_aces:class pyro.primary.falloffStart
+execute store result score class.pyro.primary.speed Numbers run data get storage space_aces:class pyro.primary.speed
+execute store result score class.pyro.primary.ammo Numbers run data get storage space_aces:class pyro.primary.ammo
+execute store result score class.pyro.primary.arcRate Numbers run data get storage space_aces:class pyro.primary.arcRate
+
+execute store result score class.pyro.1.cooldown Numbers run data get storage space_aces:class pyro.1.cooldown
+execute store result score class.pyro.1.duration Numbers run data get storage space_aces:class pyro.1.duration
+
+execute store result score class.pyro.2.cooldown Numbers run data get storage space_aces:class pyro.2.cooldown
+execute store result score class.pyro.2.duration Numbers run data get storage space_aces:class pyro.2.duration
+
+## Calculated on Reload, no need every tick:
+## Non-setting variables
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/pyro/primary",minecraft:item_name={translate:"class.pyro.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.pyro.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
+function class:4/helper/load/create_primary with storage space_aces:class pyro.primary
+item replace block 15 -51 0 container.0 from block 15 -63 0 container.0
+

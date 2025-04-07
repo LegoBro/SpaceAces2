@@ -10,7 +10,7 @@ execute if score escape.time Numbers matches 0..99 run schedule function gamemod
 
 #execute unless score escape.time Numbers matches 0.. run schedule function gamemode:escape/points/kills 50t
 
-title @a[tag=escape] subtitle [{"text":"Time Bonus: ","color":"dark_red","type":"text"},{"score":{"name":"escape.time","objective":"Numbers"},"color":"red","type":"score"}]
-title @a[tag=escape] title [{"text":"Points: ","color":"blue","type":"text"},{"score":{"name":"escape.points","objective":"Numbers"},"color":"green","type":"score"}]
+title @a[tag=escape] subtitle [{"text":"Time Bonus: ",color:"dark_red","type":"text"},{"score":{"name":"escape.time","objective":"Numbers"},color:"red","type":"score"}]
+title @a[tag=escape] title [{"text":"Points: ",color:"blue","type":"text"},{"score":{"name":"escape.points","objective":"Numbers"},color:"green","type":"score"}]
 
 return 1

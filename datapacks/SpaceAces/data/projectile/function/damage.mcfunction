@@ -11,6 +11,7 @@ tag @n[tag=projectile.target] remove projectile.target
 
 execute as @a if score @s id = place_id id at @s run function projectile:hit_indicator
 tag @s[tag=grenade] add impact
+tag @s[tag=grenade] add projectile.impact.hitbox
 tag @s add kill
 
 return 1

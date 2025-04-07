@@ -1,5 +1,6 @@
 ## Rocket boots, epic
-execute if entity @s[x_rotation=90] run function class:rocketeer/rocket_boots/launch
-execute if entity @s[nbt={active_effects:[{id:"minecraft:slow_falling"}]}] if block ~ ~-.5 ~ minecraft:air run function class:rocketeer/rocket_boots/display
+playsound minecraft:block.fire.extinguish block @s ~ ~ ~ .25 2
+particle minecraft:soul_fire_flame ~ ~ ~ 0 -0.1 .1 0 5
+effect give @s slow_falling 1 0 true
 
 return 1

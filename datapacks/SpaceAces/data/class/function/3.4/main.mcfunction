@@ -42,12 +42,12 @@ execute if entity @s[scores={resist=1..}] run function class:4/rocketeer/resist/
 execute if entity @s[scores={invulnerable=1..}] run function class:4/brawler/spin_slash/timer
 
 ## Display for active effects:
-item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:custom_name='{"translate":"effect.invis"}',minecraft:lore=['{"translate":"effect.invis.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:custom_name='{"translate":"effect.glowing"}',minecraft:lore=['{"translate":"effect.glowing.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:custom_name='{"translate":"effect.speed"}',minecraft:lore=['{"translate":"effect.speed.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:custom_name='{"translate":"effect.slowness"}',minecraft:lore=['{"translate":"effect.slowness.lore"}']]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:custom_name='{"translate":"effect.strength"}',minecraft:lore=['{"translate":"effect.strength.lore"}']]
-item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:custom_name='{"translate":"effect.over_heal"}',minecraft:lore=['{"translate":"effect.over_heal.lore"}']]
+item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:custom_name={translate:"effect.invis"},minecraft:lore=[{translate:"effect.invis.lore"}]]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:custom_name={translate:"effect.glowing"},minecraft:lore=[{translate:"effect.glowing.lore"}]]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:custom_name={translate:"effect.speed"},minecraft:lore=[{translate:"effect.speed.lore"}]]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:custom_name={translate:"effect.slowness"},minecraft:lore=[{translate:"effect.slowness.lore"}]]
+item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:custom_name={translate:"effect.strength"},minecraft:lore=[{translate:"effect.strength.lore"}]]
+item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:custom_name={translate:"effect.over_heal"},minecraft:lore=[{translate:"effect.over_heal.lore"}]]
 
 # tick for health
 
@@ -86,14 +86,14 @@ execute if score @s fire matches 1.. run data merge storage health:bar {text:"â‘
 execute if score @s invulnerable matches 1.. run data merge storage health:bar {text:"â‘¤"}
 
 ## Spacing for health
-execute if score @s health matches 100.. run data modify storage health:space translate set value '{"translate": "space.0"}'
-execute if score @s health matches 10..99 run data modify storage health:space translate set value '{"translate": "space.7"}'
-execute if score @s health matches ..9 run data modify storage health:space translate set value '{"translate": "space.14"}'
+execute if score @s health matches 100.. run data modify storage health:space translate set value {translate: "space.0"}
+execute if score @s health matches 10..99 run data modify storage health:space translate set value {translate: "space.7"}
+execute if score @s health matches ..9 run data modify storage health:space translate set value {translate: "space.14"}
 execute if score @s health matches ..-1 run scoreboard players set @s health 0
 
 ## Spacing for ammo
-execute if score @s totalShots matches 10.. run data modify storage health:ammo translate set value '{"translate": "space.0"}'
-execute if score @s totalShots matches ..9 run data modify storage health:ammo translate set value '{"translate": "space.5"}'
+execute if score @s totalShots matches 10.. run data modify storage health:ammo translate set value {translate: "space.0"}
+execute if score @s totalShots matches ..9 run data modify storage health:ammo translate set value {translate: "space.5"}
 execute if score @s totalShots matches ..-1 run scoreboard players set @s totalShots 0
 
 ## Calculate secondary
@@ -101,16 +101,16 @@ scoreboard players operation secondary Numbers = @s ability.1.cooldown
 execute if score @s ability.1.cooldown matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 2 0
 scoreboard players add secondary Numbers 20
 scoreboard players operation secondary Numbers /= 20 Numbers
-execute if score secondary Numbers matches 10.. run data modify storage health:secondary translate set value '{"translate": "space.1"}'
-execute if score secondary Numbers matches ..9 run data modify storage health:secondary translate set value '{"translate": "space.6"}'
+execute if score secondary Numbers matches 10.. run data modify storage health:secondary translate set value {translate: "space.1"}
+execute if score secondary Numbers matches ..9 run data modify storage health:secondary translate set value {translate: "space.6"}
 
 ## Calculate Tertiary
 scoreboard players operation tertiary Numbers = @s ability.2.cooldown
 execute if score @s ability.2.cooldown matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 1 0
 scoreboard players add tertiary Numbers 20
 scoreboard players operation tertiary Numbers /= 20 Numbers
-execute if score tertiary Numbers matches 10.. run data modify storage health:tertiary translate set value '{"translate": "space.1"}'
-execute if score tertiary Numbers matches ..9 run data modify storage health:tertiary translate set value '{"translate": "space.6"}'
+execute if score tertiary Numbers matches 10.. run data modify storage health:tertiary translate set value {translate: "space.1"}
+execute if score tertiary Numbers matches ..9 run data modify storage health:tertiary translate set value {translate: "space.6"}
 
 # Final hotbar assortment
 function help:cd35401486cfb62836f1a0f3102d3d38f14e0d0c7230ba7f76ae512a8fd7514a

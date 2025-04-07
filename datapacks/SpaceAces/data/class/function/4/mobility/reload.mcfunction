@@ -18,7 +18,7 @@ execute store result score class.mobility.2.duration Numbers run data get storag
 
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/mobility/primary",minecraft:item_name='{"translate":"class.mobility.primary"}',minecraft:lore=['{"color":"white","italic":false,"translate":"class.mobility.primary.lore"}'],minecraft:hide_additional_tooltip={}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/mobility/primary",minecraft:item_name={translate:"class.mobility.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.mobility.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class mobility.primary
 item replace block 15 -55 0 container.0 from block 15 -63 0 container.0
 

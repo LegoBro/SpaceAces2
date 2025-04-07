@@ -1,4 +1,4 @@
-## Used when reloading (generated)
+## Used when reloading
 $execute if score @s totalShots >= class.$(class).primary.ammo Numbers run scoreboard players set @s reload 0
 scoreboard players add @s[scores={reload=1..}] reload 1
 

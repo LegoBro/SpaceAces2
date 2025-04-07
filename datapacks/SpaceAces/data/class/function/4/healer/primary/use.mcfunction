@@ -1,4 +1,4 @@
-item replace entity @s hotbar.0 from block 15 -61 0 container.0
+item replace entity @s hotbar.0 from block 15 -57 0 container.0
 scoreboard players add @s[scores={shoot=1..}] shoot 1
 
 execute if score @s shoot matches 2 run function class:4/healer/primary/shoot

@@ -1,22 +1,25 @@
-## Used when reloading (generated)
-execute if score @s totalShots matches 6.. run scoreboard players set @s reload 0
-item replace entity @s[scores={reload=0..3}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=29,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=3..6}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=27,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=6..9}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=25,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=9..12}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=22,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=12..15}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=20,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=15..18}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=18,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=18..20}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=16,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=20..23}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=13,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=23..26}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=11,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=26..29}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=9,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=29..32}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=6,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=32..35}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=4,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=35..38}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=2,minecraft:item_name='{"translate":"reloading"}']
-item replace entity @s[scores={reload=38..40}] hotbar.0 with minecraft:golden_hoe[item_model="scientist/0",minecraft:damage=0,minecraft:item_name='{"translate":"reloading"}']
-effect give @s[scores={reload=1}] minecraft:hunger 1 100 true
-scoreboard players add @s[scores={reload=1..}] reload 1
-scoreboard players set @s[scores={reload=40..}] totalShots 6
-execute if score @s reload matches 40.. run playsound minecraft:gun.reload hostile @a ~ ~ ~
-scoreboard players set @s[scores={reload=40..}] reload 0
-return 1
+## Reloads default stats
+execute store result score class.scientist.health Numbers run data get storage space_aces:class scientist.health
+execute store result score class.scientist.speed Numbers run data get storage space_aces:class scientist.speed
+
+execute store result score class.scientist.primary.reload Numbers run data get storage space_aces:class scientist.primary.reload 20
+execute store result score class.scientist.primary.firerate Numbers run data get storage space_aces:class scientist.primary.firerate
+execute store result score class.scientist.primary.damage Numbers run data get storage space_aces:class scientist.primary.damage
+execute store result score class.scientist.primary.healing Numbers run data get storage space_aces:class scientist.primary.healing
+execute store result score class.scientist.primary.critMult Numbers run data get storage space_aces:class scientist.primary.critMult 100
+execute store result score class.scientist.primary.falloff Numbers run data get storage space_aces:class scientist.primary.falloff
+execute store result score class.scientist.primary.falloffStart Numbers run data get storage space_aces:class scientist.primary.falloffStart
+execute store result score class.scientist.primary.speed Numbers run data get storage space_aces:class scientist.primary.speed
+execute store result score class.scientist.primary.ammo Numbers run data get storage space_aces:class scientist.primary.ammo
+execute store result score class.scientist.primary.arcRate Numbers run data get storage space_aces:class scientist.primary.arcRate
+
+
+execute store result score class.scientist.1.cooldown Numbers run data get storage space_aces:class scientist.1.cooldown
+execute store result score class.scientist.1.duration Numbers run data get storage space_aces:class scientist.1.duration
+execute store result score class.scientist.2.cooldown Numbers run data get storage space_aces:class scientist.2.cooldown
+execute store result score class.scientist.2.duration Numbers run data get storage space_aces:class scientist.2.duration
+
+## Non-setting variables
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scientist/primary",minecraft:item_name={translate:"class.scientist.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.scientist.primary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+function class:4/helper/load/create_primary with storage space_aces:class scientist.primary
+item replace block 15 -53 0 container.0 from block 15 -63 0 container.0

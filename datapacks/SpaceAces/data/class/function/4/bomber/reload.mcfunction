@@ -33,6 +33,6 @@ execute store result score class.bomber.2.cooldown Numbers run data get storage 
 execute store result score class.bomber.2.duration Numbers run data get storage space_aces:class bomber.2.duration
 
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/bomber/primary",minecraft:item_name='{"translate":"class.bomber.primary"}',minecraft:lore=['{"color":"white","italic":false,"translate":"class.bomber.primary.lore"}'],minecraft:hide_additional_tooltip={}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/bomber/primary",minecraft:item_name={translate:"class.bomber.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.bomber.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class bomber.primary
 item replace block 15 -59 0 container.0 from block 15 -63 0 container.0

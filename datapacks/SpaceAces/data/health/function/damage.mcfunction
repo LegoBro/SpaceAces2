@@ -20,7 +20,7 @@ execute if score @s[tag=!entity] damage matches 1.. run scoreboard players opera
 # Chunk for indicator
 tag @s add indicator
 execute at @s if score @s damage matches 1.. run summon minecraft:area_effect_cloud ~ ~1.5 ~ {CustomNameVisible:1b,Particle:{type:"minecraft:item_slime"},ReapplicationDelay:500,Radius:0.0f,RadiusPerTick:0.0f,RadiusOnUse:0.0f,Duration:50,DurationOnUse:0.0f,Age:0,WaitTime:0,Tags:["damage_indicator","new","ignore.projectiles"]}
-execute at @s if score @s damage matches 1.. run data modify block 0 1 0 front_text.messages[0] set value '["",{"score":{"name":"@e[tag=indicator,sort=nearest,limit=1]","objective":"damage"},"color":"red","type":"score"}]'
+execute at @s if score @s damage matches 1.. run data modify block 0 1 0 front_text.messages[0] set value ["",{"score":{"name":"@e[tag=indicator,sort=nearest,limit=1]","objective":"damage"},color:"red","type":"score"}]
 execute at @s if score @s damage matches 1.. run data modify entity @e[tag=damage_indicator,tag=new,sort=nearest,limit=1] CustomName set from block 0 1 0 front_text.messages[0]
 execute at @s if score @s damage matches 1.. run tag @e[tag=damage_indicator,tag=new,sort=nearest,limit=1] remove new
 execute if score @s[tag=entity] damage matches 1.. run function health:entity

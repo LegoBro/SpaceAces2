@@ -7,7 +7,7 @@ scoreboard players set @s health 0
 scoreboard players set @s rightClick -1
 execute if entity @p[distance=..5,tag=escape,tag=hb_crouched_player,team=blue] run scoreboard players add @s i 1
 execute if score @s i matches 100.. run function gamemode:escape/revive
-execute as @a[distance=..5,tag=in_game,tag=escape] at @s run title @s subtitle {"translate":"near_player"}
+execute as @a[distance=..5,tag=in_game,tag=escape] at @s run title @s subtitle {translate:"near_player"}
 execute as @a[distance=..5,tag=in_game,tag=escape] at @s run title @s title ""
 scoreboard players add @s invulnerable 1
 

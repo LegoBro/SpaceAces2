@@ -1,3 +1,3 @@
-tellraw @s [{"translate":"tutorial"},{"translate":"tutorial_0"}]
+tellraw @s [{translate:"tutorial"},{translate:"tutorial_0"}]
 
 return 1

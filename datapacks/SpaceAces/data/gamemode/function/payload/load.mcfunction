@@ -24,7 +24,7 @@ execute as @e[type=marker,tag=payload_path] run scoreboard players operation che
 
 execute as @e[type=marker,tag=payload_path,tag=payload_checkpoint] run function gamemode:payload/load_checkpoint_distance
 
-bossbar set minecraft:main name ["",{"text":"Payload Progress","color":"white","type":"text"}]
+bossbar set minecraft:main name ["",{"text":"Payload Progress",color:"white","type":"text"}]
 execute store result bossbar minecraft:main max run scoreboard players get checkpoint.distance.3 Numbers
 
 return 1

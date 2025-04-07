@@ -21,3 +21,11 @@ function class:4/seeker/reload
 ## Guardian
 function class:4/gunner/reload
 function class:4/brawler/reload
+function class:4/mechanic/reload
+function class:4/pyro/reload
+function class:4/rocketeer/reload
+
+## Sustainer
+function class:4/healer/reload
+function class:4/scientist/reload
+function class:4/shocksmith/reload
