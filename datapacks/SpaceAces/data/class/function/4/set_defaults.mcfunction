@@ -383,23 +383,36 @@ data merge storage space_aces:class {\
             reload: 0,\
             firerate: 4,\
             damage: 3,\
-            critMult: 1.5,\
+            critMult: 2,\
             falloff: 1,\
             falloffStart: 25,\
             speed: 0,\
-            ammo: 1\
+            ammo: 1,\
+            steal_amount: 12,\
         },\
-        1:{\
-            cooldown: 240,\
-            duration: 200,\
-            damage: 75,\
-            critMult: 100,\
-            falloff: 15,\
-            falloffStart: 0,\
+        secondary:{\
+            firerate: 8,\
+            damage: 15,\
+            critMult: 1.5,\
+            arcRate: 16,\
+            falloffStart: 25,\
+            speed: 16,\
+            cost: 24,\
+            max_ammo: 10,\
+            explode_healing: 30,\
+            explode_damage: 30,\
+            explode_critMult: 1,\
+            explode_falloff: 10,\
+            explode_falloffStart: 1,\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 200,\
+            duration: 195,\
+            damage: 20,\
+            critMult: 1.5,\
+            arcRate: 0,\
+            falloffStart: 0,\
+            speed: 12,\
         }\
     }\
 }

@@ -6,12 +6,13 @@ execute if score @s shoot matches 1.. run function class:4/shocksmith/primary/us
 
 
 # 1st Ability: Detonate
-execute if score @s ability.1.cooldown matches ..0 run function class:4/shocksmith/detonator/ready
-execute if score @s ability.1.cooldown matches 1.. run function class:4/shocksmith/detonator/cooldown
+execute unless score @s shoot matches 1.. if score @s ability.1.cooldown >= class.shocksmith.secondary.cost Numbers run function class:4/shocksmith/secondary/tick
+execute if score @s shoot matches 1.. if score @s ability.1.cooldown >= class.shocksmith.secondary.cost Numbers run function class:4/shocksmith/secondary/use
+execute unless score @s ability.1.cooldown >= class.shocksmith.secondary.cost Numbers run function class:4/shocksmith/secondary/cooldown
 
 # 2nd Ability: Toggle
-execute if score @s ability.2.cooldown matches ..0 run function class:4/shocksmith/toggle/ready
-execute if score @s ability.2.cooldown matches 1.. run function class:4/shocksmith/toggle/cooldown
+execute if score @s ability.2.cooldown matches ..0 run function class:4/shocksmith/stun/ready
+execute if score @s ability.2.cooldown matches 1.. run function class:4/shocksmith/stun/cooldown
 
 
 

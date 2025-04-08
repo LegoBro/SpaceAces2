@@ -2,6 +2,7 @@
 #say flame?
 scoreboard players operation @s id = place_id id
 
+scoreboard players operation @s healing = #healing Numbers
 scoreboard players operation @s damage = #damage Numbers
 scoreboard players operation @s critMult = #critMult Numbers
 scoreboard players operation @s falloff = #falloff Numbers
@@ -13,5 +14,4 @@ execute unless score @s damageMultiplier matches 0 run function projectile:damag
 scoreboard players operation @s j = @s speed
 
 function projectile:ray
-
 return 1

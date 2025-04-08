@@ -1,4 +1,5 @@
-execute if entity @s[tag=blue] run effect give @e[distance=..2,sort=nearest,limit=1,team=red] minecraft:slowness 5 50
-execute if entity @s[tag=red] run effect give @e[distance=..2,sort=nearest,limit=1,team=blue] minecraft:slowness 5 50
+
+scoreboard players operation #Team Team = @s Team
+execute positioned ^ ^ ^-0.5 positioned ~ ~-1 ~ as @n[distance=..2,tag=!ignore,tag=!ignore.projectiles] unless score @s Team = #Team Team run effect give @s minecraft:slowness 3 2
 
 return 1

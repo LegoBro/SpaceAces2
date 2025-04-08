@@ -1,5 +1,5 @@
 
-scoreboard players set @s shoot 1
+scoreboard players operation @s shoot = class.shocksmith.primary.firerate Numbers
 #scoreboard players remove @s totalShots 1
 #scoreboard players add @s[scores={totalShots=..0,reload=0}] reload 1
 

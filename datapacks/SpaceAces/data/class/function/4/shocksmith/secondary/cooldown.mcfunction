@@ -1,0 +1,1 @@
+item replace entity @s hotbar.1 with minecraft:gray_dye
