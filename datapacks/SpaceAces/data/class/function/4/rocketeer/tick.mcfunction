@@ -7,12 +7,12 @@ execute unless score @s reload matches 1.. if score @s shoot matches 1.. run fun
 
 
 # 1st Ability: Detonate
-execute if score @s ability.1.cooldown matches ..0 run function class:4/rocketeer/detonator/ready
-execute if score @s ability.1.cooldown matches 1.. run function class:4/rocketeer/detonator/cooldown
+execute if score @s ability.1.cooldown matches ..0 run function class:4/rocketeer/piercing_dart/ready
+execute if score @s ability.1.cooldown matches 1.. run function class:4/rocketeer/piercing_dart/cooldown
 
 # 2nd Ability: Toggle
-execute if score @s ability.2.cooldown matches ..0 run function class:4/rocketeer/toggle/ready
-execute if score @s ability.2.cooldown matches 1.. run function class:4/rocketeer/toggle/cooldown
+execute if score @s ability.2.cooldown matches ..0 run function class:4/rocketeer/rocket_wall/ready
+execute if score @s ability.2.cooldown matches 1.. run function class:4/rocketeer/rocket_wall/cooldown
 
 
 

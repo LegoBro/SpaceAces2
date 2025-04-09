@@ -1,5 +1,5 @@
 scoreboard players set @s damage 15
-execute if entity @s[scores={damageMultiplier=-200..}] run function projectile:damage_multiplier
+execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier
 item replace entity @s container.0 with minecraft:paper[item_model="shocksmith/grenade"]
 scoreboard players set @s arcRate 8
 scoreboard players set @s speed 16

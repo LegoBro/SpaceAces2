@@ -32,6 +32,7 @@ scoreboard players reset @s[x=8,y=200,z=8,distance=..250,nbt=!{SelectedItemSlot:
 # finds which class each player has, and links it's ability to them
 scoreboard players operation #Class_Start Team = @s Team
 scoreboard players operation #Class_Start id = @s id
+scoreboard players operation #damageMultiplier damageMultiplier = @s damageMultiplier
 execute if entity @s[scores={Class=1..}] at @s run function class:finder
 
 # Special Effects

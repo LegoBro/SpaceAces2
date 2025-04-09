@@ -312,16 +312,23 @@ data merge storage space_aces:class {\
             impact_falloffStart: 1\
         },\
         1:{\
-            cooldown: 240,\
-            duration: 200,\
-            damage: 75,\
-            critMult: 100,\
-            falloff: 15,\
-            falloffStart: 0,\
+            cooldown: 160,\
+            duration: 155,\
+            damage: 65,\
+            critMult: 200,\
+            falloff: 10,\
+            falloffStart: 1,\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 240,\
+            duration: 230,\
+            damage: 15,\
+            critMult: 1,\
+            speed: 2,\
+            impact_damage: 5,\
+            impact_critMult: 1,\
+            impact_falloff: 2,\
+            impact_falloffStart: 1\
         }\
     },\
     healer:{\
@@ -347,8 +354,16 @@ data merge storage space_aces:class {\
             falloffStart: 0,\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 160,\
+            duration: 158,\
+            jump_power: 12000,\
+            damage: 25,\
+            critMult: 1,\
+            speed: 16,\
+            impact_damage: 30,\
+            impact_critMult: 1,\
+            impact_falloff: 10,\
+            impact_falloffStart: 1\
         }\
     },\
     scientist:{\

@@ -1,6 +1,6 @@
 
 scoreboard players set @s damage 30
-execute if entity @s[scores={damageMultiplier=-200..}] run function projectile:damage_multiplier
+execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier
 scoreboard players set @s falloff 20
 scoreboard players set @s falloffStart 1
 scoreboard players set @s speed 0

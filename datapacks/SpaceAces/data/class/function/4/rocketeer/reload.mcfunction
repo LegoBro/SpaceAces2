@@ -21,11 +21,24 @@ execute store result score class.rocketeer.1.damage Numbers run data get storage
 execute store result score class.rocketeer.1.speed Numbers run data get storage space_aces:class rocketeer.1.speed
 execute store result score class.rocketeer.1.falloff Numbers run data get storage space_aces:class rocketeer.1.falloff
 execute store result score class.rocketeer.1.falloffStart Numbers run data get storage space_aces:class rocketeer.1.falloffStart
-execute store result score class.rocketeer.1.maxUses Numbers run data get storage space_aces:class rocketeer.1.maxUses
+execute store result score class.rocketeer.1.critMult Numbers run data get storage space_aces:class rocketeer.1.critMult
 
 
 execute store result score class.rocketeer.2.cooldown Numbers run data get storage space_aces:class rocketeer.2.cooldown
 execute store result score class.rocketeer.2.duration Numbers run data get storage space_aces:class rocketeer.2.duration
+execute store result score class.rocketeer.2.damage Numbers run data get storage space_aces:class rocketeer.2.damage
+execute store result score class.rocketeer.2.critMult Numbers run data get storage space_aces:class rocketeer.2.critMult 100
+execute store result score class.rocketeer.2.falloff Numbers run data get storage space_aces:class rocketeer.2.falloff
+execute store result score class.rocketeer.2.falloffStart Numbers run data get storage space_aces:class rocketeer.2.falloffStart
+execute store result score class.rocketeer.2.speed Numbers run data get storage space_aces:class rocketeer.2.speed
+
+execute store result score class.rocketeer.2.impact_damage Numbers run data get storage space_aces:class rocketeer.2.impact_damage
+execute store result score class.rocketeer.2.impact_critMult Numbers run data get storage space_aces:class rocketeer.2.impact_critMult 100
+execute store result score class.rocketeer.2.impact_falloff Numbers run data get storage space_aces:class rocketeer.2.impact_falloff
+execute store result score class.rocketeer.2.impact_falloffStart Numbers run data get storage space_aces:class rocketeer.2.impact_falloffStart
+
+
+
 
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/rocketeer/primary",minecraft:item_name={translate:"class.rocketeer.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.rocketeer.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
