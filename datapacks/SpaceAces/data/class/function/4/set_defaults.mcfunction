@@ -392,12 +392,12 @@ data merge storage space_aces:class {\
         }\
     },\
     shocksmith:{\
-        health: 150,\
+        health: 175,\
         speed: 0.15,\
         primary:{\
             reload: 0,\
             firerate: 4,\
-            damage: 3,\
+            damage: 5,\
             critMult: 2,\
             falloff: 1,\
             falloffStart: 25,\
