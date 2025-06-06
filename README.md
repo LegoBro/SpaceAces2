@@ -4,9 +4,8 @@ A Minecraft Map about playing as custom characters with varying kits and abiliti
 # Update Phase (Version 3.3):
 ## Bring Original Functionality Back ☑️
 Now Running in 1.21 successfully
-## Optimize with new techniques
-## Playtest and identify undesirable gameplay loops
-## Release
+## Optimize with new techniques ☑️
+## Playtest and identify undesirable gameplay loops ☑️
 
 # Enhance Phase
 ## Improve Original Arenas
