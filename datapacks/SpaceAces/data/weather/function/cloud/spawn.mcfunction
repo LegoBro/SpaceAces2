@@ -16,3 +16,9 @@ execute if score @s weather.size matches 3 run summon item_display ~7.4 ~7.9 ~ {
 
 scoreboard players set @s weather.timer 0
 scoreboard players operation @s weather.timer -= @s weather.lifespan
+
+## Copy emitter details...
+scoreboard players operation #default weather.speed = @s weather.speed
+scoreboard players operation #default weather.size = @s weather.size
+
+execute as @n[type=marker,tag=weather.cloud,tag=weather.spawn] run function weather:cloud/calculate

@@ -10,3 +10,5 @@ execute if score @s speed matches 6 run tp @s ~ ~ ~0.07
 execute if score @s speed matches 7 run tp @s ~ ~ ~0.08
 execute if score @s speed matches 8 run tp @s ~ ~ ~0.09
 execute if score @s speed matches 9.. run tp @s ~ ~ ~0.1
+
+execute if score @s weather.timer > @s weather.lifespan run kill @s
