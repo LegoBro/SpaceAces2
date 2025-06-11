@@ -30,6 +30,9 @@ execute as @e[tag=payload_spawn_point] at @s run particle block_crumble{block_st
 execute as @e[tag=payload_checkpoint] at @s run particle minecraft:small_flame ~ ~1 ~ 0 1 0 0 3 normal
 
 
+## Weather
+function weather:dev_tick
+
 ## Marker Killer
 execute as @e[type=marker,tag=kill_marker] at @s run kill @e[type=marker,limit=2,sort=nearest,distance=..1]
 

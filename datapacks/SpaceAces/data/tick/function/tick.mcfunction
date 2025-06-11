@@ -40,4 +40,7 @@ function archives:main
 # Dev Mode!!!
 execute if score dev_mode settings matches 1.. run function dev:tick
 
+## Weather System (mostly clouds for now)
+function weather:tick
+
 return 1

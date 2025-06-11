@@ -1,2 +1,2 @@
 ## Only marker killer
-give @s wither_skeleton_spawn_egg[entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["kill_marker"]},custom_name={color:"#494949","italic":false,"text":"Marker Killer"}] 1
+give @s wither_skeleton_spawn_egg[item_model=barrier,entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["kill_marker"]},custom_name={color:"#494949","italic":false,"text":"Marker Killer"}] 1

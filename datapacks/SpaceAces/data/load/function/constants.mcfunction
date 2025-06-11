@@ -1,10 +1,15 @@
 #List of generated constants
 scoreboard players set 2 Numbers 2
+
+
+scoreboard players set 10 Numbers 10
+scoreboard players set 4 Numbers 4
+scoreboard players set 5 Numbers 5
+scoreboard players set 8 Numbers 8
+scoreboard players set 16 Numbers 16
 scoreboard players set 20 Numbers 20
 scoreboard players set 25 Numbers 25
-scoreboard players set 10 Numbers 10
-scoreboard players set 5 Numbers 5
-scoreboard players set 16 Numbers 16
+scoreboard players set 32 Numbers 32
 scoreboard players set 60 Numbers 60
 scoreboard players set 75 Numbers 75
 scoreboard players set 100 Numbers 100

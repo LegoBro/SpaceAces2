@@ -21,6 +21,13 @@
 		"#minecraft:underwater_bonemeals",
 		"#minecraft:flower_pots",
 		"#projectile:dead_corals",
-		"minecraft:tripwire_hook"
+		"minecraft:tripwire_hook",
+		"light",
+		"lantern",
+		"soul_lantern",
+		"waxed_copper_trapdoor",
+		"waxed_copper_grate",
+		"waxed_exposed_copper_grate",
+		"#pressure_plates"
 	]
 }
