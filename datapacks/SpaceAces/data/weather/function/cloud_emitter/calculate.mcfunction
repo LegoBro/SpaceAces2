@@ -2,11 +2,7 @@
 
 # Expected Value for 4size, 0 density, 0 speed (0.01b/t) = 400t
 
-scoreboard players set @s weather.lifespan 0
-
-# Density, flat multiplier
-scoreboard players operation @s weather.lifespan = @s weather.density
-scoreboard players add @s weather.lifespan 1
+scoreboard players set @s weather.lifespan 1
 
 ## Possible Sizes: 4x4,8x8,16x16,32x32
 
