@@ -10,6 +10,7 @@ scoreboard players set 16 Numbers 16
 scoreboard players set 20 Numbers 20
 scoreboard players set 25 Numbers 25
 scoreboard players set 32 Numbers 32
+scoreboard players set 50 Numbers 50
 scoreboard players set 60 Numbers 60
 scoreboard players set 75 Numbers 75
 scoreboard players set 100 Numbers 100
