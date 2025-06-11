@@ -21,4 +21,4 @@ scoreboard players operation @s weather.timer -= @s weather.lifespan
 scoreboard players operation #default weather.speed = @s weather.speed
 scoreboard players operation #default weather.size = @s weather.size
 
-execute as @n[type=marker,tag=weather.cloud,tag=weather.spawn] run function weather:cloud/calculate
+execute as @n[type=item_display,tag=weather.cloud,tag=weather.spawn] run function weather:cloud/calculate
