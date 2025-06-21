@@ -3,6 +3,8 @@ function load:constants
 schedule function load:map_signs 5t
 schedule function load:spawn_displays 5t
 
+function weather:load
+
 function load:teams
 
 function class:reload
