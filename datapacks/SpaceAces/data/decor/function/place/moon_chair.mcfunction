@@ -1,3 +1,3 @@
-summon item_display ~ ~ ~ {Tags:["arena.detail","arena","new_detail","detail.moon_chair"],item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"decor/moon_chair"}}}
-execute as @n[tag=new_detail] at @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
-tag @n[tag=new_detail] remove new_detail
+summon item_display ~ ~0.5 ~ {Tags:["arena.detail","arena","new_decor","decor.moon_chair"],item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"decor/moon_chair"}}}
+tp @n[tag=new_decor] ~ ~0.5 ~ ~ ~
+tag @n[tag=new_decor] remove new_decor

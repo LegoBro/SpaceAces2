@@ -30,8 +30,9 @@ execute positioned 1029 80 7 facing entity @n[tag=decor.screen] feet rotated ~ 0
 execute positioned 1029 80 12 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1022 80 4 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1022 80 -1 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
-execute positioned 1020 81.0 1 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
+execute positioned 1020 80 2.0 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1011 75 -27 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 990 75 5 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
+execute positioned 1023 92 0 run tag @e[tag=decor.moon_chair,distance=..200] add arena.moon_base
 
 return 1
