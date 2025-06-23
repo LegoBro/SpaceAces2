@@ -11,25 +11,34 @@ summon item_display 1024.0 100 0.0 {Tags:["skybox","arena","arena.moon_base"],it
 
 ## Terminal Holograms
 # Large Computer Screen
-summon item_display 1018 83 2.0 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2f,2f,2f]}}
+summon item_display 1018 83 2.0 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/overview"}},Rotation:[90f,0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2f,2f,2f]}}
 
-summon item_display 1054 77 1 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
-summon item_display 1031 82 7 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
-summon item_display 1031 82 12 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
-summon item_display 1032 82 -5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
+# Planetary Defense
+summon item_display 1022 81 5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/defense"}},Rotation:[0f,0f]}
+# Atmosphere Levels
+summon item_display 1022 81 -2 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/atmosphere"}},Rotation:[0f,0f]}
+
+# Welcome Center
+summon item_display 1054 77 1 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/welcome"}},Rotation:[90f,0f]}
+# Reactor Fuel
+summon item_display 1031 82 7 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/fuel"}},Rotation:[90f,0f]}
+# Reactor Controls
+summon item_display 1031 82 12 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/reactor"}},Rotation:[90f,0f]}
+# Repair Unit
+summon item_display 1032 82 -5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/repair"}},Rotation:[90f,0f]}
 # Health
-summon item_display 1060 77 -5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
-
-summon item_display 992 77 5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
+summon item_display 1060 77 -5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/health"}},Rotation:[90f,0f]}
+# Storage
+summon item_display 992 77 5 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/storage"}},Rotation:[90f,0f]}
 # Food
-summon item_display 1013 77 -27 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/welcome_hologram"}},Rotation:[90f,0f]}
+summon item_display 1013 77 -27 {Tags:["arena","arena.detail","decor.screen","arena.moon_base"],item:{id:"minecraft:green_stained_glass",count:1,components:{"minecraft:item_model":"arena/moon_base/holo/food"}},Rotation:[90f,0f]}
 
 ## CHAIRS
 execute positioned 1030 80 -5 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1029 80 7 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1029 80 12 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
-execute positioned 1022 80 4 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
-execute positioned 1022 80 -1 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
+execute positioned 1022 80 3 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
+execute positioned 1022 80 0 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1020 80 2.0 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 1011 75 -27 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair
 execute positioned 990 75 5 facing entity @n[tag=decor.screen] feet rotated ~ 0 run function decor:place/moon_chair

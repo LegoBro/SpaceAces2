@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Dev Menu",
+  "external_title": "Dev Menu",
+  "inputs": [],
+  "can_close_with_escape": true,
+  "columns": 1,
+  "after_acion":"none",
+  "actions": [
+    {
+      "label": "Get Arena Items",
+      "action": {
+        "type": "show_dialog",
+        "dialog":"dev:give"
+      }
+    },
+    {
+      "label": "Arena Teleports",
+      "action": {
+        "type": "show_dialog",
+        "dialog":"dev:arenas"
+      }
+    }
+  ]
+}

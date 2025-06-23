@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Dev Items",
+  "external_title": "Dev Items",
+  "inputs": [],
+  "can_close_with_escape": true,
+  "columns": 1,
+  "after_acion":"none",
+  "actions": [
+    {
+      "label": "General Items",
+      "action": {
+        "type": "run_command",
+        "command":"/function dev:get/base_markers"
+      }
+    },
+    {
+      "label": "Payload Items",
+      "action": {
+        "type": "run_command",
+        "command":"/function dev:get/payload"
+      }
+    },
+    {
+      "label": "Setback Items",
+      "action": {
+        "type": "run_command",
+        "command":"/function dev:get/setback"
+      }
+    },
+    {
+      "label": "Weather Items",
+      "action": {
+        "type": "run_command",
+        "command":"/function weather/.get_items"
+      }
+    },
+    {
+      "label": "Arena Book",
+      "action": {
+        "type": "run_command",
+        "command":"/function dev:get/arena_book"
+      }
+    }
+  ]
+}

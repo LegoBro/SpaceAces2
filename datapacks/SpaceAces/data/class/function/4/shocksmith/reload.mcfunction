@@ -47,5 +47,10 @@ item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecra
 function class:4/helper/load/create_primary with storage space_aces:class shocksmith.primary
 item replace block 15 -48 0 container.0 from block 15 -63 0 container.0
 
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/secondary",minecraft:item_name={translate:"class.shocksmith.secondary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.secondary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+function class:4/helper/load/create_primary with storage space_aces:class shocksmith.secondary
+item replace block 15 -48 0 container.1 from block 15 -63 0 container.0
+
+
 execute store result score class.shocksmith.secondary.max_ammo Numbers run data get storage space_aces:class shocksmith.secondary.max_ammo
 scoreboard players operation class.shocksmith.secondary.max_ammo Numbers *= class.shocksmith.secondary.cost Numbers

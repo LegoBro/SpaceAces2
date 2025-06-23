@@ -20,5 +20,6 @@ execute if score @s ability.2.cooldown matches 1.. run function class:4/gunner/l
 # Passive: Radiant Capacitors
 scoreboard players remove @s[scores={reload=0}] shoot 1
 execute if score @s shoot matches ..-20 run function class:4/gunner/radiant_capacitors/tick
+execute unless score @s shoot matches ..-17 run item replace entity @s hotbar.3 with gray_dye
 
 return 1

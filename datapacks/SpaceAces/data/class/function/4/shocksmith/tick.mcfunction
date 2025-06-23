@@ -5,7 +5,7 @@ execute unless score @s shoot matches 1.. run function class:4/shocksmith/primar
 execute if score @s shoot matches 1.. run function class:4/shocksmith/primary/use
 
 
-# 1st Ability: Detonate
+# 1st Ability: Shock Grenade
 execute unless score @s shoot matches 1.. if score @s ability.1.cooldown >= class.shocksmith.secondary.cost Numbers run function class:4/shocksmith/secondary/tick
 execute if score @s shoot matches 1.. if score @s ability.1.cooldown >= class.shocksmith.secondary.cost Numbers run function class:4/shocksmith/secondary/use
 execute unless score @s ability.1.cooldown >= class.shocksmith.secondary.cost Numbers run function class:4/shocksmith/secondary/cooldown

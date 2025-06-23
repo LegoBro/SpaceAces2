@@ -1,0 +1,3 @@
+
+## Chair swivel!
+execute as @e[type=item_display,tag=arena.moon_base,tag=decor.moon_chair] at @s facing entity @p[distance=..1] feet run tp @s ~ ~ ~ ~ 0
