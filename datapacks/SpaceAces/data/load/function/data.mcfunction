@@ -41,6 +41,9 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"setback",\
         "min_players":2,\
+        "capture_time":30,\
+        "start_delay":300,\
+        "capture_delay":400,\
         "maps": [\
             "frigate"\
         ],\

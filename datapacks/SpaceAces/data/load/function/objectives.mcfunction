@@ -11,6 +11,7 @@ scoreboard objectives add ypos dummy
 scoreboard objectives add zpos dummy
 
 # Gamemodes
+scoreboard objectives add gamemode dummy
 scoreboard objectives add payload dummy
 scoreboard objectives add payload.distance dummy
 scoreboard objectives add payload.check.id dummy

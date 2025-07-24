@@ -7,8 +7,9 @@ bossbar set main players @a
 # activePoint 2 = blue (negative progress)
 
 # Active Capture Point
-execute at @n[type=marker,tag=active_capture_point] as @a[team=red,distance=..3,limit=3] unless entity @a[team=blue,distance=..3] run scoreboard players add point Numbers 1
-execute at @n[type=marker,tag=active_capture_point] as @a[team=blue,distance=..3,limit=3] unless entity @a[team=red,distance=..3] run scoreboard players remove point Numbers 1
+execute if score #capture_delay gamemode matches 1.. run scoreboard players remove #capture_delay gamemode 1
+execute unless score #capture_delay gamemode matches 1.. at @n[type=marker,tag=active_capture_point] as @a[team=red,distance=..7,limit=3] unless entity @a[team=blue,distance=..7] run scoreboard players add point Numbers 1
+execute unless score #capture_delay gamemode matches 1.. at @n[type=marker,tag=active_capture_point] as @a[team=blue,distance=..7,limit=3] unless entity @a[team=red,distance=..7] run scoreboard players remove point Numbers 1
 
 # Negative value = blue control
 execute if score point Numbers matches ..-1 run function gamemode:setback/blue/control

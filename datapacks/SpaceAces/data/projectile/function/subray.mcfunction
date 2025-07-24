@@ -1,7 +1,7 @@
 #Activated every block, rather than every 1/8 of a block
 scoreboard players remove @s[scores={falloffStart=1..}] falloffStart 1
 execute if score @s falloffStart matches 0 unless score @s damage <= @s falloffFloor run scoreboard players operation @s damage -= @s falloff
-particle minecraft:mycelium ~ ~ ~ 0 0 0 0 1 force @a
+execute unless entity @s[tag=projectile.invisible] run particle minecraft:mycelium ~ ~ ~ 0 0 0 0 1 force @a
 scoreboard players set @s i 0
 ## Tests for close to hitbox of entity
 tag @s remove near_hb
