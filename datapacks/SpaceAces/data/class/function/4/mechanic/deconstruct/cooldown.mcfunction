@@ -1,4 +1,4 @@
 ## Burst Heal is on cooldown
 item replace entity @s hotbar.2 with minecraft:gray_dye
 execute if score @s ability.2.cooldown = class.mechanic.2.duration Numbers run function class:4/mechanic/deconstruct/deactivate
-scoreboard players remove @s ability.2.cooldown 1
+scoreboard players remove @s[scores={ability.2.cooldown=0..}] ability.2.cooldown 1

@@ -274,7 +274,7 @@ data merge storage space_aces:class {\
                     falloffStart: 25,\
                 },\
                 sniper: {\
-                    firerate:25,\
+                    firerate:15,\
                     damage:30,\
                     critMult:1,\
                     falloff: 1,\

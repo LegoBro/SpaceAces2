@@ -9,8 +9,8 @@ execute as @p[tag=target.owner] unless score @s Class matches 9 run kill @e[dist
 
 # Tag potential enemies
 execute if entity @s[tag=standard] as @e[tag=!ignore.projectiles,tag=!invis,distance=..30,tag=!ignore] unless score @s Team = Team Team run tag @s add target.enemy
-execute if entity @s[tag=sniper] as @e[tag=!ignore.projectiles,tag=!invis,distance=10..60,tag=!ignore] unless score @s Team = Team Team run tag @s add target.enemy
-execute if entity @s[tag=rocket] as @e[tag=!ignore.projectiles,tag=!invis,distance=..45,tag=!ignore] unless score @s Team = Team Team run tag @s add target.enemy
+execute if entity @s[tag=sniper] as @e[tag=!ignore.projectiles,tag=!invis,distance=..60,tag=!ignore] unless score @s Team = Team Team run tag @s add target.enemy
+execute if entity @s[tag=rocket] as @e[tag=!ignore.projectiles,tag=!invis,distance=5..45,tag=!ignore] unless score @s Team = Team Team run tag @s add target.enemy
 
 ## Verify current target has LOS
 scoreboard players operation target target.0 = @s target.0
