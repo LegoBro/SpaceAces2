@@ -16,6 +16,8 @@ execute store result score class.pyro.1.duration Numbers run data get storage sp
 
 execute store result score class.pyro.2.cooldown Numbers run data get storage space_aces:class pyro.2.cooldown
 execute store result score class.pyro.2.duration Numbers run data get storage space_aces:class pyro.2.duration
+execute store result score class.pyro.2.percent_for_second Numbers run data get storage space_aces:class pyro.2.percent_for_second
+
 
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables

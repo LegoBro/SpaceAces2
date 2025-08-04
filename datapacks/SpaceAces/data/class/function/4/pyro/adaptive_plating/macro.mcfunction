@@ -1,0 +1,1 @@
+$effect give @s minecraft:fire_resistance $(shield) 0 true

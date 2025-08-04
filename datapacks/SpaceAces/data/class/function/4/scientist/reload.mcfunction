@@ -16,6 +16,12 @@ execute store result score class.scientist.primary.arcRate Numbers run data get 
 
 execute store result score class.scientist.1.cooldown Numbers run data get storage space_aces:class scientist.1.cooldown
 execute store result score class.scientist.1.duration Numbers run data get storage space_aces:class scientist.1.duration
+execute store result score class.scientist.1.health Numbers run data get storage space_aces:class scientist.1.health
+execute store result score class.scientist.1.healing_rate Numbers run data get storage space_aces:class scientist.1.healing_rate
+execute store result score class.scientist.1.healing_amount Numbers run data get storage space_aces:class scientist.1.healing_amount
+execute store result score class.scientist.1.reload_rate Numbers run data get storage space_aces:class scientist.1.reload_rate
+execute store result score class.scientist.1.reload_amount Numbers run data get storage space_aces:class scientist.1.reload_amount
+
 execute store result score class.scientist.2.cooldown Numbers run data get storage space_aces:class scientist.2.cooldown
 execute store result score class.scientist.2.duration Numbers run data get storage space_aces:class scientist.2.duration
 

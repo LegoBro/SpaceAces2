@@ -266,11 +266,38 @@ data merge storage space_aces:class {\
             duration: 200,\
             turret: {\
                 health: 150,\
+                standard: {\
+                    firerate:3,\
+                    damage:5,\
+                    critMult:1,\
+                    falloff: 1,\
+                    falloffStart: 25,\
+                },\
+                sniper: {\
+                    firerate:25,\
+                    damage:30,\
+                    critMult:1,\
+                    falloff: 1,\
+                    falloffStart: 50,\
+                },\
+                rocket: {\
+                    firerate:20,\
+                    damage:10,\
+                    critMult:1,\
+                    falloff: 1,\
+                    falloffStart: 25,\
+                    speed: 35,\
+                    arcRate: 0,\
                 }\
+            }\
         },\
         2:{\
             cooldown: 100,\
-            duration: 30\
+            duration: 95,\
+            damage:50,\
+            critMult:1,\
+            falloff:6,\
+            falloffStart:3,\
         }\
     },\
     pyro:{\
@@ -278,7 +305,7 @@ data merge storage space_aces:class {\
         speed: -0.10,\
         primary:{\
             reload: 3,\
-            firerate: 0,\
+            firerate: 4,\
             damage: 5,\
             critMult: 1,\
             speed: 12,\
@@ -292,8 +319,9 @@ data merge storage space_aces:class {\
             critMult: 100,\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 240,\
+            duration: 200,\
+            percent_for_second:10\
         }\
     },\
     rocketeer:{\
@@ -379,16 +407,17 @@ data merge storage space_aces:class {\
             ammo: 6\
         },\
         1:{\
-            cooldown: 240,\
-            duration: 200,\
-            damage: 75,\
-            critMult: 100,\
-            falloff: 15,\
-            falloffStart: 0,\
+            cooldown: 200,\
+            duration: 100,\
+            health: 50,\
+            healing_rate: 20,\
+            healing_amount: 5,\
+            reload_rate: 3,\
+            reload_amount: 1\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 20,\
+            duration: 19\
         }\
     },\
     shocksmith:{\

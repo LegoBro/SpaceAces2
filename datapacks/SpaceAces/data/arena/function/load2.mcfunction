@@ -1,5 +1,6 @@
 ## Second half of load
-
+tag @e[tag=weak_health_pack] add ignore
+tag @e[tag=strong_health_pack] add ignore
 execute as @e[type=marker,tag=strong_health_pack] at @s run summon item_frame ~ ~ ~ {Facing:1b,Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/strong_heal_inactive"},count:1},Invulnerable:1b,Tags:["strong_health","health_pack"]}
 execute as @e[type=marker,tag=weak_health_pack] at @s run summon item_frame ~ ~ ~ {Facing:1b,Item:{id:"minecraft:baked_potato",components:{"minecraft:item_model":"health/weak_heal_inactive"},count:1},Invulnerable:1b,Tags:["weak_health","health_pack"]}
 #execute as @e[type=marker,tag=blue_spawn_point] at @s run summon item_frame ~ ~ ~ {Facing:1b,Item:{id:"minecraft:lapis_lazuli",count:1},Invulnerable:1b,Tags:["blue_spawn"]}
