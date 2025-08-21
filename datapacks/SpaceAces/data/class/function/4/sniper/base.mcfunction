@@ -2,7 +2,7 @@ item replace entity @s[gamemode=!spectator,tag=!invis,scores={crouching=0}] armo
 item replace entity @s[tag=!invis,scores={crouching=1..}] armor.head with minecraft:leather_helmet[minecraft:attribute_modifiers={modifiers:[{type:"minecraft:movement_speed",id:"minecraft:d03be21c-51f4-4994-a5f7-56260febbd16",operation:"add_multiplied_total",amount:-1.0d}]},minecraft:dyed_color={rgb:0},minecraft:enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:0b},minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
 
 execute if entity @s[scores={ability.1.cooldown=0}] run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="sniper/1",minecraft:item_name={color:"white",translate:"vis_mine"},minecraft:lore=[{color:"white","italic":false,translate:"vis_mine_lore1"},{color:"white",translate:"vis_mine_lore2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
-execute if entity @s[scores={ability.1.cooldown=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye
+execute if entity @s[scores={ability.1.cooldown=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye[item_model="class/ability_cooldown"]
 scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] ability.1.cooldown 100
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] rightClick
 execute if entity @s[scores={ability.1.cooldown=100}] run function class:4/sniper/vis_mine/activate
@@ -10,7 +10,7 @@ scoreboard players remove @s[scores={ability.1.cooldown=1..}] ability.1.cooldown
 execute if entity @s[scores={ability.1.cooldown=40}] run function class:4/sniper/vis_mine/deactivate
 
 execute if entity @s[scores={ability.2.cooldown=0}] run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="sniper/2",minecraft:item_name={color:"white",translate:"jump"},minecraft:lore=[{color:"white","italic":false,translate:"jump_lore1"},{color:"white",translate:"jump_lore2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
-execute if entity @s[scores={ability.2.cooldown=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye
+execute if entity @s[scores={ability.2.cooldown=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye[item_model="class/ability_cooldown"]
 scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] ability.2.cooldown 200
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] rightClick
 execute if entity @s[scores={ability.2.cooldown=200}] run function class:4/sniper/jump/activate

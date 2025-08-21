@@ -13,14 +13,10 @@ execute if entity @s[x=3,y=195,z=-10,dx=11,dy=1,dz=15,tag=!awaiting,tag=!in_game
 
 # Changes the way items display
 function help:c5af7bf92237dfa52aeea9d27e400e4bcd6b3ed2e9d9b146a94fe228a7a3df67
-effect give @s minecraft:haste 1000000 100 true
+effect give @s minecraft:haste infinite 100 true
 #effect give @s minecraft:weakness 1000000 100 true
 
-# Nerf to sprinting
-effect give @s[scores={sprint=1..,energy=7..}] minecraft:hunger 1 30 true
-scoreboard players set @s[scores={sprint=1..}] sprint 0
-scoreboard players remove @s[scores={sprint=-59..}] sprint 1
-effect give @s[scores={energy=..9,sprint=..-60}] minecraft:saturation 1 0 true
+effect give @s minecraft:saturation infinite 0 true
 
 # Fall into void damaging
 execute store result score @s ypos run data get entity @s Pos[1]
@@ -40,14 +36,16 @@ execute if entity @s[scores={invis=1..}] run function class:4/infiltraitor/cloak
 execute if entity @s[scores={over_heal=1..}] run function class:4/healer/over_heal_machine/timer
 execute if entity @s[scores={resist=1..}] run function class:4/rocketeer/resist/timer
 execute if entity @s[scores={invulnerable=1..}] run function class:4/brawler/spin_slash/timer
+# Melee Timer
+scoreboard players remove @s[scores={melee.cooldown=1..}] melee.cooldown 1
 
 ## Display for active effects:
-item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:item_name={translate:"effect.invis"},minecraft:lore=[{translate: "effect.invis.lore"}]]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:item_name={translate:"effect.glowing"},minecraft:lore=[{translate:"effect.glowing.lore"}]]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:item_name={translate:"effect.speed"},minecraft:lore=[{translate:"effect.speed.lore"}]]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:item_name={translate:"effect.slowness"},minecraft:lore=[{translate:"effect.slowness.lore"}]]
-item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:item_name={translate:"effect.strength"},minecraft:lore=[{translate:"effect.strength.lore"}]]
-item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:item_name={translate:"effect.over_heal"},minecraft:lore=[{translate:"effect.over_heal.lore"}]]
+#item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:item_name={translate:"effect.invis"},minecraft:lore=[{translate: "effect.invis.lore"}]]
+#item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:item_name={translate:"effect.glowing"},minecraft:lore=[{translate:"effect.glowing.lore"}]]
+#item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:item_name={translate:"effect.speed"},minecraft:lore=[{translate:"effect.speed.lore"}]]
+#item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:item_name={translate:"effect.slowness"},minecraft:lore=[{translate:"effect.slowness.lore"}]]
+#item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:item_name={translate:"effect.strength"},minecraft:lore=[{translate:"effect.strength.lore"}]]
+#item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:item_name={translate:"effect.over_heal"},minecraft:lore=[{translate:"effect.over_heal.lore"}]]
 
 # tick for health
 
@@ -68,7 +66,6 @@ execute if score @s lowHealth matches 40 run playsound minecraft:block.note_bloc
 execute if score @s lowHealth matches 43 run playsound minecraft:block.note_block.basedrum player @a ~ ~ ~ 1 1.75 0
 execute if score @s lowHealth matches 1.. unless score @s lowHealth matches ..44 run scoreboard players reset @s lowHealth
 execute if score @s lowHealth matches 1.. unless score @s displayHealth matches ..2 run scoreboard players reset @s lowHealth
-
 
 # Branching into player specefic scenarios
 execute if entity @s[tag=awaiting] run function tick:player/awaiting

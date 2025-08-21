@@ -16,6 +16,18 @@ execute store result score class.mobility.1.maxUses Numbers run data get storage
 execute store result score class.mobility.2.cooldown Numbers run data get storage space_aces:class mobility.2.cooldown
 execute store result score class.mobility.2.duration Numbers run data get storage space_aces:class mobility.2.duration
 
+execute store result score class.mobility.ultimate.charge Numbers run data get storage space_aces:class mobility.ultimate.charge
+execute store result score class.mobility.ultimate.duration Numbers run data get storage space_aces:class mobility.ultimate.duration 20
+
+execute store result score class.mobility.ultimate.interval Numbers run data get storage space_aces:class mobility.ultimate.interval
+execute store result score class.mobility.ultimate.firerate Numbers run data get storage space_aces:class mobility.ultimate.firerate
+execute store result score class.mobility.ultimate.damage Numbers run data get storage space_aces:class mobility.ultimate.damage
+execute store result score class.mobility.ultimate.critMult Numbers run data get storage space_aces:class mobility.ultimate.critMult 100
+execute store result score class.mobility.ultimate.falloff Numbers run data get storage space_aces:class mobility.ultimate.falloff
+execute store result score class.mobility.ultimate.falloffStart Numbers run data get storage space_aces:class mobility.ultimate.falloffStart
+execute store result score class.mobility.ultimate.speed Numbers run data get storage space_aces:class mobility.ultimate.speed
+
+
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/mobility/primary",minecraft:item_name={translate:"class.mobility.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.mobility.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]

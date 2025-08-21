@@ -22,6 +22,9 @@ execute store result score class.seeker.1.maxUses Numbers run data get storage s
 execute store result score class.seeker.2.cooldown Numbers run data get storage space_aces:class seeker.2.cooldown
 execute store result score class.seeker.2.duration Numbers run data get storage space_aces:class seeker.2.duration
 
+execute store result score class.seeker.ultimate.charge Numbers run data get storage space_aces:class seeker.ultimate.charge
+execute store result score class.seeker.ultimate.duration Numbers run data get storage space_aces:class seeker.ultimate.duration 20
+
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/seeker/primary",minecraft:item_name={translate:"class.seeker.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class seeker.primary

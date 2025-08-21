@@ -20,4 +20,11 @@ item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model
 scoreboard players operation #Team Team = @s Team
 execute as @e[distance=..15] at @s unless score @s Team = #Team Team run function class:4/seeker/weak_glow_check
 
+# Ultimate Ability: Fast Blast
+execute if score @s ultimate_charge >= class.seeker.ultimate.charge Numbers run function class:4/seeker/into_the_void/ready
+execute unless score @s ultimate_charge >= class.seeker.ultimate.charge Numbers run function class:4/seeker/into_the_void/cooldown
+
+## Melee
+execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
+
 return 1

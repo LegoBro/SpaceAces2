@@ -14,12 +14,15 @@ execute if score @s ability.1.cooldown matches 1.. run function class:4/rocketee
 execute if score @s ability.2.cooldown matches ..0 run function class:4/rocketeer/rocket_wall/ready
 execute if score @s ability.2.cooldown matches 1.. run function class:4/rocketeer/rocket_wall/cooldown
 
-
-
 # Passive: Rocket Boots
 execute unless predicate input:jump run effect clear @s slow_falling
 execute unless predicate input:on_ground if predicate input:jump run function class:4/rocketeer/rocket_boots/run
 
+# Ultimate Ability: Fast Blast
+execute if score @s ultimate_charge >= class.rocketeer.ultimate.charge Numbers run function class:4/rocketeer/locking_on/ready
+execute unless score @s ultimate_charge >= class.rocketeer.ultimate.charge Numbers run function class:4/rocketeer/locking_on/cooldown
 
+## Melee
+execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
 return 1

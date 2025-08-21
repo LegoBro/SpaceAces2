@@ -1,4 +1,4 @@
-
+playsound block.anvil.land master @s ~ ~ ~ 1 2
 tag @n[tag=my_turret,tag=standard] add sniper
 tag @n[tag=my_turret,tag=sniper,tag=!standard] add rocket
 tag @n[tag=my_turret,tag=rocket,tag=!sniper] add standard

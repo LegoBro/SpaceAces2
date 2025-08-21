@@ -28,6 +28,12 @@ execute store result score class.infiltraitor.2.detonate_falloff Numbers run dat
 execute store result score class.infiltraitor.2.detonate_falloffStart Numbers run data get storage space_aces:class infiltraitor.2.detonate_falloffStart
 execute store result score class.infiltraitor.2.detonate_timer Numbers run data get storage space_aces:class infiltraitor.2.detonate_timer
 
+execute store result score class.infiltraitor.ultimate.charge Numbers run data get storage space_aces:class infiltraitor.ultimate.charge
+execute store result score class.infiltraitor.ultimate.duration Numbers run data get storage space_aces:class infiltraitor.ultimate.duration 20
+
+execute store result score class.infiltraitor.melee.damage Numbers run data get storage space_aces:class infiltraitor.melee.damage
+execute store result score class.infiltraitor.melee.invis_damage Numbers run data get storage space_aces:class infiltraitor.melee.invis_damage
+
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/infiltraitor/primary",minecraft:item_name={translate:"class.infiltraitor.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.infiltraitor.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class infiltraitor.primary

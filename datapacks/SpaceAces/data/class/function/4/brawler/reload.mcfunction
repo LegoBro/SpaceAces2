@@ -26,6 +26,11 @@ execute store result score class.brawler.2.critMult Numbers run data get storage
 execute store result score class.brawler.2.maxUses Numbers run data get storage space_aces:class brawler.2.maxUses
 execute store result score class.brawler.2.speed Numbers run data get storage space_aces:class brawler.2.speed
 
+execute store result score class.brawler.ultimate.charge Numbers run data get storage space_aces:class brawler.ultimate.charge
+execute store result score class.brawler.ultimate.duration Numbers run data get storage space_aces:class brawler.ultimate.duration 20
+execute store result score class.brawler.ultimate.damage Numbers run data get storage space_aces:class brawler.ultimate.damage
+execute store result score class.brawler.ultimate.pull_strength Numbers run data get storage space_aces:class brawler.ultimate.pull_strength
+
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/brawler/primary",minecraft:item_name={translate:"class.brawler.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.brawler.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class brawler.primary

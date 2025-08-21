@@ -41,6 +41,8 @@ execute store result score class.shocksmith.2.critMult Numbers run data get stor
 execute store result score class.shocksmith.2.speed Numbers run data get storage space_aces:class shocksmith.2.speed
 execute store result score class.shocksmith.2.arcRate Numbers run data get storage space_aces:class shocksmith.2.arcRate
 
+execute store result score class.shocksmith.ultimate.charge Numbers run data get storage space_aces:class shocksmith.ultimate.charge
+execute store result score class.shocksmith.ultimate.duration Numbers run data get storage space_aces:class shocksmith.ultimate.duration 20
 
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/primary",minecraft:item_name={translate:"class.shocksmith.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.primary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]

@@ -27,6 +27,9 @@ execute store result score class.sniper.2.falloffStart Numbers run data get stor
 execute store result score class.sniper.2.speed Numbers run data get storage space_aces:class sniper.2.speed
 execute store result score class.sniper.2.arcRate Numbers run data get storage space_aces:class sniper.2.arcRate
 
+execute store result score class.sniper.ultimate.charge Numbers run data get storage space_aces:class sniper.ultimate.charge
+execute store result score class.sniper.ultimate.duration Numbers run data get storage space_aces:class sniper.ultimate.duration 20
+
 
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/sniper/primary",minecraft:item_name={translate:"class.sniper.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.sniper.primary.lore.1"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]

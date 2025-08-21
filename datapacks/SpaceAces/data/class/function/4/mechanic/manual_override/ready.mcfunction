@@ -1,0 +1,3 @@
+## manual_override is ready
+item replace entity @s hotbar.4 with minecraft:carrot_on_a_stick[minecraft:item_model="class/mechanic/manual_override",minecraft:item_name={color:"white",translate:"class.mechanic.manual_override"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.manual_override.lore.0"},{color:"white",translate:"class.mechanic.manual_override.lore.1"},{color:"white",translate:"class.mechanic.manual_override.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+execute if score @s rightClick matches 1.. if score @s SelectedItem matches 4 run function class:4/mechanic/manual_override/activate

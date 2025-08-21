@@ -2,7 +2,7 @@ item replace entity @s[gamemode=!spectator,tag=!invis,scores={crouching=0}] armo
 item replace entity @s[tag=!invis,scores={crouching=1..}] armor.head with minecraft:leather_helmet[minecraft:attribute_modifiers={modifiers:[{type:"minecraft:movement_speed",id:"minecraft:d03be21c-51f4-4994-a5f7-56260febbd16",operation:"add_multiplied_total",amount:-0.05d}]},minecraft:dyed_color={rgb:15202048},minecraft:enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:0b},minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
 
 execute if entity @s[scores={ability.1.cooldown=0}] run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="pyro/1",minecraft:custom_name={color:"white",translate:"fire_bomb"},minecraft:lore=[{color:"white",translate:"fire_bomb_lore1"},{color:"white",translate:"fire_bomb_lore2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
-execute if entity @s[scores={ability.1.cooldown=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye
+execute if entity @s[scores={ability.1.cooldown=1..}] run item replace entity @s hotbar.1 with minecraft:gray_dye[item_model="class/ability_cooldown"]
 scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] ability.1.cooldown 300
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:1}] rightClick
 execute if entity @s[scores={ability.1.cooldown=300}] run function class:3.4/pyro/fire_bomb/activate
@@ -10,7 +10,7 @@ scoreboard players remove @s[scores={ability.1.cooldown=1..}] ability.1.cooldown
 execute if entity @s[scores={ability.1.cooldown=200}] run function class:3.4/pyro/fire_bomb/deactivate
 
 execute if entity @s[scores={ability.2.cooldown=0}] run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="pyro/2",minecraft:custom_name={color:"white",translate:"immunity"},minecraft:lore=[{color:"white",translate:"immunity_lore1"},{color:"white",translate:"immunity_lore2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
-execute if entity @s[scores={ability.2.cooldown=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye
+execute if entity @s[scores={ability.2.cooldown=1..}] run item replace entity @s hotbar.2 with minecraft:gray_dye[item_model="class/ability_cooldown"]
 scoreboard players set @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] ability.2.cooldown 240
 scoreboard players reset @s[scores={rightClick=1..},nbt={SelectedItemSlot:2}] rightClick
 execute if entity @s[scores={ability.2.cooldown=240}] run function class:3.4/pyro/immunity/activate

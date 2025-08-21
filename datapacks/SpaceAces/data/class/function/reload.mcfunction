@@ -9,6 +9,9 @@ execute unless block 15 -63 0 barrel run setblock 15 -63 0 barrel
 
 schedule function class:4/set_defaults 1s
 
+# Defaults:
+function class:4/helper/reload
+
 # Striker
 function class:4/scout/reload
 function class:4/soldier/reload

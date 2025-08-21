@@ -37,7 +37,8 @@ execute store result score class.rocketeer.2.impact_critMult Numbers run data ge
 execute store result score class.rocketeer.2.impact_falloff Numbers run data get storage space_aces:class rocketeer.2.impact_falloff
 execute store result score class.rocketeer.2.impact_falloffStart Numbers run data get storage space_aces:class rocketeer.2.impact_falloffStart
 
-
+execute store result score class.rocketeer.ultimate.charge Numbers run data get storage space_aces:class rocketeer.ultimate.charge
+execute store result score class.rocketeer.ultimate.duration Numbers run data get storage space_aces:class rocketeer.ultimate.duration 20
 
 
 ## Non-setting variables

@@ -1,0 +1,3 @@
+## projected_clone is ready
+item replace entity @s hotbar.4 with minecraft:carrot_on_a_stick[minecraft:item_model="class/infiltraitor/projected_clone",minecraft:item_name={color:"white",translate:"class.infiltraitor.projected_clone"},minecraft:lore=[{color:"white","italic":false,translate:"class.infiltraitor.projected_clone.lore.0"},{color:"white",translate:"class.infiltraitor.projected_clone.lore.1"},{color:"white",translate:"class.infiltraitor.projected_clone.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+execute if score @s rightClick matches 1.. if score @s SelectedItem matches 4 run function class:4/infiltraitor/projected_clone/activate

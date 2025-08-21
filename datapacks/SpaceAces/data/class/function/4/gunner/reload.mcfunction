@@ -21,6 +21,13 @@ execute store result score class.gunner.1.falloffStart Numbers run data get stor
 execute store result score class.gunner.2.cooldown Numbers run data get storage space_aces:class gunner.2.cooldown
 execute store result score class.gunner.2.duration Numbers run data get storage space_aces:class gunner.2.duration
 
+execute store result score class.gunner.ultimate.charge Numbers run data get storage space_aces:class gunner.ultimate.charge
+execute store result score class.gunner.ultimate.duration Numbers run data get storage space_aces:class gunner.ultimate.duration 20
+execute store result score class.gunner.ultimate.explode_damage Numbers run data get storage space_aces:class gunner.ultimate.explode_damage
+execute store result score class.gunner.ultimate.explode_critMult Numbers run data get storage space_aces:class gunner.ultimate.explode_critMult 100
+execute store result score class.gunner.ultimate.explode_falloff Numbers run data get storage space_aces:class gunner.ultimate.explode_falloff
+execute store result score class.gunner.ultimate.explode_falloffStart Numbers run data get storage space_aces:class gunner.ultimate.explode_falloffStart
+
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:paper[minecraft:item_model="class/gunner/primary",minecraft:item_name={translate:"class.gunner.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.gunner.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]},consumable={consume_seconds:10000000}]
 function class:4/helper/load/create_primary with storage space_aces:class gunner.primary

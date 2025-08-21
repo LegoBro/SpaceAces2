@@ -15,4 +15,11 @@ execute if score @s ability.1.cooldown matches 1.. run function class:4/mobility
 execute if score @s ability.2.cooldown matches ..0 run function class:4/mobility/flash_grenade/ready
 execute if score @s ability.2.cooldown matches 1.. run function class:4/mobility/flash_grenade/cooldown
 
+# Ultimate Ability: Surging Unstability
+execute if score @s ultimate_charge >= class.mobility.ultimate.charge Numbers run function class:4/mobility/surging_unstability/ready
+execute unless score @s ultimate_charge >= class.mobility.ultimate.charge Numbers run function class:4/mobility/surging_unstability/cooldown
+
+## Melee
+execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
+
 return 1

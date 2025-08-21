@@ -20,6 +20,13 @@ execute if score @s ability.2.cooldown matches 1.. run function class:4/gunner/l
 # Passive: Radiant Capacitors
 scoreboard players remove @s[scores={reload=0}] shoot 1
 execute if score @s shoot matches ..-20 run function class:4/gunner/radiant_capacitors/tick
-execute unless score @s shoot matches ..-17 run item replace entity @s hotbar.3 with gray_dye
+execute unless score @s shoot matches ..-17 run item replace entity @s hotbar.3 with gray_dye[item_model="class/ability_cooldown"]
+
+# Ultimate Ability: Fast Blast
+execute if score @s ultimate_charge >= class.gunner.ultimate.charge Numbers run function class:4/gunner/energetic_enigma/ready
+execute unless score @s ultimate_charge >= class.gunner.ultimate.charge Numbers run function class:4/gunner/energetic_enigma/cooldown
+
+## Melee
+execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
 return 1

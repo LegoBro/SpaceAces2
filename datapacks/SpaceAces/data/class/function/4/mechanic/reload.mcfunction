@@ -40,6 +40,9 @@ execute store result score class.mechanic.2.explode_critMult Numbers run data ge
 execute store result score class.mechanic.2.explode_falloff Numbers run data get storage space_aces:class mechanic.2.falloff
 execute store result score class.mechanic.2.explode_falloffStart Numbers run data get storage space_aces:class mechanic.2.falloffStart
 
+execute store result score class.mechanic.ultimate.charge Numbers run data get storage space_aces:class mechanic.ultimate.charge
+execute store result score class.mechanic.ultimate.duration Numbers run data get storage space_aces:class mechanic.ultimate.duration 20
+
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[item_model="class/mechanic/primary",minecraft:item_name={translate:"class.mechanic.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]

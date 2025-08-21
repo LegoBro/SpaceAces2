@@ -59,6 +59,9 @@ scoreboard objectives add kills dummy
 scoreboard objectives add totalKills dummy
 scoreboard objectives add raw_dealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add damageMultiplier dummy
+scoreboard objectives add ultimate_charge dummy
+scoreboard objectives add ultimate.cooldown dummy
+scoreboard objectives add melee.cooldown dummy
 
 # Projectile
 scoreboard objectives add i dummy

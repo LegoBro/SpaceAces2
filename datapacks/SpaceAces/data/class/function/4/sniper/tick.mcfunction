@@ -21,4 +21,10 @@ execute if entity @s[tag=input.sneak] run function class:4/sniper/jump/charge
 execute if entity @s[tag=input.sneak.stop] run function class:4/sniper/jump/reset
 execute if entity @s[tag=input.jump] run function class:4/sniper/jump/reset
 
+# Ultimate Ability: ???
+execute if score @s ultimate_charge >= class.sniper.ultimate.charge Numbers run function class:4/sniper/ultimate/ready
+execute unless score @s ultimate_charge >= class.sniper.ultimate.charge Numbers run function class:4/sniper/ultimate/cooldown
+
+execute unless score @s SelectedItem matches 1 unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
+
 return 1

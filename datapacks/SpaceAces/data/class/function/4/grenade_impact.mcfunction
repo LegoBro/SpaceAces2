@@ -15,5 +15,6 @@ execute if entity @s[tag=wrist_rocket] run return run function class:4/healer/wr
 execute if entity @s[tag=chem] run return run function class:4/scientist/chem_impact
 execute if entity @s[tag=shock_grenade] run return run function class:4/shocksmith/shock_grenade_impact
 execute if entity @s[tag=fused_detonator] run return run function class:4/infiltraitor/fused_detonator/land
+execute if entity @s[tag=cannon] run return run function class:4/gunner/energetic_enigma/grenade
 
 tellraw @a[tag=dev.projectile] "Grenade Impact Not Found"

@@ -18,6 +18,8 @@ execute store result score class.pyro.2.cooldown Numbers run data get storage sp
 execute store result score class.pyro.2.duration Numbers run data get storage space_aces:class pyro.2.duration
 execute store result score class.pyro.2.percent_for_second Numbers run data get storage space_aces:class pyro.2.percent_for_second
 
+execute store result score class.pyro.ultimate.charge Numbers run data get storage space_aces:class pyro.ultimate.charge
+execute store result score class.pyro.ultimate.duration Numbers run data get storage space_aces:class pyro.ultimate.duration 20
 
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables

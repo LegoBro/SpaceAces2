@@ -15,6 +15,13 @@ execute if score @s ability.2.cooldown matches 1.. run function class:4/pyro/ada
 
 # Passive: Retorch, if on fire, fire 2 shots at once
 execute if score @s fire matches 1.. run item replace entity @s hotbar.3 with minecraft:gray_dye[minecraft:item_model="class/pyro/retorch",minecraft:item_name={color:"white",translate:"class.pyro.retorch"},minecraft:lore=[{color:"white","italic":false,translate:"class.pyro.retorch.lore.1"},{color:"white",translate:"class.pyro.retorch.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
-execute unless score @s fire matches 1.. run item replace entity @s hotbar.3 with minecraft:gray_dye[minecraft:item_name={color:"white",translate:"class.pyro.retorch"},minecraft:lore=[{color:"white","italic":false,translate:"class.pyro.retorch.lore.1"},{color:"white",translate:"class.pyro.retorch.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+execute unless score @s fire matches 1.. run item replace entity @s hotbar.3 with minecraft:gray_dye[item_model="class/ability_cooldown",minecraft:item_name={color:"white",translate:"class.pyro.retorch"},minecraft:lore=[{color:"white","italic":false,translate:"class.pyro.retorch.lore.1"},{color:"white",translate:"class.pyro.retorch.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+
+# Ultimate Ability: Fast Blast
+execute if score @s ultimate_charge >= class.pyro.ultimate.charge Numbers run function class:4/pyro/trailblazer/ready
+execute unless score @s ultimate_charge >= class.pyro.ultimate.charge Numbers run function class:4/pyro/trailblazer/cooldown
+
+## Melee
+execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
 return 1

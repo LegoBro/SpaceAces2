@@ -16,3 +16,6 @@ execute if entity @s[tag=active_fire_bomb] at @s run function class:4/pyro/fire_
 execute if entity @s[tag=poison_trail] at @s run function class:4/scientist/biohazard/standby
 execute if entity @s[type=minecraft:area_effect_cloud,tag=energy_orb] at @s run function class:4/shocksmith/energy_sap/follow
 execute if entity @s[type=minecraft:armor_stand,tag=over_heal_machine] at @s run function class:4/healer/over_heal_machine/standby
+
+execute if entity @s[tag=class.brawler.tornado] positioned ~ ~ ~ run return run function class:4/brawler/tornadic_disruption/standby
+execute if entity @s[tag=class.mechanic.projector] positioned ~ ~ ~ run return run function class:4/mechanic/projector/standby
