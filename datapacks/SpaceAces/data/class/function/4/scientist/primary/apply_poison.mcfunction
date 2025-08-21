@@ -1,4 +1,5 @@
 ## Applies poison 
 
-effect give @s minecraft:unluck 2 0
+scoreboard players add @s poison 10
 execute as @a if score @s id = place_id id run scoreboard players add @s game_damage 10
+execute as @a if score @s id = place_id id run scoreboard players add @s ultimate_charge 10

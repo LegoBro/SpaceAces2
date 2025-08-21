@@ -2,13 +2,16 @@
 tag @s remove new
 execute if entity @s[tag=grenade] at @s run function tick:grenade
 execute if entity @s[type=minecraft:item_frame] at @s run return run function tick:item_frame/tick
-execute if entity @s[tag=raycast] at @s run return run function tick:raycast
+execute if entity @s[tag=raycast,tag=!class.deployable] at @s run return run function tick:raycast
+
+execute if entity @s[tag=raycast,tag=class.deployable] at @s run function tick:raycast
+execute if entity @s[tag=class.deployable] run return run function class:entity_tick
 
 
 # performs health functions
 execute if entity @s[tag=entity] at @s run function health:tick
 
-execute if entity @s[tag=class.deployable] run return run function class:entity_tick
+
 
 
 # BOT

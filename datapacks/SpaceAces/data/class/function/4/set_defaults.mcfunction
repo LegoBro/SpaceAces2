@@ -82,7 +82,7 @@ data merge storage space_aces:class {\
             falloffStart:  50,\
             speed:  0,\
             critMult:  200,\
-            charge_speed:  5\
+            charge_speed:  2\
         },\
         2:{\
             cooldown:  100,\
@@ -96,7 +96,7 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1000,\
-            duration: 8,\
+            duration: 12,\
         }\
     },\
     bomber:{\
@@ -363,7 +363,12 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1000,\
-            duration: 8,\
+            duration: 15,\
+            damage: 5,\
+            critMult: 1,\
+            speed: 8,\
+            falloff: 1,\
+            falloffStart: 3,\
         }\
     },\
     pyro:{\
@@ -430,7 +435,8 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1000,\
-            duration: 8,\
+            duration: 3,\
+            interval: 3,\
         }\
     },\
     healer:{\
@@ -469,23 +475,23 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1000,\
-            duration: 8,\
+            duration: 60,\
         }\
     },\
     scientist:{\
         health: 175,\
         speed: 0.10,\
         primary:{\
-            reload: 2.5,\
+            reload: 1.5,\
             firerate: 7,\
-            damage: 4,\
+            damage: 8,\
             critMult: 1.5,\
             speed: 16,\
             arcRate: 6,\
             ammo: 6\
         },\
         1:{\
-            cooldown: 200,\
+            cooldown: 160,\
             duration: 100,\
             health: 50,\
             healing_rate: 20,\
@@ -499,7 +505,7 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1000,\
-            duration: 8,\
+            duration: 15,\
         }\
     },\
     shocksmith:{\
@@ -514,7 +520,7 @@ data merge storage space_aces:class {\
             falloffStart: 25,\
             speed: 0,\
             ammo: 1,\
-            steal_amount: 12,\
+            steal_amount: 50,\
         },\
         secondary:{\
             firerate: 8,\
@@ -523,7 +529,7 @@ data merge storage space_aces:class {\
             arcRate: 16,\
             falloffStart: 25,\
             speed: 16,\
-            cost: 24,\
+            cost: 200,\
             max_ammo: 10,\
             explode_healing: 30,\
             explode_damage: 30,\
@@ -533,7 +539,7 @@ data merge storage space_aces:class {\
         },\
         2:{\
             cooldown: 200,\
-            duration: 195,\
+            duration: 197,\
             damage: 20,\
             critMult: 1.5,\
             arcRate: 0,\
@@ -542,7 +548,13 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1000,\
-            duration: 8,\
+            duration: 5,\
+            speed: 2,\
+            arcRate: 0,\
+            detonate_damage: 300,\
+            detonate_critMult: 100,\
+            detonate_falloff: 10,\
+            detonate_falloffStart: 3,\
         }\
     }\
 }

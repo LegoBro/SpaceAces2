@@ -18,6 +18,13 @@ scoreboard players operation @s displayHealth /= @s maxHealth
 
 #Armor
 execute if entity @s[tag=!entity] run function health:update
-execute if score @s health matches 901.. run scoreboard players set @s health 900
+
+
+execute unless entity @s[tag=maxless] run return 1
+# Player has overhealth active, calculate +100 based on their maxhealth
+scoreboard players operation #newMaxHealth Numbers = @s maxHealth
+scoreboard players add #newMaxHealth Numbers 100
+
+execute if score @s health > #newMaxHealth Numbers run scoreboard players operation @s health = #newMaxHealth Numbers
 
 return 1

@@ -62,6 +62,7 @@ scoreboard objectives add damageMultiplier dummy
 scoreboard objectives add ultimate_charge dummy
 scoreboard objectives add ultimate.cooldown dummy
 scoreboard objectives add melee.cooldown dummy
+scoreboard objectives add poison dummy
 
 # Projectile
 scoreboard objectives add i dummy

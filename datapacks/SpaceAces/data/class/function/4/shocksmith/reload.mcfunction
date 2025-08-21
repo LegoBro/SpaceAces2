@@ -44,6 +44,14 @@ execute store result score class.shocksmith.2.arcRate Numbers run data get stora
 execute store result score class.shocksmith.ultimate.charge Numbers run data get storage space_aces:class shocksmith.ultimate.charge
 execute store result score class.shocksmith.ultimate.duration Numbers run data get storage space_aces:class shocksmith.ultimate.duration 20
 
+execute store result score class.shocksmith.ultimate.speed Numbers run data get storage space_aces:class shocksmith.ultimate.speed
+execute store result score class.shocksmith.ultimate.arcRate Numbers run data get storage space_aces:class shocksmith.ultimate.arcRate
+
+execute store result score class.shocksmith.ultimate.detonate_damage Numbers run data get storage space_aces:class shocksmith.ultimate.detonate_damage
+execute store result score class.shocksmith.ultimate.detonate_critMult Numbers run data get storage space_aces:class shocksmith.ultimate.detonate_critMult
+execute store result score class.shocksmith.ultimate.detonate_falloff Numbers run data get storage space_aces:class shocksmith.ultimate.detonate_falloff
+execute store result score class.shocksmith.ultimate.detonate_falloffStart Numbers run data get storage space_aces:class shocksmith.ultimate.detonate_falloffStart
+
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/primary",minecraft:item_name={translate:"class.shocksmith.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.primary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class shocksmith.primary

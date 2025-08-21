@@ -1,5 +1,12 @@
-playsound minecraft:block.beacon.ambient player @a ~ ~ ~ .1 2 0
-execute if entity @s[team=blue] as @a[distance=..5,sort=nearest,limit=1,team=blue] unless score @s over_heal matches 10.. run function class:healer/over_heal_machine/deploy
-execute if entity @s[team=red] as @a[distance=..5,sort=nearest,limit=1,team=red] unless score @s over_heal matches 10.. run function class:healer/over_heal_machine/deploy
+
+scoreboard players add @s i 1
+execute if score @s i >= class.healer.ultimate.duration Numbers run return run kill @s
+
+## Shoot
+scoreboard players operation gametime Numbers = @s i
+scoreboard players operation gametime Numbers %= 20 Numbers
+
+scoreboard players operation #team Team = @s Team
+execute if score gametime Numbers matches 0 as @a[distance=..50] if score @s Team = #team Team run function class:4/healer/over_heal_machine/apply
 
 return 1

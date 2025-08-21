@@ -29,6 +29,7 @@ execute store result score class.sniper.2.arcRate Numbers run data get storage s
 
 execute store result score class.sniper.ultimate.charge Numbers run data get storage space_aces:class sniper.ultimate.charge
 execute store result score class.sniper.ultimate.duration Numbers run data get storage space_aces:class sniper.ultimate.duration 20
+execute store result score class.sniper.ultimate.maxDamage Numbers run data get storage space_aces:class sniper.ultimate.maxDamage -1
 
 
 ## Non-setting variables

@@ -1,6 +1,6 @@
 #List of generated constants
 scoreboard players set 2 Numbers 2
-
+scoreboard players set 3 Numbers 3
 
 scoreboard players set 10 Numbers 10
 scoreboard players set 4 Numbers 4

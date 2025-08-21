@@ -1,6 +1,8 @@
 scoreboard players operation @s damage = #damage Numbers
 scoreboard players operation @s falloff = class.sniper.1.falloff Numbers
-scoreboard players operation @s falloffStart = class.sniper.1.falloffStart Numbers
+scoreboard players operation @s[tag=class.sniper.ultimate] falloff *= -1 Numbers
+scoreboard players operation @s[tag=!class.sniper.ultimate] falloffStart = class.sniper.1.falloffStart Numbers
+scoreboard players set @s[tag=class.sniper.ultimate] falloffStart 0
 scoreboard players operation @s speed = class.sniper.1.speed Numbers
 scoreboard players operation @s critMult = class.sniper.1.critMult Numbers
 scoreboard players operation @s Team = #Class_Start Team

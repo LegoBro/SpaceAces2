@@ -1,10 +1,10 @@
 ## What a gooey mess
 scoreboard players add @s i 1
-execute if score @s i matches 200 run kill @s
-particle minecraft:block{block_state:{Name:"minecraft:slime_block"}} ~ ~1.9 ~ 0 0 0 1 10
+execute if score @s i matches 200.. run kill @s
+particle minecraft:block{block_state:{Name:"minecraft:slime_block"}} ~ ~ ~ 0 0 0 1 10 normal @a[distance=..16]
 
 scoreboard players operation place_id id = @s id
-execute if entity @s[tag=blue] at @e[distance=..2.5,sort=nearest,team=red] run function class:scientist/biohazard/blue
-execute if entity @s[tag=red] at @e[distance=..2.5,sort=nearest,team=blue] run function class:scientist/biohazard/red
+scoreboard players operation #Team Team = @s Team
+execute as @e[distance=..0.5,scores={health=1..}] unless score @s Team = #Team Team run function class:4/scientist/biohazard/apply
 
 return 1

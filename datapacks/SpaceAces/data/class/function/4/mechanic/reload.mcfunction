@@ -42,6 +42,12 @@ execute store result score class.mechanic.2.explode_falloffStart Numbers run dat
 
 execute store result score class.mechanic.ultimate.charge Numbers run data get storage space_aces:class mechanic.ultimate.charge
 execute store result score class.mechanic.ultimate.duration Numbers run data get storage space_aces:class mechanic.ultimate.duration 20
+execute store result score class.mechanic.ultimate.damage Numbers run data get storage space_aces:class mechanic.ultimate.damage
+execute store result score class.mechanic.ultimate.critMult Numbers run data get storage space_aces:class mechanic.ultimate.critMult 100
+execute store result score class.mechanic.ultimate.falloff Numbers run data get storage space_aces:class mechanic.ultimate.falloff
+execute store result score class.mechanic.ultimate.falloffStart Numbers run data get storage space_aces:class mechanic.ultimate.falloffStart
+execute store result score class.mechanic.ultimate.speed Numbers run data get storage space_aces:class mechanic.ultimate.speed
+
 
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables
