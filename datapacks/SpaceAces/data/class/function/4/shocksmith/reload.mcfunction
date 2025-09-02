@@ -53,11 +53,11 @@ execute store result score class.shocksmith.ultimate.detonate_falloff Numbers ru
 execute store result score class.shocksmith.ultimate.detonate_falloffStart Numbers run data get storage space_aces:class shocksmith.ultimate.detonate_falloffStart
 
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/primary",minecraft:item_name={translate:"class.shocksmith.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.primary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/primary",minecraft:item_name={translate:"class.shocksmith.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class shocksmith.primary
 item replace block 15 -48 0 container.0 from block 15 -63 0 container.0
 
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/secondary",minecraft:item_name={translate:"class.shocksmith.secondary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.secondary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/shocksmith/secondary",minecraft:item_name={translate:"class.shocksmith.secondary"},minecraft:lore=[{color:"white","italic":false,translate:"class.shocksmith.secondary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class shocksmith.secondary
 item replace block 15 -48 0 container.1 from block 15 -63 0 container.0
 

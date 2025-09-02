@@ -16,7 +16,7 @@ execute if score @s ability.2.cooldown matches ..0 run function class:4/seeker/s
 execute if score @s ability.2.cooldown matches 1.. run function class:4/seeker/swift_shade/cooldown
 
 # Passive Weak Glow:
-item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model="class/seeker/weak_glow",minecraft:item_name={color:"white",translate:"class.seeker.weak_glow"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.weak_glow.lore.1"},{color:"white",translate:"class.seeker.weak_glow.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+item replace entity @s hotbar.3 with minecraft:turtle_scute[minecraft:item_model="class/seeker/weak_glow",minecraft:item_name={color:"white",translate:"class.seeker.weak_glow"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.weak_glow.lore.1"},{color:"white",translate:"class.seeker.weak_glow.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 scoreboard players operation #Team Team = @s Team
 execute as @e[distance=..15] at @s unless score @s Team = #Team Team run function class:4/seeker/weak_glow_check
 

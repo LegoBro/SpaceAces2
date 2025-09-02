@@ -21,8 +21,8 @@ execute unless score @s ability.2.cooldown matches 1.. run function class:4/mech
 execute if score @s ability.2.cooldown matches 1.. run function class:4/mechanic/projector/cooldown
 
 # Passive: Last Resort
-execute unless entity @n[tag=my_turret,distance=..500] run item replace entity @s hotbar.3 with minecraft:gray_dye[minecraft:item_model="class/mechanic/last_resort",minecraft:item_name={color:"white",translate:"class.mechanic.last_resort"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.last_resort.lore.1"},{color:"white",translate:"class.mechanic.last_resort.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
-execute if entity @n[tag=my_turret,distance=..500] run item replace entity @s hotbar.3 with minecraft:gray_dye[item_model="class/ability_cooldown",minecraft:item_name={color:"white",translate:"class.mechanic.last_resort"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.last_resort.lore.1"},{color:"white",translate:"class.mechanic.last_resort.lore.2"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+execute unless entity @n[tag=my_turret,distance=..500] run item replace entity @s hotbar.3 with minecraft:gray_dye[minecraft:item_model="class/mechanic/last_resort",minecraft:item_name={color:"white",translate:"class.mechanic.last_resort"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.last_resort.lore.1"},{color:"white",translate:"class.mechanic.last_resort.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+execute if entity @n[tag=my_turret,distance=..500] run item replace entity @s hotbar.3 with minecraft:gray_dye[item_model="class/ability_cooldown",minecraft:item_name={color:"white",translate:"class.mechanic.last_resort"},minecraft:lore=[{color:"white","italic":false,translate:"class.mechanic.last_resort.lore.1"},{color:"white",translate:"class.mechanic.last_resort.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 
 
 

@@ -32,10 +32,10 @@ scoreboard players operation #damageMultiplier damageMultiplier = @s damageMulti
 execute if entity @s[scores={Class=1..}] at @s run function class:finder
 
 # Special Effects
-execute if entity @s[scores={invis=1..}] run function class:4/infiltraitor/cloak/timer
-execute if entity @s[scores={over_heal=1..}] run function class:4/healer/over_heal_machine/timer
-execute if entity @s[scores={resist=1..}] run function class:4/rocketeer/resist/timer
-execute if entity @s[scores={invulnerable=1..}] run function class:4/brawler/spin_slash/timer
+execute if entity @s[scores={invis=1..}] run function class:4/helper/effect/invis
+execute if entity @s[scores={over_heal=1..}] run function class:4/helper/effect/over_heal
+execute if entity @s[scores={resist=1..}] run function class:4/helper/effect/resist
+execute if entity @s[scores={invulnerable=1..}] run function class:4/helper/effect/invulnerable
 # Melee Timer
 scoreboard players remove @s[scores={melee.cooldown=1..}] melee.cooldown 1
 
@@ -90,21 +90,7 @@ execute if score @s totalShots matches 10.. run data modify storage health:ammo 
 execute if score @s totalShots matches ..9 run data modify storage health:ammo translate set value {translate: "space.5"}
 execute if score @s totalShots matches ..-1 run scoreboard players set @s totalShots 0
 
-## Calculate secondary
-scoreboard players operation secondary Numbers = @s ability.1.cooldown
-execute if score @s ability.1.cooldown matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 2 0
-scoreboard players add secondary Numbers 20
-scoreboard players operation secondary Numbers /= 20 Numbers
-execute if score secondary Numbers matches 10.. run data modify storage health:secondary translate set value {translate: "space.1"}
-execute if score secondary Numbers matches ..9 run data modify storage health:secondary translate set value {translate: "space.6"}
-
-## Calculate Tertiary
-scoreboard players operation tertiary Numbers = @s ability.2.cooldown
-execute if score @s ability.2.cooldown matches 1 run playsound minecraft:block.stone_pressure_plate.click_off master @s ~ ~ ~ 1 1 0
-scoreboard players add tertiary Numbers 20
-scoreboard players operation tertiary Numbers /= 20 Numbers
-execute if score tertiary Numbers matches 10.. run data modify storage health:tertiary translate set value {translate: "space.1"}
-execute if score tertiary Numbers matches ..9 run data modify storage health:tertiary translate set value {translate: "space.6"}
+## Spacing for ult
 
 # Final hotbar assortment
 function help:cd35401486cfb62836f1a0f3102d3d38f14e0d0c7230ba7f76ae512a8fd7514a

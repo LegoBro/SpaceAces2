@@ -32,4 +32,7 @@ clear @s[gamemode=adventure]
 execute if entity @s[team=blue] run function health:update_armor_blue
 execute if entity @s[team=red] run function health:update_armor_red
 
+function class:4/helper/attribute_cleanup
+
+
 return 1

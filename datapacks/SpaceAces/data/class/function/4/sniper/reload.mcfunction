@@ -33,6 +33,6 @@ execute store result score class.sniper.ultimate.maxDamage Numbers run data get 
 
 
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/sniper/primary",minecraft:item_name={translate:"class.sniper.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.sniper.primary.lore.1"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/sniper/primary",minecraft:item_name={translate:"class.sniper.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.sniper.primary.lore.1"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class sniper.primary
 item replace block 15 -60 0 container.0 from block 15 -63 0 container.0

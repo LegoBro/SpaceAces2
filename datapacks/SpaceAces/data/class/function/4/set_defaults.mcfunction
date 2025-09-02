@@ -255,7 +255,7 @@ data merge storage space_aces:class {\
             falloff: 1,\
             falloffStart: 25,\
             speed: 0,\
-            ammo: 100\
+            ammo: 80\
         },\
         1:{\
             cooldown: 240,\
@@ -279,7 +279,7 @@ data merge storage space_aces:class {\
         }\
     },\
     brawler:{\
-        health: 300,\
+        health: 250,\
         speed: .10,\
         primary:{\
             firerate: 10,\
@@ -415,8 +415,8 @@ data merge storage space_aces:class {\
             impact_falloffStart: 1\
         },\
         1:{\
-            cooldown: 160,\
-            duration: 155,\
+            cooldown: 80,\
+            duration: 78,\
             damage: 65,\
             critMult: 200,\
             falloff: 10,\
@@ -491,8 +491,8 @@ data merge storage space_aces:class {\
             ammo: 6\
         },\
         1:{\
-            cooldown: 160,\
-            duration: 100,\
+            cooldown: 100,\
+            duration: 90,\
             health: 50,\
             healing_rate: 20,\
             healing_amount: 5,\

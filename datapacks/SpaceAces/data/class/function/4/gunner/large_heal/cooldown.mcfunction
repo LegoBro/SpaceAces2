@@ -5,3 +5,5 @@ execute if score @s ability.2.cooldown = class.gunner.duration Numbers run funct
 execute if score @s damage matches 1.. run tag @s remove class.gunner.large_heal
 execute if score @s health >= @s maxHealth run tag @s remove class.gunner.large_heal
 scoreboard players remove @s ability.2.cooldown 1
+
+function class:4/helper/actionbar/generic/tertiary

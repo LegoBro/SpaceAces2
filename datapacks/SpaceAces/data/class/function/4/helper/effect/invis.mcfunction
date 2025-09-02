@@ -6,5 +6,4 @@ item replace entity @s armor.chest with minecraft:air
 item replace entity @s armor.legs with minecraft:air
 item replace entity @s armor.feet with minecraft:air
 execute if entity @s[scores={invis=..0}] run function class:4/infiltraitor/cloak/uncloak
-
-return 1
+return 0

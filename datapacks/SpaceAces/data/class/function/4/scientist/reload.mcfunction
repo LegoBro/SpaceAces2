@@ -29,6 +29,6 @@ execute store result score class.scientist.ultimate.charge Numbers run data get 
 execute store result score class.scientist.ultimate.duration Numbers run data get storage space_aces:class scientist.ultimate.duration 20
 
 ## Non-setting variables
-item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scientist/primary",minecraft:item_name={translate:"class.scientist.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.scientist.primary.lore"}],minecraft:unbreakable={show_in_tooltip:0b},tooltip_display={hidden_components:["unbreakable"]}]
+item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scientist/primary",minecraft:item_name={translate:"class.scientist.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.scientist.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class scientist.primary
 item replace block 15 -53 0 container.0 from block 15 -63 0 container.0

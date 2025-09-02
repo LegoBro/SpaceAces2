@@ -5,3 +5,18 @@ execute if score @s SelectedItem matches 1 run scoreboard players reset @s right
 scoreboard players add @s ability.1.cooldown 1
 
 execute if score @s ability.1.cooldown >= class.shocksmith.secondary.max_ammo Numbers run scoreboard players operation @s ability.1.cooldown = class.shocksmith.secondary.max_ammo Numbers
+
+#execute class.shocksmith.secondary.max_ammo Numbers
+
+## Display Charges
+scoreboard players operation secondary Numbers = @s ability.1.cooldown
+scoreboard players operation secondary Numbers -= class.shocksmith.secondary.cost Numbers
+
+scoreboard players operation secondary Numbers /= class.shocksmith.secondary.cost Numbers
+
+scoreboard players add secondary Numbers 1
+
+execute if score secondary Numbers matches 10.. run data modify storage player:actionbar secondary_spacer set value {translate: "space.1"}
+execute if score secondary Numbers matches ..9 run data modify storage player:actionbar secondary_spacer set value {translate: "space.6"}
+
+data modify storage player:actionbar secondary set value {"score":{"name":"secondary","objective":"Numbers"},"font":"secondary","type":"score"}
