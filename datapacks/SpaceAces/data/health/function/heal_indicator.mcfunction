@@ -7,7 +7,7 @@ data modify entity @e[tag=heal_indicator,tag=new,sort=nearest,limit=1] CustomNam
 tag @e[tag=heal_indicator,tag=new,sort=nearest,limit=1] remove new
 effect give @s minecraft:poison 1 0 true
 scoreboard players operation @s health += @s healing
-scoreboard players reset @s healing
+scoreboard players set @s healing 0
 tag @s remove indicator
 
 return 1

@@ -7,6 +7,9 @@ scoreboard players operation testHealth Numbers -= @s health
 execute if score testHealth Numbers < @s healing if score testHealth Numbers matches 0.. run scoreboard players operation @s[tag=!maxless] healing = testHealth Numbers
 execute if score testHealth Numbers < @s healing if score testHealth Numbers matches ..-1 run scoreboard players set @s[tag=!maxless] healing 0
 
+## Damage display
+execute if score @s healing matches 1.. run scoreboard players set @s damage_display -10
+
 execute if score @s healing matches 1.. run function health:heal_indicator
 
 #Display Health

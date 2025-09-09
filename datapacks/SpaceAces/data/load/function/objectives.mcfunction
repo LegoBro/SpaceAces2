@@ -20,6 +20,8 @@ scoreboard objectives add payload.check.id dummy
 scoreboard objectives add health dummy ["",{"text":"+",color:"green","bold":true,"type":"text"}]
 scoreboard objectives add maxHealth dummy
 scoreboard objectives add healing dummy
+scoreboard objectives add poison dummy
+scoreboard objectives add damage_display dummy
 
 # Entity - Status Effects
 scoreboard objectives add invis dummy

@@ -59,7 +59,7 @@ data merge storage space_aces:class {\
             duration: 182\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1250,\
             duration: 8,\
         }\
     },\
@@ -137,7 +137,7 @@ data merge storage space_aces:class {\
             duration: 10\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1100,\
             duration: 1,\
         }\
     },\
@@ -164,7 +164,7 @@ data merge storage space_aces:class {\
             duration: 150\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1300,\
             duration: 10,\
             interval: 20,\
             damage: 50,\
@@ -209,7 +209,7 @@ data merge storage space_aces:class {\
             detonate_timer: 20,\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1200,\
             duration: 0.5,\
         }\
     },\
@@ -240,7 +240,7 @@ data merge storage space_aces:class {\
             duration: 250\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1400,\
             duration: 8,\
         }\
     },\
@@ -270,7 +270,7 @@ data merge storage space_aces:class {\
             duration: 250\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1500,\
             duration: 6,\
             explode_damage: 10,\
             explode_critMult: 100,\
@@ -305,7 +305,7 @@ data merge storage space_aces:class {\
             maxUses: 2\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1500,\
             duration: 8,\
             damage:10,\
             pull_strength:3000,\
@@ -362,7 +362,7 @@ data merge storage space_aces:class {\
             duration: 100,\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 2000,\
             duration: 15,\
             damage: 5,\
             critMult: 1,\
@@ -395,7 +395,7 @@ data merge storage space_aces:class {\
             percent_for_second:10\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1500,\
             duration: 8,\
         }\
     },\
@@ -434,7 +434,7 @@ data merge storage space_aces:class {\
             impact_falloffStart: 1\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1400,\
             duration: 3,\
             interval: 3,\
         }\
@@ -474,7 +474,7 @@ data merge storage space_aces:class {\
             impact_falloffStart: 1\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1500,\
             duration: 60,\
         }\
     },\
@@ -504,7 +504,7 @@ data merge storage space_aces:class {\
             duration: 19\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1200,\
             duration: 15,\
         }\
     },\
@@ -547,7 +547,7 @@ data merge storage space_aces:class {\
             speed: 12,\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 1750,\
             duration: 5,\
             speed: 2,\
             arcRate: 0,\

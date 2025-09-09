@@ -14,6 +14,7 @@ execute as @a if score @s id = place_id id run tag @s add attacker
 execute as @p[tag=attacker] facing entity @e[distance=1..50,tag=!ignore,tag=!ignore.projectiles] feet positioned ^ ^ ^ run function projectile:boomer/create
 execute as @e[distance=..0.999,tag=!ignore,tag=!ignore.projectiles] unless score @s Team = #team Team run function class:4/bomber/sticky_bomb/damage_near
 execute as @a if score @s Team = #Team Team run function class:4/shocksmith/shocksplosion/heal
+scoreboard players set @p[tag=attacker] ultimate_charge 0
 tag @a remove attacker
 kill @s
 return 1

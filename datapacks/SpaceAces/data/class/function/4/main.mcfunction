@@ -67,17 +67,15 @@ execute if score @s lowHealth matches 43 run playsound minecraft:block.note_bloc
 execute if score @s lowHealth matches 1.. unless score @s lowHealth matches ..44 run scoreboard players reset @s lowHealth
 execute if score @s lowHealth matches 1.. unless score @s displayHealth matches ..2 run scoreboard players reset @s lowHealth
 
+execute if score @s displayHealth matches ..2 if score @s damage_display matches 0 run scoreboard players set @s damage_display 10
+
 # Branching into player specefic scenarios
 execute if entity @s[tag=awaiting] run function tick:player/awaiting
 execute if entity @s[tag=in_game] run function tick:player/in_game
 
 ## Badge for armor
-data merge storage health:bar {text:"⓪"}
-execute if score @s over_heal matches 1.. run data merge storage health:bar {text:"③"}
-execute if score @s resist matches 1.. run data merge storage health:bar {text:"④"}
-execute if entity @s[nbt={active_effects:[{id:"minecraft:unluck"}]}] run data merge storage health:bar {text:"①"}
-execute if score @s fire matches 1.. run data merge storage health:bar {text:"②"}
-execute if score @s invulnerable matches 1.. run data merge storage health:bar {text:"⑤"}
+function class:4/helper/actionbar/health
+
 
 ## Spacing for health
 execute if score @s health matches 100.. run data modify storage health:space translate set value {translate: "space.0"}
@@ -94,7 +92,8 @@ execute if score @s totalShots matches ..-1 run scoreboard players set @s totalS
 
 # Final hotbar assortment
 function help:cd35401486cfb62836f1a0f3102d3d38f14e0d0c7230ba7f76ae512a8fd7514a
-
+scoreboard players remove @s[scores={damage_display=1..}] damage_display 1
+scoreboard players add @s[scores={damage_display=..-1}] damage_display 1
 
 execute if entity @s[tag=reselect] run scoreboard players operation @s health = @s maxHealth
 tag @s[tag=reselect] remove reselect

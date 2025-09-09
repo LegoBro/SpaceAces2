@@ -1,4 +1,6 @@
-execute if entity @s[team=blue] run scoreboard players add @a[distance=..3,team=blue] healing 2
-execute if entity @s[team=red] run scoreboard players add @a[distance=..3,team=red] healing 2
-execute if entity @s[team=blue] at @a[distance=..3,team=blue] run scoreboard players add @s game_healing 2
-execute if entity @s[team=red] at @a[distance=..3,team=red] run scoreboard players add @s game_healing 2
+
+
+scoreboard players set heal_amount Numbers 0
+execute as @a[distance=..3] if score @s Team = #Class_Start Team run function class:4/soldier/burst_heal/heal
+scoreboard players operation @s ultimate_charge += heal_amount Numbers
+scoreboard players operation @s game_healing += heal_amount Numbers
