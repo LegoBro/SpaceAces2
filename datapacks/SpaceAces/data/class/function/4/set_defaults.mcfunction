@@ -119,7 +119,7 @@ data merge storage space_aces:class {\
             reload: 30,\
             firerate: 10,\
             damage: 5,\
-            critMult: 150,\
+            critMult: 1.5,\
             arcRate: 20,\
             speed: 10,\
             ammo: 4,\
