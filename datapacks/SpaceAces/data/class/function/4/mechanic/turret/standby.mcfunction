@@ -17,6 +17,7 @@ scoreboard players operation target target.0 = @s target.0
 scoreboard players operation target target.1 = @s target.1
 scoreboard players operation target target.2 = @s target.2
 scoreboard players operation target target.3 = @s target.3
+scoreboard players set helper.los.particles Numbers 1
 execute as @e[tag=target.enemy] if score @s target.0 = target target.0 if score @s target.1 = target target.1 if score @s target.2 = target target.2 if score @s target.3 = target target.3 run function class:4/helper/los/check
 
 ## Acquire Target

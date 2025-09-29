@@ -28,11 +28,13 @@ scoreboard players reset @s last_shot
 tag @s add reselect
 tag @s remove resistive
 scoreboard players set @s displayHealth 9
+function health:update
 clear @s[gamemode=adventure]
 execute if entity @s[team=blue] run function health:update_armor_blue
 execute if entity @s[team=red] run function health:update_armor_red
 
 function class:4/helper/attribute_cleanup
 
+effect give @s regeneration 3 100 true
 
 return 1
