@@ -7,5 +7,5 @@ execute if score @s raw_damage matches 10.. run function health:damage
 execute if score @s 2xdamage matches 1.. run function health:damage
 execute if score @s[tag=!raycast] damage matches 1.. run function health:damage
 #execute if score @s[tag=!turret_base] healing matches 1.. run function health:update
-
+#say test
 return 1

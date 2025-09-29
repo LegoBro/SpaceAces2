@@ -6,4 +6,6 @@ tag @s remove grenade
 tag @s remove impact
 ride @s mount @n[type=armor_stand,tag=deploying.vis_mine,tag=new,distance=..0.6]
 tag @s add active_vis_mine
+tag @s remove continue
+scoreboard players set @s damage 0
 return 1

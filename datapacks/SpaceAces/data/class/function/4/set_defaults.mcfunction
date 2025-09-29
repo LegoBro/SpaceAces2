@@ -124,7 +124,7 @@ data merge storage space_aces:class {\
             speed: 10,\
             ammo: 4,\
             detonate_damage: 25,\
-            detonate_critMult: 100,\
+            detonate_critMult: 1.0,\
             detonate_falloff: 5,\
             detonate_falloffStart: 0\
         },\
@@ -157,7 +157,8 @@ data merge storage space_aces:class {\
         1:{\
             cooldown: 100,\
             duration: 80,\
-            maxUses: 3\
+            maxUses: 3,\
+            damage: 15,\
         },\
         2:{\
             cooldown: 200,\

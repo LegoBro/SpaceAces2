@@ -13,5 +13,8 @@ execute unless score @s damageMultiplier matches 0 run function projectile:damag
 
 scoreboard players operation @s j = @s speed
 
+#tellraw @a ["damage:",{score:{name:"@s",objective:"damage"}}]
+#tellraw @a ["critMult:",{score:{name:"@s",objective:"critMult"}}]
+
 function projectile:ray
 return 1

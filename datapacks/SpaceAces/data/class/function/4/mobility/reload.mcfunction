@@ -9,9 +9,11 @@ execute store result score class.mobility.primary.falloff Numbers run data get s
 execute store result score class.mobility.primary.falloffStart Numbers run data get storage space_aces:class mobility.primary.falloffStart
 execute store result score class.mobility.primary.speed Numbers run data get storage space_aces:class mobility.primary.speed
 execute store result score class.mobility.primary.ammo Numbers run data get storage space_aces:class mobility.primary.ammo
+
 execute store result score class.mobility.1.cooldown Numbers run data get storage space_aces:class mobility.1.cooldown
 execute store result score class.mobility.1.duration Numbers run data get storage space_aces:class mobility.1.duration
 execute store result score class.mobility.1.maxUses Numbers run data get storage space_aces:class mobility.1.maxUses
+execute store result score class.mobility.1.damage Numbers run data get storage space_aces:class mobility.1.damage
 
 execute store result score class.mobility.2.cooldown Numbers run data get storage space_aces:class mobility.2.cooldown
 execute store result score class.mobility.2.duration Numbers run data get storage space_aces:class mobility.2.duration

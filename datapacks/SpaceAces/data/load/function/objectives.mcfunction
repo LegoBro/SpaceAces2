@@ -41,6 +41,7 @@ scoreboard objectives add console trigger
 scoreboard objectives add talkToCharacter minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add kill dummy
 scoreboard objectives add SelectedItem dummy
+scoreboard objectives add size dummy
 
 # Player - Energy
 scoreboard objectives add energy food

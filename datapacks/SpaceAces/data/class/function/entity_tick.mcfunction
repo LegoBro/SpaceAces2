@@ -1,3 +1,6 @@
+## Deployable health
+execute if entity @s[tag=entity] at @s run function health:tick
+
 execute if entity @s[tag=active_vis_mine] positioned ~ ~ ~ run function class:4/sniper/vis_mine/standby
 execute if entity @s[tag=deploying.vis_mine] if predicate input:on_ground run function class:4/sniper/vis_mine/deploy
 execute if entity @s[tag=standby_sticky_bomb,tag=!sticky_bomb] at @s run function class:4/bomber/sticky_bomb/standby
