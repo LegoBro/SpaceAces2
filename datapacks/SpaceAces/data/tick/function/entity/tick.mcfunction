@@ -2,7 +2,7 @@
 tag @s remove new
 execute if entity @s[tag=grenade] at @s run function tick:grenade
 execute if entity @s[type=minecraft:item_frame] at @s run return run function tick:item_frame/tick
-execute if entity @s[tag=raycast,tag=!class.deployable] at @s run return run function tick:raycast
+execute if entity @s[tag=raycast,tag=!kill,tag=!class.deployable] at @s run return run function tick:raycast
 
 execute if entity @s[tag=raycast,tag=class.deployable] at @s run function tick:raycast
 execute if entity @s[tag=class.deployable] run return run function class:entity_tick
@@ -12,6 +12,9 @@ execute if entity @s[tag=class.deployable] run return run function class:entity_
 execute if entity @s[tag=entity] at @s run function health:tick
 
 
+
+scoreboard players add @s[tag=kill,tag=laser] crouching 1
+kill @s[tag=kill,tag=laser,scores={crouching=3..}]
 
 
 # BOT

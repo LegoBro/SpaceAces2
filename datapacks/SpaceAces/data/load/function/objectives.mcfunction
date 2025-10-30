@@ -42,6 +42,7 @@ scoreboard objectives add talkToCharacter minecraft.custom:minecraft.talked_to_v
 scoreboard objectives add kill dummy
 scoreboard objectives add SelectedItem dummy
 scoreboard objectives add size dummy
+scoreboard objectives add menu dummy
 
 # Player - Energy
 scoreboard objectives add energy food

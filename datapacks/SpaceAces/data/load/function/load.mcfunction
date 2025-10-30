@@ -12,7 +12,7 @@ function class:reload
 #function gamemode:cycle
 
 # Forcloads the game
-forceload add 20028 -68 20163 67
+#forceload add 20028 -68 20163 67
 
 execute unless score dev_mode settings matches 1.. run gamerule sendCommandFeedback false
 setblock 0 1 0 minecraft:oak_sign
