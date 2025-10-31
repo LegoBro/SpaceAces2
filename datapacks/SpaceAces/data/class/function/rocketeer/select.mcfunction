@@ -1,2 +1,2 @@
-scoreboard players set @s Class 14
-function class:4/rocketeer/select
+scoreboard players set @s Class 15
+function class:reselect

@@ -1,0 +1,4 @@
+## cascade is ready
+item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scientist/cascade",minecraft:item_name={color:"white",translate:"class.scientist.cascade"},minecraft:lore=[{color:"white","italic":false,translate:"class.scientist.cascade.lore.1"},{color:"white",translate:"class.scientist.cascade.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+execute if score @s rightClick matches 1.. if score @s SelectedItem matches 1 run function class:4/scientist/cascade/activate
+function class:4/helper/actionbar/generic/secondary_empty

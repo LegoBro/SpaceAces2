@@ -484,14 +484,20 @@ data merge storage space_aces:class {\
         speed: 0.10,\
         primary:{\
             reload: 1.5,\
-            firerate: 7,\
-            damage: 8,\
+            firerate: 4,\
+            damage: 3,\
+            poison: 5,\
             critMult: 1.5,\
             speed: 16,\
             arcRate: 6,\
-            ammo: 6\
+            ammo: 12\
         },\
         1:{\
+            cooldown: 200,\
+            duration: 10,\
+            damage_mult: 1.5\
+        },\
+        2:{\
             cooldown: 100,\
             duration: 90,\
             health: 50,\
@@ -499,10 +505,6 @@ data merge storage space_aces:class {\
             healing_amount: 5,\
             reload_rate: 3,\
             reload_amount: 1\
-        },\
-        2:{\
-            cooldown: 20,\
-            duration: 19\
         },\
         ultimate:{\
             charge: 1200,\

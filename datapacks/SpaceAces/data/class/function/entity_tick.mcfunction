@@ -17,6 +17,7 @@ execute if entity @s[tag=class.brawler.thrown_sword] at @s run function class:4/
 execute if entity @s[tag=active_fire_bomb] at @s run function class:4/pyro/fire_bomb/standby
 execute if entity @s[tag=class.pyro.trailblazer.trail] at @s run function class:4/pyro/trailblazer/standby
 
+execute if entity @s[tag=class.scientist.cascade] at @s run function class:4/scientist/cascade/standby
 execute if entity @s[tag=class.scientist.toxic_carpet] at @s run function class:4/scientist/biohazard/standby
 execute if entity @s[type=minecraft:area_effect_cloud,tag=energy_orb] at @s run function class:4/shocksmith/energy_sap/follow
 execute if entity @s[type=minecraft:item_display,tag=class.healer.over_heal_machine] at @s run function class:4/healer/over_heal_machine/standby

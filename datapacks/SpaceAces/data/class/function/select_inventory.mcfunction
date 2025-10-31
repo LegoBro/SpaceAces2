@@ -1,5 +1,6 @@
 ## Select Inventory - has special class UI and selectors
 
+tag @s remove class.show_menu
 
 ## Handle Select
 execute if items entity @s player.cursor diamond[custom_data~{class_menu:true}] run function class:menu/select

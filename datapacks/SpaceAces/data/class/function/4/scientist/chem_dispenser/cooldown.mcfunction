@@ -1,7 +1,7 @@
 ## Boost is on cooldown
-item replace entity @s hotbar.1 with minecraft:gray_dye[item_model="class/ability_cooldown"]
+item replace entity @s hotbar.2 with minecraft:gray_dye[item_model="class/ability_cooldown"]
 
-execute if score @s ability.1.cooldown = class.bomber.1.duration Numbers run function class:4/bomber/detonator/deactivate
-scoreboard players remove @s ability.1.cooldown 1
+execute if score @s ability.2.cooldown = class.scientist.2.duration Numbers run function class:4/bomber/detonator/deactivate
+scoreboard players remove @s ability.2.cooldown 1
 
-function class:4/helper/actionbar/generic/secondary
+function class:4/helper/actionbar/generic/tertiary

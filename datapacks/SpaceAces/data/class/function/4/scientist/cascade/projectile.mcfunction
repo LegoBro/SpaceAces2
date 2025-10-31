@@ -1,7 +1,6 @@
 scoreboard players operation @s Team = #Class_Start Team
 scoreboard players operation @s id = #Class_Start id
+scoreboard players set @s health 12
+tag @s remove new
 
-scoreboard players operation @s health = class.scientist.2.health Numbers
-
-
-tag @s remove class.new
+return 1

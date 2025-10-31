@@ -1,5 +1,5 @@
 
-scoreboard players operation @s ability.1.cooldown = class.scientist.1.cooldown Numbers
+scoreboard players operation @s ability.2.cooldown = class.scientist.2.cooldown Numbers
 scoreboard players reset @s rightClick
 
 tag @e remove chem_count

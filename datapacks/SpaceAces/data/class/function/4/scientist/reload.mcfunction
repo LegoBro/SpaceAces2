@@ -5,6 +5,7 @@ execute store result score class.scientist.speed Numbers run data get storage sp
 execute store result score class.scientist.primary.reload Numbers run data get storage space_aces:class scientist.primary.reload 20
 execute store result score class.scientist.primary.firerate Numbers run data get storage space_aces:class scientist.primary.firerate
 execute store result score class.scientist.primary.damage Numbers run data get storage space_aces:class scientist.primary.damage
+execute store result score class.scientist.primary.poison Numbers run data get storage space_aces:class scientist.primary.poison
 execute store result score class.scientist.primary.healing Numbers run data get storage space_aces:class scientist.primary.healing
 execute store result score class.scientist.primary.critMult Numbers run data get storage space_aces:class scientist.primary.critMult 100
 execute store result score class.scientist.primary.falloff Numbers run data get storage space_aces:class scientist.primary.falloff
@@ -16,14 +17,15 @@ execute store result score class.scientist.primary.arcRate Numbers run data get 
 
 execute store result score class.scientist.1.cooldown Numbers run data get storage space_aces:class scientist.1.cooldown
 execute store result score class.scientist.1.duration Numbers run data get storage space_aces:class scientist.1.duration
-execute store result score class.scientist.1.health Numbers run data get storage space_aces:class scientist.1.health
-execute store result score class.scientist.1.healing_rate Numbers run data get storage space_aces:class scientist.1.healing_rate
-execute store result score class.scientist.1.healing_amount Numbers run data get storage space_aces:class scientist.1.healing_amount
-execute store result score class.scientist.1.reload_rate Numbers run data get storage space_aces:class scientist.1.reload_rate
-execute store result score class.scientist.1.reload_amount Numbers run data get storage space_aces:class scientist.1.reload_amount
+execute store result score class.scientist.1.damage_mult Numbers run data get storage space_aces:class scientist.1.damage_mult 100
 
 execute store result score class.scientist.2.cooldown Numbers run data get storage space_aces:class scientist.2.cooldown
 execute store result score class.scientist.2.duration Numbers run data get storage space_aces:class scientist.2.duration
+execute store result score class.scientist.2.health Numbers run data get storage space_aces:class scientist.2.health
+execute store result score class.scientist.2.healing_rate Numbers run data get storage space_aces:class scientist.2.healing_rate
+execute store result score class.scientist.2.healing_amount Numbers run data get storage space_aces:class scientist.2.healing_amount
+execute store result score class.scientist.2.reload_rate Numbers run data get storage space_aces:class scientist.2.reload_rate
+execute store result score class.scientist.2.reload_amount Numbers run data get storage space_aces:class scientist.2.reload_amount
 
 execute store result score class.scientist.ultimate.charge Numbers run data get storage space_aces:class scientist.ultimate.charge
 execute store result score class.scientist.ultimate.duration Numbers run data get storage space_aces:class scientist.ultimate.duration 20
