@@ -20,7 +20,7 @@ execute if score ActiveMode Numbers matches 0.. if score Prestart Numbers matche
 execute if score ActiveMode Numbers matches 0.. unless score Prestart Numbers matches ..119 run function gamemode:running with storage space_aces:gamemodes
 
 # if player is in training area
-execute if entity @a[tag=trainee] run function gamemode:training
+execute if loaded 10002 99 0 if entity @a[tag=trainee] run function gamemode:training
 
 # Other console stuff
 function gamemode:console/book
