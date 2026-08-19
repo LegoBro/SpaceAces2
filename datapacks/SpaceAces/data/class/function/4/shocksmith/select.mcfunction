@@ -4,4 +4,6 @@ scoreboard players set @s Class 14
 scoreboard players operation @s maxHealth = class.shocksmith.health Numbers
 data modify storage class:speed speed set from storage space_aces:class shocksmith.speed
 function class:4/helper/set/speed with storage class:speed
+data modify storage class:scale scale set from storage space_aces:class shocksmith.scale
+function class:4/helper/set/scale with storage class:scale
 return 1

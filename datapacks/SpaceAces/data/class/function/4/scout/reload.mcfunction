@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.scout.health Numbers run data get storage space_aces:class scout.health
 execute store result score class.scout.speed Numbers run data get storage space_aces:class scout.speed
+execute store result score class.scout.scale Numbers run data get storage space_aces:class scout.scale
 execute store result score class.scout.primary.reload Numbers run data get storage space_aces:class scout.primary.reload 20
 execute store result score class.scout.primary.firerate Numbers run data get storage space_aces:class scout.primary.firerate
 execute store result score class.scout.primary.damage Numbers run data get storage space_aces:class scout.primary.damage

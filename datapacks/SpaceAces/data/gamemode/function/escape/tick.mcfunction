@@ -25,6 +25,7 @@ tag @e[type=minecraft:item_frame,tag=spawner,tag=!active] add active
 #execute as @a[tag=escape,team=blue] at @s run tag @e[type=item_frame,tag=spawner,limit=2,sort=nearest] add active
 effect give @a[tag=escape,scores={health=..0}] minecraft:glowing 1 1 true
 
+## Broken with crouch
 execute as @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active] at @s if entity @p[distance=..5,tag=escape,tag=hb_crouched_player,team=blue] run function gamemode:escape/terminal
 execute as @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active,tag=!glowing] at @s unless entity @p[distance=..25,tag=escape,team=blue] run function gamemode:escape/terminal_begin_glow
 execute as @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active,tag=glowing] at @s if entity @p[distance=..25,tag=escape,team=blue] run function gamemode:escape/terminal_end_glow

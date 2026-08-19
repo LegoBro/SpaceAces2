@@ -1,6 +1,7 @@
 tag @s[tag=!vis_mine] add kill
 
 execute if entity @s[tag=plasma_grenade] run return run function class:4/bomber/grenade_impact
+execute if entity @s[tag=smokescreen] run return run function class:4/bomber/smokescreen/land
 execute if entity @s[tag=shockround] run return run execute if entity @s[tag=projectile.impact.hitbox] run return run function class:4/shocksmith/primary/hit
 execute if entity @s[tag=stun] run return run execute if entity @s[tag=projectile.impact.hitbox] run function class:4/shocksmith/stun/land
 execute if entity @s[tag=fire_bomb] run return run function class:4/pyro/fire_bomb/land
@@ -18,6 +19,7 @@ execute if entity @s[tag=fused_detonator] run return run function class:4/infilt
 execute if entity @s[tag=cannon] run return run function class:4/gunner/energetic_enigma/grenade
 execute if entity @s[tag=heat_blast] run return run function class:4/mechanic/manual_override/grenade
 execute if entity @s[tag=class.shocksmith.shocksplosion] positioned ~ ~ ~ run return run function class:4/shocksmith/shocksplosion/land
+execute if entity @s[tag=soldier_grenade] run return run function class:4/soldier/grenade_impact
 
 
 tellraw @a[tag=dev.projectile] "Grenade Impact Not Found"

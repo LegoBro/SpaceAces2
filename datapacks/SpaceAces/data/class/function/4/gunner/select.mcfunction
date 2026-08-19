@@ -4,4 +4,6 @@ scoreboard players set @s Class 5
 scoreboard players operation @s maxHealth = class.gunner.health Numbers
 data modify storage class:speed speed set from storage space_aces:class gunner.speed
 function class:4/helper/set/speed with storage class:speed
+data modify storage class:scale scale set from storage space_aces:class gunner.scale
+function class:4/helper/set/scale with storage class:scale
 return 1

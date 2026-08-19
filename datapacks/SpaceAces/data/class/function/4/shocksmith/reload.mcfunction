@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.shocksmith.health Numbers run data get storage space_aces:class shocksmith.health
 execute store result score class.shocksmith.speed Numbers run data get storage space_aces:class shocksmith.speed
+execute store result score class.shocksmith.scale Numbers run data get storage space_aces:class shocksmith.scale
 
 execute store result score class.shocksmith.primary.reload Numbers run data get storage space_aces:class shocksmith.primary.reload 20
 execute store result score class.shocksmith.primary.firerate Numbers run data get storage space_aces:class shocksmith.primary.firerate

@@ -1,0 +1,6 @@
+#Hitbox for entities tagged with hb_crouched_player
+
+execute positioned ~ ~-1.09375 ~ if entity @n[distance=..0.487,tag=hb_crouched_player,tag=hb_player_1] run return run function projectile:doubledamage
+execute positioned ~ ~-0.546875 ~ if entity @n[distance=..0.657,tag=hb_crouched_player,tag=hb_player_1] run return run function projectile:damage
+execute positioned ~ ~-0.109375 ~ if entity @n[distance=..0.371,tag=hb_crouched_player,tag=hb_player_1] run return run function projectile:damage
+return 1

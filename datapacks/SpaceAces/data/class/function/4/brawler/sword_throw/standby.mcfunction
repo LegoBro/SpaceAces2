@@ -1,5 +1,6 @@
 ## Throw da sword
 tp @s ^ ^ ^1
+particle item{item:orange_stained_glass} ~ ~ ~ 0 0 0 0.1 5 force
 scoreboard players add @s i 1
 
 

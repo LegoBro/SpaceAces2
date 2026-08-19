@@ -1,5 +1,5 @@
 ## Toxic Carpet is active
-item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/ability_cooldown"]
+item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/scientist/toxic_carpet_cooldown"]
 execute if score @s ultimate.cooldown matches 1.. run function class:4/scientist/toxic_carpet/deactivate
 scoreboard players remove @s ultimate.cooldown 1
 

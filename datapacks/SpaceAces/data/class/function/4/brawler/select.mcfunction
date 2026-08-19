@@ -4,4 +4,6 @@ scoreboard players set @s Class 7
 scoreboard players operation @s maxHealth = class.brawler.health Numbers
 data modify storage class:speed speed set from storage space_aces:class brawler.speed
 function class:4/helper/set/speed with storage class:speed
+data modify storage class:scale scale set from storage space_aces:class brawler.scale
+function class:4/helper/set/scale with storage class:scale
 return 1

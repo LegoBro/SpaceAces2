@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.healer.health Numbers run data get storage space_aces:class healer.health
 execute store result score class.healer.speed Numbers run data get storage space_aces:class healer.speed
+execute store result score class.healer.scale Numbers run data get storage space_aces:class healer.scale
 execute store result score class.healer.primary.reload Numbers run data get storage space_aces:class healer.primary.reload 20
 execute store result score class.healer.primary.firerate Numbers run data get storage space_aces:class healer.primary.firerate
 execute store result score class.healer.primary.damage Numbers run data get storage space_aces:class healer.primary.damage

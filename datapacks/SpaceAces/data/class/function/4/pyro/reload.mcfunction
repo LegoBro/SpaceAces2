@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.pyro.health Numbers run data get storage space_aces:class pyro.health
 execute store result score class.pyro.speed Numbers run data get storage space_aces:class pyro.speed
+execute store result score class.pyro.scale Numbers run data get storage space_aces:class pyro.scale
 execute store result score class.pyro.primary.reload Numbers run data get storage space_aces:class pyro.primary.reload 20
 execute store result score class.pyro.primary.firerate Numbers run data get storage space_aces:class pyro.primary.firerate
 execute store result score class.pyro.primary.damage Numbers run data get storage space_aces:class pyro.primary.damage

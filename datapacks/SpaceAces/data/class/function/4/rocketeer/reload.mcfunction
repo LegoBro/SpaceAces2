@@ -1,5 +1,6 @@
 execute store result score class.rocketeer.health Numbers run data get storage space_aces:class rocketeer.health
 execute store result score class.rocketeer.speed Numbers run data get storage space_aces:class rocketeer.speed
+execute store result score class.rocketeer.scale Numbers run data get storage space_aces:class rocketeer.scale
 execute store result score class.rocketeer.primary.reload Numbers run data get storage space_aces:class rocketeer.primary.reload 20
 execute store result score class.rocketeer.primary.firerate Numbers run data get storage space_aces:class rocketeer.primary.firerate
 execute store result score class.rocketeer.primary.damage Numbers run data get storage space_aces:class rocketeer.primary.damage

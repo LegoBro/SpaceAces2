@@ -4,6 +4,7 @@ execute if entity @s[tag=entity] at @s run function health:tick
 execute if entity @s[tag=active_vis_mine] positioned ~ ~ ~ run function class:4/sniper/vis_mine/standby
 execute if entity @s[tag=deploying.vis_mine] if predicate input:on_ground run function class:4/sniper/vis_mine/deploy
 execute if entity @s[tag=standby_sticky_bomb,tag=!sticky_bomb] at @s run function class:4/bomber/sticky_bomb/standby
+execute if entity @s[tag=active_smokescreen] at @s run function class:4/bomber/smokescreen/standby
 execute if entity @s[type=minecraft:item_display,tag=fused_detonator_standby] at @s run function class:4/infiltraitor/fused_detonator/standby
 
 

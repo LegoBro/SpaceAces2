@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.mechanic.health Numbers run data get storage space_aces:class mechanic.health
 execute store result score class.mechanic.speed Numbers run data get storage space_aces:class mechanic.speed
+execute store result score class.mechanic.scale Numbers run data get storage space_aces:class mechanic.scale
 execute store result score class.mechanic.primary.reload Numbers run data get storage space_aces:class mechanic.primary.reload 20
 execute store result score class.mechanic.primary.firerate Numbers run data get storage space_aces:class mechanic.primary.firerate
 execute store result score class.mechanic.primary.damage Numbers run data get storage space_aces:class mechanic.primary.damage

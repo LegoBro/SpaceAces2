@@ -7,10 +7,10 @@ execute if entity @s[team=red] run function tick:player/team/red
 execute store result score @s damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
 
 # Hitbox handling
-tag @s[tag=hb_player,scores={crouching=1}] add hb_crouched_player
-tag @s[tag=hb_player,scores={crouching=1}] remove hb_player
-tag @s[tag=hb_crouched_player,scores={crouching=0}] remove hb_crouched_player
-tag @s[tag=!hb_player,tag=!hb_crouched_player] add hb_player
+#tag @s[tag=hb_player,scores={crouching=1}] add hb_crouched_player
+#tag @s[tag=hb_player,scores={crouching=1}] remove hb_player
+#tag @s[tag=hb_crouched_player,scores={crouching=0}] remove hb_crouched_player
+#tag @s[tag=!hb_player,tag=!hb_crouched_player] add hb_player
 
 #Lobby for team selection
 execute if entity @s[x=3,y=195,z=-10,dx=11,dy=1,dz=15,tag=!awaiting,tag=!in_game] run function gamemode:new_player

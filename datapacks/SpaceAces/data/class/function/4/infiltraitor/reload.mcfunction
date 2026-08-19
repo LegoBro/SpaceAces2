@@ -2,6 +2,7 @@
 ## Reloads default stats
 execute store result score class.infiltraitor.health Numbers run data get storage space_aces:class infiltraitor.health
 execute store result score class.infiltraitor.speed Numbers run data get storage space_aces:class infiltraitor.speed
+execute store result score class.infiltraitor.scale Numbers run data get storage space_aces:class infiltraitor.scale
 execute store result score class.infiltraitor.primary.reload Numbers run data get storage space_aces:class infiltraitor.primary.reload 20
 execute store result score class.infiltraitor.primary.firerate Numbers run data get storage space_aces:class infiltraitor.primary.firerate
 execute store result score class.infiltraitor.primary.damage Numbers run data get storage space_aces:class infiltraitor.primary.damage

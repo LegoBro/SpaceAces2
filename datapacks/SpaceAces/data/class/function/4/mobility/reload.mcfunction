@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.mobility.health Numbers run data get storage space_aces:class mobility.health
 execute store result score class.mobility.speed Numbers run data get storage space_aces:class mobility.speed
+execute store result score class.mobility.scale Numbers run data get storage space_aces:class mobility.scale
 execute store result score class.mobility.primary.reload Numbers run data get storage space_aces:class mobility.primary.reload 20
 execute store result score class.mobility.primary.firerate Numbers run data get storage space_aces:class mobility.primary.firerate
 execute store result score class.mobility.primary.damage Numbers run data get storage space_aces:class mobility.primary.damage

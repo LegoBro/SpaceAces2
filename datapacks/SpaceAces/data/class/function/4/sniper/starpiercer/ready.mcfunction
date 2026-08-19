@@ -4,4 +4,7 @@ item replace entity @s hotbar.1 with minecraft:spyglass[minecraft:item_model="cl
 execute unless entity @s[tag=input.right_click] run scoreboard players set @s ability.1.cooldown 0
 attribute @s[scores={ability.1.cooldown=0..}] jump_strength modifier remove class.sniper.scope
 
-execute if score @s SelectedItem matches 1 if entity @s[tag=input.right_click] run function class:4/sniper/starpiercer/charging
+execute if score @s SelectedItem matches 1 if entity @s[tag=input.right_click] run return run function class:4/sniper/starpiercer/charging
+
+title @s subtitle ""
+title @s title ""

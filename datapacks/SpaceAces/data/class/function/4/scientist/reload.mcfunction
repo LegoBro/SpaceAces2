@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.scientist.health Numbers run data get storage space_aces:class scientist.health
 execute store result score class.scientist.speed Numbers run data get storage space_aces:class scientist.speed
+execute store result score class.scientist.scale Numbers run data get storage space_aces:class scientist.scale
 
 execute store result score class.scientist.primary.reload Numbers run data get storage space_aces:class scientist.primary.reload 20
 execute store result score class.scientist.primary.firerate Numbers run data get storage space_aces:class scientist.primary.firerate

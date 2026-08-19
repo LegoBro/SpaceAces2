@@ -1,0 +1,3 @@
+execute positioned ~ ~-1.3671875 ~ if entity @n[distance=..0.60875,tag=hb_crouched_player] run return run function projectile:doubledamage
+execute positioned ~ ~-0.68359375 ~ if entity @n[distance=..0.82125,tag=hb_crouched_player] run return run function projectile:damage
+execute positioned ~ ~-0.13671875 ~ if entity @n[distance=..0.46375,tag=hb_crouched_player] run return run function projectile:damage

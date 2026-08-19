@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.sniper.health Numbers run data get storage space_aces:class sniper.health
 execute store result score class.sniper.speed Numbers run data get storage space_aces:class sniper.speed
+execute store result score class.sniper.scale Numbers run data get storage space_aces:class sniper.scale
 execute store result score class.sniper.primary.reload Numbers run data get storage space_aces:class sniper.primary.reload 20
 execute store result score class.sniper.primary.firerate Numbers run data get storage space_aces:class sniper.primary.firerate
 execute store result score class.sniper.primary.damage Numbers run data get storage space_aces:class sniper.primary.damage

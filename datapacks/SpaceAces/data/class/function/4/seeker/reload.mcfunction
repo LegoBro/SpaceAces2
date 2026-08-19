@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.seeker.health Numbers run data get storage space_aces:class seeker.health
 execute store result score class.seeker.speed Numbers run data get storage space_aces:class seeker.speed
+execute store result score class.seeker.scale Numbers run data get storage space_aces:class seeker.scale
 execute store result score class.seeker.primary.reload Numbers run data get storage space_aces:class seeker.primary.reload 20
 execute store result score class.seeker.primary.firerate Numbers run data get storage space_aces:class seeker.primary.firerate
 execute store result score class.seeker.primary.damage Numbers run data get storage space_aces:class seeker.primary.damage
@@ -13,6 +14,7 @@ execute store result score class.seeker.primary.ammo Numbers run data get storag
 execute store result score class.seeker.1.cooldown Numbers run data get storage space_aces:class seeker.1.cooldown
 execute store result score class.seeker.1.duration Numbers run data get storage space_aces:class seeker.1.duration
 execute store result score class.seeker.1.damage Numbers run data get storage space_aces:class seeker.1.damage
+execute store result score class.seeker.1.critMult Numbers run data get storage space_aces:class seeker.1.critMult 100
 execute store result score class.seeker.1.speed Numbers run data get storage space_aces:class seeker.1.speed
 execute store result score class.seeker.1.falloff Numbers run data get storage space_aces:class seeker.1.falloff
 execute store result score class.seeker.1.falloffStart Numbers run data get storage space_aces:class seeker.1.falloffStart

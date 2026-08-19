@@ -1,4 +1,3 @@
-item replace entity @s container.0 with minecraft:paper[item_model="class/bomber/sticky"]
 scoreboard players operation @s damage = class.bomber.secondary.damage Numbers
 scoreboard players operation @s critMult = class.bomber.secondary.critMult Numbers
 execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier

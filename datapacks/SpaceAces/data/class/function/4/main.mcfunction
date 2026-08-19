@@ -3,20 +3,21 @@
 execute store result score @s damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
 
 # Hitbox handling
-tag @s[tag=hb_player,scores={crouching=1}] add hb_crouched_player
-tag @s[tag=hb_player,scores={crouching=1}] remove hb_player
-tag @s[tag=hb_crouched_player,scores={crouching=0}] remove hb_crouched_player
-tag @s[tag=!hb_player,tag=!hb_crouched_player] add hb_player
+#tag @s[tag=hb_player,scores={crouching=1}] add hb_crouched_player
+#tag @s[tag=hb_player,scores={crouching=1}] remove hb_player
+#tag @s[tag=hb_crouched_player,scores={crouching=0}] remove hb_crouched_player
+#tag @s[tag=!hb_player,tag=!hb_crouched_player] add hb_player
 
 #Lobby for team selection
 execute if entity @s[x=3,y=195,z=-10,dx=11,dy=1,dz=15,tag=!awaiting,tag=!in_game] run function gamemode:new_player
 
 # Changes the way items display
-function help:c5af7bf92237dfa52aeea9d27e400e4bcd6b3ed2e9d9b146a94fe228a7a3df67
-effect give @s minecraft:haste infinite 100 true
+#function help:c5af7bf92237dfa52aeea9d27e400e4bcd6b3ed2e9d9b146a94fe228a7a3df67
+#effect give @s minecraft:haste infinite 100 true
 #effect give @s minecraft:weakness 1000000 100 true
 
 effect give @s minecraft:saturation infinite 0 true
+effect give @s minecraft:invisibility infinite 0 true
 
 # Fall into void damaging
 execute store result score @s ypos run data get entity @s Pos[1]

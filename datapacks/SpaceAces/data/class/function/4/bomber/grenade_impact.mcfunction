@@ -1,6 +1,6 @@
 #execute facing entity @p eyes run summon creeper ^ ^ ^1 {ExplosionRadius:2b,Fuse:0,ignited:1b}
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ .5 1.5 0
-particle minecraft:block{block_state:{Name:"minecraft:lime_stained_glass"}} ~ ~ ~ 1 1 1 0 25
+particle minecraft:item{item:"minecraft:polished_basalt"} ~ ~ ~ 0.1 0.1 0.1 0.25 100
 
 scoreboard players operation #damage Numbers = class.bomber.primary.explode_damage Numbers
 scoreboard players operation #critMult Numbers = class.bomber.primary.explode_critMult Numbers

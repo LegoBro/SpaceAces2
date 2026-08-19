@@ -2,6 +2,7 @@
 ## Reloads default stats
 execute store result score class.brawler.health Numbers run data get storage space_aces:class brawler.health
 execute store result score class.brawler.speed Numbers run data get storage space_aces:class brawler.speed
+execute store result score class.brawler.scale Numbers run data get storage space_aces:class brawler.scale
 #execute store result score class.brawler.primary.reload Numbers run data get storage space_aces:class brawler.primary.reload 20
 execute store result score class.brawler.primary.firerate Numbers run data get storage space_aces:class brawler.primary.firerate
 execute store result score class.brawler.primary.damage Numbers run data get storage space_aces:class brawler.primary.damage

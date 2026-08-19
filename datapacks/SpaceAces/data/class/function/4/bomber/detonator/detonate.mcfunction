@@ -1,3 +1,4 @@
+tag @s add ignore.projectiles
 function class:4/bomber/sticky_bomb/detonate
 kill @s
 

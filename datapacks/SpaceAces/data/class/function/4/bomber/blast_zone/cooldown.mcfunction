@@ -1,5 +1,5 @@
 ## Atomic Shrink is on cooldown
-item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/ability_cooldown"]
+item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/bomber/blast_zone_cooldown",minecraft:item_name={color:"white",translate:"class.bomber.blast_zone"},minecraft:lore=[{color:"white","italic":false,translate:"class.bomber.blast_zone.lore.0"},{color:"white",translate:"class.bomber.blast_zone.lore.1"},{color:"white",translate:"class.bomber.blast_zone.lore.2"}]]
 execute if score @s ultimate.cooldown matches 1.. run function class:4/bomber/blast_zone/deactivate
 scoreboard players remove @s ultimate.cooldown 1
 

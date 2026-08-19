@@ -1,6 +1,7 @@
 ## Reloads default stats
 execute store result score class.gunner.health Numbers run data get storage space_aces:class gunner.health
 execute store result score class.gunner.speed Numbers run data get storage space_aces:class gunner.speed
+execute store result score class.gunner.scale Numbers run data get storage space_aces:class gunner.scale
 execute store result score class.gunner.primary.reload Numbers run data get storage space_aces:class gunner.primary.reload 20
 execute store result score class.gunner.primary.firerate Numbers run data get storage space_aces:class gunner.primary.firerate
 execute store result score class.gunner.primary.damage Numbers run data get storage space_aces:class gunner.primary.damage

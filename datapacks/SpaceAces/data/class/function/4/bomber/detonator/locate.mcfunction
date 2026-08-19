@@ -5,3 +5,7 @@ execute as @e[type=minecraft:item_display,tag=standby_sticky_bomb,sort=nearest,d
 execute store result score @s ability.1.cooldown if entity @e[type=minecraft:item_display,tag=class.bomber.sticky_owned,distance=..256]
 
 scoreboard players operation secondary Numbers = @s ability.1.cooldown
+
+## Detonation
+
+execute as @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=class.bomber.sticky_owned,tag=detonating] at @s positioned ~ ~0.1 ~ run function class:4/bomber/detonator/detonate

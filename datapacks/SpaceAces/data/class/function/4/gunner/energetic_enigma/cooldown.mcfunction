@@ -1,5 +1,5 @@
 ## Atomic Shrink is on cooldown
-item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/ability_cooldown"]
+item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/gunner/energetic_enigma_cooldown"]
 execute if score @s ultimate.cooldown matches 1.. run function class:4/gunner/energetic_enigma/deactivate
 scoreboard players remove @s ultimate.cooldown 1
 

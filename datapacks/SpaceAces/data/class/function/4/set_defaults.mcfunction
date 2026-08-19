@@ -12,6 +12,7 @@ data merge storage space_aces:class {\
     scout:{\
         health: 100,\
         speed: .40,\
+        scale: -0.15,\
         melee:{\
             launch: 5000,\
             damage: 30\
@@ -40,6 +41,7 @@ data merge storage space_aces:class {\
     soldier:{\
         health: 150,\
         speed: .10,\
+        scale: 0,\
         primary:{\
             reload: 2.5,\
             firerate: 4,\
@@ -52,7 +54,16 @@ data merge storage space_aces:class {\
         },\
         1:{\
             cooldown: 100,\
-            duration: 100\
+            duration: 100,\
+            damage: 10,\
+            critMult: 1.5,\
+            speed: 10,\
+            arcRate: 10,\
+            ammo: 8,\
+            explode_damage: 35,\
+            explode_critMult: 1,\
+            explode_falloff: 7,\
+            explode_falloffStart: 0\
         },\
         2:{\
             cooldown: 200,\
@@ -60,12 +71,13 @@ data merge storage space_aces:class {\
         },\
         ultimate:{\
             charge: 1250,\
-            duration: 8,\
+            duration: 8\
         }\
     },\
     sniper:{\
         health: 150,\
         speed: .10,\
+        scale: 0,\
         primary:{\
             reload: 1.25,\
             firerate: 8,\
@@ -102,6 +114,7 @@ data merge storage space_aces:class {\
     bomber:{\
         health: 150,\
         speed: 0.0,\
+        scale: 0,\
         primary:{\
             reload: 1.5,\
             firerate: 15,\
@@ -111,7 +124,7 @@ data merge storage space_aces:class {\
             arcRate: 10,\
             ammo: 8,\
             explode_damage: 35,\
-            explode_critMult: 100,\
+            explode_critMult: 1.0,\
             explode_falloff: 7,\
             explode_falloffStart: 0\
         },\
@@ -133,8 +146,12 @@ data merge storage space_aces:class {\
             duration: 10\
         },\
         2:{\
-            cooldown: 20,\
-            duration: 10\
+            cooldown: 220,\
+            duration: 100,\
+            damage: 10,\
+            critMult: 1,\
+            speed: 10,\
+            arcRate: 10\
         },\
         ultimate:{\
             charge: 1100,\
@@ -144,6 +161,7 @@ data merge storage space_aces:class {\
     mobility:{\
         health: 125,\
         speed: .20,\
+        scale: -0.10,\
         primary:{\
             reload: 1.5,\
             firerate: 8,\
@@ -178,6 +196,7 @@ data merge storage space_aces:class {\
     infiltraitor:{\
         health: 100,\
         speed: .25,\
+        scale: -0.15,\
         melee:{\
             damage: 30,\
             invis_damage: 60\
@@ -197,14 +216,14 @@ data merge storage space_aces:class {\
             duration: 100\
         },\
         2:{\
-            cooldown: 240,\
-            duration: 220,\
+            cooldown: 100,\
+            duration: 80,\
             damage: 10,\
             critMult: 100,\
             arcRate: 30,\
             speed: 8,\
             detonate_damage: 50,\
-            detonate_critMult: 100,\
+            detonate_critMult: 1,\
             detonate_falloff: 8,\
             detonate_falloffStart: 2,\
             detonate_timer: 20,\
@@ -217,6 +236,7 @@ data merge storage space_aces:class {\
     seeker:{\
         health: 125,\
         speed: .30,\
+        scale: 0,\
         primary:{\
             reload: 3,\
             firerate: 8,\
@@ -230,6 +250,7 @@ data merge storage space_aces:class {\
         1:{\
             cooldown: 60,\
             duration: 50,\
+            critMult: 1,\
             maxUses: 3,\
             damage: 20,\
             speed: 12,\
@@ -248,6 +269,7 @@ data merge storage space_aces:class {\
     gunner:{\
         health: 300,\
         speed: 0.0,\
+        scale: 0.15,\
         primary:{\
             reload: 3,\
             firerate: 0,\
@@ -274,7 +296,7 @@ data merge storage space_aces:class {\
             charge: 1500,\
             duration: 6,\
             explode_damage: 10,\
-            explode_critMult: 100,\
+            explode_critMult: 1,\
             explode_falloff: 3,\
             explode_falloffStart: 0,\
         }\
@@ -282,6 +304,7 @@ data merge storage space_aces:class {\
     brawler:{\
         health: 250,\
         speed: .10,\
+        scale: 0.25,\
         primary:{\
             firerate: 10,\
             damage: 35,\
@@ -315,6 +338,7 @@ data merge storage space_aces:class {\
     mechanic:{\
         health: 200,\
         speed: -0.05,\
+        scale: 0.15,\
         primary:{\
             reload: 1,\
             firerate: 12,\
@@ -375,6 +399,7 @@ data merge storage space_aces:class {\
     pyro:{\
         health: 300,\
         speed: -0.10,\
+        scale: 0.15,\
         primary:{\
             reload: 3,\
             firerate: 4,\
@@ -403,6 +428,7 @@ data merge storage space_aces:class {\
     rocketeer:{\
         health: 250,\
         speed: 0.0,\
+        scale: 0.15,\
         primary:{\
             reload: 1.5,\
             firerate: 14,\
@@ -443,6 +469,7 @@ data merge storage space_aces:class {\
     healer:{\
         health: 150,\
         speed: .30,\
+        scale: 0,\
         primary:{\
             reload: 2,\
             firerate: 10,\
@@ -482,6 +509,7 @@ data merge storage space_aces:class {\
     scientist:{\
         health: 175,\
         speed: 0.10,\
+        scale: 0,\
         primary:{\
             reload: 1.5,\
             firerate: 4,\
@@ -514,6 +542,7 @@ data merge storage space_aces:class {\
     shocksmith:{\
         health: 175,\
         speed: 0.15,\
+        scale: 0,\
         primary:{\
             reload: 0,\
             firerate: 4,\

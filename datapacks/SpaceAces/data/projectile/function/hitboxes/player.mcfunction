@@ -1,5 +1,10 @@
-#Hitbox for entities tagged with hb_player
-execute positioned ~ ~-1.53125 ~ if entity @e[distance=..0.487,tag=hb_player,sort=nearest,limit=1] run return run function projectile:doubledamage
-execute positioned ~ ~-0.984375 ~ if entity @e[distance=..0.657,tag=hb_player,sort=nearest,limit=1] run return run function projectile:damage
-execute positioned ~ ~-0.328125 ~ if entity @e[distance=..0.511,tag=hb_player,sort=nearest,limit=1] run return run function projectile:damage
-return 1
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_crouched_player] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/crouched
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_1] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/1
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_1.25] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/1.25
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_1.15] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/1.15
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_0.9] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/0.9
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_0.85] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/0.85
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_0.25] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/0.25
+execute positioned ~ ~-1 ~ if entity @n[distance=..2,tag=hb_player,tag=hb_player_0.5] positioned ~ ~1 ~ run return run function projectile:hitboxes/player/0.5
+
+

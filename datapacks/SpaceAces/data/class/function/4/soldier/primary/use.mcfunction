@@ -1,4 +1,5 @@
-item replace entity @s hotbar.0 from block 15 -61 0 container.0
+execute unless score @s ultimate.cooldown matches 1.. run item replace entity @s hotbar.0 from block 15 -61 0 container.0
+execute if score @s ultimate.cooldown matches 1.. run item replace entity @s hotbar.0 from block 15 -61 0 container.1
 scoreboard players add @s[scores={shoot=1..}] shoot 1
 
 execute if score @s shoot matches 4 run function class:4/soldier/primary/shoot

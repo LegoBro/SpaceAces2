@@ -1,5 +1,6 @@
 ## Poison Dart ready
-item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="class/seeker/poison_jab",minecraft:item_name={color:"white",translate:"class.seeker.poison_jab"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.poison_jab.lore.1"},{color:"white",translate:"class.seeker.poison_jab.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+item replace entity @s[tag=!invis] hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="class/seeker/poison_jab",minecraft:item_name={color:"white",translate:"class.seeker.poison_jab"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.poison_jab.lore.1"},{color:"white",translate:"class.seeker.poison_jab.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+item replace entity @s[tag=invis] hotbar.1 with minecraft:carrot_on_a_stick[minecraft:item_model="class/seeker/invis/poison_jab",minecraft:item_name={color:"white",translate:"class.seeker.poison_jab"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.poison_jab.lore.1"},{color:"white",translate:"class.seeker.poison_jab.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 execute if score @s rightClick matches 1.. if score @s SelectedItem matches 1 run function class:4/seeker/poison_jab/activate
 
 ## Multiple Uses

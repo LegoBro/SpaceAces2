@@ -1,0 +1,4 @@
+## Plasma Grenade ready
+item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="class/bomber/smokescreen",minecraft:item_name={color:"white",translate:"class.bomber.smokescreen"},minecraft:lore=[{color:"white",italic:false ,translate:"class.bomber.smokescreen.lore.2"},{color:"white",italic:false ,translate:"class.bomber.smokescreen.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+execute if score @s rightClick matches 1.. if score @s SelectedItem matches 2 run function class:4/bomber/smokescreen/activate
+function class:4/helper/actionbar/generic/tertiary_empty

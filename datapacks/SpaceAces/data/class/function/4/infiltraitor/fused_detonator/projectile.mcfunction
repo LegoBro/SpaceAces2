@@ -1,4 +1,4 @@
-item replace entity @s container.0 with minecraft:paper[item_model="infiltraitor/sticky"]
+#item replace entity @s container.0 with minecraft:paper[item_model="infiltraitor/sticky"]
 scoreboard players operation @s damage = class.infiltraitor.2.damage Numbers
 scoreboard players operation @s critMult = class.infiltraitor.2.critMult Numbers
 scoreboard players operation @s falloff = class.infiltraitor.2.falloff Numbers
