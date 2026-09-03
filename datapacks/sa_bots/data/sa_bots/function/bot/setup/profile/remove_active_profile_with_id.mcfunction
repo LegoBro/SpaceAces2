@@ -1,0 +1,1 @@
+$data remove storage sa_bots:bot_data profiles.in_use[{id:$(remove_id)}]

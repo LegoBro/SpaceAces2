@@ -1,0 +1,4 @@
+$execute positioned $(x_min) $(y) $(z_min) run particle trail{color:$(trail_color),duration:10,target:[$(x_max).5,$(y).5,$(z_min).5]} ~-$(x_fix) ~.5 ~-$(z_fix) 0 0 0 0 1 force @a[tag=sab.seeSpreadBoundaries]
+$execute positioned $(x_max) $(y) $(z_min) run particle trail{color:$(trail_color),duration:10,target:[$(x_max).5,$(y).5,$(z_max).5]} ~-$(x_fix) ~.5 ~-$(z_fix) 0 0 0 0 1 force @a[tag=sab.seeSpreadBoundaries]
+$execute positioned $(x_max) $(y) $(z_max) run particle trail{color:$(trail_color),duration:10,target:[$(x_min).5,$(y).5,$(z_max).5]} ~-$(x_fix) ~.5 ~-$(z_fix) 0 0 0 0 1 force @a[tag=sab.seeSpreadBoundaries]
+$execute positioned $(x_min) $(y) $(z_max) run particle trail{color:$(trail_color),duration:10,target:[$(x_min).5,$(y).5,$(z_min).5]} ~-$(x_fix) ~.5 ~-$(z_fix) 0 0 0 0 1 force @a[tag=sab.seeSpreadBoundaries]

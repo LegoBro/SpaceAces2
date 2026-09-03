@@ -1,0 +1,35 @@
+{
+    "values": [
+		"#minecraft:air",
+		"#minecraft:wool_carpets",
+		"#minecraft:signs",
+		"#minecraft:flowers",
+		"#minecraft:banners",
+		"#minecraft:rails",
+		"#minecraft:buttons",
+		"#minecraft:climbable",
+		"#minecraft:crops",
+		"#minecraft:fire",
+		
+		"minecraft:light",
+		"minecraft:structure_void",
+		"minecraft:barrier",
+		"minecraft:lava",
+		"minecraft:water",
+		"minecraft:snow",
+		"minecraft:short_grass",
+		"minecraft:fern",
+		"minecraft:large_fern",
+		"minecraft:tall_grass",
+		"minecraft:red_mushroom",
+		"minecraft:brown_mushroom",
+		"minecraft:cobweb",
+		"minecraft:torch",
+		"minecraft:wall_torch",
+		"minecraft:redstone_torch",
+		"minecraft:lily_pad",
+		"minecraft:tripwire",
+		"minecraft:sugar_cane",
+		"minecraft:redstone_wire"
+	]
+}

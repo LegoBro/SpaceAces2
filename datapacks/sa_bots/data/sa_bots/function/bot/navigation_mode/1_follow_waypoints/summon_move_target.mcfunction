@@ -1,0 +1,2 @@
+#for my next magic trick, i will use decimals to trick minecraft into using the exact correct coordinates
+$execute positioned 0.0 0.0 0.0 positioned ~$(x) ~$(y) ~$(z) run summon marker ~ ~ ~ {UUID:[I;15,0,0,1]}

@@ -1,0 +1,1 @@
+$execute as @e[type=mannequin,tag=sab.botFakeModel,scores={sab.botID=$(id),sab.botInstance=$(instance)},limit=1] at @s run function sa_bots:bot/top_state/model_only/_model_entity_tick

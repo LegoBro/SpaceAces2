@@ -1,0 +1,10 @@
+execute if score #waypoint_x2 sab.var matches 1601..1681 run scoreboard players set #distance sab.var 41
+execute if score #waypoint_x2 sab.var matches 1682..1764 run scoreboard players set #distance sab.var 42
+execute if score #waypoint_x2 sab.var matches 1765..1849 run scoreboard players set #distance sab.var 43
+execute if score #waypoint_x2 sab.var matches 1850..1936 run scoreboard players set #distance sab.var 44
+execute if score #waypoint_x2 sab.var matches 1937..2025 run scoreboard players set #distance sab.var 45
+execute if score #waypoint_x2 sab.var matches 2026..2116 run scoreboard players set #distance sab.var 46
+execute if score #waypoint_x2 sab.var matches 2117..2209 run scoreboard players set #distance sab.var 47
+execute if score #waypoint_x2 sab.var matches 2210..2304 run scoreboard players set #distance sab.var 48
+execute if score #waypoint_x2 sab.var matches 2305..2401 run scoreboard players set #distance sab.var 49
+execute if score #waypoint_x2 sab.var matches 2402..2500 run scoreboard players set #distance sab.var 50

@@ -1,0 +1,2 @@
+$data modify storage sa_bots:waypoint_info show_nav set from entity @s data.distanceToSector[$(show_nav_index)]
+execute summon text_display run function sa_bots:editor/waypoint_visual/nametag_nav_channel

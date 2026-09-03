@@ -1,0 +1,1 @@
+$execute if score #10Hz sab.var matches 0 as b-0-0-0-$(waypoint_target_string) at @s run particle trail{color:[0.5,1,0.5],target:[$(x),$(y),$(z)],duration:8} ~ ~.33 ~ 0 0 0 1 1 force

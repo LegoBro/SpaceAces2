@@ -1,0 +1,1 @@
+$execute store result score #random sab.var run random value $(min)..$(max)
