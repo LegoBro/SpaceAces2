@@ -4,6 +4,6 @@ scoreboard players operation place_id id = @s id
 scoreboard players operation Team Team = @s Team
 execute as @a if score @s id = place_id id run tag @s add target.owner
 execute positioned ^ ^ ^-0.5 as @e[distance=..2,tag=!ignore.projectiles] unless score @s Team = Team Team run function class:4/pyro/primary/ignite
-execute positioned ^ ^ ^-0.5 as @p[distance=..2,tag=target.owner] run scoreboard players add @s fire 15
+execute positioned ^ ^ ^-0.5 as @p[distance=..2,tag=target.owner] run scoreboard players operation @s fire += class.pyro.primary.self_fire_damage Numbers
 tag @a remove target.owner
 return 1

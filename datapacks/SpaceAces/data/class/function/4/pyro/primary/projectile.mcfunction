@@ -1,4 +1,3 @@
-item replace entity @s container.0 with minecraft:paper[item_model="pyro/hot_air"]
 scoreboard players operation @s damage = class.pyro.primary.damage Numbers
 scoreboard players operation @s critMult = class.pyro.primary.critMult Numbers
 scoreboard players operation @s falloff = class.pyro.primary.falloff Numbers

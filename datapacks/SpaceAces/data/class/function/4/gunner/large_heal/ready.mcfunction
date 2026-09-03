@@ -1,4 +1,5 @@
 ## Burst Heal
 item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="class/gunner/luminary_shift",minecraft:item_name={color:"white",translate:"class.gunner.large_heal"},minecraft:lore=[{color:"white","italic":false,translate:"class.gunner.large_heal.lore.1"},{color:"white",translate:"class.gunner.large_heal.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+execute if score @s SelectedItem matches 2 run item replace entity @s weapon.offhand with emerald[item_model="class/gunner/left_arm_luminary_shift",item_name="",tooltip_display={hide_tooltip:true}]
 execute if score @s rightClick matches 1.. if score @s SelectedItem matches 2 run function class:4/gunner/large_heal/activate
 function class:4/helper/actionbar/generic/tertiary_empty

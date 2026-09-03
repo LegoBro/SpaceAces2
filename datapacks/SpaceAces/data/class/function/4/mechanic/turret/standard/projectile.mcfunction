@@ -1,3 +1,4 @@
+tag @s remove new
 scoreboard players operation @s damage = class.mechanic.1.turret.standard.damage Numbers
 scoreboard players operation @s critMult = class.mechanic.1.turret.standard.critMult Numbers
 scoreboard players operation @s falloff = class.mechanic.1.turret.standard.falloff Numbers

@@ -33,3 +33,11 @@ execute store result score class.gunner.ultimate.explode_falloffStart Numbers ru
 item replace block 15 -63 0 container.0 with minecraft:paper[minecraft:item_model="class/gunner/primary",minecraft:item_name={translate:"class.gunner.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.gunner.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]},consumable={consume_seconds:10000000}]
 function class:4/helper/load/create_primary with storage space_aces:class gunner.primary
 item replace block 15 -58 0 container.0 from block 15 -63 0 container.0
+
+item replace block 15 -63 0 container.0 with minecraft:paper[minecraft:item_model="class/gunner/primary_recharging",minecraft:item_name={translate:"class.gunner.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.gunner.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]},consumable={consume_seconds:10000000}]
+function class:4/helper/load/create_primary with storage space_aces:class gunner.primary
+item replace block 15 -58 0 container.1 from block 15 -63 0 container.0
+
+item replace block 15 -63 0 container.0 with minecraft:paper[minecraft:item_model="class/gunner/primary_ult",minecraft:item_name={translate:"class.gunner.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.gunner.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]},consumable={consume_seconds:10000000}]
+function class:4/helper/load/create_primary with storage space_aces:class gunner.primary
+item replace block 15 -58 0 container.2 from block 15 -63 0 container.0

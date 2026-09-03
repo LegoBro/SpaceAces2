@@ -11,6 +11,8 @@ execute store result score class.pyro.primary.falloffStart Numbers run data get 
 execute store result score class.pyro.primary.speed Numbers run data get storage space_aces:class pyro.primary.speed
 execute store result score class.pyro.primary.ammo Numbers run data get storage space_aces:class pyro.primary.ammo
 execute store result score class.pyro.primary.arcRate Numbers run data get storage space_aces:class pyro.primary.arcRate
+execute store result score class.pyro.primary.fire_damage Numbers run data get storage space_aces:class pyro.primary.fire_damage
+execute store result score class.pyro.primary.self_fire_damage Numbers run data get storage space_aces:class pyro.primary.self_fire_damage
 
 execute store result score class.pyro.1.cooldown Numbers run data get storage space_aces:class pyro.1.cooldown
 execute store result score class.pyro.1.duration Numbers run data get storage space_aces:class pyro.1.duration

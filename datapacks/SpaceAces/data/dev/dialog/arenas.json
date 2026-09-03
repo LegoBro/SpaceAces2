@@ -5,7 +5,7 @@
   "inputs": [],
   "can_close_with_escape": true,
   "columns": 1,
-  "after_acion":"none",
+  "after_action":"none",
   "actions": [
     {
       "label": "Get Arena Items",

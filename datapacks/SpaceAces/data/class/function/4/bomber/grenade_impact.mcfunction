@@ -8,5 +8,6 @@ scoreboard players operation #falloff Numbers = class.bomber.primary.explode_fal
 scoreboard players operation #falloffStart Numbers = class.bomber.primary.explode_falloffStart Numbers
 
 scoreboard players operation place_id id = @s id
+function class:4/helper/tag_enemies
 execute positioned ^ ^ ^-0.5 as @a if score @s id = place_id id facing entity @e[distance=..5,tag=!ignore,tag=!ignore.projectiles] feet run function projectile:boomer/create
 return 1

@@ -2,7 +2,7 @@ scoreboard players set @s ultimate_charge 0
 scoreboard players operation @s ultimate.cooldown = class.mechanic.ultimate.duration Numbers
 
 execute summon marker run function class:4/mechanic/manual_override/marker
-summon item_display ~ ~1 ~ {item:{id:stone},Tags:["class.deployable","new","class.mechanic.manual_override.drone"],teleport_duration:2}
+summon item_display ~ ~1 ~ {item:{id:stone,components:{item_model:"class/mechanic/drone"}},Tags:["class.deployable","new","class.mechanic.manual_override.drone"],teleport_duration:2}
 tp @n[type=item_display,tag=class.mechanic.manual_override.drone] ~ ~1 ~ ~ 0
 gamemode spectator @s
 spectate @n[type=item_display,tag=class.mechanic.manual_override.drone]

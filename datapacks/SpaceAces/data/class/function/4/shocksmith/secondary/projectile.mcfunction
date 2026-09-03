@@ -1,4 +1,3 @@
-item replace entity @s container.0 with minecraft:paper[item_model="shocksmith/grenade"]
 scoreboard players operation @s damage = class.shocksmith.secondary.damage Numbers
 scoreboard players operation @s critMult = class.shocksmith.secondary.critMult Numbers
 scoreboard players operation @s falloff = class.shocksmith.secondary.falloff Numbers

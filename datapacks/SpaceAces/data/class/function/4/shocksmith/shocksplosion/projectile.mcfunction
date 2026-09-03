@@ -1,4 +1,3 @@
-item replace entity @s container.0 with minecraft:paper[item_model="infiltraitor/sticky"]
 scoreboard players set @s damage 100
 scoreboard players set @s critMult 100
 scoreboard players operation @s speed = class.shocksmith.ultimate.speed Numbers

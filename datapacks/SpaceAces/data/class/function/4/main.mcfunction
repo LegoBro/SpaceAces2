@@ -35,8 +35,7 @@ execute if entity @s[scores={Class=1..}] at @s run function class:finder
 # Special Effects
 execute if entity @s[scores={invis=1..}] run function class:4/helper/effect/invis
 execute if entity @s[scores={over_heal=1..}] run function class:4/helper/effect/over_heal
-execute if entity @s[scores={resist=1..}] run function class:4/helper/effect/resist
-execute if entity @s[scores={invulnerable=1..}] run function class:4/helper/effect/invulnerable
+
 # Melee Timer
 scoreboard players remove @s[scores={melee.cooldown=1..}] melee.cooldown 1
 
@@ -49,15 +48,7 @@ scoreboard players remove @s[scores={melee.cooldown=1..}] melee.cooldown 1
 #item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:item_name={translate:"effect.over_heal"},minecraft:lore=[{translate:"effect.over_heal.lore"}]]
 
 # tick for health
-
-execute if score @s health > @s maxHealth unless score @s over_heal matches 1.. run function health:over_heal_tick
-execute if block ~ ~ ~ #projectile:hot_stuff run scoreboard players add @s fire 1
-execute if score @s fire matches 1.. run function health:fire_tick
-execute if score @s poison matches 1.. run function health:poison_tick
-execute if score @s raw_damage matches 12.. run function health:damage
-execute if score @s 2xdamage matches 1.. run function health:damage
-execute if score @s damage matches 1.. run function health:damage
-execute if score @s healing matches 1.. run function health:heal
+function health:tick
 
 scoreboard players add @s[scores={displayHealth=..2}] lowHealth 1
 scoreboard players add @s[scores={displayHealth=..1,lowHealth=..39}] lowHealth 1

@@ -20,7 +20,7 @@ execute if score @s ability.2.cooldown matches 1.. run function class:4/gunner/l
 # Passive: Radiant Capacitors
 scoreboard players remove @s[scores={reload=0}] shoot 1
 execute if score @s shoot matches ..-20 run function class:4/gunner/radiant_capacitors/tick
-execute unless score @s shoot matches ..-17 run item replace entity @s hotbar.3 with gray_dye[item_model="class/gunner/radiant_capacitors_cooldown"]
+execute unless score @s shoot matches ..-17 run item replace entity @s hotbar.3 with gray_dye[item_model="class/gunner/radiant_capacitors_cooldown",minecraft:item_name={color:"white",translate:"class.gunner.radiant_capacitors"},minecraft:lore=[{color:"white","italic":false,translate:"class.gunner.radiant_capacitors.lore.1"},{color:"white",translate:"class.gunner.radiant_capacitors.lore.2"}]]
 
 # Ultimate Ability: Fast Blast
 execute if score @s ultimate_charge >= class.gunner.ultimate.charge Numbers run function class:4/gunner/energetic_enigma/ready
@@ -29,7 +29,7 @@ execute unless score @s ultimate_charge >= class.gunner.ultimate.charge Numbers 
 ## Melee
 execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
-item replace entity @s weapon.offhand with emerald[item_model="class/gunner/left_arm",item_name="",tooltip_display={hide_tooltip:true}]
+execute unless score @s SelectedItem matches 2 run item replace entity @s weapon.offhand with emerald[item_model="class/gunner/left_arm",item_name="",tooltip_display={hide_tooltip:true}]
 execute unless items entity @s armor.head * run item replace entity @s[tag=!invis] armor.head with emerald[item_model="class/gunner/head",enchantment_glint_override=false,enchantments={"binding_curse":1},item_name="",tooltip_display={hide_tooltip:true}]
 execute unless items entity @s armor.legs * run item replace entity @s[tag=!invis] armor.legs with minecraft:leather_leggings[!attribute_modifiers,dyed_color=3670069,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
 execute unless items entity @s armor.chest * run item replace entity @s[tag=!invis] armor.chest with minecraft:leather_chestplate[!attribute_modifiers,dyed_color=3670069,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]

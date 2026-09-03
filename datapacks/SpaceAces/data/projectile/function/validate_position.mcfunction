@@ -2,6 +2,8 @@
 tag @s remove continue
 execute if block ~ ~ ~ #projectile:ignore_all run tag @s add continue
 execute if block ~ ~ ~ #projectile:passable run function projectile:check
+#say 1 - @s[tag=kill]
+#title @a title {"score":{"name":"@s","objective":"damage"}}
 execute if score @s damage matches ..0 run tag @s add kill
 tag @s[tag=explosive,tag=!continue] add explode
 tag @s[tag=grenade,tag=!continue] add impact

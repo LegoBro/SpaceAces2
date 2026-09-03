@@ -5,20 +5,20 @@
   "inputs": [],
   "can_close_with_escape": true,
   "columns": 1,
-  "after_acion":"none",
+  "after_action":"none",
   "actions": [
+    {
+      "label": "Arena Book",
+      "action": {
+        "type": "run_command",
+        "command":"/function dev:get/arena_book"
+      }
+    },
     {
       "label": "Get Arena Items",
       "action": {
         "type": "show_dialog",
         "dialog":"dev:give"
-      }
-    },
-    {
-      "label": "Arena Teleports",
-      "action": {
-        "type": "show_dialog",
-        "dialog":"dev:arenas"
       }
     }
   ]

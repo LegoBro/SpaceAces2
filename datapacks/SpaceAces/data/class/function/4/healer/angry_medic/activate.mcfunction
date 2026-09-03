@@ -5,4 +5,7 @@ playsound minecraft:entity.wither.spawn hostile @s ~ ~ ~ 0.5 2.0
 scoreboard players operation @s ability.1.cooldown = class.healer.1.cooldown Numbers
 scoreboard players reset @s rightClick
 
+scoreboard players operation @s totalShots = class.healer.primary.ammo Numbers
+scoreboard players set @s reload 0
+
 return 1

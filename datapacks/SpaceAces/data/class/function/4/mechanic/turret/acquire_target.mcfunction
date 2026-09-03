@@ -4,7 +4,7 @@ scoreboard players set @s reload -20
 execute as @n[tag=target.enemy,sort=nearest] run function class:4/helper/los/enemy_finder
 
 # Store target
-execute store result score @s target.0 run scoreboard players get @n[tag=los_pass] target.0
-execute store result score @s target.1 run scoreboard players get @n[tag=los_pass] target.1
-execute store result score @s target.2 run scoreboard players get @n[tag=los_pass] target.2
-execute store result score @s target.3 run scoreboard players get @n[tag=los_pass] target.3
+execute store result score @s target.0 run scoreboard players get @n[tag=los_pass] uuid.0
+execute store result score @s target.1 run scoreboard players get @n[tag=los_pass] uuid.1
+execute store result score @s target.2 run scoreboard players get @n[tag=los_pass] uuid.2
+execute store result score @s target.3 run scoreboard players get @n[tag=los_pass] uuid.3

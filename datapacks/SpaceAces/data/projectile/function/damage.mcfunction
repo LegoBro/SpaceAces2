@@ -5,7 +5,7 @@ scoreboard players operation place_id id = @s id
 scoreboard players operation damage Numbers = @s damage
 scoreboard players operation healing Numbers = @s healing
 scoreboard players operation #test Team = @s Team
-tag @n[type=!minecraft:item_frame,tag=!turret,tag=!ignore,tag=!ignore.projectiles,tag=!raycast,sort=nearest,limit=1,distance=..3,tag=!projectile.piercing.ignore] add projectile.target
+tag @n[type=!minecraft:item_frame,tag=!ignore,tag=!ignore.projectiles,tag=!raycast,sort=nearest,limit=1,distance=..3,tag=!projectile.piercing.ignore] add projectile.target
 execute at @n[tag=projectile.target,distance=..3] run function projectile:hit
 execute if entity @s[tag=projectile.piercing] run tag @n[tag=projectile.target] add projectile.piercing.ignore
 tag @n[tag=projectile.target] remove projectile.target

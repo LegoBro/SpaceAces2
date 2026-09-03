@@ -1,4 +1,3 @@
-item replace entity @s container.0 with minecraft:paper[item_model="rocketeer/grenade"]
 scoreboard players operation @s damage = class.healer.2.damage Numbers
 scoreboard players operation @s critMult = class.healer.2.critMult Numbers
 execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier

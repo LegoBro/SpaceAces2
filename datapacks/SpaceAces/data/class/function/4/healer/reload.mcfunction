@@ -32,6 +32,7 @@ execute store result score class.healer.2.impact_falloffStart Numbers run data g
 
 execute store result score class.healer.ultimate.charge Numbers run data get storage space_aces:class healer.ultimate.charge
 execute store result score class.healer.ultimate.duration Numbers run data get storage space_aces:class healer.ultimate.duration 20
+execute store result score class.healer.ultimate.health Numbers run data get storage space_aces:class healer.ultimate.health
 
 ## Non-setting variables
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/healer/primary",minecraft:item_name={translate:"class.healer.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.healer.primary.lore"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]

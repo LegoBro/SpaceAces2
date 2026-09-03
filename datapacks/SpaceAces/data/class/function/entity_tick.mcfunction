@@ -8,6 +8,7 @@ execute if entity @s[tag=active_smokescreen] at @s run function class:4/bomber/s
 execute if entity @s[type=minecraft:item_display,tag=fused_detonator_standby] at @s run function class:4/infiltraitor/fused_detonator/standby
 
 
+execute if entity @s[tag=rocket_wall] at @s run function class:4/rocketeer/rocket_wall/re_ray
 
 execute if entity @s[tag=turret_base] at @s run function class:4/mechanic/turret/standby
 #execute if entity @s[tag=turret] at @s run function tick:turret

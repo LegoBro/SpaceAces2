@@ -5,7 +5,9 @@ scoreboard players operation #rocket_test Numbers %= class.rocketeer.ultimate.in
 execute if score #rocket_test Numbers matches 1.. run return 1
 
 ## Acquire Enemy
+scoreboard players operation Team Team = @s Team
 execute as @e[tag=!ignore.projectiles,tag=!invis,distance=..50,tag=!ignore,tag=entity] unless score @s Team = Team Team run tag @s add target.enemy
+execute as @a[team=!lobby,tag=!invis] unless score @s Team = Team Team run tag @s add target.enemy
 
 execute as @e[distance=..35,tag=target.enemy,sort=random] run function class:4/helper/los/check
 

@@ -14,6 +14,7 @@ execute if score @s Class matches 13 run function class:4/seeker/select
 execute if score @s Class matches 14 run function class:4/shocksmith/select
 execute if score @s Class matches 15 run function class:4/rocketeer/select
 
+tag @s add hb
 scoreboard players set @s reload 500000
 scoreboard players set @s totalShots 0
 scoreboard players set @s shoot 0

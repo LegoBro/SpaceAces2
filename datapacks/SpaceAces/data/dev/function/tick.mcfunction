@@ -1,4 +1,5 @@
 ## Dev Mode Ticking
+execute as @a[gamemode=creative] at @s run function dev:tick/player
 # Health Packs
 execute as @e[tag=strong_health_pack] at @s run particle heart
 execute as @e[tag=weak_health_pack] at @s run particle minecraft:damage_indicator

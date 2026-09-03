@@ -1,4 +1,5 @@
 ## Detonator is ready
 item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick[item_model="class/rocketeer/piercing_dart",minecraft:item_name={color:"white",translate:"class.rocketeer.piercing_dart"},minecraft:lore=[{color:"white","italic":false,translate:"class.rocketeer.piercing_dart.lore.1"},{color:"white",translate:"class.rocketeer.piercing_dart.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 execute if score @s rightClick matches 1.. if score @s SelectedItem matches 1 run function class:4/rocketeer/piercing_dart/activate
+execute if score @s SelectedItem matches 1 run item replace entity @s weapon.offhand with emerald[item_model="class/rocketeer/left_arm_dart",item_name="",tooltip_display={hide_tooltip:true}]
 function class:4/helper/actionbar/generic/secondary_empty

@@ -267,7 +267,7 @@ data merge storage space_aces:class {\
         }\
     },\
     gunner:{\
-        health: 300,\
+        health: 200,\
         speed: 0.0,\
         scale: 0.15,\
         primary:{\
@@ -289,8 +289,8 @@ data merge storage space_aces:class {\
             falloffStart: 0,\
         },\
         2:{\
-            cooldown: 300,\
-            duration: 250\
+            cooldown: 240,\
+            duration: 200\
         },\
         ultimate:{\
             charge: 1500,\
@@ -353,8 +353,8 @@ data merge storage space_aces:class {\
             spreadY: 25\
         },\
         1:{\
-            cooldown: 160,\
-            duration: 160,\
+            cooldown: 240,\
+            duration: 240,\
             turret: {\
                 health: 150,\
                 standard: {\
@@ -373,7 +373,7 @@ data merge storage space_aces:class {\
                 },\
                 rocket: {\
                     firerate:20,\
-                    damage:10,\
+                    damage:30,\
                     critMult:1,\
                     falloff: 1,\
                     falloffStart: 25,\
@@ -383,8 +383,8 @@ data merge storage space_aces:class {\
             }\
         },\
         2:{\
-            cooldown: 200,\
-            duration: 100,\
+            cooldown: 300,\
+            duration: 200,\
         },\
         ultimate:{\
             charge: 2000,\
@@ -407,7 +407,9 @@ data merge storage space_aces:class {\
             critMult: 1,\
             speed: 12,\
             ammo: 50,\
-            arcRate: -9\
+            arcRate: -5,\
+            fire_damage:10,\
+            self_fire_damage:5,\
         },\
         1:{\
             cooldown: 200,\
@@ -447,15 +449,14 @@ data merge storage space_aces:class {\
             damage: 65,\
             critMult: 200,\
             falloff: 10,\
-            falloffStart: 1,\
+            falloffStart: 3,\
         },\
         2:{\
             cooldown: 240,\
             duration: 230,\
-            damage: 15,\
-            critMult: 1,\
+            health: 50,\
             speed: 2,\
-            impact_damage: 5,\
+            impact_damage: 25,\
             impact_critMult: 1,\
             impact_falloff: 2,\
             impact_falloffStart: 1\
@@ -504,6 +505,7 @@ data merge storage space_aces:class {\
         ultimate:{\
             charge: 1500,\
             duration: 60,\
+            health: 300,\
         }\
     },\
     scientist:{\
@@ -513,8 +515,8 @@ data merge storage space_aces:class {\
         primary:{\
             reload: 1.5,\
             firerate: 4,\
-            damage: 3,\
-            poison: 5,\
+            damage: 5,\
+            poison: 2,\
             critMult: 1.5,\
             speed: 16,\
             arcRate: 6,\
@@ -523,7 +525,7 @@ data merge storage space_aces:class {\
         1:{\
             cooldown: 200,\
             duration: 10,\
-            damage_mult: 1.5\
+            damage_mult: 2\
         },\
         2:{\
             cooldown: 100,\
@@ -570,8 +572,8 @@ data merge storage space_aces:class {\
             explode_falloffStart: 1,\
         },\
         2:{\
-            cooldown: 200,\
-            duration: 197,\
+            cooldown: 160,\
+            duration: 157,\
             damage: 20,\
             critMult: 1.5,\
             arcRate: 0,\

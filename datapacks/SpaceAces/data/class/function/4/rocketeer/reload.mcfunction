@@ -27,11 +27,12 @@ execute store result score class.rocketeer.1.critMult Numbers run data get stora
 
 execute store result score class.rocketeer.2.cooldown Numbers run data get storage space_aces:class rocketeer.2.cooldown
 execute store result score class.rocketeer.2.duration Numbers run data get storage space_aces:class rocketeer.2.duration
-execute store result score class.rocketeer.2.damage Numbers run data get storage space_aces:class rocketeer.2.damage
-execute store result score class.rocketeer.2.critMult Numbers run data get storage space_aces:class rocketeer.2.critMult 100
-execute store result score class.rocketeer.2.falloff Numbers run data get storage space_aces:class rocketeer.2.falloff
-execute store result score class.rocketeer.2.falloffStart Numbers run data get storage space_aces:class rocketeer.2.falloffStart
-execute store result score class.rocketeer.2.speed Numbers run data get storage space_aces:class rocketeer.2.speed
+execute store result score class.rocketeer.2.health Numbers run data get storage space_aces:class rocketeer.2.health
+#execute store result score class.rocketeer.2.damage Numbers run data get storage space_aces:class rocketeer.2.damage
+#execute store result score class.rocketeer.2.critMult Numbers run data get storage space_aces:class rocketeer.2.critMult 100
+#execute store result score class.rocketeer.2.falloff Numbers run data get storage space_aces:class rocketeer.2.falloff
+#execute store result score class.rocketeer.2.falloffStart Numbers run data get storage space_aces:class rocketeer.2.falloffStart
+#execute store result score class.rocketeer.2.speed Numbers run data get storage space_aces:class rocketeer.2.speed
 
 execute store result score class.rocketeer.2.impact_damage Numbers run data get storage space_aces:class rocketeer.2.impact_damage
 execute store result score class.rocketeer.2.impact_critMult Numbers run data get storage space_aces:class rocketeer.2.impact_critMult 100

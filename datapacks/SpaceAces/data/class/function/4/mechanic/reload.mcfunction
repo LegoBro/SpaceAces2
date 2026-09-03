@@ -61,3 +61,20 @@ scoreboard objectives add target.0 dummy
 scoreboard objectives add target.1 dummy
 scoreboard objectives add target.2 dummy
 scoreboard objectives add target.3 dummy
+
+scoreboard objectives add uuid.0 dummy
+scoreboard objectives add uuid.1 dummy
+scoreboard objectives add uuid.2 dummy
+scoreboard objectives add uuid.3 dummy
+
+
+## Forced scoreboard cleanup
+#scoreboard players reset * target.0
+#scoreboard players reset * target.1
+#scoreboard players reset * target.2
+#scoreboard players reset * target.3
+
+#scoreboard players reset * uuid.0
+#scoreboard players reset * uuid.1
+#scoreboard players reset * uuid.2
+#scoreboard players reset * uuid.3

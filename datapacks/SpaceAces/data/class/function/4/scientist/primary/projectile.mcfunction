@@ -1,4 +1,3 @@
-item replace entity @s container.0 with minecraft:paper[item_model="scientist/grenade"]
 scoreboard players operation @s damage = class.scientist.primary.damage Numbers
 scoreboard players operation @s critMult = class.scientist.primary.critMult Numbers
 scoreboard players operation @s falloff = class.scientist.primary.falloff Numbers

@@ -2,10 +2,17 @@
 
 ## Tags
 
-ignore
+* ignore
+Should be ignored by most operations
 
 * ignore.projectiles
 Used on an entity to let projectiles know to ignore detection
+
+* class.deployable
+Gets ticked as a class deployable
+
+* hb
+Has a hitbox and can be attacked
 
 ## Entities
 
