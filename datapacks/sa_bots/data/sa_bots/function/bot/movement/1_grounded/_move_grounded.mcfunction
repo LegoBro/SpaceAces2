@@ -9,6 +9,10 @@ execute if score @s sab.botPose matches 2 run data modify entity @s pose set val
 #special logic for state changes
 execute unless score @s sab.botMoveStateLastTick matches 1 run function sa_bots:bot/movement/1_grounded/first_tick_grounded
 
+#translate botJumpNextLedge to botCoyoteJump
+execute if entity @s[tag=sab.botJumpNextLedge] run tag @s add sab.botCoyoteJump
+tag @s[tag=sab.botJumpNextLedge] remove sab.botJumpNextLedge
+
 #exit out if there's no movement target
 execute unless entity f-0-0-0-1 run return 0
 #=====
@@ -48,7 +52,7 @@ execute if score @s sab.botPose matches 1 run function sa_bots:bot/movement/1_gr
 #crouching
 execute if score @s sab.botPose matches 2 run function sa_bots:bot/movement/1_grounded/crouching_velocity_multiplier
 #determine whether the bot wants to (and is able to) sprint
-execute if score @s sab.botPose matches 0 if entity @s[tag=sab.botCanSprint,scores={sab.botAngleDiffMoveAndFace=-45..45,sab.botSkill=3..}] \
+execute if score @s sab.botPose matches 0 if entity @s[tag=sab.botCanSprint,scores={sab.botAngleDiffMoveAndFace=-45..45}] \
     run function sa_bots:bot/movement/1_grounded/sprinting_velocity_multiplier
 
 #--------------------------

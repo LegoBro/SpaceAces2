@@ -23,3 +23,11 @@ data modify storage sa_bots:waypoint i set value 0
 scoreboard players set #i sab.var 1
 execute store result storage sa_bots:waypoint iplus1 int 1 run scoreboard players get #i sab.var
 function sa_bots:editor/utility/run_command_as_waypoint_macro with storage sa_bots:waypoint
+#also do for sub-route endpoints
+$execute unless data entity @s data.outgoing[$(t)][3][1] run return 0
+#=====
+$data modify storage sa_bots:waypoint waypoint_target_string set from entity @s data.outgoing[$(t)][3][1]
+data modify storage sa_bots:waypoint i set value 0
+scoreboard players set #i sab.var 1
+execute store result storage sa_bots:waypoint iplus1 int 1 run scoreboard players get #i sab.var
+function sa_bots:editor/utility/run_command_as_waypoint_macro with storage sa_bots:waypoint

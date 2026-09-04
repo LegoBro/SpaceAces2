@@ -1,3 +1,7 @@
+#execute out if we're dumb
+execute if entity @s[tag=!sab.botJumpNextLedge,tag=!sab.botCoyoteJump,scores={sab.botSkill=..3}] run return fail
+#=====
+
 scoreboard players set #multiplier sab.var 130
 scoreboard players operation #x2 sab.var *= #multiplier sab.var
 scoreboard players operation #z2 sab.var *= #multiplier sab.var

@@ -5,9 +5,11 @@
 execute unless score @s sab.botMoveTargetDY matches -5.. run return 0
 #=====
 
-#must have line of sight to waypoint, otherwise kick out
-#relevant because we might have a floor or ceiling between us and the waypoint
-$execute as b-0-0-0-$(uuid4) run function sa_bots:bot/waypoint_nav/check_los_to_waypoint
+#are we in the air?
+scoreboard players operation #on_ground sab.var = @s sab.onGround
+
+#we can be blocked from collecting this waypoint based on several factors...
+$execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/target_waypoint_gatekeeping
 execute if score #found_target sab.var matches 0 run return 0
 #=====
 
@@ -26,6 +28,7 @@ $execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_w
 #get variables ready
 scoreboard players set #found_target sab.var 0
 scoreboard players set #chosen_outgoing sab.var -1
+scoreboard players set #chosen_event sab.var 0
 
 #now sort through generated sab.routeSort markers to see which ones we want to take
 #note: "#distance_at_this_waypoint sab.var" is the distance to destination at this waypoint
@@ -48,10 +51,10 @@ $execute if score #chosen_outgoing sab.var matches 0.. as b-0-0-0-$(uuid4) run \
     function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_chosen_target with storage sa_bots:generic
 
 #adopt target data
-execute if score #found_target sab.var matches 1.. run data remove entity @s data.move_targets[0]
-execute if score #found_target sab.var matches 1.. run \
-    data modify entity @s data.move_targets prepend from storage sa_bots:generic target
-execute if score #found_target sab.var matches 1.. run function sa_bots:bot/waypoint_nav/update_target_scores
+execute if score #found_target sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/adopt_target_data
+
+#execute event, if we have one
+execute if score #chosen_event sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/_event_execute_index
 
 #if we didn't find anything valid, go into "roam" mode for a while
 execute if score #found_target sab.var matches 0 run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets

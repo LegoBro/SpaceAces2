@@ -27,16 +27,17 @@ scoreboard players operation @s sab.botMoveTargetDZ -= @s sab.botMoveTargetZ
 #------------------------
 #various timers
 
-#count down temporary look time
+#look time
 scoreboard players remove @s[scores={sab.botLookTime=1..}] sab.botLookTime 1
+scoreboard players remove @s[scores={sab.botIgnoreAimTime=1..}] sab.botIgnoreAimTime 1
 
-#count down crouch time
+#crouch time
 scoreboard players remove @s[scores={sab.botCrouchTime=1..}] sab.botCrouchTime 1
 
-#count down sprinting time
+#sprinting time
 scoreboard players remove @s[scores={sab.botIsSprinting=1..}] sab.botIsSprinting 1
 
-#count down jump cooldown
+#jump cooldown
 scoreboard players remove @s[scores={sab.botJumpCooldown=1..}] sab.botJumpCooldown 1
 #------------------------
 

@@ -6,7 +6,7 @@ data modify entity @s data.move_targets set value []
 
 #check the 5 nearest waypoints, and pick the nearest one we can walk to
 scoreboard players set #found_target sab.var 0
-execute as @e[type=marker,tag=sab.botWaypointGeneric,limit=5,sort=nearest,distance=..40] run function sa_bots:bot/waypoint_nav/check_if_valid_path_to_waypoint
+execute as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=5,sort=nearest,distance=..40] run function sa_bots:bot/waypoint_nav/check_if_valid_path_to_waypoint
 
 #adopt target coordinates
 execute if score #found_target sab.var matches 1.. run \

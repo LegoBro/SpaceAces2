@@ -1,5 +1,3 @@
-say check
-
 #is this the one? if so, update value and exit
 $execute store result score #read1 sab.var run data get entity @s data.incoming[$(i)][0]
 $execute if score #read1 sab.var = #waypoint_source sab.var store result entity @s data.incoming[$(i)][3] int 1 run return run scoreboard players get #conditional sab.var

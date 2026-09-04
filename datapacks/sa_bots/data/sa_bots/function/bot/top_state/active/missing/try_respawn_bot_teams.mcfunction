@@ -2,6 +2,10 @@
 function sa_bots:bot/setup/team/red_vs_blue/evaluate_on_respawn
 
 
-#until i write this code, fall back to anywhere spawn
-say teams respawn
-function sa_bots:bot/top_state/active/missing/try_respawn_bot_anywhere
+#read what team we are
+execute store result score #use_spawnpoint sab.var run data get storage sa_bots:bot_data this.team
+
+#execute at a proper spawn point
+execute if score #use_spawnpoint sab.var matches 1 at @e[type=marker,tag=blue_spawn_point,limit=1,sort=random] if loaded ~ ~ ~ run function sa_bots:bot/setup/spawn_mannequin with storage sa_bots:generic
+execute if score #use_spawnpoint sab.var matches 2 at @e[type=marker,tag=red_spawn_point,limit=1,sort=random] if loaded ~ ~ ~ run function sa_bots:bot/setup/spawn_mannequin with storage sa_bots:generic
+execute unless score #use_spawnpoint sab.var matches 1..2 at @e[type=marker,tag=general_spawn_point,limit=1,sort=random] if loaded ~ ~ ~ run function sa_bots:bot/setup/spawn_mannequin with storage sa_bots:generic

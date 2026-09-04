@@ -39,4 +39,6 @@ execute if score @s botPathEdit matches 38 run function sa_bots:editor/action/to
 execute if score @s botPathEdit matches 39 run function sa_bots:editor/action/toggle_score {name:"#debug_show_junction_decisions",menu:"16_nav_debug"}
 execute if score @s botPathEdit matches 40 run function sa_bots:editor/action/toggle_score {name:"#debug_adopt_nav_channel",menu:"16_nav_debug"}
 execute if score @s botPathEdit matches 41 run function sa_bots:editor/action/view_data_of_edit_focus
+execute if score @s botPathEdit matches 42 run function sa_bots:editor/action/toggle_waypoint_tag {index:1}
+execute if score @s botPathEdit matches 43 run function sa_bots:editor/action/toggle_waypoint_tag {index:2}
 #...

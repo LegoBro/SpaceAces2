@@ -32,6 +32,10 @@ function sa_bots:editor/waypoint_visual/show_outgoing_paths
 tag @s remove sab.visualizeOutgoingID
 tag @s remove sab.visualizeEventNames
 
+#show special tags this waypoint has
+execute if entity @s[tag=wp.requireOnGround] positioned ~ ~1.8 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.requireOnGround",color:green}'}
+execute if entity @s[tag=wp.dontReRouteHere] positioned ~ ~1.9 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.dontReRouteHere",color:green}'}
+
 #warn if we have undefined endpoints
 execute if entity @s[tag=sab.hasUndefinedEndpoints] run function sa_bots:editor/tools/edit/subroute/source_check_if_all_endpoints_valid
 execute if entity @s[tag=sab.hasUndefinedEndpoints] positioned ~ ~.5 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro {text:'{translate:"sa_bot.menu.undefined_subroute_endpoint",color:red}'}

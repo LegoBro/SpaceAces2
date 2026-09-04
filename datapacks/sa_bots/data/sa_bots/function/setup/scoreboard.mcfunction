@@ -1,8 +1,3 @@
-#temporary objectives to mimic what Space Aces has
-scoreboard objectives add Team dummy
-scoreboard objectives add Class dummy
-
-
 #generic
 scoreboard objectives add sab.var dummy
 scoreboard objectives add sab.lifespan dummy
@@ -26,6 +21,7 @@ scoreboard objectives add sab.botAngleDiffMoveAndFace dummy
 scoreboard objectives add sab.botCrouchTime dummy
 scoreboard objectives add sab.botPose dummy
 scoreboard objectives add sab.botIsSprinting dummy
+scoreboard objectives add sab.botIgnoreAimTime dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy
