@@ -1,16 +1,12 @@
 #executed by system on every game tick whenever there are entries in sa_bots:bot_data bots[]
 
 
-#determine what state Space Aces is in, and use that to decide we should attempt to spawn bots
-# #bot_spawn_mode = 0 -- debug, just spawn bots at a random waypoint
-# #bot_spawn_mode = 1 -- 2 teams, spawn bots at team spawnpoints
-# #bot_spawn_mode = 2 -- ffa, spawn bots at ffa spawnpoints
-scoreboard players set #bot_spawn_mode sab.var 0
-
-
 #make sure any origin updates are handled...
 execute if data storage sa_bots:bot_data this{updateOrigin:1} run function sa_bots:bot/storage/update_origin_storage
 
+
+#every 2 seconds, we will gather information for all players (player count, classes, etc)
+execute if score #2sec sab.var matches 33 run function sa_bots:bot/setup/class/_run_all_counts
 
 #iterate through all bots and make them do something
 data modify storage sa_bots:generic bot_i set value 0

@@ -7,16 +7,13 @@
 function sa_bots:bot/utility/generate_new_bot_instance
 execute store result storage sa_bots:bot_data this.instance int 1 run scoreboard players get #get_bot_instance sab.var
 data modify storage sa_bots:bot_data this.updateOrigin set value 1
-
-#adopt variables from storage
-execute store result score @s Team run data get storage sa_bots:bot_data this.team
-execute store result score @s sab.botID run data get storage sa_bots:bot_data this.id
 execute store result score @s sab.botInstance run data get storage sa_bots:bot_data this.instance
+
+#if at any point we don't do anything with this entity for 4 ticks, the garbage collector will eat it
 scoreboard players set @s sab.lifespan 4
 
 #adopt brain data (also lock variables in if they haven't been locked yet)
-execute store result score #read sab.var run data get storage sa_bots:bot_data this.settings.brain.locked_in
-execute if score #read sab.var matches 0 run function sa_bots:bot/storage/assign_bot_brain_values
+execute unless data storage sa_bots:bot_data this.settings.brain{locked_in:1} run function sa_bots:bot/storage/assign_bot_brain_values
 execute store result score @s sab.botSkill run data get storage sa_bots:bot_data this.settings.brain.skill.actual
 execute store result score @s sab.botAggression run data get storage sa_bots:bot_data this.settings.brain.aggression.actual
 execute store result score @s sab.botCooperativeness run data get storage sa_bots:bot_data this.settings.brain.cooperativeness.actual
@@ -24,8 +21,11 @@ execute store result score @s sab.botCooperativeness run data get storage sa_bot
 #general variables
 function sa_bots:bot/setup/setup_starting_scoreboards
 
-#adopt class variables
+#decide what class we want to be
+function sa_bots:bot/setup/class/pick_class
+#... and adopt class variables
 function sa_bots:bot/setup/class/set_class_data
+
 
 #check for nearby waypoints. follow nearest one if possible
 function sa_bots:bot/waypoint_nav/seek_nearby_waypoint

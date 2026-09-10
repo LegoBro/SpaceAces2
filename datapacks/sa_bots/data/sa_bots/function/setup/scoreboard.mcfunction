@@ -22,6 +22,7 @@ scoreboard objectives add sab.botCrouchTime dummy
 scoreboard objectives add sab.botPose dummy
 scoreboard objectives add sab.botIsSprinting dummy
 scoreboard objectives add sab.botIgnoreAimTime dummy
+scoreboard objectives add sab.botGoal dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

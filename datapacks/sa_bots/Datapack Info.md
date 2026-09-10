@@ -22,5 +22,6 @@ The built-in tools will prevent stale references on waypoint connections.
 # COMMAND STORAGES
 "sa_bots:generic" for misc parameters to be used in macros
 "sa_bots:bot_data" for all data related to bot players
+"sa_bots:team_composition" for data compiled on how many players are on each team and what classes they're playing
 "sa_bots:waypoint" for arguments related to working with bot waypoints
 "sa_bots:waypoint_info" for dumping the whole data of a waypoint so it can be displayed in text

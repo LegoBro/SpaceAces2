@@ -42,7 +42,7 @@ execute if score @s sab.botTimeSinceProgress matches 2.. at f-0-0-0-1 positioned
 #apply various multipliers to x and z velocity
 
 #movement_speed attribute
-execute store result score #multiplier sab.var run data get entity @s attributes[{id:"minecraft:movement_speed"}].base 100
+execute store result score #multiplier sab.var run attribute @s movement_speed get 100
 scoreboard players operation #x2 sab.var *= #multiplier sab.var
 scoreboard players operation #z2 sab.var *= #multiplier sab.var
 #terrain

@@ -44,7 +44,7 @@ sa_bots:bot_data bot_template.active
 > 0..2 Whether newly added bots should be active by default. (0 = not active, 1 = active, 2 = model only)
 
 sa_bots:bot_data default.settings.(any)
-> Default settings for bots. To restore this, copy default.settings to new_bot.settings
+> Default settings for bots. To restore this, copy default.settings to bot_template.settings
 
 
 # bot active copy

@@ -1,7 +1,9 @@
 #this should be run once on level load
 
 data modify storage sa_bots:waypoint sector_nav_cache set value []
+
 scoreboard players set #sector_nav_cache_channel sab.var 0
+
 scoreboard players reset * sab.navSectorCacheChannel1
 scoreboard players reset * sab.navSectorCacheChannel2
 scoreboard players reset * sab.navSectorCacheChannel3

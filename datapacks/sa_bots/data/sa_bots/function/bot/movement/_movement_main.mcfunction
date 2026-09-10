@@ -8,7 +8,7 @@ execute store result score @s sab.onGround run execute if entity @s[nbt={OnGroun
 #don't have a move target? find one
 execute unless data entity @s data.move_targets[0] run function sa_bots:bot/waypoint_nav/seek_nearby_waypoint
 
-#perform movement based on state
+#decide how we want to navigate based on state
 execute if score @s sab.botNavigationMode matches 0 run function sa_bots:bot/navigation_mode/0_roam/_tick
 execute if score @s sab.botNavigationMode matches 1 run function sa_bots:bot/navigation_mode/1_follow_waypoints/_tick
 

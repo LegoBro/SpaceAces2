@@ -25,4 +25,7 @@ function sa_bots:setup/bots/profiles
 #bot default settings
 function sa_bots:setup/bots/default_bot_settings
 
+#team compositon
+function sa_bots:setup/bots/team_composition
+
 #----------------------------

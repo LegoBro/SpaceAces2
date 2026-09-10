@@ -1,4 +1,4 @@
-#execute out if we're dumb
+#exit out if we're dumb
 execute if entity @s[tag=!sab.botJumpNextLedge,tag=!sab.botCoyoteJump,scores={sab.botSkill=..3}] run return fail
 #=====
 
