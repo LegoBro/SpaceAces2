@@ -25,8 +25,17 @@ scoreboard players add @s id 2000000000
 #assume bot is able to sprint
 tag @s add sab.botCanSprint
 
-#give hitbox
+#show username
+data modify entity @s CustomNameVisible set value true
+
+#set team depending on team
+execute if score @s Team matches 1 run team join blue
+execute if score @s Team matches 2 run team join red
+
+#give hitbox and important tags
 tag @s add hb
+tag @s add hb_player
+tag @s add entity
 #(we will specify size in class setup functions)
 
 #we're a visible player that other bots can interact with

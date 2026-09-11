@@ -3,6 +3,8 @@
 
 #reset counters
 scoreboard players set #playerCount sab.var 0
+scoreboard players set #playerCountBlue sab.var 0
+scoreboard players set #playerCountRed sab.var 0
 
 #remove "activePlayer" tag from all players. re-add if player is in-game.
 tag @a[tag=sab.activePlayer] remove sab.activePlayer

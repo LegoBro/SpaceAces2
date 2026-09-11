@@ -25,5 +25,22 @@ execute if score @s Class matches 13 run function class:4/seeker/select
 execute if score @s Class matches 14 run function class:4/shocksmith/select
 execute if score @s Class matches 15 run function class:4/rocketeer/select
 
+#apply armor
+#execute if score @s Class matches 1 run function class:4/scout/npc
+#execute if score @s Class matches 2 run function class:4/soldier/npc
+#execute if score @s Class matches 3 run function class:4/sniper/npc
+#execute if score @s Class matches 4 run function class:4/bomber/npc
+#execute if score @s Class matches 5 run function class:4/gunner/npc
+#execute if score @s Class matches 6 run function class:4/healer/npc
+#execute if score @s Class matches 7 run function class:4/brawler/npc
+#execute if score @s Class matches 8 run function class:4/mobility/npc
+#execute if score @s Class matches 9 run function class:4/mechanic/npc
+#execute if score @s Class matches 10 run function class:4/scientist/npc
+#execute if score @s Class matches 11 run function class:4/infiltraitor/npc
+#execute if score @s Class matches 12 run function class:4/pyro/npc
+#execute if score @s Class matches 13 run function class:4/seeker/npc
+#execute if score @s Class matches 14 run function class:4/shocksmith/npc
+#execute if score @s Class matches 15 run function class:4/rocketeer/npc
+
 #be fully healed on respawn
 scoreboard players operation @s health = @s maxHealth

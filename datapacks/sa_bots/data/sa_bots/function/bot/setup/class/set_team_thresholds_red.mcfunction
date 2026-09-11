@@ -24,7 +24,7 @@ execute if score #odd sab.var matches 1 if score #playerCountRed sab.var matches
 scoreboard players operation #red_player_threshold_34_percent sab.var = #playerCountRed sab.var
 scoreboard players operation #red_player_threshold_34_percent sab.var *= #34 sab.var
 scoreboard players operation #red_player_threshold_34_percent sab.var /= #100 sab.var
-execute if score #odd sab.var matches 0 if score #playerCountRed sab.var matches 1.. run \
+execute if score #odd sab.var matches 1 if score #playerCountRed sab.var matches 1.. run \
     scoreboard players add #red_player_threshold_34_percent sab.var 1
 
 #67% of player count
