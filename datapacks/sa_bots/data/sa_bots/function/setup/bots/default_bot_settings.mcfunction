@@ -13,7 +13,7 @@
 #   1 -- pick class at random, but only classes that haven't been picked
 #   2 -- pick class with respect for team composition and gamemode
 #       > lower skill bots might make worse choices
-# class_choice.desired_blass
+# class_choice.desired_class
 #       > if value is 1..15, the bot will always choose the corresponding class (ignoring selection_logic)
 
 data modify storage sa_bots:bot_data default.settings set value {\

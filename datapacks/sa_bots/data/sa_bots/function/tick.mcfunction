@@ -41,10 +41,3 @@ execute if data storage sa_bots:bot_data bots[0] run function sa_bots:bot/_bot_g
 #count down lifespan on temporary objects
 execute as @e[scores={sab.lifespan=-2147483648..2147483647}] at @s run function sa_bots:common/lifespan
 #------------------------------
-
-
-#------------------------------
-#DEBUG
-
-#...
-#------------------------------

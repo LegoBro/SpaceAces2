@@ -9,7 +9,7 @@ function sa_bots:api/settings/restore_point/write
 #remove all bots
 function sa_bots:api/delete_bots/delete_all_bots
 #bots can't change teams during the mission
-function sa_bots:api/settings/teams_lock_all_bots
+function sa_bots:api/settings/team_choice/teams_lock_all_bots
 #----------------------
 
 

@@ -1,5 +1,5 @@
 #classes are stores in the index corresponding to their internal id
-#so you can access "scout" by using "data get storage sa_bots:team_composition classes[1]"
+#so you can access "scout" by using "data get storage sa_bots:team_composition root.classes[1]"
 
 data modify storage sa_bots:team_composition root set value {\
     classes:[\
