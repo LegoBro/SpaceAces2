@@ -1,5 +1,5 @@
 ## Boost is on cooldown
-item replace entity @s hotbar.2 with minecraft:gray_dye[item_model="class/scientist/chem_dispenser_cooldown",minecraft:item_name={color:"white",translate:"class.scientist.chem_dispenser"},minecraft:lore=[{color:"white","italic":false,translate:"class.scientist.chem_dispenser.lore.1"},{color:"white",translate:"class.scientist.chem_dispenser.lore.2"}]]
+item replace entity @s hotbar.2 with minecraft:gray_dye[item_model="class/scientist/chem_dispenser_cooldown",minecraft:item_name={color:"white",translate:"class.scientist.chem_dispenser"},minecraft:lore=[{color:"white","italic":false,translate:"class.scientist.chem_dispenser.lore.1"},{color:"white",translate:"class.scientist.chem_dispenser.lore.2"},{color:"white",translate:"class.scientist.chem_dispenser.lore.3"}]]
 
 execute if score @s ability.2.cooldown = class.scientist.2.duration Numbers run function class:4/bomber/detonator/deactivate
 scoreboard players remove @s ability.2.cooldown 1

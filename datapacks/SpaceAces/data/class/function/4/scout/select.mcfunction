@@ -1,6 +1,9 @@
 scoreboard players set @s Class 1
 
 scoreboard players operation @s maxHealth = class.scout.health Numbers
+effect give @s invisibility infinite 0 true
+effect give @s resistance infinite 9 true
+scoreboard players operation @s health = class.scout.health Numbers
 data modify storage class:speed speed set from storage space_aces:class scout.speed
 function class:4/helper/set/speed with storage class:speed
 data modify storage class:scale scale set from storage space_aces:class scout.scale

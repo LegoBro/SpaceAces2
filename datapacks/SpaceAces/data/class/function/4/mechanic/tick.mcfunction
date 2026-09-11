@@ -35,10 +35,5 @@ execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_h
 
 tag @e[tag=my_turret] remove my_turret
 
-item replace entity @s weapon.offhand with emerald[item_model="class/mechanic/left_arm",item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.head * run item replace entity @s[tag=!invis] armor.head with emerald[item_model="class/mechanic/head",enchantment_glint_override=false,enchantments={"binding_curse":1},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.legs * run item replace entity @s[tag=!invis] armor.legs with minecraft:leather_leggings[!attribute_modifiers,dyed_color=12698049,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.chest * run item replace entity @s[tag=!invis] armor.chest with minecraft:leather_chestplate[!attribute_modifiers,dyed_color=12698049,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.feet * run item replace entity @s[tag=!invis] armor.feet with minecraft:leather_boots[!attribute_modifiers,dyed_color=12698049,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s weapon.mainhand * run item replace entity @s weapon.mainhand with paper[item_model="class/mechanic/right_arm",item_name="",tooltip_display={hide_tooltip:true}]
+function class:4/mechanic/equip
 return 1

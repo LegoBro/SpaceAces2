@@ -3,6 +3,7 @@
 attribute @s scale modifier remove class
 $attribute @s scale modifier add class $(scale) add_multiplied_base
 
+tag @s remove hb_player_0.25
 tag @s remove hb_player_0.5
 tag @s remove hb_player_0.85
 tag @s remove hb_player_0.9

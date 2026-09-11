@@ -4,21 +4,22 @@
   "external_title": "Dev Menu",
   "inputs": [],
   "can_close_with_escape": true,
+  "pause": false,
   "columns": 1,
-  "after_action":"none",
+  "after_action": "none",
   "actions": [
+    {
+      "label": "Arena Book",
+      "action": {
+        "type": "run_command",
+        "command": "function dev:get/arena_book"
+      }
+    },
     {
       "label": "Get Arena Items",
       "action": {
         "type": "show_dialog",
-        "dialog":"dev:give"
-      }
-    },
-    {
-      "label": "Arena Teleports",
-      "action": {
-        "type": "show_dialog",
-        "dialog":"dev:arenas"
+        "dialog": "dev:give"
       }
     }
   ]

@@ -21,10 +21,5 @@ execute unless score @s ultimate_charge >= class.mobility.ultimate.charge Number
 ## Melee
 execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
-execute unless score @s SelectedItem matches 1 run item replace entity @s weapon.offhand with emerald[item_model="class/mobility/left_arm",item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.head * run item replace entity @s[tag=!invis] armor.head with emerald[item_model="class/mobility/head",enchantment_glint_override=false,enchantments={"binding_curse":1},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.legs * run item replace entity @s[tag=!invis] armor.legs with minecraft:leather_leggings[!attribute_modifiers,dyed_color=3905063,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.chest * run item replace entity @s[tag=!invis] armor.chest with minecraft:leather_chestplate[!attribute_modifiers,dyed_color=3905063,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.feet * run item replace entity @s[tag=!invis] armor.feet with minecraft:leather_boots[!attribute_modifiers,dyed_color=3905063,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s weapon.mainhand * run item replace entity @s weapon.mainhand with paper[item_model="class/mobility/right_arm",item_name="",tooltip_display={hide_tooltip:true}]
+function class:4/mobility/equip
 return 1

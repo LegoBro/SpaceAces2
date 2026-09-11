@@ -1,5 +1,5 @@
 ## Atomic Shrink is on cooldown
-item replace entity @s hotbar.4 with minecraft:gray_dye[item_model="class/scout/atomic_shrink_cooldown",minecraft:item_name={color:"white",translate:"class.scout.atomic_shrink"},minecraft:lore=[{color:"white","italic":false,translate:"class.scout.atomic_shrink.lore.0"},{color:"white",translate:"class.scout.atomic_shrink.lore.1"},{color:"white",translate:"class.scout.atomic_shrink.lore.2"}]]
+item replace entity @s hotbar.4 from block 15 -62 0 container.13
 execute if score @s ultimate.cooldown matches 1.. if score @s size matches 26.. run function class:4/scout/atomic_shrink/shrinking
 execute if score @s ultimate.cooldown matches ..0 if score @s size matches ..84 run function class:4/scout/atomic_shrink/growing
 execute if score @s ultimate.cooldown matches 1 run function class:4/scout/atomic_shrink/deactivate

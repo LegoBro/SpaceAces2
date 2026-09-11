@@ -26,3 +26,31 @@ execute store result score class.scout.melee.damage Numbers run data get storage
 item replace block 15 -63 0 container.0 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scout/primary",minecraft:item_name={translate:"class.scout.primary"},minecraft:lore=[{color:"white","italic":false,translate:"class.scout.primary.lore"}],tooltip_display={hidden_components:["unbreakable"]}]
 function class:4/helper/load/create_primary with storage space_aces:class scout.primary
 item replace block 15 -62 0 container.0 from block 15 -63 0 container.0
+
+# Ultimate
+item replace block 15 -62 0 container.4 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scout/atomic_shrink",\
+    minecraft:item_name={color:"white",translate:"class.scout.atomic_shrink"},\
+    minecraft:lore=[\
+        {color:"white","italic":false,translate:"class.scout.atomic_shrink.lore.0"},\
+        {color:"white",translate:"class.scout.atomic_shrink.lore.1"},\
+        [{color:"white",translate:"class.scout.atomic_shrink.lore.2"}]\
+    ],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+
+item replace block 15 -62 0 container.13 with minecraft:carrot_on_a_stick[minecraft:item_model="class/scout/atomic_shrink_cooldown",\
+    minecraft:item_name={color:"white",translate:"class.scout.atomic_shrink"},\
+    minecraft:lore=[\
+        {color:"white","italic":false,translate:"class.scout.atomic_shrink.lore.0"},\
+        {color:"white",translate:"class.scout.atomic_shrink.lore.1"},\
+        [{color:"white",translate:"class.scout.atomic_shrink.lore.2"}]\
+    ],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+
+# Double Jump
+item replace block 15 -62 0 container.2 with minecraft:turtle_scute[minecraft:item_model="class/scout/double_jump",\
+    minecraft:item_name={color:"white",translate:"class.scout.double_jump"},\
+    minecraft:lore=[{color:"white","italic":false,translate:"class.scout.double_jump.lore.0"}],\
+    minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+
+item replace block 15 -62 0 container.11 with minecraft:turtle_scute[item_model="class/scout/double_jump_cooldown",\
+    minecraft:item_name={color:"white",translate:"class.scout.double_jump"},\
+    minecraft:lore=[{color:"white","italic":false,translate:"class.scout.double_jump.lore.0"}],\
+    minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]

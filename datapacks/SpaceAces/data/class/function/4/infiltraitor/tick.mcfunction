@@ -22,12 +22,5 @@ execute unless score @s ultimate_charge >= class.infiltraitor.ultimate.charge Nu
 ## Melee - 2x damage if invis
 execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/infiltraitor/punch
 
-item replace entity @s[tag=!invis] weapon.offhand with emerald[item_model="class/infiltraitor/left_arm"]
-item replace entity @s[tag=invis] weapon.offhand with emerald[item_model="air"]
-execute unless items entity @s armor.head * run item replace entity @s[tag=!invis] armor.head with emerald[item_model="class/infiltraitor/head",enchantment_glint_override=false,enchantments={"binding_curse":1}]
-execute unless items entity @s armor.legs * run item replace entity @s[tag=!invis] armor.legs with minecraft:leather_leggings[!attribute_modifiers,dyed_color=13619923,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
-execute unless items entity @s armor.chest * run item replace entity @s[tag=!invis] armor.chest with minecraft:leather_chestplate[!attribute_modifiers,dyed_color=13619923,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
-execute unless items entity @s armor.feet * run item replace entity @s[tag=!invis] armor.feet with minecraft:leather_boots[!attribute_modifiers,dyed_color=13619923,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
-execute unless items entity @s weapon.mainhand * run item replace entity @s[tag=!invis] weapon.mainhand with paper[item_model="class/infiltraitor/right_arm",item_name=""]
-execute if items entity @s weapon.mainhand paper run item replace entity @s[tag=invis] weapon.mainhand with air
+function class:4/infiltraitor/equip
 return 1

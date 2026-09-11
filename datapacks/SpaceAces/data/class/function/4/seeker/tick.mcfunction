@@ -28,13 +28,5 @@ execute unless score @s ultimate_charge >= class.seeker.ultimate.charge Numbers 
 ## Melee
 execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
-item replace entity @s[tag=invis] weapon.offhand with emerald[item_model="air",item_name="",tooltip_display={hide_tooltip:true}]
-execute unless score @s[tag=!invis] SelectedItem matches 2..4 run item replace entity @s[tag=!invis] weapon.offhand with emerald[item_model="class/seeker/left_arm",item_name="",tooltip_display={hide_tooltip:true}]
-execute if score @s[tag=!invis] SelectedItem matches 3 run item replace entity @s weapon.offhand with emerald[item_model="class/seeker/left_arm_weak_glow",item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.head * run item replace entity @s[tag=!invis] armor.head with emerald[item_model="class/seeker/head",enchantment_glint_override=false,enchantments={"binding_curse":1},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.legs * run item replace entity @s[tag=!invis] armor.legs with minecraft:leather_leggings[!attribute_modifiers,dyed_color=10360595,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.chest * run item replace entity @s[tag=!invis] armor.chest with minecraft:leather_chestplate[!attribute_modifiers,dyed_color=10360595,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s armor.feet * run item replace entity @s[tag=!invis] armor.feet with minecraft:leather_boots[!attribute_modifiers,dyed_color=10360595,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},item_name="",tooltip_display={hide_tooltip:true}]
-execute unless items entity @s weapon.mainhand * run item replace entity @s[tag=!invis] weapon.mainhand with paper[item_model="class/seeker/right_arm",item_name="",tooltip_display={hide_tooltip:true}]
-execute if items entity @s weapon.mainhand paper run item replace entity @s[tag=invis] weapon.mainhand with air
+function class:4/seeker/equip
 return 1
