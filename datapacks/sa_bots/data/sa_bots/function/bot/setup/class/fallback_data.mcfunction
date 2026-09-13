@@ -3,3 +3,4 @@ attribute @s movement_speed base set 0.1
 
 #100HP by default
 scoreboard players set @s maxHealth 100
+scoreboard players set @s health 100

@@ -16,6 +16,15 @@ function sa_bots:bot/entity_task/_task_tick_index
 
 
 #----------------------------
+#SHOOTING / COMBAT
+
+#combat logic
+function sa_bots:bot/combat_logic/_combat_logic_tick
+#----------------------------
+
+
+
+#----------------------------
 #MOVEMENT
 function sa_bots:bot/movement/_movement_main
 #----------------------------

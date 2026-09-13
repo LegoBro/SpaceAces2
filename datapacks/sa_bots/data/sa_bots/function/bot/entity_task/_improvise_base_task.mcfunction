@@ -10,7 +10,7 @@
 data modify entity @s data.tasks set value []
 
 #debug, force to pick random destination and move to it
-data modify entity @s data.tasks prepend value {id:0,name:"RANDOM_DESTINATION"}
+data modify entity @s data.tasks prepend value {id:0,name:"RANDOM_DESTINATION",is_base_task:1,flags:{is_base_task:1}}
 #...
 
 

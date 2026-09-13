@@ -2,6 +2,7 @@
 scoreboard objectives add sab.var dummy
 scoreboard objectives add sab.lifespan dummy
 scoreboard objectives add sab.onGround dummy
+scoreboard objectives add sab.healthPercentage dummy
 
 #bots
 scoreboard objectives add sab.botID dummy
@@ -23,6 +24,14 @@ scoreboard objectives add sab.botPose dummy
 scoreboard objectives add sab.botIsSprinting dummy
 scoreboard objectives add sab.botIgnoreAimTime dummy
 scoreboard objectives add sab.botGoal dummy
+scoreboard objectives add sab.botReactionTimeBase dummy
+scoreboard objectives add sab.botReactionCountdown dummy
+scoreboard objectives add sab.botCheckLOSTimer dummy
+scoreboard objectives add sab.botTimeSinceLOS dummy
+scoreboard objectives add sab.botTargetEntityID dummy
+scoreboard objectives add sab.entityTargetingID dummy
+scoreboard objectives add sab.botTargetAngleYaw100 dummy
+scoreboard objectives add sab.botTargetAnglePitch100 dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

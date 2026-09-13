@@ -12,6 +12,8 @@ scoreboard players set #NUMBER_OF_EVENTS sab.var 10
 scoreboard players set #NAV_GENERATION_SPEED sab.var 5
 
 #numbers
+scoreboard players set #36000 sab.var 36000
+
 scoreboard players set #360 sab.var 360
 
 scoreboard players set #100 sab.var 100

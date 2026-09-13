@@ -14,7 +14,9 @@ execute unless entity f-0-0-0-1 run return run function sa_bots:bot/movement/2_s
 #swimming pose: face target directly if not looking at anything else
 execute if score @s sab.botPose matches 1 unless score @s sab.botLookTime matches 1.. facing entity f-0-0-0-1 eyes run rotate @s ~ ~
 #standing pose: face target roughly
-execute if score @s sab.botPose matches 0 unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate_without_focus
+execute if score @s sab.botPose matches 0 unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
+#try to look at target if we have one
+execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target
 
 #get a normalized vector from us to our movement target entity
 execute at @s as f-0-0-0-1 run function sa_bots:bot/movement/2_swimming/finalize_move_target

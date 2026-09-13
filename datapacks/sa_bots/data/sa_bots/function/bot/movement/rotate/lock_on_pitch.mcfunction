@@ -1,0 +1,2 @@
+execute store result storage sa_bots:generic pitch double 0.01 run scoreboard players get @s sab.botTargetAnglePitch100
+function sa_bots:bot/movement/rotate/lock_on_pitch_macro with storage sa_bots:generic

@@ -21,7 +21,9 @@ execute unless entity f-0-0-0-1 run return 0
 #the angle between us and the movement target is the angle we're moving at
 
 #face target if not looking at anything else
-execute unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate_without_focus
+execute unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
+#try to look at target if we have one
+execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target
 
 #get a normalized vector from us to our movement target entity
 execute at @s as f-0-0-0-1 run function sa_bots:bot/movement/1_grounded/finalize_move_target
@@ -37,6 +39,9 @@ function sa_bots:bot/movement/find_difference_between_move_and_face_angle
 #jump if there's a passable 1-block high obstable in the way
 execute if score @s sab.botTimeSinceProgress matches 1.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #sa_bots:bot_no_jump[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
 execute if score @s sab.botTimeSinceProgress matches 2.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #minecraft:slabs[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
+
+#jump if we're stuck on something but could easily get over it
+execute if score @s sab.botTimeSinceProgress matches 3.. facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6 if block ~ ~1 ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tag @s add sab.botJump
 
 #--------------------------
 #apply various multipliers to x and z velocity
