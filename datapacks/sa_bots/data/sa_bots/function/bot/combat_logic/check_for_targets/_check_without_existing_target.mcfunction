@@ -12,9 +12,8 @@ tag @s remove sab.botShootingActiveOpponent
 
 #look in a big area roughly corresponding to our field of view
 tag @s add sab.self
-tag @a[tag=sab.activePlayer,distance=..25] add sab.possibleTarget
-execute if score @s sab.botSkill matches ..6 run tag @e[tag=hb,tag=entity,tag=!sab.self,tag=!standby_sticky_bomb,distance=..25] add sab.possibleTarget
-execute if score @s sab.botSkill matches 7.. run tag @e[tag=hb,tag=entity,tag=!sab.self,distance=..25] add sab.possibleTarget
+execute if score @s sab.botSkill matches ..6 run tag @e[type=#projectile:has_hb,tag=hb,tag=entity,tag=!sab.self,tag=!standby_sticky_bomb,distance=..25] add sab.possibleTarget
+execute if score @s sab.botSkill matches 7.. run tag @e[type=#projectile:has_hb,tag=hb,tag=entity,tag=!sab.self,distance=..25] add sab.possibleTarget
 tag @s remove sab.self
 
 #keep track of how many targets we find
@@ -30,7 +29,7 @@ scoreboard players set #lowest_percent_hp_teammate sab.var 100
 scoreboard players operation #skill sab.var = @s sab.botSkill
 scoreboard players operation #team sab.var = @s Team
 execute store result score #shoot_teammates sab.var run execute if entity @s[tag=sab.botMayShootTeammates]
-execute as @e[tag=sab.possibleTarget,distance=..25] run function sa_bots:bot/combat_logic/check_for_targets/filter_possible_targets
+execute as @e[type=#projectile:has_hb,tag=sab.possibleTarget,distance=..25] run function sa_bots:bot/combat_logic/check_for_targets/filter_possible_targets
 #---------------------
 
 
@@ -69,7 +68,7 @@ execute if score #get_id sab.var matches 1.. run function sa_bots:bot/combat_log
 
 
 #clear targets
-execute as @e[tag=sab.possibleTarget,distance=..25] run function sa_bots:bot/combat_logic/check_for_targets/clear_possible_target_tags
+execute as @e[type=#projectile:has_hb,tag=sab.possibleTarget,distance=..25] run function sa_bots:bot/combat_logic/check_for_targets/clear_possible_target_tags
 
 #set cooldown for LOS checks
 execute store result score @s sab.botCheckLOSTimer run random value 5..11

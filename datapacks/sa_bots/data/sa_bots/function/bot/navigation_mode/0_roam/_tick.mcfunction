@@ -1,7 +1,11 @@
 #executed by a bot
 
 
+#count down time until we search for waypoints again
 scoreboard players remove @s sab.botWPSearchCooldown 1
+
+#always making progress (set to 2 to make jumps in movement/1_grounded)
+scoreboard players set @s sab.botTimeSinceProgress 2
 
 #check for nearby waypoints
 execute if score @s sab.botWPSearchCooldown matches ..0 \

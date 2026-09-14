@@ -4,6 +4,7 @@
 #gameplay scores
 scoreboard players set @s sab.botNavigationMode 0
 scoreboard players set @s sab.botLookTime 0
+scoreboard players set @s sab.botWPSearchCooldown 0
 #...
 
 #navigation

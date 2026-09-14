@@ -111,7 +111,8 @@ execute if score #class_loggic_limited_lives sab.var matches 1 if entity @s[scor
     tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.squishy] remove sab.classOptionViable
 #skill 5+ -- less likely to run squishy classes when playing defense (like scout for example)
 execute store result score #random sab.var run random value 1..100
-execute if score #class_loggic_defense sab.var matches 1 if score #random sab.var matches ..35 if entity @e[type=marker,tag=sab.classOption,distance=..1,tag=!sab.squishy,tag=sab.classOptionViable] run \
+execute if score #class_loggic_defense sab.var matches 1 if score #random sab.var matches ..35 \
+    if score @s sab.botSkill matches 5.. if entity @e[type=marker,tag=sab.classOption,distance=..1,tag=!sab.squishy,tag=sab.classOptionViable] run \
     tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.squishy] remove sab.classOptionViable
 #skill 7+ -- should have a class on the team that is good at guarding the flag when playing ctf with 5+ on the team
 execute if score #class_logic_ctf sab.var matches 1 if entity @s[scores={sab.botSkill=7..,Team=1..2}] if score #playerCountCurrentTeam sab.var matches 5.. \
