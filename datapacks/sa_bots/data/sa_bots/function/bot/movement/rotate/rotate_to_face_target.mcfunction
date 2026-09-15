@@ -27,25 +27,11 @@ scoreboard players operation #pitch sab.var -= @s sab.botTargetAnglePitch100
     ]
 
 #rotate to look towards target
-execute if score #yaw_difference sab.var matches ..-4500 at @s run rotate @s ~20 ~
-execute if score #yaw_difference sab.var matches -4499..-2500 at @s run rotate @s ~7 ~
-execute if score #yaw_difference sab.var matches -2499..-500 at @s run rotate @s ~3 ~
-execute if score #yaw_difference sab.var matches -499..-100 at @s run rotate @s ~1 ~
-execute if score #yaw_difference sab.var matches -99..99 at @s run function sa_bots:bot/movement/rotate/lock_on_yaw
-execute if score #yaw_difference sab.var matches 100..499 at @s run rotate @s ~-1 ~
-execute if score #yaw_difference sab.var matches 500..2499 at @s run rotate @s ~-3 ~
-execute if score #yaw_difference sab.var matches 2500..4499 at @s run rotate @s ~-7 ~
-execute if score #yaw_difference sab.var matches 4500.. at @s run rotate @s ~-20 ~
-
-execute if score #pitch sab.var matches ..-4500 at @s run rotate @s ~ ~10
-execute if score #pitch sab.var matches -4499..-2500 at @s run rotate @s ~ ~7
-execute if score #pitch sab.var matches -2499..-500 at @s run rotate @s ~ ~3
-execute if score #pitch sab.var matches -499..-100 at @s run rotate @s ~ ~1
-execute if score #pitch sab.var matches -99..99 at @s run function sa_bots:bot/movement/rotate/lock_on_pitch
-execute if score #pitch sab.var matches 100..499 at @s run rotate @s ~ ~-1
-execute if score #pitch sab.var matches 500..2499 at @s run rotate @s ~ ~-3
-execute if score #pitch sab.var matches 2500..4499 at @s run rotate @s ~ ~-7
-execute if score #pitch sab.var matches 4500.. at @s run rotate @s ~ ~-10
+execute if score @s sab.botSkill matches ..2 run function sa_bots:bot/movement/rotate/aim_speeds/1
+execute if score @s sab.botSkill matches 3..4 run function sa_bots:bot/movement/rotate/aim_speeds/2
+execute if score @s sab.botSkill matches 5..6 run function sa_bots:bot/movement/rotate/aim_speeds/3
+execute if score @s sab.botSkill matches 7..8 run function sa_bots:bot/movement/rotate/aim_speeds/4
+execute if score @s sab.botSkill matches 9.. run function sa_bots:bot/movement/rotate/aim_speeds/5
 
 #save how far off we are
 scoreboard players operation @s sab.botTargetAngleDifferenceYaw = #yaw_difference sab.var
