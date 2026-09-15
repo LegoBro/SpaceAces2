@@ -47,6 +47,10 @@ execute if score #pitch sab.var matches 500..2499 at @s run rotate @s ~ ~-3
 execute if score #pitch sab.var matches 2500..4499 at @s run rotate @s ~ ~-7
 execute if score #pitch sab.var matches 4500.. at @s run rotate @s ~ ~-10
 
+#save how far off we are
+scoreboard players operation @s sab.botTargetAngleDifferenceYaw = #yaw_difference sab.var
+scoreboard players operation @s sab.botTargetAngleDifferencePitch = #pitch sab.var
+
 #debug: instant aim
 #execute at @s run function sa_bots:bot/movement/rotate/lock_on_yaw
 #execute at @s run function sa_bots:bot/movement/rotate/lock_on_pitch

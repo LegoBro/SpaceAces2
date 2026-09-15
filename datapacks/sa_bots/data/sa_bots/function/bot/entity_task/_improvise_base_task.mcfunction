@@ -9,10 +9,16 @@
 #setup data structure
 data modify entity @s data.tasks set value []
 
-#debug, force to pick random destination and move to it
-data modify entity @s data.tasks prepend value {id:0,name:"RANDOM_DESTINATION",is_base_task:1,flags:{is_base_task:1}}
-#...
 
+#fallback: pick random waypoint
+scoreboard players set #choice sab.var 0
+#go after enemy players
+#execute if entity @e[tag=sab.activePlayer,distance=2..] run scoreboard players set #choice sab.var 1
+
+#index, assign task
+execute if score #choice sab.var matches 0 run data modify entity @s data.tasks prepend value {id:0,name:"RANDOM_DESTINATION",is_base_task:1,flags:{is_base_task:1}}
+execute if score #choice sab.var matches 1 run data modify entity @s data.tasks prepend value {id:1,name:"FIND_NEAREST_ENEMY",is_base_task:1,flags:{is_base_task:1}}
+#...
 
 
 #internalize whatever task 0 is

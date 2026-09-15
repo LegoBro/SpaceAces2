@@ -32,6 +32,9 @@ scoreboard objectives add sab.botTargetEntityID dummy
 scoreboard objectives add sab.entityTargetingID dummy
 scoreboard objectives add sab.botTargetAngleYaw100 dummy
 scoreboard objectives add sab.botTargetAnglePitch100 dummy
+scoreboard objectives add sab.botTargetAngleDifferenceYaw dummy
+scoreboard objectives add sab.botTargetAngleDifferencePitch dummy
+scoreboard objectives add sab.botNavThinkTime dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

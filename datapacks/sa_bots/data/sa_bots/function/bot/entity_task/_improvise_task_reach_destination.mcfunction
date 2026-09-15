@@ -6,4 +6,5 @@
 
 #follow the script for whatever task we're doing
 execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/0_random_destination/pick_destination
+execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/1_go_after_nearest_enemy/pick_destination
 #...

@@ -4,6 +4,13 @@
 
 
 #----------------------------
+#CLASS TICK
+function sa_bots:bot/class_logic/class_tick_index
+#----------------------------
+
+
+
+#----------------------------
 #MOVEMENT
 function sa_bots:bot/movement/_movement_main
 #----------------------------

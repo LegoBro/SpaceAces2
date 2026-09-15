@@ -7,3 +7,7 @@ execute as @e[type=#projectile:has_hb,tag=sab.possibleTargetHealing,distance=..2
 #of the remaining targets, pick the nearest one
 execute at @s as @e[type=#projectile:has_hb,limit=1,sort=nearest,tag=sab.possibleTargetHealing,distance=..50] store result score #get_id sab.var \
     run function sa_bots:bot/combat_logic/check_for_targets/fetch_target_id
+
+
+#remember what our priority is
+execute if score #get_id sab.var matches 1.. run tag @s add sab.botShootingFriendlyPlayer
