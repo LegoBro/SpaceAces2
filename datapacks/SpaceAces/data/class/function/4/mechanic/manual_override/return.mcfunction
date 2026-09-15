@@ -1,5 +1,5 @@
 tag @s add return
-execute as @e[type=marker,tag=class.mechanic.manual_override.marker] at @s if score @s id = #Class_Start id run tp @p[tag=return] @s
+execute as @e[type=marker,tag=class.mechanic.manual_override.marker] at @s if score @s id = #Class_Start id run tp @n[type=#projectile:players,tag=sab.activePlayer,tag=return] @s
 tag @s remove return
 execute as @e[type=marker,tag=class.mechanic.manual_override.marker] at @s if score @s id = #Class_Start id run kill @s
 scoreboard players set @s ultimate.cooldown 0

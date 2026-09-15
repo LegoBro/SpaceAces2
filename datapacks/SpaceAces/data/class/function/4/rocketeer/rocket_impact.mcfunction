@@ -9,10 +9,8 @@ scoreboard players operation #falloffStart Numbers = class.rocketeer.primary.imp
 scoreboard players operation #team Team = @s Team
 
 scoreboard players operation place_id id = @s id
-execute as @a if score @s id = place_id id run tag @s add attacker
-execute positioned ^ ^ ^-0.5 as @p[tag=attacker] facing entity @e[distance=1..6,tag=!ignore,tag=!ignore.projectiles] feet positioned ^ ^ ^ run function projectile:boomer/create
+execute as @e[type=#projectile:players,tag=sab.activePlayer] if score @s id = place_id id run tag @s add attacker
+execute positioned ^ ^ ^-0.5 as @n[type=#projectile:players,tag=sab.activePlayer,tag=attacker] facing entity @e[distance=1..6,tag=!ignore,tag=!ignore.projectiles] feet positioned ^ ^ ^ run function projectile:boomer/create
 execute positioned ^ ^ ^-0.5 as @e[distance=..0.999,tag=!ignore,tag=!ignore.projectiles] unless score @s Team = #team Team run function projectile:boomer/damage_near
-tag @a remove attacker
-#execute if entity @s[tag=stuck] run say stuck
-#execute positioned ~ ~0.25 ~ as @a if score @s id = place_id id as @e[distance=..5,tag=!ignore,tag=!ignore.projectiles] run say @s
+tag @e[type=#projectile:players,tag=sab.activePlayer] remove attacker
 return 1

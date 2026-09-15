@@ -4,8 +4,8 @@
 scoreboard players operation place_id id = @s id
 scoreboard players operation Team Team = @s Team
 
-execute as @a if score @s id = place_id id run tag @s add target.owner
-execute as @p[tag=target.owner] unless score @s Class matches 9 run kill @e[distance=..1,tag=turret_base,sort=nearest,limit=1]
+execute as @e[type=#projectile:players,tag=sab.activePlayer] if score @s id = place_id id run tag @s add target.owner
+execute as @n[type=#projectile:players,tag=sab.activePlayer,tag=target.owner] unless score @s Class matches 9 run kill @e[distance=..1,tag=turret_base,sort=nearest,limit=1]
 
 # Tag potential enemies
 execute if entity @s[tag=standard] as @e[tag=!ignore.projectiles,tag=!invis,distance=..30,tag=!ignore,tag=hb] unless score @s Team = Team Team run tag @s add target.enemy
@@ -35,11 +35,12 @@ execute if entity @s[tag=rocket] run function class:4/mechanic/turret/rocket/tic
 
 #execute unless entity @e[distance=..1,tag=turret_base,sort=nearest,limit=1] run kill @s
 
-tag @a remove target.owner
+tag @e[type=#projectile:players,tag=sab.activePlayer] remove target.owner
 tag @e remove target.enemy
 tag @e remove los_pass
 
-execute if score @s health matches ..0 as @e[tag=turret,distance=..1] if score @s id = place_id id run kill @s
+scoreboard players set @n[tag=turret_base,tag=!hb,distance=..0.01] sab.lifespan 5
+execute if score @s health matches ..0 run kill @s
 
 #say test
 return 1

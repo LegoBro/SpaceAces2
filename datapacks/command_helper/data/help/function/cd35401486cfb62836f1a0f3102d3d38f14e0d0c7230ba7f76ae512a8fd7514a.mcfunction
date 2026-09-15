@@ -43,7 +43,7 @@ data modify storage help:data safe_nbt_interpret.ult.0 set from storage player:a
 
 
 ## Final Actionbar
-return run title @s actionbar [\
+return run title @a[distance=0] actionbar [\
     {"translate":"space.-118","with":[""]},\
     {"nbt":"text","storage":"health:bar","interpret":true,"source":"storage","type":"nbt"},\
     {"translate":"space.-108","with":[""]},\

@@ -12,7 +12,7 @@ scoreboard players operation gametime Numbers %= 20 Numbers
 
 scoreboard players operation #team Team = @s Team
 scoreboard players operation place_id id = @s id
-execute as @a[distance=..50] at @s if score @s Team = #team Team run function class:4/healer/over_heal_machine/visualize
-execute if score gametime Numbers matches 0 as @a[distance=..50] if score @s Team = #team Team run function class:4/healer/over_heal_machine/apply
+execute as @e[type=#projectile:players,tag=sab.activePlayer,distance=..50] at @s if score @s Team = #team Team run function class:4/healer/over_heal_machine/visualize
+execute if score gametime Numbers matches 0 as @e[type=#projectile:players,tag=sab.activePlayer,distance=..50] if score @s Team = #team Team run function class:4/healer/over_heal_machine/apply
 
 return 1
