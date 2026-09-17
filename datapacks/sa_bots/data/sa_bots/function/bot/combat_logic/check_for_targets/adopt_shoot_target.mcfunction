@@ -1,8 +1,12 @@
 #clean up old tag
 tag @s[tag=sab.botShootingActiveOpponent] remove sab.botShootingActiveOpponent
 
-#set score
+#set scores
 scoreboard players operation @s sab.botTargetEntityID = #get_id sab.var
+scoreboard players operation @s sab.botTargetUUID0 = #get_uuid4_0 sab.var
+scoreboard players operation @s sab.botTargetUUID1 = #get_uuid4_1 sab.var
+scoreboard players operation @s sab.botTargetUUID2 = #get_uuid4_2 sab.var
+scoreboard players operation @s sab.botTargetUUID3 = #get_uuid4_3 sab.var
 
 #if we were doing something else, forget about it
 execute if data entity @s data.tasks[0] run data remove entity @s data.tasks[{is_base_task:0}]

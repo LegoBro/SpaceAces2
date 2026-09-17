@@ -7,7 +7,7 @@
 #determine based on
 #1) whether our id is even or odd
 #2) whether our the current tick is even or odd
-execute store result score #bot_tick_type sab.var run data get storage sa_bots:bot_data this.id
+scoreboard players operation #bot_tick_type sab.var = #bot_this_id sab.var
 scoreboard players operation #bot_tick_type sab.var %= #2 sab.var
 execute if score #bot_tick_type sab.var matches 0 if score #10Hz sab.var matches 0 run function sa_bots:bot/entity_tick/entity_tick_regular
 execute if score #bot_tick_type sab.var matches 0 if score #10Hz sab.var matches 1 run function sa_bots:bot/entity_tick/entity_tick_lazy

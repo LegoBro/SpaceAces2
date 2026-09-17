@@ -22,6 +22,7 @@ execute store result score @s sab.botCooperativeness run data get storage sa_bot
 function sa_bots:bot/setup/setup_starting_scoreboards
 
 #decide what class we want to be
+scoreboard players set #previous_class sab.var -1
 function sa_bots:bot/setup/class/pick_class
 #... and adopt class variables
 function sa_bots:bot/setup/class/set_class_data

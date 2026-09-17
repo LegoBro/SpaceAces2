@@ -2,13 +2,9 @@
 scoreboard players operation #Class_Start Team = @s Team
 scoreboard players operation #Class_Start id = @s id
 
-#debug: shoot when we see someone
-execute if entity @s[scores={sab.botTargetEntityID=1..,sab.botTimeSinceLOS=..5,sab.botTargetAngleDifferenceYaw=-1000..1000,sab.botTargetAngleDifferencePitch=-1000..1000}] run scoreboard players set @s rightClick 1
-
-#hold gun when shooting
-execute unless score @s reload matches 1.. run scoreboard players set @s SelectedItem 0
-execute if score @s reload matches 1.. if score @s ability.1.cooldown matches ..0 run scoreboard players set @s SelectedItem 1
-execute if score @s reload matches 1.. if score @s ability.1.cooldown matches 1.. run scoreboard players set @s SelectedItem 2
+#translate sab.botRightClick10Hz into rightClick
+scoreboard players remove @s[scores={sab.botRightClick10Hz=0..}] sab.botRightClick10Hz 1
+execute if score @s sab.botRightClick10Hz matches 0.. run scoreboard players set @s rightClick 1
 
 #tick for our given class
 execute if score @s Class matches 1 run function class:4/scout/tick

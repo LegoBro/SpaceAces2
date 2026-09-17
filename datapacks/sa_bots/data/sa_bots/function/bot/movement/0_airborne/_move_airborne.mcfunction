@@ -11,6 +11,11 @@ execute if score @s sab.botMoveStateLastTick matches 1 run function sa_bots:bot/
 tag @s[tag=sab.botJump] remove sab.botJump
 tag @s[tag=sab.botCoyoteJump] remove sab.botCoyoteJump
 
+#track how long we've been in each state
+scoreboard players add @s sab.airTime 1
+scoreboard players set @s sab.groundedTime 0
+scoreboard players set @s sab.swimmingTime 0
+
 #exit out if there's no movement target
 execute unless entity f-0-0-0-1 run return 0
 #=====
@@ -18,7 +23,7 @@ execute unless entity f-0-0-0-1 run return 0
 
 #the angle between us and the movement target is the angle we're moving at
 
-#face target if not looking at anything else
+#face movement direction if not looking at anything else
 execute unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
 #try to look at target if we have one
 execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target

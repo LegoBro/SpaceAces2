@@ -20,13 +20,21 @@ function sa_bots:bot/entity_task/_task_tick_index
 
 #combat logic
 function sa_bots:bot/combat_logic/_combat_logic_tick
+
+#per-class logic
+function sa_bots:bot/class_logic/_class_logic_index
 #----------------------------
 
 
 
 #----------------------------
 #CLASS TICK
-function sa_bots:bot/class_logic/class_tick_index
+
+#directly run Space Aces functions
+function sa_bots:bot/class_logic/_class_tick_index
+
+#sync ult charge to storage whenever it changes
+execute unless score @s sab.dUltimateCharge = @s ultimate_charge run function sa_bots:bot/storage/update_ultimate_charge
 #----------------------------
 
 

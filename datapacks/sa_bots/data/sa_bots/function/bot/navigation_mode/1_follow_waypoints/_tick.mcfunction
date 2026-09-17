@@ -11,7 +11,8 @@ execute if entity @s[scores={sab.botWaypointApproachX=0,sab.botWaypointApproachZ
     function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_logic with entity @s data.move_targets[0]
 
 #if we're stuck, try targeting a new waypoint (if that fails, we go into "roam" mode)
-execute if score @s sab.botTimeSinceProgress matches 10.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/try_to_get_unstuck
+execute if entity @s[scores={sab.botTimeSinceProgress=10..,sab.airTime=..0}] run function sa_bots:bot/navigation_mode/1_follow_waypoints/try_to_get_unstuck
+execute if entity @s[scores={sab.botTimeSinceProgress=80..,sab.airTime=1..}] run function sa_bots:bot/navigation_mode/1_follow_waypoints/try_to_get_unstuck
 
 
 #move towards target

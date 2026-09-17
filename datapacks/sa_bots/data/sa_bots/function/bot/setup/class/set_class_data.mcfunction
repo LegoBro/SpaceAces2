@@ -5,6 +5,12 @@
 execute store result score @s Class run data get storage sa_bots:bot_data this.class
 
 
+#if we change classes, our ultimate charge gets set to 0
+execute unless score @s Class = #previous_class sab.var run data modify storage sa_bots:bot_data this.game.ultimate_charge set value 0
+#get ultimate charge froms storage
+execute store result score @s ultimate_charge run data get storage sa_bots:bot_data this.game.ultimate_charge
+
+
 #fallback data
 function sa_bots:bot/setup/class/fallback_data
 

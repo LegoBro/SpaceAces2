@@ -1,0 +1,1 @@
+$execute as $(plain_full) if entity @s[distance=..$(max_range)] run function sa_bots:bot/combat_logic/look_at_target/track_target

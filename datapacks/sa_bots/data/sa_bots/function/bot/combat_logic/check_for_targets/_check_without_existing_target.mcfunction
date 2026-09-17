@@ -35,7 +35,9 @@ execute if score #shoot_priority sab.var matches 3 if score #target_count sab.va
 
 #pick target depending on priority
 scoreboard players set #get_id sab.var 0
-execute if score #shoot_priority sab.var matches 1 run function sa_bots:bot/combat_logic/check_for_targets/start_targeting_nearest
+execute if score #shoot_priority sab.var matches 0 if score #target_count_see_only sab.var matches 1.. \
+    unless score @s sab.botGlanceTime matches 1..50 run function sa_bots:bot/combat_logic/check_for_targets/start_targeting_nearest_look_only
+    execute if score #shoot_priority sab.var matches 1 run function sa_bots:bot/combat_logic/check_for_targets/start_targeting_nearest
 execute if score #shoot_priority sab.var matches 2 run function sa_bots:bot/combat_logic/check_for_targets/start_targeting_sustainer
 execute if score #shoot_priority sab.var matches 3 run function sa_bots:bot/combat_logic/check_for_targets/start_targeting_nearest_teammate
 execute if score #shoot_priority sab.var matches 4 run function sa_bots:bot/combat_logic/check_for_targets/start_targeting_lowest_hp_teammate

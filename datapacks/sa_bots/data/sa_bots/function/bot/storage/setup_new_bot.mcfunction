@@ -15,6 +15,10 @@ $data modify storage sa_bots:bot_data bots[$(id)].settings set from storage sa_b
 #adopt activation state
 $data modify storage sa_bots:bot_data bots[$(id)].active set from storage sa_bots:bot_data bot_template.active
 
+#starting game variables
+$data modify storage sa_bots:bot_data bots[$(id)].game set from storage sa_bots:bot_data bot_template.game
+
+
 #adopt a random profile
 function sa_bots:bot/setup/profile/assign_random_profile
 $data modify storage sa_bots:bot_data bots[$(id)].profile set from storage sa_bots:bot_data profiles.get

@@ -3,6 +3,11 @@
 #we need to decide which class to pick
 
 
+#remember what our previous class was (if we have one!)
+execute if data storage sa_bots:bot_data this.class \
+    store result score #previous_class sab.var run data get storage sa_bots:bot_data this.class
+
+
 #if we are class-locked and already have a class, kick out
 execute if data storage sa_bots:bot_data this.class if data storage sa_bots:bot_data this.settings.class_choice{allow_class_change:0} \
     run return 0

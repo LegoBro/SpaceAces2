@@ -28,4 +28,7 @@ function sa_bots:setup/bots/default_bot_settings
 #team compositon
 function sa_bots:setup/bots/team_composition
 
+#bot starting gameplay variables
+function sa_bots:bot/storage/define_starting_game_variables
+
 #----------------------------

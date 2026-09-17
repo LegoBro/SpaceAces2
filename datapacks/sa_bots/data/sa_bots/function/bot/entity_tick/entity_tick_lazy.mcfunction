@@ -5,7 +5,9 @@
 
 #----------------------------
 #CLASS TICK
-function sa_bots:bot/class_logic/class_tick_index
+
+#directly run Space Aces functions
+function sa_bots:bot/class_logic/_class_tick_index
 #----------------------------
 
 

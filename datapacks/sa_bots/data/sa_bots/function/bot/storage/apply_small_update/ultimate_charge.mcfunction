@@ -1,0 +1,1 @@
+$execute store result storage sa_bots:bot_data bots[$(bot_i)].game.ultimate_charge int 1 run scoreboard players get #bot_update_ultimate_charge sab.var

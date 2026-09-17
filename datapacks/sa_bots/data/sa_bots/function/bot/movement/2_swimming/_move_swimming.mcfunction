@@ -4,6 +4,11 @@ scoreboard players set @s[scores={sab.botSkill=3..}] sab.botPose 1
 #standing if head is above water
 execute unless block ~ ~1 ~ water unless block ~ ~1 ~ #sa_bots:waterloggable[waterlogged=true] if block ~ ~1 ~ #sa_bots:not_solid run scoreboard players set @s sab.botPose 0
 
+#track how long we've been in each state
+scoreboard players set @s sab.airTime 0
+scoreboard players set @s sab.groundedTime 0
+scoreboard players add @s sab.swimmingTime 1
+
 #exit out if there's no movement target
 execute unless entity f-0-0-0-1 run return run function sa_bots:bot/movement/2_swimming/hold_still_in_water
 #=====
@@ -11,9 +16,9 @@ execute unless entity f-0-0-0-1 run return run function sa_bots:bot/movement/2_s
 
 #the angle between us and the movement target is the angle we're moving at
 
-#swimming pose: face target directly if not looking at anything else
+#swimming pose: face movement direction directly if not looking at anything else
 execute if score @s sab.botPose matches 1 unless score @s sab.botLookTime matches 1.. facing entity f-0-0-0-1 eyes run rotate @s ~ ~
-#standing pose: face target roughly
+#standing pose: face movement direction roughly
 execute if score @s sab.botPose matches 0 unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
 #try to look at target if we have one
 execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target

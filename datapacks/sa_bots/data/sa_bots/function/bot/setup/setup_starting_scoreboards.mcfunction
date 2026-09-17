@@ -4,8 +4,13 @@
 #gameplay scores
 scoreboard players set @s sab.botNavigationMode 0
 scoreboard players set @s sab.botLookTime 0
+scoreboard players set @s sab.botLookMode 0
 scoreboard players set @s sab.botWPSearchCooldown 0
+scoreboard players set @s sab.dUltimateCharge -1
 #...
+
+#inputs
+scoreboard players set @s sab.botRightClick10Hz -1
 
 #navigation
 scoreboard players set @s sab.botBestDistanceToTargetX 2147483647

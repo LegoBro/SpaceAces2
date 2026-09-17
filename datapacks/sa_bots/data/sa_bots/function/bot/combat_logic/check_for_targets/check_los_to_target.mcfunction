@@ -5,4 +5,4 @@ scoreboard players set #recursions sab.var 150
 tag @s remove sab.possibleTarget
 
 #start raycast
-execute positioned ^ ^ ^1 if block ~ ~ ~ #sa_bots:bot_sees_through run function sa_bots:bot/combat_logic/check_for_targets/check_los_to_target_recursive
+execute positioned ^ ^ ^1 run function sa_bots:bot/combat_logic/check_for_targets/check_los_to_target_recursive

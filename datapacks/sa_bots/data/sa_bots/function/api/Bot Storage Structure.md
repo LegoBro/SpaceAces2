@@ -31,6 +31,11 @@ bots[i].updateOrigin
 > Whether the data on "this" needs to be sent to origin
 
 
+## persistent game variables
+bots[i].game
+> bots[i].game.ultimate_charge
+
+
 ## settings
 bots[i].settings
 > See "function/setup/bots/default_bot_settings" for a full list of bot settings. This function also documents some stuff

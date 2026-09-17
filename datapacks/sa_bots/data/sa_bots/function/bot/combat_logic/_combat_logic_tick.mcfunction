@@ -5,6 +5,7 @@
 
 #count down time until we check LOS stuff
 scoreboard players remove @s sab.botCheckLOSTimer 2
+scoreboard players remove @s sab.botGlanceTime 2
 
 
 #check if we have a temporary task active
@@ -13,7 +14,7 @@ execute store result score #doing_temporary_task sab.var run execute if data ent
 #skill 5+: if we already have a target, but we find a more important target, change target
 execute if score #doing_temporary_task sab.var matches 1 unless score @s sab.botTargetEntityID matches 1.. run function sa_bots:bot/combat_logic/look_at_target/forget_target
 execute if score #doing_temporary_task sab.var matches 1 if score @s sab.botTargetEntityID matches 1.. \
-    if score @s sab.botCheckLOSTimer matches ..0 run function sa_bots:bot/combat_logic/check_for_targets/_check_with_existing_target
+    if score @s sab.botCheckLOSTimer matches ..0 positioned ~ ~1.25 ~ positioned ^ ^ ^22 run function sa_bots:bot/combat_logic/check_for_targets/_check_with_existing_target
 
 #no temporary task active: check for people we might want to shoot at
 #(using bot's current rotation)

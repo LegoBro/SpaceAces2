@@ -7,13 +7,13 @@ scoreboard objectives add sab.healthPercentage dummy
 #bots
 scoreboard objectives add sab.botID dummy
 scoreboard objectives add sab.botInstance dummy
-scoreboard objectives add sab.reEvaluateBehaviorTime dummy
 scoreboard objectives add sab.botSkill dummy
 scoreboard objectives add sab.botAggression dummy
 scoreboard objectives add sab.botCooperativeness dummy
 scoreboard objectives add sab.botTask dummy
 scoreboard objectives add sab.botNavigationMode dummy
 scoreboard objectives add sab.botLookTime dummy
+scoreboard objectives add sab.botLookMode dummy
 scoreboard objectives add sab.botMoveState dummy
 scoreboard objectives add sab.botMoveStateLastTick dummy
 scoreboard objectives add sab.botJumpCooldown dummy
@@ -35,6 +35,16 @@ scoreboard objectives add sab.botTargetAnglePitch100 dummy
 scoreboard objectives add sab.botTargetAngleDifferenceYaw dummy
 scoreboard objectives add sab.botTargetAngleDifferencePitch dummy
 scoreboard objectives add sab.botNavThinkTime dummy
+scoreboard objectives add sab.botRightClick10Hz dummy
+scoreboard objectives add sab.airTime dummy
+scoreboard objectives add sab.groundedTime dummy
+scoreboard objectives add sab.swimmingTime dummy
+scoreboard objectives add sab.dUltimateCharge dummy
+scoreboard objectives add sab.botTargetUUID0 dummy
+scoreboard objectives add sab.botTargetUUID1 dummy
+scoreboard objectives add sab.botTargetUUID2 dummy
+scoreboard objectives add sab.botTargetUUID3 dummy
+scoreboard objectives add sab.botGlanceTime dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

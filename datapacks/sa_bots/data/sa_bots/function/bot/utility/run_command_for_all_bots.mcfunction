@@ -1,5 +1,5 @@
 #this executes a command for every bot
-#not that this does nothing to execution context and does NOT run a command on a bot entity
+#note that this does nothing to execution context and does NOT run a command on a bot entity
 #we're purely dealing with storage, here
 
 #macro agrgument

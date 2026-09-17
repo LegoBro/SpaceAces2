@@ -13,6 +13,11 @@ execute unless score @s sab.botMoveStateLastTick matches 1 run function sa_bots:
 execute if entity @s[tag=sab.botJumpNextLedge] run tag @s add sab.botCoyoteJump
 tag @s[tag=sab.botJumpNextLedge] remove sab.botJumpNextLedge
 
+#track how long we've been in each state
+scoreboard players set @s sab.airTime 0
+scoreboard players add @s sab.groundedTime 1
+scoreboard players set @s sab.swimmingTime 0
+
 #exit out if there's no movement target
 execute unless entity f-0-0-0-1 run return 0
 #=====
@@ -20,7 +25,7 @@ execute unless entity f-0-0-0-1 run return 0
 
 #the angle between us and the movement target is the angle we're moving at
 
-#face target if not looking at anything else
+#face movement direction if not looking at anything else
 execute unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
 #try to look at target if we have one
 execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target
@@ -41,7 +46,7 @@ execute if score @s sab.botTimeSinceProgress matches 1.. at f-0-0-0-1 positioned
 execute if score @s sab.botTimeSinceProgress matches 2.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #minecraft:slabs[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
 
 #jump if we're stuck on something but could easily get over it
-execute if score @s sab.botTimeSinceProgress matches 3.. facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6 if block ~ ~1 ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tag @s add sab.botJump
+execute if entity @s[scores={sab.botTimeSinceProgress=3..,sab.groundedTime=11..}] facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6 if block ~ ~1 ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tag @s add sab.botJump
 
 #--------------------------
 #apply various multipliers to x and z velocity

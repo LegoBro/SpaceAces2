@@ -29,3 +29,5 @@ execute if entity @s[tag=turret_base] run tag @s add sab.possibleTargetCanShoot
 #count how many valid targets are found
 execute if entity @s[tag=sab.possibleTarget] run scoreboard players add #target_count sab.var 1
 execute if entity @s[tag=sab.possibleTargetSustainer] run scoreboard players add #target_count_sustainer sab.var 1
+tag @s[tag=sab.possibleTargetSeeOnly] add sab.possibleTarget
+execute if entity @s[tag=sab.possibleTargetSeeOnly] run scoreboard players add #target_count_see_only sab.var 1

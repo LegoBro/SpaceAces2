@@ -16,6 +16,7 @@ tag @s remove sab.self
 #keep track of how many targets we find
 scoreboard players set #target_count sab.var 0
 scoreboard players set #target_count_sustainer sab.var 0
+scoreboard players set #target_count_see_only sab.var 0
 
 #keep track of the lowest % health teammate we find
 scoreboard players set #lowest_percent_hp_teammate sab.var 100
