@@ -27,7 +27,7 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 8\
         },\
-        1:{\
+        "1":{\
             cooldown: 60,\
             duration: 20\
         },\
@@ -52,7 +52,7 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 30\
         },\
-        1:{\
+        "1":{\
             cooldown: 100,\
             duration: 100,\
             damage: 10,\
@@ -65,7 +65,7 @@ data merge storage space_aces:class {\
             explode_falloff: 7,\
             explode_falloffStart: 0\
         },\
-        2:{\
+        "2":{\
             cooldown: 200,\
             duration: 182\
         },\
@@ -88,7 +88,7 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 3\
         },\
-        1:{\
+        "1":{\
             maxDamage: 50,\
             falloff:  1,\
             falloffStart:  50,\
@@ -96,7 +96,7 @@ data merge storage space_aces:class {\
             critMult:  200,\
             charge_speed:  2\
         },\
-        2:{\
+        "2":{\
             cooldown:  100,\
             duration:  95,\
             damage:  5,\
@@ -141,11 +141,11 @@ data merge storage space_aces:class {\
             detonate_falloff: 5,\
             detonate_falloffStart: 0\
         },\
-        1:{\
+        "1":{\
             cooldown: 20,\
             duration: 10\
         },\
-        2:{\
+        "2":{\
             cooldown: 220,\
             duration: 100,\
             damage: 10,\
@@ -172,13 +172,13 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 15\
         },\
-        1:{\
+        "1":{\
             cooldown: 100,\
             duration: 80,\
             maxUses: 3,\
             damage: 15,\
         },\
-        2:{\
+        "2":{\
             cooldown: 200,\
             duration: 150\
         },\
@@ -211,11 +211,11 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 6\
         },\
-        1:{\
+        "1":{\
             cooldown: 200,\
             duration: 100\
         },\
-        2:{\
+        "2":{\
             cooldown: 100,\
             duration: 80,\
             damage: 10,\
@@ -247,7 +247,7 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 6\
         },\
-        1:{\
+        "1":{\
             cooldown: 60,\
             duration: 50,\
             critMult: 1,\
@@ -257,7 +257,7 @@ data merge storage space_aces:class {\
             falloff: 1,\
             falloffStart: 20,\
         },\
-        2:{\
+        "2":{\
             cooldown: 300,\
             duration: 250\
         },\
@@ -280,7 +280,7 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 80\
         },\
-        1:{\
+        "1":{\
             cooldown: 240,\
             duration: 200,\
             damage: 75,\
@@ -288,7 +288,7 @@ data merge storage space_aces:class {\
             falloff: 15,\
             falloffStart: 0,\
         },\
-        2:{\
+        "2":{\
             cooldown: 240,\
             duration: 200\
         },\
@@ -313,7 +313,7 @@ data merge storage space_aces:class {\
             falloffStart: 0,\
             speed: 0\
         },\
-        1:{\
+        "1":{\
             cooldown: 120,\
             duration: 115,\
             damage: 75,\
@@ -322,7 +322,7 @@ data merge storage space_aces:class {\
             falloffStart: 0,\
             jump_power: 20000\
         },\
-        2:{\
+        "2":{\
             cooldown: 150,\
             duration: 100,\
             damage: 10,\
@@ -352,7 +352,7 @@ data merge storage space_aces:class {\
             spreadX: 25,\
             spreadY: 25\
         },\
-        1:{\
+        "1":{\
             cooldown: 240,\
             duration: 240,\
             turret: {\
@@ -382,7 +382,7 @@ data merge storage space_aces:class {\
                 }\
             }\
         },\
-        2:{\
+        "2":{\
             cooldown: 300,\
             duration: 200,\
         },\
@@ -411,13 +411,13 @@ data merge storage space_aces:class {\
             fire_damage:10,\
             self_fire_damage:5,\
         },\
-        1:{\
+        "1":{\
             cooldown: 200,\
             duration: 100,\
             linger: 50,\
             critMult: 100,\
         },\
-        2:{\
+        "2":{\
             cooldown: 240,\
             duration: 200,\
             percent_for_second:10\
@@ -443,7 +443,7 @@ data merge storage space_aces:class {\
             impact_falloff: 10,\
             impact_falloffStart: 1\
         },\
-        1:{\
+        "1":{\
             cooldown: 80,\
             duration: 78,\
             damage: 65,\
@@ -451,7 +451,7 @@ data merge storage space_aces:class {\
             falloff: 10,\
             falloffStart: 3,\
         },\
-        2:{\
+        "2":{\
             cooldown: 240,\
             duration: 230,\
             health: 50,\
@@ -482,7 +482,7 @@ data merge storage space_aces:class {\
             speed: 0,\
             ammo: 30\
         },\
-        1:{\
+        "1":{\
             cooldown: 240,\
             duration: 200,\
             damage: 75,\
@@ -490,7 +490,7 @@ data merge storage space_aces:class {\
             falloff: 15,\
             falloffStart: 0,\
         },\
-        2:{\
+        "2":{\
             cooldown: 160,\
             duration: 158,\
             jump_power: 12000,\
@@ -522,12 +522,12 @@ data merge storage space_aces:class {\
             arcRate: 6,\
             ammo: 12\
         },\
-        1:{\
+        "1":{\
             cooldown: 200,\
             duration: 10,\
             damage_mult: 2\
         },\
-        2:{\
+        "2":{\
             cooldown: 100,\
             duration: 90,\
             health: 50,\
@@ -571,7 +571,7 @@ data merge storage space_aces:class {\
             explode_falloff: 10,\
             explode_falloffStart: 1,\
         },\
-        2:{\
+        "2":{\
             cooldown: 160,\
             duration: 157,\
             damage: 20,\

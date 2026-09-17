@@ -1,0 +1,1 @@
+function gamemode:comp/respawn/spectator

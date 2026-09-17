@@ -13,7 +13,7 @@ execute at @s unless block ~ ~ ~ air run tp @s ~ ~.25 ~
 scoreboard players operation #team Team = @s Team
 scoreboard players operation #id id = @s id
 scoreboard players operation damage Numbers = class.brawler.ultimate.damage Numbers
-execute as @e[type=#projectile:players,tag=sab.activePlayer] if score @s id = #id id run tag @s add target.owner
+execute as @e[type=#projectile:players,tag=hb] if score @s id = #id id run tag @s add target.owner
 
 execute as @a[scores={health=1..},distance=..4] at @s run function class:4/brawler/tornadic_disruption/pull_player
 execute as @e[type=!player,tag=!ignore,tag=!ignore.projectiles,tag=!tick.ignore,scores={health=1..},distance=..4] at @s run function class:4/brawler/tornadic_disruption/pull_entity
@@ -23,4 +23,4 @@ particle minecraft:sweep_attack ~ ~3 ~ 1 1 1 1 5 normal
 particle minecraft:sweep_attack ~ ~6 ~ 2 1 2 1 8 normal
 particle minecraft:sweep_attack ~ ~9 ~ 3 1 3 1 13 normal
 
-tag @e[type=#projectile:players,tag=sab.activePlayer] remove target.owner
+tag @e[type=#projectile:players,tag=hb] remove target.owner

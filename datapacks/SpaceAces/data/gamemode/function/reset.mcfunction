@@ -26,8 +26,8 @@ execute as @a[tag=stats,tag=escape,team=!red] if score time.minutes Numbers matc
 
 execute as @a[tag=stats,team=red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☒\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_damage"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_dmg_take"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_healing"},color:"green","type":"score"},{"text":"\n\n☓","font":"minecraft:stats","type":"text"}]
 
-execute as @a[tag=in_game] run function load:spawn
-tag @a[tag=in_game] remove in_game
+#execute as @a[tag=in_game] run function load:spawn
+#tag @a[tag=in_game] remove in_game
 tag @a[tag=escape] remove escape
 execute as @a[team=spectator] run function load:spawn
 bossbar set blue players

@@ -3,6 +3,6 @@ scoreboard players operation @s poison /= 100 Numbers
 
 scoreboard players operation @s damage += @s poison
 scoreboard players operation poison Numbers = @s poison
-execute as @e[type=#projectile:players,tag=sab.activePlayer] if score @s id = place_id id run scoreboard players operation @s game_damage += poison Numbers
+execute as @e[type=#projectile:players,tag=hb] if score @s id = place_id id run scoreboard players operation @s game_damage += poison Numbers
 scoreboard players set @s poison 0
 effect give @s slowness 2 1 true

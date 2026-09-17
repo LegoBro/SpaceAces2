@@ -4,6 +4,6 @@ execute if score @s i >= class.scientist.2.healing_rate Numbers run scoreboard p
 execute if score @s i matches 1.. run return 0
 
 particle minecraft:heart ~ ~1 ~ 0.4 0.4 0.4 0 1 force @a
-execute as @e[type=#projectile:players,tag=sab.activePlayer,distance=..5] if score @s Team = #target_team Numbers run tag @s add class.target
-scoreboard players operation @e[type=#projectile:players,tag=sab.activePlayer,tag=class.target] healing += class.scientist.2.healing_amount Numbers
-execute as @e[type=#projectile:players,tag=sab.activePlayer,tag=class.target] as @e[type=#projectile:players,tag=sab.activePlayer] if score @s id = #target_owner Numbers run scoreboard players operation @s game_healing += class.scientist.2.healing_amount Numbers
+execute as @e[type=#projectile:players,tag=hb,distance=..5] if score @s Team = #target_team Numbers run tag @s add class.target
+scoreboard players operation @e[type=#projectile:players,tag=hb,tag=class.target] healing += class.scientist.2.healing_amount Numbers
+execute as @e[type=#projectile:players,tag=hb,tag=class.target] as @e[type=#projectile:players,tag=hb] if score @s id = #target_owner Numbers run scoreboard players operation @s game_healing += class.scientist.2.healing_amount Numbers

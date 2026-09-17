@@ -25,5 +25,8 @@ Player or Mannequin NPC
 @e[type=marker,tag=weak_health_pack]
 @e[type=marker,tag=strong_health_pack]
 
-## To Do:
-Generalize gamemode rules (break down parts of gamemodes into data)
+## Gamemodes
+[See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
+
+## To do:
+Separate player specific class tick from general class tick

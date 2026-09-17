@@ -2,29 +2,12 @@
 
 execute store result score @s damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
 
-# Hitbox handling
-#tag @s[tag=hb_player,scores={crouching=1}] add hb_crouched_player
-#tag @s[tag=hb_player,scores={crouching=1}] remove hb_player
-#tag @s[tag=hb_crouched_player,scores={crouching=0}] remove hb_crouched_player
-#tag @s[tag=!hb_player,tag=!hb_crouched_player] add hb_player
-
-#Lobby for team selection
-execute if entity @s[x=3,y=195,z=-10,dx=11,dy=1,dz=15,tag=!awaiting,tag=!in_game] run function gamemode:new_player
-
-# Changes the way items display
-#function help:c5af7bf92237dfa52aeea9d27e400e4bcd6b3ed2e9d9b146a94fe228a7a3df67
-#effect give @s minecraft:haste infinite 100 true
-#effect give @s minecraft:weakness 1000000 100 true
-
 effect give @s minecraft:saturation infinite 0 true
 effect give @s minecraft:invisibility infinite 0 true
 
 # Fall into void damaging
 execute store result score @s ypos run data get entity @s Pos[1]
-scoreboard players add @s[gamemode=adventure,scores={ypos=..-10}] damage 100
-
-# prevents right clicking in Lobby (except (re)spawning)
-scoreboard players reset @s[x=8,y=200,z=8,distance=..250,nbt=!{SelectedItemSlot:8}] rightClick
+scoreboard players add @s[gamemode=!creative,gamemode=!spectator,scores={ypos=..-10}] damage 100
 
 # finds which class each player has, and links it's ability to them
 scoreboard players operation #Class_Start Team = @s Team
@@ -38,14 +21,6 @@ execute if entity @s[scores={over_heal=1..}] run function class:4/helper/effect/
 
 # Melee Timer
 scoreboard players remove @s[scores={melee.cooldown=1..}] melee.cooldown 1
-
-## Display for active effects:
-#item replace entity @s[scores={invis=1..}] hotbar.4 with minecraft:white_dye[minecraft:item_name={translate:"effect.invis"},minecraft:lore=[{translate: "effect.invis.lore"}]]
-#item replace entity @s[nbt={active_effects:[{id:"minecraft:glowing"}]}] hotbar.4 with minecraft:brown_dye[minecraft:item_name={translate:"effect.glowing"},minecraft:lore=[{translate:"effect.glowing.lore"}]]
-#item replace entity @s[nbt={active_effects:[{id:"minecraft:speed"}]}] hotbar.7 with minecraft:blue_dye[minecraft:item_name={translate:"effect.speed"},minecraft:lore=[{translate:"effect.speed.lore"}]]
-#item replace entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] hotbar.7 with minecraft:ink_sac[minecraft:item_name={translate:"effect.slowness"},minecraft:lore=[{translate:"effect.slowness.lore"}]]
-#item replace entity @s[nbt={active_effects:[{id:"minecraft:luck"}]}] hotbar.6 with minecraft:orange_dye[minecraft:item_name={translate:"effect.strength"},minecraft:lore=[{translate:"effect.strength.lore"}]]
-#item replace entity @s[scores={over_heal=1..}] hotbar.5 with minecraft:purple_dye[minecraft:item_name={translate:"effect.over_heal"},minecraft:lore=[{translate:"effect.over_heal.lore"}]]
 
 # tick for health
 function health:tick

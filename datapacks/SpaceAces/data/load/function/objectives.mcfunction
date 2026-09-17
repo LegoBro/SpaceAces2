@@ -6,6 +6,7 @@ scoreboard objectives add Numbers dummy
 scoreboard objectives add settings dummy
 
 scoreboard objectives add id dummy
+scoreboard objectives add owner dummy
 scoreboard objectives add xpos dummy
 scoreboard objectives add ypos dummy
 scoreboard objectives add zpos dummy
@@ -46,15 +47,15 @@ scoreboard objectives add size dummy
 scoreboard objectives add menu dummy
 
 # Player - Energy
-scoreboard objectives add energy food
+#scoreboard objectives add energy food
 scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
 
 # Player - Class
 scoreboard objectives add shoot dummy
 scoreboard objectives add totalShots dummy
-scoreboard objectives add activate_1 dummy
-scoreboard objectives add activate_2 dummy
-scoreboard objectives add activate_3 dummy
+#scoreboard objectives add activate_1 dummy
+#scoreboard objectives add activate_2 dummy
+#scoreboard objectives add activate_3 dummy
 scoreboard objectives add ability.1.cooldown dummy
 scoreboard objectives add ability.2.cooldown dummy
 scoreboard objectives add passive.cooldown dummy
