@@ -48,4 +48,4 @@ function sa_bots:bot/debug/_entity_debug_tick
 function sa_bots:bot/movement/_move_type_index
 
 #clean up move target
-kill f-0-0-0-1
+tp f-0-0-0-1 0 0 0

@@ -1,11 +1,11 @@
 #executed as f-0-0-0-1
 
 #normalize vector
-execute facing entity @s feet run tp @s ^ ^ ^0.0042 ~ ~
+execute facing entity @s feet positioned ^ ^ ^0.0042 if loaded ~ ~ ~ run tp @s ~ ~ ~ ~ ~
 
 #go straight up if we want to exit the water
 execute facing entity @s feet rotated ~ 0 unless block ^ ^ ^.6 #sa_bots:not_solid if block ^ ^2 ^.6 #sa_bots:not_solid \
-    rotated ~ -80 run tp @s ^ ^ ^0.0042 ~ ~
+    rotated ~ -80 positioned ^ ^ ^0.0042 if loaded ~ ~ ~ run tp @s ~ ~ ~ ~ ~
 
 
 #grab coordinates after being moved

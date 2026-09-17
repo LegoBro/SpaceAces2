@@ -9,8 +9,8 @@
 
 #look in a big area roughly corresponding to our field of view
 tag @s add sab.self
-execute if score @s sab.botSkill matches ..6 run tag @e[type=#projectile:has_hb,tag=hb,tag=entity,tag=!sab.self,tag=!standby_sticky_bomb,distance=..25] add sab.possibleTarget
-execute if score @s sab.botSkill matches 7.. run tag @e[type=#projectile:has_hb,tag=hb,tag=entity,tag=!sab.self,distance=..25] add sab.possibleTarget
+execute if score @s sab.botSkill matches ..6 run tag @e[type=#projectile:has_hb,tag=hb,tag=!sab.self,tag=!standby_sticky_bomb,distance=..25] add sab.possibleTarget
+execute if score @s sab.botSkill matches 7.. run tag @e[type=#projectile:has_hb,tag=hb,tag=!sab.self,distance=..25] add sab.possibleTarget
 tag @s remove sab.self
 
 #keep track of how many targets we find

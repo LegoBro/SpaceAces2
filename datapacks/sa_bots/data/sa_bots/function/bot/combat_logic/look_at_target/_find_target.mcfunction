@@ -5,8 +5,12 @@
 #track if the target was found
 scoreboard players set #found_target sab.var 0
 
-#remember what our skill level is
+#count up time since we had a LOS
+scoreboard players add @s sab.botTimeSinceLOS 2
+
+#remember important variables
 scoreboard players operation #skill sab.var = @s sab.botSkill
+scoreboard players operation #team sab.var = @s Team
 
 #remember how tall we are
 scoreboard players operation #eye_height sab.var = @s size

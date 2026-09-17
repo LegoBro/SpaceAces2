@@ -15,7 +15,7 @@ data modify storage sa_bots:team_composition root.roles[].count set value []
 data modify storage sa_bots:team_composition root.goals[].count set value []
 
 #count players
-execute as @a[tag=in_game] run function sa_bots:bot/setup/class/count_players
+execute as @a[tag=in_game,gamemode=adventure] run function sa_bots:bot/setup/class/count_players
 execute as @e[type=mannequin,tag=sab.botEntity] run function sa_bots:bot/setup/class/count_players
 
 #set various % thresholds that bots will use for logic

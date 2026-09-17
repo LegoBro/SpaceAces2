@@ -26,7 +26,7 @@ function sa_bots:setup/bots/profiles
 function sa_bots:setup/bots/default_bot_settings
 
 #team compositon
-function sa_bots:setup/bots/team_composition
+execute unless data storage sa_bots:team_composition root run function sa_bots:setup/bots/team_composition
 
 #bot starting gameplay variables
 function sa_bots:bot/storage/define_starting_game_variables

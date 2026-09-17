@@ -41,7 +41,6 @@ execute if score @s Team matches 2 run team join red
 #give hitbox and important tags
 tag @s add hb
 tag @s add hb_player
-tag @s add entity
 #(we will specify size in class setup functions)
 
 #we're a visible player that other bots can interact with

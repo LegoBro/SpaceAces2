@@ -15,3 +15,7 @@ execute if score @s Class matches 12 run return run function sa_bots:bot/class_l
 execute if score @s Class matches 13 run return run function sa_bots:bot/class_logic/13_seeker/think
 execute if score @s Class matches 14 run return run function sa_bots:bot/class_logic/14_shocksmith/think
 execute if score @s Class matches 15 run return run function sa_bots:bot/class_logic/15_rocketeer/think
+
+
+#temporary: use ultimate
+execute if entity @s[scores={ultimate_charge=1500..}] run scoreboard players set @s SelectedItem 4

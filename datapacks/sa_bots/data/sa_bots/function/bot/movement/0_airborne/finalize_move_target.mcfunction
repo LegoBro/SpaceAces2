@@ -2,7 +2,7 @@
 
 
 #normalize vector
-execute facing entity @s eyes rotated ~ 0 run tp @s ^ ^ ^0.002 ~ ~
+execute facing entity @s eyes rotated ~ 0 positioned ^ ^ ^0.002 if loaded ~ ~ ~ run tp @s ~ ~ ~ ~ ~
 
 
 #grab coordinates after being moved

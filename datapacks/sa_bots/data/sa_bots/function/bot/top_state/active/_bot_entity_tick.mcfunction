@@ -24,3 +24,6 @@ scoreboard players set #bot_exists sab.var 1
 
 #entity is allowed to continue existing for as long as this function is actively running
 scoreboard players set @s sab.lifespan 3
+
+#die if out of health
+execute if score @s health matches ..0 run function sa_bots:bot/top_state/active/die

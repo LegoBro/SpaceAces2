@@ -7,6 +7,9 @@ execute if score @s Team = #team sab.var run tag @s remove sab.possibleTarget
 #...except for injured teammates. try to heal them
 execute if score #shoot_teammates sab.var matches 1 if entity @s[tag=sab.activePlayer] if score @s Team = #team sab.var run function sa_bots:bot/combat_logic/check_for_targets/filter_possible_targets_teammate
 
+#can't see invisible enemies
+execute if score @s invis matches 1.. unless score @s Team = #team sab.var run tag @s remove sab.possibleTarget
+
 #must have a LOS to self
 execute if entity @s[tag=sab.possibleTarget] positioned ^ ^ ^-22 facing entity @s eyes run function sa_bots:bot/combat_logic/check_for_targets/check_los_to_target
 #lose healing target tag if no LOS to self

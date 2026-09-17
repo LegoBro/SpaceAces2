@@ -15,8 +15,10 @@ data modify storage sa_bots:generic profile set from storage sa_bots:bot_data th
 scoreboard players set #bot_spawn_mode sab.var 1
 #payload
 execute if score Gamemode settings matches 3 run scoreboard players set #bot_spawn_mode sab.var 2
+#execute if data storage space_aces:selected_gamemode gamemode{spawn:"team_payload"} run scoreboard players set #bot_spawn_mode sab.var 3
 #ffa
 execute if score Gamemode settings matches 9 run scoreboard players set #bot_spawn_mode sab.var 3
+#execute if data storage space_aces:selected_gamemode gamemode{spawn:"random"} run scoreboard players set #bot_spawn_mode sab.var 3
 #-----------------------------------
 
 #do something depending on how we're supposed to respawn the bot
