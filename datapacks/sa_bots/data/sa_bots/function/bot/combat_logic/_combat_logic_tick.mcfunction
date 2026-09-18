@@ -6,6 +6,7 @@
 #count down time until we check LOS stuff
 scoreboard players remove @s sab.botCheckLOSTimer 2
 scoreboard players remove @s sab.botGlanceTime 2
+scoreboard players remove @s sab.botReactionCountdown 2
 
 
 #check if we have a temporary task active

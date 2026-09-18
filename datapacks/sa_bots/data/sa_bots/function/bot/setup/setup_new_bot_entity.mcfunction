@@ -21,12 +21,17 @@ execute store result score @s sab.botCooperativeness run data get storage sa_bot
 #general variables
 function sa_bots:bot/setup/setup_starting_scoreboards
 
+#should we concerned about switching teams while alive?
+execute if score @s Team matches 1..2 if data storage sa_bots:bot_data this.settings.team_choice{wait_until_respawn_to_switch:0,bypass_team_restrictions:0,allow_team_change:1} run tag @s add sab.botMaySwitchTeams
+
 #decide what class we want to be
 scoreboard players set #previous_class sab.var -1
 function sa_bots:bot/setup/class/pick_class
 #... and adopt class variables
 function sa_bots:bot/setup/class/set_class_data
 
+#set some scores related to skill
+function sa_bots:bot/setup/set_skill_related_scores
 
 #check for nearby waypoints. follow nearest one if possible
 function sa_bots:bot/waypoint_nav/seek_nearby_waypoint

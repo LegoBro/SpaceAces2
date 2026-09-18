@@ -18,8 +18,8 @@ scoreboard players set @s sab.airTime 0
 scoreboard players add @s sab.groundedTime 1
 scoreboard players set @s sab.swimmingTime 0
 
-#exit out if there's no movement target
-execute unless entity f-0-0-0-1 run return 0
+#exit out if we didn't place a movement target
+execute if score #placed_movement_target sab.var matches 0 run return 0
 #=====
 
 
@@ -40,6 +40,11 @@ scoreboard players operation #z2 sab.var -= #z sab.var
 
 #check angle difference between movement vector and facing angle
 function sa_bots:bot/movement/find_difference_between_move_and_face_angle
+
+#if pause time > 0, stop moving for a moment
+execute if score @s sab.botPauseTime matches 1.. run \
+    return run function sa_bots:bot/movement/misc/temporary_pause
+#=====
 
 #jump if there's a passable 1-block high obstable in the way
 execute if score @s sab.botTimeSinceProgress matches 1.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #sa_bots:bot_no_jump[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump

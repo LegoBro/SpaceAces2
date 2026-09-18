@@ -4,6 +4,15 @@
 
 
 #----------------------------
+#SHOOTING / COMBAT
+
+#respond to "damage" score before it gets cleared in class:4/main
+execute if score @s damage matches 1.. run function sa_bots:bot/combat_logic/react/react_to_damage
+#----------------------------
+
+
+
+#----------------------------
 #CLASS TICK
 
 #translate sab.botRightClick10Hz into rightClick

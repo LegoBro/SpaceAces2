@@ -7,6 +7,7 @@ execute if data storage sa_bots:bot_data this{updateOrigin:1} run function sa_bo
 
 #every 2 seconds, we will gather information for all players (player count, classes, etc)
 execute if score #2sec sab.var matches 33 run function sa_bots:bot/setup/class/_run_all_counts
+execute if score #2sec sab.var matches 33 run function sa_bots:bot/utility/count_players_and_bots_on_red_and_blue
 
 #iterate through all bots and make them do something
 data modify storage sa_bots:generic bot_i set value 0

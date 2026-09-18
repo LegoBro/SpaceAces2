@@ -43,6 +43,8 @@ execute as @e[scores={sab.lifespan=-2147483648..2147483647}] at @s run function 
 #------------------------------
 
 #debug, play game
-execute as @a[tag=sab.testGame] at @s if score @s health matches ..0 run tp @s @e[type=marker,limit=1,sort=random,distance=..200,tag=blue_spawn_point]
+execute as @a[tag=sab.testGame,scores={Team=3..}] at @s if score @s health matches ..0 run tp @s @e[type=marker,limit=1,sort=random,distance=..200,tag=general_spawn_point]
+execute as @a[tag=sab.testGame,scores={Team=1}] at @s if score @s health matches ..0 run tp @s @e[type=marker,limit=1,sort=random,distance=..200,tag=blue_spawn_point]
+execute as @a[tag=sab.testGame,scores={Team=2}] at @s if score @s health matches ..0 run tp @s @e[type=marker,limit=1,sort=random,distance=..200,tag=red_spawn_point]
 execute as @a[tag=sab.testGame] at @s if score @s health matches ..0 store result score @s Class run random value 1..15
 execute as @a[tag=sab.testGame] at @s if score @s health matches ..0 run function class:reselect

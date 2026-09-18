@@ -3,6 +3,9 @@
 #sa_bots:bot_data this = the storage associated with this bot
 
 
+#keep track of whether we have an active movement target
+scoreboard players set #placed_movement_target sab.var 0
+
 #are we running a regular tick or a lazy tick?
 #determine based on
 #1) whether our id is even or odd

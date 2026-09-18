@@ -45,6 +45,8 @@ scoreboard objectives add sab.botTargetUUID1 dummy
 scoreboard objectives add sab.botTargetUUID2 dummy
 scoreboard objectives add sab.botTargetUUID3 dummy
 scoreboard objectives add sab.botGlanceTime dummy
+scoreboard objectives add sab.botPauseTime dummy
+scoreboard objectives add sab.lockedOntoEnemy dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

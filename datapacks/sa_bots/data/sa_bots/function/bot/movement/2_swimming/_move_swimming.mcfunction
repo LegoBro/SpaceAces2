@@ -9,8 +9,8 @@ scoreboard players set @s sab.airTime 0
 scoreboard players set @s sab.groundedTime 0
 scoreboard players add @s sab.swimmingTime 1
 
-#exit out if there's no movement target
-execute unless entity f-0-0-0-1 run return run function sa_bots:bot/movement/2_swimming/hold_still_in_water
+#exit out if we didn't place a movement target
+execute if score #placed_movement_target sab.var matches 0 run return run function sa_bots:bot/movement/2_swimming/hold_still_in_water
 #=====
 
 
@@ -40,6 +40,11 @@ execute unless score @s sab.botAngleDiffMoveAndFace matches -45..45 run scoreboa
 #set pose
 execute if score @s sab.botPose matches 0 run data modify entity @s pose set value standing
 execute if score @s sab.botPose matches 1 run data modify entity @s pose set value swimming
+
+#if pause time > 0, stop moving for a moment
+execute if score @s sab.botPauseTime matches 1.. run \
+    return run function sa_bots:bot/movement/misc/temporary_pause
+#=====
 
 #increase velocity when in the swimming pose
 execute if score @s sab.botPose matches 1 run function sa_bots:bot/movement/2_swimming/swim_pose_velocity_multiplier

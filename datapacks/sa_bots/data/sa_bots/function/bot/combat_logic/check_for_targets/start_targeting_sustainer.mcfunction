@@ -3,5 +3,13 @@ execute at @s as @e[type=#projectile:has_hb,limit=1,sort=nearest,tag=sab.possibl
     run function sa_bots:bot/combat_logic/check_for_targets/fetch_target_id
 
 
+#don't update tags unless we found a target
+execute unless score #get_id sab.var matches 1.. run return fail
+#====
+
+
 #remember that we're targeting an enemy sustainer
-execute if score #get_id sab.var matches 1.. run tag @s add sab.botShootingEnemySustainer
+tag @s add sab.botShootingEnemySustainer
+
+#clear old tags
+tag @s remove sab.botShootingFriendlyPlayer

@@ -7,8 +7,8 @@ scoreboard players add @s sab.airTime 1
 scoreboard players set @s sab.groundedTime 0
 scoreboard players set @s sab.swimmingTime 0
 
-#exit out if there's no movement target
-execute unless entity f-0-0-0-1 run return 0
+#exit out if we didn't place a movement target
+execute if score #placed_movement_target sab.var matches 0 run return 0
 #=====
 
 

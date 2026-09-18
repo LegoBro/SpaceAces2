@@ -29,7 +29,7 @@ scoreboard players remove @s[scores={sab.botLookTime=1..}] sab.botLookTime 1
 scoreboard players remove @s[scores={sab.botIgnoreAimTime=1..}] sab.botIgnoreAimTime 1
 
 #crouch time
-scoreboard players remove @s[scores={sab.botCrouchTime=1..}] sab.botCrouchTime 1
+execute if score @s sab.botCrouchTime matches 1.. run function sa_bots:bot/movement/misc/crouch
 
 #sprinting time
 scoreboard players remove @s[scores={sab.botIsSprinting=1..}] sab.botIsSprinting 1

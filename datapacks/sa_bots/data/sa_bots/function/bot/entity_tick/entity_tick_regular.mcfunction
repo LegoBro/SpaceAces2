@@ -18,6 +18,9 @@ function sa_bots:bot/entity_task/_task_tick_index
 #----------------------------
 #SHOOTING / COMBAT
 
+#respond to "damage" score before it gets cleared in class:4/main
+execute if score @s damage matches 1.. run function sa_bots:bot/combat_logic/react/react_to_damage
+
 #combat logic
 function sa_bots:bot/combat_logic/_combat_logic_tick
 
@@ -46,4 +49,13 @@ execute unless score @s sab.dUltimateCharge = @s ultimate_charge run function sa
 #----------------------------
 #MOVEMENT
 function sa_bots:bot/movement/_movement_main
+#----------------------------
+
+
+
+#----------------------------
+#GAME IN/OUT
+
+#once every 2 seconds, evaluate whether we should switch teams 
+execute if score #2sec sab.var matches 33..34 if entity @s[tag=sab.botMaySwitchTeams] run function sa_bots:bot/setup/team/red_vs_blue/entity_consider_switching_teams
 #----------------------------
