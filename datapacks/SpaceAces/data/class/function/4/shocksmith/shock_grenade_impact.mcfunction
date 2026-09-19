@@ -1,4 +1,4 @@
-particle minecraft:block{block_state:{Name:"minecraft:yellow_concrete_powder"}} ~ ~1 ~ 2 2 2 1 50 force @a
+particle minecraft:block{block_state:{id:"minecraft:yellow_concrete_powder"}} ~ ~1 ~ 2 2 2 1 50 force @a
 playsound minecraft:item.trident.thunder player @a ~ ~ ~ 0.2 2.0
 
 scoreboard players operation #healing Numbers = class.shocksmith.secondary.explode_healing Numbers

@@ -30,3 +30,4 @@ Player or Mannequin NPC
 
 ## To do:
 Separate player specific class tick from general class tick
+Blindness Variable

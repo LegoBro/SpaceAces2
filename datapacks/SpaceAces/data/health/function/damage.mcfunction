@@ -28,7 +28,7 @@ execute at @s if score @s damage matches 1..49 run playsound minecraft:entity.ge
 execute at @s if score @s damage matches 50.. run playsound minecraft:entity.generic.hurt player @a ~ ~ ~ 1 .5 0
 scoreboard players set @s damage 0
 
-#execute positioned ~ ~1.6 ~ run particle minecraft:block{block_state:{Name:"minecraft:blue_stained_glass"}} ^ ^ ^.3 0.1 0.1 0.1 0 1 force @s
+#execute positioned ~ ~1.6 ~ run particle minecraft:block{block_state:{id:"minecraft:blue_stained_glass"}} ^ ^ ^.3 0.1 0.1 0.1 0 1 force @s
 
 #Display Health
 scoreboard players operation @s[tag=!entity] displayHealth = @s health

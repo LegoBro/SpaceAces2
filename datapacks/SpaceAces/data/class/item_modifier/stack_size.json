@@ -1,15 +1,12 @@
-[
-  {
-    "function": "minecraft:set_count",
-    "count": {
-      "type": "minecraft:score",
-      "target": {
-        "type": "minecraft:fixed",
-        "name": "#stack_input"
-      },
-      "score": "Numbers",
-      "scale": 1
+{
+  "type": "minecraft:set_count",
+  "count": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:fixed",
+      "name": "#stack_input"
     },
-    "add": false
-  }
-]
+    "score": "Numbers"
+  },
+  "add": false
+}

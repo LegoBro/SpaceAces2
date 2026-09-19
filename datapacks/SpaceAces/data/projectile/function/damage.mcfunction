@@ -10,7 +10,7 @@ execute at @n[tag=projectile.target,distance=..3] run function projectile:hit
 execute if entity @s[tag=projectile.piercing] run tag @n[tag=projectile.target] add projectile.piercing.ignore
 tag @n[tag=projectile.target] remove projectile.target
 
-execute as @a if score @s id = place_id id at @s run function projectile:hit_indicator
+execute as @e[type=#projectile:players,tag=hb] if score @s id = place_id id at @s run function projectile:hit_indicator
 tag @s[tag=grenade] add impact
 tag @s[tag=grenade] add projectile.impact.hitbox
 tag @s[tag=!projectile.piercing] add kill

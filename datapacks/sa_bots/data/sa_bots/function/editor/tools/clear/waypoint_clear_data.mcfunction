@@ -13,7 +13,7 @@ execute if entity @a[tag=sab.usedEditTool,tag=!sab.noClearTags] run function sa_
 
 
 #feedback
-particle block{block_state:{Name:"magenta_concrete"}} ~ ~.25 ~ 0.3 0.3 0.3 1 20 force
+particle block{block_state:{id:"magenta_concrete"}} ~ ~.25 ~ 0.3 0.3 0.3 1 20 force
 particle cloud ~ ~.25 ~ 0.25 0.25 0.25 0.05 5 force
 playsound ui.cartography_table.take_result master @a ~ ~ ~ 1 1.5
 
