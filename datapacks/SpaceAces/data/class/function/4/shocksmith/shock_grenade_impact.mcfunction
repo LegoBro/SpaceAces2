@@ -8,6 +8,7 @@ scoreboard players operation #falloff Numbers = class.shocksmith.secondary.explo
 scoreboard players operation #falloffStart Numbers = class.shocksmith.secondary.explode_falloffStart Numbers
 
 scoreboard players operation place_id id = @s id
+function class:4/helper/tag_team
 execute positioned ^ ^ ^-0.5 as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..5,tag=!ignore,tag=!ignore.projectiles] feet run function projectile:boomer/create
 execute positioned ^ ^ ^-0.5 as @e[type=#projectile:players,tag=hb,distance=..3] if score @s id = place_id id run function class:4/shocksmith/secondary/self_heal
 return 1

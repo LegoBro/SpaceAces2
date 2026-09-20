@@ -8,5 +8,6 @@ scoreboard players operation #falloff Numbers = class.gunner.ultimate.explode_fa
 scoreboard players operation #falloffStart Numbers = class.gunner.ultimate.explode_falloffStart Numbers
 
 scoreboard players operation place_id id = @s id
-execute positioned ^ ^ ^-0.5 as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..5,tag=!ignore,tag=!ignore.projectiles] feet run function projectile:boomer/create
+function class:4/helper/tag_team
+execute positioned ^ ^ ^-0.5 as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..5,tag=!ignore,tag=!ignore.projectiles,tag=!is_on_team] feet run function projectile:boomer/create
 return 1

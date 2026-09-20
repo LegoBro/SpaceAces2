@@ -1,6 +1,7 @@
 #particle flame ^ ^ ^3
 #say flame?
 scoreboard players operation @s id = place_id id
+scoreboard players operation @s Team = #team Team
 
 scoreboard players operation @s healing = #healing Numbers
 scoreboard players operation @s damage = #damage Numbers
@@ -12,9 +13,6 @@ scoreboard players operation @s damageMultiplier = #damageMultiplier Numbers
 execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier
 
 scoreboard players operation @s j = @s speed
-
-#tellraw @a ["damage:",{score:{name:"@s",objective:"damage"}}]
-#tellraw @a ["critMult:",{score:{name:"@s",objective:"critMult"}}]
 
 function projectile:ray
 return 1

@@ -10,7 +10,8 @@ scoreboard players operation #team Team = @s Team
 
 scoreboard players operation place_id id = @s id
 execute as @e[type=#projectile:players,tag=hb] if score place_id id = @s id run tag @s add attacker
-execute positioned ~ ~-1 ~ as @e[distance=..1.5,tag=!ignore,tag=!ignore.projectiles] unless score @s Team = #team Team run function projectile:boomer/damage_near
+function class:4/helper/tag_team
+execute positioned ~ ~-1 ~ as @e[distance=..1.5,tag=!ignore,tag=!ignore.projectiles,tag=!is_on_team] unless score @s Team = #team Team run function projectile:boomer/damage_near
 tag @e[type=#projectile:players,tag=hb] remove attacker
 
 execute if score @s i matches 150.. run return run kill @s

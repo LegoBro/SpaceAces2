@@ -41,9 +41,8 @@ data modify storage help:data safe_nbt_interpret.ult set from storage player:act
 data modify storage help:data safe_nbt_interpret.ult.0 set value "ult_null"
 data modify storage help:data safe_nbt_interpret.ult.0 set from storage player:actionbar ult
 
-
 ## Final Actionbar
-return run title @a[distance=0] actionbar [\
+return run title @s actionbar [\
     {"translate":"space.-118","with":[""]},\
     {"nbt":"text","storage":"health:bar","interpret":true,"source":"storage","type":"nbt"},\
     {"translate":"space.-108","with":[""]},\
@@ -62,24 +61,3 @@ return run title @a[distance=0] actionbar [\
     {"nbt":"safe_nbt_interpret.ult","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
     {"nbt":"safe_nbt_interpret.ult.0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"}\
 ]
-
-## Final Actionbar
-#return run title @s actionbar [\
-    #{"translate":"space.-118","with":[""]},\
-    #{"nbt":"text","storage":"health:bar","source":"storage","type":"nbt"},\
-    #{"translate":"space.-108","with":[""]},\
-    #{"nbt":"safe_nbt_interpret.v0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"nbt":"safe_nbt_interpret.v0.0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"translate":"space.-4","with":[""]},\
-    #{"nbt":"safe_nbt_interpret.v1","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"nbt":"safe_nbt_interpret.v1.0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"translate":"space.27","with":[""]},\
-    #{"nbt":"safe_nbt_interpret.v2","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"nbt":"safe_nbt_interpret.v2.0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"translate":"space.9","with":[""]},\
-    #{"nbt":"safe_nbt_interpret.v3","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"nbt":"safe_nbt_interpret.v3.0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"translate":"space.30","with":[""]},\
-    #{"nbt":"safe_nbt_interpret.ult","storage":"help:data","interpret":true,"source":"storage","type":"nbt"},\
-    #{"nbt":"safe_nbt_interpret.ult.0","storage":"help:data","interpret":true,"source":"storage","type":"nbt"}\
-#]
