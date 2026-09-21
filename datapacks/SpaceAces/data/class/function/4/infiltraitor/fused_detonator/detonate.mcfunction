@@ -9,6 +9,6 @@ scoreboard players operation #falloffStart Numbers = class.infiltraitor.2.detona
 tag @s add ignore.projectiles
 scoreboard players operation place_id id = @s id
 function class:4/helper/tag_team
-execute positioned ~ ~ ~ as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..8,tag=!ignore,tag=!ignore.projectiles,tag=!is_on_team] feet positioned ^ ^ ^ run function projectile:boomer/create
+execute positioned ~ ~ ~ as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..8,tag=hb,tag=!is_on_team] feet positioned ^ ^ ^ run function projectile:boomer/create
 kill @s
 return 1

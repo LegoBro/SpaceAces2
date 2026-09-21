@@ -15,9 +15,11 @@ execute store result score class.mobility.1.cooldown Numbers run data get storag
 execute store result score class.mobility.1.duration Numbers run data get storage space_aces:class mobility.1.duration
 execute store result score class.mobility.1.maxUses Numbers run data get storage space_aces:class mobility.1.maxUses
 execute store result score class.mobility.1.damage Numbers run data get storage space_aces:class mobility.1.damage
+execute store result score class.mobility.1.travel_distance Numbers run data get storage space_aces:class mobility.1.travel_distance 2
 
 execute store result score class.mobility.2.cooldown Numbers run data get storage space_aces:class mobility.2.cooldown
 execute store result score class.mobility.2.duration Numbers run data get storage space_aces:class mobility.2.duration
+execute store result score class.mobility.2.blindness_length Numbers run data get storage space_aces:class mobility.2.blindness_length
 
 execute store result score class.mobility.ultimate.charge Numbers run data get storage space_aces:class mobility.ultimate.charge
 execute store result score class.mobility.ultimate.duration Numbers run data get storage space_aces:class mobility.ultimate.duration 20

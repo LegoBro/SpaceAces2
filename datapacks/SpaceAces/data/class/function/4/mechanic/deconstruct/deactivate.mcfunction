@@ -9,6 +9,6 @@ scoreboard players operation #falloffStart Numbers = class.mechanic.2.explode_fa
 
 scoreboard players operation place_id id = @s id
 function class:4/helper/tag_team
-execute positioned ~ ~1 ~ as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..10,tag=!ignore,tag=!ignore.projectiles,tag=!is_on_team] feet run function projectile:boomer/create
+execute positioned ~ ~1 ~ as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..10,tag=hb,tag=!is_on_team] feet run function projectile:boomer/create
 
 return 1

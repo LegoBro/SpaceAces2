@@ -10,8 +10,8 @@ scoreboard players operation #team Team = @s Team
 scoreboard players operation place_id id = @s id
 tag @s add attacker
 function class:4/helper/tag_team
-execute facing entity @e[distance=1..6,tag=!ignore,tag=!ignore.projectiles,tag=!is_on_team] feet positioned ^ ^ ^ run function projectile:boomer/create
-execute as @e[distance=..0.999,tag=!ignore,tag=!ignore.projectiles,tag=!is_on_team] unless score @s Team = #team Team run function projectile:boomer/damage_near
+execute facing entity @e[distance=1..6,tag=hb,tag=!is_on_team] feet positioned ^ ^ ^ run function projectile:boomer/create
+execute as @e[distance=..0.999,tag=hb,tag=!is_on_team] unless score @s Team = #team Team run function projectile:boomer/damage_near
 tag @s remove attacker
 
 tag @s remove class.brawler.land

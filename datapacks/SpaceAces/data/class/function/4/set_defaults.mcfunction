@@ -177,10 +177,12 @@ data merge storage space_aces:class {\
             duration: 80,\
             maxUses: 3,\
             damage: 15,\
+            travel_distance: 8,\
         },\
         "2":{\
             cooldown: 200,\
-            duration: 150\
+            duration: 150,\
+            blindness_length: 100,\
         },\
         ultimate:{\
             charge: 1300,\

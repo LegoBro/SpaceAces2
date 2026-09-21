@@ -17,6 +17,6 @@ tag @s remove maxless
 tag @s remove resist
 tag @s remove invulnerable
 scoreboard players reset @s fire
-scoreboard players set @s displayHealth 9
+scoreboard players set @s displayHealth 100
 
 return 1

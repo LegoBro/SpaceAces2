@@ -1,6 +1,9 @@
+# Invulnerable
 tag @s add invulnerable
 scoreboard players remove @s invulnerable 1
-tag @s[scores={invulnerable=..0}] remove invulnerable
-scoreboard players reset @s[scores={invulnerable=..0}] invulnerable
+execute if score @s invulnerable matches 1.. run return 0
+## Reset
+tag @s remove invulnerable
+scoreboard players reset @s invulnerable
 
 return 1

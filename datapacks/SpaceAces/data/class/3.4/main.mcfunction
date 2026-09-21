@@ -60,14 +60,14 @@ execute if score @s 2xdamage matches 1.. run function health:damage
 execute if score @s damage matches 1.. run function health:damage
 execute if score @s healing matches 1.. run function health:heal
 
-scoreboard players add @s[scores={displayHealth=..2}] lowHealth 1
-scoreboard players add @s[scores={displayHealth=..1,lowHealth=..39}] lowHealth 1
-scoreboard players add @s[scores={displayHealth=..0,lowHealth=..39}] lowHealth 1
+scoreboard players add @s[scores={displayHealth=..25}] lowHealth 1
+scoreboard players add @s[scores={displayHealth=..15,lowHealth=..39}] lowHealth 1
+scoreboard players add @s[scores={displayHealth=..9,lowHealth=..39}] lowHealth 1
 # Low health "heart-beat"
 execute if score @s lowHealth matches 40 run playsound minecraft:block.note_block.basedrum player @a ~ ~ ~ 1 1.5 0
 execute if score @s lowHealth matches 43 run playsound minecraft:block.note_block.basedrum player @a ~ ~ ~ 1 1.75 0
 execute if score @s lowHealth matches 1.. unless score @s lowHealth matches ..44 run scoreboard players reset @s lowHealth
-execute if score @s lowHealth matches 1.. unless score @s displayHealth matches ..2 run scoreboard players reset @s lowHealth
+execute if score @s lowHealth matches 1.. unless score @s displayHealth matches ..25 run scoreboard players reset @s lowHealth
 
 # finds which class each player has, and links it's ability to them
 execute if entity @s[scores={Class=1..}] at @s run function class:finder

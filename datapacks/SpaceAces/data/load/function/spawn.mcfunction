@@ -9,7 +9,7 @@ scoreboard players set @s ability.1.cooldown 0
 scoreboard players set @s ability.2.cooldown 0
 scoreboard players set @s crouching 0
 scoreboard players set @s health 150
-scoreboard players set @s displayHealth 10
+scoreboard players set @s displayHealth 100
 execute unless score @s id matches 0.. run tag @s add newb
 execute unless score @s id matches 0.. run scoreboard players add Player_Amount Numbers 1
 execute unless score @s id matches 0.. run scoreboard players operation @s id = Player_Amount Numbers

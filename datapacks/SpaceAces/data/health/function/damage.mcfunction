@@ -32,8 +32,7 @@ scoreboard players set @s damage 0
 
 #Display Health
 scoreboard players operation @s[tag=!entity] displayHealth = @s health
-scoreboard players operation @s[tag=!entity] displayHealth -= 2 Numbers
-scoreboard players operation @s[tag=!entity] displayHealth *= 10 Numbers
+scoreboard players operation @s[tag=!entity] displayHealth *= 100 Numbers
 scoreboard players operation @s[tag=!entity] displayHealth /= @s maxHealth
 
 #Armor

@@ -17,8 +17,7 @@ execute if score @s healing matches 1.. run scoreboard players set @s healing 0
 
 #Display Health
 scoreboard players operation @s displayHealth = @s health
-scoreboard players operation @s displayHealth -= 2 Numbers
-scoreboard players operation @s displayHealth *= 10 Numbers
+scoreboard players operation @s displayHealth *= 100 Numbers
 scoreboard players operation @s displayHealth /= @s maxHealth
 
 

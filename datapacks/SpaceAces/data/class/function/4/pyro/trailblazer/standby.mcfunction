@@ -2,7 +2,7 @@
 particle minecraft:flame ~ ~ ~ 0.01 1.5 0.01 0.001 5
 scoreboard players operation place_id id = @s id
 scoreboard players operation Team Team = @s Team
-execute as @e[distance=..1,tag=!ignore,tag=!ignore.projectiles] unless score @s Team = Team Team run function class:4/pyro/fire_bomb/damage
+execute as @e[distance=..1,tag=hb] unless score @s Team = Team Team run function class:4/pyro/fire_bomb/damage
 execute as @e[type=#projectile:players,tag=hb,distance=..1] if score @s id = place_id id run function class:4/pyro/fire_bomb/damage
 scoreboard players add @s i 1
 tp @s ~ ~ ~ ~5 ~

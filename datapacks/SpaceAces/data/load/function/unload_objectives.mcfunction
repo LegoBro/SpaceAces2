@@ -80,3 +80,5 @@ scoreboard players reset * xpos
 scoreboard players reset * ypos
 scoreboard players reset * zpos
 
+scoreboard players reset * blindness
+

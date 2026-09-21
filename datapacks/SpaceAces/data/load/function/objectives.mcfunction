@@ -29,13 +29,14 @@ scoreboard objectives add invis dummy
 scoreboard objectives add resist dummy
 scoreboard objectives add over_heal dummy
 scoreboard objectives add invulnerable dummy
+scoreboard objectives add blindness dummy
 
 # Player
 scoreboard objectives add Class dummy
 scoreboard objectives add Team dummy
 scoreboard objectives add rightClick minecraft.used:carrot_on_a_stick
 scoreboard objectives add reload minecraft.dropped:carrot_on_a_stick
-scoreboard objectives add displayHealth dummy
+scoreboard objectives add displayHealth dummy "%"
 scoreboard objectives add crouching custom:sneak_time
 scoreboard objectives add worm_hole trigger
 scoreboard objectives add console trigger
