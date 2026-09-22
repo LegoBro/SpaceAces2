@@ -32,4 +32,5 @@ execute if score #get_id sab.var matches -1 run return fail
 #target the person that shot us
 tag @s remove sab.botShootingFriendlyPlayer
 scoreboard players set #enemy_shoots_back sab.var 1
+scoreboard players set #target_is_teammate sab.var 0
 function sa_bots:bot/combat_logic/check_for_targets/adopt_shoot_target

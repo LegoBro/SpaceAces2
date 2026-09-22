@@ -36,7 +36,6 @@ execute if score @s Class matches 15 run function class:4/rocketeer/equip
 
 #some classes may want to target teammates for some abilities
 execute if score @s Class matches 6 run tag @s add sab.botMayShootTeammates
-execute if score @s Class matches 14 run tag @s add sab.botMayShootTeammates
 
 #some classes may tweak aggression or cooperativeness when at skill 4+
 execute if score @s sab.botSkill matches 4.. run function sa_bots:bot/setup/class/set_class_behavior_adjustments

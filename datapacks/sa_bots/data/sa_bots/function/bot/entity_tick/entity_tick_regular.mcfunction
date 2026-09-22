@@ -18,6 +18,9 @@ function sa_bots:bot/entity_task/_task_tick_index
 #----------------------------
 #SHOOTING / COMBAT
 
+#figure out how long we've been alive
+scoreboard players add @s sab.botLifetime 2
+
 #respond to "damage" score before it gets cleared in class:4/main
 execute if score @s damage matches 1.. run function sa_bots:bot/combat_logic/react/react_to_damage
 
@@ -48,7 +51,12 @@ execute unless score @s sab.dUltimateCharge = @s ultimate_charge run function sa
 
 #----------------------------
 #MOVEMENT
+
+#movement tick
 function sa_bots:bot/movement/_movement_main
+
+#set inputs for Space Aces depending on how we moved
+function sa_bots:bot/movement/set_input_tags
 #----------------------------
 
 

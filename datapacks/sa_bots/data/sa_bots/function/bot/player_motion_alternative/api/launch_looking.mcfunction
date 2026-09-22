@@ -1,0 +1,2 @@
+execute store result storage sa_bots:generic strength double 0.00001 run scoreboard players get $strength player_motion.api.launch
+function sa_bots:bot/player_motion_alternative/apply_motion_vector with storage sa_bots:generic

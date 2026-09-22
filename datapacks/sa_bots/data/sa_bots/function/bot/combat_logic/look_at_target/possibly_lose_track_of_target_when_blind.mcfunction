@@ -1,9 +1,9 @@
-#executed by a bot when looking at an invisible enemy
+#executed by a bot when looking at a target while blind
 #executed at 10Hz
 
 
 #pick random number (rolling a 0 or less means we forget)
-execute store result score #random sab.var run random value 0..35
+execute store result score #random sab.var run random value -10..35
 #less likely to forget at high skill level
 scoreboard players operation #random sab.var += #skill sab.var
 scoreboard players operation #random sab.var += #skill sab.var

@@ -4,7 +4,10 @@
 #count down time until we search for waypoints again
 scoreboard players remove @s sab.botWPSearchCooldown 1
 
-#always making progress (set to 2 to make jumps in movement/1_grounded)
+#count how long we've been roaming
+scoreboard players add @s sab.botRoamTime 1
+
+#tell ourselves we're making progress, even though that's probably a lie (set to 2 to make jumps in movement/1_grounded)
 scoreboard players set @s sab.botTimeSinceProgress 2
 
 #check for nearby waypoints

@@ -8,6 +8,10 @@ scoreboard players remove @s sab.botCheckLOSTimer 2
 scoreboard players remove @s sab.botGlanceTime 2
 scoreboard players remove @s sab.botReactionCountdown 2
 
+#deal with blindness
+execute store result score #blindness sab.var run execute if score @s blindness matches 1..
+execute if entity @s[scores={blindness=1..,sab.botCheckLOSTimer=..4}] store result score @s sab.botCheckLOSTimer run random value 5..10
+
 
 #check if we have a temporary task active
 execute store result score #doing_temporary_task sab.var run execute if data entity @s data.tasks[0].flags{is_base_task:0}

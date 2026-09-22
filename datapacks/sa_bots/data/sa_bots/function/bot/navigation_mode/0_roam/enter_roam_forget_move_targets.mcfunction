@@ -9,3 +9,4 @@ data modify entity @s data.move_targets set value []
 
 #set state
 scoreboard players set @s sab.botNavigationMode 0
+scoreboard players set @s sab.botRoamTime 0

@@ -3,6 +3,8 @@
 
 #are we something that can shoot? report that
 execute store result score #enemy_shoots_back sab.var run execute if entity @s[tag=sab.possibleTargetCanShoot]
+#are we a teammate? report that
+execute store result score #target_is_teammate sab.var run execute if score @s Team = #team sab.var
 
 #assign a target id if we don't already have one
 #(this is purely for linking the bot and its target)

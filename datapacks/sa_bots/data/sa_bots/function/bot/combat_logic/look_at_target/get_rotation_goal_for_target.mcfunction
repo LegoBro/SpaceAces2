@@ -18,6 +18,7 @@ tp e-0-0-0-1 ~ ~ ~
 #---------------------
 scoreboard players set #var sab.var 0
 execute if score @s sab.botSkill matches 6.. run scoreboard players set #var sab.var 1
+execute if score #var sab.var matches 1 if entity @s[tag=sab.botShootingFriendlyPlayer] run scoreboard players set #var sab.var 0
 execute if entity @s[tag=hb_mechanic_turret] run scoreboard players set #var sab.var 2
 execute if entity @s[tag=chem_dispenser] run scoreboard players set #var sab.var 3
 execute if entity @s[tag=rocket_wall] run scoreboard players set #var sab.var 4

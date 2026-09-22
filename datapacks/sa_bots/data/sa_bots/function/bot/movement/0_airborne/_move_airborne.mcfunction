@@ -36,6 +36,9 @@ execute store result score #z sab.var run data get entity @s Pos[2] 100000
 scoreboard players operation #x2 sab.var -= #x sab.var
 scoreboard players operation #z2 sab.var -= #z sab.var
 
+#check angle difference between movement vector and facing angle
+function sa_bots:bot/movement/find_difference_between_move_and_face_angle
+
 #are we walking into a jumpable gap? do a jump to maybe get over it
 #(no problem if this overlaps with the coyote jump, that would just set velocity to the same value twice)
 execute if score @s sab.botMoveStateLastTick matches 1 at f-0-0-0-1 run function sa_bots:bot/movement/0_airborne/check_for_jumpable_gap

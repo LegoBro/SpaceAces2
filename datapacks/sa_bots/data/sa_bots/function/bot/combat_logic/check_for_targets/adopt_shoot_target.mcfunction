@@ -1,5 +1,6 @@
-#clean up old tag
+#clean up old tags
 tag @s[tag=sab.botShootingActiveOpponent] remove sab.botShootingActiveOpponent
+tag @s[tag=sab.botShootingFriendlyPlayer] remove sab.botShootingFriendlyPlayer
 
 #randomized reaction time based on our base reaction time
 scoreboard players operation @s sab.botReactionCountdown = @s sab.botReactionTimeBase
@@ -19,8 +20,10 @@ scoreboard players operation @s sab.botTargetUUID3 = #get_uuid4_3 sab.var
 execute if data entity @s data.tasks[0] run data remove entity @s data.tasks[{is_base_task:0}]
 
 #new task: shoot at thing
-data modify entity @s data.tasks prepend value {id:1,name:"SHOOT_TARGET",entity_target:{id:0,can_shoot_back:0},flags:{is_base_task:0},is_base_task:0}
+data modify entity @s data.tasks prepend value {id:1,name:"SHOOT_TARGET",entity_target:{id:0,can_shoot_back:0,is_teammate:0},flags:{is_base_task:0},is_base_task:0}
 execute store result entity @s data.tasks[0].entity_target.id int 1 run scoreboard players get @s sab.botTargetEntityID
 #track whether we're attacking something that's dangerous
 execute if score #enemy_shoots_back sab.var matches 1.. run data modify entity @s data.tasks[0].entity_target.can_shoot_back set value 1
 execute if score #enemy_shoots_back sab.var matches 1.. run tag @s add sab.botShootingActiveOpponent
+execute if score #target_is_teammate sab.var matches 1.. run data modify entity @s data.tasks[0].entity_target.is_teammate set value 1
+execute if score #target_is_teammate sab.var matches 1.. run tag @s add sab.botShootingFriendlyPlayer

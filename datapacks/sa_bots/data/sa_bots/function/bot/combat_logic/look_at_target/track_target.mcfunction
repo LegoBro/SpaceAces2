@@ -14,6 +14,8 @@ tag @s[tag=sab.possibleTargetSeeOnly] add sab.possibleTarget
 
 #if we're an invisible enemy, there's a good chance the bot will lose sight of us
 execute if score @s invis matches 1.. unless score @s Team = #team sab.var run function sa_bots:bot/combat_logic/look_at_target/possibly_lose_track_of_invis_enemy
+#if bot is blinded, there's also a good chance they will lose sight of us
+execute if score #blindness sab.var matches 1.. run function sa_bots:bot/combat_logic/look_at_target/possibly_lose_track_of_target_when_blind
 
 #we exist AND have a valid LOS
 execute if entity @s[tag=sab.possibleTarget] run function sa_bots:bot/combat_logic/look_at_target/set_eye_height_before_getting_rotation

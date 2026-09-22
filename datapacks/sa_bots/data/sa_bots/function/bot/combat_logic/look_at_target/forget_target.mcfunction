@@ -2,3 +2,8 @@
 execute if data entity @s data.tasks[0] run data remove entity @s data.tasks[{is_base_task:0}]
 scoreboard players reset @s sab.botTargetEntityID
 scoreboard players set @s sab.botLookTime 0
+
+#clear tags
+tag @s remove sab.botShootingFriendlyPlayer
+tag @s remove sab.botShootingEnemySustainer
+tag @s remove sab.botShootingActiveOpponent
