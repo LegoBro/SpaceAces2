@@ -34,7 +34,8 @@ execute unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/mov
 execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target
 
 #get a normalized vector from us to our movement target entity
-execute at @s as f-0-0-0-1 run function sa_bots:bot/movement/1_grounded/finalize_move_target
+execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bots:bot/movement/1_grounded/rotate_move_target_angle
+execute unless score @s sab.botMoveRotationOffsetTime matches 1.. at @s as f-0-0-0-1 run function sa_bots:bot/movement/1_grounded/finalize_move_target
 scoreboard players operation @s sab.botMovementYaw = #rotation sab.var
 execute store result score #x sab.var run data get entity @s Pos[0] 100000
 execute store result score #z sab.var run data get entity @s Pos[2] 100000
@@ -52,6 +53,11 @@ execute if score @s sab.botPauseTime matches 1.. run \
 #jump if there's a passable 1-block high obstable in the way
 execute if score @s sab.botTimeSinceProgress matches 1.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #sa_bots:bot_no_jump[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
 execute if score @s sab.botTimeSinceProgress matches 2.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #minecraft:slabs[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
+
+#try to strafe around obstacles that block our movement direction
+execute if entity @s[scores={sab.botTimeSinceProgress=2..,sab.botMoveRotationOffset=..0}] \
+    unless block ~ ~-.1 ~ #minecraft:stairs[half=bottom] facing entity f-0-0-0-1 feet rotated ~ 0 \
+    positioned ^ ^1 ^.6 unless block ~ ~ ~ #sa_bots:not_solid run function sa_bots:bot/movement/1_grounded/try_to_strafe_around_obstacle
 
 #sneak if stuck (when tagged to do so)
 execute if entity @s[tag=sab.botSneakIfStuck,scores={sab.botTimeSinceProgress=2..,sab.botCrouchTime=..0}] run scoreboard players set @s sab.botCrouchTime 10

@@ -24,6 +24,9 @@ scoreboard players operation @s sab.botMoveTargetDZ -= @s sab.botMoveTargetZ
 #------------------------
 #various timers
 
+#movement rotation offset time
+execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bots:bot/movement/misc/temporary_rotation_offset
+
 #look time
 scoreboard players remove @s[scores={sab.botLookTime=1..}] sab.botLookTime 1
 scoreboard players remove @s[scores={sab.botIgnoreAimTime=1..}] sab.botIgnoreAimTime 1

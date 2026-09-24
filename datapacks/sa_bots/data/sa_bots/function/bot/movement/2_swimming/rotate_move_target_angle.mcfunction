@@ -1,0 +1,2 @@
+execute store result storage sa_bots:generic rotation int 1 run scoreboard players get @s sab.botMoveRotationOffset
+execute at @s as f-0-0-0-1 run function sa_bots:bot/movement/2_swimming/finalize_move_target_rotated with storage sa_bots:generic

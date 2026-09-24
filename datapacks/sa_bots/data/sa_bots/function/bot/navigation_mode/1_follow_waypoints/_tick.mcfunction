@@ -1,12 +1,6 @@
 #executed by a bot
 
 
-#if we don't have a move target, quit out and switch to roam logic
-execute unless data entity @s data.move_targets[0] run \
-    return run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets
-#=====
-
-
 #keep track of whether we're making progress toward our target
 scoreboard players add @s sab.botTimeSinceProgress 1
 function sa_bots:bot/navigation_mode/1_follow_waypoints/check_if_progress_is_being_made
