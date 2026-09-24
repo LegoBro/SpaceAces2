@@ -6,6 +6,9 @@ execute if score @s sab.botPose matches 0 run data modify entity @s pose set val
 execute if score @s sab.botPose matches 1 run data modify entity @s pose set value swimming
 execute if score @s sab.botPose matches 2 run data modify entity @s pose set value crouching
 
+#stay sneaking if under something and already sneaking
+execute if score @s sab.botCrouchTime matches 1.. unless block ~ ~2 ~ #sa_bots:not_solid run scoreboard players set @s sab.botCrouchTime 2
+
 #special logic for state changes
 execute unless score @s sab.botMoveStateLastTick matches 1 run function sa_bots:bot/movement/1_grounded/first_tick_grounded
 
@@ -49,6 +52,9 @@ execute if score @s sab.botPauseTime matches 1.. run \
 #jump if there's a passable 1-block high obstable in the way
 execute if score @s sab.botTimeSinceProgress matches 1.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #sa_bots:bot_no_jump[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
 execute if score @s sab.botTimeSinceProgress matches 2.. at f-0-0-0-1 positioned ^ ^ ^.6 unless block ~ ~ ~ #minecraft:slabs[half=bottom] if block ~ ~1.4 ~ #sa_bots:not_solid if block ~ ~2.4 ~ #sa_bots:not_solid unless block ~ ~.5 ~ #sa_bots:not_solid run tag @s add sab.botJump
+
+#sneak if stuck (when tagged to do so)
+execute if entity @s[tag=sab.botSneakIfStuck,scores={sab.botTimeSinceProgress=2..,sab.botCrouchTime=..0}] run scoreboard players set @s sab.botCrouchTime 10
 
 #jump if we're stuck on something but could easily get over it
 execute if entity @s[scores={sab.botTimeSinceProgress=3..,sab.groundedTime=11..}] facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6 if block ~ ~1 ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tag @s add sab.botJump

@@ -11,6 +11,7 @@ scoreboard players set @s sab.dUltimateCharge -1
 
 #inputs
 scoreboard players set @s sab.botRightClick10Hz -1
+scoreboard players set @s sab.botCrouchTime 0
 
 #navigation
 scoreboard players set @s sab.botBestDistanceToTargetX 2147483647

@@ -1,0 +1,21 @@
+execute if score #spread_bias_x sab.var matches ..-10 run return run execute positioned ~-6 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -9 run return run execute positioned ~-5.4 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -8 run return run execute positioned ~-4.8 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -7 run return run execute positioned ~-4.2 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -6 run return run execute positioned ~-3.6 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -5 run return run execute positioned ~-3 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -4 run return run execute positioned ~-2.4 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -3 run return run execute positioned ~-1.8 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -2 run return run execute positioned ~-1.2 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches -1 run return run execute positioned ~-.6 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+
+execute if score #spread_bias_x sab.var matches 1 run return run execute positioned ~.6 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 2 run return run execute positioned ~1.2 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 3 run return run execute positioned ~1.8 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 4 run return run execute positioned ~2.4 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 5 run return run execute positioned ~3 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 6 run return run execute positioned ~3.6 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 7 run return run execute positioned ~4.2 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 8 run return run execute positioned ~4.8 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 9 run return run execute positioned ~5.4 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
+execute if score #spread_bias_x sab.var matches 10.. run return run execute positioned ~6 ~ ~ if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~

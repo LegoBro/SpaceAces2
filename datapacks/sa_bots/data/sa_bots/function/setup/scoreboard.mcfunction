@@ -49,6 +49,10 @@ scoreboard objectives add sab.botPauseTime dummy
 scoreboard objectives add sab.lockedOntoEnemy dummy
 scoreboard objectives add sab.botRoamTime dummy
 scoreboard objectives add sab.botLifetime dummy
+scoreboard objectives add sab.botSpreadBiasX dummy
+scoreboard objectives add sab.botSpreadBiasZ dummy
+scoreboard objectives add sab.botLookingForSubTargets dummy
+scoreboard objectives add sab.botClassMoveSpeed dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

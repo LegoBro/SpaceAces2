@@ -12,7 +12,7 @@ execute if entity @s[scores={reload=0,totalShots=..4,sab.botSkill=6..}] unless e
 
 
 #high skill, energy lance when we see someone
-execute if entity @s[scores={sab.botSkill=6..,ability.1.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_1
+execute if entity @s[scores={sab.botSkill=6..,ability.1.cooldown=..0,sab.lockedOntoEnemy=4..}] run function sa_bots:bot/class_logic/use_ability_1
 #lower skill, energy lance when reloading
 execute if entity @s[scores={sab.botSkill=..5,reload=1..,ability.1.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_1
 

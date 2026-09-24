@@ -1,11 +1,15 @@
+#executed by bot at 10hz
+
+
 #very common need: determine when a bot is ready to shoot
 #1 = targeting someone, but we don't have our crosshair near them yet
 #2 = targeting someone and our crosshair is near the enemy
-#3 = targeting someone and our crosshair is on the money
+#3..4 = targeting someone and our crosshair is on the money
 execute store result score @s sab.lockedOntoEnemy run execute if entity \
     @s[scores={sab.botTargetEntityID=1..,sab.botTimeSinceLOS=..5,sab.botLookMode=2,sab.botReactionCountdown=..0}]
 scoreboard players set @s[scores={sab.lockedOntoEnemy=1..,sab.botTargetAngleDifferenceYaw=-2000..2000,sab.botTargetAngleDifferencePitch=-2000..2000}] sab.lockedOntoEnemy 2
 scoreboard players set @s[scores={sab.lockedOntoEnemy=2..,sab.botTargetAngleDifferenceYaw=-1000..1000,sab.botTargetAngleDifferencePitch=-1000..1000}] sab.lockedOntoEnemy 3
+scoreboard players set @s[scores={sab.lockedOntoEnemy=3..,sab.botTargetAngleDifferenceYaw=-400..400,sab.botTargetAngleDifferencePitch=-400..400}] sab.lockedOntoEnemy 4
 
 #"think" as whatever class we are
 execute unless score @s Class matches 1..15 run function sa_bots:bot/class_logic/0_fallback/_think

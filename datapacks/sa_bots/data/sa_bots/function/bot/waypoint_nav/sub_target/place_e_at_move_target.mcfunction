@@ -1,0 +1,1 @@
+$execute positioned 0.0 0.0 0.0 positioned ~$(x) ~$(y) ~$(z) if loaded ~ ~ ~ run function sa_bots:bot/waypoint_nav/sub_target/place_e_at_move_target_go

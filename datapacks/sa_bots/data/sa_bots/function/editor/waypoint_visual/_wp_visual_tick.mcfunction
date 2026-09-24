@@ -23,18 +23,17 @@ execute unless entity @s[tag=sab.visualizeBotWaypointDetailed] run return 0
 tag @s remove sab.visualizeBotWaypointDetailed
 
 
-#show name (temporary aec)
+#show name (temporary text_display)
 data modify storage sa_bots:waypoint name[1].text set from entity @s data.uuid4
 execute positioned ~ ~1 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_uuid4
 
 #show outgoing pathways
 function sa_bots:editor/waypoint_visual/show_outgoing_paths
 tag @s remove sab.visualizeOutgoingID
-tag @s remove sab.visualizeEventNames
 
-#show special tags this waypoint has
-execute if entity @s[tag=wp.requireOnGround] positioned ~ ~1.8 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.requireOnGround",color:green}'}
-execute if entity @s[tag=wp.dontReRouteHere] positioned ~ ~1.9 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.dontReRouteHere",color:green}'}
+#show special tags this waypoint has (only when holding Edit or Clear tools to avoid visual clutter)
+execute if entity @s[tag=sab.visualizeEventNames] run function sa_bots:editor/waypoint_visual/show_tags
+tag @s remove sab.visualizeEventNames
 
 #warn if we have undefined endpoints
 execute if entity @s[tag=sab.hasUndefinedEndpoints] run function sa_bots:editor/tools/edit/subroute/source_check_if_all_endpoints_valid

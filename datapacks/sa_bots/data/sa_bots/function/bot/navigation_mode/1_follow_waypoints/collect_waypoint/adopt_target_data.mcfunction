@@ -5,3 +5,6 @@
 data remove entity @s data.move_targets[0]
 data modify entity @s data.move_targets prepend from storage sa_bots:generic target
 function sa_bots:bot/waypoint_nav/update_target_scores
+
+#clear tags
+function sa_bots:bot/navigation_mode/1_follow_waypoints/event/clear_old_event_stuff

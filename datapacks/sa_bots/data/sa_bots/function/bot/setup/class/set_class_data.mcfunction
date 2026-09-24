@@ -39,3 +39,28 @@ execute if score @s Class matches 6 run tag @s add sab.botMayShootTeammates
 
 #some classes may tweak aggression or cooperativeness when at skill 4+
 execute if score @s sab.botSkill matches 4.. run function sa_bots:bot/setup/class/set_class_behavior_adjustments
+
+#some waypoint events will want to know what our class' move speed is
+execute store result score @s sab.botClassMoveSpeed run data get storage class:speed speed 100
+# 10 = med speed
+# 30 = fast speed
+
+#---example (9/23/2026)
+#scout 0.4
+#soldier 0.1
+#sniper 0.1
+#bomber 0.0
+#gunner 0.0
+#healer 0.3
+#brawler 0.1
+#mobility 0.2
+#mechanic -0.05
+#scientist 0.1
+#infiltraitor 0.25
+#pyro -0.1
+#seeker 0.3
+#shocksmith 0.15
+#rocketeer 0.0
+
+#scout = 40
+#soldier = 10

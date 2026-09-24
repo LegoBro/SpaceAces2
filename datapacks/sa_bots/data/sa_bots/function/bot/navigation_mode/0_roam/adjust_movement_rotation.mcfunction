@@ -7,7 +7,7 @@ $execute rotated $(rotation) 0 unless block ^ ^.6 ^.6 #sa_bots:not_solid unless 
 execute if score #random sab.var matches 1 run scoreboard players operation #rotation sab.var += #var sab.var
 execute if score #random sab.var matches 2 run scoreboard players operation #rotation sab.var -= #var sab.var
 #do a 180 if we're about to jump off a cliff (only for first 7 seconds of roaming)
-$execute if score @s sab.botRoamTime matches ..140 rotated $(rotation) 0 positioned ^ ^ ^.8 if block ~ ~-1 ~ #sa_bots:not_solid if block ~ ~-2 ~ #sa_bots:not_solid if block ~ ~-3 ~ #sa_bots:not_solid run scoreboard players add #rotation sab.var 180
+$execute if score @s sab.botRoamTime matches ..140 rotated $(rotation) 0 positioned ^ ^ ^.8 if block ~ ~ ~ #sa_bots:not_solid if block ~ ~-1 ~ #sa_bots:not_solid if block ~ ~-2 ~ #sa_bots:not_solid if block ~ ~-3 ~ #sa_bots:not_solid run scoreboard players add #rotation sab.var 180
 
 #store new rotation
 scoreboard players operation #rotation sab.var %= #360 sab.var

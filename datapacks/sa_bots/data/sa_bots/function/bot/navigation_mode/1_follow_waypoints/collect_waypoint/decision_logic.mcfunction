@@ -5,6 +5,19 @@
 execute unless score @s sab.botMoveTargetDY matches -5.. run return 0
 #=====
 
+#reset sub-target look state
+scoreboard players set @s sab.botLookingForSubTargets 0
+#note about sab.botLookingForSubTargets:
+# -1 = don't generate sub-targets until we reach our next primary target
+# 0 = not looking, but will look if stuck
+# 1 = actively looking
+# 2 = already generated a sub-target
+
+#are we chasing a sub-target? simply pop it off the stack and go for the next target we have. no need for all the complicated nonsense in this function
+execute if data entity @s data.move_targets[0].metadata{is_sub_route:1} run \
+    return run function sa_bots:bot/waypoint_nav/pop_move_target_off_stack
+#=====
+
 #are we in the air?
 scoreboard players operation #on_ground sab.var = @s sab.onGround
 
@@ -48,6 +61,9 @@ tag @s remove sab.self
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
     tellraw @a[gamemode=spectator] [{translate:"sa_bot.debug.chosen_outgoing",with:[{score:{name:"#chosen_outgoing",objective:"sab.var"}}],color:yellow}]
 
+#mutate spread bias x and z each time we go after a waypoint
+execute if score #chosen_outgoing sab.var matches 0.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/spread/spread_bias_think
+
 #look up the direction we chose
 execute store result storage sa_bots:generic index int 1 run scoreboard players get #chosen_outgoing sab.var
 $execute if score #chosen_outgoing sab.var matches 0.. as b-0-0-0-$(uuid4) run \
@@ -55,6 +71,10 @@ $execute if score #chosen_outgoing sab.var matches 0.. as b-0-0-0-$(uuid4) run \
 
 #adopt target data
 execute if score #found_target sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/adopt_target_data
+
+#check if there's an easy path from us to the target. if not, we might need to improvise down the road
+execute if score #found_target sab.var matches 1.. if score @s sab.botMoveState matches 0..1 run \
+    function sa_bots:bot/waypoint_nav/sub_target/check_for_direct_path_to_waypoint_prep
 
 #execute event, if we have one
 execute if score #chosen_event sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/_event_execute_index

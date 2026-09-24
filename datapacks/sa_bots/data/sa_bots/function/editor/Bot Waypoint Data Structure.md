@@ -33,6 +33,7 @@ string uuid4
 
 # data.spread (max random spread x and z)
 [int x, int z]
+   the max for either or these values is 10
 
 
 # data.sector (defines what sector the waypoint belongs to)

@@ -16,7 +16,7 @@ execute if score @s ability.2.cooldown matches ..0 positioned ^ ^ ^3 if function
 
 
 #use void needles when in combat
-execute if entity @s[scores={sab.lockedOntoEnemy=3..,ability.1.cooldown=..0}] \
+execute if entity @s[scores={sab.lockedOntoEnemy=4..,ability.1.cooldown=..0}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ability_1
 
 
