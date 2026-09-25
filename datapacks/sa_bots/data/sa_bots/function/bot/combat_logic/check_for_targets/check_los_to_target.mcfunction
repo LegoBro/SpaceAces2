@@ -1,5 +1,5 @@
-#range of 150 blocks
-scoreboard players set #recursions sab.var 150
+#keep track of how far this ray goes
+scoreboard players set #los_distance sab.var 1
 
 #possible target tag is revoked until we find LOS to ourself
 tag @s remove sab.possibleTarget

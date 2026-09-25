@@ -3,8 +3,13 @@
 
 
 #determine if left and right are valid
-execute store result score #test1 sab.var run execute if block ^-1 ^ ^ #sa_bots:not_solid
-execute store result score #test2 sab.var run execute if block ^1 ^ ^ #sa_bots:not_solid
+execute store result score #test1 sab.var positioned ^-1 ^ ^ run execute if block ~ ~1 ~ #sa_bots:not_solid
+execute store result score #test2 sab.var positioned ^1 ^ ^ run execute if block ~ ~1 ~ #sa_bots:not_solid
+#invalidate left or right if there's no ground to stand on
+execute if score #test1 sab.var matches 1 positioned ^-1 ^ ^ if block ~ ~-1 ~ #sa_bots:not_solid_exclude_water if block ~ ~-2 ~ #sa_bots:not_solid_exclude_water run scoreboard players set #test1 sab.var 0
+execute if score #test1 sab.var matches 1 positioned ^-1 ^ ^-.6 if block ~ ~-1 ~ #sa_bots:not_solid_exclude_water if block ~ ~-2 ~ #sa_bots:not_solid_exclude_water run scoreboard players set #test1 sab.var 0
+execute if score #test2 sab.var matches 1 positioned ^1 ^ ^ if block ~ ~-1 ~ #sa_bots:not_solid_exclude_water if block ~ ~-2 ~ #sa_bots:not_solid_exclude_water run scoreboard players set #test2 sab.var 0
+execute if score #test2 sab.var matches 1 positioned ^1 ^ ^-.6 if block ~ ~-1 ~ #sa_bots:not_solid_exclude_water if block ~ ~-2 ~ #sa_bots:not_solid_exclude_water run scoreboard players set #test2 sab.var 0
 
 #go left
 execute if score #test1 sab.var matches 1 run scoreboard players set @s sab.botMoveRotationOffset 90

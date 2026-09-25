@@ -55,6 +55,8 @@ scoreboard objectives add sab.botLookingForSubTargets dummy
 scoreboard objectives add sab.botClassMoveSpeed dummy
 scoreboard objectives add sab.botMoveRotationOffset dummy
 scoreboard objectives add sab.botMoveRotationOffsetTime dummy
+scoreboard objectives add sab.botObserveTargetX dummy
+scoreboard objectives add sab.botObserveTargetZ dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

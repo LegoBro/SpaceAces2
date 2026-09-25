@@ -13,7 +13,7 @@ execute if entity @s[scores={sab.botWaypointApproachX=0,sab.botWaypointApproachZ
 execute if entity @s[scores={sab.botLookingForSubTargets=1,sab.botMoveState=1}] run function sa_bots:bot/waypoint_nav/sub_target/try_to_generate_sub_target
 
 #if we're stuck, try targeting a new waypoint (if that fails, we go into "roam" mode)
-execute if entity @s[scores={sab.botTimeSinceProgress=10..,sab.airTime=..0}] run function sa_bots:bot/navigation_mode/1_follow_waypoints/try_to_get_unstuck
+execute if entity @s[scores={sab.botTimeSinceProgress=30..,sab.airTime=..0}] run function sa_bots:bot/navigation_mode/1_follow_waypoints/try_to_get_unstuck
 execute if entity @s[scores={sab.botTimeSinceProgress=80..,sab.airTime=1..}] run function sa_bots:bot/navigation_mode/1_follow_waypoints/try_to_get_unstuck
 
 

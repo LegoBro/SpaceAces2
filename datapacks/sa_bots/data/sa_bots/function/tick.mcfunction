@@ -48,3 +48,8 @@ execute as @a[tag=sab.testGame,scores={Team=1}] at @s if score @s health matches
 execute as @a[tag=sab.testGame,scores={Team=2}] at @s if score @s health matches ..0 run tp @s @e[type=marker,limit=1,sort=random,distance=..200,tag=red_spawn_point]
 execute as @a[tag=sab.testGame] at @s if score @s health matches ..0 store result score @s Class run random value 1..15
 execute as @a[tag=sab.testGame] at @s if score @s health matches ..0 run function class:reselect
+
+#debug, be invincible and untargetable
+execute as @a[tag=sab.spectateGame] run scoreboard players set @s healing 100
+execute as @a[tag=sab.spectateGame] run scoreboard players set @s invulnerable 5
+execute as @a[tag=sab.spectateGame] run tag @s remove hb

@@ -18,13 +18,13 @@ execute if score @s sab.botSkill matches 10.. run scoreboard players set @s sab.
 
 
 #random pause before we start moving after respawning
-execute if score @s sab.botSkill matches ..1 store result score @s sab.botPauseTime run random value 50..100
-execute if score @s sab.botSkill matches 2 store result score @s sab.botPauseTime run random value 40..80
-execute if score @s sab.botSkill matches 3 store result score @s sab.botPauseTime run random value 30..60
-execute if score @s sab.botSkill matches 4 store result score @s sab.botPauseTime run random value 20..50
-execute if score @s sab.botSkill matches 5 store result score @s sab.botPauseTime run random value 10..40
-execute if score @s sab.botSkill matches 6 store result score @s sab.botPauseTime run random value 8..30
-execute if score @s sab.botSkill matches 7 store result score @s sab.botPauseTime run random value 6..20
-execute if score @s sab.botSkill matches 8 store result score @s sab.botPauseTime run random value 4..15
+execute if score @s sab.botSkill matches ..1 store result score @s sab.botPauseTime run random value 24..70
+execute if score @s sab.botSkill matches 2 store result score @s sab.botPauseTime run random value 18..58
+execute if score @s sab.botSkill matches 3 store result score @s sab.botPauseTime run random value 14..46
+execute if score @s sab.botSkill matches 4 store result score @s sab.botPauseTime run random value 12..40
+execute if score @s sab.botSkill matches 5 store result score @s sab.botPauseTime run random value 10..34
+execute if score @s sab.botSkill matches 6 store result score @s sab.botPauseTime run random value 8..28
+execute if score @s sab.botSkill matches 7 store result score @s sab.botPauseTime run random value 6..22
+execute if score @s sab.botSkill matches 8 store result score @s sab.botPauseTime run random value 4..16
 execute if score @s sab.botSkill matches 9 store result score @s sab.botPauseTime run random value 2..10
-execute if score @s sab.botSkill matches 10.. store result score @s sab.botPauseTime run random value 0..5
+execute if score @s sab.botSkill matches 10.. store result score @s sab.botPauseTime run random value 0..4

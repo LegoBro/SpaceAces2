@@ -5,16 +5,16 @@
 
 
 #0.25
-execute unless score #eye_height sab.var matches 35.. positioned ~ ~.405 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute unless score #eye_height sab.var matches 35.. positioned ~ ~.405 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go
 #0.5
-execute if score #eye_height sab.var matches 35..59 positioned ~ ~.81 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute if score #eye_height sab.var matches 35..59 positioned ~ ~.81 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go
 #0.85
-execute if score #eye_height sab.var matches 60..86 positioned ~ ~1.377 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute if score #eye_height sab.var matches 60..86 positioned ~ ~1.377 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go
 #0.9
-execute if score #eye_height sab.var matches 87..94 positioned ~ ~1.458 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute if score #eye_height sab.var matches 87..94 positioned ~ ~1.458 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go
 #1
-execute if score #eye_height sab.var matches 95..109 positioned ~ ~1.62 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute if score #eye_height sab.var matches 95..109 positioned ~ ~1.62 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go
 #1.15
-execute if score #eye_height sab.var matches 110..119 positioned ~ ~1.863 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute if score #eye_height sab.var matches 110..119 positioned ~ ~1.863 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go
 #1.25
-execute if score #eye_height sab.var matches 120.. positioned ~ ~2.025 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal_for_target
+execute if score #eye_height sab.var matches 120.. positioned ~ ~2.025 ~ run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/_go

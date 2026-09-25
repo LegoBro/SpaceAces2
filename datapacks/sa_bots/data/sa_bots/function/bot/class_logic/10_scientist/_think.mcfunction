@@ -12,7 +12,7 @@ execute if entity @s[scores={reload=0,totalShots=..8,sab.botSkill=6..}] unless e
 
 
 #might put chem dispensers down when off cooldown
-execute if entity @s[scores={ability.2.cooldown=..0}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based \
+execute if entity @s[scores={ability.2.cooldown=..0,sab.botLifetime=20..}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based \
     run function sa_bots:bot/class_logic/use_ability_2
 
 #will definitely put chem dispensers down when near teammates

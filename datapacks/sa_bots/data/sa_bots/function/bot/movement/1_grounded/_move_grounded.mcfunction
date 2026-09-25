@@ -57,13 +57,16 @@ execute if score @s sab.botTimeSinceProgress matches 2.. at f-0-0-0-1 positioned
 #try to strafe around obstacles that block our movement direction
 execute if entity @s[scores={sab.botTimeSinceProgress=2..,sab.botMoveRotationOffset=..0}] \
     unless block ~ ~-.1 ~ #minecraft:stairs[half=bottom] facing entity f-0-0-0-1 feet rotated ~ 0 \
-    positioned ^ ^1 ^.6 unless block ~ ~ ~ #sa_bots:not_solid run function sa_bots:bot/movement/1_grounded/try_to_strafe_around_obstacle
+    positioned ^ ^ ^.6 unless block ~ ~ ~ #sa_bots:not_solid run function sa_bots:bot/movement/1_grounded/try_to_strafe_around_obstacle
 
 #sneak if stuck (when tagged to do so)
-execute if entity @s[tag=sab.botSneakIfStuck,scores={sab.botTimeSinceProgress=2..,sab.botCrouchTime=..0}] run scoreboard players set @s sab.botCrouchTime 10
+execute if entity @s[tag=sab.botSneakIfStuck,scores={sab.botTimeSinceProgress=3..,sab.botCrouchTime=..0}] run scoreboard players set @s sab.botCrouchTime 10
 
 #jump if we're stuck on something but could easily get over it
-execute if entity @s[scores={sab.botTimeSinceProgress=3..,sab.groundedTime=11..}] facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6 if block ~ ~1 ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tag @s add sab.botJump
+execute if entity @s[scores={sab.botTimeSinceProgress=3..,sab.groundedTime=8..}] facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6 if block ~ ~1 ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tag @s add sab.botJump
+
+#if stuck for a while, start trying to generate sub-targets if we're able to do that
+execute if entity @s[scores={sab.botTimeSinceProgress=11..,sab.botLookingForSubTargets=0}] run scoreboard players set @s sab.botLookingForSubTargets 1
 
 #--------------------------
 #apply various multipliers to x and z velocity
