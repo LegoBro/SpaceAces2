@@ -26,3 +26,9 @@ execute if entity @s[scores={health=..174,ability.2.cooldown=..0}] \
 #use ultimate whenever enemies are nearby
 execute if score @s ultimate_charge >= class.pyro.ultimate.charge Numbers \
     if function sa_bots:bot/class_logic/check_if_enemies_nearby run function sa_bots:bot/class_logic/use_ultimate
+
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -51 0 container.0

@@ -34,3 +34,9 @@ tag @s[scores={sab.botSkill=6..,SelectedItem=0}] add sab.botShootAtFloor
 #rocket launcher is a slow-moving projectile
 tag @s remove sab.botWeaponSlowProjectile
 tag @s[scores={SelectedItem=0}] add sab.botWeaponSlowProjectile
+
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -49 0 container.0

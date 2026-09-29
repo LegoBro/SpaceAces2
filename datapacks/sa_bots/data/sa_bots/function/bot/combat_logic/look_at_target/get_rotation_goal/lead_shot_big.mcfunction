@@ -2,6 +2,9 @@
 #executed at bot position / e-0-0-0-1 position
 
 
+#set flag indicating we applied a significant offset
+scoreboard players set #test sab.var 1
+
 #compare target coordinate to the coordinate we last saw them at
 # #bot_observed_x = last tick
 # #observe_x = this tick

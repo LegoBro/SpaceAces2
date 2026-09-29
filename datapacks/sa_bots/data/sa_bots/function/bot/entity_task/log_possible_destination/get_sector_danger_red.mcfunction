@@ -1,0 +1,16 @@
+execute if score #bot_in_sector sab.var matches 1 run scoreboard players operation #danger sab.var += #sector_red_presence_1 sab.var
+execute if score #bot_in_sector sab.var matches 2 run scoreboard players operation #danger sab.var += #sector_red_presence_2 sab.var
+execute if score #bot_in_sector sab.var matches 3 run scoreboard players operation #danger sab.var += #sector_red_presence_3 sab.var
+execute if score #bot_in_sector sab.var matches 4 run scoreboard players operation #danger sab.var += #sector_red_presence_4 sab.var
+execute if score #bot_in_sector sab.var matches 5 run scoreboard players operation #danger sab.var += #sector_red_presence_5 sab.var
+execute if score #bot_in_sector sab.var matches 6 run scoreboard players operation #danger sab.var += #sector_red_presence_6 sab.var
+execute if score #bot_in_sector sab.var matches 7 run scoreboard players operation #danger sab.var += #sector_red_presence_7 sab.var
+execute if score #bot_in_sector sab.var matches 8 run scoreboard players operation #danger sab.var += #sector_red_presence_8 sab.var
+execute if score #bot_in_sector sab.var matches 9 run scoreboard players operation #danger sab.var += #sector_red_presence_9 sab.var
+execute if score #bot_in_sector sab.var matches 10 run scoreboard players operation #danger sab.var += #sector_red_presence_10 sab.var
+execute if score #bot_in_sector sab.var matches 11 run scoreboard players operation #danger sab.var += #sector_red_presence_11 sab.var
+execute if score #bot_in_sector sab.var matches 12 run scoreboard players operation #danger sab.var += #sector_red_presence_12 sab.var
+execute if score #bot_in_sector sab.var matches 13 run scoreboard players operation #danger sab.var += #sector_red_presence_13 sab.var
+execute if score #bot_in_sector sab.var matches 14 run scoreboard players operation #danger sab.var += #sector_red_presence_14 sab.var
+execute if score #bot_in_sector sab.var matches 15 run scoreboard players operation #danger sab.var += #sector_red_presence_15 sab.var
+execute if score #bot_in_sector sab.var matches 16 run scoreboard players operation #danger sab.var += #sector_red_presence_16 sab.var

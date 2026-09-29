@@ -6,7 +6,7 @@ execute if score Gamemode settings matches 0 run scoreboard players set #class_l
 execute if score Gamemode settings matches 7 run scoreboard players set #class_loggic_limited_lives sab.var 1
 
 #red defends on payload
-execute if score Gamemode settings matches 3 run scoreboard players set #class_loggic_defense sab.var 1
+execute if data storage space_aces:selected_gamemode gamemode{name:"payload"} run scoreboard players set #class_loggic_defense sab.var 1
 
 #ctf is ctf
-execute if score Gamemode settings matches 6 run scoreboard players set #class_loggic_ctf sab.var 1
+execute if data storage space_aces:selected_gamemode gamemode{name:"ctf"} run scoreboard players set #class_loggic_ctf sab.var 1

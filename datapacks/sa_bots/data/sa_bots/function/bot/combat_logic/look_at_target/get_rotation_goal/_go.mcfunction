@@ -1,5 +1,5 @@
 #executed by an entity that a bot is targeting AND has a line-of-sight to
-#executed at the position of the bot
+#executed at the position of the bot (at eye height!)
 
 #relevant variables set by bot:
 # #skill
@@ -39,19 +39,16 @@ execute if entity @s[tag=rocket_wall] run scoreboard players set #var sab.var 10
 execute if entity @s[tag=vis_mine] run scoreboard players set #var sab.var 104
 
 #are we looking at something that can move? apply offsets to lead shots, shoot at floor, or whatever
-execute if score #var sab.var matches ..99 if entity @s[type=#projectile:players] run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/consider_applying_offsets
+scoreboard players set #test sab.var 0
+execute if score #var sab.var matches ..99 if entity @s[type=#projectile:players] run \
+    function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/consider_applying_offsets
 
 #this is the place to add variation depending on the target's height!
-#(higher y means we aim lower down)
-execute if score #var sab.var matches 0 at e-0-0-0-1 positioned ~ ~-.7 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
-execute if score #var sab.var matches 1 at e-0-0-0-1 facing entity @s eyes run rotate e-0-0-0-1 ~ ~
-execute if score #var sab.var matches 101 positioned ~ ~.5 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
-execute if score #var sab.var matches 102 positioned ~ ~-.33 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
-execute if score #var sab.var matches 103 positioned ~ ~.33 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
-execute if score #var sab.var matches 104 positioned ~ ~.6 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
+execute unless score #test sab.var matches 1 run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/set_e_rotation
 
 #if we're using a projectile with a strong downward arc (like grenades), aim upward based on LOS distance
-execute if score #bot_weapon_has_downward_arc sab.var matches 1 as e-0-0-0-1 at @s run function sa_bots:bot/combat_logic/look_at_target/adjust_rotation_for_projectile_arc
+execute if score #bot_weapon_has_downward_arc sab.var matches 1 as e-0-0-0-1 at @s run \
+    function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/adjust_rotation_for_projectile_arc
 #---------------------
 
 #output

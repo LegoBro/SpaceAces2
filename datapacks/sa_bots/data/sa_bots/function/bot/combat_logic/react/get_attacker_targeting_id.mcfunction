@@ -2,7 +2,7 @@
 
 
 #must be somewhat nearby
-execute unless entity @s[distance=..30] run return fail
+execute unless entity @s[distance=..40] run return fail
 #=====
 
 

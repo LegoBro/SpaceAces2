@@ -42,7 +42,6 @@ execute if score #spread_z sab.var matches 10.. at e-0-0-0-1 run function sa_bot
 
 #make sure Earl isn't stuck in the floor
 execute at e-0-0-0-1 unless block ~ ~ ~ #sa_bots:not_solid if block ~ ~1 ~ #sa_bots:not_solid run tp e-0-0-0-1 ~ ~1 ~
-execute at e-0-0-0-1 unless block ~ ~ ~ #sa_bots:not_solid if block ~ ~2 ~ #sa_bots:not_solid run tp e-0-0-0-1 ~ ~2 ~
 
 #now read position (only valid if we're not stuck inside a solid block)
 execute as e-0-0-0-1 at @s if block ~ ~ ~ #sa_bots:not_solid run function sa_bots:bot/navigation_mode/1_follow_waypoints/spread/get_waypoint_position

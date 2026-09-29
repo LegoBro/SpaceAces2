@@ -27,3 +27,8 @@ execute if score @s Team matches 1..2 if score @s ultimate_charge >= class.heale
 #ffa: use when ready
 execute unless score @s Team matches 1..2 if score @s ultimate_charge >= class.healer.ultimate.charge Numbers \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -57 0 container.0

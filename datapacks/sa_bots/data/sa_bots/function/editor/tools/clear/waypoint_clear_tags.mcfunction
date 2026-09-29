@@ -12,6 +12,6 @@ tag @s remove wp.turretSpot
 tag @s remove wp.turretSpot.blue
 tag @s remove wp.turretSpot.red
 
-tag @s remove wp.partolPoint
-tag @s remove wp.partolPoint.blue
-tag @s remove wp.partolPoint.red
+tag @s remove wp.patrolPoint
+tag @s remove wp.patrolPoint.blue
+tag @s remove wp.patrolPoint.red

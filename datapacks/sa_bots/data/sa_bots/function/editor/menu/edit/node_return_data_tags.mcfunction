@@ -64,16 +64,16 @@ tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",i
 #patrol point
 data modify storage sa_bots:waypoint_info text_builder set value []
 data modify storage sa_bots:waypoint_info text_builder append value \
-    ["",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.partolPoint"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 50"},hover_event:{action:"show_text",value:{text:"wp.partolPoint"}}}]
-execute if entity @s[tag=wp.partolPoint] run data modify storage sa_bots:waypoint_info text_builder[0][1].color set value "yellow"
+    ["",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.patrolPoint"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 50"},hover_event:{action:"show_text",value:{text:"wp.patrolPoint"}}}]
+execute if entity @s[tag=wp.patrolPoint] run data modify storage sa_bots:waypoint_info text_builder[0][1].color set value "yellow"
 #blue turret spot
 data modify storage sa_bots:waypoint_info text_builder append value \
-    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.partolPoint.blue"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 51"},hover_event:{action:"show_text",value:{text:"wp.partolPoint.blue"}}}]
-execute if entity @s[tag=wp.partolPoint.blue] run data modify storage sa_bots:waypoint_info text_builder[1][1].color set value "yellow"
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.patrolPoint.blue"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 51"},hover_event:{action:"show_text",value:{text:"wp.patrolPoint.blue"}}}]
+execute if entity @s[tag=wp.patrolPoint.blue] run data modify storage sa_bots:waypoint_info text_builder[1][1].color set value "yellow"
 #red turret spot
 data modify storage sa_bots:waypoint_info text_builder append value \
-    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.partolPoint.red"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 52"},hover_event:{action:"show_text",value:{text:"wp.partolPoint.red"}}}]
-execute if entity @s[tag=wp.partolPoint.red] run data modify storage sa_bots:waypoint_info text_builder[2][1].color set value "yellow"
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.patrolPoint.red"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 52"},hover_event:{action:"show_text",value:{text:"wp.patrolPoint.red"}}}]
+execute if entity @s[tag=wp.patrolPoint.red] run data modify storage sa_bots:waypoint_info text_builder[2][1].color set value "yellow"
 
 #print this row
 tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",interpret:true}

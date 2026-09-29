@@ -7,4 +7,11 @@
 #logic tick for whatever task we're doing
 execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/0_random_destination/_logic_tick
 execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/1_go_after_nearest_enemy/_logic_tick
+execute if score @s sab.botTask matches 2 run return run function sa_bots:bot/entity_task/2_go_after_specific_enemy/_logic_tick
+execute if score @s sab.botTask matches 3 run return run function sa_bots:bot/entity_task/3_go_after_nearest_teammate/_logic_tick
+execute if score @s sab.botTask matches 4 run return run function sa_bots:bot/entity_task/4_go_after_specific_teammate/_logic_tick
+execute if score @s sab.botTask matches 5 run return run function sa_bots:bot/entity_task/5_find_healing/_logic_tick
+execute if score @s sab.botTask matches 6 run return run function sa_bots:bot/entity_task/6_find_patrol_point/_logic_tick
+execute if score @s sab.botTask matches 7 run return run function sa_bots:bot/entity_task/7_find_sniper_spot/_logic_tick
+execute if score @s sab.botTask matches 8 run return run function sa_bots:bot/entity_task/8_find_turret_spot/_logic_tick
 #...

@@ -6,6 +6,10 @@
 #----------------------------
 #TASK
 
+#re-evaluate goal every once in a while
+scoreboard players remove @s sab.reEvaluateBehaviorTime 2
+execute if entity @s[scores={sab.reEvaluateBehaviorTime=..0}] run function sa_bots:bot/entity_goal/_consider_goal
+
 #if we have no task, come up with one
 execute unless data entity @s data.tasks[0] run function sa_bots:bot/entity_task/_improvise_base_task
 

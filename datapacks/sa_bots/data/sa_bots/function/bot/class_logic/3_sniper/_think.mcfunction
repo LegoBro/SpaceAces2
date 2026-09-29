@@ -11,3 +11,9 @@ execute unless score @s reload matches 1.. run scoreboard players set @s Selecte
 execute if score @s reload matches 1.. if score @s ability.2.cooldown matches ..0 run scoreboard players set @s SelectedItem 2
 
 #todo: sniper rifle and ultimate logic
+
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -60 0 container.0

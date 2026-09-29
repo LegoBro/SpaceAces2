@@ -59,7 +59,7 @@ tag @s remove sab.self
 
 #debug, say which outgoing was chosen
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
-    tellraw @a[gamemode=spectator] [{translate:"sa_bot.debug.chosen_outgoing",with:[{score:{name:"#chosen_outgoing",objective:"sab.var"}}],color:yellow}]
+    tellraw @a[gamemode=spectator,distance=..5] [{translate:"sa_bot.debug.chosen_outgoing",with:[{score:{name:"#chosen_outgoing",objective:"sab.var"}}],color:yellow}]
 
 #mutate spread bias x and z each time we go after a waypoint
 execute if score #chosen_outgoing sab.var matches 0.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/spread/spread_bias_think

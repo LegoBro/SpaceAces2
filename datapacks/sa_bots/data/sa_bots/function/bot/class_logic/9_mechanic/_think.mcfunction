@@ -14,3 +14,10 @@ execute if score @s reload matches 1.. if score @s ability.1.cooldown matches ..
 execute if score @s reload matches 1.. if score @s ability.1.cooldown matches 1.. run scoreboard players set @s SelectedItem 2
 
 #todo: drone logic
+
+
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -54 0 container.0

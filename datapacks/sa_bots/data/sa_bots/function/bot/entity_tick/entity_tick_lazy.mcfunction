@@ -27,5 +27,10 @@ function class:4/main
 
 #----------------------------
 #MOVEMENT
+
+#movement tick
 function sa_bots:bot/movement/_movement_main
+
+#clean up some tags
+tag @s[tag=sab.botAimAtOwnFeet] remove sab.botAimAtOwnFeet
 #----------------------------

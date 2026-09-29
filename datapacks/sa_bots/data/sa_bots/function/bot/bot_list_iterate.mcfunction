@@ -1,3 +1,7 @@
+#!!! NOTE TO SELF
+#near end of development, this function should be de-macro'd and split into many functions for better performance
+
+
 #executed by system
 
 #$(bot_i) = what index we're at in the list of bots

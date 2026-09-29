@@ -23,7 +23,7 @@ summon marker ~ ~ ~ {UUID:[I;12,0,0,8],Tags:["sab.classOption","sab.classOptionV
 summon marker ~ ~ ~ {UUID:[I;12,0,0,9],Tags:["sab.classOption","sab.classOptionViable", \
     "sab.classOption.9","sab.guardian","sab.ctfFlagDefender"]}
 summon marker ~ ~ ~ {UUID:[I;12,0,0,10],Tags:["sab.classOption","sab.classOptionViable", \
-    "sab.classOption.10","sab.sustainer"]}
+    "sab.classOption.10","sab.sustainer","sab.sustainerViableFFA"]}
 summon marker ~ ~ ~ {UUID:[I;12,0,0,11],Tags:["sab.classOption","sab.classOptionViable", \
     "sab.classOption.11","sab.striker","sab.goodForPicks","sab.squishy"]}
 summon marker ~ ~ ~ {UUID:[I;12,0,0,12],Tags:["sab.classOption","sab.classOptionViable", \
@@ -55,10 +55,10 @@ scoreboard players set #success sab.var 1
 
 #skill 3+ -- if we're the only player on the team, don't play sustainer
 execute if entity @s[scores={sab.botSkill=4..,Team=1..2}] if score #playerCountCurrentTeam sab.var matches ..1 run \
-    tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.sustainer] remove sab.classOptionViable
+    tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.sustainer,tag=!sab.sustainerViableFFA] remove sab.classOptionViable
 #skill 7+ -- don't play sustainer in ffa
 execute if score @s sab.botSkill matches 7.. unless score @s Team matches 1..2 run \
-    tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.sustainer] remove sab.classOptionViable
+    tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.sustainer,tag=!sab.sustainerViableFFA] remove sab.classOptionViable
 #-----------------------
 #minimum sustainer rules:
 #first, count sustainers
@@ -80,14 +80,14 @@ scoreboard players set #count sab.var 0
 execute as @e[type=marker,tag=sab.classOption,tag=sab.goodForPicks,distance=..1] run scoreboard players operation #count sab.var += @s sab.var
 execute if entity @s[scores={sab.botSkill=7..,Team=1..2}] if score #count sab.var > #player_threshold_25_percent sab.var run \
     tag @e[type=marker,tag=sab.classOption,distance=..1,tag=sab.goodForPicks] remove sab.classOptionViable
-#any skill -- don't stack more than 2 players onto a single class (0-6 players on team)
+#any skill -- don't stack more than 2 players onto a single class (0-4 players on team)
 execute if score #playerCountCurrentTeam sab.var matches ..6 run \
     tag @e[type=marker,tag=sab.classOption,distance=..1,scores={sab.var=2..}] remove sab.classOptionViable
-#any skill -- don't stack more than 3 players onto a single class (7-16 players on team)
-execute if score #playerCountCurrentTeam sab.var matches 7..16 run \
+#any skill -- don't stack more than 3 players onto a single class (7-12 players on team)
+execute if score #playerCountCurrentTeam sab.var matches 7..12 run \
     tag @e[type=marker,tag=sab.classOption,distance=..1,scores={sab.var=3..}] remove sab.classOptionViable
-#any skill -- don't stack more than 4 players onto a single class (17-32 players on team)
-execute if score #playerCountCurrentTeam sab.var matches 17..32 run \
+#any skill -- don't stack more than 4 players onto a single class (13-32 players on team)
+execute if score #playerCountCurrentTeam sab.var matches 13..32 run \
     tag @e[type=marker,tag=sab.classOption,distance=..1,scores={sab.var=4..}] remove sab.classOptionViable
 #any skill -- don't run more than 50% guardian
 scoreboard players set #count sab.var 0

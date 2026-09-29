@@ -1,6 +1,10 @@
 #executed by a player or bot entity
 
 
+#log which sector we're in
+execute if score #sector_presence_recalc sab.var matches 1 at @s as @e[type=marker,tag=sab.botWaypointGeneric,distance=..20,limit=1,sort=nearest] run function sa_bots:bot/sector_logic/log_player_in_sector_blue
+
+
 #we're on this team
 scoreboard players add #playerCountBlue sab.var 1
 
@@ -37,18 +41,20 @@ execute if score @s Class matches 14 run data modify storage sa_bots:team_compos
 
 #register our goal
 #bot entity will tell us exactly what it's doing
-execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=0}] run data modify storage sa_bots:team_composition root.roles[{name:"pick"}].count append value {team:1}
-execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=1}] run data modify storage sa_bots:team_composition root.roles[{name:"push"}].count append value {team:1}
-execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=2}] run data modify storage sa_bots:team_composition root.roles[{name:"defend"}].count append value {team:1}
-execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=3}] run data modify storage sa_bots:team_composition root.roles[{name:"pick"}].count append value {team:1}
+execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=0}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
+execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=1}] run data modify storage sa_bots:team_composition root.goals[{name:"push"}].count append value {team:1}
+execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=2}] run data modify storage sa_bots:team_composition root.goals[{name:"defend"}].count append value {team:1}
+execute if entity @s[tag=sab.botEntity,scores={sab.botGoal=3}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
 
 #assume humans will do what is generally expected of their role
-execute if entity @s[type=player,scores={Class=1..2}] run data modify storage sa_bots:team_composition root.roles[{name:"push"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=3}] run data modify storage sa_bots:team_composition root.roles[{name:"pick"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=4..8}] run data modify storage sa_bots:team_composition root.roles[{name:"push"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=9}] run data modify storage sa_bots:team_composition root.roles[{name:"defend"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=10}] run data modify storage sa_bots:team_composition root.roles[{name:"push"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=11}] run data modify storage sa_bots:team_composition root.roles[{name:"pick"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=12}] run data modify storage sa_bots:team_composition root.roles[{name:"defend"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=13}] run data modify storage sa_bots:team_composition root.roles[{name:"pick"}].count append value {team:1}
-execute if entity @s[type=player,scores={Class=14..15}] run data modify storage sa_bots:team_composition root.roles[{name:"push"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=1}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=2}] run data modify storage sa_bots:team_composition root.goals[{name:"push"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=3}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=4..7}] run data modify storage sa_bots:team_composition root.goals[{name:"push"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=8}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=9}] run data modify storage sa_bots:team_composition root.goals[{name:"defend"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=10}] run data modify storage sa_bots:team_composition root.goals[{name:"push"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=11}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=12}] run data modify storage sa_bots:team_composition root.goals[{name:"defend"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=13}] run data modify storage sa_bots:team_composition root.goals[{name:"pick"}].count append value {team:1}
+execute if entity @s[type=player,scores={Class=14..15}] run data modify storage sa_bots:team_composition root.goals[{name:"push"}].count append value {team:1}

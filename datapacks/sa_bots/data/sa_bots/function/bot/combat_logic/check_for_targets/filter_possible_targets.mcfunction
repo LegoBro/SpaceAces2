@@ -18,7 +18,7 @@ execute if entity @s[tag=!sab.possibleTarget,tag=sab.possibleTargetHealing] run 
 #if valid teammate: are we the most injured teammate?
 execute if entity @s[tag=sab.possibleTargetHealing,tag=sab.activePlayer] \
     if score #shoot_teammates sab.var matches 1 run \
-    scoreboard players operation #lowest_percent_hp_teammate sab.var < @s sab.healthPercentage
+    scoreboard players operation #lowest_percent_hp_teammate sab.var < @s displayHealth
 
 #count if we're an enemy sustainer
 execute if entity @s[tag=sab.possibleTarget,tag=!sab.possibleTargetHealing,tag=sab.activePlayer] \

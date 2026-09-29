@@ -1,6 +1,9 @@
 #executed when a bot is shooting at a mobile entity
 #executed at e-0-0-0-1
 
+#set flag indicating we applied a significant offset
+scoreboard players set #test sab.var 1
+
 #quickly peek at what pitch we're looking at
 execute as e-0-0-0-1 store result score #pitch_target sab.var run data get entity @s Rotation[1] 100
 #don't do anything if we're shooting upward

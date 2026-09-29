@@ -29,3 +29,9 @@ execute if entity @s[scores={reload=1..,sab.lockedOntoEnemy=2..,ability.1.cooldo
 execute if score @s ultimate_charge >= class.scientist.ultimate.charge Numbers \
     if entity @s[scores={sab.lockedOntoEnemy=1..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -53 0 container.0

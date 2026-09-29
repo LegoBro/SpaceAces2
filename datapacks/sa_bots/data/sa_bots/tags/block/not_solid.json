@@ -11,11 +11,12 @@
 		"#minecraft:crops",
 		"#minecraft:fire",
 		"#minecraft:trapdoors",
+
+		"minecraft:moving_piston",
 		
 		"minecraft:light",
 		"minecraft:structure_void",
 		"minecraft:barrier",
-		"minecraft:lava",
 		"minecraft:water",
 		"minecraft:snow",
 		"minecraft:short_grass",

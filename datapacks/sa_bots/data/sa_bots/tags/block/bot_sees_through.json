@@ -1,6 +1,6 @@
 {
     "values": [
-		"#sa_bots:not_solid",
+		"#sa_bots:bot_shoots_through",
 
 		"#minecraft:fences",
 

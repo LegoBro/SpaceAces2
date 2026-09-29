@@ -2,7 +2,6 @@
 scoreboard objectives add sab.var dummy
 scoreboard objectives add sab.lifespan dummy
 scoreboard objectives add sab.onGround dummy
-scoreboard objectives add sab.healthPercentage dummy
 
 #bots
 scoreboard objectives add sab.botID dummy
@@ -11,6 +10,7 @@ scoreboard objectives add sab.botSkill dummy
 scoreboard objectives add sab.botAggression dummy
 scoreboard objectives add sab.botCooperativeness dummy
 scoreboard objectives add sab.botTask dummy
+scoreboard objectives add sab.botPreviousTask dummy
 scoreboard objectives add sab.botNavigationMode dummy
 scoreboard objectives add sab.botLookTime dummy
 scoreboard objectives add sab.botLookMode dummy
@@ -29,12 +29,15 @@ scoreboard objectives add sab.botReactionCountdown dummy
 scoreboard objectives add sab.botCheckLOSTimer dummy
 scoreboard objectives add sab.botTimeSinceLOS dummy
 scoreboard objectives add sab.botTargetEntityID dummy
+scoreboard objectives add sab.botTargetEntityDistance dummy
 scoreboard objectives add sab.entityTargetingID dummy
+scoreboard objectives add sab.botAttackerEntityID dummy
 scoreboard objectives add sab.botTargetAngleYaw100 dummy
 scoreboard objectives add sab.botTargetAnglePitch100 dummy
 scoreboard objectives add sab.botTargetAngleDifferenceYaw dummy
 scoreboard objectives add sab.botTargetAngleDifferencePitch dummy
 scoreboard objectives add sab.botNavThinkTime dummy
+scoreboard objectives add sab.reEvaluateBehaviorTime dummy
 scoreboard objectives add sab.botRightClick10Hz dummy
 scoreboard objectives add sab.airTime dummy
 scoreboard objectives add sab.groundedTime dummy
@@ -57,6 +60,10 @@ scoreboard objectives add sab.botMoveRotationOffset dummy
 scoreboard objectives add sab.botMoveRotationOffsetTime dummy
 scoreboard objectives add sab.botObserveTargetX dummy
 scoreboard objectives add sab.botObserveTargetZ dummy
+scoreboard objectives add sab.botInSector dummy
+scoreboard objectives add sab.botSeekingEnemy dummy
+scoreboard objectives add sab.botFollowingPlayer dummy
+scoreboard objectives add sab.botFollowers dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy
@@ -118,6 +125,7 @@ scoreboard objectives add sab.navSectorCacheChannelUC20 dummy
 scoreboard objectives add sab.markDistance dummy
 scoreboard objectives add sab.markEvent dummy
 scoreboard objectives add sab.markIndex dummy
+scoreboard objectives add sab.markDanger dummy
 scoreboard objectives add sab.usingNavCacheChanel dummy
 
 #editor

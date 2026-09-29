@@ -29,3 +29,8 @@ execute if score @s ultimate_charge >= class.bomber.ultimate.charge Numbers \
 tag @s[scores={sab.botSkill=3..}] add sab.botWeaponHasDownwardArc
 tag @s[scores={sab.botSkill=7..}] add sab.botShootAtFloor
 tag @s add sab.botWeaponSlowProjectile
+
+
+#put the correct item in our hands
+execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
+execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -59 0 container.0

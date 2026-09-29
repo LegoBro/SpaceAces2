@@ -1,0 +1,21 @@
+scoreboard players set #found_destination sab.var 0
+
+#specified enemy must exist and be on our team
+scoreboard players operation #team sab.var = @s Team
+scoreboard players add @s sab.botFollowingPlayer 0
+scoreboard players operation #get_id sab.var = @s sab.botFollowingPlayer
+execute as @e[type=#projectile:players,tag=sab.activePlayer] if score @s id = #get_id sab.var if score @s Team = #team sab.var \
+    at @s as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=nearest,distance=..200] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+
+
+#think again in 2 seconds
+scoreboard players set @s sab.botNavThinkTime 40
+
+#set id and sector from storage
+data modify entity @s data.destinations set value []
+execute if score #found_destination sab.var matches 1 run \
+    data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
+
+
+#fallback: switch task, regroup with nearest teammate
+execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:3}

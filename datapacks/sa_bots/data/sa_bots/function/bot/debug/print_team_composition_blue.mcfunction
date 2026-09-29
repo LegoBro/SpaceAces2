@@ -1,9 +1,20 @@
 #run manually by a player
 
 
-#print number of players on each class
+#print number of players with each goal type
 
 tellraw @s "\n"
+tellraw @s {text:"---Bot Goals---",color:blue,bold:true}
+
+execute store result storage sa_bots:waypoint_info text_dump int 1 run execute if data storage sa_bots:team_composition root.goals[{name:"push"}].count[{team:1}]
+tellraw @s [{text:"PUSH: ",color:blue},{nbt:"text_dump",storage:"sa_bots:waypoint_info",interpret:false}]
+execute store result storage sa_bots:waypoint_info text_dump int 1 run execute if data storage sa_bots:team_composition root.goals[{name:"defend"}].count[{team:1}]
+tellraw @s [{text:"DEFEND: ",color:blue},{nbt:"text_dump",storage:"sa_bots:waypoint_info",interpret:false}]
+execute store result storage sa_bots:waypoint_info text_dump int 1 run execute if data storage sa_bots:team_composition root.goals[{name:"pick"}].count[{team:1}]
+tellraw @s [{text:"PICK: ",color:blue},{nbt:"text_dump",storage:"sa_bots:waypoint_info",interpret:false}]
+
+#print number of players on each class
+
 tellraw @s {text:"---Striker---",color:blue,bold:true}
 
 execute store result storage sa_bots:waypoint_info text_dump int 1 run execute if data storage sa_bots:team_composition root.classes[1].count[{team:1}]
