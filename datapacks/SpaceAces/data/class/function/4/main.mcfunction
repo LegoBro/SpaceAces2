@@ -1,5 +1,7 @@
 ## Over-arching main player function
 
+execute unless score @s id matches 0.. run function class:4/helper/id/new_id
+
 execute store result score @s damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
 
 effect give @s minecraft:saturation infinite 0 true

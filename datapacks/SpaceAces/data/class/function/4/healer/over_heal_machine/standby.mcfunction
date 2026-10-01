@@ -11,7 +11,7 @@ scoreboard players operation gametime Numbers = @s i
 scoreboard players operation gametime Numbers %= 20 Numbers
 
 scoreboard players operation #team Team = @s Team
-scoreboard players operation place_id id = @s id
+scoreboard players operation place_id id = @s owner
 execute as @e[type=#projectile:players,tag=hb,distance=..50] at @s if score @s Team = #team Team run function class:4/healer/over_heal_machine/visualize
 execute if score gametime Numbers matches 0 as @e[type=#projectile:players,tag=hb,distance=..50] if score @s Team = #team Team run function class:4/healer/over_heal_machine/apply
 

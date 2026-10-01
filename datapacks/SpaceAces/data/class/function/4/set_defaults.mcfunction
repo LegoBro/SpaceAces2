@@ -67,7 +67,8 @@ data merge storage space_aces:class {\
         },\
         "2":{\
             cooldown: 200,\
-            duration: 182\
+            duration: 152,\
+            heal_amount: 1,\
         },\
         ultimate:{\
             charge: 1250,\

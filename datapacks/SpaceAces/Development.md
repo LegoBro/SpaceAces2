@@ -5,6 +5,7 @@
 
 * Numbers - global generic scoreboard for quickly storing or copying values
 * id - uniquely identifies players and their creations
+* owner - set for entities that are spawned by a player, equal to their id
 * Team - changes how damage and healing is applied, all players on same team share team score
 
 ### Health
@@ -51,10 +52,7 @@
 * displayHealth
 * gamemode
 
-
-
 * invis
-
 
 * kill
 * kills
@@ -130,5 +128,3 @@ Player or Mannequin NPC
 [See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
 
 ## To do:
-Separate player specific class tick from general class tick
-Blindness Variable

@@ -11,7 +11,7 @@ execute at @s unless block ~ ~ ~ air run tp @s ~ ~.25 ~
 
 ## Damage
 scoreboard players operation #team Team = @s Team
-scoreboard players operation #id id = @s id
+scoreboard players operation #id id = @s owner
 scoreboard players operation damage Numbers = class.brawler.ultimate.damage Numbers
 execute as @e[type=#projectile:players,tag=hb] if score @s id = #id id run tag @s add target.owner
 

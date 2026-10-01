@@ -44,6 +44,8 @@ scoreboard players reset * lowHealth
 scoreboard players reset * maxHealth
 scoreboard players reset * melee.cooldown
 scoreboard players reset * menu
+scoreboard players reset * id
+scoreboard players reset * owner
 scoreboard players reset * Numbers
 scoreboard players reset * over_heal
 scoreboard players reset * over_heal_delay

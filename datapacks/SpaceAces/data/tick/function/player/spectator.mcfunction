@@ -11,5 +11,5 @@ execute if entity @s[gamemode=adventure,team=spectator] unless block ~ ~ ~ minec
 
 # Remove heart-beat
 execute if score @s lowHealth matches 1.. run scoreboard players reset @s lowHealth
-
+execute if score @s id matches 0.. run scoreboard players reset @s id
 return 1

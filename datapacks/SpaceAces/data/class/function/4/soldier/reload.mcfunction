@@ -27,6 +27,7 @@ execute store result score class.soldier.1.explode_falloffStart Numbers run data
 
 execute store result score class.soldier.2.cooldown Numbers run data get storage space_aces:class soldier.2.cooldown
 execute store result score class.soldier.2.duration Numbers run data get storage space_aces:class soldier.2.duration
+execute store result score class.soldier.2.heal_amount Numbers run data get storage space_aces:class soldier.2.heal_amount
 
 execute store result score class.soldier.ultimate.charge Numbers run data get storage space_aces:class soldier.ultimate.charge
 execute store result score class.soldier.ultimate.duration Numbers run data get storage space_aces:class soldier.ultimate.duration 20

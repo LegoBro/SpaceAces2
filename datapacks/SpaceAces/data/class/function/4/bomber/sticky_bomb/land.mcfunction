@@ -3,6 +3,6 @@ summon item_display ^ ^ ^-0.5 {Tags:["entity","standby_sticky_bomb","hb_mine","c
 item replace entity @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,tag=entity,distance=..3] container.0 with minecraft:paper[item_model="class/bomber/sticky"]
 scoreboard players operation @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,tag=entity,distance=..3] Team = @s Team
 scoreboard players set @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,tag=entity,distance=..3] health 50
-execute store result score @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,tag=entity,distance=..3] id run scoreboard players get @s id
+execute store result score @n[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,tag=entity,distance=..3] owner run scoreboard players get @s owner
 tag @e[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,tag=entity,distance=..3] remove new
 return 1

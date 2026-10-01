@@ -7,6 +7,7 @@ scoreboard players operation @s speed = class.bomber.secondary.speed Numbers
 scoreboard players operation @s arcRate = class.bomber.secondary.arcRate Numbers
 scoreboard players operation @s Team = #Class_Start Team
 scoreboard players operation @s id = #Class_Start id
+scoreboard players operation @s owner = #Class_Start id
 scoreboard players operation @s damageMultiplier = #damageMultiplier damageMultiplier
 scoreboard players operation @s j = @s speed
 tag @s remove new

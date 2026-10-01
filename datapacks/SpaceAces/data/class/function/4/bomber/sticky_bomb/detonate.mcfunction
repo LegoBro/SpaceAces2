@@ -6,7 +6,7 @@ scoreboard players operation #critMult Numbers = class.bomber.secondary.detonate
 scoreboard players operation #falloff Numbers = class.bomber.secondary.detonate_falloff Numbers
 scoreboard players operation #falloffStart Numbers = class.bomber.secondary.detonate_falloffStart Numbers
 
-scoreboard players operation place_id id = @s id
+scoreboard players operation place_id id = @s owner
 function class:4/helper/tag_team
 execute as @e[type=#projectile:players,tag=hb] if score @s id = place_id id run tag @s add attacker
 execute as @n[type=#projectile:players,tag=hb,tag=attacker] facing entity @e[distance=1..6,tag=hb] feet positioned ^ ^ ^ run function projectile:boomer/create
