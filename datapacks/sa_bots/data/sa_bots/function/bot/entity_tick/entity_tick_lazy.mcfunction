@@ -16,8 +16,8 @@ execute if score @s damage matches 1.. run function sa_bots:bot/combat_logic/rea
 #CLASS TICK
 
 #translate sab.botRightClick10Hz into rightClick
-scoreboard players remove @s[scores={sab.botRightClick10Hz=0..}] sab.botRightClick10Hz 1
 execute if score @s sab.botRightClick10Hz matches 0.. run scoreboard players set @s rightClick 1
+scoreboard players remove @s[scores={sab.botRightClick10Hz=0..}] sab.botRightClick10Hz 1
 
 #directly run Space Aces functions
 function class:4/main
@@ -30,7 +30,4 @@ function class:4/main
 
 #movement tick
 function sa_bots:bot/movement/_movement_main
-
-#clean up some tags
-tag @s[tag=sab.botAimAtOwnFeet] remove sab.botAimAtOwnFeet
 #----------------------------

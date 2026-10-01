@@ -30,6 +30,7 @@ execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bo
 #look time
 scoreboard players remove @s[scores={sab.botLookTime=1..}] sab.botLookTime 1
 scoreboard players remove @s[scores={sab.botIgnoreAimTime=1..}] sab.botIgnoreAimTime 1
+scoreboard players remove @s[scores={sab.botForceAngleTime=1..}] sab.botForceAngleTime 1
 
 #crouch time
 execute if score @s sab.botCrouchTime matches 1.. run function sa_bots:bot/movement/misc/crouch

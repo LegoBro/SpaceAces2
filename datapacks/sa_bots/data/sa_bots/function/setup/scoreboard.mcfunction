@@ -2,6 +2,7 @@
 scoreboard objectives add sab.var dummy
 scoreboard objectives add sab.lifespan dummy
 scoreboard objectives add sab.onGround dummy
+scoreboard objectives add sab.hasTurret dummy
 
 #bots
 scoreboard objectives add sab.botID dummy
@@ -34,6 +35,9 @@ scoreboard objectives add sab.entityTargetingID dummy
 scoreboard objectives add sab.botAttackerEntityID dummy
 scoreboard objectives add sab.botTargetAngleYaw100 dummy
 scoreboard objectives add sab.botTargetAnglePitch100 dummy
+scoreboard objectives add sab.botForceAngleYaw100 dummy
+scoreboard objectives add sab.botForceAnglePitch100 dummy
+scoreboard objectives add sab.botForceAngleTime dummy
 scoreboard objectives add sab.botTargetAngleDifferenceYaw dummy
 scoreboard objectives add sab.botTargetAngleDifferencePitch dummy
 scoreboard objectives add sab.botNavThinkTime dummy
@@ -127,6 +131,9 @@ scoreboard objectives add sab.markEvent dummy
 scoreboard objectives add sab.markIndex dummy
 scoreboard objectives add sab.markDanger dummy
 scoreboard objectives add sab.usingNavCacheChanel dummy
+scoreboard objectives add sab.teamPresenceBlue dummy
+scoreboard objectives add sab.teamPresenceRed dummy
+scoreboard objectives add sab.teamPresenceNet dummy
 
 #editor
 scoreboard objectives add sab.selected dummy

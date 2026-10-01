@@ -1,17 +1,8 @@
 #executed each time we empty the destinations list
 
 
-#read task (already stored... let's not update it until we need to change it!)
-#execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
+#look up what we're doing
+function sa_bots:bot/entity_task/_improvise_task_reach_destination_index
 
-#follow the script for whatever task we're doing (some can loop forever, others will kick us off and onto another task)
-execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/0_random_destination/pick_destination
-execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 2 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 3 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 4 run return run function sa_bots:bot/entity_task/4_go_after_specific_teammate/pick_destination
-execute if score @s sab.botTask matches 5 run return run function sa_bots:bot/entity_task/complete_non_base_task
-execute if score @s sab.botTask matches 6 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 7 run return run function sa_bots:bot/entity_task/complete_non_base_task
-execute if score @s sab.botTask matches 8 run return run function sa_bots:bot/entity_task/_improvise_base_task
-#...
+#run logic based on task, again
+function sa_bots:bot/entity_task/_task_tick_index

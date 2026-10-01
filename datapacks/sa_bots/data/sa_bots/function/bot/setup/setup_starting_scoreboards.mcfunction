@@ -4,6 +4,8 @@
 #gameplay scores
 scoreboard players set @s sab.botNavigationMode 0
 scoreboard players set @s sab.botLookTime 0
+scoreboard players set @s sab.botIgnoreAimTime 0
+scoreboard players set @s sab.botForceAngleTime 0
 scoreboard players set @s sab.botLookMode 0
 scoreboard players set @s sab.botWPSearchCooldown 0
 scoreboard players set @s sab.dUltimateCharge -1

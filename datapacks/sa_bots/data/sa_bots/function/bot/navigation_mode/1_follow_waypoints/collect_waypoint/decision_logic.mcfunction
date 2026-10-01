@@ -32,7 +32,7 @@ scoreboard players set #goal_sector sab.var 0
 scoreboard players set #goal_id sab.var -1
 execute if data entity @s data.destinations[0] store result score #goal_sector sab.var run data get entity @s data.destinations[0].sector
 execute if data entity @s data.destinations[0] store result score #goal_id sab.var run data get entity @s data.destinations[0].id
-execute if score #goal_id sab.var matches -1 run tellraw @a[gamemode=!adventure] {text:"[ ! ] Bot reached a waypoint and doesn't have a destination!",color:red}
+execute if score #goal_id sab.var matches -1 run tellraw @a[gamemode=!adventure] [{text:"[ ! ] Bot reached a waypoint and doesn't have a destination!",color:red},"\n",{text:"sab.botTask=",color:white},{score:{name:"@s",objective:"sab.botTask"}}]
 
 
 

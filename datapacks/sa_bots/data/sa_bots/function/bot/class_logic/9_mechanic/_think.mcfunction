@@ -10,11 +10,10 @@ execute if entity @s[scores={reload=0,totalShots=..1,sab.botSkill=6..}] unless e
 #hold primary weapon
 execute unless score @s reload matches 1.. run scoreboard players set @s SelectedItem 0
 #when reloading, use abilities
-execute if score @s reload matches 1.. if score @s ability.1.cooldown matches ..0 run scoreboard players set @s SelectedItem 1
-execute if score @s reload matches 1.. if score @s ability.1.cooldown matches 1.. run scoreboard players set @s SelectedItem 2
+execute if entity @s[scores={reload=1..,ability.2.cooldown=1..,sab.hasTurret=0}] run scoreboard players set @s SelectedItem 1
+execute if entity @s[scores={reload=1..,ability.2.cooldown=..0}] run scoreboard players set @s SelectedItem 2
 
 #todo: drone logic
-
 
 
 

@@ -1,9 +1,9 @@
 scoreboard players set #found_destination sab.var 0
 
-#we want to pick a patrol point that is
+#we want to pick a point that is
 #1) not in a sector that is more dangerous than where we already are
 
-#possible sources of healing:
+#possible targets:
 # @e[type=marker,tag=wp.sniperSpot]
 # @e[type=marker,tag=wp.sniperSpot.red]
 # @e[type=marker,tag=wp.sniperSpot.blue]
@@ -24,7 +24,7 @@ execute if score @s Team matches 2 run function sa_bots:bot/entity_task/log_poss
 execute if score @s Team matches 1 run function sa_bots:bot/entity_task/log_possible_destination/get_sector_danger_red
 
 
-#log all possible source of healing along with how dangerous and far away they are
+#log all possible targets along with how dangerous and far away they are
 execute as @e[type=marker,tag=wp.sniperSpot,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
 execute if score @s Team matches 1 as @e[type=marker,tag=wp.sniperSpot.blue,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
 execute if score @s Team matches 2 as @e[type=marker,tag=wp.sniperSpot.red,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
@@ -39,7 +39,7 @@ execute if score #count_less_dangerous sab.var matches 1.. as @e[type=marker,tag
 execute unless score #count_less_dangerous sab.var matches 1.. as @e[type=marker,tag=sab.decisionMaker,distance=..1,limit=1,sort=random] run function sa_bots:bot/entity_task/log_possible_destination/choose_viable_option
 
 #set id and sector from storage
-data modify entity @s data.destinations set value []
+execute if score #found_destination sab.var matches 1 run data modify entity @s data.destinations set value []
 execute if score #found_destination sab.var matches 1 run \
     data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
 #-----------------------------------

@@ -9,9 +9,13 @@ tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 tellraw @s [{text:"==\\/==",color:red,bold:true}," ",{translate:"sa_bot.heading.nav_debug",color:red,bold:true}," ",{text:"==\\/==",color:red,bold:true}]
 
 
+#show bot task and goal
+execute unless score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 53"}}," ",{translate:"sa_bot.menu.debug.show_bot_task",color:white,bold:true}]
+execute if score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 53"}}," ",{translate:"sa_bot.menu.debug.show_bot_task",color:white,bold:true}]
+
 #show bot destination
-execute unless score #debug_show_bot_destination sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]
-execute if score #debug_show_bot_destination sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]
+execute unless score #debug_show_bot_destination sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]
+execute if score #debug_show_bot_destination sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]
 
 #adopt nav channel of nearest bot
 execute unless score #debug_adopt_nav_channel sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 40"}}," ",{translate:"sa_bot.menu.debug.adopt_nav_channel_of_nearest_bot",color:white,bold:true}]

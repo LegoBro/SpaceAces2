@@ -50,4 +50,5 @@ execute if score @s botPathEdit matches 49 run function sa_bots:editor/action/to
 execute if score @s botPathEdit matches 50 run function sa_bots:editor/action/toggle_waypoint_tag {index:9}
 execute if score @s botPathEdit matches 51 run function sa_bots:editor/action/toggle_waypoint_tag {index:10}
 execute if score @s botPathEdit matches 52 run function sa_bots:editor/action/toggle_waypoint_tag {index:11}
+execute if score @s botPathEdit matches 53 run function sa_bots:editor/action/toggle_score {name:"#debug_show_bot_task",menu:"16_nav_debug"}
 #...

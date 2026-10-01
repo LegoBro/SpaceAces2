@@ -5,7 +5,7 @@
 scoreboard players set @s SelectedItem 0
 
 #shoot when we see someone (don't have to be dead-on, just close)
-execute if entity @s[scores={sab.lockedOntoEnemy=2..}] run scoreboard players set @s sab.botRightClick10Hz 1
+execute if entity @s[scores={sab.lockedOntoEnemy=2..}] run scoreboard players set @s sab.botRightClick10Hz 2
 
 #use photon rush while in combat
 execute if entity @s[tag=input.forward,scores={sab.lockedOntoEnemy=1..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1

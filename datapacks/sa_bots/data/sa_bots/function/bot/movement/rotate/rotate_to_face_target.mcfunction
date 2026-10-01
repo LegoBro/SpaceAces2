@@ -14,12 +14,6 @@ scoreboard players operation #yaw_difference sab.var %= #36000 sab.var
 scoreboard players remove #yaw_difference sab.var 18000
 scoreboard players operation #pitch sab.var -= @s sab.botTargetAnglePitch100
 
-#debug, get info about rotations
-#tellraw @a[distance=..2] ["\nyaw_current=",{score:{name:"#yaw",objective:"sab.var"}}, \
-    "\nbotTargetAngleYaw100=",{score:{name:"@s",objective:"sab.botTargetAngleYaw100"}}, \
-    "\nyaw_difference=",{score:{name:"#yaw_difference",objective:"sab.var"}} \
-    ]
-
 #save how far off we are
 scoreboard players operation @s sab.botTargetAngleDifferenceYaw = #yaw_difference sab.var
 scoreboard players operation @s sab.botTargetAngleDifferencePitch = #pitch sab.var
@@ -27,14 +21,15 @@ scoreboard players operation @s sab.botTargetAngleDifferencePitch = #pitch sab.v
 #reaction time depletes faster if our crosshair is already near the target
 scoreboard players remove @s[scores={sab.botReactionCountdown=1..,sab.botTargetEntityID=1..,sab.botTargetAngleDifferenceYaw=-4500..4500,sab.botTargetAngleDifferencePitch=-4500..4500}] sab.botReactionCountdown 1
 
+#quit out and rotate without focus if commanded to do so
+execute if score @s sab.botForceAngleTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_to_face_angle
+execute if score @s sab.botIgnoreAimTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_without_focus
+#=====
+
 #quit out and rotate without focus if we haven't finished our reaction time yet
 #(only applies when shooting at an enemy)
 execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={sab.botReactionCountdown=1..,sab.botTargetEntityID=1..}] run \
     return run function sa_bots:bot/movement/rotate/rotate_without_focus
-#=====
-
-#quit out and rotate without focus if commanded to do so
-execute if score @s sab.botIgnoreAimTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_without_focus
 #=====
 
 #set aim speed based on skill

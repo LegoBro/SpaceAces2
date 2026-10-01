@@ -7,3 +7,6 @@ function sa_bots:api/round_setup/reset_sector_nav_cache
 
 #let the bots know what they should be broadly trying to accomplish
 function sa_bots:api/round_setup/load_game_objective
+
+#calculate sector connections soon
+scoreboard players set #calculate_sector_connections sab.var 1

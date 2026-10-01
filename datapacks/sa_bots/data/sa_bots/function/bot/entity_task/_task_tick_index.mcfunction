@@ -14,4 +14,9 @@ execute if score @s sab.botTask matches 5 run return run function sa_bots:bot/en
 execute if score @s sab.botTask matches 6 run return run function sa_bots:bot/entity_task/6_find_patrol_point/_logic_tick
 execute if score @s sab.botTask matches 7 run return run function sa_bots:bot/entity_task/7_find_sniper_spot/_logic_tick
 execute if score @s sab.botTask matches 8 run return run function sa_bots:bot/entity_task/8_find_turret_spot/_logic_tick
+execute if score @s sab.botTask matches 9 run return run function sa_bots:bot/entity_task/9_random_destination_blue/_logic_tick
+execute if score @s sab.botTask matches 10 run return run function sa_bots:bot/entity_task/10_random_destination_red/_logic_tick
+execute if score @s sab.botTask matches 11 run return run function sa_bots:bot/entity_task/11_random_destination_unoccupied/_logic_tick
+execute if score @s sab.botTask matches 12 run return run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/_logic_tick
+execute if score @s sab.botTask matches 13 run return run function sa_bots:bot/entity_task/13_random_destination_front_line_red/_logic_tick
 #...

@@ -2,7 +2,7 @@
 #return 0 to not shoot
 
 #always shoot if we're already ready to shoot at our feet
-execute if entity @s[tag=sab.botAimAtOwnFeet] run return 1
+execute if score @s sab.botForceAngleTime matches 1.. run return 1
 
 #roll random number influenced by skill level
 execute store result score #random sab.var run random value -32..8

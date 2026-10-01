@@ -1,3 +1,7 @@
+#do forced angle if requested
+execute if score @s sab.botForceAngleTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_to_face_angle
+#=====
+
 #don't change rotation if we're at roughly the same x and z
 #(this prevents bots from becoming a fidget spinner when above or below target)
 execute if score @s sab.botMoveTargetDX matches -15..15 if score @s sab.botMoveTargetDZ matches -15..15 \
@@ -6,11 +10,10 @@ execute if score @s sab.botMoveTargetDX matches -15..15 if score @s sab.botMoveT
 
 
 #face target, and use a y pitch roughly corresponding to how high up or down the target is compared to us
-execute if score @s sab.botMoveTargetDY matches ..-50 facing entity f-0-0-0-1 eyes run rotate @s ~ ~-2
-execute if score @s sab.botMoveTargetDY matches -49..-20 facing entity f-0-0-0-1 eyes run rotate @s ~ -2
-execute if score @s sab.botMoveTargetDY matches -19..20 facing entity f-0-0-0-1 eyes run rotate @s ~ 2
-execute if score @s sab.botMoveTargetDY matches 21..60 facing entity f-0-0-0-1 eyes run rotate @s ~ 6
-execute if score @s sab.botMoveTargetDY matches 61.. facing entity f-0-0-0-1 eyes run rotate @s ~ ~5
 
-#look straight down if commanded to do so
-execute if entity @s[tag=sab.botAimAtOwnFeet] run rotate @s ~ ~85
+#we're below, look up
+execute if score @s sab.botMoveTargetDY matches ..-10 facing entity f-0-0-0-1 eyes run rotate @s ~ ~-2
+#middle
+execute if score @s sab.botMoveTargetDY matches -9..10 facing entity f-0-0-0-1 eyes run rotate @s ~ 2
+#we're above, look down
+execute if score @s sab.botMoveTargetDY matches 11.. facing entity f-0-0-0-1 eyes run rotate @s ~ ~-2

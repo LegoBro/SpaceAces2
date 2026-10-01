@@ -26,7 +26,7 @@ execute if entity @s[tag=sab.botShootingFriendlyPlayer] run function sa_bots:bot
 execute if entity @s[tag=sab.botShootingFriendlyPlayer,scores={ability.1.cooldown=..180}] run function sa_bots:bot/combat_logic/look_at_target/forget_target
 
 #throw grenade at self if low on health
-execute if entity @s[scores={displayHealth=..49,sab.botSkill=4..,ability.1.cooldown=200..,sab.airTime=..10}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_looking_down run \
+execute if entity @s[scores={displayHealth=..49,sab.botSkill=4..,ability.1.cooldown=200..,sab.airTime=..10,sab.botIgnoreAimTime=..0}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_looking_down run \
     function sa_bots:bot/class_logic/use_ability_1_if_aiming_down
 
 
