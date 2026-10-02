@@ -1,2 +1,2 @@
-#get data from waypoint
-$execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/fetch_data
+#get data from waypoint (running a second version of the function that will avoid infinite loops if our destination is the same)
+$execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/fetch_data_repeated

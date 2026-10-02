@@ -25,6 +25,7 @@ execute if entity @s[scores={health=..174,ability.2.cooldown=..0}] \
 
 #use ultimate whenever enemies are nearby
 execute if score @s ultimate_charge >= class.pyro.ultimate.charge Numbers \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely \
     if function sa_bots:bot/class_logic/check_if_enemies_nearby run function sa_bots:bot/class_logic/use_ultimate
 
 

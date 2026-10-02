@@ -1,4 +1,4 @@
-#executed as f-0-0-0-1
+#executed as e-0-0-0-2
 
 #normalize vector
 execute facing entity @s feet positioned ^ ^ ^0.0042 if loaded ~ ~ ~ run tp @s ~ ~ ~ ~ ~

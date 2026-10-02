@@ -18,7 +18,7 @@ execute if entity @s[scores={reload=0,totalShots=..6,sab.botSkill=6..}] unless e
 
 #use ultimate whenever ready
 execute if score @s ultimate_charge >= class.scout.ultimate.charge Numbers \
-    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_unlikely run function sa_bots:bot/class_logic/use_ultimate
 
 
 #put the correct item in our hands

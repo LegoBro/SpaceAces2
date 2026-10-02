@@ -12,8 +12,8 @@ execute if score @s sab.botMoveTargetDX matches -15..15 if score @s sab.botMoveT
 #face target, and use a y pitch roughly corresponding to how high up or down the target is compared to us
 
 #we're below, look up
-execute if score @s sab.botMoveTargetDY matches ..-10 facing entity f-0-0-0-1 eyes run rotate @s ~ ~-2
+execute if score @s sab.botMoveTargetDY matches ..-10 facing entity e-0-0-0-2 eyes run rotate @s ~ ~-2
 #middle
-execute if score @s sab.botMoveTargetDY matches -9..10 facing entity f-0-0-0-1 eyes run rotate @s ~ 2
+execute if score @s sab.botMoveTargetDY matches -9..10 facing entity e-0-0-0-2 eyes run rotate @s ~ 2
 #we're above, look down
-execute if score @s sab.botMoveTargetDY matches 11.. facing entity f-0-0-0-1 eyes run rotate @s ~ ~-2
+execute if score @s sab.botMoveTargetDY matches 11.. facing entity e-0-0-0-2 eyes run rotate @s ~ ~-2

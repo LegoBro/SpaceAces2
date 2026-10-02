@@ -20,4 +20,5 @@ execute if score #choice sab.var matches 9 run data modify storage sa_bots:gener
 execute if score #choice sab.var matches 10 run data modify storage sa_bots:generic new_task set value {id:10,name:"RANDOM_DESTINATION_RED",is_base_task:1,flags:{is_base_task:1,priority:2}}
 execute if score #choice sab.var matches 11 run data modify storage sa_bots:generic new_task set value {id:11,name:"FIND_UNOCCUPIED_SECTOR",is_base_task:1,flags:{is_base_task:1,priority:1}}
 execute if score #choice sab.var matches 12 run data modify storage sa_bots:generic new_task set value {id:12,name:"FRONT_LINE_BLUE",is_base_task:1,flags:{is_base_task:1,priority:13}}
-execute if score #choice sab.var matches 13.. run data modify storage sa_bots:generic new_task set value {id:13,name:"FRONT_LINE_RED",is_base_task:1,flags:{is_base_task:1,priority:13}}
+execute if score #choice sab.var matches 13 run data modify storage sa_bots:generic new_task set value {id:13,name:"FRONT_LINE_RED",is_base_task:1,flags:{is_base_task:1,priority:13}}
+execute if score #choice sab.var matches 14.. run data modify storage sa_bots:generic new_task set value {id:14,name:"RANDOM_WITHIN_SECTOR",is_base_task:1,flags:{is_base_task:1,priority:3}}

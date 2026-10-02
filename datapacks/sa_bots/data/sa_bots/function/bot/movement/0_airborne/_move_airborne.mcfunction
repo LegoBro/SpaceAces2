@@ -30,7 +30,7 @@ execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movemen
 
 #get a normalized vector from us to our movement target entity
 execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bots:bot/movement/0_airborne/rotate_move_target_angle
-execute unless score @s sab.botMoveRotationOffsetTime matches 1.. at @s as f-0-0-0-1 run function sa_bots:bot/movement/0_airborne/finalize_move_target
+execute unless score @s sab.botMoveRotationOffsetTime matches 1.. at @s as e-0-0-0-2 run function sa_bots:bot/movement/0_airborne/finalize_move_target
 scoreboard players operation @s sab.botMovementYaw = #rotation sab.var
 execute store result score #x sab.var run data get entity @s Pos[0] 100000
 execute store result score #z sab.var run data get entity @s Pos[2] 100000
@@ -42,7 +42,7 @@ function sa_bots:bot/movement/find_difference_between_move_and_face_angle
 
 #are we walking into a jumpable gap? do a jump to maybe get over it
 #(no problem if this overlaps with the coyote jump, that would just set velocity to the same value twice)
-execute if score @s sab.botMoveStateLastTick matches 1 at f-0-0-0-1 run function sa_bots:bot/movement/0_airborne/check_for_jumpable_gap
+execute if score @s sab.botMoveStateLastTick matches 1 at e-0-0-0-2 run function sa_bots:bot/movement/0_airborne/check_for_jumpable_gap
 
 #--------------------------
 #apply various multipliers to x and z velocity

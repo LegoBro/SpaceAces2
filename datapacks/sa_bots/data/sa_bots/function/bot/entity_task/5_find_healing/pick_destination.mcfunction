@@ -52,6 +52,7 @@ execute unless score #count_less_dangerous sab.var matches 1.. as @e[type=marker
 execute as @e[type=marker,tag=sab.viableOption,tag=sab.decisionMaker,distance=..1,limit=1,sort=random] run function sa_bots:bot/entity_task/log_possible_destination/choose_viable_option
 
 #set id and sector from storage
+scoreboard players set @s sab.botLastDestinationUUID -1
 execute if score #found_destination sab.var matches 1 run data modify entity @s data.destinations set value []
 execute if score #found_destination sab.var matches 1 run \
     data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
@@ -62,7 +63,7 @@ kill @e[type=marker,tag=sab.decisionMaker,distance=..1]
 
 
 #Earl can go home now
-tp e-0-0-0-1 0 0 0
+tp e-0-0-0-1 0 50 0
 
 #fallback: end task, go one layer down on the task list
 execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/complete_non_base_task

@@ -19,4 +19,5 @@ execute if score @s sab.botTask matches 10 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 11 run return run function sa_bots:bot/entity_task/11_random_destination_unoccupied/_logic_tick
 execute if score @s sab.botTask matches 12 run return run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/_logic_tick
 execute if score @s sab.botTask matches 13 run return run function sa_bots:bot/entity_task/13_random_destination_front_line_red/_logic_tick
+execute if score @s sab.botTask matches 14 run return run function sa_bots:bot/entity_task/14_random_destination_within_current_sector/_logic_tick
 #...

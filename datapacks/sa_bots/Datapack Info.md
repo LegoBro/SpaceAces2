@@ -25,3 +25,15 @@ The built-in tools will prevent stale references on waypoint connections.
 "sa_bots:team_composition" for data compiled on how many players are on each team and what classes they're playing
 "sa_bots:waypoint" for arguments related to working with bot waypoints
 "sa_bots:waypoint_info" for dumping the whole data of a waypoint so it can be displayed in text
+
+
+# ENTITIES
+This datapack creates 16 Marker entities at x=0, y=50, z=0.
+These entities are summoned when a round is started with bots enabled.
+> e-0-0-0-1 ... Used to keep track of data for sector 1 (team occupancy, connections to other sectors)
+> ...
+> e-0-0-0-10 ... Used to keep track of data for sector 16 (team occupancy, connections to other sectors)
+
+Some of these entities serve a second purpose:
+> e-0-0-0-1 ... Used for rotation calculations
+> e-0-0-0-2 ... Used for bot movement vector

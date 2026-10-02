@@ -4,6 +4,10 @@
 #read task (already stored... let's not update it until we need to change it!)
 #execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
 
+
+#clear old tag indicating that the last thing we completed was a base task
+scoreboard players reset @s sab.botPreviousNonBaseTask
+
 #follow the script for whatever task we're doing (some can loop forever, others will kick us off and onto another task)
 execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/_improvise_base_task
@@ -20,4 +24,5 @@ execute if score @s sab.botTask matches 10 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 11 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 12 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 13 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 14 run return run function sa_bots:bot/entity_task/_improvise_base_task
 #...

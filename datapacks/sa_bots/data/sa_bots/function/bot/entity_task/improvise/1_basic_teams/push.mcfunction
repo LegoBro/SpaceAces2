@@ -38,3 +38,15 @@ execute if score @s Class matches 3 if score #random sab.var matches 1..50 run s
 #mechanic is likely to seek a turret spot
 execute if score @s Class matches 9 if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 8
 #---------------------------------
+
+
+#---------------------------------
+#follow behavior
+
+#keep following the player we're following
+execute if score @s sab.botFollowingPlayer matches 1.. run scoreboard players set #choice sab.var 4
+#low skill bot might pause if we're reached the person we're following
+execute if score @s sab.botSkill matches ..4 if score #choice sab.var matches 4 if score @s sab.botDestinationUUID = @s sab.botLastDestinationUUID store result score @s sab.botPauseTime run random value 5..25
+#high skill bot will roam the sector for a brief moment if we're reached the person we're following
+execute if score @s sab.botSkill matches 5.. if score #choice sab.var matches 4 if score @s sab.botDestinationUUID = @s sab.botLastDestinationUUID run scoreboard players set #choice sab.var 14
+#---------------------------------

@@ -24,7 +24,8 @@ execute if entity @s[scores={sab.lockedOntoEnemy=4..,ability.1.cooldown=..0}] \
 #use ultimate when enemies are close and we're targeting someone
 execute if score @s ultimate_charge >= class.seeker.ultimate.charge Numbers \
     if score @s sab.lockedOntoEnemy matches 1.. \
-    if function sa_bots:bot/class_logic/check_if_enemies_nearby_close run function sa_bots:bot/class_logic/use_ultimate
+    if function sa_bots:bot/class_logic/check_if_enemies_nearby_close \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
 
 
 

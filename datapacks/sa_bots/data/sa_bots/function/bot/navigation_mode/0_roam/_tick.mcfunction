@@ -12,7 +12,7 @@ scoreboard players set @s sab.botTimeSinceProgress 2
 
 #check for nearby waypoints
 execute if score @s sab.botWPSearchCooldown matches ..0 \
-    store result score @s sab.botWPSearchCooldown run function sa_bots:bot/waypoint_nav/seek_nearby_waypoint
+    store result score @s sab.botWPSearchCooldown run function sa_bots:bot/waypoint_nav/seek_nearby_waypoint_ignore_last_2_targets
 
 #found target? switch to follow_waypoints mode
 execute if data entity @s data.move_targets[0] run \

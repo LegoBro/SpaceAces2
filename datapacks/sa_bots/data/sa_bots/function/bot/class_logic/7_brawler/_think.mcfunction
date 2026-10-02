@@ -23,7 +23,7 @@ execute if entity @s[scores={sab.lockedOntoEnemy=3..,ability.1.cooldown=..0,sab.
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.brawler.ultimate.charge Numbers \
     if entity @s[scores={sab.lockedOntoEnemy=3..}] \
-    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 
 #put the correct item in our hands

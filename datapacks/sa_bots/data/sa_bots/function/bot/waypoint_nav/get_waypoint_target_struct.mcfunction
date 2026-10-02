@@ -13,6 +13,7 @@ execute if score #spread_bias_x sab.var matches -2147483648..2147483647 at @s if
 scoreboard players set #found_target sab.var 1
 
 #now record our coordinates
+data modify storage sa_bots:generic target.id set from entity @s UUID[3]
 data modify storage sa_bots:generic target.uuid4 set from entity @s data.uuid4
 data modify storage sa_bots:generic target.x set from entity @s Pos[0]
 data modify storage sa_bots:generic target.y set from entity @s Pos[1]

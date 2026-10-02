@@ -28,4 +28,4 @@ scoreboard players operation #var sab.var += #z2 sab.var
 execute store result entity @s Motion[2] double 0.0001 run scoreboard players get #var sab.var
 
 #clean-up
-tp e-0-0-0-1 0 0 0
+tp e-0-0-0-1 0 50 0

@@ -57,6 +57,6 @@ scoreboard players operation #yaw_target sab.var %= #36000 sab.var
 execute as e-0-0-0-1 store result score #pitch_target sab.var run data get entity @s Rotation[1] 100
 
 #clean-up
-tp e-0-0-0-1 0 0 0
+tp e-0-0-0-1 0 50 0
 tag @s remove sab.possibleTarget
 tag @s remove sab.possibleTargetSeeOnly

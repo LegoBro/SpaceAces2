@@ -23,7 +23,7 @@ execute if score @s reload matches 1.. if score @s ability.1.cooldown matches 1.
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.bomber.ultimate.charge Numbers \
     if entity @s[scores={sab.lockedOntoEnemy=3..}] \
-    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 #all weapons require leading shots and arcs
 tag @s[scores={sab.botSkill=3..}] add sab.botWeaponHasDownwardArc

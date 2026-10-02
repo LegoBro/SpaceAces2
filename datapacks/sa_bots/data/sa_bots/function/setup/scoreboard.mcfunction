@@ -12,6 +12,7 @@ scoreboard objectives add sab.botAggression dummy
 scoreboard objectives add sab.botCooperativeness dummy
 scoreboard objectives add sab.botTask dummy
 scoreboard objectives add sab.botPreviousTask dummy
+scoreboard objectives add sab.botPreviousNonBaseTask dummy
 scoreboard objectives add sab.botNavigationMode dummy
 scoreboard objectives add sab.botLookTime dummy
 scoreboard objectives add sab.botLookMode dummy
@@ -134,6 +135,10 @@ scoreboard objectives add sab.usingNavCacheChanel dummy
 scoreboard objectives add sab.teamPresenceBlue dummy
 scoreboard objectives add sab.teamPresenceRed dummy
 scoreboard objectives add sab.teamPresenceNet dummy
+scoreboard objectives add sab.botLastTargetedWaypoint1 dummy
+scoreboard objectives add sab.botLastTargetedWaypoint2 dummy
+scoreboard objectives add sab.botDestinationUUID dummy
+scoreboard objectives add sab.botLastDestinationUUID dummy
 
 #editor
 scoreboard objectives add sab.selected dummy

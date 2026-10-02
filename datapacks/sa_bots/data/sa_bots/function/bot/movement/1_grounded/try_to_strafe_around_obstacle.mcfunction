@@ -1,5 +1,5 @@
 #executed by bot entity
-#executed facing entity f-0-0-0-1 feet rotated ~ 0 positioned ^ ^ ^.6
+#executed facing entity e-0-0-0-2 feet rotated ~ 0 positioned ^ ^ ^.6
 
 
 #determine if left and right are valid

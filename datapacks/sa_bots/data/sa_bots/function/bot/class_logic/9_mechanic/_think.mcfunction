@@ -2,15 +2,15 @@
 
 
 #shoot when we see someone
-execute if entity @s[scores={sab.lockedOntoEnemy=3..}] run scoreboard players set @s sab.botRightClick10Hz 1
+execute if entity @s[scores={sab.lockedOntoEnemy=3..}] run scoreboard players set @s sab.botRightClick10Hz 0
 
 #high skill: reload when not in combat
 execute if entity @s[scores={reload=0,totalShots=..1,sab.botSkill=6..}] unless entity @s[scores={sab.botTargetEntityID=1..}] run scoreboard players set @s reload 1
 
-#hold primary weapon
-execute unless score @s reload matches 1.. run scoreboard players set @s SelectedItem 0
+#hold primary weapon by default
+scoreboard players set @s SelectedItem 0
 #when reloading, use abilities
-execute if entity @s[scores={reload=1..,ability.2.cooldown=1..,sab.hasTurret=0}] run scoreboard players set @s SelectedItem 1
+execute if entity @s[scores={reload=1..,ability.2.cooldown=1..,ability.1.cooldown=..0,sab.hasTurret=0}] run scoreboard players set @s SelectedItem 1
 execute if entity @s[scores={reload=1..,ability.2.cooldown=..0}] run scoreboard players set @s SelectedItem 2
 
 #todo: drone logic

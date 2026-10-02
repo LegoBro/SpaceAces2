@@ -11,6 +11,13 @@ execute if score #found_destination sab.var matches 0 as @e[type=marker,tag=sab.
 #think again in 2 seconds
 scoreboard players set @s sab.botNavThinkTime 40
 
+#remember previous destination if we're hot-swapping them
+scoreboard players set @s sab.botLastDestinationUUID -1
+execute if score #found_destination sab.var matches 1 if data entity @s data.destinations[0] store result score @s sab.botLastDestinationUUID run data get entity @s data.destination[0].id
+
 #set id and sector from storage
 data modify entity @s data.destinations set value []
 data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
+
+#internalize destination id as score
+execute store result score @s sab.botDestinationUUID run data get entity @s data.destinations[0]

@@ -15,4 +15,4 @@ execute if score #placed_movement_target sab.var matches 0 run return 0
 #the angle between us and the movement target is the angle we're moving at
 
 #get a normalized vector from us to our movement target entity
-execute facing entity f-0-0-0-1 eyes run rotate @s ~ ~
+execute facing entity e-0-0-0-2 eyes run rotate @s ~ ~

@@ -1,3 +1,4 @@
+#executed by bot
 #executed when we are targeting a waypoint
 
 
@@ -19,3 +20,10 @@ scoreboard players set @s sab.botWaypointApproachX 1
 scoreboard players set @s sab.botWaypointApproachZ 1
 execute if score @s sab.botMoveLastTickX < @s sab.botMoveTargetX run scoreboard players set @s sab.botWaypointApproachX -1
 execute if score @s sab.botMoveLastTickZ < @s sab.botMoveTargetZ run scoreboard players set @s sab.botWaypointApproachZ -1
+
+#remember the last 2 waypoints we targeted (only if not a sub-target)
+execute store result score #test sab.var run data get entity @s data.move_targets[0].id
+execute unless score #test sab.var matches 1.. run return 0
+#=====
+scoreboard players operation @s sab.botLastTargetedWaypoint2 = @s sab.botLastTargetedWaypoint1
+scoreboard players operation @s sab.botLastTargetedWaypoint1 = #test sab.var

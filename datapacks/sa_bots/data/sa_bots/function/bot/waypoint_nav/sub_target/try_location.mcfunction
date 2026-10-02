@@ -28,4 +28,4 @@ execute if score #found_direct_path sab.var matches 1.. run scoreboard players s
 execute if score #success sab.var matches 3.. run function sa_bots:bot/waypoint_nav/sub_target/create_sub_target
 
 #ok, Earl can go home now
-tp e-0-0-0-1 0 0 0
+tp e-0-0-0-1 0 50 0

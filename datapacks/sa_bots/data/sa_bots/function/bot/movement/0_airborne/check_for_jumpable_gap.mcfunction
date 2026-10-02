@@ -1,4 +1,4 @@
-#executed at f-0-0-0-1 (the vector of what direction we're moving in)
+#executed at e-0-0-0-2 (the vector of what direction we're moving in)
 #only performed on first airborne tick after being grounded
 
 

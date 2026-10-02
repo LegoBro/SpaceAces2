@@ -9,4 +9,6 @@ playsound minecraft:block.anvil.use player @a ~ ~ ~ 1 0 0
 scoreboard players operation @s ability.1.cooldown = class.mechanic.1.cooldown Numbers
 scoreboard players reset @s rightClick
 
+scoreboard players set @s sab.hasTurret 1
+
 return 1

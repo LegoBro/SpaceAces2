@@ -22,11 +22,11 @@ execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={sab.lockedOntoEn
 
 #teams: use ultimate when teammates are nearby
 execute if score @s Team matches 1..2 if score @s ultimate_charge >= class.healer.ultimate.charge Numbers \
-    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely \
     if function sa_bots:bot/class_logic/check_if_teammates_nearby run function sa_bots:bot/class_logic/use_ultimate
 #ffa: use when ready
 execute unless score @s Team matches 1..2 if score @s ultimate_charge >= class.healer.ultimate.charge Numbers \
-    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 
 #put the correct item in our hands

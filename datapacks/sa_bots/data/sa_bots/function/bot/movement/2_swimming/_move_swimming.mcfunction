@@ -17,7 +17,7 @@ execute if score #placed_movement_target sab.var matches 0 run return run functi
 #the angle between us and the movement target is the angle we're moving at
 
 #swimming pose: face movement direction directly if not looking at anything else
-execute if score @s sab.botPose matches 1 unless score @s sab.botLookTime matches 1.. facing entity f-0-0-0-1 eyes run rotate @s ~ ~
+execute if score @s sab.botPose matches 1 unless score @s sab.botLookTime matches 1.. facing entity e-0-0-0-2 eyes run rotate @s ~ ~
 #standing pose: face movement direction roughly
 execute if score @s sab.botPose matches 0 unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
 #try to look at target if we have one
@@ -25,7 +25,7 @@ execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movemen
 
 #get a normalized vector from us to our movement target entity
 execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bots:bot/movement/2_swimming/rotate_move_target_angle
-execute unless score @s sab.botMoveRotationOffsetTime matches 1.. at @s as f-0-0-0-1 run function sa_bots:bot/movement/2_swimming/finalize_move_target
+execute unless score @s sab.botMoveRotationOffsetTime matches 1.. at @s as e-0-0-0-2 run function sa_bots:bot/movement/2_swimming/finalize_move_target
 scoreboard players operation @s sab.botMovementYaw = #rotation sab.var
 execute store result score #x sab.var run data get entity @s Pos[0] 100000
 execute store result score #y sab.var run data get entity @s Pos[1] 100000

@@ -25,3 +25,7 @@ execute unless score @s sab.botTargetEntityID matches 1.. if score @s sab.botChe
 
 #if we have a target: look at them
 execute if score @s sab.botTargetEntityID matches 1.. run function sa_bots:bot/combat_logic/look_at_target/_find_target
+
+
+#random chance we seek out health when injured
+execute if score @s displayHealth matches ..80 unless score @s sab.botTask matches 5 run function sa_bots:bot/entity_task/5_find_healing/consider_finding_healing_10hz

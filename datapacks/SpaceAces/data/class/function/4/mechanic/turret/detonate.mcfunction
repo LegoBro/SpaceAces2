@@ -13,4 +13,6 @@ execute at @n[tag=my_turret] as @e[type=#projectile:players,tag=hb] if score @s 
 
 kill @e[tag=my_turret]
 
+scoreboard players set @s sab.hasTurret 0
+
 return 1

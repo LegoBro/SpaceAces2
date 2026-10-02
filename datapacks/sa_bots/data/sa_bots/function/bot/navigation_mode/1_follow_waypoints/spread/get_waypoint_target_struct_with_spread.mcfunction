@@ -4,6 +4,7 @@
 
 
 #while we're still the execution context: get our uuid4
+data modify storage sa_bots:generic target.id set from entity @s UUID[3]
 data modify storage sa_bots:generic target.uuid4 set from entity @s data.uuid4
 
 

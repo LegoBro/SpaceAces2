@@ -24,7 +24,7 @@ execute if entity @s[scores={SelectedItem=0,sab.lockedOntoEnemy=3..}] run scoreb
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.soldier.ultimate.charge Numbers \
     if entity @s[scores={sab.lockedOntoEnemy=1..}] \
-    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ultimate
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 
 #set aim settings

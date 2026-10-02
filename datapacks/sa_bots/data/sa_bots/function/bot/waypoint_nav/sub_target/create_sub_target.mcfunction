@@ -11,6 +11,7 @@ execute unless block ~ ~ ~ #sa_bots:not_solid if block ~ ~1 ~ #sa_bots:not_solid
 scoreboard players set #found_target sab.var 1
 
 #now record our coordinates
+data modify storage sa_bots:generic target.id set value 0
 data modify storage sa_bots:generic target.uuid4 set value "0"
 data modify storage sa_bots:generic target.x set from entity e-0-0-0-1 Pos[0]
 data modify storage sa_bots:generic target.y set from entity e-0-0-0-1 Pos[1]

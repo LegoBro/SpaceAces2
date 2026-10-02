@@ -47,4 +47,4 @@ execute at e-0-0-0-1 unless block ~ ~ ~ #sa_bots:not_solid if block ~ ~1 ~ #sa_b
 execute as e-0-0-0-1 at @s if block ~ ~ ~ #sa_bots:not_solid run function sa_bots:bot/navigation_mode/1_follow_waypoints/spread/get_waypoint_position
 
 #put that thing back where it came from or so help me
-tp e-0-0-0-1 0 0 0
+tp e-0-0-0-1 0 50 0

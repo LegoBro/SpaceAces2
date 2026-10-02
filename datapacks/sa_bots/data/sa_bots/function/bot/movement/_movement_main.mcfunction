@@ -8,6 +8,7 @@ execute store result score @s sab.onGround run execute if entity @s[nbt={OnGroun
 #decide how we want to navigate based on state
 execute if score @s sab.botNavigationMode matches 0 run function sa_bots:bot/navigation_mode/0_roam/_tick
 execute if score @s sab.botNavigationMode matches 1 run function sa_bots:bot/navigation_mode/1_follow_waypoints/_tick
+execute if score @s sab.botNavigationMode matches 2 run function sa_bots:bot/navigation_mode/2_combat/_tick
 
 #jot down our coordinates so we can compare next tick
 execute store result score @s sab.botMoveLastTickX run data get entity @s Pos[0] 10
@@ -52,4 +53,4 @@ function sa_bots:bot/debug/_entity_debug_tick
 function sa_bots:bot/movement/_move_type_index
 
 #clean up move target
-tp f-0-0-0-1 0 0 0
+tp e-0-0-0-2 0 50 0
