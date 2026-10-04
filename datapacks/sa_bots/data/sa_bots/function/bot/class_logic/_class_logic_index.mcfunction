@@ -11,6 +11,9 @@ scoreboard players set @s[scores={sab.lockedOntoEnemy=1..,sab.botTargetAngleDiff
 scoreboard players set @s[scores={sab.lockedOntoEnemy=2..,sab.botTargetAngleDifferenceYaw=-1000..1000,sab.botTargetAngleDifferencePitch=-1000..1000}] sab.lockedOntoEnemy 3
 scoreboard players set @s[scores={sab.lockedOntoEnemy=3..,sab.botTargetAngleDifferenceYaw=-400..400,sab.botTargetAngleDifferencePitch=-400..400}] sab.lockedOntoEnemy 4
 
+#quick input cleanup
+tag @s[tag=input.swap_hands] remove input.swap_hands
+
 #"think" as whatever class we are
 execute unless score @s Class matches 1..15 run function sa_bots:bot/class_logic/0_fallback/_think
 execute if score @s Class matches 1 run function sa_bots:bot/class_logic/1_scout/_think

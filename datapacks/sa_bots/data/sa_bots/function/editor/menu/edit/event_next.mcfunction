@@ -13,6 +13,16 @@ execute if score #read sab.var > #NUMBER_OF_EVENTS sab.var run scoreboard player
 $execute unless data entity @s data.outgoing[$(t)][2] run data modify entity @s data.outgoing[$(t)] append value [0]
 $execute store result entity @s data.outgoing[$(t)][2][0] int 1 run scoreboard players get #read sab.var
 
+#set extra data
+$execute if score #read sab.var matches 0 run data remove entity @s data.outgoing[$(t)][2][1]
+$execute if score #read sab.var matches 1.. unless data entity @s data.outgoing[$(t)][2][1] run data modify entity @s data.outgoing[$(t)][2] append value {}
+#require not blocked event
+$execute if score #read sab.var matches 1..9 run data modify entity @s data.outgoing[$(t)][2][1] set value {}
+$execute if score #read sab.var matches 10 run data modify entity @s data.outgoing[$(t)][2][1] set value {flags:{require_not_blocked:1}}
+
+#set tags for certain events
+function sa_bots:editor/menu/edit/set_special_event_flags
+
 
 #update conditional flag on the target's "incoming" list depending on whether the new event is considered conditional
 execute store result score #conditional sab.var run function sa_bots:setup/editor/define_conditional_events

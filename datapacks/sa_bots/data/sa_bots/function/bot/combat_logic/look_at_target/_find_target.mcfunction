@@ -11,6 +11,7 @@ scoreboard players add @s sab.botTimeSinceLOS 2
 #remember important variables
 scoreboard players operation #skill sab.var = @s sab.botSkill
 scoreboard players operation #team sab.var = @s Team
+execute store result score #shoot_teammates sab.var run execute if entity @s[tag=sab.botMayShootTeammates]
 
 #remember how tall we are
 scoreboard players operation #eye_height sab.var = @s size

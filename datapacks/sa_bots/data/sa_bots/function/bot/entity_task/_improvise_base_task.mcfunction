@@ -30,5 +30,14 @@ function sa_bots:bot/entity_task/get_possible_task_data
 #adopt task with no question since we know there's only 1
 data modify entity @s data.tasks prepend from storage sa_bots:generic new_task
 
+#we are no longer doing a non-base task
+tag @s remove sab.botDoingNonBaseTask
+
 #internalize whatever task 0 is
 execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
+
+#if not doing task 4, we aren't following anyone
+execute unless score @s sab.botTask matches 4 run scoreboard players reset @s sab.botFollowingPlayer
+
+#clear tags
+tag @s[tag=sab.botMustPickNewTask] remove sab.botMustPickNewTask

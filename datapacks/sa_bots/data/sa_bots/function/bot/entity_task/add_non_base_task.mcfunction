@@ -17,5 +17,8 @@ data modify entity @s data.tasks prepend from storage sa_bots:generic new_task
 #internalize whatever task 0 is
 execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
 
+#remember that we're doing a non-base task
+tag @s add sab.botDoingNonBaseTask
+
 #immediately start doing the new task
 function sa_bots:bot/entity_task/_task_tick_index

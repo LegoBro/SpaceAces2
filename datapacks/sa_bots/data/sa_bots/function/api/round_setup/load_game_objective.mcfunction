@@ -32,6 +32,9 @@ execute if data storage sa_bots:bot_data objective{type:"ctf"} run scoreboard pl
 execute if data storage sa_bots:bot_data objective{type:"ffa"} run scoreboard players set #bot_objective sab.var 6
 #-------------------------------------
 
+#debug: force objective
+scoreboard players set #bot_objective sab.var 1
+
 
 #based on #bot_objective, set quota for how much of the team should have the goal of PUSH or DEFEND (or PICK, but we don't really police that)
 
@@ -41,6 +44,13 @@ scoreboard players set #bot_percent_quota_defend sab.var 25
 scoreboard players set #bot_percent_quota_asymmetric sab.var 0
 
 #specific modes
+
+#basic team fight
+execute if score #bot_objective sab.var matches 1 run scoreboard players set #bot_percent_quota_push sab.var 50
+execute if score #bot_objective sab.var matches 1 run scoreboard players set #bot_percent_quota_defend sab.var 0
+
+#limited lives teams
+#(defaults)
 
 #control point
 execute if score #bot_objective sab.var matches 3 run scoreboard players set #bot_percent_quota_push sab.var 40

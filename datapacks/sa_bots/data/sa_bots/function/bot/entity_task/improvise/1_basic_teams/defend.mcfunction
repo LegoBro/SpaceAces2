@@ -1,5 +1,8 @@
 execute store result score #random sab.var run random value 1..100
 
+#don't follow nearest teammate if we just did that
+execute if score @s sab.botPreviousTask matches 3 run scoreboard players set #random sab.var 1
+
 #high chance we go somewhere that's controlled by our team
 execute if score #random sab.var matches 1..40 if score @s Team matches 1 run scoreboard players set #choice sab.var 9
 execute if score #random sab.var matches 1..40 if score @s Team matches 2 run scoreboard players set #choice sab.var 10
@@ -14,6 +17,9 @@ execute if score #random sab.var matches 71..90 run scoreboard players set #choi
 #chance we go at nearest teammate
 execute if score #random sab.var matches 91..100 run scoreboard players set #choice sab.var 3
 
+#go toward the front lines if it's been a long time since we've been in combat
+execute if score @s sab.botTimeSinceCombat matches 750.. if score @s Team matches 1 run scoreboard players set #choice sab.var 12
+execute if score @s sab.botTimeSinceCombat matches 750.. if score @s Team matches 2 run scoreboard players set #choice sab.var 13
 
 
 #---------------------------------

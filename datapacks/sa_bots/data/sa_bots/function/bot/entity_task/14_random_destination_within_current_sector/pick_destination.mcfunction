@@ -34,4 +34,4 @@ data modify entity @s data.destinations set value []
 data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
 
 #internalize destination id as score
-execute store result score @s sab.botDestinationUUID run data get entity @s data.destinations[0]
+execute store result score @s sab.botDestinationUUID run data get entity @s data.destinations[0].id

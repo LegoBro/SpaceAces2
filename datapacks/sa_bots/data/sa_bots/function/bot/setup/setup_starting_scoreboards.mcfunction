@@ -10,6 +10,7 @@ scoreboard players set @s sab.botLookMode 0
 scoreboard players set @s sab.botWPSearchCooldown 0
 scoreboard players set @s sab.dUltimateCharge -1
 scoreboard players set @s sab.reEvaluateBehaviorTime 0
+scoreboard players set @s sab.botUsingUnconditionalNav 0
 #...
 
 #inputs

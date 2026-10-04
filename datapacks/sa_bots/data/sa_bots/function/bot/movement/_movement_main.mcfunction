@@ -2,7 +2,7 @@
 
 
 #onground?
-execute store result score @s sab.onGround run execute if entity @s[nbt={OnGround:1b}]
+execute store result score @s sab.onGround run execute if predicate input:on_ground
 
 
 #decide how we want to navigate based on state

@@ -5,8 +5,8 @@ execute as @e[type=marker,tag=sab.botWaypointGeneric,limit=1] at @s \
 execute if score #success sab.var matches 0 run return fail
 #=====
 
-#all waypoints tagged as sector borders will work to assemble a table that shows which sectors are connected
-execute as @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector_is_border] run function sa_bots:bot/sector_logic/sector_connections/waypoint_log_connections
+#check for important stuff on all waypoints
+execute as @e[type=marker,tag=sab.botWaypointGeneric] run function sa_bots:bot/sector_logic/sector_connections/analyze_waypoint
 
 #calculations are done. don't do this again
 scoreboard players set #calculate_sector_connections sab.var 1000000

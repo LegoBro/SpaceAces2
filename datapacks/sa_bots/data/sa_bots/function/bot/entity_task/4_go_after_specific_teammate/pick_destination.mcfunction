@@ -13,7 +13,7 @@ scoreboard players set @s sab.botNavThinkTime 40
 
 #remember previous destination if we're hot-swapping them
 scoreboard players set @s sab.botLastDestinationUUID -1
-execute if score #found_destination sab.var matches 1 if data entity @s data.destinations[0] store result score @s sab.botLastDestinationUUID run data get entity @s data.destination[0].id
+execute if score #found_destination sab.var matches 1 if data entity @s data.destinations[0] store result score @s sab.botLastDestinationUUID run data get entity @s data.destinations[0].id
 
 #set id and sector from storage
 execute if score #found_destination sab.var matches 1 run data modify entity @s data.destinations set value []

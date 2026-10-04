@@ -6,4 +6,5 @@ execute as @e[type=minecraft:item_display,tag=wrist_rocket,sort=nearest,tag=new,
 execute at @s run playsound minecraft:gun.rocket hostile @a ~ ~ ~ 1 0.5 0
 
 scoreboard players operation $strength player_motion.api.launch = class.healer.2.jump_power Numbers
-execute at @s facing ^ ^ ^-1 run function player_motion:api/launch_looking
+execute at @s[type=player] facing ^ ^ ^-1 run function player_motion:api/launch_looking
+execute at @s[tag=sab.botEntity] facing ^ ^ ^-1 run function sa_bots:bot/player_motion_alternative/api/launch_looking

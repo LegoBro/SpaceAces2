@@ -10,6 +10,7 @@ execute store result score #random sab.var run random value 0..10000
 
 #don't bother with any other checks if there's no shot of us rolling low enough
 execute if score #random sab.var matches 300.. run return 0
+#=====
 
 
 #less likely the higher our health is

@@ -35,6 +35,10 @@ execute if entity @s[scores={displayHealth=..49,sab.botSkill=4..,ability.1.coold
 execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={SelectedItem=0,sab.lockedOntoEnemy=3..,sab.botSkill=..4}] run function sa_bots:bot/class_logic/use_primary
 execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={SelectedItem=0,sab.lockedOntoEnemy=1..,sab.botSkill=5..}] run function sa_bots:bot/class_logic/use_primary
 
+#melee when opponent is in range
+execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_melee
+
 
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.shocksmith.ultimate.charge Numbers \

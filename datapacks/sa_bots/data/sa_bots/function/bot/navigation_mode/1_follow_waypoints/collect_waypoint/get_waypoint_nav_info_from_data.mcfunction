@@ -19,4 +19,4 @@ execute if score #goal_sector sab.var matches 16 store result score #distance_at
 
 #debug, show route information
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
-    tellraw @a[gamemode=spectator] ["#distance_at_this_waypoint=",{score:{name:"#distance_at_this_waypoint",objective:"sab.var"},color:gold}]
+    tellraw @a[gamemode=spectator,distance=..3] ["#distance_at_this_waypoint=",{score:{name:"#distance_at_this_waypoint",objective:"sab.var"},color:gold}]

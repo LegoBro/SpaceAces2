@@ -13,7 +13,6 @@ execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/en
 execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 2 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 3 run return run function sa_bots:bot/entity_task/_improvise_base_task
-#TEMPORARY! sab.botTask 4 should be continous, or at least have some exit logic on it
 execute if score @s sab.botTask matches 4 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 5 run return run function sa_bots:bot/entity_task/complete_non_base_task
 execute if score @s sab.botTask matches 6 run return run function sa_bots:bot/entity_task/_improvise_base_task

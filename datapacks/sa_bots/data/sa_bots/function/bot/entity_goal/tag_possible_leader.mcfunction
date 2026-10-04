@@ -1,8 +1,8 @@
 #executed by a player that a bot is considering following
 
 
-#if we're a bot: we must have the "PUSH" goal
-execute if entity @s[tag=sab.botEntity] unless score @s sab.botGoal matches 1 run return fail
+#if we're a bot: we must have the "PUSH" goal and be doing a base task
+execute if entity @s[tag=sab.botEntity] unless entity @s[tag=!sab.botDoingNonBaseTask,scores={sab.botGoal=1}] run return fail
 #=====
 
 #if we're a bot: we cannot be following someone else already

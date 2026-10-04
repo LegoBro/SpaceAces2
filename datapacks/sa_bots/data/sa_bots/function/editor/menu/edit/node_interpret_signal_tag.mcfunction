@@ -13,3 +13,6 @@ execute if score #signal sab.var matches 8 run return run function sa_bots:edito
 execute if score #signal sab.var matches 9 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.patrolPoint"}
 execute if score #signal sab.var matches 10 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.patrolPoint.blue"}
 execute if score #signal sab.var matches 11 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.patrolPoint.red"}
+execute if score #signal sab.var matches 12 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToTurretSpot"}
+execute if score #signal sab.var matches 13 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToTurretSpot.blue"}
+execute if score #signal sab.var matches 14 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToTurretSpot.red"}

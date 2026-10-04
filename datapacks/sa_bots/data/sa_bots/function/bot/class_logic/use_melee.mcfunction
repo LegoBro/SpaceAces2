@@ -1,0 +1,1 @@
+tag @s add input.swap_hands

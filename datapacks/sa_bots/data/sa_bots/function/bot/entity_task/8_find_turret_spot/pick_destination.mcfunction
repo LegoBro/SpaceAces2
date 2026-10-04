@@ -26,9 +26,9 @@ execute if score @s Team matches 1 run function sa_bots:bot/entity_task/log_poss
 
 
 #log all possible targets along with how dangerous and far away they are
-execute as @e[type=marker,tag=wp.turretSpot,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute if score @s Team matches 1 as @e[type=marker,tag=wp.turretSpot,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute if score @s Team matches 2 as @e[type=marker,tag=wp.turretSpot.red,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute as @e[type=marker,tag=wp.turretRelevant,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute if score @s Team matches 1 as @e[type=marker,tag=wp.turretRelevant.blue,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute if score @s Team matches 2 as @e[type=marker,tag=wp.turretRelevant.red,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
 
 #low skill bot doesn't care about danger, they may run into more dangerous sectors
 execute if entity @s[scores={sab.botSkill=..3}] run scoreboard players set #count_less_dangerous sab.var 0
@@ -67,5 +67,5 @@ kill @e[type=marker,tag=sab.decisionMaker,distance=..1]
 #Earl can go home now
 tp e-0-0-0-1 0 50 0
 
-#fallback: regroup with teammate
-execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:3}
+#fallback: go somewhere random within the current sector
+execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:14}

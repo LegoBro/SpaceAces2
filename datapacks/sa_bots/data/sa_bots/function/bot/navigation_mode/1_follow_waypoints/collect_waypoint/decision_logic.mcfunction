@@ -22,12 +22,16 @@ execute if data entity @s data.move_targets[0].metadata{is_sub_route:1} run \
 scoreboard players operation #on_ground sab.var = @s sab.onGround
 
 #we can be blocked from collecting this waypoint based on several factors...
+scoreboard players set #found_target sab.var 0
 $execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/target_waypoint_gatekeeping
 execute if score #found_target sab.var matches 0 run return 0
 #=====
 
 
-#determine what our goal is
+#remember whether we're using unconditional nav or not
+scoreboard players operation #using_unconditional_nav sab.var = @s sab.botUsingUnconditionalNav
+
+#determine what our destination is
 scoreboard players set #goal_sector sab.var 0
 scoreboard players set #goal_id sab.var -1
 scoreboard players operation #prev_goal_id sab.var = @s sab.botLastDestinationUUID
@@ -41,11 +45,15 @@ execute if score #goal_id sab.var matches -1 run tellraw @a[gamemode=!adventure]
 tag @s add sab.self
 $execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/fetch_data
 
+#update what sector the bot is in
+execute if score #sector sab.var matches 1.. run function sa_bots:bot/utility/bot_update_sector_and_nav_preference
+
 
 #get variables ready
 scoreboard players set #found_target sab.var 0
 scoreboard players set #chosen_outgoing sab.var -1
 scoreboard players set #chosen_event sab.var 0
+scoreboard players set #event_failed sab.var 0
 
 #now sort through generated sab.routeSort markers to see which ones we want to take
 #note: "#distance_at_this_waypoint sab.var" is the distance to destination at this waypoint
@@ -55,12 +63,16 @@ execute as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:b
 execute if score #count_valid sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_from_valid
 execute unless score #count_valid sab.var matches 1.. if score #count sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_random
 
+#if we were using unconditional nav (mode 2), failed to execute an event, and got sent down a random pathway: give up on using unconditional nav
+execute if score #using_unconditional_nav sab.var matches 2.. if score #count_valid sab.var matches 0 \
+    if score #event_failed sab.var matches 1.. run scoreboard players set @s sab.botUsingUnconditionalNav 0
+
 #clean up self tag
 tag @s remove sab.self
 
 #debug, say which outgoing was chosen
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
-    tellraw @a[gamemode=spectator,distance=..5] [{translate:"sa_bot.debug.chosen_outgoing",with:[{score:{name:"#chosen_outgoing",objective:"sab.var"}}],color:yellow}]
+    tellraw @a[gamemode=spectator,distance=..3] [{translate:"sa_bot.debug.chosen_outgoing",with:[{score:{name:"#chosen_outgoing",objective:"sab.var"}}],color:yellow}]
 
 #mutate spread bias x and z each time we go after a waypoint
 execute if score #chosen_outgoing sab.var matches 0.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/spread/spread_bias_think
@@ -82,7 +94,6 @@ execute if score #chosen_event sab.var matches 1.. run function sa_bots:bot/navi
 
 #if we didn't find anything valid, go into "roam" mode for a while
 execute if score #found_target sab.var matches 0 run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets
-
 
 
 #cleanup

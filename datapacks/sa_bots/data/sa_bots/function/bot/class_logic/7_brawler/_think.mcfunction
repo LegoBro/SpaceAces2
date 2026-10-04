@@ -19,6 +19,10 @@ execute if entity @s[scores={sab.lockedOntoEnemy=3..,ability.1.cooldown=..0,sab.
 execute if entity @s[scores={sab.lockedOntoEnemy=3..,ability.1.cooldown=..0,sab.botTargetEntityDistance=..6}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based \
     run function sa_bots:bot/class_logic/use_ability_1
 
+#melee when opponent is in range
+execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_melee
+
 
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.brawler.ultimate.charge Numbers \

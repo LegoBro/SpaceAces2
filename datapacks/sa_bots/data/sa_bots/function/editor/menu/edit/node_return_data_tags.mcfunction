@@ -61,6 +61,25 @@ tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",i
 
 
 
+#sub-route start leading to turret spot
+data modify storage sa_bots:waypoint_info text_builder set value []
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToTurretSpot"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 54"},hover_event:{action:"show_text",value:{text:"wp.leadsToTurretSpot"}}}]
+execute if entity @s[tag=wp.leadsToTurretSpot] run data modify storage sa_bots:waypoint_info text_builder[0][1].color set value "yellow"
+#blue turret spot
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToTurretSpot.blue"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 55"},hover_event:{action:"show_text",value:{text:"wp.leadsToTurretSpot.blue"}}}]
+execute if entity @s[tag=wp.leadsToTurretSpot.blue] run data modify storage sa_bots:waypoint_info text_builder[1][1].color set value "yellow"
+#red turret spot
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToTurretSpot.red"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 56"},hover_event:{action:"show_text",value:{text:"wp.leadsToTurretSpot.red"}}}]
+execute if entity @s[tag=wp.leadsToTurretSpot.red] run data modify storage sa_bots:waypoint_info text_builder[2][1].color set value "yellow"
+
+#print this row
+tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",interpret:true}
+
+
+
 #patrol point
 data modify storage sa_bots:waypoint_info text_builder set value []
 data modify storage sa_bots:waypoint_info text_builder append value \

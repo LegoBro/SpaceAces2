@@ -18,6 +18,9 @@ execute if entity @s[scores={reload=0,totalShots=..6,sab.botSkill=6..}] unless e
 execute if score @s reload matches 1.. if score @s ability.1.cooldown matches 1.. run scoreboard players set @s SelectedItem 2
 #todo: add logic for shooting and monitoring sticky bombs
 
+#melee when opponent is in range
+execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_melee
 
 
 #use ultimate when charged and in combat
@@ -30,6 +33,9 @@ tag @s[scores={sab.botSkill=3..}] add sab.botWeaponHasDownwardArc
 tag @s[scores={sab.botSkill=7..}] add sab.botShootAtFloor
 tag @s add sab.botWeaponSlowProjectile
 
+
+#override behavior when doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/4_bomber/scripted_actions
 
 #put the correct item in our hands
 execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air

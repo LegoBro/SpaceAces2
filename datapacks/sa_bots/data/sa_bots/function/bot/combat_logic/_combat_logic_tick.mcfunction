@@ -8,6 +8,13 @@ scoreboard players remove @s sab.botCheckLOSTimer 2
 scoreboard players remove @s sab.botGlanceTime 2
 scoreboard players remove @s sab.botReactionCountdown 2
 
+#count up time since we've been in combat
+scoreboard players add @s sab.botTimeSinceCombat 2
+
+#every few seconds, re-evaluate how confident we are
+scoreboard players remove @s sab.botConfidenceCheck 2
+execute if score @s sab.botConfidenceCheck matches ..0 run function sa_bots:bot/combat_logic/pursuit/evaluate_bot_confidence
+
 #deal with blindness
 execute store result score #blindness sab.var run execute if score @s blindness matches 1..
 execute if entity @s[scores={blindness=1..,sab.botCheckLOSTimer=..4}] store result score @s sab.botCheckLOSTimer run random value 5..10

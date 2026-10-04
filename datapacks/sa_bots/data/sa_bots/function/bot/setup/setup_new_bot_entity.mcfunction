@@ -38,9 +38,8 @@ function sa_bots:bot/waypoint_nav/seek_nearby_waypoint
 execute if data entity @s data.move_targets[0] run scoreboard players set @s sab.botNavigationMode 1
 
 #anyone who was following or seeking us should stop
-scoreboard players operation #get_id sab.var = @s id
-execute as @e[type=mannequin,tag=sab.botEntity] if score @s sab.botSeekingEnemy = #get_id sab.var run scoreboard players reset @s sab.botSeekingEnemy
-execute as @e[type=mannequin,tag=sab.botEntity] if score @s sab.botFollowingPlayer = #get_id sab.var run scoreboard players reset @s sab.botFollowingPlayer
+function sa_bots:bot/utility/bot_dismiss_enemy_followers
+function sa_bots:bot/utility/bot_dismiss_followers
 
 
 #we exist now

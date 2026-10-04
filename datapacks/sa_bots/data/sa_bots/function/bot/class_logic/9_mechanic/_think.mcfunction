@@ -13,6 +13,10 @@ scoreboard players set @s SelectedItem 0
 execute if entity @s[scores={reload=1..,ability.2.cooldown=1..,ability.1.cooldown=..0,sab.hasTurret=0}] run scoreboard players set @s SelectedItem 1
 execute if entity @s[scores={reload=1..,ability.2.cooldown=..0}] run scoreboard players set @s SelectedItem 2
 
+#melee when opponent is in range
+execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_melee
+
 #todo: drone logic
 
 

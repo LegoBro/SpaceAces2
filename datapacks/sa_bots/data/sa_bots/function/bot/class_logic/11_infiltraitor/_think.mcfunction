@@ -21,6 +21,10 @@ execute if entity @s[scores={sab.lockedOntoEnemy=3..,reload=1..,ability.2.cooldo
 #shoot when we see someone
 execute if entity @s[scores={SelectedItem=0,sab.lockedOntoEnemy=3..}] run scoreboard players set @s sab.botRightClick10Hz 1
 
+#melee when opponent is in range
+execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_melee
+
 
 
 #use ultimate whenever ready

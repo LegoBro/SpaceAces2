@@ -3,7 +3,7 @@
 
 #debug, show route information
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
-    tellraw @a[gamemode=spectator] ["  ","sab.markIndex=",{score:{name:"@s",objective:"sab.markIndex"}},"  ","sab.markDistance=",{score:{name:"@s",objective:"sab.markDistance"}}]
+    tellraw @a[gamemode=spectator,distance=..3] ["  ","sab.markIndex=",{score:{name:"@s",objective:"sab.markIndex"}},"  ","sab.markDistance=",{score:{name:"@s",objective:"sab.markDistance"}}]
 
 #event attached? evaluate if the bot can do it
 #if not, we return and take ourselves out of the running

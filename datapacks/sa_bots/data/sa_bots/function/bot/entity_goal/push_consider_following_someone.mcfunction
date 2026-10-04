@@ -17,7 +17,7 @@ scoreboard players operation #random sab.var += @s sab.botCooperativeness
 #sustainer = more likely to follow
 execute if function sa_bots:bot/combat_logic/check_for_targets/check_if_sustainer run scoreboard players add #random sab.var 5
 #more likely to continue following someone if we are already doing so
-execute if score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 15
+execute if score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 16
 
 #exit out and don't follow anyone if we rolled low
 execute if score #random sab.var matches ..25 run return run scoreboard players reset @s sab.botFollowingPlayer
@@ -35,7 +35,9 @@ execute if score #random sab.var matches ..8 if score @s sab.botFollowingPlayer 
     as @e[type=#projectile:players,tag=sab.activePlayer,distance=..70] if score @s id = #get_id sab.var run scoreboard players set #success sab.var 1
 
 #if they're still around, we can exit out
-execute if score #success sab.var matches 1.. run return 1
+execute if score #success sab.var matches 1.. run return run \
+    execute unless entity @s[tag=sab.botDoingNonBaseTask] unless entity @s[scores={sab.botTask=4}] run \
+    function sa_bots:bot/entity_task/switch_base_task_macro {choice:4}
 #=====
 
 

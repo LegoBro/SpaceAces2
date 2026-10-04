@@ -22,7 +22,8 @@ data modify storage sa_bots:waypoint i set value 0
 scoreboard players set #i sab.var 1
 execute store result storage sa_bots:waypoint iplus1 int 1 run scoreboard players get #i sab.var
 execute store result storage sa_bots:waypoint nav_index int 1 run scoreboard players get #goal_sector sab.var
-data modify storage sa_bots:waypoint command set value "function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/outgoing_path_within_sector_get_destination_data with storage sa_bots:waypoint"
+execute if score #using_unconditional_nav sab.var matches ..0 run data modify storage sa_bots:waypoint command set value "function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/outgoing_path_within_sector_get_destination_data with storage sa_bots:waypoint"
+execute if score #using_unconditional_nav sab.var matches 1.. run data modify storage sa_bots:waypoint command set value "function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/outgoing_path_within_sector_get_destination_data_uc with storage sa_bots:waypoint"
 execute if data entity @s data.outgoing[0] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/outgoing_paths_iterate with storage sa_bots:waypoint
 
 #also figure out what our distance to destination is for comparison

@@ -4,6 +4,14 @@
 
 
 #----------------------------
+#TASK
+
+#logic based on task
+function sa_bots:bot/entity_task/_task_tick_index
+#----------------------------
+
+
+#----------------------------
 #SHOOTING / COMBAT
 
 #respond to "damage" score before it gets cleared in class:4/main

@@ -1,6 +1,11 @@
 #executes the leap slam ability
 #(must be handled differently since bots can't use player motion library)
 
+
+#different logic if used outside of combat
+execute if entity @s[tag=sab.leapSlamNoTarget] run return run function sa_bots:bot/class_logic/7_brawler/leap_slam_no_target
+#=====
+
 #apply motion
 #scoreboard players operation $strength player_motion.api.launch = class.brawler.1.jump_power Numbers
 execute at @s rotated ~ ~-42 run function sa_bots:bot/player_motion_alternative/api/launch_looking

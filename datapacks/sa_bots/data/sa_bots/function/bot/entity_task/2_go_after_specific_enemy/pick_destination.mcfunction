@@ -13,7 +13,7 @@ scoreboard players set @s sab.botNavThinkTime 40
 
 #remember previous destination if we're hot-swapping them
 scoreboard players set @s sab.botLastDestinationUUID -1
-execute if score #found_destination sab.var matches 1 if data entity @s data.destinations[0] store result score @s sab.botLastDestinationUUID run data get entity @s data.destination[0].id
+execute if score #found_destination sab.var matches 1 if data entity @s data.destinations[0] store result score @s sab.botLastDestinationUUID run data get entity @s data.destinations[0].id
 
 #set id and sector from storage
 execute if score #found_destination sab.var matches 1 run data modify entity @s data.destinations set value []
@@ -25,5 +25,5 @@ scoreboard players set @s sab.botDestinationUUID -2
 execute if score #found_destination sab.var matches 1 store result score @s sab.botDestinationUUID run data get entity @s data.destinations[0]
 
 
-#fallback: switch task, regroup with nearest teammate
-execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:3}
+#fallback: switch task, random within sector
+execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:14}

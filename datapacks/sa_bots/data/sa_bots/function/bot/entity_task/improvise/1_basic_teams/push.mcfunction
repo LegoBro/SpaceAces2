@@ -1,12 +1,12 @@
 execute store result score #random sab.var run random value 1..100
 
-#low chance we go somewhere that's controlled by our team
-execute if score #random sab.var matches 1..10 if score @s Team matches 1 run scoreboard players set #choice sab.var 9
-execute if score #random sab.var matches 1..10 if score @s Team matches 2 run scoreboard players set #choice sab.var 10
+#chance we go into enemy front line
+execute if score #random sab.var matches 1..30 if score @s Team matches 1 run scoreboard players set #choice sab.var 12
+execute if score #random sab.var matches 1..30 if score @s Team matches 2 run scoreboard players set #choice sab.var 13
 
-#chance we go to the front line
-execute if score #random sab.var matches 11..50 if score @s Team matches 1 run scoreboard players set #choice sab.var 12
-execute if score #random sab.var matches 11..50 if score @s Team matches 2 run scoreboard players set #choice sab.var 13
+#chance we go to friendly front line
+execute if score #random sab.var matches 31..50 if score @s Team matches 1 run scoreboard players set #choice sab.var 12
+execute if score #random sab.var matches 31..50 if score @s Team matches 2 run scoreboard players set #choice sab.var 13
 
 #chance we go to a patrol point
 execute if score #random sab.var matches 51..74 run scoreboard players set #choice sab.var 6
@@ -16,7 +16,7 @@ execute if score #random sab.var matches 75..100 run scoreboard players set #cho
 
 
 #player low in cooperativeness might go for a completely random point
-execute store result score #random sab.var run random value 1..30
+execute store result score #random sab.var run random value 0..30
 scoreboard players operation #random sab.var += @s sab.botCooperativeness
 execute if score #random sab.var matches ..5 run scoreboard players set #choice sab.var 0
 
@@ -25,6 +25,10 @@ execute store result score #random sab.var run random value 1..30
 scoreboard players operation #random sab.var += @s sab.botAggression
 execute if score #random sab.var matches 35.. if score @s Team matches 1 run scoreboard players set #choice sab.var 10
 execute if score #random sab.var matches 35.. if score @s Team matches 2 run scoreboard players set #choice sab.var 9
+#go directly at a random enemy if it's been a long time since we've been in combat
+execute if score @s sab.botTimeSinceCombat matches 500.. if score #random sab.var matches 20.. run scoreboard players set #choice sab.var 15
+execute if score @s sab.botTimeSinceCombat matches 625.. if score #random sab.var matches 15.. run scoreboard players set #choice sab.var 15
+execute if score @s sab.botTimeSinceCombat matches 750.. run scoreboard players set #choice sab.var 15
 
 
 #---------------------------------

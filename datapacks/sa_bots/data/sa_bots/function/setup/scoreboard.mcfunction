@@ -26,8 +26,11 @@ scoreboard objectives add sab.botPose dummy
 scoreboard objectives add sab.botIsSprinting dummy
 scoreboard objectives add sab.botIgnoreAimTime dummy
 scoreboard objectives add sab.botGoal dummy
+scoreboard objectives add sab.botPreviousGoal dummy
 scoreboard objectives add sab.botReactionTimeBase dummy
 scoreboard objectives add sab.botReactionCountdown dummy
+scoreboard objectives add sab.botConfidence dummy
+scoreboard objectives add sab.botConfidenceCheck dummy
 scoreboard objectives add sab.botCheckLOSTimer dummy
 scoreboard objectives add sab.botTimeSinceLOS dummy
 scoreboard objectives add sab.botTargetEntityID dummy
@@ -66,9 +69,13 @@ scoreboard objectives add sab.botMoveRotationOffsetTime dummy
 scoreboard objectives add sab.botObserveTargetX dummy
 scoreboard objectives add sab.botObserveTargetZ dummy
 scoreboard objectives add sab.botInSector dummy
+scoreboard objectives add sab.botInSectorPrevious dummy
 scoreboard objectives add sab.botSeekingEnemy dummy
 scoreboard objectives add sab.botFollowingPlayer dummy
 scoreboard objectives add sab.botFollowers dummy
+scoreboard objectives add sab.botUsingUnconditionalNav dummy
+scoreboard objectives add sab.botScriptedAction dummy
+scoreboard objectives add sab.botTimeSinceCombat dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

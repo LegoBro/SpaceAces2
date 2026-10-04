@@ -4,6 +4,9 @@ data modify storage sa_bots:waypoint sector_connections set value [0,{list:[]},{
 #we will also clear sector team presence while we're in here
 function sa_bots:bot/sector_logic/presence_clear_all
 
+#we will also prepare to assemble a list of conditional events per each sector
+data modify storage sa_bots:waypoint sector_conditional_events set value [0,{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]},{list:[]}]
+
 #0,0,0 must be loaded to run the rest of this!
 execute unless loaded 0 50 0 run return fail
 #=====

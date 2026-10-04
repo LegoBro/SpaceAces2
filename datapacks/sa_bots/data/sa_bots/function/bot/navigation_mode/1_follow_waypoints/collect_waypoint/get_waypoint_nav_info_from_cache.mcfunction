@@ -24,4 +24,4 @@ execute if score #use_channel sab.var matches 20 if score @s sab.navSectorCacheC
 
 #debug, show route information
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
-    tellraw @a[gamemode=spectator] ["#distance_at_this_waypoint=",{score:{name:"#distance_at_this_waypoint",objective:"sab.var"},color:aqua}]
+    tellraw @a[gamemode=spectator,distance=..3] ["#distance_at_this_waypoint=",{score:{name:"#distance_at_this_waypoint",objective:"sab.var"},color:aqua}]

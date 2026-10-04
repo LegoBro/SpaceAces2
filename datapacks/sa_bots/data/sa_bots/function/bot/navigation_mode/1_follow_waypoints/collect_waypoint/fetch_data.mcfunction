@@ -8,7 +8,7 @@ execute store result score #sector sab.var run data get entity @s data.sector
 
 #debug, show id/sector
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
-    tellraw @a[gamemode=spectator] ["\n","id=",{score:{name:"#id",objective:"sab.var"},color:green},"\n", \
+    tellraw @a[gamemode=spectator,distance=..3] ["\n","id=",{score:{name:"#id",objective:"sab.var"},color:green},"\n", \
     "sector=",{score:{name:"#sector",objective:"sab.var"},color:gold} \
     ]
 
@@ -16,6 +16,7 @@ execute if score #debug_show_junction_decisions sab.var matches 1 run \
 #are we the one? if so, we found destination. pick a new one (we will re-run this function in a momment...)
 execute if score #goal_id sab.var = #id sab.var run \
     return run execute as @e[type=mannequin,tag=sab.self,distance=..1] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_reach_destination
+#=====
 execute if score #prev_goal_id sab.var = #id sab.var run \
     return run execute as @e[type=mannequin,tag=sab.self,distance=..1] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_reach_destination
 #=====

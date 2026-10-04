@@ -8,6 +8,9 @@
 #   > Stay behind the front line to protect our team's base and defend points of interest
 
 
+#remember what our goal was before we ran this
+execute if score @s sab.botGoal matches -2147483648..2147483647 run scoreboard players operation @s sab.botPreviousGoal = @s sab.botGoal
+
 #if we have a goal already, remove self from count
 execute if entity @s[scores={sab.botGoal=1,Team=1}] run scoreboard players remove #playerCountBluePush sab.var 1
 execute if entity @s[scores={sab.botGoal=2,Team=1}] run scoreboard players remove #playerCountBlueDefend sab.var 1
@@ -33,9 +36,9 @@ execute unless score @s Class matches 14 run function sa_bots:bot/class_logic/14
 execute unless score @s Class matches 15 run function sa_bots:bot/class_logic/15_rocketeer/determine_goal
 
 #if we already have a goal, there is a much lower chance we switch goals
-execute store result score #random sab.var run random value 1..3
+execute store result score #random sab.var run random value 1..6
 #much less likely to switch goals if we're in "PUSH" mode and following a leader into battle
-execute if entity @s[scores={sab.botFollowingPlayer=1..,sab.botGoal=1,sab.botSkill=4..}] store result score #random sab.var run random value 1..7
+execute if entity @s[scores={sab.botFollowingPlayer=1..,sab.botGoal=1,sab.botSkill=4..}] store result score #random sab.var run random value 1..9
 execute if score @s sab.botGoal matches 0.. unless score @s sab.botGoal = #choice sab.var if score #random sab.var matches 1 run \
     scoreboard players operation @s sab.botGoal = #choice sab.var
 #always set goal if we don't already have one
@@ -47,6 +50,13 @@ execute unless score @s sab.botGoal matches 0.. run \
 #(this will be especially helpful if we do something funny like run a team of all mechanics)
 execute if score @s Team matches 1 run function sa_bots:bot/entity_goal/enforce_restrictions_blue
 execute if score @s Team matches 2 run function sa_bots:bot/entity_goal/enforce_restrictions_red
+
+
+#if we changed goals, re-evaluate base task at the first opportunity
+#(this will interrupt our journey to our current destination. this is intentional!)
+execute if score @s sab.botPreviousGoal matches -2147483648..2147483647 \
+    unless score @s sab.botGoal = @s sab.botPreviousGoal \
+    unless score @s sab.botTask matches 2 run tag @s add sab.botMustPickNewTask
 
 #--------------------------
 #special behavior for "PUSH" mode

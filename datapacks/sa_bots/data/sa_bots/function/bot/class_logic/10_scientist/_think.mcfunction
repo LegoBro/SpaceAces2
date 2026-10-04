@@ -23,6 +23,10 @@ execute if entity @s[scores={sab.botLifetime=60..,ability.2.cooldown=..0}] if fu
 #use chemical cascade when reloading and in combat
 execute if entity @s[scores={reload=1..,sab.lockedOntoEnemy=2..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1
 
+#melee when opponent is in range
+execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
+    if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_melee
+
 
 
 #use ultimate when charged and in combat
