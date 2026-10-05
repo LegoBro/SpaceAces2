@@ -1,5 +1,6 @@
 ## Burst Heal
 item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick[minecraft:item_model="class/soldier/burst_heal",minecraft:item_name={color:"white",translate:"class.soldier.burst_heal"},minecraft:lore=[{color:"white","italic":false,translate:"class.soldier.burst_heal.lore.1"},{color:"white",translate:"class.soldier.burst_heal.lore.2"}],minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
+tag @s remove sab.nearby.healing
 execute if score @s rightClick matches 1.. if score @s SelectedItem matches 2 run function class:4/soldier/burst_heal/activate
 execute if score @s SelectedItem matches 2 run item replace entity @s weapon.offhand with emerald[item_model="class/soldier/left_arm_burst_heal",item_name="",tooltip_display={hide_tooltip:true}]
 function class:4/helper/actionbar/generic/tertiary_empty

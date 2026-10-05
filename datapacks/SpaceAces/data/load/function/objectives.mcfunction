@@ -46,6 +46,7 @@ scoreboard objectives add kill dummy
 scoreboard objectives add SelectedItem dummy
 scoreboard objectives add size dummy
 scoreboard objectives add menu dummy
+scoreboard objectives add timeSinceLastRespawn dummy
 
 # Player - Energy
 #scoreboard objectives add energy food

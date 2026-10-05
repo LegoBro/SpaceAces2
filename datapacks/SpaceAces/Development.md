@@ -118,9 +118,17 @@ Player or Mannequin NPC
 * "player" in game:
 @e[type=#projectile:players,tag=sab.activePlayer]
 
+* sab.target.low_prior
+Low priority target for bot
+
+* sab.nearby.healing
+Building/entity that heals nearby friendlies, can be tagged as players that can heal as well.
+
 ## Entities
 
 ### Health packs
+@e[type=item_frame,tag=health_pack]
+#### Anchor Point for Health Pack
 @e[type=marker,tag=weak_health_pack]
 @e[type=marker,tag=strong_health_pack]
 
@@ -128,3 +136,11 @@ Player or Mannequin NPC
 [See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
 
 ## To do:
+#Kill all class deployables function
+#Have smokescreen transform nearby air blocks into moving_piston temporarily (moving_piston will also need to allow bullets and projectiles to pass)
+#Give each gamemode an integer field for bot_strategy or something
+#Would be used in sa_bots\data\sa_bots\function\api\round_setup\load_game_objective.mcfunction
+#Common tag for all health packs
+#Common tag for healing buildings (chem dispenser, overheal machine)
+#Give common tag to standby_sticky_bomb, vis_mine, rocket wall
+#Score for "time since respawn" if there isn't one already

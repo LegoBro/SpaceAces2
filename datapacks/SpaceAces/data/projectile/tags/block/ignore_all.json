@@ -28,6 +28,7 @@
 		"waxed_copper_trapdoor",
 		"waxed_copper_grate",
 		"waxed_exposed_copper_grate",
-		"#pressure_plates"
+		"#pressure_plates",
+		"moving_piston"
 	]
 }

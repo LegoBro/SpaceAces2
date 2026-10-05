@@ -5,6 +5,11 @@ execute if score @s i matches 11..25 run return run particle campfire_cosy_smoke
 execute if score @s i matches 26..45 run particle campfire_cosy_smoke ~ ~ ~ 1 1 1 0.005 50 force @a
 execute if score @s i matches 46..150 run particle campfire_cosy_smoke ~ ~ ~ 2 2 2 0.0 25 force @a
 
+execute if score @s i matches 25 run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 moving_piston replace air
+execute if score @s i matches 45 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 moving_piston replace air
+
+execute if score @s i matches 199 run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 air replace moving_piston
+
 scoreboard players operation #target_id Numbers = @s id
 execute as @e[tag=entity,distance=..8] unless score @s id = #target_id Numbers run effect give @s slowness 1 0 true
 execute as @a[distance=..8] unless score @s id = #target_id Numbers run effect give @s slowness 1 0 true

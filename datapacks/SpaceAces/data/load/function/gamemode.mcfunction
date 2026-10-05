@@ -18,6 +18,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"tdm",\
@@ -25,6 +26,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"setback",\
@@ -35,6 +37,7 @@ data merge storage space_aces:gamemodes {\
         "capture_time":30,\
         "start_delay":300,\
         "capture_delay":400,\
+        "bot_strategy":0,\
     },\
     {\
         "name":"killstreak",\
@@ -42,6 +45,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"payload",\
@@ -49,6 +53,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"escape",\
@@ -56,6 +61,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"none",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"lockout",\
@@ -63,6 +69,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"ctf",\
@@ -70,6 +77,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"pd",\
@@ -77,13 +85,15 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"aliens",\
         "min_players":2,\
         "needs_teams":false,\
         "spawn":"team",\
-        "respawn":"team"\
+        "respawn":"team",\
+        "bot_strategy":0,\
     },\
     {\
         "name":"ffa",\
@@ -91,6 +101,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"random",\
+        "bot_strategy":0,\
     }\
 ]}
 
