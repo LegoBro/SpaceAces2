@@ -10,8 +10,8 @@ tellraw @s [{text:"==\\/==",color:red,bold:true}," ",{translate:"sa_bot.heading.
 
 
 #show bot task and goal
-execute unless score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 53"}}," ",{translate:"sa_bot.menu.debug.show_bot_task",color:white,bold:true}]
-execute if score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 53"}}," ",{translate:"sa_bot.menu.debug.show_bot_task",color:white,bold:true}]
+execute unless score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 53"}}," ",{translate:"sa_bot.menu.debug.shot_bot_task",color:white,bold:true}]
+execute if score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 53"}}," ",{translate:"sa_bot.menu.debug.shot_bot_task",color:white,bold:true}]
 
 #show bot destination
 execute unless score #debug_show_bot_destination sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]

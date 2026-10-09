@@ -9,11 +9,11 @@
 
 
 #desired_team is first priority if we have that defined
-#red
+#force red
 execute if data storage sa_bots:bot_data this.settings.team_choice{desired_team:1} run \
     return 1
 #=====
-#blue
+#force blue
 execute if data storage sa_bots:bot_data this.settings.team_choice{desired_team:2} run \
     return 2
 #=====

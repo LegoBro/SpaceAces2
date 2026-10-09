@@ -2,7 +2,7 @@
 
 
 #ignore anything we're shooting or looking at
-scoreboard players set @s sab.botIgnoreAimTime 5
+scoreboard players set @s sab.botIgnoreAimTime 10
 scoreboard players set @s sab.botForceAngleTime 0
 
 
@@ -15,10 +15,9 @@ execute if score @s sab.botScriptedAction matches 2001..2500 if entity @s[scores
 execute if score @s sab.botScriptedAction matches 2501..2800 run scoreboard players set @s sab.botCrouchTime 5
 execute store result score #test sab.var run data get entity @s Rotation[1]
 #hold still, look down
-execute if score @s sab.botScriptedAction matches 2502..2808 run scoreboard players set @s sab.botForceAngleTime 5
+execute if score @s sab.botScriptedAction matches 2502..2808 run scoreboard players set @s sab.botForceAngleTime 10
 execute if score @s sab.botScriptedAction matches 2502..2808 run scoreboard players set @s sab.botForceAnglePitch100 8800
-execute if score @s sab.botScriptedAction matches 2502..2808 run scoreboard players set @s sab.botMoveRotationOffsetTime 2
-execute if score @s sab.botScriptedAction matches 2502..2808 run scoreboard players set @s sab.botMoveRotationOffset 180
+execute if score @s sab.botScriptedAction matches 2502..2809 run scoreboard players set @s sab.botPauseTime 2
 #shoot first sticky
 execute if score @s sab.botScriptedAction matches 2502..2600 if score #test sab.var matches 86.. run scoreboard players set @s[scores={sab.airTime=..1}] sab.botRightClick10Hz 1
 execute if score @s sab.botScriptedAction matches 2502..2600 if score @s shoot matches 1.. unless score @s reload matches 1.. run scoreboard players set @s sab.botScriptedAction 2601
@@ -33,7 +32,7 @@ execute if entity @s[scores={sab.botScriptedAction=2809..2900}] run scoreboard p
 execute if entity @s[scores={sab.botScriptedAction=2809..2900}] run tag @s add sab.botJumpNextLedge
 execute if entity @s[scores={sab.botScriptedAction=2811..2900}] run tag @s add sab.botJump
 execute if entity @s[scores={sab.botScriptedAction=2812..2900}] run scoreboard players set @s SelectedItem 1
-execute if entity @s[scores={sab.botScriptedAction=2812..2900}] run scoreboard players set @s sab.botRightClick10Hz 1
+execute if entity @s[scores={sab.botScriptedAction=2812..2900}] run scoreboard players set @s sab.botRightClick10Hz 0
 execute if entity @s[scores={sab.botScriptedAction=2812..2900}] run scoreboard players set @s sab.botScriptedAction 2991
 
 #done

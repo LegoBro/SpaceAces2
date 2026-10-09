@@ -22,7 +22,6 @@ scoreboard players operation @s sab.botTargetAngleDifferencePitch = #pitch sab.v
 scoreboard players remove @s[scores={sab.botReactionCountdown=1..,sab.botTargetEntityID=1..,sab.botTargetAngleDifferenceYaw=-4500..4500,sab.botTargetAngleDifferencePitch=-4500..4500}] sab.botReactionCountdown 1
 
 #quit out and rotate without focus if commanded to do so
-execute if score @s sab.botForceAngleTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_to_face_angle
 execute if score @s sab.botIgnoreAimTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_without_focus
 #=====
 
@@ -36,6 +35,8 @@ execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={sab.botReactionC
 scoreboard players operation #var sab.var = @s sab.botSkill
 #aim much faster when healing teammates
 execute if entity @s[tag=sab.botShootingFriendlyPlayer,scores={sab.botTargetEntityID=1..}] run scoreboard players add #var sab.var 4
+#aim slower at faraway targets
+execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={sab.botTargetEntityID=1..,sab.botTargetEntityDistance=20..,sab.botTargetAngleDifferenceYaw=-50..50}] run scoreboard players remove #var sab.var 2
 
 #rotate to look towards target
 execute if score #var sab.var matches ..2 run function sa_bots:bot/movement/rotate/aim_speeds/1

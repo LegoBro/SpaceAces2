@@ -28,10 +28,8 @@ execute if score @s Team matches 1 run function sa_bots:bot/entity_task/log_poss
 
 
 #log all possible source of healing along with how dangerous and far away they are
-execute as @e[type=marker,tag=weak_health_pack,distance=..250] at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute as @e[type=marker,tag=strong_health_pack,distance=..250] at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute as @e[type=item_display,tag=chem_dispenser,distance=..250] if score @s Team = #team sab.var at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute as @e[type=item_display,tag=class.healer.over_heal_machine,distance=..250] if score @s Team = #team sab.var at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute as @e[type=item_frame,tag=health_pack,distance=..250] at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute as @e[type=item_display,tag=sab.nearby.healing,distance=..250] if score @s Team = #team sab.var at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
 execute as @e[type=#projectile:players,tag=sab.activePlayer,distance=5..250] if score @s Team = #team sab.var \
     if function sa_bots:bot/entity_task/5_find_healing/check_if_direct_healer at @s if loaded ~ ~ ~ as @e[type=marker,tag=sab.botWaypointGeneric,limit=1,sort=nearest,distance=..15] run function sa_bots:bot/entity_task/log_possible_destination/_go
 

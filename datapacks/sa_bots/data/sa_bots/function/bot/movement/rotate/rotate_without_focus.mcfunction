@@ -1,7 +1,3 @@
-#do forced angle if requested
-execute if score @s sab.botForceAngleTime matches 1.. run return run function sa_bots:bot/movement/rotate/rotate_to_face_angle
-#=====
-
 #don't change rotation if we're at roughly the same x and z
 #(this prevents bots from becoming a fidget spinner when above or below target)
 execute if score @s sab.botMoveTargetDX matches -15..15 if score @s sab.botMoveTargetDZ matches -15..15 \

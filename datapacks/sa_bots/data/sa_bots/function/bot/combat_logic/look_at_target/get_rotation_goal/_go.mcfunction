@@ -47,8 +47,7 @@ execute if score #var sab.var matches ..99 if entity @s[type=#projectile:players
 execute unless score #test sab.var matches 1 run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/set_e_rotation
 
 #if we're using a projectile with a strong downward arc (like grenades), aim upward based on LOS distance
-execute if score #bot_weapon_has_downward_arc sab.var matches 1 as e-0-0-0-1 at @s run \
-    function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/adjust_rotation_for_projectile_arc
+execute unless score #bot_weapon_has_downward_arc sab.var matches 0 run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/adjust_rotation_for_projectile_arc_index
 #---------------------
 
 #output

@@ -12,10 +12,10 @@ scoreboard players set @s sab.botTimeSinceProgress 0
 scoreboard players add @s sab.botScriptedAction 1
 
 
-#6 block and 10 block jump are rolled into one
-execute if score @s sab.botScriptedAction matches 1..1000 run scoreboard players set @s sab.botScriptedAction 1001
-#vertical jump
-execute if score @s sab.botScriptedAction matches 1001..2000 run function sa_bots:bot/class_logic/1_scout/scripted_high_jump
+#6 block jump
+execute if score @s sab.botScriptedAction matches 1..1000 run function sa_bots:bot/class_logic/1_scout/scripted_high_jump
+#10 block vertical jump
+execute if score @s sab.botScriptedAction matches 1001..2000 run function sa_bots:bot/class_logic/1_scout/scripted_high_jump_double
 
 #horizontal jump
 execute if score @s sab.botScriptedAction matches 2001..2999 run function sa_bots:bot/class_logic/1_scout/scripted_horizontal_jump

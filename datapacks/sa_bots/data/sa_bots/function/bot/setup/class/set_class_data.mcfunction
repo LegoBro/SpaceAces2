@@ -43,6 +43,9 @@ execute if score @s Class matches 7 run tag @s add sab.botWantsToGetCloseToEnemy
 execute if score @s Class matches 11 run tag @s add sab.botWantsToGetCloseToEnemy
 execute if score @s Class matches 13 run tag @s add sab.botWantsToGetCloseToEnemy
 
+#some classes may want to avoid enemies
+execute if score @s Class matches 3 run tag @s add sab.botWantsToAvoidEnemy
+
 #some classes want to keep their distance
 execute if score @s Class matches 3 run tag @s add sab.botWantsToKeepDistanceFromEnemy
 execute if score @s Class matches 4 run tag @s add sab.botWantsToKeepDistanceFromEnemy
@@ -54,6 +57,9 @@ execute if score @s Class matches 3 run tag @s add sab.botHas6BlockJump
 execute if score @s Class matches 4 run tag @s add sab.botHasMovementAbilities
 execute if score @s Class matches 6..8 run tag @s add sab.botHasMovementAbilities
 execute if score @s Class matches 15 run tag @s add sab.botHasMovementAbilities
+
+#some classes look for long-distance targets
+execute if score @s Class matches 3 run tag @s add sab.botShootsAtLongDistance
 
 #some classes may tweak aggression or cooperativeness when at skill 4+
 execute if score @s sab.botSkill matches 4.. run function sa_bots:bot/setup/class/set_class_behavior_adjustments

@@ -13,6 +13,10 @@ execute if entity @s[tag=wp.turretSpot] positioned ~ ~1.4 ~ summon text_display 
 execute if entity @s[tag=wp.turretSpot.blue] positioned ~ ~1.5 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.turretSpot.blue",color:blue}'}
 execute if entity @s[tag=wp.turretSpot.red] positioned ~ ~1.55 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.turretSpot.red",color:red}'}
 
+execute if entity @s[tag=wp.leadsToTurretSpot] positioned ~ ~1.4 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.leadsToTurretSpot",color:green}'}
+execute if entity @s[tag=wp.leadsToTurretSpot.blue] positioned ~ ~1.5 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.leadsToTurretSpot.blue",color:blue}'}
+execute if entity @s[tag=wp.leadsToTurretSpot.red] positioned ~ ~1.55 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.leadsToTurretSpot.red",color:red}'}
+
 execute if entity @s[tag=wp.patrolPoint] positioned ~ ~1.6 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.patrolPoint",color:green}'}
 execute if entity @s[tag=wp.patrolPoint.blue] positioned ~ ~1.7 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.patrolPoint.blue",color:blue}'}
 execute if entity @s[tag=wp.patrolPoint.red] positioned ~ ~1.75 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_macro_tiny {text:'{text:"wp.patrolPoint.red",color:red}'}

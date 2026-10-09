@@ -19,21 +19,21 @@ execute if entity @s[scores={sab.botGoal=2,Team=2}] run scoreboard players remov
 
 #each class considers goals differently
 execute unless score @s Class matches 1..15 run function sa_bots:bot/class_logic/0_fallback/determine_goal
-execute unless score @s Class matches 1 run function sa_bots:bot/class_logic/1_scout/determine_goal
-execute unless score @s Class matches 2 run function sa_bots:bot/class_logic/2_soldier/determine_goal
-execute unless score @s Class matches 3 run function sa_bots:bot/class_logic/3_sniper/determine_goal
-execute unless score @s Class matches 4 run function sa_bots:bot/class_logic/4_bomber/determine_goal
-execute unless score @s Class matches 5 run function sa_bots:bot/class_logic/5_gunner/determine_goal
-execute unless score @s Class matches 6 run function sa_bots:bot/class_logic/6_healer/determine_goal
-execute unless score @s Class matches 7 run function sa_bots:bot/class_logic/7_brawler/determine_goal
-execute unless score @s Class matches 8 run function sa_bots:bot/class_logic/8_mobility/determine_goal
-execute unless score @s Class matches 9 run function sa_bots:bot/class_logic/9_mechanic/determine_goal
-execute unless score @s Class matches 10 run function sa_bots:bot/class_logic/10_scientist/determine_goal
-execute unless score @s Class matches 11 run function sa_bots:bot/class_logic/11_infiltraitor/determine_goal
-execute unless score @s Class matches 12 run function sa_bots:bot/class_logic/12_pyro/determine_goal
-execute unless score @s Class matches 13 run function sa_bots:bot/class_logic/13_seeker/determine_goal
-execute unless score @s Class matches 14 run function sa_bots:bot/class_logic/14_shocksmith/determine_goal
-execute unless score @s Class matches 15 run function sa_bots:bot/class_logic/15_rocketeer/determine_goal
+execute if score @s Class matches 1 run function sa_bots:bot/class_logic/1_scout/determine_goal
+execute if score @s Class matches 2 run function sa_bots:bot/class_logic/2_soldier/determine_goal
+execute if score @s Class matches 3 run function sa_bots:bot/class_logic/3_sniper/determine_goal
+execute if score @s Class matches 4 run function sa_bots:bot/class_logic/4_bomber/determine_goal
+execute if score @s Class matches 5 run function sa_bots:bot/class_logic/5_gunner/determine_goal
+execute if score @s Class matches 6 run function sa_bots:bot/class_logic/6_healer/determine_goal
+execute if score @s Class matches 7 run function sa_bots:bot/class_logic/7_brawler/determine_goal
+execute if score @s Class matches 8 run function sa_bots:bot/class_logic/8_mobility/determine_goal
+execute if score @s Class matches 9 run function sa_bots:bot/class_logic/9_mechanic/determine_goal
+execute if score @s Class matches 10 run function sa_bots:bot/class_logic/10_scientist/determine_goal
+execute if score @s Class matches 11 run function sa_bots:bot/class_logic/11_infiltraitor/determine_goal
+execute if score @s Class matches 12 run function sa_bots:bot/class_logic/12_pyro/determine_goal
+execute if score @s Class matches 13 run function sa_bots:bot/class_logic/13_seeker/determine_goal
+execute if score @s Class matches 14 run function sa_bots:bot/class_logic/14_shocksmith/determine_goal
+execute if score @s Class matches 15 run function sa_bots:bot/class_logic/15_rocketeer/determine_goal
 
 #if we already have a goal, there is a much lower chance we switch goals
 execute store result score #random sab.var run random value 1..6
@@ -45,12 +45,10 @@ execute if score @s sab.botGoal matches 0.. unless score @s sab.botGoal = #choic
 execute unless score @s sab.botGoal matches 0.. run \
     scoreboard players operation @s sab.botGoal = #choice sab.var
 
-
 #are our teammates not doing the objective? do the job nobody else is doing
 #(this will be especially helpful if we do something funny like run a team of all mechanics)
 execute if score @s Team matches 1 run function sa_bots:bot/entity_goal/enforce_restrictions_blue
 execute if score @s Team matches 2 run function sa_bots:bot/entity_goal/enforce_restrictions_red
-
 
 #if we changed goals, re-evaluate base task at the first opportunity
 #(this will interrupt our journey to our current destination. this is intentional!)

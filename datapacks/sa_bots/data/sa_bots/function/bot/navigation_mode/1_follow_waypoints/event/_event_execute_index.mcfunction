@@ -10,9 +10,9 @@ execute if score #chosen_event sab.var matches 4 run return run function sa_bots
 #5 -- vertical move 6 blocks
 execute if score #chosen_event sab.var matches 5 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/5_require_vertical_move_6_blocks/execute
 #6 -- vertical move 10 blocks
-execute if score #chosen_event sab.var matches 5 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/6_require_vertical_move_10_blocks/execute
+execute if score #chosen_event sab.var matches 6 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/6_require_vertical_move_10_blocks/execute
 #7 -- horizontal move
-execute if score #chosen_event sab.var matches 5 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/7_require_horizontal_move/execute
+execute if score #chosen_event sab.var matches 7 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/7_require_horizontal_move/execute
 #8 -- no action needed
 #9 -- no action needed
 #10 -- no action needed

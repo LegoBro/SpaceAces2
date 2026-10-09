@@ -32,6 +32,7 @@ scoreboard objectives add sab.botReactionCountdown dummy
 scoreboard objectives add sab.botConfidence dummy
 scoreboard objectives add sab.botConfidenceCheck dummy
 scoreboard objectives add sab.botCheckLOSTimer dummy
+scoreboard objectives add sab.botCheckLOSTimerLongDistance dummy
 scoreboard objectives add sab.botTimeSinceLOS dummy
 scoreboard objectives add sab.botTargetEntityID dummy
 scoreboard objectives add sab.botTargetEntityDistance dummy

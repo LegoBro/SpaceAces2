@@ -11,6 +11,10 @@ execute store result score #random sab.var run random value 1..5
 execute if score #random sab.var matches ..2 run return fail
 #=====
 
+#kick out if we're doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run return fail
+#=====
+
 
 #navigate to the person we're looking at
 scoreboard players set #get_id sab.var -1

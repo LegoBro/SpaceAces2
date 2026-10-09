@@ -16,12 +16,14 @@ execute if score #placed_movement_target sab.var matches 0 run return run functi
 
 #the angle between us and the movement target is the angle we're moving at
 
+#look at forced angle
+execute if score @s sab.botForceAngleTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_angle
 #swimming pose: face movement direction directly if not looking at anything else
-execute if score @s sab.botPose matches 1 unless score @s sab.botLookTime matches 1.. facing entity e-0-0-0-2 eyes run rotate @s ~ ~
+execute unless score @s sab.botForceAngleTime matches 1.. if score @s sab.botPose matches 1 unless score @s sab.botLookTime matches 1.. facing entity e-0-0-0-2 eyes run rotate @s ~ ~
 #standing pose: face movement direction roughly
-execute if score @s sab.botPose matches 0 unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
+execute unless score @s sab.botForceAngleTime matches 1.. if score @s sab.botPose matches 0 unless score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_without_focus
 #try to look at target if we have one
-execute if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target
+execute unless score @s sab.botForceAngleTime matches 1.. if score @s sab.botLookTime matches 1.. run function sa_bots:bot/movement/rotate/rotate_to_face_target
 
 #get a normalized vector from us to our movement target entity
 execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bots:bot/movement/2_swimming/rotate_move_target_angle

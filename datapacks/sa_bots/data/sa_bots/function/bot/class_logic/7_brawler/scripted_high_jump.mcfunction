@@ -2,8 +2,12 @@
 
 
 #ignore anything we're shooting or looking at
-scoreboard players set @s sab.botIgnoreAimTime 5
+scoreboard players set @s sab.botIgnoreAimTime 10
 scoreboard players set @s sab.botForceAngleTime 0
+
+#store what direction we were facing
+execute if score @s sab.botScriptedAction matches 1003 store result score @s sab.botForceAngleYaw100 run data get entity @s Rotation[0] 100
+execute if score @s sab.botScriptedAction matches 1003 run scoreboard players operation @s sab.botForceAngleYaw100 %= #36000 sab.var
 
 #when we reach a wall or cliff, get ready to jump
 execute if score @s sab.botScriptedAction matches 1003..1500 rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~1 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 1501
@@ -13,11 +17,10 @@ execute if score @s sab.botScriptedAction matches 1003..1500 if entity @s[scores
 #hold still, look up
 execute store result score #test sab.var run data get entity @s Rotation[1]
 execute if score @s sab.botScriptedAction matches 1502..1700 run scoreboard players set @s SelectedItem 1
-execute if score @s sab.botScriptedAction matches 1502..1600 run scoreboard players set @s sab.botForceAngleTime 5
-execute if score @s sab.botScriptedAction matches 1502..1600 run scoreboard players set @s sab.botForceAnglePitch100 -8000
-execute if score @s sab.botScriptedAction matches 1502..1600 run scoreboard players set @s sab.botMoveRotationOffsetTime 2
-execute if score @s sab.botScriptedAction matches 1502..1600 run scoreboard players set @s sab.botMoveRotationOffset 180
-execute if score @s sab.botScriptedAction matches 1502..1600 if entity @s[scores={sab.airTime=..1,ability.1.cooldown=..0}] if score #test sab.var matches ..-75 run scoreboard players set @s sab.botScriptedAction 1601
+execute if score @s sab.botScriptedAction matches 1502..1700 run scoreboard players set @s sab.botForceAngleTime 10
+execute if score @s sab.botScriptedAction matches 1502..1700 run scoreboard players set @s sab.botForceAnglePitch100 -4000
+execute if score @s sab.botScriptedAction matches 1502..1600 run scoreboard players set @s sab.botPauseTime 2
+execute if score @s sab.botScriptedAction matches 1502..1600 if entity @s[scores={sab.airTime=..1,ability.1.cooldown=..0}] if score #test sab.var matches ..-38 run scoreboard players set @s sab.botScriptedAction 1601
 
 #leap and jump! done.
 execute if score @s sab.botScriptedAction matches 1601.. run tag @s add sab.botJump

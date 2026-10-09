@@ -12,3 +12,4 @@ execute if data entity @s data.tasks[0] run return run function sa_bots:bot/enti
 
 #no more tasks left? time to improvise...
 function sa_bots:bot/entity_task/_improvise_base_task
+function sa_bots:bot/entity_task/_task_tick_index

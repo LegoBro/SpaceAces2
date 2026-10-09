@@ -36,7 +36,7 @@ execute if score @s size matches 110.. if score @s sab.botUsingUnconditionalNav 
 execute if entity @s[tag=sab.botHas6BlockJump] if data storage sa_bots:generic get_sector_flags.list[{6_block_jump_gated:1}] run scoreboard players set #var sab.var 2
 
 #movement-gated?
-execute if entity @s[tag=sab.botHasMovementAbilities] if data storage sa_bots:generic get_sector_flags.list[{movement_gated:1}] run scoreboard players set #var sab.var 1
+execute if entity @s[tag=sab.botHasMovementAbilities] if data storage sa_bots:generic get_sector_flags.list[{movement_gated:1}] run scoreboard players set #var sab.var 2
 
 #map-gated?
 execute if data storage sa_bots:generic get_sector_flags.list[{map_gated:1}] run scoreboard players set #var sab.var 2

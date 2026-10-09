@@ -6,6 +6,10 @@ scoreboard players operation #random sab.var += @s sab.botConfidence
 execute if score #random sab.var matches ..11 run return fail
 #=====
 
+#kick out if we're doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run return fail
+#=====
+
 
 #navigate to the person we're looking at
 scoreboard players set #get_id sab.var -1

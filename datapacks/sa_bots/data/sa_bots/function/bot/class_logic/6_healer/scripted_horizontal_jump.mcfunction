@@ -2,7 +2,7 @@
 
 
 #ignore anything we're shooting or looking at
-scoreboard players set @s sab.botIgnoreAimTime 5
+scoreboard players set @s sab.botIgnoreAimTime 10
 scoreboard players set @s sab.botForceAngleTime 0
 
 #store what direction we were facing
@@ -11,18 +11,17 @@ execute if score @s sab.botScriptedAction matches 2003 run scoreboard players ad
 execute if score @s sab.botScriptedAction matches 2003 run scoreboard players operation @s sab.botForceAngleYaw100 %= #36000 sab.var
 
 #when we reach a wall or cliff, get ready to jump
-execute if score @s sab.botScriptedAction matches 2003..2500 rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~1 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 2501
-execute if score @s sab.botScriptedAction matches 2003..2500 rotated ~ 0 positioned ^ ^ ^1 if block ~ ~-1 ~ #sa_bots:not_solid if block ~ ~-2 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 2501
+execute if score @s sab.botScriptedAction matches 2003..2500 rotated ~ 0 positioned ^ ^ ^1.5 unless block ~ ~1 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 2501
+execute if score @s sab.botScriptedAction matches 2003..2500 rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-1 ~ #sa_bots:not_solid if block ~ ~-2 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 2501
 execute if score @s sab.botScriptedAction matches 2003..2500 if entity @s[scores={sab.botBestDistanceToTargetX=-3..3,sab.botBestDistanceToTargetY=-3..3}] run scoreboard players set @s sab.botScriptedAction 2501
 
 #aim down, fire wrist rocket when off cooldown
 execute store result score #test sab.var run data get entity @s Rotation[1]
 #hold still, look down
 execute if score @s sab.botScriptedAction matches 2502..2700 run scoreboard players set @s SelectedItem 2
-execute if score @s sab.botScriptedAction matches 2502..2600 run scoreboard players set @s sab.botForceAngleTime 5
-execute if score @s sab.botScriptedAction matches 2502..2600 run scoreboard players set @s sab.botForceAnglePitch100 4250
-execute if score @s sab.botScriptedAction matches 2502..2600 run scoreboard players set @s sab.botMoveRotationOffsetTime 2
-execute if score @s sab.botScriptedAction matches 2502..2600 run scoreboard players set @s sab.botMoveRotationOffset 180
+execute if score @s sab.botScriptedAction matches 2502..2700 run scoreboard players set @s sab.botForceAngleTime 10
+execute if score @s sab.botScriptedAction matches 2502..2700 run scoreboard players set @s sab.botForceAnglePitch100 4250
+execute if score @s sab.botScriptedAction matches 2502..2600 run scoreboard players set @s sab.botPauseTime 2
 execute if score @s sab.botScriptedAction matches 2502..2600 if entity @s[scores={sab.airTime=..1,ability.2.cooldown=..0}] if score #test sab.var matches 40..45 run scoreboard players set @s sab.botScriptedAction 2601
 
 #shoot and jump! done.

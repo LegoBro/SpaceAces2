@@ -24,7 +24,10 @@ execute if entity @s[scores={blindness=1..,sab.botCheckLOSTimer=..4}] store resu
 execute if entity @s[scores={sab.botTargetEntityID=1..,sab.botCheckLOSTimer=..0,sab.botSkill=3..}] \
     positioned ~ ~1.25 ~ positioned ^ ^ ^22 run function sa_bots:bot/combat_logic/check_for_targets/_check_with_existing_target
 
-#no temporary task active: check for people we might want to shoot at
+#periodically check for long-distance targets if we have a tag for that
+execute if entity @s[tag=sab.botShootsAtLongDistance] run function sa_bots:bot/combat_logic/check_for_targets/countdown_long_distance_check
+
+#no active target: check for people we might want to shoot at
 #(using bot's current rotation)
 execute unless score @s sab.botTargetEntityID matches 1.. if score @s sab.botCheckLOSTimer matches ..0 \
     positioned ~ ~1.25 ~ positioned ^ ^ ^22 run function sa_bots:bot/combat_logic/check_for_targets/_check_without_existing_target

@@ -21,6 +21,7 @@ execute if score @s sab.botPose matches 3 run scoreboard players set #eye_height
 
 #remember how we're trying to aim
 execute store result score #bot_weapon_has_downward_arc sab.var run execute if entity @s[tag=sab.botWeaponHasDownwardArc]
+execute if entity @s[tag=sab.botWeaponHasUpwardArc] run scoreboard players set #bot_weapon_has_downward_arc sab.var -1
 execute store result score #bot_weapon_slow_projectile sab.var run execute if entity @s[tag=sab.botWeaponSlowProjectile]
 execute store result score #bot_shoot_floor sab.var run execute if entity @s[tag=sab.botShootAtFloor]
 execute store result score #bot_lead_shot sab.var run execute if score @s sab.botSkill matches 5..
