@@ -1,11 +1,6 @@
 #executed by the player that damaged our bot
 
 
-#must be somewhat nearby
-execute unless entity @s[distance=..40] run return fail
-#=====
-
-
 #make sure we have a unique targeting ID
 execute unless score @s sab.entityTargetingID matches 1.. run function sa_bots:bot/combat_logic/check_for_targets/assign_new_target_id
 

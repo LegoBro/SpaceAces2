@@ -10,6 +10,10 @@ execute if score #random sab.var matches ..11 run return fail
 execute if score @s sab.botScriptedAction matches 1.. run return fail
 #=====
 
+#kick out if we want to build something somewhere
+execute if entity @s[tag=sab.botHasSpecificBuildSpot] run return fail
+#=====
+
 
 #navigate to the person we're looking at
 scoreboard players set #get_id sab.var -1

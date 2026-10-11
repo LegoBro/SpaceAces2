@@ -2,7 +2,6 @@
 
 
 #we at the pizza hut
-tag @s add sab.botPathEdit
 tag @s remove sab.autoConnectWaypoints
 tag @s remove sab.noClearIncoming
 tag @s remove sab.noClearOutgoing
@@ -22,3 +21,9 @@ scoreboard players reset @s sab.waypointLastPlaced
 scoreboard players reset @s sab.waypointLastEdited
 scoreboard players reset @s sab.defineConnectionEndIndex
 execute unless score @s sab.assignSector matches 1.. run scoreboard players set @s sab.assignSector 1
+
+#if we're currently the only person in edit mode, don't show any nav channels
+execute unless entity @a[tag=sab.botPathEdit] run scoreboard players reset #show_nav_channel sab.var
+
+#get editor tag
+tag @s add sab.botPathEdit

@@ -1,7 +1,30 @@
 #executed by a bot waypoint
+
+
+#store destination data in storage so it can be copied into a bot's data.destinations[] list
+
+#id/sector
 data modify storage sa_bots:generic get_waypoint.id set from entity @s UUID[3]
 data modify storage sa_bots:generic get_waypoint.uuid4 set from entity @s data.uuid4
 data modify storage sa_bots:generic get_waypoint.sector set from entity @s data.sector
+
+#-------------------------
+#destinations can have an attached "action" that will be executed if/when we reach the destination
+#(must set "#destination_action sab.var" before calling this)
+# 0 = nothing
+# 1 = build turret
+# 2 = take a sub-route assuming it will lead to a turret spot
+# 3 = hold near point (sniper?)
+
+#if a mechanic wants to build a turret, but this is merely a "wp.leadsToTurretSpot", have them take a sub-route
+execute if score #destination_action sab.var matches 1 if entity @s[tag=wp.leadsToTurretSpot] run scoreboard players set #destination_action sab.var 2
+execute if score #destination_action sab.var matches 1 if score #team sab.var matches 1 if entity @s[tag=wp.leadsToTurretSpot.blue] run scoreboard players set #destination_action sab.var 2
+execute if score #destination_action sab.var matches 1 if score #team sab.var matches 2 if entity @s[tag=wp.leadsToTurretSpot.red] run scoreboard players set #destination_action sab.var 2
+
+#apply destination action
+execute store result storage sa_bots:generic get_waypoint.action int 1 run scoreboard players get #destination_action sab.var
+scoreboard players set #destination_action sab.var 0
+#-------------------------
 
 #we did it
 scoreboard players set #found_destination sab.var 1

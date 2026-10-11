@@ -14,9 +14,12 @@ scoreboard players set @s sab.botLookingForSubTargets 0
 # 2 = already generated a sub-target
 
 #are we chasing a sub-target? simply pop it off the stack and go for the next target we have. no need for all the complicated nonsense in this function
-execute if data entity @s data.move_targets[0].metadata{is_sub_route:1} run \
+execute unless data entity @s data.move_targets[0].metadata{is_sub_route:0} run \
     return run function sa_bots:bot/waypoint_nav/pop_move_target_off_stack
 #=====
+
+#if in navigation mode 2 or 3, force back to 1 if we collected a primary target
+execute if score @s sab.botNavigationMode matches 2..3 run scoreboard players set @s sab.botNavigationMode 1
 
 #are we in the air?
 scoreboard players operation #on_ground sab.var = @s sab.onGround
@@ -30,6 +33,12 @@ execute if score #found_target sab.var matches 0 run return 0
 
 #remember whether we're using unconditional nav or not
 scoreboard players operation #using_unconditional_nav sab.var = @s sab.botUsingUnconditionalNav
+
+#remember what specific tags we're looking for
+scoreboard players operation #look_for_waypoint_tag sab.var = @s sab.botLookingForWaypointTag
+
+#by default: do not force using a subroute (some destination actions might change this)
+scoreboard players set #force_subroute sab.var 0
 
 #determine what our destination is
 scoreboard players set #goal_sector sab.var 0
@@ -91,6 +100,10 @@ execute if score #found_target sab.var matches 1.. if score @s sab.botMoveState 
 
 #execute event, if we have one
 execute if score #chosen_event sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/_event_execute_index
+
+#if we found a specific waypoint tag we were looking for, bot will respond accordingly
+execute if score #look_for_waypoint_tag sab.var matches 100000.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/bot_react_to_specific_waypoint_tag
+
 
 #if we didn't find anything valid, go into "roam" mode for a while
 execute if score #found_target sab.var matches 0 run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets

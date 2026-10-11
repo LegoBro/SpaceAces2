@@ -12,6 +12,8 @@ execute if score #debug_show_junction_decisions sab.var matches 1 run \
     "sector=",{score:{name:"#sector",objective:"sab.var"},color:gold} \
     ]
 
+#check for specific waypoint tags if requested
+execute if score #look_for_waypoint_tag sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/fetch_data_look_for_specific_tags
 
 #are we the one? if so, we found destination. pick a new one (we will re-run this function in a momment...)
 execute if score #goal_id sab.var = #id sab.var run \
@@ -21,6 +23,9 @@ execute if score #prev_goal_id sab.var = #id sab.var run \
     return run execute as @e[type=mannequin,tag=sab.self,distance=..1] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_reach_destination
 #=====
 
+
+#get ready to count how many outgoing paths are sub-routes
+scoreboard players set #connected_subroutes sab.var 0
 
 #if we're in the same sector as the destination, we need to do a special route check
 execute if score #goal_sector sab.var = #sector sab.var run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/find_best_route_within_sector

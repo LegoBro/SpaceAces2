@@ -25,7 +25,9 @@ execute if entity @s[tag=sab.botShootingActiveOpponent,scores={damage=..49,sab.b
 scoreboard players set #get_id sab.var -1
 scoreboard players operation #team sab.var = @s Team
 scoreboard players operation #attacker_id sab.var = @s lastHurter
-execute as @e[type=#projectile:players,tag=hb,distance=..40] if score @s id = #attacker_id sab.var \
+execute if entity @s[tag=!sab.botShootsAtLongDistance] as @e[type=#projectile:players,tag=hb,distance=..40] if score @s id = #attacker_id sab.var \
+    unless score @s Team = #team sab.var run function sa_bots:bot/combat_logic/react/get_attacker_targeting_id
+execute if entity @s[tag=sab.botShootsAtLongDistance] as @e[type=#projectile:players,tag=hb,distance=..150] if score @s id = #attacker_id sab.var \
     unless score @s Team = #team sab.var run function sa_bots:bot/combat_logic/react/get_attacker_targeting_id
 
 #exit out if nothing was found

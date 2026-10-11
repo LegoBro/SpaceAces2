@@ -13,6 +13,9 @@ scoreboard players set #found_destination sab.var 0
 execute if loaded ~ ~ ~ run tp e-0-0-0-1 ~ ~ ~
 
 
+#have the mechanic build a turret at the destination we choose
+scoreboard players set #destination_action sab.var 1
+
 #remember what Team we are and what sector we're in
 scoreboard players operation #team sab.var = @s Team
 scoreboard players operation #bot_in_sector sab.var = @s sab.botInSector
@@ -24,11 +27,14 @@ scoreboard players set #count_more_dangerous sab.var 0
 execute if score @s Team matches 2 run function sa_bots:bot/entity_task/log_possible_destination/get_sector_danger_blue
 execute if score @s Team matches 1 run function sa_bots:bot/entity_task/log_possible_destination/get_sector_danger_red
 
+#higher skill bots won't build turrets near other turrets
+execute if score @s sab.botSkill matches 5.. run scoreboard players set #filter_possible_targets sab.var 1
 
 #log all possible targets along with how dangerous and far away they are
-execute as @e[type=marker,tag=wp.turretRelevant,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute if score @s Team matches 1 as @e[type=marker,tag=wp.turretRelevant.blue,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute if score @s Team matches 2 as @e[type=marker,tag=wp.turretRelevant.red,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute as @e[type=marker,tag=wp.turretRelevant,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute if score @s Team matches 1 as @e[type=marker,tag=wp.turretRelevant.blue,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute if score @s Team matches 2 as @e[type=marker,tag=wp.turretRelevant.red,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+scoreboard players set #filter_possible_targets sab.var 0
 
 #low skill bot doesn't care about danger, they may run into more dangerous sectors
 execute if entity @s[scores={sab.botSkill=..3}] run scoreboard players set #count_less_dangerous sab.var 0
@@ -58,6 +64,9 @@ execute if score #found_destination sab.var matches 1 run \
 #internalize destination id as score
 scoreboard players set @s sab.botDestinationUUID -2
 execute if score #found_destination sab.var matches 1 store result score @s sab.botDestinationUUID run data get entity @s data.destinations[0]
+
+#if we're going to a turret spot, get tag
+execute if score #found_destination sab.var matches 1 run tag @s add sab.botHasSpecificBuildSpot
 #-----------------------------------
 
 #cleanup
@@ -68,4 +77,5 @@ kill @e[type=marker,tag=sab.decisionMaker,distance=..1]
 tp e-0-0-0-1 0 50 0
 
 #fallback: go somewhere random within the current sector
+scoreboard players set #destination_action sab.var 0
 execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:14}

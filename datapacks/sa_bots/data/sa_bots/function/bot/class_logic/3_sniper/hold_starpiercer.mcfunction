@@ -14,9 +14,9 @@ scoreboard players operation #test sab.var = class.sniper.1.maxDamage Numbers
 scoreboard players operation #test sab.var -= @s ability.1.cooldown
 
 #shoot at people
-execute if entity @s[scores={sab.botSkill=..4,sab.lockedOntoEnemy=2..}] if score #test sab.var matches -30.. run tag @s add input.jump
-execute if entity @s[scores={sab.botSkill=5..6,sab.lockedOntoEnemy=3..}] if score #test sab.var matches -20.. run tag @s add input.jump
-execute if entity @s[scores={sab.botSkill=7..8,sab.lockedOntoEnemy=4..}] if score #test sab.var matches -10.. run tag @s add input.jump
+execute if entity @s[scores={sab.botSkill=..4,sab.lockedOntoEnemy=2..}] if score #test sab.var matches -12.. run tag @s add input.jump
+execute if entity @s[scores={sab.botSkill=5..6,sab.lockedOntoEnemy=3..}] if score #test sab.var matches -6.. run tag @s add input.jump
+execute if entity @s[scores={sab.botSkill=7..8,sab.lockedOntoEnemy=4..}] if score #test sab.var matches -2.. run tag @s add input.jump
 execute if entity @s[scores={sab.botSkill=9..10,sab.lockedOntoEnemy=4..}] if score #test sab.var matches 0.. run tag @s add input.jump
 
 #can't jump while scoped in!

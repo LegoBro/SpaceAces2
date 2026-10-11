@@ -21,7 +21,7 @@ execute if score @s sab.botScriptedAction matches 502..700 run scoreboard player
 execute if score @s sab.botScriptedAction matches 502..600 run scoreboard players set @s sab.botPauseTime 2
 execute if score @s sab.botScriptedAction matches 502..600 if entity @s[scores={sab.airTime=..1,reload=..0,totalShots=1..}] if score #test sab.var matches 89.. run scoreboard players set @s sab.botScriptedAction 601
 
-#warp and jump! done.
+#shoot and jump! done.
 execute if score @s sab.botScriptedAction matches 601 run tag @s add sab.botJump
 execute if score @s sab.botScriptedAction matches 601.. run scoreboard players set @s sab.botRightClick10Hz 0
 execute if score @s sab.botScriptedAction matches 602.. run scoreboard players reset @s sab.botScriptedAction

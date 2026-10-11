@@ -11,8 +11,11 @@ scoreboard players add @s sab.botRoamTime 1
 scoreboard players set @s sab.botTimeSinceProgress 2
 
 #check for nearby waypoints
-execute if score @s sab.botWPSearchCooldown matches ..0 \
+#for the first 10 seconds, try not to go after the last 2 waypoints we visited
+execute if score @s sab.botWPSearchCooldown matches ..0 if score @s sab.botRoamTime matches ..200 \
     store result score @s sab.botWPSearchCooldown run function sa_bots:bot/waypoint_nav/seek_nearby_waypoint_ignore_last_2_targets
+execute if score @s sab.botWPSearchCooldown matches ..0 if score @s sab.botRoamTime matches 201.. \
+    store result score @s sab.botWPSearchCooldown run function sa_bots:bot/waypoint_nav/seek_nearby_waypoint
 
 #found target? switch to follow_waypoints mode
 execute if data entity @s data.move_targets[0] run \

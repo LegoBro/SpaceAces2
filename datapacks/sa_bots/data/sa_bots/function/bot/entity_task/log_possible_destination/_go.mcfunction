@@ -1,5 +1,10 @@
-#executed by the bot waypoint nearest to a given source of healing
+#executed by the bot waypoint that is a possible destination
 
+
+#do nothing if we don't meet special criteria
+execute if score #filter_possible_targets sab.var matches 1.. if function sa_bots:bot/entity_task/log_possible_destination/filter_target run \
+    return fail
+#=====
 
 #summon a Marker for decision-making
 summon marker ~ ~ ~ {Tags:["sab.decisionMaker","sab.setData"]}

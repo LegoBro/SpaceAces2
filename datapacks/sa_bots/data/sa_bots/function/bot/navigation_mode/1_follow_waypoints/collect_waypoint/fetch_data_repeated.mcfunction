@@ -7,6 +7,9 @@ execute store result score #id sab.var run data get entity @s UUID[3]
 execute store result score #sector sab.var run data get entity @s data.sector
 
 
+#get ready to count how many outgoing paths are sub-routes
+scoreboard players set #connected_subroutes sab.var 0
+
 #if we're in the same sector as the destination, we need to do a special route check
 execute if score #goal_sector sab.var = #sector sab.var run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/find_best_route_within_sector
 #otherwise, pick route by looking up the routes that were pre-generated already

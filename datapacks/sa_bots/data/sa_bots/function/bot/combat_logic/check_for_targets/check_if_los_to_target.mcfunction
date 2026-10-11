@@ -15,7 +15,7 @@ execute facing entity @s eyes positioned ^ ^ ^1 run function sa_bots:bot/combat_
 
 #do we have a LOS? return 1
 execute if entity @s[tag=sab.possibleTarget] run return 1
-execute if entity @s[tag=sab.possibleTargetSeeOnly] run return 1
+execute if entity @s[tag=sab.possibleTargetSeeOnly] run return 2
 #=====
 
 #otherwise no

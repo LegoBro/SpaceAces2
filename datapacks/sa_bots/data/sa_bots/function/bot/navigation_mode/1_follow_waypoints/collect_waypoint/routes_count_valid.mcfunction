@@ -12,6 +12,12 @@ execute if score @s sab.markEvent matches 1.. \
     return run tag @s remove sab.routeSort
 #=====
 
+#take ourselves out of the running if we're forcing subroutes and we're not a subroute
+execute if score #force_subroute sab.var matches 1 if score #connected_subroutes sab.var matches 1.. \
+    unless entity @s[tag=sab.markSubRoute] run \
+    return run tag @s remove sab.routeSort
+#=====
+
 #valid route if we get the bot closer to the destination
 execute if score @s sab.markDistance < #distance_at_this_waypoint sab.var run tag @s add sab.routeValid
 execute if score @s sab.markDistance < #distance_at_this_waypoint sab.var run scoreboard players add #count_valid sab.var 1

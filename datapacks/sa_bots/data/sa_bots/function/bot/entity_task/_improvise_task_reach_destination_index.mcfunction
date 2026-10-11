@@ -16,7 +16,7 @@ execute if score @s sab.botTask matches 3 run return run function sa_bots:bot/en
 execute if score @s sab.botTask matches 4 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 5 run return run function sa_bots:bot/entity_task/complete_non_base_task
 execute if score @s sab.botTask matches 6 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 7 run return run function sa_bots:bot/entity_task/complete_non_base_task
+execute if score @s sab.botTask matches 7 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 8 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 9 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 10 run return run function sa_bots:bot/entity_task/_improvise_base_task

@@ -5,8 +5,7 @@ scoreboard players set #found_destination sab.var 0
 #2) not in a sector that is more dangerous than where we already are
 
 #possible sources of healing:
-# @e[type=marker,tag=weak_health_pack]
-# @e[type=marker,tag=strong_health_pack]
+# @e[type=item_frame,tag=health_pack]
 # friendly chem dispenser
 # friendly overheal machine
 # teammate playing a class that can direcly heal us (healer, shocksmith)

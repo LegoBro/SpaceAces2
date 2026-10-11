@@ -56,6 +56,11 @@ execute unless score @s sab.dUltimateCharge = @s ultimate_charge run function sa
 #----------------------------
 #MOVEMENT
 
+#check for nearby objects of interest (healing sources)
+scoreboard players remove @s sab.botObjectCheckTime 2
+execute if score @s sab.botObjectCheckTime matches ..0 unless score @s sab.botNavigationMode matches 3 \
+    if entity @e[type=!player,tag=sab.nearby.healing,distance=..10] run function sa_bots:bot/movement/check_nearby_objects/healing_source
+
 #movement tick
 function sa_bots:bot/movement/_movement_main
 

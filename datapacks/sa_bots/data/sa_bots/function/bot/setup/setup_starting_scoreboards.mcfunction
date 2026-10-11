@@ -25,6 +25,7 @@ scoreboard players set @s sab.botMoveRotationOffset 0
 scoreboard players set @s sab.botMoveRotationOffsetTime 0
 scoreboard players set @s sab.botDestinationUUID -2
 scoreboard players set @s sab.botLastDestinationUUID -1
+scoreboard players set @s sab.botLookingForWaypointTag 0
 
 
 #adopt variables from storage

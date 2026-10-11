@@ -9,6 +9,7 @@ scoreboard players set #distance_to_sector sab.var 2147483647
 $execute if score @s sab.navSectorCacheChannelUC$(channel) matches -2147483648..2147483647 run \
     scoreboard players operation #distance_to_sector sab.var = @s sab.navSectorCacheChannelUC$(channel)
 $scoreboard players set #set_index sab.var $(i)
+execute store result score #path_is_subroute sab.var run execute if entity @s[tag=sab.botSubroute]
 
 #event 10 requires us to have a reference to this waypoint
 execute if score #set_event sab.var matches 10 run data modify storage sa_bots:generic uuid4 set from entity @s data.uuid4
