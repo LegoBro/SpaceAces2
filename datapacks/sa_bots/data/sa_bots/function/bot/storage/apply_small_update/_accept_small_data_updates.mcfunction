@@ -1,3 +1,7 @@
+#get index of the bot this will apply to
+execute store result storage sa_bots:generic apply_i int 1 run scoreboard players get #input_i sab.var
+
+
 #adopt only the data that changed this tick
 execute if score #bot_update_ultimate_charge sab.var matches -2147483648..2147483647 run \
     function sa_bots:bot/storage/apply_small_update/ultimate_charge with storage sa_bots:generic
@@ -7,3 +11,6 @@ execute if score #bot_update_ultimate_charge sab.var matches -2147483648..214748
 #reset flags
 scoreboard players reset #bot_update_ultimate_charge sab.var
 #...
+
+#reset flag for sending data
+scoreboard players set #bot_sent_small_data_update sab.var 0

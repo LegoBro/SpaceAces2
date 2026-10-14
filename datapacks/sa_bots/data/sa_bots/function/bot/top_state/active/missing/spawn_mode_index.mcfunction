@@ -3,6 +3,8 @@
 #sa_bots:bot_data this = the current bot we're referring to
 
 
+#get rid of previous respawn countdown. we will re-generate it again when needed
+data remove storage sa_bots:bot_data this.respawn_time_countdown
 
 #get data ready
 data modify storage sa_bots:generic username set from storage sa_bots:bot_data this.profile.username
@@ -19,10 +21,14 @@ execute if score Gamemode settings matches 3 run scoreboard players set #bot_spa
 #ffa
 execute if score Gamemode settings matches 9 run scoreboard players set #bot_spawn_mode sab.var 3
 #execute if data storage space_aces:selected_gamemode gamemode{spawn:"random"} run scoreboard players set #bot_spawn_mode sab.var 3
+
+#override if some location was already defined by Space Aces (#bot_spawn_mode sab.var = -1)
+execute if data storage sa_bots:bot_data this.respawn_location run function sa_bots:bot/top_state/active/missing/spawn_mode_location_override
 #-----------------------------------
 
 #do something depending on how we're supposed to respawn the bot
 execute unless score #bot_spawn_mode sab.var matches -2147483648..2147483647 run scoreboard players set #bot_spawn_mode sab.var 0
+execute if score #bot_spawn_mode sab.var matches -1 run function sa_bots:bot/top_state/active/missing/try_respawn_bot_predefined_location with storage sa_bots:generic
 execute if score #bot_spawn_mode sab.var matches 0 run function sa_bots:bot/top_state/active/missing/try_respawn_bot_anywhere
 execute if score #bot_spawn_mode sab.var matches 1 run function sa_bots:bot/top_state/active/missing/try_respawn_bot_teams
 execute if score #bot_spawn_mode sab.var matches 2 run function sa_bots:bot/top_state/active/missing/try_respawn_bot_teams_payload
