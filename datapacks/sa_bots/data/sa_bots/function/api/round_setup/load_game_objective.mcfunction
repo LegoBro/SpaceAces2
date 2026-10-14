@@ -3,24 +3,20 @@
 
 
 #read data
-data modify storage sa_bots:bot_data objective.type set from storage space_aces:selected_gamemode name
+data modify storage sa_bots:bot_data objective.type set from storage space_aces:selected_gamemode bot_strategy
 
 #-------------------------------------
 #0 = none (unset)
 scoreboard players set #bot_objective sab.var 0
 
 #1 = basic team fighting
-execute if data storage sa_bots:bot_data objective{type:"tdm"} run scoreboard players set #bot_objective sab.var 1
-execute if data storage sa_bots:bot_data objective{type:"killstreak"} run scoreboard players set #bot_objective sab.var 1
-execute if data storage sa_bots:bot_data objective{type:"pd"} run scoreboard players set #bot_objective sab.var 1
+execute if data storage sa_bots:bot_data objective{type:"basic_team_fighting"} run scoreboard players set #bot_objective sab.var 1
 
 #2 = limited lives team fighting
-execute if data storage sa_bots:bot_data objective{type:"duel"} run scoreboard players set #bot_objective sab.var 2
-execute if data storage sa_bots:bot_data objective{type:"lockout"} run scoreboard players set #bot_objective sab.var 2
-execute if data storage sa_bots:bot_data objective{type:"aliens"} run scoreboard players set #bot_objective sab.var 2
+execute if data storage sa_bots:bot_data objective{type:"limited_lives_team_fighting"} run scoreboard players set #bot_objective sab.var 2
 
 #3 = 3 control point
-execute if data storage sa_bots:bot_data objective{type:"setback"} run scoreboard players set #bot_objective sab.var 3
+execute if data storage sa_bots:bot_data objective{type:"3_control_point"} run scoreboard players set #bot_objective sab.var 3
 
 #4 = payload
 execute if data storage sa_bots:bot_data objective{type:"payload"} run scoreboard players set #bot_objective sab.var 4

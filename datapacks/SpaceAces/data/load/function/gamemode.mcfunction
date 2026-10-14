@@ -8,6 +8,7 @@
 # needs_teams: requires players to be on both teams for this mode; boolean
 # spawn: where players initially spawn; valid options are [ team, random ]
 # respawn: how and where players respawn; valid options are [ none, team, random ]
+# bot_strategy: defines how bots should behave [ basic_team_fighting, limited_lives_team_fighting, 3_control_point, payload, ctf, ffa ]
 
 
 data merge storage space_aces:gamemodes {\
@@ -18,7 +19,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
-        "bot_strategy":0,\
+        "bot_strategy":"limited_lives_team_fighting",\
     },\
     {\
         "name":"tdm",\
@@ -26,7 +27,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
-        "bot_strategy":0,\
+        "bot_strategy":"basic_team_fighting",\
     },\
     {\
         "name":"setback",\
@@ -37,7 +38,7 @@ data merge storage space_aces:gamemodes {\
         "capture_time":30,\
         "start_delay":300,\
         "capture_delay":400,\
-        "bot_strategy":0,\
+        "bot_strategy":"3_control_point",\
     },\
     {\
         "name":"killstreak",\
@@ -45,7 +46,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
-        "bot_strategy":0,\
+        "bot_strategy":"basic_team_fighting",\
     },\
     {\
         "name":"payload",\
@@ -53,7 +54,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
-        "bot_strategy":0,\
+        "bot_strategy":"payload",\
     },\
     {\
         "name":"escape",\
@@ -61,7 +62,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"none",\
-        "bot_strategy":0,\
+        "bot_strategy":"none",\
     },\
     {\
         "name":"lockout",\
@@ -69,7 +70,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
-        "bot_strategy":0,\
+        "bot_strategy":"limited_lives_team_fighting",\
     },\
     {\
         "name":"ctf",\
@@ -77,7 +78,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
-        "bot_strategy":0,\
+        "bot_strategy":"ctf",\
     },\
     {\
         "name":"pd",\
@@ -85,7 +86,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
-        "bot_strategy":0,\
+        "bot_strategy":"basic_team_fighting",\
     },\
     {\
         "name":"aliens",\
@@ -93,7 +94,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"team",\
-        "bot_strategy":0,\
+        "bot_strategy":"limited_lives_team_fighting",\
     },\
     {\
         "name":"ffa",\
@@ -101,7 +102,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"random",\
-        "bot_strategy":0,\
+        "bot_strategy":"ffa",\
     }\
 ]}
 
