@@ -22,7 +22,7 @@ tp @a[tag=in_game,scores={health=..0},team=blue] 6 195 -1 90 0
 tp @a[tag=in_game,scores={health=..0},team=red] 10 195 -1 -90 0
 scoreboard players add @a[tag=in_game,scores={health=..0}] i 1
 execute as @a[tag=in_game,scores={health=..0}] at @s run function gamemode:respawn
-execute as @a[tag=in_game] unless score @s i > respawnTime Numbers run item replace entity @s hotbar.8 with minecraft:air
+#execute as @a[tag=in_game] unless score @s i > respawnTime Numbers run item replace entity @s hotbar.8 with minecraft:air
 execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:payload/respawning
 
 execute if entity @a[tag=winner] run scoreboard players set @a[tag=in_game] invulnerable 10

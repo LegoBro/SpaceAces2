@@ -7,9 +7,14 @@ bossbar set main players @a
 # activePoint 2 = blue (negative progress)
 
 # Active Capture Point
-execute if score #capture_delay gamemode matches 1.. run scoreboard players remove #capture_delay gamemode 1
-execute unless score #capture_delay gamemode matches 1.. at @n[type=marker,tag=active_capture_point] as @a[team=red,distance=..7,limit=3] unless entity @a[team=blue,distance=..7] run scoreboard players add point Numbers 1
-execute unless score #capture_delay gamemode matches 1.. at @n[type=marker,tag=active_capture_point] as @a[team=blue,distance=..7,limit=3] unless entity @a[team=red,distance=..7] run scoreboard players remove point Numbers 1
+execute if score #capture_delay gamemode matches 1.. run function gamemode:setback/waiting
+execute unless score #capture_delay gamemode matches 1.. at @n[type=marker,tag=gamemode.setback.active_point] as @e[team=red,type=#projectile:players,tag=hb,distance=..7,limit=3] unless entity @a[team=blue,distance=..7] run scoreboard players add point Numbers 1
+execute unless score #capture_delay gamemode matches 1.. at @n[type=marker,tag=gamemode.setback.active_point] as @e[team=blue,type=#projectile:players,tag=hb,distance=..7,limit=3] unless entity @a[team=red,distance=..7] run scoreboard players remove point Numbers 1
+
+execute as @n[type=marker,tag=gamemode.setback.active_point] at @s run function gamemode:comp/tool/compass
+
+
+
 
 # Negative value = blue control
 execute if score point Numbers matches ..-1 run function gamemode:setback/blue/control
@@ -18,11 +23,7 @@ execute if score point Numbers matches ..-1 run function gamemode:setback/blue/c
 execute if score point Numbers matches 1.. run function gamemode:setback/red/control
 
 # Health
-tp @a[tag=in_game,scores={health=..0},team=blue] 6 195 -1 90 0
-tp @a[tag=in_game,scores={health=..0},team=red] 10 195 -1 -90 0
-scoreboard players add @a[tag=in_game,scores={health=..0}] i 1
-execute as @a[tag=in_game,scores={health=..0}] at @s run function gamemode:respawn
-execute as @a[tag=in_game] unless score @s i > respawnTime Numbers run item replace entity @s hotbar.8 with minecraft:air
+#execute as @a[tag=in_game] unless score @s i > respawnTime Numbers run item replace entity @s hotbar.8 with minecraft:air
 execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:setback/respawning
 
 execute unless entity @a[tag=winner] run scoreboard players add captureSound i 1

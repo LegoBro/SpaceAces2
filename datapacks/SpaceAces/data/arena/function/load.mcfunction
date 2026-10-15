@@ -1,11 +1,11 @@
 ## New Arena only
 
 scoreboard players reset Mission
-function help:90d92739d1c8bd13c3fc133acf334ebd20b3dc4f4d41d2005584ef55acf47dd9
+data modify block 8 200 65 allow_op_features set value true
+data modify block 8 200 65 front_text.messages[1] set value {"text":"Spectate","color":"gray","bold":true,"clickEvent":{"action":"run_command","value":"/function arena:become_spectator"},"type":"text"}
+data modify block 8 200 65 front_text.messages[2] set value {"text":"Mission","color":"gray","bold":true,"clickEvent":{"action":"run_command","value":"/"},"type":"text"}
 
-function gamemode:prepare with storage space_aces:gamemodes
-
-
+function gamemode:prepare with storage space_aces:selected_gamemode gamemode
 
 schedule function arena:clear 5s
 

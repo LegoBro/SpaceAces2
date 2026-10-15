@@ -2,6 +2,7 @@
 
 # Teleport to map center
 forceload remove all
+forceload add 0 0
 
 # Forceload whole map area, roughly 500x500
 $execute positioned $(center) run forceload add ~-240 ~-240 ~-1 ~-1

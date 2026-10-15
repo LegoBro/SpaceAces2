@@ -1,0 +1,1 @@
+$data modify storage sa_bots:bot_data bots[$(id)].active set value 0

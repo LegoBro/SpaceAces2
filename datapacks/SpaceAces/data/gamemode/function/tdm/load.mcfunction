@@ -3,8 +3,7 @@ scoreboard players set ActiveMode Numbers 1
 
 scoreboard players set blue_players Numbers 0
 scoreboard players set red_players Numbers 0
-execute as @a[tag=ready,team=blue] run scoreboard players add blue_players Numbers 1
-execute as @a[tag=ready,team=red] run scoreboard players add red_players Numbers 1
+
 scoreboard players operation blue_lives Numbers = TDMLives Numbers
 scoreboard players operation red_lives Numbers = TDMLives Numbers
 bossbar set minecraft:blue name ["",{"text":"IGSR Lives Left",color:"blue","type":"text"}]

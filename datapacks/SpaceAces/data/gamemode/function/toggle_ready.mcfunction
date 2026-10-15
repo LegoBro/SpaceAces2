@@ -5,8 +5,8 @@ execute if entity @s[tag=ready] run playsound minecraft:block.note_block.chime b
 execute if entity @s[tag=!ready] run playsound minecraft:block.note_block.chime block @s ~ ~ ~ 1 0 1
 
 function gamemode:update_lobby_players
-execute if score RedPlay Numbers = TotPlay Numbers if score RedPlay Numbers >= MinPlay Numbers run function gamemode:launch_game
-execute if score RedPlay Numbers < TotPlay Numbers if score Mission Numbers matches 0.. run function gamemode:abort_game
+execute unless entity @p[tag=awaiting,tag=!ready] run function gamemode:launch_game
+execute if entity @p[tag=awaiting,tag=!ready] run function gamemode:abort_game
 
 tag @s remove temp
 scoreboard players reset @s rightClick

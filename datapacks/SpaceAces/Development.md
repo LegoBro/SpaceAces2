@@ -144,3 +144,5 @@ Building/entity that heals nearby friendlies, can be tagged as players that can 
 #Common tag for healing buildings (chem dispenser, overheal machine)
 #Give common tag to standby_sticky_bomb, vis_mine, rocket wall
 #Score for "time since respawn" if there isn't one already
+
+Add forward/backward spawns for Setback

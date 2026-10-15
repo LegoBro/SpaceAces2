@@ -1,0 +1,2 @@
+execute if entity @n[type=marker,tag=gamemode.setback.point,distance=..10] run data modify storage dev:helper color set value "0.000,1.000,0.000"
+execute if entity @n[type=marker,tag=gamemode.setback.point,distance=..10] run function dev:helper/visualize

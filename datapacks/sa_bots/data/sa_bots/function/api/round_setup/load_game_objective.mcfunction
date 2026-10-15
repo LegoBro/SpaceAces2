@@ -3,7 +3,7 @@
 
 
 #read data
-data modify storage sa_bots:bot_data objective.type set from storage space_aces:selected_gamemode bot_strategy
+data modify storage sa_bots:bot_data objective.type set from storage space_aces:selected_gamemode gamemode.bot_strategy
 
 #-------------------------------------
 #0 = none (unset)

@@ -16,6 +16,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"duel",\
         "min_players":2,\
+        "rec_players":6,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
@@ -24,6 +25,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"tdm",\
         "min_players":2,\
+        "rec_players":8,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
@@ -32,6 +34,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"setback",\
         "min_players":2,\
+        "rec_players":10,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
@@ -43,6 +46,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"killstreak",\
         "min_players":2,\
+        "rec_players":6,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
@@ -51,6 +55,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"payload",\
         "min_players":2,\
+        "rec_players":10,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
@@ -58,7 +63,8 @@ data merge storage space_aces:gamemodes {\
     },\
     {\
         "name":"escape",\
-        "min_players":2,\
+        "min_players":1,\
+        "rec_players":2,\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"none",\
@@ -67,6 +73,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"lockout",\
         "min_players":2,\
+        "rec_players":6,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
@@ -75,6 +82,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"ctf",\
         "min_players":2,\
+        "rec_players":8,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
@@ -83,6 +91,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"pd",\
         "min_players":2,\
+        "rec_players":12,\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
@@ -91,6 +100,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"aliens",\
         "min_players":2,\
+        "rec_players":16,\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"team",\
@@ -99,6 +109,7 @@ data merge storage space_aces:gamemodes {\
     {\
         "name":"ffa",\
         "min_players":2,\
+        "rec_players":8,\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"random",\
@@ -106,5 +117,9 @@ data merge storage space_aces:gamemodes {\
     }\
 ]}
 
+## Also Verify Maps 
+function dev:gamemode/load_maps
 
+## Finally Copy things over
 data modify storage space_aces:selected_gamemode gamemode set from storage space_aces:gamemodes gamemode[0]
+

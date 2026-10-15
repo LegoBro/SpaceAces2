@@ -24,6 +24,12 @@ data merge storage space_aces:maps {\
             "center":"4095 100 0",\
             "gamemodes":[]\
         },\
+        {\
+            "name":"magma_forge",\
+            "player_count":[1,32],\
+            "center":"13311 100 0",\
+            "gamemodes":[]\
+        },\
     ]\
 }
 
