@@ -24,4 +24,7 @@ execute if score @s sab.botTask matches 11 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 12 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 13 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 14 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 15 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 16 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/reached_destination_likely_keep_going
+execute if score @s sab.botTask matches 17 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/reached_destination_likely_keep_going
 #...

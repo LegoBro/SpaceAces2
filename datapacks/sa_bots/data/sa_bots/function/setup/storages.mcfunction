@@ -30,5 +30,4 @@ execute unless data storage sa_bots:team_composition root run function sa_bots:s
 
 #bot starting gameplay variables
 function sa_bots:bot/storage/define_starting_game_variables
-
 #----------------------------

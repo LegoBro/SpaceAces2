@@ -74,6 +74,13 @@ execute if score @s sab.botGoal matches 1 unless score @s sab.botFollowers match
 #--------------------------
 
 
+#--------------------------
+#special behavior for certain gamemodes
+
+#control point: detect when the active control point changes
+execute if score #bot_objective sab.var matches 3 run function sa_bots:bot/entity_goal/keep_track_of_active_control_point
+#--------------------------
+
 #re-add ourself to goal counts for the sake of other bots who want to evaluate their goal within the next 2 seconds
 execute if entity @s[scores={sab.botGoal=1,Team=1}] run scoreboard players add #playerCountBluePush sab.var 1
 execute if entity @s[scores={sab.botGoal=2,Team=1}] run scoreboard players add #playerCountBlueDefend sab.var 1

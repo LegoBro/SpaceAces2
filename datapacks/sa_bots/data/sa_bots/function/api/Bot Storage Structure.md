@@ -18,6 +18,9 @@ bots[i].profile
 bots[i].active
 > 0..2, whether this bot is active and should be exist in the world (0 = not active, 1 = active, 2 = model only)
 
+bots[i].first_spawn
+> whether the bot is awaiting their first spawn-in (0 = no, 1 = yes)
+
 bots[i].instance
 > Instance of the bot entity. This changes every time we re-spawn a bot. Bot entities with an invalid instance will delete themselves.
 

@@ -18,7 +18,7 @@ data modify storage sa_bots:team_composition root.goals[].count set value []
 execute if score #sector_presence_recalc sab.var matches 1 run function sa_bots:bot/sector_logic/presence_clear_all
 
 #count players
-execute as @a[tag=in_game,gamemode=adventure] run function sa_bots:bot/setup/class/count_players
+execute as @a[tag=in_game,team=!spectator] run function sa_bots:bot/setup/class/count_players
 execute as @e[type=mannequin,tag=sab.botEntity] run function sa_bots:bot/setup/class/count_players_bot
 
 #turrets also count towards team presence

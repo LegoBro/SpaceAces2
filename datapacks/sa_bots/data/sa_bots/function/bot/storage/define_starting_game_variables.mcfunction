@@ -3,4 +3,5 @@
 
 data modify storage sa_bots:bot_data bot_template.game.ultimate_charge set value 0
 data modify storage sa_bots:bot_data bot_template.respawn_time set value 0
+data modify storage sa_bots:bot_data bot_template.first_spawn set value 1
 #...

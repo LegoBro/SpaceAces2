@@ -1,0 +1,2 @@
+execute if score #bot_team_assignment_mode sab.var matches 0 run function sa_bots:bot/setup/team/red_vs_blue/evaluate_on_respawn
+execute if score #bot_team_assignment_mode sab.var matches 1 run function sa_bots:bot/setup/team/ffa/get_unique_team

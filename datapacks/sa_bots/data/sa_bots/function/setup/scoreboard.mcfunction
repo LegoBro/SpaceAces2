@@ -79,6 +79,7 @@ scoreboard objectives add sab.botScriptedAction dummy
 scoreboard objectives add sab.botTimeSinceCombat dummy
 scoreboard objectives add sab.botLookingForWaypointTag dummy
 scoreboard objectives add sab.botObjectCheckTime dummy
+scoreboard objectives add sab.botRememberActivePoint dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

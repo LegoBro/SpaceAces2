@@ -19,8 +19,8 @@ data modify entity @s data.tasks set value []
 scoreboard players set #choice sab.var 0
 #logic based on game type (these aren't directly tied to Space Aces gamemodes storage. various modes can get lumped into one archetype if similar enough)
 execute if score #bot_objective sab.var matches 1 run function sa_bots:bot/entity_task/improvise/1_basic_teams/_index
-execute if score #bot_objective sab.var matches 2 run function sa_bots:bot/entity_task/improvise/2_limited_lives/_index
-execute if score #bot_objective sab.var matches 3 run function sa_bots:bot/entity_task/improvise/3_3_control_point/_index
+execute if score #bot_objective sab.var matches 2 run function sa_bots:bot/entity_task/improvise/2_limited_lives_teams/_index
+execute if score #bot_objective sab.var matches 3 run function sa_bots:bot/entity_task/improvise/3_control_point/_index
 execute if score #bot_objective sab.var matches 4 run function sa_bots:bot/entity_task/improvise/4_payload/_index
 execute if score #bot_objective sab.var matches 5 run function sa_bots:bot/entity_task/improvise/5_ctf/_index
 execute if score #bot_objective sab.var matches 6 run function sa_bots:bot/entity_task/improvise/6_ffa/_index

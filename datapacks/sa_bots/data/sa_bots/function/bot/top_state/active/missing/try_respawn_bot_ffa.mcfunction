@@ -1,5 +1,5 @@
 #figure out what team this bot will be on
-function sa_bots:bot/setup/team/ffa/get_unique_team
+function sa_bots:bot/setup/team/_index_team_assignment
 
 
 #execute at a general_spawn_point

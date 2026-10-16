@@ -1,5 +1,5 @@
 #figure out what team this bot will be on
-function sa_bots:bot/setup/team/red_vs_blue/evaluate_on_respawn
+function sa_bots:bot/setup/team/_index_team_assignment
 
 
 #execute at a random waypoint

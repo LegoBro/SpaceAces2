@@ -27,6 +27,9 @@ scoreboard players set @s sab.botDestinationUUID -2
 scoreboard players set @s sab.botLastDestinationUUID -1
 scoreboard players set @s sab.botLookingForWaypointTag 0
 
+#Space Aces variables
+execute if score #bot_objective sab.var matches 3 run scoreboard players operation @s sab.botRememberActivePoint = activePoint Numbers
+
 
 #adopt variables from storage
 execute store result score @s Team run data get storage sa_bots:bot_data this.team

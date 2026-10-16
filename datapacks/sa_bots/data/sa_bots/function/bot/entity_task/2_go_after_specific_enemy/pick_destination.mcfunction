@@ -17,8 +17,7 @@ execute if score #found_destination sab.var matches 1 if data entity @s data.des
 
 #set id and sector from storage
 execute if score #found_destination sab.var matches 1 run data modify entity @s data.destinations set value []
-execute if score #found_destination sab.var matches 1 run \
-    data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
+execute if score #found_destination sab.var matches 1 run data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint
 
 #internalize destination id as score
 scoreboard players set @s sab.botDestinationUUID -2
