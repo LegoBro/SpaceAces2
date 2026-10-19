@@ -1,4 +1,4 @@
-#executed by the entity our bot is targeting
+#executed by the entity our bot is targeting (only if it's a player)
 #executed at the position of the bot (at eye height!)
 
 #...ok, so our end target is an entity which we aren't allowed to move (reason: "anchored eyes" for headshots)
@@ -8,6 +8,20 @@
 
 #use "test" to track whether we applied an offset
 scoreboard players set #test sab.var 0
+
+
+#compare target coordinate to the coordinate we last saw them at
+# #bot_observed_x = last tick
+# #observe_x = this tick
+
+scoreboard players operation #dx sab.var = #observe_x sab.var
+scoreboard players operation #dx sab.var -= #bot_observed_x sab.var
+
+scoreboard players operation #dz sab.var = #observe_z sab.var
+scoreboard players operation #dz sab.var -= #bot_observed_z sab.var
+
+#a normal walk speed comes out to around 45
+
 
 #capture entity coordinates so we can compare to what we saw last time
 scoreboard players set #observe_player sab.var 1
@@ -22,6 +36,12 @@ execute unless score #bot_observed_x sab.var matches 0 \
 execute unless score #bot_observed_x sab.var matches 0 \
     if score #bot_lead_shot sab.var matches 1 unless score #bot_weapon_slow_projectile sab.var matches 1 \
     run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/lead_shot_slight
+
+#randomized offset to make bots slightly less accurate with hitscan when shooting at enemies
+execute unless score #bot_observed_x sab.var matches 0 \
+    unless score #bot_weapon_slow_projectile sab.var matches 1 unless score @s Team = #team sab.var \
+    run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/reduce_accuracy_hitscan
+
 
 #shoot floor beneath the target if instructed to do so
 execute if score #bot_shoot_floor sab.var matches 1 \

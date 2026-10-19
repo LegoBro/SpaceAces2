@@ -1,3 +1,7 @@
+#executed a by bot entity
+#executed when the bot decided to shoot at some target
+
+
 #clean up old tags
 tag @s[tag=sab.botShootingActiveOpponent] remove sab.botShootingActiveOpponent
 tag @s[tag=sab.botShootingFriendlyPlayer] remove sab.botShootingFriendlyPlayer
@@ -8,6 +12,15 @@ execute store result score #random sab.var run random value -4..4
 scoreboard players operation @s sab.botReactionCountdown += #random sab.var
 #no reaction time if we're already looking at something
 execute if entity @s[scores={sab.botLookTime=1..}] run scoreboard players set @s sab.botReactionCountdown 0
+
+#random chance of us shooting at the head (influenced by skill)
+tag @s remove sab.botShootingAtTargetHead
+execute store result score #random sab.var run random value -5..5
+scoreboard players operation #random sab.var += @s sab.botSkill
+execute if score #random sab.var matches 9.. run tag @s add sab.botShootingAtTargetHead
+
+#get ready to do random aim offsets
+scoreboard players set @s sab.botRandomAimOffsetTime 0
 
 #set scores
 scoreboard players operation @s sab.botTargetEntityID = #get_id sab.var

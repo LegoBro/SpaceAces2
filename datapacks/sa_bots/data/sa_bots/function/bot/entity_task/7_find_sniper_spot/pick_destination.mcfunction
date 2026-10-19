@@ -4,9 +4,9 @@ scoreboard players set #found_destination sab.var 0
 #1) not in a sector that is more dangerous than where we already are
 
 #possible targets:
-# @e[type=marker,tag=wp.sniperSpot]
-# @e[type=marker,tag=wp.sniperSpot.red]
-# @e[type=marker,tag=wp.sniperSpot.blue]
+# @e[type=marker,tag=wp.sniperRelevant]
+# @e[type=marker,tag=wp.sniperRelevant.red]
+# @e[type=marker,tag=wp.sniperRelevant.blue]
 
 
 #Earl will help us keep this optimized by being a point where we can teleport stuff and then do distance=..1
@@ -30,9 +30,9 @@ execute if score @s Team matches 1 run function sa_bots:bot/entity_task/log_poss
 execute if score @s sab.botSkill matches 4.. run scoreboard players set #filter_possible_targets sab.var 2
 
 #log all possible targets along with how dangerous and far away they are
-execute as @e[type=marker,tag=wp.sniperSpot,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute if score @s Team matches 1 as @e[type=marker,tag=wp.sniperSpot.blue,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
-execute if score @s Team matches 2 as @e[type=marker,tag=wp.sniperSpot.red,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute as @e[type=marker,tag=wp.sniperRelevant,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute if score @s Team matches 1 as @e[type=marker,tag=wp.sniperRelevant.blue,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
+execute if score @s Team matches 2 as @e[type=marker,tag=wp.sniperRelevant.red,tag=sab.botWaypointGeneric,distance=..250] at @s if loaded ~ ~ ~ run function sa_bots:bot/entity_task/log_possible_destination/_go
 scoreboard players set #filter_possible_targets sab.var 0
 
 #low skill bot doesn't care about danger, they may run into more dangerous sectors

@@ -28,10 +28,8 @@ tp e-0-0-0-1 ~ ~ ~
 #\/ stuff that can move (we might want to lead our shots) \/
 #player (or any fallback object)
 scoreboard players set #var sab.var 0
-#player: go for headshot
-execute if score #skill sab.var matches 6.. if entity @s[type=#projectile:players] run scoreboard players set #var sab.var 1
-#teammate player (shoot body, not head)
-execute if score #var sab.var matches 1 if score @s Team = #team sab.var run scoreboard players set #var sab.var 0
+#go for headshot if instructed to do so (only against enemy player entities)
+execute if score #shoot_at_head sab.var matches 1 if entity @s[type=#projectile:players] unless score @s Team = #team sab.var run scoreboard players set #var sab.var 1
 #\/ stuff that doesn't move (or at least not very quickly) \/
 execute if entity @s[tag=hb_mechanic_turret] run scoreboard players set #var sab.var 101
 execute if entity @s[tag=chem_dispenser] run scoreboard players set #var sab.var 102

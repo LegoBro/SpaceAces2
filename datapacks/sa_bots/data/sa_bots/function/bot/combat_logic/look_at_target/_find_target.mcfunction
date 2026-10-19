@@ -8,10 +8,17 @@ scoreboard players set #found_target sab.var 0
 #count up time since we had a LOS
 scoreboard players add @s sab.botTimeSinceLOS 2
 
+#refresh random aim offset every few seconds
+scoreboard players remove @s sab.botRandomAimOffsetTime 2
+execute if score @s sab.botRandomAimOffsetTime matches ..0 run function sa_bots:bot/combat_logic/look_at_target/get_rotation_goal/reduce_accuracy_hitscan_set_offset
+
 #remember important variables
 scoreboard players operation #skill sab.var = @s sab.botSkill
 scoreboard players operation #team sab.var = @s Team
 execute store result score #shoot_teammates sab.var run execute if entity @s[tag=sab.botMayShootTeammates]
+execute store result score #shoot_at_head sab.var run execute if entity @s[tag=sab.botShootingAtTargetHead]
+scoreboard players operation #random_aim_offset_x sab.var = @s sab.botRandomAimOffsetX
+scoreboard players operation #random_aim_offset_z sab.var = @s sab.botRandomAimOffsetZ
 
 #remember how tall we are
 scoreboard players operation #eye_height sab.var = @s size

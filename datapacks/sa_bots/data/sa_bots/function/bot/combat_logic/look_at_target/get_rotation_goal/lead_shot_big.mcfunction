@@ -5,17 +5,6 @@
 #set flag indicating we applied a significant offset
 scoreboard players set #test sab.var 1
 
-#compare target coordinate to the coordinate we last saw them at
-# #bot_observed_x = last tick
-# #observe_x = this tick
-
-scoreboard players operation #dx sab.var = #observe_x sab.var
-scoreboard players operation #dx sab.var -= #bot_observed_x sab.var
-
-scoreboard players operation #dz sab.var = #observe_z sab.var
-scoreboard players operation #dz sab.var -= #bot_observed_z sab.var
-
-#a normal walk speed comes out to around 45
 
 #set recursions based on how far away we are
 scoreboard players set #base_recursions sab.var 0

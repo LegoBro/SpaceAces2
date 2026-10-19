@@ -23,6 +23,25 @@ tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",i
 
 
 
+#sub-route start leading to sniper spot
+data modify storage sa_bots:waypoint_info text_builder set value []
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToSniperSpot"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 57"},hover_event:{action:"show_text",value:{text:"wp.leadsToSniperSpot"}}}]
+execute if entity @s[tag=wp.leadsToSniperSpot] run data modify storage sa_bots:waypoint_info text_builder[0][1].color set value "yellow"
+#blue sniper spot
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToSniperSpot.blue"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 58"},hover_event:{action:"show_text",value:{text:"wp.leadsToSniperSpot.blue"}}}]
+execute if entity @s[tag=wp.leadsToSniperSpot.blue] run data modify storage sa_bots:waypoint_info text_builder[1][1].color set value "yellow"
+#red sniper spot
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToSniperSpot.red"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 59"},hover_event:{action:"show_text",value:{text:"wp.leadsToSniperSpot.red"}}}]
+execute if entity @s[tag=wp.leadsToSniperSpot.red] run data modify storage sa_bots:waypoint_info text_builder[2][1].color set value "yellow"
+
+#print this row
+tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",interpret:true}
+
+
+
 #sniper spot
 data modify storage sa_bots:waypoint_info text_builder set value []
 data modify storage sa_bots:waypoint_info text_builder append value \
@@ -93,6 +112,21 @@ execute if entity @s[tag=wp.patrolPoint.blue] run data modify storage sa_bots:wa
 data modify storage sa_bots:waypoint_info text_builder append value \
     ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.patrolPoint.red"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 52"},hover_event:{action:"show_text",value:{text:"wp.patrolPoint.red"}}}]
 execute if entity @s[tag=wp.patrolPoint.red] run data modify storage sa_bots:waypoint_info text_builder[2][1].color set value "yellow"
+
+#print this row
+tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",interpret:true}
+
+
+
+#sub-route start leading to explosive vantage point
+data modify storage sa_bots:waypoint_info text_builder set value []
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.leadsToExplosiveVantagePoint"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 60"},hover_event:{action:"show_text",value:{text:"wp.leadsToExplosiveVantagePoint"}}}]
+execute if entity @s[tag=wp.leadsToExplosiveVantagePoint] run data modify storage sa_bots:waypoint_info text_builder[0][1].color set value "yellow"
+#explosive vantage point
+data modify storage sa_bots:waypoint_info text_builder append value \
+    ["  ",{translate:"sa_bot.generic.button",color:gray,with:[{text:"wp.explosiveVantagePoint"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 61"},hover_event:{action:"show_text",value:{text:"wp.explosiveVantagePoint"}}}]
+execute if entity @s[tag=wp.explosiveVantagePoint] run data modify storage sa_bots:waypoint_info text_builder[1][1].color set value "yellow"
 
 #print this row
 tellraw @a[tag=sab.tellMe] {nbt:"text_builder",storage:"sa_bots:waypoint_info",interpret:true}

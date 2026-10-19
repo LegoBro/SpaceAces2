@@ -16,6 +16,7 @@ scoreboard players set #36000 sab.var 36000
 
 scoreboard players set #360 sab.var 360
 
+scoreboard players set #200 sab.var 200
 scoreboard players set #100 sab.var 100
 scoreboard players set #20 sab.var 20
 scoreboard players set #10 sab.var 10

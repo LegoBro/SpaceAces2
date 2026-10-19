@@ -14,12 +14,23 @@ data modify storage sa_bots:generic get_waypoint.sector set from entity @s data.
 # 0 = nothing
 # 1 = build turret
 # 2 = take a sub-route assuming it will lead to a turret spot
-# 3 = hold near point (sniper?)
+# 3 = hold near point (sniper)
+# 4 = take subroute to reach sniper spot
+# 5 = hold near point (explosive class)
+# 6 = take subroute to reach explosive vantage point
 
 #if a mechanic wants to build a turret, but this is merely a "wp.leadsToTurretSpot", have them take a sub-route
 execute if score #destination_action sab.var matches 1 if entity @s[tag=wp.leadsToTurretSpot] run scoreboard players set #destination_action sab.var 2
 execute if score #destination_action sab.var matches 1 if score #team sab.var matches 1 if entity @s[tag=wp.leadsToTurretSpot.blue] run scoreboard players set #destination_action sab.var 2
 execute if score #destination_action sab.var matches 1 if score #team sab.var matches 2 if entity @s[tag=wp.leadsToTurretSpot.red] run scoreboard players set #destination_action sab.var 2
+
+#if a sniper wants to go to a sniper spot, but this is merely a "wp.leadsToSniperSpot", have them take a sub-route
+execute if score #destination_action sab.var matches 3 if entity @s[tag=wp.leadsToSniperSpot] run scoreboard players set #destination_action sab.var 4
+execute if score #destination_action sab.var matches 3 if score #team sab.var matches 1 if entity @s[tag=wp.leadsToSniperSpot.blue] run scoreboard players set #destination_action sab.var 4
+execute if score #destination_action sab.var matches 3 if score #team sab.var matches 2 if entity @s[tag=wp.leadsToSniperSpot.red] run scoreboard players set #destination_action sab.var 4
+
+#if a we want to go to a vantage point for an explosive class, but this is merely a "wp.leadsToExplosiveVantagePoint", have them take a sub-route
+execute if score #destination_action sab.var matches 5 if entity @s[tag=wp.leadsToExplosiveVantagePoint] run scoreboard players set #destination_action sab.var 6
 
 #apply destination action
 execute store result storage sa_bots:generic get_waypoint.action int 1 run scoreboard players get #destination_action sab.var

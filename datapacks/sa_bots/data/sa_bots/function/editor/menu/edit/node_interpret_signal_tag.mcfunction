@@ -16,3 +16,8 @@ execute if score #signal sab.var matches 11 run return run function sa_bots:edit
 execute if score #signal sab.var matches 12 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToTurretSpot"}
 execute if score #signal sab.var matches 13 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToTurretSpot.blue"}
 execute if score #signal sab.var matches 14 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToTurretSpot.red"}
+execute if score #signal sab.var matches 15 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToSniperSpot"}
+execute if score #signal sab.var matches 16 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToSniperSpot.blue"}
+execute if score #signal sab.var matches 17 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToSniperSpot.red"}
+execute if score #signal sab.var matches 18 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.leadsToExplosiveVantagePoint"}
+execute if score #signal sab.var matches 19 run return run function sa_bots:editor/menu/edit/node_toggle_tag {tag:"wp.explosiveVantagePoint"}
