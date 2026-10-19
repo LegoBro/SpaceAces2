@@ -10,6 +10,8 @@ execute if entity @p[tag=dev.spawnpoints] run function dev:show/spawnpoints
 execute if entity @p[tag=dev.payload] run function dev:gamemode/payload/tick
 execute if entity @p[tag=dev.setback] run function dev:gamemode/setback/tick
 
+execute as @e[type=marker,tag=dev.spawnpoint_progress_plus] at @s run function dev:spawnpoint/plus
+execute as @e[type=marker,tag=dev.spawnpoint_progress_minus] at @s run function dev:spawnpoint/minus
 
 ## Weather
 function weather:dev_tick

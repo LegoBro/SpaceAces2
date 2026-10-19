@@ -5,7 +5,7 @@ scoreboard players add @s i 1
 
 scoreboard players operation #team Team = @s Team
 
-scoreboard players operation place_id id = @s id
+scoreboard players operation place_id id = @s owner
 execute as @a if score place_id id = @s id run tag @s add attacker
 
 

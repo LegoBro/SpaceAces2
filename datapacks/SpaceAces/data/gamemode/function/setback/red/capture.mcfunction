@@ -6,6 +6,7 @@ execute if score activePoint Numbers matches ..-1 run scoreboard players operati
 execute store result score #capture_delay gamemode run data get storage space_aces:gamemodes gamemodes[{"name":"setback"}].capture_delay
 
 function gamemode:setback/update_captured_point
+function gamemode:comp/spawnpoint/move_both_red
 tellraw @a "Red Captured the Point!"
 
 execute unless entity @n[type=marker,tag=gamemode.setback.active_point] unless entity @a[tag=winner] run function gamemode:red_win

@@ -24,7 +24,7 @@ execute if score point Numbers matches 1.. run function gamemode:setback/red/con
 
 # Health
 #execute as @a[tag=in_game] unless score @s i > respawnTime Numbers run item replace entity @s hotbar.8 with minecraft:air
-execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:setback/respawning
+execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:comp/respawn/await
 
 execute unless entity @a[tag=winner] run scoreboard players add captureSound i 1
 execute if score captureSound i matches 50.. run scoreboard players reset captureSound i

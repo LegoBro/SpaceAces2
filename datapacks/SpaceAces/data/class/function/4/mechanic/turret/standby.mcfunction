@@ -1,7 +1,7 @@
 
 
 # Get Owner
-scoreboard players operation place_id id = @s id
+scoreboard players operation place_id id = @s owner
 scoreboard players operation Team Team = @s Team
 
 execute as @e[type=#projectile:players,tag=hb] if score @s id = place_id id run tag @s add target.owner

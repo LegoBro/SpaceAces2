@@ -1,6 +1,6 @@
 scoreboard players add @s i 1
 scoreboard players operation #target_team Numbers = @s Team
-scoreboard players operation #target_owner Numbers = @s id
+scoreboard players operation #target_owner Numbers = @s owner
 
 execute as @e[type=#projectile:players,tag=hb] if score @s id = #target_owner Numbers run tag @s add target.owner
 

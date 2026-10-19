@@ -6,7 +6,7 @@
 #scoreboard players operation @s arcRate = class.rocketeer.2.arcRate Numbers
 scoreboard players operation @s health = class.rocketeer.2.health Numbers
 scoreboard players operation @s Team = #Class_Start Team
-scoreboard players operation @s id = #Class_Start id
+scoreboard players operation @s owner = #Class_Start id
 scoreboard players operation @s damageMultiplier = #damageMultiplier damageMultiplier
 
 execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier
