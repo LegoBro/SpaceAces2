@@ -19,4 +19,7 @@ tag @s remove invulnerable
 scoreboard players reset @s fire
 scoreboard players set @s displayHealth 100
 
+scoreboard players set @s poison 0
+scoreboard players set @s fire 0
+
 return 1

@@ -15,6 +15,10 @@ execute if score Prestart Numbers matches 120.. if score Gamemode settings match
 execute if score Prestart Numbers matches 120.. as @a[tag=in_game,team=red] run tp @s @e[type=marker,tag=red_spawn_point,sort=random,limit=1]
 execute if score Prestart Numbers matches 119 as @a[tag=in_game] at @s run function gamemode:respawn
 execute if score Prestart Numbers matches 119 run function sa_bots:api/activation/activate_all_bots
+
+execute if score Prestart Numbers matches 119 store result storage gamemode:comp bot.respawn_time.duration int 1 run scoreboard players get respawnTime Numbers
+execute as @e[type=mannequin,tag=sab.botEntity] at @s run function sa_bots:api/bot_entity/duration_macro_set_respawn_time with storage gamemode:comp bot.respawn_time
+
 scoreboard players set @a[tag=in_game] game_damage 0
 scoreboard players set @a[tag=in_game] game_healing 0
 scoreboard players set @a[tag=in_game] game_dmg_take 0

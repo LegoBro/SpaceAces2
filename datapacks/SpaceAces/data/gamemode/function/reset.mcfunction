@@ -54,5 +54,6 @@ execute unless entity @e[team=blue] unless entity @e[team=red] run function load
 forceload remove all
 forceload add 0 0
 
+function gamemode:map_sign_display with storage space_aces:selected_map map
 
 return 1

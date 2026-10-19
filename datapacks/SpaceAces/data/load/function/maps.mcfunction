@@ -30,6 +30,12 @@ data merge storage space_aces:maps {\
             "center":"13311 100 0",\
             "gamemodes":[]\
         },\
+        {\
+            "name":"snow_bowl",\
+            "player_count":[1,32],\
+            "center":"16383 99 0",\
+            "gamemodes":[]\
+        },\
     ]\
 }
 

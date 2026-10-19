@@ -25,4 +25,4 @@ kill @s[type=minecraft:item]
 kill @s[type=!minecraft:player,x=3,y=195,z=-10,dx=11,dy=1,dz=15]
 
 # kill aoe's summoned by creepers
-kill @s[type=minecraft:area_effect_cloud,nbt={effects:[{id:"minecraft:resistance"}]}]
+#kill @s[type=minecraft:area_effect_cloud,nbt={effects:[{id:"minecraft:resistance"}]}]

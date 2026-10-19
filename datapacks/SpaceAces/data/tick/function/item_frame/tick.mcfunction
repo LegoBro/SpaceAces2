@@ -14,12 +14,12 @@ scoreboard players add @s[tag=health_pack,scores={i=10}] j 1
 scoreboard players set @s[tag=weak_health,scores={j=51..}] j 50
 scoreboard players set @s[tag=strong_health,scores={j=101..}] j 100
 scoreboard players reset @s[tag=health_pack,scores={i=10..}] i
-execute if entity @s[tag=health_pack,scores={j=1..}] at @s if entity @p[distance=...5,team=!spectator] run scoreboard players operation @p healing += @s j
-execute if entity @s[tag=health_pack,tag=weak_health,scores={j=50..}] at @s if entity @p[distance=...5,team=!spectator] run effect give @p minecraft:saturation 4 0 true
-execute if entity @s[tag=health_pack,tag=weak_health,scores={j=50..}] at @s if entity @p[distance=...5,team=!spectator] run playsound minecraft:health_pack master @a ~ ~ ~ 1 2
-execute if entity @s[tag=health_pack,tag=strong_health,scores={j=100..}] at @s if entity @p[distance=...5,team=!spectator] run effect give @p minecraft:saturation 8 0 true
-execute if entity @s[tag=health_pack,tag=strong_health,scores={j=100..}] at @s if entity @p[distance=...5,team=!spectator] run playsound minecraft:health_pack master @a ~ ~ ~ 1 1
-execute if entity @s[tag=health_pack,scores={j=1..}] at @s if entity @p[distance=...5,team=!spectator] run scoreboard players set @s j 0
+execute if entity @s[tag=health_pack,scores={j=1..}] at @s if entity @n[type=#projectile:players,tag=hb,distance=...5] run scoreboard players operation @p healing += @s j
+execute if entity @s[tag=health_pack,tag=weak_health,scores={j=50..}] at @s if entity @n[type=#projectile:players,tag=hb,distance=...5] run effect give @p minecraft:saturation 4 0 true
+execute if entity @s[tag=health_pack,tag=weak_health,scores={j=50..}] at @s if entity @n[type=#projectile:players,tag=hb,distance=...5] run playsound minecraft:health_pack master @a ~ ~ ~ 1 2
+execute if entity @s[tag=health_pack,tag=strong_health,scores={j=100..}] at @s if entity @n[type=#projectile:players,tag=hb,distance=...5] run effect give @p minecraft:saturation 8 0 true
+execute if entity @s[tag=health_pack,tag=strong_health,scores={j=100..}] at @s if entity @n[type=#projectile:players,tag=hb,distance=...5] run playsound minecraft:health_pack master @a ~ ~ ~ 1 1
+execute if entity @s[tag=health_pack,scores={j=1..}] at @s if entity @n[type=#projectile:players,tag=hb,distance=...5] run scoreboard players set @s j 0
 tag @s[tag=!ignore] add ignore
 
 return 1

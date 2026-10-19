@@ -36,4 +36,7 @@ scoreboard players set @s[x=8,y=200,z=8,distance=..250] invulnerable 100
 
 function input:adv_cleanup
 
+attribute @s[gamemode=!adventure] block_interaction_range base reset
+attribute @s[gamemode=adventure] block_interaction_range base set -1
+
 return 1
