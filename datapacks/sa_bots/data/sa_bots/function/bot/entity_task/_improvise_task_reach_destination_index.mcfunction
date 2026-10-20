@@ -11,7 +11,7 @@ scoreboard players reset @s sab.botPreviousNonBaseTask
 #follow the script for whatever task we're doing (some can loop forever, others will kick us off and onto another task)
 execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 2 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 2 run return run function sa_bots:bot/entity_task/2_go_after_specific_enemy/reached_destination
 execute if score @s sab.botTask matches 3 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 4 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 5 run return run function sa_bots:bot/entity_task/complete_non_base_task

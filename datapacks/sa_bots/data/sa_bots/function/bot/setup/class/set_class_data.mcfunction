@@ -43,6 +43,9 @@ execute if score @s Class matches 7 run tag @s add sab.botWantsToGetCloseToEnemy
 execute if score @s Class matches 11 run tag @s add sab.botWantsToGetCloseToEnemy
 execute if score @s Class matches 13 run tag @s add sab.botWantsToGetCloseToEnemy
 
+#some classes want to get in melee range
+execute if score @s Class matches 7 run tag @s add sab.botWantsToGetInMeleeRange
+
 #some classes may want to avoid enemies
 execute if score @s Class matches 3 run tag @s add sab.botWantsToAvoidEnemy
 

@@ -4,6 +4,9 @@
 #start looking at waypoints again
 scoreboard players set @s sab.botWPSearchCooldown 0
 
+#forget time for any target we were chasing via sab.botNavigationMode 2
+scoreboard players set @s sab.botChaseTargetTime -15
+
 #clear move_taget list entirely
 data modify entity @s data.move_targets set value []
 

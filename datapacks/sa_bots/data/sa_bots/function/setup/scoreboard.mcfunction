@@ -36,7 +36,6 @@ scoreboard objectives add sab.botCheckLOSTimerLongDistance dummy
 scoreboard objectives add sab.botTimeSinceLOS dummy
 scoreboard objectives add sab.botTargetEntityID dummy
 scoreboard objectives add sab.botTargetEntityDistance dummy
-scoreboard objectives add sab.entityTargetingID dummy
 scoreboard objectives add sab.botAttackerEntityID dummy
 scoreboard objectives add sab.botTargetAngleYaw100 dummy
 scoreboard objectives add sab.botTargetAnglePitch100 dummy
@@ -83,6 +82,7 @@ scoreboard objectives add sab.botRememberActivePoint dummy
 scoreboard objectives add sab.botRandomAimOffsetX dummy
 scoreboard objectives add sab.botRandomAimOffsetZ dummy
 scoreboard objectives add sab.botRandomAimOffsetTime dummy
+scoreboard objectives add sab.botChaseTargetTime dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy
