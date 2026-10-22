@@ -3,6 +3,7 @@ $data modify storage sa_bots:waypoint waypoint_target_string set from entity @s 
 #if this is a subroute, look at the endpoint instead
 $execute store result score #read sab.var run data get entity @s data.outgoing[$(i)][3][0]
 $execute if score #read sab.var matches 1.. run data modify storage sa_bots:waypoint waypoint_target_string set from entity @s data.outgoing[$(i)][3][1]
+execute store result score #path_is_subroute sab.var run execute if score #read sab.var matches 1..
 #is this an event?
 $execute store result score #set_event sab.var run data get entity @s data.outgoing[$(i)][2][0]
 #run command on whatever the target is

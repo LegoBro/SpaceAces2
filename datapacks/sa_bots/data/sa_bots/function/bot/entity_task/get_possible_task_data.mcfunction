@@ -24,4 +24,6 @@ execute if score #choice sab.var matches 13 run data modify storage sa_bots:gene
 execute if score #choice sab.var matches 14 run data modify storage sa_bots:generic new_task set value {id:14,name:"RANDOM_WITHIN_SECTOR",is_base_task:1,flags:{is_base_task:1,priority:3}}
 execute if score #choice sab.var matches 15 run data modify storage sa_bots:generic new_task set value {id:15,name:"FIND_RANDOM_ENEMY",is_base_task:1,flags:{is_base_task:1,priority:21}}
 execute if score #choice sab.var matches 16 run data modify storage sa_bots:generic new_task set value {id:16,name:"GO_TO_ACTIVE_CONTROL_POINT",is_base_task:1,flags:{is_base_task:1,priority:32}}
-execute if score #choice sab.var matches 17.. run data modify storage sa_bots:generic new_task set value {id:17,name:"RANDOM_WITHIN_SECTOR_ACTIVE_CONTROL_POINT",is_base_task:1,flags:{is_base_task:1,priority:31}}
+execute if score #choice sab.var matches 17 run data modify storage sa_bots:generic new_task set value {id:17,name:"RANDOM_WITHIN_SECTOR_ACTIVE_CONTROL_POINT",is_base_task:1,flags:{is_base_task:1,priority:31}}
+execute if score #choice sab.var matches 18 run data modify storage sa_bots:generic new_task set value {id:18,name:"AVOID_NEAREST_ENEMY",is_base_task:0,flags:{is_base_task:0,priority:6}}
+execute if score #choice sab.var matches 19.. run data modify storage sa_bots:generic new_task set value {id:19,name:"AVOID_SPECIFIC_ENEMY",is_base_task:0,flags:{is_base_task:0,priority:7}}

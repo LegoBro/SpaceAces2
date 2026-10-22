@@ -9,7 +9,7 @@
 scoreboard players reset @s sab.botPreviousNonBaseTask
 
 #follow the script for whatever task we're doing (some can loop forever, others will kick us off and onto another task)
-execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches ..0 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 1 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 2 run return run function sa_bots:bot/entity_task/2_go_after_specific_enemy/reached_destination
 execute if score @s sab.botTask matches 3 run return run function sa_bots:bot/entity_task/_improvise_base_task
@@ -27,4 +27,6 @@ execute if score @s sab.botTask matches 14 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 15 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 16 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/reached_destination_likely_keep_going
 execute if score @s sab.botTask matches 17 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/reached_destination_likely_keep_going
+execute if score @s sab.botTask matches 18 run return run function sa_bots:bot/entity_task/18_avoid_nearest_enemy/pick_destination
+execute if score @s sab.botTask matches 19.. run return run function sa_bots:bot/entity_task/19_avoid_specific_enemy/pick_destination
 #...

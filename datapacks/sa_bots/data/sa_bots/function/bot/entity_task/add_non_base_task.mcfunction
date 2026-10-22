@@ -21,4 +21,5 @@ execute store result score @s sab.botTask run data get entity @s data.tasks[0].i
 tag @s add sab.botDoingNonBaseTask
 
 #immediately start doing the new task
+data modify entity @s data.destinations set value []
 function sa_bots:bot/entity_task/_task_tick_index

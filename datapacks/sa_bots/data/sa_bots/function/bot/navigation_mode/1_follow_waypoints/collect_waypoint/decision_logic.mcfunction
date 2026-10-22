@@ -68,7 +68,8 @@ scoreboard players set #event_failed sab.var 0
 #note: "#distance_at_this_waypoint sab.var" is the distance to destination at this waypoint
 scoreboard players set #count sab.var 0
 scoreboard players set #count_valid sab.var 0
-execute as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_count_valid
+execute unless entity @s[tag=sab.botRunAwayFromDestination] as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_count_valid
+execute if entity @s[tag=sab.botRunAwayFromDestination] as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_count_valid_avoid_destination
 execute if score #count_valid sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_from_valid
 execute unless score #count_valid sab.var matches 1.. if score #count sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_random
 
@@ -76,8 +77,9 @@ execute unless score #count_valid sab.var matches 1.. if score #count sab.var ma
 execute if score #using_unconditional_nav sab.var matches 2.. if score #count_valid sab.var matches 0 \
     if score #event_failed sab.var matches 1.. run scoreboard players set @s sab.botUsingUnconditionalNav 0
 
-#clean up self tag
+#clean up tags
 tag @s remove sab.self
+tag @s[tag=sab.botRunAwayFromDestination] remove sab.botRunAwayFromDestination
 
 #debug, say which outgoing was chosen
 execute if score #debug_show_junction_decisions sab.var matches 1 run \

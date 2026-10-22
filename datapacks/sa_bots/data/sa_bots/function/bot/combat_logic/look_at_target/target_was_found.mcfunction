@@ -37,7 +37,12 @@ execute unless score @s sab.botLookMode matches 2..3 unless score @s sab.botTask
 scoreboard players operation @s sab.botLookMode = #found_target sab.var
 
 #consider chasing the target down directly
-execute if entity @s[tag=sab.botWantsToGetInMeleeRange,scores={sab.botConfidence=3..,sab.botLookMode=2}] run function sa_bots:bot/navigation_mode/2_combat/consider_chasing_target
+execute if entity @s[tag=sab.botWantsToGetInMeleeRange,scores={sab.botConfidence=3..,sab.botLookMode=2}] \
+    if score #target_is_teammate sab.var matches 1 run function sa_bots:bot/navigation_mode/2_combat/consider_chasing_target
+
+#run away from enemy if we don't want people up close to us
+execute if entity @s[tag=sab.botWantsToAvoidEnemy,scores={sab.botLookMode=1..2,sab.botConfidence=..9,sab.botTargetEntityDistance=..10}] \
+    if score #target_is_teammate sab.var matches 0 unless score @s sab.botTask matches 18..19 run function sa_bots:bot/navigation_mode/2_combat/avoid_target
 
 #set cooldown for "glancing"
 execute if score @s sab.botLookMode matches 3 store result score @s sab.botGlanceTime run random value 70..100

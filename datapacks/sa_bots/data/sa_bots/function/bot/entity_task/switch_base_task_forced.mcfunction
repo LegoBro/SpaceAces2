@@ -18,4 +18,5 @@ data modify entity @s data.tasks append from storage sa_bots:generic new_task
 execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
 
 #immediately start doing the new task
+execute if data entity @s data.tasks[0].flags{is_base_task:1} run data modify entity @s data.destinations set value []
 function sa_bots:bot/entity_task/_task_tick_index

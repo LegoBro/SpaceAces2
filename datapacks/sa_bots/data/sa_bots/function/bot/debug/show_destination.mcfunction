@@ -1,6 +1,6 @@
 #show what we're thinking
 data modify storage sa_bots:waypoint_info text_dump set from entity @s data.destinations[0]
-execute positioned ~ ~2 ~ summon text_display run function sa_bots:bot/debug/show_text_macro \
+execute positioned ~ ~3 ~ summon text_display run function sa_bots:bot/debug/show_text_macro \
     {scale:"0.8f",text:'{nbt:"text_dump",storage:"sa_bots:waypoint_info"}'}
 
 #our destination should also show something

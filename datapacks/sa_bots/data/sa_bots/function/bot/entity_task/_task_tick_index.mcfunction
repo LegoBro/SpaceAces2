@@ -30,4 +30,6 @@ execute if score @s sab.botTask matches 14 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 15 run return run function sa_bots:bot/entity_task/15_go_after_random_enemy/_logic_tick
 execute if score @s sab.botTask matches 16 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/_logic_tick
 execute if score @s sab.botTask matches 17 run return run function sa_bots:bot/entity_task/17_random_within_sector_of_active_control_point/_logic_tick
+execute if score @s sab.botTask matches 18 run return run function sa_bots:bot/entity_task/18_avoid_nearest_enemy/_logic_tick
+execute if score @s sab.botTask matches 19 run return run function sa_bots:bot/entity_task/19_avoid_specific_enemy/_logic_tick
 #...

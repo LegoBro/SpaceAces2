@@ -33,6 +33,9 @@ data modify entity @s data.tasks prepend from storage sa_bots:generic new_task
 #we are no longer doing a non-base task
 tag @s remove sab.botDoingNonBaseTask
 
+#misc clean-up
+tag @s remove sab.botRunAwayFromDestination
+
 #internalize whatever task 0 is
 execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
 

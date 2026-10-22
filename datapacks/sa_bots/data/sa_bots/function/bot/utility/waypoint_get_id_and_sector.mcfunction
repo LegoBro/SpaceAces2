@@ -18,6 +18,7 @@ data modify storage sa_bots:generic get_waypoint.sector set from entity @s data.
 # 4 = take subroute to reach sniper spot
 # 5 = hold near point (explosive class)
 # 6 = take subroute to reach explosive vantage point
+# 7 = stand on control point
 
 #if a mechanic wants to build a turret, but this is merely a "wp.leadsToTurretSpot", have them take a sub-route
 execute if score #destination_action sab.var matches 1 if entity @s[tag=wp.leadsToTurretSpot] run scoreboard players set #destination_action sab.var 2

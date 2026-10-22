@@ -9,3 +9,4 @@ $execute if score #read sab.var matches 1 run tag @s remove $(tag)
 
 #update turret tags while we're here
 function sa_bots:editor/menu/edit/node_update_turret_tags
+function sa_bots:editor/menu/edit/node_update_meta_tags
