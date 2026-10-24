@@ -17,7 +17,7 @@ execute if entity @s[scores={sab.botSkill=..5,reload=1..,ability.2.cooldown=..0}
 #use ability 1 whenever we want, but we must be far enough away from the movement target
 execute if entity @s[scores={ability.1.cooldown=..0}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based \
     if function sa_bots:bot/class_logic/8_mobility/check_if_warp_viable \
-    run function sa_bots:bot/class_logic/use_ability_1_careful
+    run function sa_bots:bot/class_logic/use_ability_1
 
 #shoot when we see someone
 execute if entity @s[scores={SelectedItem=0,sab.lockedOntoEnemy=3..}] run scoreboard players set @s sab.botRightClick10Hz 1

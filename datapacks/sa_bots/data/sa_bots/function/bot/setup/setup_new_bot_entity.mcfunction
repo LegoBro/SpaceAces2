@@ -21,6 +21,9 @@ execute store result score @s sab.botCooperativeness run data get storage sa_bot
 #general variables
 function sa_bots:bot/setup/setup_starting_scoreboards
 
+#set scoreboard display style based on the gamemode
+function sa_bots:bot/setup/set_scoreboard_display_names
+
 #should we concerned about switching teams while alive?
 execute if score @s Team matches 1..2 if data storage sa_bots:bot_data this.settings.team_choice{wait_until_respawn_to_switch:0,bypass_team_restrictions:0,allow_team_change:1} run tag @s add sab.botMaySwitchTeams
 

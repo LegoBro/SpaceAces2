@@ -6,7 +6,7 @@ function sa_bots:bot/navigation_mode/1_follow_waypoints/event/clear_old_event_st
 
 #exit out now if we don't want to update move_targets
 execute if entity @s[tag=sab.doNotUpdateMoveTarget] run \
-    return run tag @s remove sab.doNotUpdateMoveTarget
+    return run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/skip_updating_movement_target
 #=====
 
 #adopt data and scores from recently decided-upon target

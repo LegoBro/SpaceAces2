@@ -38,7 +38,7 @@ scoreboard players operation @s sab.botLookMode = #found_target sab.var
 
 #consider chasing the target down directly
 execute if entity @s[tag=sab.botWantsToGetInMeleeRange,scores={sab.botConfidence=3..,sab.botLookMode=2}] \
-    if score #target_is_teammate sab.var matches 1 run function sa_bots:bot/navigation_mode/2_combat/consider_chasing_target
+    if score #target_is_teammate sab.var matches 0 run function sa_bots:bot/navigation_mode/2_combat/consider_chasing_target
 
 #run away from enemy if we don't want people up close to us
 execute if entity @s[tag=sab.botWantsToAvoidEnemy,scores={sab.botLookMode=1..2,sab.botConfidence=..9,sab.botTargetEntityDistance=..10}] \

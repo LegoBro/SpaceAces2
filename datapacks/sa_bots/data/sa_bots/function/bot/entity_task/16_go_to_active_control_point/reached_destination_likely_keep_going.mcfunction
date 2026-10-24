@@ -8,8 +8,8 @@ execute if score @s sab.botGoal matches 3 run scoreboard players add #random sab
 
 #count how many teammates are capturing the point
 scoreboard players set #count sab.var 0
-execute if score @s Team matches 1 at @e[type=marker,tag=gamemode.setback.active_point,limit=1,sort=random] as @e[type=#projectile:has_hb,tag=sab.activePlayer,distance=..10,scores={Team=1}] run scoreboard players add #count sab.var 1
-execute if score @s Team matches 2 at @e[type=marker,tag=gamemode.setback.active_point,limit=1,sort=random] as @e[type=#projectile:has_hb,tag=sab.activePlayer,distance=..10,scores={Team=2}] run scoreboard players add #count sab.var 1
+execute if score @s Team matches 1 at @e[type=marker,tag=gamemode.setback.active_point,limit=1,sort=random] as @e[type=#projectile:has_hb,tag=sab.activePlayer,distance=..8,scores={Team=1}] run scoreboard players add #count sab.var 1
+execute if score @s Team matches 2 at @e[type=marker,tag=gamemode.setback.active_point,limit=1,sort=random] as @e[type=#projectile:has_hb,tag=sab.activePlayer,distance=..8,scores={Team=2}] run scoreboard players add #count sab.var 1
 
 #"push" goal: go directly to the point if less than 3 teammates are on the point
 execute if entity @s[scores={sab.botGoal=1,sab.botCooperativeness=..2,Team=1..2}] if score #count sab.var matches ..0 run scoreboard players set #random sab.var 1

@@ -28,5 +28,10 @@ execute if score @s sab.botTask matches 15 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 16 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/reached_destination_likely_keep_going
 execute if score @s sab.botTask matches 17 run return run function sa_bots:bot/entity_task/16_go_to_active_control_point/reached_destination_likely_keep_going
 execute if score @s sab.botTask matches 18 run return run function sa_bots:bot/entity_task/18_avoid_nearest_enemy/pick_destination
-execute if score @s sab.botTask matches 19.. run return run function sa_bots:bot/entity_task/19_avoid_specific_enemy/pick_destination
+execute if score @s sab.botTask matches 19 run return run function sa_bots:bot/entity_task/19_avoid_specific_enemy/pick_destination
+execute if score @s sab.botTask matches 20 run return run function sa_bots:bot/entity_task/20_go_to_payload/reached_destination_likely_keep_going
+execute if score @s sab.botTask matches 21 run return run function sa_bots:bot/entity_task/20_go_to_payload/reached_destination_likely_keep_going
+execute if score @s sab.botTask matches 22 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 23 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 24.. run return run function sa_bots:bot/entity_task/_improvise_base_task
 #...

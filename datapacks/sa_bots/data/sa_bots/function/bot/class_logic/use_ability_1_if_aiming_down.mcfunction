@@ -16,4 +16,4 @@ execute if score #pitch sab.var matches ..7800 run return \
     run scoreboard players set @s sab.botRightClick10Hz -1
 #=====
 
-scoreboard players set @s sab.botRightClick10Hz 1
+scoreboard players set @s sab.botRightClick10Hz 0

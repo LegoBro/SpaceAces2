@@ -13,10 +13,10 @@ execute if score #random sab.var matches 60..95 run scoreboard players set #choi
 execute if score #random sab.var matches 96..100 run scoreboard players set #choice sab.var 1
 
 
-#player low in cooperativeness might go for a completely random point
+#player low in cooperativeness might go for a patrol point
 execute store result score #random sab.var run random value 0..30
 scoreboard players operation #random sab.var += @s sab.botCooperativeness
-execute if score #random sab.var matches ..4 run scoreboard players set #choice sab.var 0
+execute if score #random sab.var matches ..4 run scoreboard players set #choice sab.var 22
 
 #---------------------------------
 #class-specific
@@ -24,11 +24,10 @@ execute if score #random sab.var matches ..4 run scoreboard players set #choice 
 execute store result score #random sab.var run random value 1..100
 
 #sniper might go sniping
-execute if score @s Class matches 3 if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 7
+execute if score @s Class matches 3 if score #random sab.var matches 1..40 run scoreboard players set #choice sab.var 24
 
 #mechanic is likely to seek a turret spot
-execute if entity @s[scores={Class=9,sab.hasTurret=0}] if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 8
-execute if entity @s[scores={Class=9,sab.hasTurret=1..}] if score #random sab.var matches 1..10 run scoreboard players set #choice sab.var 8
+execute if entity @s[scores={Class=9,sab.hasTurret=0}] if score #random sab.var matches 1..35 run scoreboard players set #choice sab.var 23
 #---------------------------------
 
 

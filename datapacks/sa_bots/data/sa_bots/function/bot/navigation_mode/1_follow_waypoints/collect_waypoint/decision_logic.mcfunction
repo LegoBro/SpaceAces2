@@ -2,7 +2,7 @@
 
 
 #must be above target, otherwise kick out
-execute unless score @s sab.botMoveTargetDY matches -5.. run return 0
+execute unless score @s sab.botMoveTargetDY matches -8.. run return 0
 #=====
 
 #reset sub-target look state

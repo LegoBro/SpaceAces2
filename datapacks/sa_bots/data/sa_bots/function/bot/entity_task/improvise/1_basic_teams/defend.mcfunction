@@ -12,7 +12,7 @@ execute if score #random sab.var matches 41..70 if score @s Team matches 1 run s
 execute if score #random sab.var matches 41..70 if score @s Team matches 2 run scoreboard players set #choice sab.var 13
 
 #chance we go to a patrol point
-execute if score #random sab.var matches 71..90 run scoreboard players set #choice sab.var 6
+execute if score #random sab.var matches 71..90 run scoreboard players set #choice sab.var 22
 
 #chance we go at nearest teammate
 execute if score #random sab.var matches 91..100 run scoreboard players set #choice sab.var 3
@@ -28,8 +28,9 @@ execute if score @s sab.botTimeSinceCombat matches 750.. if score @s Team matche
 execute store result score #random sab.var run random value 1..100
 
 #sniper might go sniping
-execute if score @s Class matches 3 if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 7
+execute if score @s Class matches 3 if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 24
 
 #mechanic is likely to seek a turret spot
-execute if score @s Class matches 9 if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 8
+execute if entity @s[scores={Class=9,sab.hasTurret=0}] if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 23
+execute if entity @s[scores={Class=9,sab.hasTurret=1..}] if score #random sab.var matches 1..10 run scoreboard players set #choice sab.var 23
 #---------------------------------

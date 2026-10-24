@@ -6,7 +6,7 @@ execute store result score @s Class run data get storage sa_bots:bot_data this.c
 
 
 #if we change classes, our ultimate charge gets set to 0
-execute unless score @s Class = #previous_class sab.var run data modify storage sa_bots:bot_data this.game.ultimate_charge set value 0
+#execute unless score @s Class = #previous_class sab.var run data modify storage sa_bots:bot_data this.game.ultimate_charge set value 0
 #get ultimate charge froms storage
 execute store result score @s ultimate_charge run data get storage sa_bots:bot_data this.game.ultimate_charge
 
@@ -63,6 +63,9 @@ execute if score @s Class matches 15 run tag @s add sab.botHasMovementAbilities
 
 #some classes look for long-distance targets
 execute if score @s Class matches 3 run tag @s add sab.botShootsAtLongDistance
+
+#some classes go for headshots at long range
+execute if score @s Class matches 3 run tag @s add sab.botLikesHeadshotsAtLongRange
 
 #some classes may tweak aggression or cooperativeness when at skill 4+
 execute if score @s sab.botSkill matches 4.. run function sa_bots:bot/setup/class/set_class_behavior_adjustments

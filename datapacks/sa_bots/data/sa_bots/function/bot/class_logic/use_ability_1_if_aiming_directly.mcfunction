@@ -10,4 +10,4 @@ execute unless entity @s[tag=!sab.botWeaponHasDownwardArc,tag=!sab.botWeaponSlow
     run scoreboard players set @s sab.botRightClick10Hz -1
 #=====
 
-scoreboard players set @s sab.botRightClick10Hz 1
+scoreboard players set @s sab.botRightClick10Hz 0

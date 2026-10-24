@@ -32,4 +32,9 @@ execute if score @s sab.botTask matches 16 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 17 run return run function sa_bots:bot/entity_task/17_random_within_sector_of_active_control_point/_logic_tick
 execute if score @s sab.botTask matches 18 run return run function sa_bots:bot/entity_task/18_avoid_nearest_enemy/_logic_tick
 execute if score @s sab.botTask matches 19 run return run function sa_bots:bot/entity_task/19_avoid_specific_enemy/_logic_tick
+execute if score @s sab.botTask matches 20 run return run function sa_bots:bot/entity_task/20_go_to_payload/_logic_tick
+execute if score @s sab.botTask matches 21 run return run function sa_bots:bot/entity_task/21_random_within_sector_of_payload/_logic_tick
+execute if score @s sab.botTask matches 22 run return run function sa_bots:bot/entity_task/22_find_patrol_point_near_front_line/_logic_tick
+execute if score @s sab.botTask matches 23 run return run function sa_bots:bot/entity_task/23_find_turret_spot_near_front_line/_logic_tick
+execute if score @s sab.botTask matches 24 run return run function sa_bots:bot/entity_task/24_find_sniper_spot_near_front_line/_logic_tick
 #...

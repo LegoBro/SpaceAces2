@@ -8,7 +8,7 @@ scoreboard players set @s sab.botForceAngleTime 0
 #when we reach a wall or cliff, get ready to jump
 execute if score @s sab.botScriptedAction matches 3..500 rotated ~ 0 positioned ^ ^ ^1.5 unless block ~ ~1 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 501
 execute if score @s sab.botScriptedAction matches 3..500 rotated ~ 0 positioned ^ ^ ^1 if block ~ ~-1 ~ #sa_bots:not_solid if block ~ ~-2 ~ #sa_bots:not_solid run scoreboard players set @s sab.botScriptedAction 501
-execute if score @s sab.botScriptedAction matches 3..500 if entity @s[scores={sab.botBestDistanceToTargetX=-3..3,sab.botBestDistanceToTargetY=-3..3}] run scoreboard players set @s sab.botScriptedAction 501
+execute if score @s sab.botScriptedAction matches 3..500 if entity @s[scores={sab.botBestDistanceToTargetX=-3..3,sab.botBestDistanceToTargetZ=-3..3}] run scoreboard players set @s sab.botScriptedAction 501
 
 #jump when grounded
 execute if entity @s[scores={sab.botScriptedAction=501..550,sab.groundedTime=2..}] run tag @s add sab.botJump

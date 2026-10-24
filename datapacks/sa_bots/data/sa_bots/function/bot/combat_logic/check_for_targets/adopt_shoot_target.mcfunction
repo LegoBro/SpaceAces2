@@ -17,6 +17,7 @@ execute if entity @s[scores={sab.botLookTime=1..}] run scoreboard players set @s
 tag @s remove sab.botShootingAtTargetHead
 execute store result score #random sab.var run random value -5..5
 scoreboard players operation #random sab.var += @s sab.botSkill
+execute if entity @s[tag=sab.botLikesHeadshotsAtLongRange,scores={sab.botTargetEntityDistance=12..}] run scoreboard players add #random sab.var 4
 execute if score #random sab.var matches 9.. run tag @s add sab.botShootingAtTargetHead
 
 #get ready to do random aim offsets

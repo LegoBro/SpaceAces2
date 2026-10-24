@@ -146,6 +146,7 @@ scoreboard objectives add sab.markDistance dummy
 scoreboard objectives add sab.markEvent dummy
 scoreboard objectives add sab.markIndex dummy
 scoreboard objectives add sab.markDanger dummy
+scoreboard objectives add sab.markDangerEnemyOnly dummy
 scoreboard objectives add sab.usingNavCacheChanel dummy
 scoreboard objectives add sab.teamPresenceBlue dummy
 scoreboard objectives add sab.teamPresenceRed dummy
