@@ -56,4 +56,6 @@ forceload add 0 0
 
 function gamemode:map_sign_display with storage space_aces:selected_map map
 
+effect clear @a[team=lobby] invisibility
+
 return 1

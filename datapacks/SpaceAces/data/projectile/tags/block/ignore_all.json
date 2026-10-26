@@ -29,6 +29,7 @@
 		"waxed_copper_grate",
 		"waxed_exposed_copper_grate",
 		"#pressure_plates",
-		"moving_piston"
+		"moving_piston",
+		"resin_clump"
 	]
 }

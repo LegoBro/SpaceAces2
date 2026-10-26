@@ -7,5 +7,6 @@ scoreboard players reset @s rightClick
 
 scoreboard players operation @s totalShots = class.healer.primary.ammo Numbers
 scoreboard players set @s reload 0
+scoreboard players set @s shoot 0
 
 return 1

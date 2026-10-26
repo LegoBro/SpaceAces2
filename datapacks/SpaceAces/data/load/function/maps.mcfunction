@@ -36,6 +36,12 @@ data merge storage space_aces:maps {\
             "center":"16383 99 0",\
             "gamemodes":[]\
         },\
+        {\
+            "name":"gray_caves",\
+            "player_count":[1,32],\
+            "center":"11263 99 0",\
+            "gamemodes":[]\
+        },\
     ]\
 }
 

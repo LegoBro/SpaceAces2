@@ -1,5 +1,5 @@
 ## Adds one to nearby spawnpoint's data
-execute unless entity @s[tag=gamemode.spawnpoint,distance=..5] run return run kill @s
+execute unless entity @n[tag=gamemode.spawnpoint,distance=..5] run return run kill @s
 
 execute store result score #progress Numbers run data get entity @n[tag=gamemode.spawnpoint,distance=..5] data.progress
 

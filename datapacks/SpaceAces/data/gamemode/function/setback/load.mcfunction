@@ -25,5 +25,9 @@ bossbar set minecraft:main name ["",{"text":"Capture Progress",color:"white","ty
 bossbar set minecraft:main value 0
 
 
+scoreboard players set gamemode.respawn.time.red Numbers 200
+scoreboard players set gamemode.respawn.time.blue Numbers 200
+schedule function gamemode:comp/respawn/apply_time/team 10s
+
 
 return 1

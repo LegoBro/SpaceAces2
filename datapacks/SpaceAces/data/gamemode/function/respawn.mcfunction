@@ -22,4 +22,7 @@ scoreboard players set @s displayHealth 100
 scoreboard players set @s poison 0
 scoreboard players set @s fire 0
 
+# Overwrite respawn item
+item replace entity @s hotbar.8 with air
+
 return 1

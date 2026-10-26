@@ -15,4 +15,8 @@ scoreboard players operation place_id id = @s owner
 execute as @e[type=#projectile:players,tag=hb,distance=..50] at @s if score @s Team = #team Team run function class:4/healer/over_heal_machine/visualize
 execute if score gametime Numbers matches 0 as @e[type=#projectile:players,tag=hb,distance=..50] if score @s Team = #team Team run function class:4/healer/over_heal_machine/apply
 
+execute as @e[type=#projectile:players,tag=hb] if score @s id = #target_owner Numbers run tag @s add target.owner
+execute unless entity @e[tag=target.owner,scores={Class=6}] run kill @s
+tag @e[type=#projectile:players,tag=hb] remove target.owner
+
 return 1

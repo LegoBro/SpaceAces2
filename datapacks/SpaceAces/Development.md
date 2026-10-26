@@ -136,13 +136,3 @@ Building/entity that heals nearby friendlies, can be tagged as players that can 
 [See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
 
 ## To do:
-#Kill all class deployables function
-#Have smokescreen transform nearby air blocks into moving_piston temporarily (moving_piston will also need to allow bullets and projectiles to pass)
-#Give each gamemode an integer field for bot_strategy or something
-#Would be used in sa_bots\data\sa_bots\function\api\round_setup\load_game_objective.mcfunction
-#Common tag for all health packs
-#Common tag for healing buildings (chem dispenser, overheal machine)
-#Give common tag to standby_sticky_bomb, vis_mine, rocket wall
-#Score for "time since respawn" if there isn't one already
-
-Add forward/backward spawns for Setback

@@ -59,6 +59,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
+        "ignore":false,\
         "bot_strategy":"payload",\
     },\
     {\
@@ -68,6 +69,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"none",\
+        "ignore":true,\
         "bot_strategy":"none",\
     },\
     {\
@@ -77,6 +79,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"random",\
+        "ignore":true,\
         "bot_strategy":"limited_lives_team_fighting",\
     },\
     {\
@@ -86,6 +89,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
+        "ignore":true,\
         "bot_strategy":"ctf",\
     },\
     {\
@@ -95,6 +99,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"none",\
+        "ignore":true,\
         "bot_strategy":"basic_team_fighting",\
     },\
     {\
@@ -104,6 +109,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"team",\
+        "ignore":true,\
         "bot_strategy":"limited_lives_team_fighting",\
     },\
     {\
@@ -113,6 +119,7 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":false,\
         "spawn":"team",\
         "respawn":"random",\
+        "ignore":true,\
         "bot_strategy":"ffa",\
     }\
 ]}

@@ -2,7 +2,7 @@
 
 execute if entity @s[tag=class.mechanic.manual_override.drone_operator] run return run function class:4/mechanic/manual_override/drone
 
-execute as @e[tag=turret_base,type=item_display] if score @s id = #Class_Start id run tag @s add my_turret
+execute as @e[tag=turret_base,type=item_display] if score @s owner = #Class_Start id run tag @s add my_turret
 execute store result score @s sab.hasTurret run execute if entity @e[tag=my_turret,type=item_display,distance=..500,limit=1]
 
 # Primary: Double Chambered Scattergun

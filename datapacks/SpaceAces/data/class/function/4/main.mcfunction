@@ -13,6 +13,8 @@ effect give @s minecraft:invisibility infinite 0 true
 # Fall into void damaging
 execute store result score @s ypos run data get entity @s Pos[1]
 scoreboard players add @s[gamemode=!creative,gamemode=!spectator,scores={ypos=..-10}] damage 100
+execute if block ~ ~-1 ~ brown_mushroom_block run scoreboard players add @s damage 100
+
 
 # finds which class each player has, and links it's ability to them
 scoreboard players operation #Class_Start Team = @s Team
@@ -45,3 +47,4 @@ execute if score @s displayHealth matches ..25 if score @s damage_display matche
 # Branching into player specefic scenarios
 execute if entity @s[tag=awaiting] run function tick:player/awaiting
 execute if entity @s[tag=in_game] run function tick:player/in_game
+

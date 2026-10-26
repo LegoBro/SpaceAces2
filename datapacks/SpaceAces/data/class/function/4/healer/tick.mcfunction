@@ -16,8 +16,9 @@ execute if score @s ability.2.cooldown matches ..0 run function class:4/healer/w
 execute if score @s ability.2.cooldown matches 1.. run function class:4/healer/wrist_rocket/cooldown
 
 # Ultimate Ability: Overheal Machine
-execute if score @s ultimate_charge >= class.healer.ultimate.charge Numbers run function class:4/healer/over_heal_machine/ready
+execute if score @s ultimate_charge >= class.healer.ultimate.charge Numbers unless score @s ultimate.cooldown matches 1.. run function class:4/healer/over_heal_machine/ready
 execute unless score @s ultimate_charge >= class.healer.ultimate.charge Numbers run function class:4/healer/over_heal_machine/cooldown
+execute if score @s ultimate_charge >= class.healer.ultimate.charge Numbers if score @s ultimate.cooldown matches 1.. run function class:4/healer/over_heal_machine/cooldown
 
 ## Melee
 execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch

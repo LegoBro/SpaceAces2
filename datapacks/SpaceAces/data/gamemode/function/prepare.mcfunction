@@ -1,6 +1,9 @@
 # Simply runs the gamemode in storage (should be able to make more in future easily)
 $function gamemode:$(name)/load
 
+# Force players ready:
+tag @a[tag=awaiting] add ready
+
 ## Load in Bots 
 execute store result score #add_bot_amount Numbers run data get storage space_aces:selected_gamemode gamemode.rec_players
 

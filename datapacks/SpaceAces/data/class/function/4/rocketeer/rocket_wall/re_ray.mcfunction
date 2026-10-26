@@ -14,7 +14,7 @@ tag @s[tag=kill_trigger] add impact
 
 ## Stolen from raycasting
 function projectile:validate_position
-execute positioned ~ ~-1 ~ if entity @n[distance=..1.25,tag=!raycast,tag=hb,tag=!rocket_wall,tag=!projectile.piercing.ignore] unless score @s id = @e[distance=..1.25,tag=!raycast,tag=!rocket_wall,sort=nearest,limit=1] id positioned ~ ~1 ~ run function projectile:hitbox
+execute positioned ~ ~-1 ~ if entity @n[distance=..1.25,tag=!raycast,tag=hb,tag=!rocket_wall,tag=!projectile.piercing.ignore] unless score @s owner = @n[distance=..1.25,tag=!raycast,tag=!rocket_wall,tag=hb] id unless score @s owner = @n[distance=..1.25,tag=!raycast,tag=!rocket_wall,tag=hb] owner positioned ~ ~1 ~ run function projectile:hitbox
 
 #execute if entity @s[tag=!impact] positioned ^ ^0.1 ^ if entity @n[distance=..2,tag=!raycast,tag=hb,tag=!projectile.piercing.ignore] unless score @s id = @e[distance=..2,tag=!raycast,tag=!rocket_wall,sort=nearest,limit=1] id positioned ^ ^-0.1 ^ run function projectile:hitbox
 #execute if entity @s[tag=!impact] positioned ^ ^-0.1 ^ if entity @n[distance=..2,tag=!raycast,tag=hb,tag=!projectile.piercing.ignore] unless score @s id = @e[distance=..2,tag=!raycast,tag=!rocket_wall,sort=nearest,limit=1] id positioned ^ ^0.1 ^ run function projectile:hitbox

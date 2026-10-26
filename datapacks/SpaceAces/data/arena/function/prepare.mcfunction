@@ -1,4 +1,6 @@
 ## Prepares arena based on what's stored in data
+forceload remove all
+forceload add 0 0
 $function arena:load/$(name)
 $execute positioned $(center) run forceload add ~-128 ~-128 ~128 ~0
 $execute positioned $(center) run forceload add ~-128 ~0 ~128 ~128

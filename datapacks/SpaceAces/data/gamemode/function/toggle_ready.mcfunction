@@ -11,7 +11,4 @@ execute if entity @p[tag=awaiting,tag=!ready] run function gamemode:abort_game
 tag @s remove temp
 scoreboard players reset @s rightClick
 
-execute if score Gamemode settings matches 4 run forceload add 30046 94 29857 -95
-execute unless score Gamemode settings matches 4 run forceload remove 30046 94 29857 -95
-
 return 1

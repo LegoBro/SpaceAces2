@@ -13,6 +13,9 @@ scoreboard objectives add zpos dummy
 
 # Gamemodes
 scoreboard objectives add gamemode dummy
+
+scoreboard objectives add gamemode.spawnpoint.progress dummy
+
 scoreboard objectives add payload dummy
 scoreboard objectives add payload.distance dummy
 scoreboard objectives add payload.check.id dummy
@@ -47,6 +50,7 @@ scoreboard objectives add SelectedItem dummy
 scoreboard objectives add size dummy
 scoreboard objectives add menu dummy
 scoreboard objectives add timeSinceLastRespawn dummy
+scoreboard objectives add respawnTime dummy
 
 # Player - Energy
 #scoreboard objectives add energy food

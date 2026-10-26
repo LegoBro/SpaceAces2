@@ -7,4 +7,8 @@ execute if score Gamemode settings >= #GamemodeAmount Numbers run scoreboard pla
 execute store result storage space_aces:gamemodes index int 1 run scoreboard players get Gamemode settings
 function gamemode:get_mode_data with storage space_aces:gamemodes
 function gamemode:sign_display with storage space_aces:selected_gamemode gamemode
+
+# Is gamemode ignore? cycle again
+execute if data storage space_aces:selected_gamemode {gamemode:{ignore:true}} run function gamemode:cycle
+
 return 1

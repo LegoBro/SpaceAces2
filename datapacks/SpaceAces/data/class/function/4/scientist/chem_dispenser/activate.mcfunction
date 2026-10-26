@@ -3,7 +3,7 @@ scoreboard players operation @s ability.2.cooldown = class.scientist.2.cooldown 
 scoreboard players reset @s rightClick
 
 tag @e remove chem_count
-execute as @e[tag=chem_dispenser] if score @s id = #Class_Start id run tag @s add chem_count
+execute as @e[tag=chem_dispenser] if score @s owner = #Class_Start id run tag @s add chem_count
 execute store result score #chem_count Numbers if entity @e[tag=chem_count]
 execute if score #chem_count Numbers matches 3.. run kill @n[tag=chem_dispenser,sort=furthest]
 

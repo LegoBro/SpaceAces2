@@ -9,5 +9,7 @@ execute if block ~ ~ ~ #minecraft:fences run return run function projectile:pass
 execute if block ~ ~ ~ minecraft:scaffolding run return run function projectile:passable/scaffolding
 execute if block ~ ~ ~ minecraft:snow run return run function projectile:passable/snow
 execute if block ~ ~ ~ #projectile:glass_panes run return run function projectile:passable/glass_pane
+execute if block ~ ~ ~ #minecraft:wooden_shelves run return run function projectile:passable/shelf
+execute if block ~ ~ ~ #minecraft:chains run return run function projectile:passable/chain
 
 return 1

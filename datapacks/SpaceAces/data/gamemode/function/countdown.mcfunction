@@ -12,6 +12,6 @@ execute if score Mission Numbers matches 0 run function arena:load
 #execute if score Mission Numbers matches 0 unless score Gamemode settings matches 5 if entity @p[tag=awaiting,team=blue] unless entity @p[tag=awaiting,team=red] run function gamemode:nep
 #execute if entity @a[tag=awaiting,tag=!ready] run function gamemode:abort_game
 #execute unless entity @a[tag=awaiting] run function gamemode:abort_game
-execute if score Gamemode settings matches 5 if entity @a[tag=awaiting,team=red] run function gamemode:wrong_team_abort
+#execute if score Gamemode settings matches 5 if entity @a[tag=awaiting,team=red] run function gamemode:wrong_team_abort
 
 return 1

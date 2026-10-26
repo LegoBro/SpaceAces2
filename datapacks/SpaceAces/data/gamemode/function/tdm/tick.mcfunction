@@ -1,4 +1,5 @@
 #Commands ran for tdm
+execute if entity @p[tag=winner] run return run function gamemode:comp/end/invulnerable
 bossbar set main players
 bossbar set minecraft:blue players @a
 bossbar set minecraft:red players @a
@@ -11,6 +12,8 @@ function gamemode:comp/safety/no_players
 function gamemode:comp/win/team_elim
 
 
-execute if entity @p[tag=winner] run function gamemode:comp/end/invulnerable
+
+
+execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:comp/respawn/await
 
 return 1

@@ -19,7 +19,7 @@ execute if score @s ability.2.cooldown matches 1.. run function class:4/seeker/s
 item replace entity @s[tag=!invis] hotbar.3 with minecraft:turtle_scute[minecraft:item_model="class/seeker/weak_glow",minecraft:item_name={color:"white",translate:"class.seeker.weak_glow"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.weak_glow.lore.1"},{color:"white",translate:"class.seeker.weak_glow.lore.2"}]]
 item replace entity @s[tag=invis] hotbar.3 with minecraft:turtle_scute[minecraft:item_model="class/seeker/invis/weak_glow",minecraft:item_name={color:"white",translate:"class.seeker.weak_glow"},minecraft:lore=[{color:"white","italic":false,translate:"class.seeker.weak_glow.lore.1"},{color:"white",translate:"class.seeker.weak_glow.lore.2"}]]
 scoreboard players operation #Team Team = @s Team
-execute as @e[distance=..15] at @s unless score @s Team = #Team Team run function class:4/seeker/weak_glow_check
+execute as @e[type=#projectile:players,tag=hb,distance=..15] at @s unless score @s Team = #Team Team run function class:4/seeker/weak_glow_check
 
 # Ultimate Ability: Fast Blast
 execute if score @s ultimate_charge >= class.seeker.ultimate.charge Numbers run function class:4/seeker/into_the_void/ready

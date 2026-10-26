@@ -10,4 +10,8 @@ bossbar set minecraft:blue name ["",{"text":"IGSR Lives Left",color:"blue","type
 bossbar set minecraft:red name ["",{"text":"RLU Lives Left",color:"red","type":"text"}]
 execute store result bossbar minecraft:blue max run scoreboard players get TDMLives Numbers
 execute store result bossbar minecraft:red max run scoreboard players get TDMLives Numbers
+
+scoreboard players set gamemode.respawn.time Numbers 100
+schedule function gamemode:comp/respawn/apply_time/general 10s
+
 return 1
