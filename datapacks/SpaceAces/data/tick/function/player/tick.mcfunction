@@ -15,8 +15,8 @@ effect give @s minecraft:resistance infinite 4 true
 
 # Branching dependant on teams
 execute if entity @s[team=lobby] at @s run function tick:player/lobby
-execute if entity @s[team=!lobby,team=!spectator] at @s run function tick:player/team/main
-execute if entity @s[team=spectator] at @s run function tick:player/spectator
+execute if entity @s[team=!lobby,tag=!spectator,gamemode=!spectator] at @s run function tick:player/team/main
+execute if entity @s[tag=spectator] at @s run function tick:player/spectator
 
 # clears inventory of players
 execute if entity @s[gamemode=adventure,tag=!class.show_menu] run function class:clear_inventory

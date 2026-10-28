@@ -44,6 +44,7 @@ scoreboard objectives add crouching custom:sneak_time
 scoreboard objectives add worm_hole trigger
 scoreboard objectives add console trigger
 scoreboard objectives add dev trigger
+scoreboard objectives add benchmark dummy
 scoreboard objectives add talkToCharacter minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add kill dummy
 scoreboard objectives add SelectedItem dummy

@@ -15,6 +15,11 @@ execute if score Prestart Numbers matches 100 run return run function gamemode:c
 execute if score Prestart Numbers matches ..118 run return 0
 
 execute if score Prestart Numbers matches 119 run function sa_bots:api/activation/activate_all_bots
+#unless score bot.delayed_blue_spawn Numbers matches 1.. unless score bot.delayed_red_spawn Numbers matches 1.. 
+#execute if score Prestart Numbers matches 119 unless score bot.delayed_blue_spawn Numbers matches 1.. run function sa_bots:api/activation/activate_all_bots_blue
+#execute if score Prestart Numbers matches 119 unless score bot.delayed_red_spawn Numbers matches 1.. run function sa_bots:api/activation/activate_all_bots_red
+
+
 execute if score Prestart Numbers matches 119 as @a[tag=in_game] at @s run function gamemode:comp/respawn/team
 
 

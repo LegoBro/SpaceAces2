@@ -1,0 +1,1 @@
+data modify storage dev:game_queue games append from storage dev:game_queue games[0]

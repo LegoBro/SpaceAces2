@@ -9,12 +9,14 @@ scoreboard players set redCapture Numbers 0
 scoreboard players set point Numbers 0
 scoreboard players set activePoint Numbers 0
 
-scoreboard players set fullPoint Numbers 300
+
+execute store result score fullPoint Numbers run data get storage space_aces:gamemodes gamemodes[{"name":"setback"}].capture_time
 
 scoreboard players set gamemode.setback.blue_points Numbers 0
 scoreboard players set gamemode.setback.red_points Numbers 0
 
-scoreboard players set gamemode.setback.goal_points Numbers 10
+execute store result score gamemode.setback.goal_points Numbers run data get storage space_aces:gamemodes gamemodes[{"name":"setback"}].goal_points
+
 
 scoreboard objectives add gamemode.setback.point dummy
 schedule function gamemode:setback/load_points 10s

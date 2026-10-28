@@ -38,7 +38,8 @@ data merge storage space_aces:gamemodes {\
         "needs_teams":true,\
         "spawn":"team",\
         "respawn":"team",\
-        "capture_time":30,\
+        "capture_time":500,\
+        "goal_points":7,\
         "start_delay":300,\
         "capture_delay":400,\
         "bot_strategy":"3_control_point",\

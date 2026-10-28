@@ -1,4 +1,12 @@
 ##Commands ran once game is Finished
+
+#execute store result score #bot_count Numbers run data get storage sa_bots:bot_data bots
+#execute as @e[type=mannequin,tag=hb] run function dev:benchmark/add_bot
+
+# Copy ALL The data
+function dev:benchmark/data/compress/bots
+
+
 function sa_bots:api/delete_bots/delete_all_bots
 function help:a86d3a90d015d3656219ee1a185fad68072458ab4054a276c645a8ffb7a11736
 scoreboard objectives setdisplay sidebar
@@ -30,7 +38,7 @@ execute as @a[tag=stats,team=red] run tellraw @s [{"text":"","type":"text"},{"te
 #execute as @a[tag=in_game] run function load:spawn
 #tag @a[tag=in_game] remove in_game
 tag @a[tag=escape] remove escape
-execute as @a[team=spectator] run function load:spawn
+execute as @a[tag=spectator] run function load:spawn
 bossbar set blue players
 bossbar set red players
 bossbar set main players
@@ -48,7 +56,7 @@ scoreboard players reset @a i
 scoreboard players set waveDelay Numbers 0
 scoreboard players set wave Numbers 0
 scoreboard players reset Enemies display
-execute positioned 29958 7 11 run kill @e[type=!minecraft:player,distance=..500,tag=!map_anchor,tag=!health_pack]
+#execute positioned 29958 7 11 run kill @e[type=!minecraft:player,distance=..500,tag=!map_anchor,tag=!health_pack]
 execute unless entity @e[team=blue] unless entity @e[team=red] run function load:unload_teams
 
 forceload remove all
@@ -57,5 +65,12 @@ forceload add 0 0
 function gamemode:map_sign_display with storage space_aces:selected_map map
 
 effect clear @a[team=lobby] invisibility
+
+scoreboard players set bot.delayed_blue_spawn Numbers 0
+scoreboard players set bot.delayed_red_spawn Numbers 0
+
+# Game Queue
+execute store result storage dev:game_queue games[0].length int 1 run scoreboard players get current_game_time benchmark
+scoreboard players set current_game_time benchmark 0
 
 return 1

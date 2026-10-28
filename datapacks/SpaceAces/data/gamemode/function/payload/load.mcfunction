@@ -4,7 +4,9 @@ scoreboard players set ActiveMode Numbers 4
 scoreboard players set checkpoint Numbers 0
 
 scoreboard objectives setdisplay sidebar display
-scoreboard players set timer Numbers 4800
+scoreboard players set timer Numbers 5400
+
+scoreboard players display name TimeLeft display {translate:"gamemode.payload.time_left"}
 
 
 # Spawn Payload
@@ -24,8 +26,17 @@ scoreboard players set gamemode.payload.distance Numbers 0
 
 execute as @e[type=marker,tag=gamemode.payload.path] run function gamemode:payload/path_total_distance
 
+tag @e[type=marker,tag=active_payload_path] remove active_payload_path
+execute as @e[type=marker,tag=gamemode.payload.path] if score @s payload = @n[type=pig,tag=payload] payload run tag @s add active_payload_path
+
 bossbar set minecraft:main name ["",{"text":"Payload Progress",color:"white","type":"text"}]
 execute store result bossbar minecraft:main max run scoreboard players get gamemode.payload.total_distance Numbers
+
+# Delayed spawn
+scoreboard players set bot.delayed_blue_spawn Numbers 1
+schedule function sa_bots:api/activation/deactivate_all_bots_blue 6s
+schedule function sa_bots:api/activation/activate_all_bots_blue 20s
+scoreboard players set @a[tag=in_game,team=blue] i -600
 
 scoreboard players set gamemode.respawn.time.red Numbers 200
 scoreboard players set gamemode.respawn.time.blue Numbers 100

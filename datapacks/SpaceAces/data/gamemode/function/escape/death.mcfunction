@@ -5,7 +5,8 @@ scoreboard players remove @p[tag=escape] i 1
 execute if score @p[tag=escape] i matches ..-200 run function gamemode:reset
 kill @e[type=minecraft:area_effect_cloud,tag=terminal,tag=active]
 gamemode spectator @a[gamemode=!spectator,tag=escape]
-team join spectator @a[tag=escape,team=!spectator]
+team leave @a[tag=escape,tag=!spectator]
+tag @a[tag=escape,tag=!spectator] add spectator
 execute as @a[tag=escape,team=spectator] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 minecraft:air replace minecraft:creeper_head
 
 return 1

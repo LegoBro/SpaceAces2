@@ -136,3 +136,10 @@ Building/entity that heals nearby friendlies, can be tagged as players that can 
 [See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
 
 ## To do:
+spectator = no team
+
+function /get overview for games queue
+
+effective range for selected item, store in the item???
+
+replace texts with translates...

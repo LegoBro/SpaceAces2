@@ -2,6 +2,7 @@
 
 # Capture Point
 execute as @e[tag=gamemode.setback.point] at @s run particle minecraft:raid_omen
+execute as @e[tag=gamemode.setback.active_point] at @s run particle minecraft:trial_omen
 
 
 execute as @a[tag=dev.setback,gamemode=!adventure] at @s run function dev:gamemode/setback/player

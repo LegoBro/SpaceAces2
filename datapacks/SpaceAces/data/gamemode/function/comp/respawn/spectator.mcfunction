@@ -2,7 +2,8 @@
 # Bot deletion
 execute if entity @s[type=mannequin] run return run function gamemode:comp/bot/delete
 ## Normal player
-team join spectator @s
+team leave @s
+tag @s add spectator
 gamemode spectator @s
 tag @s remove in_game
 

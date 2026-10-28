@@ -1,5 +1,7 @@
 ## Commands ran for payload
 
+execute if entity @e[type=#projectile:players,tag=hb,tag=winner] run return run function gamemode:comp/end/invulnerable
+
 # Payload, blue is always pushing
 execute as @n[type=pig,tag=payload] at @s store result score gamemode.payload.payload.blue_players Numbers if entity @e[team=blue,type=#projectile:players,tag=hb,distance=..7]
 execute as @n[type=pig,tag=payload] at @s store result score gamemode.payload.payload.red_players Numbers if entity @e[team=red,type=#projectile:players,tag=hb,distance=..7]
@@ -12,17 +14,16 @@ execute as @n[type=pig,tag=payload] at @s if score gamemode.payload.payload.blue
 
 function gamemode:payload/bossbar_update
 
-execute as @e[type=pig,tag=payload] at @s if score @s payload = @n[type=marker,tag=active_payload_path,tag=gamemode.payload.checkpoint,distance=..0.1] payload run function gamemode:payload/next_checkpoint
-execute as @e[type=pig,tag=payload] at @s if score @s payload = @n[type=marker,tag=active_payload_path,distance=..0.1] payload run scoreboard players add @s payload 1
-tag @e[type=marker,tag=active_payload_path] remove active_payload_path
-execute as @e[type=marker,tag=gamemode.payload.path] if score @s payload = @n[type=pig,tag=payload] payload run tag @s add active_payload_path
+
 execute unless entity @n[type=marker,tag=active_payload_path] unless entity @n[team=blue,type=#projectile:players,tag=hb,tag=winner] run function gamemode:blue_win
 
 # Red Timer
 scoreboard players remove timer Numbers 1
-scoreboard players operation #timerTemp Numbers = timer Numbers
-scoreboard players operation #timerTemp Numbers /= 20 Numbers
-scoreboard players operation TimeLeft display = #timerTemp Numbers
+scoreboard players operation time Numbers = timer Numbers
+function scoreboard:time
+
+execute if score time.seconds Numbers matches 10.. run scoreboard players display numberformat TimeLeft display fixed [{score:{name:"time.minutes",objective:"Numbers"},color:red},":",{score:{name:"time.seconds",objective:"Numbers"}}]
+execute unless score time.seconds Numbers matches 10.. run scoreboard players display numberformat TimeLeft display fixed [{score:{name:"time.minutes",objective:"Numbers"},color:red},":0",{score:{name:"time.seconds",objective:"Numbers"}}]
 
 execute if score timer Numbers matches ..0 as @n[type=pig,tag=payload] at @s unless entity @p[team=blue,distance=..7] unless entity @n[type=#projectile:players,tag=hb,tag=winner] run function gamemode:red_win
 
@@ -34,4 +35,4 @@ execute as @a[tag=in_game,scores={health=..0}] at @s run function gamemode:respa
 #execute as @a[tag=in_game] unless score @s i > respawnTime Numbers run item replace entity @s hotbar.8 with minecraft:air
 execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:comp/respawn/await
 
-execute if entity @a[tag=winner] run scoreboard players set @a[tag=in_game] invulnerable 10
+
