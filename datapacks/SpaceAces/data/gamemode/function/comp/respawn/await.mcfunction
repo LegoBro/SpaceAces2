@@ -1,5 +1,5 @@
 ## Awaits a ready for respawn, usually for players that want to change mode...
-
+execute if entity @s[tag=spectator] run return 0
 # If a player is respawning
 scoreboard players add @s i 1
 # Still waiting?
@@ -8,7 +8,7 @@ scoreboard players operation seconds Numbers = @s respawnTime
 scoreboard players operation seconds Numbers -= @s i
 scoreboard players operation seconds Numbers /= 20 Numbers
 
-execute if score seconds Numbers matches 1.. run title @s subtitle ["Respawning in ",{score:{name:"seconds",objective:"Numbers"}}, "s"]
+execute if score seconds Numbers matches 0.. run title @s subtitle ["Respawning in ",{score:{name:"seconds",objective:"Numbers"}}, "s"]
 
 title @s[x=8,y=200,z=8,distance=..250,tag=in_game,tag=!escape] title ""
 

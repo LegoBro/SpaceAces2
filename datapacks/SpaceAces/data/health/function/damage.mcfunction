@@ -15,7 +15,7 @@ scoreboard players reset @s[scores={raw_damage=1..}] raw_damage
 scoreboard players set @s[tag=invulnerable] damage 0
 scoreboard players operation @s[tag=resistive] damage /= 2 Numbers
 execute if score @s[tag=!entity] damage matches 1.. run scoreboard players operation @s health -= @s damage
-execute if score @s[tag=!entity] damage matches 1.. run scoreboard players operation @s game_dmg_take += @s damage
+execute if score @s[tag=!entity] damage matches 1.. run scoreboard players operation @s stat.game.damage_taken += @s damage
 
 ## Damage display
 execute if score @s damage matches 1.. run scoreboard players set @s damage_display 10

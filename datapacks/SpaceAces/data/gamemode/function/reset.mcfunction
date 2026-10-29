@@ -6,15 +6,18 @@
 # Copy ALL The data
 function dev:benchmark/data/compress/bots
 
+function dev:benchmark/data/compress/players
+
 
 function sa_bots:api/delete_bots/delete_all_bots
-function help:a86d3a90d015d3656219ee1a185fad68072458ab4054a276c645a8ffb7a11736
+
+#function help:a86d3a90d015d3656219ee1a185fad68072458ab4054a276c645a8ffb7a11736
 scoreboard objectives setdisplay sidebar
-execute as @a[tag=stats,tag=!escape,team=!red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☐\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_damage"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_dmg_take"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_healing"},color:"green","type":"score"},{"text":"\n\n☑","font":"minecraft:stats",color:"white","type":"text"}]
+execute as @a[tag=stats,tag=!escape,team=!red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☐\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.damage_dealt"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.player_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.damage_taken"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.healing_dealt"},color:"green","type":"score"},{"text":"\n\n☑","font":"minecraft:stats",color:"white","type":"text"}]
 
 # Convert time Numbers into time.hours and time.minutes and time.seconds and time.milliseconds
 function scoreboard:time
-execute as @a[tag=stats,tag=escape,team=!red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☐\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_damage"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_dmg_take"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_healing"},color:"green","type":"score"},{"text":"\n\nPoints Scored: ",color:"white","type":"text"},{"score":{"name":"escape.points","objective":"Numbers"},color:"green","type":"score"},{"text":"\nTime: ",color:"white","type":"text"}]
+execute as @a[tag=stats,tag=escape,team=!red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☐\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.damage_dealt"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.player_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.damage_taken"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.healing_dealt"},color:"green","type":"score"},{"text":"\n\nPoints Scored: ",color:"white","type":"text"},{"score":{"name":"escape.points","objective":"Numbers"},color:"green","type":"score"},{"text":"\nTime: ",color:"white","type":"text"}]
 
 execute as @a[tag=stats,tag=escape,team=!red] if score time.minutes Numbers matches 10.. if score time.seconds Numbers matches 10.. if score time.ms Numbers matches 10.. run tellraw @s [{"score":{"name":"time.hours","objective":"Numbers"},color:"green","type":"score"},{"text":":",color:"green","type":"text"},{"score":{"name":"time.minutes","objective":"Numbers"},color:"green","type":"score"},{"text":":",color:"green","type":"text"},{"score":{"name":"time.seconds","objective":"Numbers"},color:"green","type":"score"},{"text":".",color:"green","type":"text"},{"score":{"name":"time.ms","objective":"Numbers"},color:"green","type":"score"},{"text":"\n\n☑","font":"minecraft:stats",color:"white","type":"text"}]
 
@@ -33,25 +36,25 @@ execute as @a[tag=stats,tag=escape,team=!red] if score time.minutes Numbers matc
 execute as @a[tag=stats,tag=escape,team=!red] if score time.minutes Numbers matches ..9 if score time.seconds Numbers matches ..9 if score time.ms Numbers matches ..9 run tellraw @s [{"score":{"name":"time.hours","objective":"Numbers"},color:"green","type":"score"},{"text":":0",color:"green","type":"text"},{"score":{"name":"time.minutes","objective":"Numbers"},color:"green","type":"score"},{"text":":0",color:"green","type":"text"},{"score":{"name":"time.seconds","objective":"Numbers"},color:"green","type":"score"},{"text":".0",color:"green","type":"text"},{"score":{"name":"time.ms","objective":"Numbers"},color:"green","type":"score"},{"text":"\n\n☑","font":"minecraft:stats",color:"white","type":"text"}]
 
 
-execute as @a[tag=stats,team=red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☒\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_damage"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_dmg_take"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"game_healing"},color:"green","type":"score"},{"text":"\n\n☓","font":"minecraft:stats","type":"text"}]
+execute as @a[tag=stats,team=red] run tellraw @s [{"text":"","type":"text"},{"text":"\n\n\n\n☒\n\n","font":"minecraft:stats","type":"text"},{"text":"Your damage dealt last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.damage_dealt"},color:"blue","type":"score"},{"text":"\nEnemies knocked down: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.player_kills"},color:"dark_blue","type":"score"},{"text":"\nYour damage taken last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.damage_taken"},color:"dark_red","type":"score"},{"text":"\nYour healing last round: ",color:"white","type":"text"},{"score":{"name":"@s","objective":"stat.game.healing_dealt"},color:"green","type":"score"},{"text":"\n\n☓","font":"minecraft:stats","type":"text"}]
 
 #execute as @a[tag=in_game] run function load:spawn
 #tag @a[tag=in_game] remove in_game
 tag @a[tag=escape] remove escape
-execute as @a[tag=spectator] run function load:spawn
+execute as @a[tag=spectator] run function player:load
 bossbar set blue players
 bossbar set red players
 bossbar set main players
-execute as @a[tag=ready] run function load:spawn
+execute as @a[tag=ready] run function player:load
 scoreboard players set ActiveMode Numbers -1
 scoreboard players reset * display
 tag @a[tag=ready] remove ready
-setblock 9 195 5 minecraft:oak_wall_sign[facing=east]
-data modify block 9 195 5 allow_op_features set value true
-data modify block 9 195 5 front_text.messages[1] set value {text:"[Exit]",color:"dark_red","bold":true,click_event:{"action":"run_command",command:"/function gamemode:exit_team_selection"},"type":"text",allow_op_features:1b}
-setblock 7 195 5 minecraft:oak_wall_sign[facing=west]
-data modify block 7 195 5 allow_op_features set value true
-data modify block 7 195 5 front_text.messages[1] set value {text:"[Exit]",color:"dark_red","bold":true,click_event:{"action":"run_command",command:"/function gamemode:exit_team_selection"},"type":"text",allow_op_features:1b}
+#setblock 9 195 5 minecraft:oak_wall_sign[facing=east]
+#data modify block 9 195 5 allow_op_features set value true
+#data modify block 9 195 5 front_text.messages[1] set value {text:"[Exit]",color:"dark_red","bold":true,click_event:{"action":"run_command",command:"/function gamemode:exit_team_selection"},"type":"text",allow_op_features:1b}
+#setblock 7 195 5 minecraft:oak_wall_sign[facing=west]
+#data modify block 7 195 5 allow_op_features set value true
+#data modify block 7 195 5 front_text.messages[1] set value {text:"[Exit]",color:"dark_red","bold":true,click_event:{"action":"run_command",command:"/function gamemode:exit_team_selection"},"type":"text",allow_op_features:1b}
 scoreboard players reset @a i
 scoreboard players set waveDelay Numbers 0
 scoreboard players set wave Numbers 0
@@ -70,7 +73,13 @@ scoreboard players set bot.delayed_blue_spawn Numbers 0
 scoreboard players set bot.delayed_red_spawn Numbers 0
 
 # Game Queue
-execute store result storage dev:game_queue games[0].length int 1 run scoreboard players get current_game_time benchmark
+execute store result storage game_history:current game.length int 1 run scoreboard players get current_game_time benchmark
 scoreboard players set current_game_time benchmark 0
+
+# Add game to array
+data modify storage game_history:games games prepend from storage game_history:current game
+
+# Delete game history game
+data remove storage game_history:current game
 
 return 1

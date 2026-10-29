@@ -1,6 +1,6 @@
 #Commands ran to allow the normal mode to kick-start
 #item replace entity @a[tag=in_game] hotbar.8 with minecraft:air
-fill 7 195 5 9 195 5 minecraft:air replace minecraft:oak_wall_sign
+#fill 7 195 5 9 195 5 minecraft:air replace minecraft:oak_wall_sign
 scoreboard players add Prestart Numbers 1
 bossbar set main name ["",{"text":"Loading...",color:"white","type":"text"}]
 bossbar set main players @a
@@ -22,11 +22,11 @@ execute if score Prestart Numbers matches 119 run function sa_bots:api/activatio
 
 execute if score Prestart Numbers matches 119 as @a[tag=in_game] at @s run function gamemode:comp/respawn/team
 
+execute if score Prestart Numbers matches 119 run function dev:benchmark/data/load_game
 
-scoreboard players reset * game_damage
-scoreboard players reset * game_healing
-scoreboard players reset * game_dmg_take
-scoreboard players reset * game_kills
+
+execute if score Prestart Numbers matches 119 run function player:stats/reset_game
+
 tag @a[tag=in_game,tag=!stats] add stats
 
 execute if score Prestart Numbers matches 120.. run bossbar set main players @a

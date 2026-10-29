@@ -77,6 +77,22 @@ scoreboard objectives add ultimate.cooldown dummy
 scoreboard objectives add melee.cooldown dummy
 scoreboard objectives add poison dummy
 
+# Player - Game Stats (reset each game)
+scoreboard objectives add stat.game.play_time dummy
+scoreboard objectives add stat.game.player_kills dummy
+scoreboard objectives add stat.game.object_kills dummy
+scoreboard objectives add stat.game.damage_dealt dummy
+scoreboard objectives add stat.game.damage_taken dummy
+scoreboard objectives add stat.game.healing_dealt dummy
+scoreboard objectives add stat.game.healing_received dummy
+scoreboard objectives add stat.game.deaths dummy
+
+
+
+# Player - Stats
+scoreboard objectives add stat.play_time dummy
+scoreboard objectives add stat.player_kills dummy
+
 # Projectile
 scoreboard objectives add i dummy
 scoreboard objectives add j dummy
@@ -94,11 +110,6 @@ scoreboard objectives add arc dummy
 scoreboard objectives add fire dummy
 scoreboard objectives add last_shot dummy
 
-# Game Stats
-scoreboard objectives add game_damage dummy
-scoreboard objectives add game_healing dummy
-scoreboard objectives add game_kills dummy
-scoreboard objectives add game_dmg_take dummy
 scoreboard objectives add over_heal_delay dummy
 
 return 1

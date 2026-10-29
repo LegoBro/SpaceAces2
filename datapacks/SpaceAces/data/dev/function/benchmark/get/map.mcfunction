@@ -2,4 +2,4 @@
 
 tellraw @s [{translate:"dev.benchmark.get.map"}]
 
-tellraw @s [{nbt:"ran_games[0].map.name",storage:"dev:game_queue"}]
+tellraw @s [{nbt:"games[0].map.name",storage:"game_history:games"}]

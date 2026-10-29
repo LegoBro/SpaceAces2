@@ -5,7 +5,7 @@ execute unless entity @n[tag=killer] run tellraw @a ["",{"selector":"@s","type":
 #xp add @p[tag=killer] 1
 scoreboard players add @n[tag=killer] kills 1
 scoreboard players add @n[tag=killer] totalKills 1
-scoreboard players add @n[tag=killer] game_kills 1
+scoreboard players add @n[tag=killer] stat.game.player_kills 1
 
 tag @e[tag=killer] remove killer
 

@@ -34,9 +34,9 @@
 * ultimate_charge
 
 ### Stats
-* game_damage - damage dealt this game
-* game_dmg_take - damage taken this game
-* game_healing - healing done this game
+* stat.game.damage_dealt - damage dealt this game
+* stat.game.damage_taken - damage taken this game
+* stat.game.healing_dealt - healing done this game
 
 ### Projectile
 * arc - current arc of projectile

@@ -2,7 +2,7 @@
 
 #Entities that run independantly
 
-execute as @a at @s run function tick:player/tick
+execute as @a at @s run function player:tick
 execute as @e[type=!player,tag=!tick.ignore] at @s run function tick:entity/tick
 
 # Blue

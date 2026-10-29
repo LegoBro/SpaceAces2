@@ -1,9 +1,9 @@
-# Print Red team
-tellraw @s [{translate:"dev.benchmark.get.blue_bots",color:"blue"}]
+# Print Blue Bots team
+tellraw @s [{translate:"dev.benchmark.get.bots.blue",color:"blue"}]
 
 function dev:benchmark/data/average/skill_reset
 
-data modify storage dev:game_queue_data bots set from storage dev:game_queue ran_games[0].bots.blue
+data modify storage dev:game_queue_data bots set from storage game_history:games games[0].bots.blue
 function dev:benchmark/get/bots/bot
 
 # Get average skill

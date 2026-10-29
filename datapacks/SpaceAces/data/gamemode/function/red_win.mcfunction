@@ -4,6 +4,6 @@ tellraw @a {"text":"The RLU are victorious!",color:"red","type":"text"}
 execute at @a run playsound minecraft:ui.toast.challenge_complete master @s 8 200 8 50000 2
 schedule function gamemode:reset 10s
 tag @e[team=red] add winner
-data modify storage dev:game_queue games[0].winner set value "red"
+data modify storage game_history:current game.winner set value "red"
 
 return 1

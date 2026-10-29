@@ -1,8 +1,16 @@
 ## Commands ran every tick as the players in the lobby
 
+tag @s remove spectator
+tag @s remove team_spectator
+
 effect give @s minecraft:saturation 100 100 true
 # Join spectator if on pad
-execute if entity @s[x=7,y=195,z=27,dx=2,dy=3,dz=2] if block ~ ~ ~ minecraft:light_gray_carpet run tag @s add spectator
+execute if entity @s[x=7,y=195,z=27,dx=2,dy=3,dz=2] if block ~ ~ ~ minecraft:light_gray_carpet run function player:spectator/load
+
+
+execute if entity @s[x=4,y=195,z=8,dx=2,dy=3,dz=2] run function player:team/join_blue
+
+execute if entity @s[x=10,y=195,z=8,dx=2,dy=3,dz=2] run function player:team/join_red
 
 # console
 execute if entity @s[scores={console=1..}] run function gamemode:console/dictionary

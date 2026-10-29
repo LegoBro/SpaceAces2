@@ -1,6 +1,10 @@
 ## Player Class tick
 function class:4/main
 
+# Low health visuals - maybe delete later
+execute if entity @s[team=blue] if score @s displayHealth matches ..25 run particle minecraft:block{block_state:{id:"minecraft:lapis_block"}} ~ ~1 ~ 0.1 0.1 0.1 0 5 force @a[distance=.5..,team=blue]
+execute if entity @s[team=red] if score @s displayHealth matches ..25 run particle minecraft:block{block_state:{id:"minecraft:lapis_block"}} ~ ~1 ~ 0.1 0.1 0.1 0 5 force @a[distance=.5..,team=red]
+
 
 #Lobby for team selection
 execute if entity @s[x=3,y=195,z=-10,dx=11,dy=1,dz=15,tag=!awaiting,tag=!in_game] run function gamemode:new_player

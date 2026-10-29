@@ -37,5 +37,7 @@ clear @s[gamemode=adventure]
 function class:4/helper/attribute_cleanup
 
 effect give @s regeneration 3 100 true
+scoreboard players set @s fire 0
+scoreboard players set @s poison 0
 
 return 1

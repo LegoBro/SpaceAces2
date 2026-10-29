@@ -1,0 +1,2 @@
+data modify storage game_history:current game.gamemode set from storage space_aces:selected_gamemode gamemode
+data modify storage game_history:current game.map set from storage space_aces:selected_map map

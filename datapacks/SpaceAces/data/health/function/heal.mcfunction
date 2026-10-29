@@ -13,6 +13,7 @@ execute if score @s healing matches 1.. run scoreboard players set @s damage_dis
 execute if score @s healing matches 1.. run function health:indicator/heal
 
 execute if score @s healing matches 1.. run scoreboard players operation @s health += @s healing
+execute if score @s healing matches 1.. run scoreboard players operation @s stat.game.healing_received += @s healing
 execute if score @s healing matches 1.. run scoreboard players set @s healing 0
 
 #Display Health

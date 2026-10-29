@@ -22,10 +22,10 @@ scoreboard players reset * falloffStart
 scoreboard players reset * fire
 scoreboard players reset * fire_tick
 
-scoreboard players reset * game_damage
-scoreboard players reset * game_dmg_take
-scoreboard players reset * game_healing
-scoreboard players reset * game_healing
+scoreboard players reset * stat.game.damage_dealt
+scoreboard players reset * stat.game.damage_taken
+scoreboard players reset * stat.game.healing_dealt
+scoreboard players reset * stat.game.healing_dealt
 scoreboard players reset * gamemode
 
 scoreboard players reset * healing

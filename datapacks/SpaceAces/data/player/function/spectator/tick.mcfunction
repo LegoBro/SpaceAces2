@@ -1,7 +1,7 @@
 ## Commands for spectators
 #spectator
 tag @s[tag=hb] remove hb
-team leave @s[team=!]
+team leave @s[team=!,tag=!team_spectator]
 execute if entity @e[type=#projectile:players,tag=hb] run gamemode spectator @s[x=7,y=195,z=27,dx=2,dy=3,dz=2]
 execute if entity @e[type=#projectile:players,tag=hb] run tp @s[x=7,y=195,z=27,dx=2,dy=3,dz=2] @n[type=#projectile:players,tag=hb]
 #execute if entity @a[tag=in_game] if score Gamemode settings matches 4 run tp @s[x=7,y=195,z=27,dx=2,dy=3,dz=2] 30015 15 15

@@ -9,4 +9,4 @@ data modify storage dev:game_queue_data old_bots set from storage sa_bots:bot_da
 
 function dev:benchmark/data/compress/bot
 
-data modify storage dev:game_queue games[0].bots set from storage dev:game_queue_data new_bots
+data modify storage game_history:current game.bots set from storage dev:game_queue_data new_bots

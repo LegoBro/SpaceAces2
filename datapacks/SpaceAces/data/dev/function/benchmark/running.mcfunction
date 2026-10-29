@@ -1,5 +1,4 @@
 # Game queue is active
-scoreboard players add current_game_time benchmark 1
 execute unless data storage dev:game_queue games[0] run return run tellraw @a {text:"Game Queue Ended"}
 schedule function dev:benchmark/running 1s
 
