@@ -11,6 +11,7 @@ execute store result storage dev:helper player.stat.damage_taken int 1 run score
 execute store result storage dev:helper player.stat.healing_dealt int 1 run scoreboard players get @s stat.game.healing_dealt
 execute store result storage dev:helper player.stat.healing_received int 1 run scoreboard players get @s stat.game.healing_received
 execute store result storage dev:helper player.stat.deaths int 1 run scoreboard players get @s stat.game.deaths
+execute store result storage dev:helper player.stat.assists int 1 run scoreboard players get @s stat.game.assists
 
 execute if score @s Team matches 1 run data modify storage dev:helper players.blue append from storage dev:helper player
 execute if score @s Team matches 2 run data modify storage dev:helper players.red append from storage dev:helper player

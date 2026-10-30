@@ -1,12 +1,17 @@
 scoreboard players set @s dev -1
 
 
-tellraw @s[tag=!dev.spawnpoints] [{text:" [ ] Spawnpoint Visuals",color:yellow,click_event:{action:"run_command",command:"tag @s add dev.spawnpoints"}}]
-tellraw @s[tag= dev.spawnpoints] [{text:" [x] Spawnpoint Visuals",color:green,click_event:{action:"run_command",command:"tag @s remove dev.spawnpoints"}}]
+# Misc?
+tellraw @s[tag=!dev.spawnpoints] [{text:" [ ] "},{translate:"dev.spawnpoint",color:yellow,click_event:{action:"run_command",command:"trigger dev set 1000"}}]
+tellraw @s[tag= dev.spawnpoints] [{text:" [x] "},{translate:"dev.spawnpoint",color:green ,click_event:{action:"run_command",command:"trigger dev set 1000"}}]
+tellraw @s[tag= dev.spawnpoints] [{text:"  "},{translate:"dev.spawnpoint.respawn_time",color:green,click_event:{action:"suggest_command",command:"/data modify entity @n[type=marker,tag=gamemode.spawnpoint] data.respawn_time set value "}}]
 
-tellraw @s[tag=!dev.payload] [{text:" [ ] Payload Visuals",color:yellow,click_event:{action:"run_command",command:"tag @s add dev.payload"}}]
-tellraw @s[tag= dev.payload] [{text:" [x] Payload Visuals",color:green,click_event:{action:"run_command",command:"tag @s remove dev.payload"}}]
+# Gamemodes
+tellraw @s[tag=!dev.gamemode] [{text:" [ ] "},{translate:"gamemode.options",color:yellow,click_event:{action:"run_command",command:"trigger dev set 2000"}}]
+tellraw @s[tag= dev.gamemode] [{text:" [x] "},{translate:"gamemode.options",color:green ,click_event:{action:"run_command",command:"trigger dev set 2000"}}]
 
-tellraw @s[tag=!dev.setback] [{text:" [ ] Setback Visuals",color:yellow,click_event:{action:"run_command",command:"tag @s add dev.setback"}}]
-tellraw @s[tag= dev.setback] [{text:" [x] Setback Visuals",color:green,click_event:{action:"run_command",command:"tag @s remove dev.setback"}}]
+tellraw @s[tag=!dev.gamemode.payload,tag=dev.gamemode] [{text:"  [ ] "},{translate:"gamemode.payload",color:yellow,click_event:{action:"run_command",command:"trigger dev set 2010"}}]
+tellraw @s[tag= dev.gamemode.payload,tag=dev.gamemode] [{text:"  [x] "},{translate:"gamemode.payload",color:green, click_event:{action:"run_command",command:"trigger dev set 2010"}}]
 
+tellraw @s[tag=!dev.gamemode.setback,tag=dev.gamemode] [{text:"  [ ] "},{translate:"gamemode.setback",color:yellow,click_event:{action:"run_command",command:"trigger dev set 2020"}}]
+tellraw @s[tag= dev.gamemode.setback,tag=dev.gamemode] [{text:"  [x] "},{translate:"gamemode.setback",color:green, click_event:{action:"run_command",command:"trigger dev set 2020"}}]

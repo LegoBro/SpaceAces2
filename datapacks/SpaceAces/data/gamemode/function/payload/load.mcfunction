@@ -29,7 +29,7 @@ execute as @e[type=marker,tag=gamemode.payload.path] run function gamemode:paylo
 tag @e[type=marker,tag=active_payload_path] remove active_payload_path
 execute as @e[type=marker,tag=gamemode.payload.path] if score @s payload = @n[type=pig,tag=payload] payload run tag @s add active_payload_path
 
-bossbar set minecraft:main name ["",{"text":"Payload Progress",color:"white","type":"text"}]
+bossbar set minecraft:main name ["",{"translate":"gamemode.payload.bossbar",color:"white"}]
 execute store result bossbar minecraft:main max run scoreboard players get gamemode.payload.total_distance Numbers
 
 # Delayed spawn
@@ -39,7 +39,7 @@ schedule function sa_bots:api/activation/activate_all_bots_blue 20s
 scoreboard players set @a[tag=in_game,team=blue] i -600
 
 scoreboard players set gamemode.respawn.time.red Numbers 200
-scoreboard players set gamemode.respawn.time.blue Numbers 100
+scoreboard players set gamemode.respawn.time.blue Numbers 200
 schedule function gamemode:comp/respawn/apply_time/team 10s
 
 return 1

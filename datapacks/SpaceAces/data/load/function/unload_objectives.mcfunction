@@ -39,6 +39,7 @@ scoreboard players reset * kills
 
 scoreboard players reset * last_shot
 scoreboard players reset * lastHurter
+scoreboard players reset * nextLastHurter
 scoreboard players reset * lowHealth
 
 scoreboard players reset * maxHealth
@@ -84,3 +85,4 @@ scoreboard players reset * zpos
 
 scoreboard players reset * blindness
 
+reload

@@ -5,10 +5,13 @@ execute if score activePoint Numbers matches ..-1 run scoreboard players operati
 ## Adds a capture delay so you can't cap next point for a few seconds to let players reposition
 execute store result score #capture_delay gamemode run data get storage space_aces:gamemodes gamemodes[{"name":"setback"}].capture_delay
 
+function gamemode:setback/data/store_capture
 function gamemode:setback/update_captured_point
 function gamemode:comp/spawnpoint/move_both_red
 tellraw @a "Red Captured the Point!"
 
+execute unless entity @n[type=marker,tag=gamemode.setback.active_point] run data modify storage game_history:current game.win_state set value "all_points_capped"
 execute unless entity @n[type=marker,tag=gamemode.setback.active_point] unless entity @a[tag=winner] run function gamemode:red_win
-execute if score gamemode.setback.red_points Numbers >= gamemode.setback.goal_points Numbers unless entity @a[tag=winner] run function gamemode:blue_win
+execute if score gamemode.setback.red_points Numbers >= gamemode.setback.goal_points Numbers run data modify storage game_history:current game.win_state set value "points_met"
+execute if score gamemode.setback.red_points Numbers >= gamemode.setback.goal_points Numbers unless entity @a[tag=winner] run function gamemode:red_win
 clear @a compass

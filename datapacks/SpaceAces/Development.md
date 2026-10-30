@@ -136,10 +136,21 @@ Building/entity that heals nearby friendlies, can be tagged as players that can 
 [See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
 
 ## To do:
-spectator = no team
-
-function /get overview for games queue
-
 effective range for selected item, store in the item???
 
 replace texts with translates...
+
+Data points to capture:
+
+Player
+Ults used
+Accuracy w/ primary
+
+gamemode data points:
+
+killstreak kill goal by end of game (make it decreasing...)
+
+Payload overtime - not implemented
+
+Dev:
+Capture amount for setback

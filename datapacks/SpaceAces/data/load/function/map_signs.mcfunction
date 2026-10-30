@@ -1,4 +1,5 @@
 #used to set basic map signs
+return 0
 function help:4ac59a86d47027ea7efde4d6d0be3cc90ad10c7c668b6b84bac8efe13a54931b
 function help:a565f95b09e796a46a5ddd9a4768356890b4897994dce9b539cbb78620f69222
 function help:10e5177dd991b3efc3d84d66c3078ae2e88e92aba2387e4820aa006b0a7ba4b8

@@ -68,6 +68,7 @@ scoreboard objectives add ability.2.cooldown dummy
 scoreboard objectives add passive.cooldown dummy
 scoreboard objectives add lowHealth dummy
 scoreboard objectives add lastHurter dummy
+scoreboard objectives add nextLastHurter dummy
 scoreboard objectives add kills dummy
 scoreboard objectives add totalKills dummy
 scoreboard objectives add raw_dealt minecraft.custom:minecraft.damage_dealt
@@ -86,6 +87,10 @@ scoreboard objectives add stat.game.damage_taken dummy
 scoreboard objectives add stat.game.healing_dealt dummy
 scoreboard objectives add stat.game.healing_received dummy
 scoreboard objectives add stat.game.deaths dummy
+scoreboard objectives add stat.game.assists dummy
+#scoreboard objectives add stat.game.ults_used dummy
+#scoreboard objectives add stat.game.shots_fired dummy
+#scoreboard objectives add stat.game.shots_hit dummy
 
 
 

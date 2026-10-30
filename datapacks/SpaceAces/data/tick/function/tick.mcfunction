@@ -5,12 +5,9 @@
 execute as @a at @s run function player:tick
 execute as @e[type=!player,tag=!tick.ignore] at @s run function tick:entity/tick
 
-# Blue
-execute if entity @a[tag=in_game] run particle minecraft:angry_villager 5.75 195.06 9.49 .5 .5 .5 .01 2 force
 
-# Red
-execute if entity @a[tag=in_game] run particle minecraft:angry_villager 11.75 195.06 9.49 .5 .5 .5 .01 2 force
-execute unless entity @a[tag=in_game] run function tick:no_in_game
+
+
 
 
 

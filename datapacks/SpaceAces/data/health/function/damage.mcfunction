@@ -22,6 +22,7 @@ execute if score @s damage matches 1.. run scoreboard players set @s damage_disp
 
 # indicator
 execute if score @s damage matches 1.. run function health:indicator/damage
+execute if score @s[tag=!entity] damage matches 15.. run damage @s 1 minecraft:bad_respawn_point at ^ ^ ^
 
 execute if score @s[tag=entity] damage matches 1.. run function health:entity
 execute at @s if score @s damage matches 1..49 run playsound minecraft:entity.generic.hurt player @a ~ ~ ~ 1 1 0
@@ -37,7 +38,6 @@ scoreboard players operation @s[tag=!entity] displayHealth /= @s maxHealth
 
 #Armor
 execute if entity @s[tag=!entity] run function health:update
-damage @s[tag=!entity] 1 minecraft:bad_respawn_point at ^ ^ ^
 
 #Run if you die
 execute if entity @s[tag=!entity,tag=!escape,scores={health=..0}] at @s run function health:death

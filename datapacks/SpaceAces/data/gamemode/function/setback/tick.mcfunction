@@ -1,4 +1,7 @@
 #Commands ran for setback
+
+execute if entity @e[type=#projectile:players,tag=hb,tag=winner] run return run function gamemode:comp/end/invulnerable
+
 execute store result bossbar minecraft:main max run scoreboard players get fullPoint Numbers
 bossbar set main players @a
 
@@ -28,7 +31,5 @@ execute as @a[tag=in_game,scores={i=1..}] at @s run function gamemode:comp/respa
 
 execute unless entity @a[tag=winner] run scoreboard players add captureSound i 1
 execute if score captureSound i matches 50.. run scoreboard players reset captureSound i
-
-execute if entity @a[tag=winner] run scoreboard players set @a[tag=in_game] invulnerable 10
 
 return 1

@@ -7,8 +7,8 @@ execute as @e[tag=weak_health_pack] at @s run particle minecraft:damage_indicato
 
 ## Visualize different tags
 execute if entity @p[tag=dev.spawnpoints] run function dev:show/spawnpoints
-execute if entity @p[tag=dev.payload] run function dev:gamemode/payload/tick
-execute if entity @p[tag=dev.setback] run function dev:gamemode/setback/tick
+execute if entity @p[tag=dev.dev.gamemode.payload] run function dev:gamemode/payload/tick
+execute if entity @p[tag=dev.gamemode.setback] run function dev:gamemode/setback/tick
 
 execute as @e[type=marker,tag=dev.spawnpoint_progress_plus] at @s run function dev:spawnpoint/plus
 execute as @e[type=marker,tag=dev.spawnpoint_progress_minus] at @s run function dev:spawnpoint/minus
