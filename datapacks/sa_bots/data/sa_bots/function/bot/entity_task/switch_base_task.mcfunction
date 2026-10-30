@@ -17,6 +17,7 @@ tag @s remove sab.botMustPickNewTask
 
 #adopt task
 data remove entity @s data.tasks[{is_base_task:1}]
+execute unless data entity @s data.tasks[0] run tag @s remove sab.botDoingNonBaseTask
 execute unless data entity @s data.tasks[0] run data modify entity @s data.tasks set value []
 data modify entity @s data.tasks append from storage sa_bots:generic new_task
 

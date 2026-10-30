@@ -1,4 +1,5 @@
 #executed by a waypoint
+#executed at the position of the bot
 
 
 #get id

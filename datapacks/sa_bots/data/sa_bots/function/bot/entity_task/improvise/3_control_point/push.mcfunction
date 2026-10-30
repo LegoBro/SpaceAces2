@@ -40,4 +40,7 @@ execute if score @s sab.botFollowingPlayer matches 1.. run scoreboard players se
 execute if score @s sab.botSkill matches ..4 if score #choice sab.var matches 4 if score @s sab.botDestinationUUID = @s sab.botLastDestinationUUID store result score @s sab.botPauseTime run random value 5..25
 #high skill bot will roam the sector for a brief moment if we're reached the person we're following
 execute if score @s sab.botSkill matches 5.. if score #choice sab.var matches 4 if score @s sab.botDestinationUUID = @s sab.botLastDestinationUUID run scoreboard players set #choice sab.var 14
+
+#if we are a leader (meaning we have followers), go directly for the next point
+execute if score @s sab.botFollowers matches 1.. store result score #choice sab.var run random value 16..17
 #---------------------------------

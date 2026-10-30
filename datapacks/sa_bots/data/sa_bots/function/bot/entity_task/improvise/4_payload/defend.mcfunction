@@ -3,13 +3,12 @@ execute store result score #random sab.var run random value 1..100
 #don't follow nearest teammate if we just did that
 execute if score @s sab.botPreviousTask matches 3 run scoreboard players set #random sab.var 1
 
-#high chance we go somewhere that's controlled by our team
-execute if score #random sab.var matches 1..40 if score @s Team matches 1 run scoreboard players set #choice sab.var 9
-execute if score #random sab.var matches 1..40 if score @s Team matches 2 run scoreboard players set #choice sab.var 10
+#high chance we go to a patrol point near the front line
+execute if score #random sab.var matches 1..30 run scoreboard players set #choice sab.var 22
 
 #chance we go to the front line
-execute if score #random sab.var matches 41..70 if score @s Team matches 1 run scoreboard players set #choice sab.var 12
-execute if score #random sab.var matches 41..70 if score @s Team matches 2 run scoreboard players set #choice sab.var 13
+execute if score #random sab.var matches 31..70 if score @s Team matches 1 run scoreboard players set #choice sab.var 12
+execute if score #random sab.var matches 31..70 if score @s Team matches 2 run scoreboard players set #choice sab.var 13
 
 #chance we go near the payload
 execute if score #random sab.var matches 71..90 run scoreboard players set #choice sab.var 21

@@ -30,6 +30,9 @@ bots[i].team
 bots[i].class
 > What class the bot is playing as
 
+bots[i].class_history[]
+> The last 10 classes this bot played as
+
 bots[i].updateOrigin
 > Whether the data on "this" needs to be sent to origin
 

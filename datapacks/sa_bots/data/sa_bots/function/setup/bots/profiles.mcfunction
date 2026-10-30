@@ -11,13 +11,13 @@
 
 #bot usernames (this list can be any length)
 data modify storage sa_bots:bot_data profiles.all set value [\
-    {id:1,username:"CPU_1",profile:"{}"}, \
-    {id:2,username:"CPU_2",profile:"{}"}, \
-    {id:3,username:"CPU_3",profile:"{}"}, \
-    {id:4,username:"CPU_4",profile:"{}"}, \
-    {id:5,username:"CPU_5",profile:"{}"}, \
-    {id:6,username:"CPU_6",profile:"{}"}, \
-    {id:7,username:"CPU_7",profile:"{}"}, \
+    {id:1,username:"LegoBot",profile:"{}"}, \
+    {id:2,username:"ThatGreenBot",profile:"{}"}, \
+    {id:3,username:"BrickBot",profile:"{}"}, \
+    {id:4,username:"ThinkBots12",profile:"{}"}, \
+    {id:5,username:"DerpOS",profile:"{}"}, \
+    {id:6,username:"FlamingOSrs",profile:"{}"}, \
+    {id:7,username:"TDBOT225",profile:"{}"}, \
     {id:8,username:"CPU_8",profile:"{}"}, \
     {id:9,username:"CPU_9",profile:"{}"}, \
     {id:10,username:"CPU_10",profile:"{}"}, \
@@ -79,6 +79,6 @@ data modify storage sa_bots:bot_data profiles.all set value [\
     {id:66,username:"CPU_66",profile:"{}"}, \
     {id:67,username:"CPU_67",profile:"{}"}, \
     {id:68,username:"CPU_68",profile:"{}"}, \
-    {id:69,username:"CPU_69",profile:"{}"}, \
-    {id:70,username:"CPU_70",profile:"{}"} \
+    {id:69,username:"BineBot",profile:"{}"}, \
+    {id:70,username:"SK_pulluxx",profile:"{}"} \
 ]

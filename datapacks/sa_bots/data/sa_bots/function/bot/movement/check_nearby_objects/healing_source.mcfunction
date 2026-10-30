@@ -18,7 +18,7 @@ execute if entity @s[tag=sab.botWantsToAvoidEnemy,scores={sab.botTargetEntityID=
 execute if entity @s[scores={sab.botTask=5,displayHealth=..99}] run scoreboard players add #random sab.var 100 
 
 #quit out and do nothing if not interested
-execute if score #random sab.var matches ..0 run return fail
+execute if score #random sab.var matches ..15 run return fail
 #=====
 
 

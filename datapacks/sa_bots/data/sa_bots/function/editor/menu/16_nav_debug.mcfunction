@@ -3,6 +3,10 @@
 #remember what page we're on
 scoreboard players set @s sab.menuPage 15
 
+#utility for when we directly run this function
+tag @s add sab.botPathEdit
+gamemode creative @s
+
 
 #heading
 tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -16,6 +20,14 @@ execute if score #debug_show_bot_task sab.var matches 1 run tellraw @s ["\n",{tr
 #show bot destination
 execute unless score #debug_show_bot_destination sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]
 execute if score #debug_show_bot_destination sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 37"}}," ",{translate:"sa_bot.menu.debug.show_bot_destination",color:white,bold:true}]
+
+#show bot move target
+execute unless score #debug_show_move_target sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 62"}}," ",{translate:"sa_bot.menu.debug.shot_bot_movement_target",color:white,bold:true}]
+execute if score #debug_show_move_target sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 62"}}," ",{translate:"sa_bot.menu.debug.shot_bot_movement_target",color:white,bold:true}]
+
+#glowing bots
+execute unless score #debug_glowing_bots sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 63"}}," ",{translate:"sa_bot.menu.debug.glowing_bots",color:white,bold:true}]
+execute if score #debug_glowing_bots sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"O",color:green}],click_event:{action:"run_command",command:"/trigger botPathEdit set 63"}}," ",{translate:"sa_bot.menu.debug.glowing_bots",color:white,bold:true}]
 
 #adopt nav channel of nearest bot
 execute unless score #debug_adopt_nav_channel sab.var matches 1 run tellraw @s [{translate:"sa_bot.generic.button",color:white,with:[{text:"X",color:red}],click_event:{action:"run_command",command:"/trigger botPathEdit set 40"}}," ",{translate:"sa_bot.menu.debug.adopt_nav_channel_of_nearest_bot",color:white,bold:true}]

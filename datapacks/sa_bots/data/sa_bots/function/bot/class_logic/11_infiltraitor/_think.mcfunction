@@ -16,7 +16,7 @@ execute if entity @s[scores={invis=1..,sab.lockedOntoEnemy=..1}] run scoreboard 
 
 
 #when reloading while in combat, use fused detonator
-execute if entity @s[scores={sab.lockedOntoEnemy=3..,reload=1..,ability.2.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_2
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=3..,reload=1..,ability.2.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_2
 
 #shoot when we see someone
 execute if entity @s[scores={SelectedItem=0,sab.lockedOntoEnemy=3..}] run scoreboard players set @s sab.botRightClick10Hz 1

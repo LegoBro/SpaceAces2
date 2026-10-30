@@ -10,7 +10,7 @@ execute if entity @s[scores={reload=0,totalShots=..24,sab.botSkill=6..}] unless 
 
 
 #when reloading while in combat, use grenade
-execute if entity @s[scores={reload=1..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={reload=1..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc
 
 #heal when low on health
 execute if entity @s[scores={health=..100,ability.2.cooldown=..0}] \
@@ -26,7 +26,7 @@ execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/c
 
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.soldier.ultimate.charge Numbers \
-    if entity @s[scores={sab.lockedOntoEnemy=1..}] \
+    if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=1..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 

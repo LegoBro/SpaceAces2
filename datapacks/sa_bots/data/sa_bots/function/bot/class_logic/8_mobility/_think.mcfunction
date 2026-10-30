@@ -9,8 +9,8 @@ execute if entity @s[scores={reload=0,totalShots=..10,sab.botSkill=6..}] unless 
 
 
 #when reloading while in combat, use grenade
-execute if entity @s[scores={sab.botSkill=6..,reload=1..,ability.2.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_2_if_aiming_for_arc
-execute if entity @s[scores={sab.botSkill=..5,reload=1..,ability.2.cooldown=..0}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_arc \
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botSkill=6..,reload=1..,ability.2.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_2_if_aiming_for_arc
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botSkill=..5,reload=1..,ability.2.cooldown=..0}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_arc \
     run function sa_bots:bot/class_logic/use_ability_2_if_aiming_for_arc
 
 
@@ -29,7 +29,7 @@ execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/c
 
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.mobility.ultimate.charge Numbers \
-    if entity @s[scores={sab.lockedOntoEnemy=3..}] \
+    if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=3..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 #override behavior when doing a scripted action

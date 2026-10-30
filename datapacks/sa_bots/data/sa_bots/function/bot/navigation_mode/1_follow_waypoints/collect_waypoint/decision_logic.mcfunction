@@ -2,7 +2,7 @@
 
 
 #must be above target, otherwise kick out
-execute unless score @s sab.botMoveTargetDY matches -8.. run return 0
+execute unless score @s sab.botMoveTargetDY matches -10.. run return 0
 #=====
 
 #reset sub-target look state
@@ -104,7 +104,8 @@ execute if score #found_target sab.var matches 1.. if score @s sab.botMoveState 
 execute if score #chosen_event sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/event/_event_execute_index
 
 #if we found a specific waypoint tag we were looking for, bot will respond accordingly
-execute if score #look_for_waypoint_tag sab.var matches 100000.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/bot_react_to_specific_waypoint_tag
+execute if score #look_for_waypoint_tag sab.var matches 100000.. run \
+    function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/bot_react_to_specific_waypoint_tag with storage sa_bots:generic
 
 
 #if we didn't find anything valid, go into "roam" mode for a while

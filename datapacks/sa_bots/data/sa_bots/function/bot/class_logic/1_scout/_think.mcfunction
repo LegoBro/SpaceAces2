@@ -4,8 +4,8 @@
 #hold primary weapon by default
 scoreboard players set @s SelectedItem 0
 
-#when reloading, use dodge
-execute if score @s reload matches 1.. if score @s ability.1.cooldown matches ..0 run function sa_bots:bot/class_logic/use_ability_1
+#when reloading while in combat, use dodge
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={reload=1..,sab.lockedOntoEnemy=1..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1
 
 #high skill: reload when not in combat
 execute if entity @s[scores={reload=0,totalShots=..6,sab.botSkill=6..}] unless entity @s[scores={sab.botTargetEntityID=1..}] run scoreboard players set @s reload 1

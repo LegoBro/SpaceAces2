@@ -1,14 +1,19 @@
 scoreboard players set #found_destination sab.var 0
 
 #pick a random sector that has red players nearby but not within
+scoreboard players set #max sab.var 0
+scoreboard players set #min sab.var 100
 scoreboard players set #sector sab.var 0
-execute if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=9}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=9},limit=1,sort=random] sab.botInSector
-execute if score #sector sab.var matches 0 if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=8}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=8},limit=1,sort=random] sab.botInSector
-execute if score #sector sab.var matches 0 if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=7}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=7},limit=1,sort=random] sab.botInSector
-execute if score #sector sab.var matches 0 if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=6}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=6},limit=1,sort=random] sab.botInSector
-execute if score #sector sab.var matches 0 if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=5}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=5},limit=1,sort=random] sab.botInSector
-execute if score #sector sab.var matches 0 if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=3..4}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=3..4},limit=1,sort=random] sab.botInSector
-execute if score #sector sab.var matches 0 if entity @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=1..2}] run scoreboard players operation #sector sab.var = @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=1..2},limit=1,sort=random] sab.botInSector
+execute as @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=9}] run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/log_viable_sector
+execute if score #sector sab.var matches 0 as @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=8}] run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/log_viable_sector
+execute if score #sector sab.var matches 0 as @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=7}] run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/log_viable_sector
+execute if score #sector sab.var matches 0 as @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=5..6}] run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/log_viable_sector
+execute if score #sector sab.var matches 0 as @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=3..4}] run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/log_viable_sector
+execute if score #sector sab.var matches 0 as @e[type=marker,tag=sab.sectorInformationValid,x=0,y=50,z=0,distance=..1,scores={sab.teamPresenceRed=1..2}] run function sa_bots:bot/entity_task/12_random_destination_front_line_blue/log_viable_sector
+#pick whichever sector was closest to red, and among those options, pick the one with the highest friendly presence
+execute if entity @s[tag=!sab.botWantsToFlankEnemy] as @e[type=marker,x=0,y=50,z=0,distance=..1,sort=random,tag=sab.sectorOptionViable] if score @s sab.teamPresenceBlue >= #max sab.var run scoreboard players operation #sector sab.var = @s sab.botInSector
+execute if entity @s[tag=sab.botWantsToFlankEnemy] as @e[type=marker,x=0,y=50,z=0,distance=..1,sort=random,tag=sab.sectorOptionViable] if score @s sab.teamPresenceBlue <= #min sab.var run scoreboard players operation #sector sab.var = @s sab.botInSector
+tag @e[type=marker,x=0,y=50,z=0,distance=..1,sort=random,tag=sab.sectorOptionViable] remove sab.sectorOptionViable
 #pick a random point within that sector
 execute if score #sector sab.var matches 1 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=..200,tag=sab.sector.1] run function sa_bots:bot/utility/waypoint_get_id_and_sector
 execute if score #sector sab.var matches 2 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=..200,tag=sab.sector.2] run function sa_bots:bot/utility/waypoint_get_id_and_sector

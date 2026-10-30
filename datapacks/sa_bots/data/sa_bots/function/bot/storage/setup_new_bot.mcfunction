@@ -1,4 +1,5 @@
 #executed by anything
+#with storage sa_bots:generic
 
 #$(id) = the id of this bot. must be the same as our index in the bots[] list
 
@@ -22,3 +23,7 @@ $data modify storage sa_bots:bot_data bots[$(id)].game set from storage sa_bots:
 #adopt a random profile
 function sa_bots:bot/setup/profile/assign_random_profile
 $data modify storage sa_bots:bot_data bots[$(id)].profile set from storage sa_bots:bot_data profiles.get
+
+#check if a human player has the same username as us
+$data modify storage sa_bots:generic username set from storage sa_bots:bot_data bots[$(id)].profile.username
+function sa_bots:bot/setup/profile/check_bot_username with storage sa_bots:generic

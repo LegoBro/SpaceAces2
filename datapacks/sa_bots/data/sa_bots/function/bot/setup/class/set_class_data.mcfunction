@@ -10,6 +10,11 @@ execute store result score @s Class run data get storage sa_bots:bot_data this.c
 #get ultimate charge froms storage
 execute store result score @s ultimate_charge run data get storage sa_bots:bot_data this.game.ultimate_charge
 
+#remember the last 10 classes this bot played as (record a new entry each time we change class)
+execute unless data storage sa_bots:bot_data this.class_history[0] run data modify storage sa_bots:bot_data this.class_history set value []
+execute unless score @s Class = #previous_class sab.var run data modify storage sa_bots:bot_data this.class_history prepend from storage sa_bots:bot_data this.class
+execute if data storage sa_bots:bot_data this.class_history[10] run data remove storage sa_bots:bot_data this.class_history[10]
+
 
 #fallback data
 function sa_bots:bot/setup/class/fallback_data
@@ -36,6 +41,11 @@ execute if score @s Class matches 15 run function class:4/rocketeer/equip
 
 #some classes may want to target teammates for some abilities
 execute if score @s Class matches 6 run tag @s add sab.botMayShootTeammates
+
+#some classes may want to flank the enemy team
+execute if score @s Class matches 1 run tag @s add sab.botWantsToFlankEnemy
+execute if score @s Class matches 8 run tag @s add sab.botWantsToFlankEnemy
+execute if score @s Class matches 11 run tag @s add sab.botWantsToFlankEnemy
 
 #some classes may want to get up in people's faces
 execute if score @s Class matches 1 run tag @s add sab.botWantsToGetCloseToEnemy

@@ -29,12 +29,15 @@ tp e-0-0-0-1 ~ ~ ~
 #player (or any fallback object)
 scoreboard players set #var sab.var 0
 #go for headshot if instructed to do so (only against enemy player entities)
-execute if score #shoot_at_head sab.var matches 1 if entity @s[type=#projectile:players] unless score @s Team = #team sab.var run scoreboard players set #var sab.var 1
+execute if score #shoot_at_head sab.var matches 1 if entity @s[type=#projectile:players] unless score #target_is_teammate sab.var matches 1 run scoreboard players set #var sab.var 1
 #\/ stuff that doesn't move (or at least not very quickly) \/
 execute if entity @s[tag=hb_mechanic_turret] run scoreboard players set #var sab.var 101
 execute if entity @s[tag=chem_dispenser] run scoreboard players set #var sab.var 102
 execute if entity @s[tag=rocket_wall] run scoreboard players set #var sab.var 103
 execute if entity @s[tag=vis_mine] run scoreboard players set #var sab.var 104
+
+#when shooting at body: aim a little bit higher at very close range
+execute if score #var sab.var matches 0 if score #los_distance sab.var matches ..3 run scoreboard players set #var sab.var 2
 
 #are we looking at something that can move? apply offsets to lead shots, shoot at floor, or whatever
 scoreboard players set #test sab.var 0

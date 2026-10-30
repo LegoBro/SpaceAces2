@@ -9,13 +9,13 @@ execute if entity @s[scores={reload=0,totalShots=..4,sab.botSkill=6..}] unless e
 
 
 #high skill, energy lance when we see someone
-execute if entity @s[scores={sab.botSkill=6..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_directly
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botSkill=6..,ability.1.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_directly
 #lower skill, energy lance when reloading
-execute if entity @s[scores={sab.botSkill=..5,reload=1..,ability.1.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_directly
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botSkill=..5,reload=1..,ability.1.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_directly
 
 
 #use rocket wall when reloading
-execute if entity @s[scores={sab.botLifetime=50..,reload=1..,ability.2.cooldown=..0}] run function sa_bots:bot/class_logic/use_ability_2
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botLifetime=50..,reload=1..,ability.2.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_2
 
 #shoot when we see someone
 execute if entity @s[scores={SelectedItem=0,sab.lockedOntoEnemy=3..}] run scoreboard players set @s sab.botRightClick10Hz 1
@@ -27,7 +27,7 @@ execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/c
 
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.rocketeer.ultimate.charge Numbers \
-    if entity @s[scores={sab.lockedOntoEnemy=3..}] \
+    if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=3..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 #override behavior when doing a scripted action

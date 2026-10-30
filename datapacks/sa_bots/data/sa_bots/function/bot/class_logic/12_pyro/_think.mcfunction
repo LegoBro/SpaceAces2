@@ -12,9 +12,9 @@ execute if entity @s[scores={reload=0,totalShots=..15,sab.botSkill=6..}] unless 
 
 
 #high skill, use fire bomb when we see someone
-execute if entity @s[scores={sab.botSkill=6..,ability.1.cooldown=..0,sab.lockedOntoEnemy=4..}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botSkill=6..,ability.1.cooldown=..0,sab.lockedOntoEnemy=4..}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc
 #lower skill, use fire bomb when reloading
-execute if entity @s[scores={sab.botSkill=..5,reload=1..,ability.1.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.botSkill=..5,reload=1..,ability.1.cooldown=..0,sab.lockedOntoEnemy=3..}] run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc
 
 
 #might use adaptive plating when below 175HP

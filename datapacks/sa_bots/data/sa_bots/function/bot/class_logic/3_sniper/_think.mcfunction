@@ -8,7 +8,7 @@ scoreboard players set @s SelectedItem 0
 execute unless score @s reload matches 1.. run scoreboard players set @s SelectedItem 0
 
 #use vis mine when opponent is close by
-execute if entity @s[scores={ability.2.cooldown=..0,sab.lockedOntoEnemy=2..,sab.botTargetEntityDistance=..13}] \
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={ability.2.cooldown=..0,sab.lockedOntoEnemy=2..,sab.botTargetEntityDistance=..13}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_arc \
     run function sa_bots:bot/class_logic/use_ability_2_if_aiming_for_arc
 

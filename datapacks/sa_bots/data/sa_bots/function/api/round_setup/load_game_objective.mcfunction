@@ -29,6 +29,12 @@ execute if data storage sa_bots:bot_data objective{type:"ffa"} run scoreboard pl
 #-------------------------------------
 
 
+#special behavior for certain gamemodes
+scoreboard players set #blue_rollout_to_mid sab.var 0
+scoreboard players set #red_rollout_to_mid sab.var 0
+execute if score #bot_objective sab.var matches 4 run scoreboard players set #red_rollout_to_mid sab.var 1
+
+
 #based on #bot_objective, set quota for how much of the team should have the goal of PUSH or DEFEND (or PICK, but we don't really police that)
 
 #defaults
@@ -54,7 +60,7 @@ execute if score #bot_objective sab.var matches 4 run scoreboard players set #bo
 execute if score #bot_objective sab.var matches 4 run scoreboard players set #bot_percent_quota_push_blue sab.var 50
 execute if score #bot_objective sab.var matches 4 run scoreboard players set #bot_percent_quota_defend_blue sab.var 0
 execute if score #bot_objective sab.var matches 4 run scoreboard players set #bot_percent_quota_push_red sab.var 0
-execute if score #bot_objective sab.var matches 4 run scoreboard players set #bot_percent_quota_defend_red sab.var 80
+execute if score #bot_objective sab.var matches 4 run scoreboard players set #bot_percent_quota_defend_red sab.var 50
 
 #ctf
 execute if score #bot_objective sab.var matches 5 run scoreboard players set #bot_percent_quota_push sab.var 40

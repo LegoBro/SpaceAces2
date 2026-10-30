@@ -18,3 +18,9 @@ execute if score #look_for_waypoint_tag sab.var matches 2 if entity @s[tag=wp.sn
 
 # 3 = explosive class vantage point
 execute if score #look_for_waypoint_tag sab.var matches 3 if entity @s[tag=wp.explosiveVantagePoint] run return run scoreboard players add #look_for_waypoint_tag sab.var 100000
+
+#...
+
+
+#if we found anything, save the uuid of this waypoint
+execute if score #look_for_waypoint_tag sab.var matches 100000.. run data modify storage sa_bots:generic remember_uuid4 set from entity @s data.uuid4

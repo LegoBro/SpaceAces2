@@ -25,6 +25,9 @@ execute if score #bot_objective sab.var matches 4 run function sa_bots:bot/entit
 execute if score #bot_objective sab.var matches 5 run function sa_bots:bot/entity_task/improvise/5_ctf/_index
 execute if score #bot_objective sab.var matches 6 run function sa_bots:bot/entity_task/improvise/6_ffa/_index
 
+#clear tag for rolling out to mid
+tag @s[tag=sab.botRolloutToMid] remove sab.botRolloutToMid
+
 #index, assign task
 function sa_bots:bot/entity_task/get_possible_task_data
 #adopt task with no question since we know there's only 1

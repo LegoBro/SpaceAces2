@@ -5,6 +5,7 @@
 #(higher y means we aim lower down)
 execute if score #var sab.var matches 0 at e-0-0-0-1 positioned ~ ~-.7 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
 execute if score #var sab.var matches 1 at e-0-0-0-1 facing entity @s eyes run rotate e-0-0-0-1 ~ ~
+execute if score #var sab.var matches 2 at e-0-0-0-1 positioned ~ ~-1.1 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
 execute if score #var sab.var matches 101 positioned ~ ~.5 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
 execute if score #var sab.var matches 102 positioned ~ ~-.33 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~
 execute if score #var sab.var matches 103 positioned ~ ~.33 ~ facing entity @s feet run rotate e-0-0-0-1 ~ ~

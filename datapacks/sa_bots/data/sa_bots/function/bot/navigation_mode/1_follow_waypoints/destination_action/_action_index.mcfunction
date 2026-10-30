@@ -8,18 +8,18 @@ execute if score #action sab.var matches 2 run function sa_bots:bot/navigation_m
 #3 = sniper holds a point for a while
 execute if score #action sab.var matches 3 run data modify entity @s data.move_targets set value []
 execute if score #action sab.var matches 3 run tag @s add sab.doNotUpdateMoveTarget
-execute if score #action sab.var matches 3 run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/3_sniper_hold_sniper_spot
+$execute if score #action sab.var matches 3 at b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/3_sniper_hold_sniper_spot
 #4 = take subroute to reach sniper spot
 execute if score #action sab.var matches 4 run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/4_take_subroute_to_reach_sniper_spot
 #5 = vantage point for explosive class
 execute if score #action sab.var matches 5 run data modify entity @s data.move_targets set value []
 execute if score #action sab.var matches 5 run tag @s add sab.doNotUpdateMoveTarget
-execute if score #action sab.var matches 5 run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/5_explosive_class_hold_vantage_point
+$execute if score #action sab.var matches 5 run at b-0-0-0-$(uuid4) function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/5_explosive_class_hold_vantage_point
 #6 = take subroute to reach explosive vantage point
 execute if score #action sab.var matches 6 run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/6_take_subroute_to_reach_explosive_vantage_point
 #7 = stand on control point
 execute if score #action sab.var matches 7 run data modify entity @s data.move_targets set value []
 execute if score #action sab.var matches 7 run tag @s add sab.doNotUpdateMoveTarget
-execute if score #action sab.var matches 7 run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/7_stand_on_control_point
+$execute if score #action sab.var matches 7 run at b-0-0-0-$(uuid4) function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/7_stand_on_control_point
 
 #...

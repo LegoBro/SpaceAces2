@@ -3,8 +3,9 @@ execute store result score #random sab.var run random value 1..100
 #good chance we go to the sector with the payload
 execute if score #random sab.var matches 1..45 run scoreboard players set #choice sab.var 21
 
-#good chance we go somewhere underpopulated
-execute if score #random sab.var matches 46..60 run scoreboard players set #choice sab.var 11
+#good chance we go behind enemy lines
+execute if score #random sab.var matches 46..60 if score @s Team matches 1 run scoreboard players set #choice sab.var 10
+execute if score #random sab.var matches 46..60 if score @s Team matches 2 run scoreboard players set #choice sab.var 9
 
 #good chance we go to a patrol point
 execute if score #random sab.var matches 61..85 if entity @s[scores={sab.botSkill=..5,sab.botAggression=6..}] run scoreboard players set #choice sab.var 6

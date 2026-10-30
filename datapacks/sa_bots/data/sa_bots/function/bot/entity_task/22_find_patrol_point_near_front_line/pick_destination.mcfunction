@@ -1,7 +1,7 @@
 scoreboard players set #found_destination sab.var 0
 
 #we want to pick a patrol point that is
-#1) not in a sector that is more dangerous than where we already are
+#1) near the enemy team, but not in a sector with enemies inside of it
 
 #possible targets:
 # @e[type=marker,tag=wp.patrolPoint]
@@ -34,7 +34,9 @@ execute if score @s Team matches 2 as @e[type=marker,tag=wp.patrolPoint.red,dist
 #pick something close to the front line (but not crossing it)
 scoreboard players set #best sab.var -2147483648
 scoreboard players operation #best sab.var > @e[type=marker,tag=sab.decisionMaker,distance=..1,scores={sab.markDangerEnemyOnly=..9}] sab.markDangerEnemyOnly
-execute as @e[type=marker,tag=sab.decisionMaker,distance=..1,sort=random] \
+execute as @e[type=marker,tag=sab.decisionMaker,distance=..1,sort=random,scores={sab.markDanger=..0}] \
+    if score @s sab.markDangerEnemyOnly = #best sab.var run function sa_bots:bot/entity_task/log_possible_destination/choose_viable_option_first_only
+execute if score #found_destination sab.var matches 0 as @e[type=marker,tag=sab.decisionMaker,distance=..1,sort=random] \
     if score @s sab.markDangerEnemyOnly = #best sab.var run function sa_bots:bot/entity_task/log_possible_destination/choose_viable_option_first_only
 
 #set id and sector from storage

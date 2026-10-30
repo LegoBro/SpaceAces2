@@ -10,13 +10,13 @@ execute if score @s ability.1.cooldown matches 200.. run tag @s add sab.botMaySh
 scoreboard players set @s SelectedItem 0
 
 #use stun on enemy
-execute if entity @s[tag=!sab.botShootingFriendlyPlayer,tag=!sab.botWeaponHasDownwardArc,scores={sab.lockedOntoEnemy=3..,ability.2.cooldown=..0}] \
+execute if entity @s[tag=!sab.botShootingFriendlyPlayer,tag=!sab.botWeaponHasDownwardArc,tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=3..,ability.2.cooldown=..0}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based run function sa_bots:bot/class_logic/use_ability_2
 
 #use grenade on enemy if we have grenades to spare
-execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={ability.1.cooldown=800..,sab.botSkill=7..,sab.lockedOntoEnemy=1..}] \
+execute if entity @s[tag=!sab.botShootingFriendlyPlayer,tag=sab.botShootingActiveOpponent,scores={ability.1.cooldown=800..,sab.botSkill=7..,sab.lockedOntoEnemy=1..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_arc run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc_loose
-execute if entity @s[tag=!sab.botShootingFriendlyPlayer,scores={ability.1.cooldown=1000..,sab.botSkill=3..,sab.lockedOntoEnemy=1..}] \
+execute if entity @s[tag=!sab.botShootingFriendlyPlayer,tag=sab.botShootingActiveOpponent,scores={ability.1.cooldown=1000..,sab.botSkill=3..,sab.lockedOntoEnemy=1..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_arc run function sa_bots:bot/class_logic/use_ability_1_if_aiming_for_arc_loose
 
 
@@ -42,7 +42,7 @@ execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/c
 
 #use ultimate when charged and in combat
 execute if score @s ultimate_charge >= class.shocksmith.ultimate.charge Numbers \
-    if entity @s[tag=!sab.botShootingFriendlyPlayer,tag=!sab.botWeaponHasDownwardArc,scores={sab.lockedOntoEnemy=3..}] \
+    if entity @s[tag=!sab.botShootingFriendlyPlayer,tag=!sab.botWeaponHasDownwardArc,tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=3..}] \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
 

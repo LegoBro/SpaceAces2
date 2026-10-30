@@ -18,6 +18,15 @@ scoreboard players operation #random sab.var += @s sab.botCooperativeness
 execute if function sa_bots:bot/combat_logic/check_for_targets/check_if_sustainer run scoreboard players add #random sab.var 5
 #more likely to continue following someone if we are already doing so
 execute if score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 16
+#slightly more likely to follow with low player count
+execute if entity @s[scores={Team=1,timeSinceLastRespawn=41..}] if score #playerCountBlue sab.var matches ..3 \
+    unless score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 1
+execute if entity @s[scores={Team=1,timeSinceLastRespawn=41..}] if score #playerCountBlue sab.var matches ..5 \
+    unless score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 1
+execute if entity @s[scores={Team=2,timeSinceLastRespawn=41..}] if score #playerCountRed sab.var matches ..3 \
+    unless score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 1
+execute if entity @s[scores={Team=2,timeSinceLastRespawn=41..}] if score #playerCountRed sab.var matches ..5 \
+    unless score @s sab.botFollowingPlayer matches 1.. run scoreboard players add #random sab.var 1
 
 #exit out and don't follow anyone if we rolled low
 execute if score #random sab.var matches ..25 run return run scoreboard players reset @s sab.botFollowingPlayer
@@ -46,8 +55,10 @@ execute if score #success sab.var matches 1.. run return run \
 #log which nearby teammates could be a good leader
 scoreboard players set #count_valid sab.var 0
 scoreboard players set #best sab.var 0
-execute if score @s Team matches 1 as @e[type=#projectile:players,tag=sab.activePlayer,scores={Team=1},distance=..25] run function sa_bots:bot/entity_goal/tag_possible_leader
-execute if score @s Team matches 2 as @e[type=#projectile:players,tag=sab.activePlayer,scores={Team=2},distance=..25] run function sa_bots:bot/entity_goal/tag_possible_leader
+tag @s add sab.botSelf
+execute if score @s Team matches 1 as @e[type=#projectile:players,tag=sab.activePlayer,tag=!sab.botSelf,scores={Team=1},distance=..25] run function sa_bots:bot/entity_goal/tag_possible_leader
+execute if score @s Team matches 2 as @e[type=#projectile:players,tag=sab.activePlayer,tag=!sab.botSelf,scores={Team=2},distance=..25] run function sa_bots:bot/entity_goal/tag_possible_leader
+tag @s remove sab.botSelf
 
 #follow one of the possible leaders at random
 execute as @e[type=#projectile:players,tag=sab.possibleLeader,distance=..25,sort=random] run function sa_bots:bot/entity_goal/become_leader
