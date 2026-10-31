@@ -21,6 +21,9 @@ execute store result score @s sab.botCooperativeness run data get storage sa_bot
 #general variables
 function sa_bots:bot/setup/setup_starting_scoreboards
 
+#get stats from storage
+function sa_bots:bot/setup/get_stats_from_storage
+
 #set scoreboard display style based on the gamemode
 function sa_bots:bot/setup/set_scoreboard_display_names
 

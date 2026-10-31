@@ -76,3 +76,12 @@ function sa_bots:bot/movement/set_input_tags
 #once every 2 seconds, evaluate whether we should switch teams 
 execute if score #2sec sab.var matches 33..34 if entity @s[tag=sab.botMaySwitchTeams] run function sa_bots:bot/setup/team/red_vs_blue/entity_consider_switching_teams
 #----------------------------
+
+
+
+#----------------------------
+#STATS
+
+#count up play time as long as we exist
+scoreboard players add @s stat.game.play_time 2
+#----------------------------

@@ -40,6 +40,20 @@ bots[i].updateOrigin
 ## persistent game variables
 bots[i].game
 > bots[i].game.ultimate_charge
+> bots[i].game.stat
+    > bots[i].game.stat.assists
+    > bots[i].game.stat.damage_dealt
+    > bots[i].game.stat.damage_taken
+    > bots[i].game.stat.deaths
+    > bots[i].game.stat.headshots
+    > bots[i].game.stat.healing_dealt
+    > bots[i].game.stat.healing_received
+    > bots[i].game.stat.object_kills
+    > bots[i].game.stat.play_time
+    > bots[i].game.stat.player_kills
+    > bots[i].game.stat.shots_fired
+    > bots[i].game.stat.shots_hit
+    > bots[i].game.stat.ults_used
 
 
 ## settings
