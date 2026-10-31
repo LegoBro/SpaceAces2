@@ -7,4 +7,5 @@ summon item_display ^-1 ^0.3 ^ {Tags:["plasma_grenade","raycast","grenade","igno
 execute anchored eyes run tp @e[type=minecraft:item_display,tag=plasma_grenade,tag=new,sort=nearest,limit=1,distance=..3] ^ ^ ^ ~ ~
 execute as @e[type=minecraft:item_display,tag=plasma_grenade,sort=nearest,tag=new,limit=1,distance=..3] at @s positioned ~ ~.25 ~ run function class:4/bomber/primary/projectile
 execute at @s run playsound minecraft:gun.launcher hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1

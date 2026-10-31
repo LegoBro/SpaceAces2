@@ -9,4 +9,5 @@ execute anchored eyes run tp @n[type=minecraft:item_display,tag=shockround,tag=n
 execute as @n[type=minecraft:item_display,tag=shockround,tag=new,distance=..3] at @s run function class:4/shocksmith/primary/projectile
 
 execute at @s run playsound minecraft:gun.heavy hostile @a ~ ~ ~ 1 2 0
+scoreboard players add @s stat.game.shots_fired 1
 return 1

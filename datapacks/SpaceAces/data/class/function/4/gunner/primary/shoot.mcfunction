@@ -9,4 +9,5 @@ execute anchored eyes run tp @n[type=item_display,tag=cannon,tag=new,distance=..
 execute if score @s ultimate.cooldown matches 1.. run tag @n[type=item_display,tag=cannon,tag=new,distance=..3] add grenade
 execute as @n[type=item_display,tag=cannon,tag=new,distance=..3] at @s run function class:4/gunner/primary/projectile
 execute at @s run playsound minecraft:gun.rifle hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1

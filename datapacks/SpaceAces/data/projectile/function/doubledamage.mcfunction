@@ -14,8 +14,8 @@ tag @n[type=!minecraft:item_frame,tag=!ignore,tag=!raycast,sort=nearest,limit=1,
 execute at @n[tag=projectile.target,distance=..3] run function projectile:hit
 execute if entity @s[tag=projectile.piercing] run tag @n[tag=projectile.target] add projectile.piercing.ignore
 tag @n[tag=projectile.target] remove projectile.target
-
-execute as @a if score @s id = place_id id at @s run function projectile:big_hit_indicator
+scoreboard players operation #proj.slot proj.slot = @s proj.slot
+execute as @e[type=#projectile:players,tag=hb] if score @s id = place_id id at @s run function projectile:big_hit_indicator
 tag @s[tag=grenade] add impact
 tag @s[tag=grenade] add projectile.impact.hitbox
 tag @s[tag=!projectile.piercing] add kill

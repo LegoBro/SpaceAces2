@@ -9,4 +9,5 @@ execute anchored eyes run tp @n[type=minecraft:item_display,tag=rifle,tag=new,di
 execute as @n[type=minecraft:item_display,tag=rifle,tag=new,distance=..3] at @s run function class:4/healer/primary/projectile
 
 execute at @s run playsound minecraft:gun.heal_pistol hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1

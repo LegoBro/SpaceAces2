@@ -8,6 +8,7 @@ scoreboard players operation @s Team = #Class_Start Team
 scoreboard players operation @s id = #Class_Start id
 scoreboard players operation @s damageMultiplier = #damageMultiplier damageMultiplier
 scoreboard players operation @s j = @s speed
+scoreboard players set @s proj.slot 0
 execute store result storage projectile SpreadX float 0.5 run random value -5..5
 execute store result storage projectile SpreadY float 0.5 run random value -5..5
 function projectile:spread with storage projectile

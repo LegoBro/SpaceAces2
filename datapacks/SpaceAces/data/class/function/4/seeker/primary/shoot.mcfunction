@@ -16,4 +16,5 @@ execute anchored eyes run summon item_display ^-0.5 ^-0.3 ^ {Tags:["heavy_shotgu
 execute anchored eyes run tp @e[type=minecraft:item_display,tag=heavy_shotgun,tag=new,sort=nearest,limit=4,distance=..3] ^ ^ ^ ~ ~
 execute as @e[type=minecraft:item_display,tag=heavy_shotgun,tag=new,sort=nearest,limit=4,distance=..3] at @s run function class:4/seeker/primary/projectile
 execute at @s run playsound minecraft:gun.heavy_shotgun hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1

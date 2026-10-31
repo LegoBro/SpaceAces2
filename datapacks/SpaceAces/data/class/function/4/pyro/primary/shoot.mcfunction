@@ -9,6 +9,5 @@ execute anchored eyes run tp @e[type=minecraft:item_display,tag=hot_air,tag=new,
 execute as @e[type=minecraft:item_display,tag=hot_air,sort=nearest,tag=new,limit=2,distance=..3] at @s positioned ~ ~.25 ~ run function class:4/pyro/primary/projectile
 execute at @s run playsound entity.blaze.shoot hostile @a ~ ~ ~
 
-
-
+scoreboard players add @s stat.game.shots_fired 1
 return 1

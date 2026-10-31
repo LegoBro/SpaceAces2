@@ -7,6 +7,7 @@ scoreboard players operation @s Team = #Class_Start Team
 scoreboard players operation @s id = #Class_Start id
 scoreboard players operation @s damageMultiplier = #damageMultiplier damageMultiplier
 scoreboard players operation @s j = @s speed
+scoreboard players set @s proj.slot 0
 execute unless score @s damageMultiplier matches 0 run function projectile:damage_multiplier
 
 function projectile:ray

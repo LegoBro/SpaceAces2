@@ -9,5 +9,7 @@ scoreboard players reset * stat.game.healing_dealt
 scoreboard players reset * stat.game.healing_received
 scoreboard players reset * stat.game.deaths
 scoreboard players reset * stat.game.assists
+#scoreboard players reset * stat.game.
+
 
 scoreboard players reset * ultimate_charge

@@ -16,4 +16,5 @@ execute anchored eyes run tp @e[type=minecraft:item_display,tag=shotgun,tag=new,
 execute as @n[type=minecraft:item_display,tag=shotgun,tag=new,sort=nearest,limit=1,distance=..5] at @s run function class:4/mechanic/primary/projectile_center
 execute as @e[type=minecraft:item_display,tag=shotgun,tag=new,sort=nearest,limit=6,distance=..5] at @s run function class:4/mechanic/primary/projectile_wide
 execute at @s run playsound minecraft:gun.shotgun hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1

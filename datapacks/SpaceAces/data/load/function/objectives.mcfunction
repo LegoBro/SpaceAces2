@@ -88,9 +88,10 @@ scoreboard objectives add stat.game.healing_dealt dummy
 scoreboard objectives add stat.game.healing_received dummy
 scoreboard objectives add stat.game.deaths dummy
 scoreboard objectives add stat.game.assists dummy
-#scoreboard objectives add stat.game.ults_used dummy
-#scoreboard objectives add stat.game.shots_fired dummy
-#scoreboard objectives add stat.game.shots_hit dummy
+scoreboard objectives add stat.game.ults_used dummy
+scoreboard objectives add stat.game.shots_fired dummy
+scoreboard objectives add stat.game.shots_hit dummy
+scoreboard objectives add stat.game.headshots dummy
 
 
 
@@ -114,6 +115,7 @@ scoreboard objectives add arcRate dummy
 scoreboard objectives add arc dummy
 scoreboard objectives add fire dummy
 scoreboard objectives add last_shot dummy
+scoreboard objectives add proj.slot dummy
 
 scoreboard objectives add over_heal_delay dummy
 

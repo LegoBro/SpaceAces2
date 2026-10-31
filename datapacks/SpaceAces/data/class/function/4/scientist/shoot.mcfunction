@@ -9,4 +9,5 @@ execute anchored eyes run tp @e[type=minecraft:item_display,tag=chem,sort=neares
 execute store result score @e[type=minecraft:item_display,tag=chem,sort=nearest,limit=3,distance=..3] id run scoreboard players get @s id
 execute as @e[type=minecraft:item_display,tag=chem,sort=nearest,limit=3,distance=..3] at @s positioned ~ ~ ~ run function class:scientist/projectile
 execute at @s run playsound minecraft:gun.chem_launcher hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1

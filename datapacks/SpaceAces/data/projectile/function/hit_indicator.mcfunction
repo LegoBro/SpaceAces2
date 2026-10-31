@@ -5,5 +5,5 @@ execute if entity @s[scores={crouching=1}] at @s positioned ~ ~1.15 ~ run partic
 execute if score type_damage Numbers matches 1 run function projectile:last_shot
 execute if score type_healing Numbers matches 1 run function projectile:heal
 
-
+execute if score #proj.slot proj.slot matches 0 run scoreboard players add @s stat.game.shots_hit 1
 return 1

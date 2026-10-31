@@ -7,4 +7,5 @@ execute anchored eyes run summon item_display ^-0.5 ^-0.3 ^ {Tags:["rifle","rayc
 execute anchored eyes run tp @e[type=item_display,tag=rifle,tag=new,sort=nearest,limit=1,distance=..3] ^ ^ ^ ~ ~
 execute as @e[type=item_display,tag=rifle,tag=new,sort=nearest,limit=1,distance=..3] at @s run function class:4/infiltraitor/primary/projectile
 execute at @s run playsound minecraft:gun.heavy_pistol hostile @a ~ ~ ~
+scoreboard players add @s stat.game.shots_fired 1
 return 1
