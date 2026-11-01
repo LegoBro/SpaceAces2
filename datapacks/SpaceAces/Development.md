@@ -136,21 +136,31 @@ Building/entity that heals nearby friendlies, can be tagged as players that can 
 [See Gamemode Data Format](./data/load/function/gamemode.mcfunction)
 
 ## To do:
-effective range for selected item, store in the item???
+Classes:
+    effective range for selected item - tells Bots how far they can shoot with gun
 
 replace texts with translates...
 
 Data points to capture:
+    Class Statistics
+        Copy class array with version marker into game_history
+        Add Projectile Amount for multi-shot classes - plug into actual kit design
 
-Player
-Ults used
-Accuracy w/ primary
+    gamemode data points:
+        killstreak kill goal by end of game (make it decreasing...)
 
-gamemode data points:
+        Payload overtime - not implemented
 
-killstreak kill goal by end of game (make it decreasing...)
+Map Tools:
+    Capture amount for setback
+    Payload Bonus time for Checkpoint
+    Payload Start Time
 
-Payload overtime - not implemented
-
-Dev:
-Capture amount for setback
+Benchmarks:
+    Balanced Matchups:
+        All Same Kit/Same Skill
+        All Same Skill - same team
+    Gameplay Variance/map:
+        Same Bot array on both teams (random but equal)
+    Advanced Duplication - make x copies of games[0] game
+    
