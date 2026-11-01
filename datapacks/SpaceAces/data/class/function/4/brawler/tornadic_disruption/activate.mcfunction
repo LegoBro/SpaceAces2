@@ -5,4 +5,5 @@ scoreboard players set @s ultimate_charge 0
 scoreboard players operation @s ultimate.cooldown = class.brawler.ultimate.duration Numbers
 
 scoreboard players reset @s rightClick
+scoreboard players add @s stat.game.ults_used 1
 return 1

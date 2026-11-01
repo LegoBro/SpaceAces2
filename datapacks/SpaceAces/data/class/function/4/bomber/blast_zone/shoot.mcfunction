@@ -1,4 +1,4 @@
-summon item_display ^-0.5 ^-0.3 ^ {Tags:["plasma_grenade","raycast","grenade","ignore.projectiles","new","projectile.invisible"],teleport_duration:2,item:{id:paper,components:{item_model:"class/bomber/grenade"}}}
+summon item_display ^-0.5 ^-0.3 ^ {Tags:["plasma_grenade","raycast","grenade","ignore.projectiles","new","projectile.invisible","projectile.no_ult_charge"],teleport_duration:2,item:{id:paper,components:{item_model:"class/bomber/grenade"}}}
 execute anchored eyes run tp @e[type=minecraft:item_display,tag=plasma_grenade,tag=new,sort=nearest,limit=1,distance=..3] ^ ^ ^ ~ ~
 execute as @e[type=minecraft:item_display,tag=plasma_grenade,sort=nearest,tag=new,limit=1,distance=..3] at @s positioned ~ ~.25 ~ run function class:4/bomber/blast_zone/projectile
 execute at @s run playsound minecraft:gun.launcher hostile @a ~ ~ ~

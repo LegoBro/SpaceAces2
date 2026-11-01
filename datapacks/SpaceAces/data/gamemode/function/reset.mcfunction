@@ -4,6 +4,7 @@
 #execute as @e[type=mannequin,tag=hb] run function dev:benchmark/add_bot
 
 # Copy ALL The data
+function sa_bots:api/activation/deactivate_all_bots
 function dev:benchmark/data/compress/bots
 
 function dev:benchmark/data/compress/players

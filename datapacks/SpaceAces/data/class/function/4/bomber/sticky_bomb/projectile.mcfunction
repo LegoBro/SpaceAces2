@@ -10,6 +10,7 @@ scoreboard players operation @s id = #Class_Start id
 scoreboard players operation @s owner = #Class_Start id
 scoreboard players operation @s damageMultiplier = #damageMultiplier damageMultiplier
 scoreboard players operation @s j = @s speed
+scoreboard players set @s proj.slot 1
 tag @s remove new
 function projectile:ray
 return 1

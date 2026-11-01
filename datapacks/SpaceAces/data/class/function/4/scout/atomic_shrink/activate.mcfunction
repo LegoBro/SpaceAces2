@@ -6,6 +6,7 @@ execute store result storage helper:size size float .01 run scoreboard players g
 effect give @s minecraft:speed 10 5 true
 
 scoreboard players set @s ultimate_charge 0
+scoreboard players add @s stat.game.ults_used 1
 scoreboard players operation @s ultimate.cooldown = class.scout.ultimate.duration Numbers
 
 scoreboard players reset @s rightClick

@@ -9,6 +9,9 @@ data modify storage dev:game_queue_data bot.skill set from storage dev:game_queu
 data modify storage dev:game_queue_data bot.aggression set from storage dev:game_queue_data old_bots[0].settings.brain.aggression.actual
 data modify storage dev:game_queue_data bot.cooperativeness set from storage dev:game_queue_data old_bots[0].settings.brain.cooperativeness.actual
 
+# Stats
+data modify storage dev:game_queue_data bot.stat set from storage dev:game_queue_data old_bots[0].game.stat
+
 data modify storage dev:game_queue_data bot.class_history set from storage dev:game_queue_data old_bots[0].class_history
 data modify storage dev:game_queue_data bot.team set from storage dev:game_queue_data old_bots[0].team
 

@@ -1,4 +1,5 @@
 scoreboard players set @s ultimate_charge 0
+scoreboard players add @s stat.game.ults_used 1
 scoreboard players operation @s ultimate.cooldown = class.mechanic.ultimate.duration Numbers
 
 execute summon marker run function class:4/mechanic/manual_override/marker

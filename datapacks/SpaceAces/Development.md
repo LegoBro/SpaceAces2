@@ -141,6 +141,9 @@ Classes:
 
 replace texts with translates...
 
+Fix:
+shocksmith charging off of teammates
+
 Data points to capture:
     Class Statistics
         Copy class array with version marker into game_history

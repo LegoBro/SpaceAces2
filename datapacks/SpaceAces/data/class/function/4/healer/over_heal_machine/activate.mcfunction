@@ -1,6 +1,6 @@
 scoreboard players set @s ultimate_charge 0
 scoreboard players operation @s ultimate.cooldown = class.healer.ultimate.duration Numbers
-
+scoreboard players add @s stat.game.ults_used 1
 scoreboard players reset @s rightClick
 
 summon minecraft:item_display ~ ~ ~ {Tags:["entity","class.healer.over_heal_machine","class.deployable","sab.nearby.healing","hb_turret","new","hb"],item:{id:"paper",components:{item_model:"class/healer/heal_machine"}},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[1f,1f,1f]}}
