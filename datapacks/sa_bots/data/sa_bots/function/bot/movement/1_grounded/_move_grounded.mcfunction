@@ -38,6 +38,7 @@ execute if score @s sab.botLookTime matches 1.. unless score @s sab.botForceAngl
 #get a normalized vector from us to our movement target entity
 execute if score @s sab.botMoveRotationOffsetTime matches 1.. run function sa_bots:bot/movement/1_grounded/rotate_move_target_angle
 execute unless score @s sab.botMoveRotationOffsetTime matches 1.. at @s as e-0-0-0-2 run function sa_bots:bot/movement/1_grounded/finalize_move_target
+execute if score @s sab.botMovementYawLerpTime matches 1.. run function sa_bots:bot/movement/1_grounded/finalize_move_target_lerp
 scoreboard players operation @s sab.botMovementYaw = #rotation sab.var
 execute store result score #x sab.var run data get entity @s Pos[0] 100000
 execute store result score #z sab.var run data get entity @s Pos[2] 100000

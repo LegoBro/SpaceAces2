@@ -11,6 +11,7 @@
 		"#minecraft:crops",
 		"#minecraft:fire",
 		"#minecraft:trapdoors",
+		"#minecraft:lightning_rods",
 		
 		"minecraft:light",
 		"minecraft:structure_void",
@@ -31,6 +32,9 @@
 		"minecraft:tripwire",
 		"minecraft:sugar_cane",
 		"minecraft:redstone_wire",
-		"minecraft:resin_clump"
+		"minecraft:resin_clump",
+		"minecraft:waxed_copper_grate",
+		"minecraft:waxed_exposed_copper_grate",
+		"minecraft:end_rod"
 	]
 }

@@ -9,7 +9,9 @@
 execute if score @s sab.botFollowers matches 1.. run scoreboard players reset @s sab.botFollowingPlayer
 
 #pick a new base task if forced via tag
-execute if entity @s[tag=sab.botMustPickNewTask,tag=!sab.botDoingNonBaseTask] run function sa_bots:bot/entity_task/_improvise_base_task
+execute if entity @s[tag=sab.botMustPickNewTask,tag=!sab.botDoingNonBaseTask] \
+    if function sa_bots:bot/entity_task/check_if_task_can_be_interrupted run \
+    function sa_bots:bot/entity_task/_improvise_base_task
 
 #logic tick for whatever task we're doing
 execute if score @s sab.botTask matches 0 run return run function sa_bots:bot/entity_task/0_random_destination/_logic_tick

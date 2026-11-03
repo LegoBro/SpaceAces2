@@ -1,0 +1,9 @@
+{
+    "values": [
+		"#sa_bots:not_solid_exclude_water",
+
+		"#minecraft:lightning_rods",
+
+		"minecraft:end_rod"
+	]
+}

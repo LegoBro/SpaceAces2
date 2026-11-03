@@ -16,13 +16,18 @@ data modify storage sa_bots:generic target.metadata.is_sub_route set value 2
 
 #do navigation mode 3
 scoreboard players set @s sab.botNavigationMode 3
+scoreboard players set @s sab.botNavigationBoredom 0
+
+#set tag indicating what we're doing
+#we're on an explosive class vantage point
+scoreboard players set @s sab.botNavigationSubMode 3
 
 #adopt move target
 data modify entity @s data.move_targets prepend from storage sa_bots:generic target
 function sa_bots:bot/waypoint_nav/update_target_scores
 
 #don't path towards objects again for a while
-execute store result score @s sab.botObjectCheckTime run random value 160..400
+execute store result score @s sab.botObjectCheckTime run random value 80..150
 
 
 #return marker to its home

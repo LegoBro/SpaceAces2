@@ -16,6 +16,11 @@ data modify storage sa_bots:generic target.metadata.is_sub_route set value 2
 
 #do navigation mode 3
 scoreboard players set @s sab.botNavigationMode 3
+scoreboard players set @s sab.botNavigationBoredom 0
+
+#set tag indicating what we're doing
+#we're standing on a control point
+scoreboard players set @s sab.botNavigationSubMode 4
 
 #adopt move target
 data modify entity @s data.move_targets prepend from storage sa_bots:generic target

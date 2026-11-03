@@ -12,10 +12,14 @@ execute if entity @s[scores={sab.botWaypointApproachX=0,sab.botWaypointApproachZ
 #if we're stuck, remove all sub-targets and return to following waypoints
 execute if entity @s[scores={sab.botTimeSinceProgress=30..,sab.airTime=..0}] run function sa_bots:bot/navigation_mode/3_stand_near_point/try_to_get_unstuck
 execute if entity @s[scores={sab.botTimeSinceProgress=80..,sab.airTime=1..}] run function sa_bots:bot/navigation_mode/3_stand_near_point/try_to_get_unstuck
-#always exit this mode when our object check time runs out
-execute if entity @s[scores={sab.botObjectCheckTime=..0}] run function sa_bots:bot/navigation_mode/3_stand_near_point/try_to_get_unstuck
-#if sniping, we will exit this mode if the enemy we're shooting at gets within 14m
-execute if entity @s[tag=sab.botIsSnipingAtSniperSpot,scores={sab.botTargetEntityID=1..,sab.botTargetEntityDistance=..14}] run function sa_bots:bot/navigation_mode/3_stand_near_point/try_to_get_unstuck
+#always exit this mode when we're bored
+scoreboard players add @s sab.botNavigationBoredom 1
+execute if entity @s[scores={sab.botNavigationBoredom=100..}] run function sa_bots:bot/navigation_mode/3_stand_near_point/try_to_get_unstuck
+
+#---------------------------------
+#special code for each sub mode
+execute if score #10Hz sab.var matches 0 run function sa_bots:bot/navigation_mode/3_stand_near_point/sub_mode/_index
+#---------------------------------
 
 #move towards target
 function sa_bots:bot/navigation_mode/1_follow_waypoints/summon_move_target with entity @s data.move_targets[0]

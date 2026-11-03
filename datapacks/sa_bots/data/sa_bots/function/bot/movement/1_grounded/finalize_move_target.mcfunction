@@ -1,4 +1,5 @@
 #executed as e-0-0-0-2
+#executed at location of bot entity
 
 
 #normalize vector

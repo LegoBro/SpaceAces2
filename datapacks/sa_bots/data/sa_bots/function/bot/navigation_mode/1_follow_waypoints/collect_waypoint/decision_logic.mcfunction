@@ -94,6 +94,7 @@ $execute if score #chosen_outgoing sab.var matches 0.. as b-0-0-0-$(uuid4) run \
     function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_chosen_target with storage sa_bots:generic
 
 #adopt target data
+execute unless score #found_target sab.var matches 1.. if entity @s[tag=sab.doNotUpdateMoveTarget] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/adopt_target_data
 execute if score #found_target sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/adopt_target_data
 
 #check if there's an easy path from us to the target. if not, we might need to improvise down the road
@@ -109,12 +110,13 @@ execute if score #look_for_waypoint_tag sab.var matches 100000.. run \
 
 
 #if we didn't find anything valid, go into "roam" mode for a while
-execute if score #found_target sab.var matches 0 run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets
+execute if score #found_target sab.var matches 0 unless entity @s[tag=sab.doNotUpdateMoveTarget] run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets
 
 
 #cleanup
 scoreboard players reset * sab.markDistance
 scoreboard players reset * sab.markIndex
 kill @e[type=marker,distance=..1,tag=sab.routeSort]
+tag @s[tag=sab.doNotUpdateMoveTarget] remove sab.doNotUpdateMoveTarget
 
 #man, this function and its subroutines were a piece of work...

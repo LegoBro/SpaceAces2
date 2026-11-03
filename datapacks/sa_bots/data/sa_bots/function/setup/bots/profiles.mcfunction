@@ -18,7 +18,7 @@ data modify storage sa_bots:bot_data profiles.all set value [\
     {id:5,username:"DerpOS",profile:"{}"}, \
     {id:6,username:"FlamingOSrs",profile:"{}"}, \
     {id:7,username:"TDBOT225",profile:"{}"}, \
-    {id:8,username:"CPU_8",profile:"{}"}, \
+    {id:8,username:"MrsTrashBot",profile:"{}"}, \
     {id:9,username:"CPU_9",profile:"{}"}, \
     {id:10,username:"CPU_10",profile:"{}"}, \
     {id:11,username:"CPU_11",profile:"{}"}, \
@@ -48,37 +48,17 @@ data modify storage sa_bots:bot_data profiles.all set value [\
     {id:35,username:"CPU_35",profile:"{}"}, \
     {id:36,username:"CPU_36",profile:"{}"}, \
     {id:37,username:"CPU_37",profile:"{}"}, \
-    {id:38,username:"CPU_38",profile:"{}"}, \
-    {id:39,username:"CPU_39",profile:"{}"}, \
-    {id:40,username:"CPU_40",profile:"{}"}, \
-    {id:41,username:"CPU_41",profile:"{}"}, \
-    {id:42,username:"CPU_42",profile:"{}"}, \
-    {id:43,username:"CPU_43",profile:"{}"}, \
-    {id:44,username:"CPU_44",profile:"{}"}, \
-    {id:45,username:"CPU_45",profile:"{}"}, \
-    {id:46,username:"CPU_46",profile:"{}"}, \
-    {id:47,username:"CPU_47",profile:"{}"}, \
-    {id:48,username:"CPU_48",profile:"{}"}, \
-    {id:49,username:"CPU_49",profile:"{}"}, \
-    {id:50,username:"CPU_50",profile:"{}"}, \
-    {id:51,username:"CPU_51",profile:"{}"}, \
-    {id:52,username:"CPU_52",profile:"{}"}, \
-    {id:53,username:"CPU_53",profile:"{}"}, \
-    {id:54,username:"CPU_54",profile:"{}"}, \
-    {id:55,username:"CPU_55",profile:"{}"}, \
-    {id:56,username:"CPU_56",profile:"{}"}, \
-    {id:57,username:"CPU_57",profile:"{}"}, \
-    {id:58,username:"CPU_58",profile:"{}"}, \
-    {id:59,username:"CPU_59",profile:"{}"}, \
-    {id:60,username:"CPU_60",profile:"{}"}, \
-    {id:61,username:"CPU_61",profile:"{}"}, \
-    {id:62,username:"CPU_62",profile:"{}"}, \
-    {id:63,username:"CPU_63",profile:"{}"}, \
-    {id:64,username:"CPU_64",profile:"{}"}, \
-    {id:65,username:"CPU_65",profile:"{}"}, \
-    {id:66,username:"CPU_66",profile:"{}"}, \
-    {id:67,username:"CPU_67",profile:"{}"}, \
-    {id:68,username:"CPU_68",profile:"{}"}, \
-    {id:69,username:"BineBot",profile:"{}"}, \
-    {id:70,username:"SK_pulluxx",profile:"{}"} \
+    {id:38,username:"CPU_37",profile:"{}"}, \
+    {id:39,username:"CPU_37",profile:"{}"}, \
+    {id:40,username:"CPU_37",profile:"{}"}, \
+    {id:41,username:"CPU_37",profile:"{}"}, \
+    {id:42,username:"CPU_37",profile:"{}"}, \
+    {id:43,username:"CPU_37",profile:"{}"}, \
+    {id:44,username:"CPU_37",profile:"{}"}, \
+    {id:45,username:"CPU_37",profile:"{}"}, \
+    {id:46,username:"CPU_37",profile:"{}"}, \
+    {id:47,username:"CPU_37",profile:"{}"}, \
+    {id:48,username:"ImaRobot",profile:"{}"}, \
+    {id:49,username:"BineBot",profile:"{}"}, \
+    {id:50,username:"SK_pulluxx",profile:"{}"} \
 ]

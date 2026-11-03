@@ -1,4 +1,4 @@
-#executed by a bot when looking at a target while blind
+#executed by an entity that a bot is targeting while the bot is blinded
 #executed at 10Hz
 
 

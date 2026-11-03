@@ -14,12 +14,15 @@ scoreboard objectives add sab.botTask dummy
 scoreboard objectives add sab.botPreviousTask dummy
 scoreboard objectives add sab.botPreviousNonBaseTask dummy
 scoreboard objectives add sab.botNavigationMode dummy
+scoreboard objectives add sab.botNavigationSubMode dummy
+scoreboard objectives add sab.botNavigationBoredom dummy
 scoreboard objectives add sab.botLookTime dummy
 scoreboard objectives add sab.botLookMode dummy
 scoreboard objectives add sab.botMoveState dummy
 scoreboard objectives add sab.botMoveStateLastTick dummy
 scoreboard objectives add sab.botJumpCooldown dummy
 scoreboard objectives add sab.botMovementYaw dummy
+scoreboard objectives add sab.botMovementYawLerpTime dummy
 scoreboard objectives add sab.botAngleDiffMoveAndFace dummy
 scoreboard objectives add sab.botCrouchTime dummy
 scoreboard objectives add sab.botPose dummy

@@ -5,6 +5,7 @@
 execute store result score #action sab.var run data get entity @s data.destinations[0].action
 execute if score #action sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/destination_action/_action_index with entity @s data.move_targets[0]
 
+
 #pop destination off the stack
 data remove entity @s data.destinations[0]
 

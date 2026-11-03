@@ -5,8 +5,9 @@ scoreboard players set @s sab.menuPage 13
 
 
 #heading
-tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-tellraw @s [{text:"==\\/==",color:red,bold:true}," ",{translate:"sa_bot.heading.sector_painter",color:red,bold:true}," ",{text:"==\\/==",color:red,bold:true}]
+execute unless score #no_text_push sab.var matches 1.. run tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+execute unless score #no_text_push sab.var matches 1.. run tellraw @s [{text:"==\\/==",color:red,bold:true}," ",{translate:"sa_bot.heading.sector_painter",color:red,bold:true}," ",{text:"==\\/==",color:red,bold:true}]
+scoreboard players set #no_text_push sab.var 0
 
 
 #assign sector
@@ -23,6 +24,9 @@ execute if entity @s[scores={sab.assignSector=1..}] run tellraw @s ["\n",{transl
 
 #find nearest unassigned
 tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.find_nearest_unset"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 25"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.find_nearest_unset"}}}]
+
+#count nodes per sector
+tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.count_nodes_per_sector"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 64"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.count_nodes_per_sector"}}}]
 
 #show number of unassigned waypoints
 scoreboard players set #count sab.var 0

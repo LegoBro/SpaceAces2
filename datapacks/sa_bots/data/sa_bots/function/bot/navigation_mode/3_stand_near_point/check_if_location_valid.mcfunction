@@ -1,5 +1,5 @@
 #must have solid ground beneath us
-execute if block ~ ~-1 ~ #sa_bots:not_solid_exclude_water if block ~ ~-2 ~ #sa_bots:not_solid_exclude_water run return fail
+execute if block ~ ~-1 ~ #sa_bots:bot_avoid_standing_on if block ~ ~-2 ~ #sa_bots:bot_avoid_standing_on run return fail
 #=====
 
 #must have space above us

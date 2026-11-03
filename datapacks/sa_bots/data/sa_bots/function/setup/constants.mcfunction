@@ -1,5 +1,5 @@
 #bots
-scoreboard players set #MAX_BOT_COUNT sab.var 64
+scoreboard players set #MAX_BOT_COUNT sab.var 48
 
 #navigation
 scoreboard players set #MAX_NAV_CYCLES_WITHIN_SECTOR sab.var 150
@@ -9,7 +9,7 @@ scoreboard players set #INPUT_COOLDOWN_SHORT sab.var 4
 scoreboard players set #INPUT_COOLDOWN_LONG sab.var 10
 scoreboard players set #TOOL_RAYCAST_RANGE sab.var 60
 scoreboard players set #NUMBER_OF_EVENTS sab.var 10
-scoreboard players set #NAV_GENERATION_SPEED sab.var 5
+scoreboard players set #NAV_GENERATION_SPEED sab.var 7
 
 #numbers
 scoreboard players set #36000 sab.var 36000

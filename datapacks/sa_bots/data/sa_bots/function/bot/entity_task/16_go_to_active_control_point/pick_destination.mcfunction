@@ -3,11 +3,15 @@ scoreboard players set #found_destination sab.var 0
 scoreboard players set #destination_action sab.var 0
 
 #pick a waypoint near the control point
-execute store result score #random sab.var run random value 1..3
+execute store result score #random sab.var run random value 1..4
 #might sit still on the point if we're going directly for it
-execute if score #random sab.var matches 1..2 unless function sa_bots:bot/class_logic/random_chance_skill_based_more_likely \
+execute if score #random sab.var matches 1..3 \
     run scoreboard players set #destination_action sab.var 7
-#pick waypoint    
+#if we're a high skill bot and we're in combat, maybe don't just sit on the point
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=1..,sab.botConfidence=..7}] \
+    if function sa_bots:bot/class_logic/random_chance_skill_based_more_likely run \
+    scoreboard players set #destination_action sab.var 0
+#pick waypoint
 execute at @e[type=marker,tag=gamemode.setback.active_point,limit=1,sort=random] as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=nearest,distance=..10] run function sa_bots:bot/utility/waypoint_get_id_and_sector
 
 
