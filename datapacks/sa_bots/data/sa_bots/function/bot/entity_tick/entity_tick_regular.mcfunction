@@ -57,8 +57,10 @@ execute unless score @s sab.dUltimateCharge = @s ultimate_charge run function sa
 #MOVEMENT
 
 #check for nearby objects of interest (healing sources)
+scoreboard players remove @s[scores={sab.botLookForHealthCooldown=1..}] sab.botLookForHealthCooldown 2
 scoreboard players remove @s sab.botObjectCheckTime 2
-execute if score @s sab.botObjectCheckTime matches ..0 unless score @s sab.botNavigationMode matches 3 \
+execute if score @s sab.botObjectCheckTime matches ..0 \
+    unless score @s sab.botNavigationMode matches 3 unless score @s sab.botLookForHealthCooldown matches 1.. \
     if entity @e[type=!player,tag=sab.nearby.healing,distance=..10] run function sa_bots:bot/movement/check_nearby_objects/healing_source
 
 #movement tick
@@ -71,7 +73,11 @@ function sa_bots:bot/movement/set_input_tags
 
 
 #----------------------------
-#GAME IN/OUT
+#GAME
+
+#show hp display in our description (below_name slot)
+execute unless score @s sab.dHealth = @s health run function sa_bots:bot/setup/visual/hp_display_update
+scoreboard players operation @s sab.dHealth = @s health
 
 #once every 2 seconds, evaluate whether we should switch teams 
 execute if score #2sec sab.var matches 33..34 if entity @s[tag=sab.botMaySwitchTeams] run function sa_bots:bot/setup/team/red_vs_blue/entity_consider_switching_teams

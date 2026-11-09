@@ -62,6 +62,6 @@ kill @e[type=marker,tag=sab.decisionMaker,distance=..1]
 #Earl can go home now
 tp e-0-0-0-1 0 50 0
 
-#fallback: end task, go one layer down on the task list
+#fallback: go somewhere random within the current sector
 scoreboard players set #destination_action sab.var 0
-execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/complete_non_base_task
+execute if score #found_destination sab.var matches 0 run function sa_bots:bot/entity_task/switch_base_task_forced_macro {choice:14}

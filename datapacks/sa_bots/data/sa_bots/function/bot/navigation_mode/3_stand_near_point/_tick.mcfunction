@@ -2,11 +2,13 @@
 
 
 #keep track of whether we're making progress toward our target
-scoreboard players add @s sab.botTimeSinceProgress 1
+execute unless score @s sab.botPauseTime matches 1.. run scoreboard players add @s sab.botTimeSinceProgress 1
 function sa_bots:bot/navigation_mode/1_follow_waypoints/check_if_progress_is_being_made
 
 #reached waypoint? pick a new one
 execute if entity @s[scores={sab.botWaypointApproachX=0,sab.botWaypointApproachZ=0}] run \
+    function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_logic with entity @s data.move_targets[0]
+execute if entity @s[scores={sab.botTimeSinceProgress=10..,sab.botWaypointApproachX=-7..7,sab.botWaypointApproachZ=-7..7}] run \
     function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_logic with entity @s data.move_targets[0]
 
 #if we're stuck, remove all sub-targets and return to following waypoints

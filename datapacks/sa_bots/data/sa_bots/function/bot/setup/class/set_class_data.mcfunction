@@ -71,6 +71,10 @@ execute if score @s Class matches 4 run tag @s add sab.botHasMovementAbilities
 execute if score @s Class matches 6..8 run tag @s add sab.botHasMovementAbilities
 execute if score @s Class matches 15 run tag @s add sab.botHasMovementAbilities
 
+#some classes have explosive weapons and might prefer the high ground
+execute if score @s Class matches 4 run tag @s add sab.botLikesHighGround
+execute if score @s Class matches 15 run tag @s add sab.botLikesHighGround
+
 #some classes look for long-distance targets
 execute if score @s Class matches 3 run tag @s add sab.botShootsAtLongDistance
 

@@ -35,3 +35,4 @@ execute as @e[type=!player,distance=..10,tag=sab.possibleTarget,sort=random] run
 #move toward target if we found a valid one
 execute if score #found_target sab.var matches 1 run function sa_bots:bot/movement/check_nearby_objects/path_to_object_basic
 execute if score #found_target sab.var matches 2 run function sa_bots:bot/movement/check_nearby_objects/path_to_object_stand_near_point
+execute if score #found_target sab.var matches 1..2 store result score @s sab.botLookForHealthCooldown run random value 220..440

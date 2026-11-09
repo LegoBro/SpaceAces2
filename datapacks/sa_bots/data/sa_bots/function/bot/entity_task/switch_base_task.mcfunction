@@ -21,6 +21,10 @@ execute unless data entity @s data.tasks[0] run tag @s remove sab.botDoingNonBas
 execute unless data entity @s data.tasks[0] run data modify entity @s data.tasks set value []
 data modify entity @s data.tasks append from storage sa_bots:generic new_task
 
+#misc clean-up
+tag @s remove sab.botRunAwayFromDestination
+execute if entity @s[tag=sab.botHasSpecificBuildSpot] unless data entity @s data.tasks[0].flags{force_build:1} run tag @s remove sab.botHasSpecificBuildSpot
+
 #internalize whatever task 0 is
 execute store result score @s sab.botTask run data get entity @s data.tasks[0].id
 

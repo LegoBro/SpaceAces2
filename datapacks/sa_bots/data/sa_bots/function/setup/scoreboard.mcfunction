@@ -87,6 +87,8 @@ scoreboard objectives add sab.botRandomAimOffsetZ dummy
 scoreboard objectives add sab.botRandomAimOffsetTime dummy
 scoreboard objectives add sab.botChaseTargetTime dummy
 scoreboard objectives add sab.botLimitedTaskTime dummy
+scoreboard objectives add sab.botLookForHealthCooldown dummy
+scoreboard objectives add sab.dHealth dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

@@ -38,4 +38,5 @@ execute if score @s sab.botTargetEntityID matches 1.. run function sa_bots:bot/c
 
 
 #random chance we seek out health when injured
-execute if score @s displayHealth matches ..80 unless score @s sab.botTask matches 5 run function sa_bots:bot/entity_task/5_find_healing/consider_finding_healing_10hz
+execute if score @s displayHealth matches ..80 unless score @s sab.botTask matches 5 unless score @s sab.botLookForHealthCooldown matches 1.. run \
+    function sa_bots:bot/entity_task/5_find_healing/consider_finding_healing_10hz

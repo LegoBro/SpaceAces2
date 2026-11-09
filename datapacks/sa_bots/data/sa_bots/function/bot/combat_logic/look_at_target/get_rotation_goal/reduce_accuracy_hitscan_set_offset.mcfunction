@@ -15,3 +15,4 @@ execute if score @s sab.botSkill matches 8..10 store result score @s sab.botRand
 
 #very low offset if sniper
 execute if entity @s[tag=sab.botShootsAtLongDistance] store result score @s sab.botRandomAimOffsetX run random value -20..20
+execute if entity @s[tag=sab.botShootsAtLongDistance] store result score @s sab.botRandomAimOffsetZ run random value -20..20

@@ -1,0 +1,2 @@
+execute store result storage sa_bots:generic health int 1 run scoreboard players get @s health
+execute unless score @s sab.dHealth = @s health run function sa_bots:bot/setup/visual/hp_display_update_macro with storage sa_bots:generic

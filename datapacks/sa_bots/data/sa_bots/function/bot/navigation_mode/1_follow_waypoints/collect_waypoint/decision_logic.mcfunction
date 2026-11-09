@@ -5,6 +5,9 @@
 execute unless score @s sab.botMoveTargetDY matches -10.. run return 0
 #=====
 
+#remember our height relative to the waypoint
+scoreboard players operation #bot_move_target_dy sab.var = @s sab.botMoveTargetDY
+
 #reset sub-target look state
 scoreboard players set @s sab.botLookingForSubTargets 0
 #note about sab.botLookingForSubTargets:

@@ -23,10 +23,13 @@ execute if score #random sab.var matches 96..100 run scoreboard players set #cho
 execute store result score #random sab.var run random value 1..100
 
 #sniper might go sniping
-execute if score @s Class matches 3 if score #random sab.var matches 1..50 \
+execute if entity @s[tag=sab.botShootsAtLongDistance] if score #random sab.var matches 1..50 \
     if entity @s[scores={sab.botSkill=..5,sab.botAggression=6..}] run scoreboard players set #choice sab.var 7
-execute if score @s Class matches 3 if score #random sab.var matches 1..50 \
+execute if entity @s[tag=sab.botShootsAtLongDistance] if score #random sab.var matches 1..50 \
     unless entity @s[scores={sab.botSkill=..5,sab.botAggression=6..}] run scoreboard players set #choice sab.var 24
+
+#explosive class might go for a vantage point near front line
+execute if entity @s[tag=sab.botLikesHighGround] if score #random sab.var matches 1..25 run scoreboard players set #choice sab.var 25
 #---------------------------------
 
 

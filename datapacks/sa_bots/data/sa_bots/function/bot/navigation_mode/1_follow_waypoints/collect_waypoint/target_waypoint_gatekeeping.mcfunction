@@ -3,6 +3,7 @@
 
 #require bot to be grounded?
 execute if entity @s[tag=wp.requireOnGround] unless score #on_ground sab.var matches 1 run return fail
+execute if entity @s[tag=wp.requireOnGround] if score #bot_move_target_dy sab.var matches 21.. run return fail
 #=====
 
 #final check: LOS must exist to waypoint (#found_target sab.var will be 1 if true)

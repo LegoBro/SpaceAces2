@@ -5,9 +5,6 @@ execute if data entity @s data.move_targets[0] unless data entity @s data.move_t
 #get ready to track progress towards waypoint again
 scoreboard players set @s sab.botTimeSinceProgress 0
 
-#clear temporary tags
-tag @s[tag=sab.botIsSnipingAtSniperSpot] remove sab.botIsSnipingAtSniperSpot
-
 #return to following waypoints if we still have a move target in the stack
 execute if data entity @s data.move_targets[0] run scoreboard players set @s sab.botNavigationMode 1
 execute if data entity @s data.move_targets[0] run return run function sa_bots:bot/waypoint_nav/update_target_scores

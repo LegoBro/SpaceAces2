@@ -35,6 +35,7 @@ execute store result score #bot_lead_shot sab.var run execute if score @s sab.bo
 scoreboard players operation #bot_observed_x sab.var = @s sab.botObserveTargetX
 scoreboard players operation #bot_observed_z sab.var = @s sab.botObserveTargetZ
 
+#------------------------
 #find the entity we're targeting
 scoreboard players operation #get_id sab.var = @s sab.botTargetEntityID
 execute store result storage uuid:in UUID[0] int 1 run scoreboard players get @s sab.botTargetUUID0
@@ -44,6 +45,8 @@ execute store result storage uuid:in UUID[3] int 1 run scoreboard players get @s
 function sa_uuid4:convert_full
 data modify storage uuid:out max_range set value 200
 function sa_bots:bot/combat_logic/look_at_target/find_target_macro with storage uuid:out
+#------------------------
+
 
 #if we found a target, look at them
 scoreboard players set @s sab.botLookMode 0

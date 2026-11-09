@@ -25,11 +25,6 @@ execute store result score #random sab.var run random value 1..30
 scoreboard players operation #random sab.var += @s sab.botAggression
 execute if score #random sab.var matches 35.. if score @s Team matches 1 run scoreboard players set #choice sab.var 10
 execute if score #random sab.var matches 35.. if score @s Team matches 2 run scoreboard players set #choice sab.var 9
-#go directly at a random enemy if it's been a long time since we've been in combat
-execute if score @s sab.botTimeSinceCombat matches 500.. if score #random sab.var matches 20.. run scoreboard players set #choice sab.var 15
-execute if score @s sab.botTimeSinceCombat matches 625.. if score #random sab.var matches 15.. run scoreboard players set #choice sab.var 15
-execute if score @s sab.botTimeSinceCombat matches 750.. run scoreboard players set #choice sab.var 15
-
 
 #---------------------------------
 #class-specific
@@ -37,13 +32,18 @@ execute if score @s sab.botTimeSinceCombat matches 750.. run scoreboard players 
 execute store result score #random sab.var run random value 1..100
 
 #sniper might go sniping
-execute if score @s Class matches 3 if score #random sab.var matches 1..40 run scoreboard players set #choice sab.var 7
+execute if entity @s[tag=sab.botShootsAtLongDistance] if score #random sab.var matches 1..40 run scoreboard players set #choice sab.var 7
 
 #mechanic is likely to seek a turret spot
 execute if entity @s[scores={Class=9,sab.hasTurret=0}] if score #random sab.var matches 1..50 run scoreboard players set #choice sab.var 8
 execute if entity @s[scores={Class=9,sab.hasTurret=1..}] if score #random sab.var matches 1..10 run scoreboard players set #choice sab.var 8
 #---------------------------------
 
+#go directly at a random enemy if it's been a long time since we've been in combat
+execute store result score #random sab.var run random value 1..100
+execute if score @s sab.botTimeSinceCombat matches 500.. if score #random sab.var matches 20.. run scoreboard players set #choice sab.var 15
+execute if score @s sab.botTimeSinceCombat matches 625.. if score #random sab.var matches 15.. run scoreboard players set #choice sab.var 15
+execute if score @s sab.botTimeSinceCombat matches 750.. run scoreboard players set #choice sab.var 15
 
 #---------------------------------
 #follow behavior
