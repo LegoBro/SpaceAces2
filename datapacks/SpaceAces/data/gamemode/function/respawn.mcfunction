@@ -5,6 +5,11 @@ scoreboard players set @s reload 500000
 scoreboard players set @s totalShots 0
 scoreboard players set @s ability.1.cooldown 0
 scoreboard players set @s ability.2.cooldown 0
+
+## Overwrite shock grenades when dead
+execute if score @s Class matches 14 run function class:4/shocksmith/secondary/death
+
+
 scoreboard players operation @s health = @s maxHealth
 scoreboard players add @s healing 1000
 playsound minecraft:entity.player.death master @s ~ ~ ~ 1 0 1
@@ -24,5 +29,8 @@ scoreboard players set @s fire 0
 
 # Overwrite respawn item
 item replace entity @s hotbar.8 with air
+
+scoreboard players set @s lastHurter -1
+scoreboard players set @s nextLastHurter -1
 
 return 1

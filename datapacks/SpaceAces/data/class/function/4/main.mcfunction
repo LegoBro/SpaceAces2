@@ -5,6 +5,12 @@ execute unless score @s id matches 0.. run function class:4/helper/id/new_id
 scoreboard players add @s timeSinceLastRespawn 1
 execute if score @s health matches ..0 run scoreboard players set @s timeSinceLastRespawn 0
 
+# Passive Ult Charge:
+scoreboard players operation #ult_charge_tick Numbers = @s timeSinceLastRespawn
+scoreboard players operation #ult_charge_tick Numbers %= class.global.ultimate_charge_rate Numbers
+execute if score #ult_charge_tick Numbers matches 1 run scoreboard players add @s ultimate_charge 1
+
+# Damage mult
 execute store result score @s damageMultiplier run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier
 
 effect give @s minecraft:saturation infinite 0 true

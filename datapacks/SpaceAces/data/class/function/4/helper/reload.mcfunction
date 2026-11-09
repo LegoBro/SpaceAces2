@@ -6,3 +6,5 @@ execute store result score class.melee.falloff Numbers run data get storage spac
 execute store result score class.melee.falloffStart Numbers run data get storage space_aces:class melee.falloffStart
 execute store result score class.melee.speed Numbers run data get storage space_aces:class melee.speed
 execute store result score class.melee.cooldown Numbers run data get storage space_aces:class melee.cooldown
+
+execute store result score class.global.ultimate_charge_rate Numbers run data get storage space_aces:class global.passive_ult_charge_rate

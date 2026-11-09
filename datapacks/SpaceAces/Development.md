@@ -138,11 +138,20 @@ Building/entity that heals nearby friendlies, can be tagged as players that can 
 ## To do:
 Classes:
     effective range for selected item - tells Bots how far they can shoot with gun
+    Assists after they die
+    Reset jump attribute in lobby
+    Seeker ult is op but bad at same time
+
+Lobby:
+    Join the game while countdown = weird
+
+Spectate:
+    Don't really know what point teams are on
 
 replace texts with translates...
 
-Fix:
-shocksmith charging off of teammates
+Gamemode:
+    Lost on payload...
 
 Data points to capture:
     Class Statistics
@@ -161,9 +170,10 @@ Map Tools:
 
 Benchmarks:
     Balanced Matchups:
-        All Same Kit/Same Skill
+        All Same Kit/Same Skill (/data modify storage sa_bots:bot_data bots[0].settings.class_choice.desired_class set value -1)
         All Same Skill - same team
     Gameplay Variance/map:
         Same Bot array on both teams (random but equal)
     Advanced Duplication - make x copies of games[0] game
     
+    (/function sa_bots:setup/bots/default_bot_settings)

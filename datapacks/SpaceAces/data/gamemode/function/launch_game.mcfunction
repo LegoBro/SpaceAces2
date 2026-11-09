@@ -1,5 +1,5 @@
 #Commands ran when game is launched
-execute at @a run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 1.0 2.0 1.0
+execute as @a at @s run playsound minecraft:block.conduit.deactivate master @s ~ ~ ~ 1.0 2.0 1.0
 scoreboard players set Mission Numbers 200
 scoreboard objectives modify display displayname {"text":"Status:",color:"green","type":"text"}
 scoreboard players set Prestart Numbers 1

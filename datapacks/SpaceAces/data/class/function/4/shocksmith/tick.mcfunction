@@ -21,5 +21,6 @@ execute unless score @s ultimate_charge >= class.shocksmith.ultimate.charge Numb
 ## Melee
 execute unless score @s melee.cooldown matches 1.. if entity @s[tag=input.swap_hands] run function class:4/helper/punch
 
+
 function class:4/shocksmith/equip
 return 1

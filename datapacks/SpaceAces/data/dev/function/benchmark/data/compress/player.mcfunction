@@ -16,3 +16,4 @@ execute store result storage dev:helper player.stat.assists int 1 run scoreboard
 execute if score @s Team matches 1 run data modify storage dev:helper players.blue append from storage dev:helper player
 execute if score @s Team matches 2 run data modify storage dev:helper players.red append from storage dev:helper player
 execute unless score @s Team matches 1..2 run data modify storage dev:helper players.general append from storage dev:helper player
+execute positioned 0 -64 0 run kill @e[type=item,distance=..10]

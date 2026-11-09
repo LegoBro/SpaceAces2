@@ -24,6 +24,8 @@ execute store result score class.shocksmith.secondary.arcRate Numbers run data g
 execute store result score class.shocksmith.secondary.falloffStart Numbers run data get storage space_aces:class shocksmith.secondary.falloffStart
 execute store result score class.shocksmith.secondary.speed Numbers run data get storage space_aces:class shocksmith.secondary.speed
 execute store result score class.shocksmith.secondary.cost Numbers run data get storage space_aces:class shocksmith.secondary.cost
+execute store result score class.shocksmith.secondary.spawn_amount Numbers run data get storage space_aces:class shocksmith.secondary.spawn_amount
+execute store result score class.shocksmith.secondary.passive_recharge Numbers run data get storage space_aces:class shocksmith.secondary.passive_recharge
 
 execute store result score class.shocksmith.secondary.explode_healing Numbers run data get storage space_aces:class shocksmith.secondary.explode_healing
 execute store result score class.shocksmith.secondary.explode_damage Numbers run data get storage space_aces:class shocksmith.secondary.explode_damage

@@ -1,6 +1,9 @@
 ## Creates the defaults in data, which is used on reload
 
 data merge storage space_aces:class {\
+    global:{\
+        passive_ult_charge_rate: 10\
+    },\
     melee:{\
         damage: 20,\
         critMult: 1,\
@@ -32,7 +35,7 @@ data merge storage space_aces:class {\
             duration: 20\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 500,\
             duration: 10,\
             launch: 9000,\
             damage: 50\
@@ -43,7 +46,7 @@ data merge storage space_aces:class {\
         speed: .10,\
         scale: 0,\
         primary:{\
-            reload: 2.5,\
+            reload: 1.5,\
             firerate: 4,\
             damage: 12,\
             critMult: 1.5,\
@@ -71,7 +74,7 @@ data merge storage space_aces:class {\
             heal_amount: 1,\
         },\
         ultimate:{\
-            charge: 1250,\
+            charge: 650,\
             duration: 8\
         }\
     },\
@@ -108,7 +111,7 @@ data merge storage space_aces:class {\
             arcRate:  30\
         },\
         ultimate:{\
-            charge: 1000,\
+            charge: 500,\
             duration: 12,\
         }\
     },\
@@ -155,7 +158,7 @@ data merge storage space_aces:class {\
             arcRate: 10\
         },\
         ultimate:{\
-            charge: 1100,\
+            charge: 550,\
             duration: 1,\
         }\
     },\
@@ -164,7 +167,7 @@ data merge storage space_aces:class {\
         speed: .20,\
         scale: -0.10,\
         primary:{\
-            reload: 1.5,\
+            reload: 1.25,\
             firerate: 8,\
             damage: 15,\
             critMult: 1.5,\
@@ -186,7 +189,7 @@ data merge storage space_aces:class {\
             blindness_length: 100,\
         },\
         ultimate:{\
-            charge: 1300,\
+            charge: 600,\
             duration: 10,\
             interval: 20,\
             damage: 50,\
@@ -232,7 +235,7 @@ data merge storage space_aces:class {\
             detonate_timer: 20,\
         },\
         ultimate:{\
-            charge: 1200,\
+            charge: 600,\
             duration: 0.5,\
         }\
     },\
@@ -241,7 +244,7 @@ data merge storage space_aces:class {\
         speed: .30,\
         scale: 0,\
         primary:{\
-            reload: 3,\
+            reload: 1.75,\
             firerate: 8,\
             damage: 12,\
             critMult: 1.5,\
@@ -265,7 +268,7 @@ data merge storage space_aces:class {\
             duration: 250\
         },\
         ultimate:{\
-            charge: 1400,\
+            charge: 650,\
             duration: 8,\
         }\
     },\
@@ -274,7 +277,7 @@ data merge storage space_aces:class {\
         speed: 0.0,\
         scale: 0.15,\
         primary:{\
-            reload: 3,\
+            reload: 2,\
             firerate: 0,\
             damage: 6,\
             critMult: 1.5,\
@@ -296,7 +299,7 @@ data merge storage space_aces:class {\
             duration: 200\
         },\
         ultimate:{\
-            charge: 1500,\
+            charge: 600,\
             duration: 6,\
             explode_damage: 10,\
             explode_critMult: 1,\
@@ -332,7 +335,7 @@ data merge storage space_aces:class {\
             maxUses: 2\
         },\
         ultimate:{\
-            charge: 1500,\
+            charge: 650,\
             duration: 8,\
             damage:10,\
             pull_strength:3000,\
@@ -390,7 +393,7 @@ data merge storage space_aces:class {\
             duration: 200,\
         },\
         ultimate:{\
-            charge: 2000,\
+            charge: 750,\
             duration: 15,\
             damage: 5,\
             critMult: 1,\
@@ -404,13 +407,15 @@ data merge storage space_aces:class {\
         speed: -0.10,\
         scale: 0.15,\
         primary:{\
-            reload: 3,\
+            reload: 2,\
             firerate: 4,\
             damage: 5,\
             critMult: 1,\
             speed: 12,\
             ammo: 50,\
             arcRate: -5,\
+            falloff: 1,\
+            falloffStart: 5,\
             fire_damage:10,\
             self_fire_damage:5,\
         },\
@@ -426,7 +431,7 @@ data merge storage space_aces:class {\
             percent_for_second:10\
         },\
         ultimate:{\
-            charge: 1500,\
+            charge: 500,\
             duration: 8,\
         }\
     },\
@@ -465,7 +470,7 @@ data merge storage space_aces:class {\
             impact_falloffStart: 1\
         },\
         ultimate:{\
-            charge: 1400,\
+            charge: 500,\
             duration: 3,\
             interval: 3,\
         }\
@@ -475,7 +480,7 @@ data merge storage space_aces:class {\
         speed: .30,\
         scale: 0,\
         primary:{\
-            reload: 2,\
+            reload: 1,\
             firerate: 10,\
             damage: 4,\
             healing: 4,\
@@ -506,7 +511,7 @@ data merge storage space_aces:class {\
             impact_falloffStart: 1\
         },\
         ultimate:{\
-            charge: 1500,\
+            charge: 650,\
             duration: 60,\
             health: 300,\
         }\
@@ -540,7 +545,7 @@ data merge storage space_aces:class {\
             reload_amount: 1\
         },\
         ultimate:{\
-            charge: 1200,\
+            charge: 500,\
             duration: 15,\
         }\
     },\
@@ -557,7 +562,7 @@ data merge storage space_aces:class {\
             falloffStart: 25,\
             speed: 0,\
             ammo: 1,\
-            steal_amount: 50,\
+            steal_amount: 75,\
         },\
         secondary:{\
             firerate: 8,\
@@ -567,6 +572,8 @@ data merge storage space_aces:class {\
             falloffStart: 25,\
             speed: 16,\
             cost: 200,\
+            passive_recharge:3,\
+            spawn_amount:5,\
             max_ammo: 10,\
             explode_healing: 30,\
             explode_damage: 30,\
@@ -584,7 +591,7 @@ data merge storage space_aces:class {\
             speed: 12,\
         },\
         ultimate:{\
-            charge: 1750,\
+            charge: 550,\
             duration: 5,\
             speed: 2,\
             arcRate: 0,\

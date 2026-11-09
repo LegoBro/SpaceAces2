@@ -1,4 +1,4 @@
-playsound minecraft:item.totem.use player @a ~ ~ ~ 50 2 1
+#playsound minecraft:item.totem.use player @a ~ ~ ~ 50 2 1
 function gamemode:respawn
 
 ## Favor spawnpoint that has score of 0, fallback if not

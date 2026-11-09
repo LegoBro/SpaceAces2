@@ -2,6 +2,6 @@
 say checkpoint
 scoreboard players add checkpoint Numbers 1
 # Bonus Time
-scoreboard players add timer Numbers 3600
+scoreboard players add timer Numbers 1200
 
 function gamemode:comp/spawnpoint/move_both_blue
