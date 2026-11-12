@@ -2,5 +2,6 @@ summon mannequin ~ ~ ~ {Tags:["npc","new","class.mobility","hb","hb_player","ent
 
 execute as @n[type=mannequin,tag=class.mobility,tag=npc,tag=new] run function class:4/mobility/select
 execute as @n[type=mannequin,tag=class.mobility,tag=npc,tag=new] run function class:4/mobility/equip
+execute as @n[type=mannequin,tag=npc,tag=new] run function class:4/helper/id/new_id
 tp @n[type=mannequin,tag=class.mobility,tag=npc,tag=new] ~ ~ ~ ~ ~
 execute as @n[type=mannequin,tag=class.mobility,tag=npc,tag=new] run tag @s remove new

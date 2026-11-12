@@ -1,4 +1,6 @@
 # Simply runs the gamemode in storage (should be able to make more in future easily)
+# Tick Active Arena
+function arena:tick with storage space_aces:selected_map map
 
 scoreboard players add current_game_time benchmark 1
 scoreboard players add @a[tag=in_game] stat.game.play_time 1

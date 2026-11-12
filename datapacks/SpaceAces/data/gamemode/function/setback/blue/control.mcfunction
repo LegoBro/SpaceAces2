@@ -6,4 +6,6 @@ bossbar set minecraft:main name ["",{"text":"IGSR Capture Progress ",color:"blue
 execute store result bossbar minecraft:main value run scoreboard players get negPoint Numbers
 execute if score negPoint Numbers >= fullPoint Numbers run function gamemode:setback/blue/capture
 
+execute at @n[tag=gamemode.setback.active_point] run team join blue @n[type=block_display,tag=gamemode.setback.point_visuals]
+
 return 1

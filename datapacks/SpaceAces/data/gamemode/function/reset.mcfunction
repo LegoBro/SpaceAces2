@@ -29,6 +29,9 @@ execute as @a[tag=stats,tag=!escape] run function player:stats/view
 #execute as @a[tag=stats,tag=escape,team=!red] if score time.minutes Numbers matches ..9 if score time.seconds Numbers matches ..9 if score time.ms Numbers matches ..9 run tellraw @s [{"score":{"name":"time.hours","objective":"Numbers"},color:"green","type":"score"},{"text":":0",color:"green","type":"text"},{"score":{"name":"time.minutes","objective":"Numbers"},color:"green","type":"score"},{"text":":0",color:"green","type":"text"},{"score":{"name":"time.seconds","objective":"Numbers"},color:"green","type":"score"},{"text":".0",color:"green","type":"text"},{"score":{"name":"time.ms","objective":"Numbers"},color:"green","type":"score"},{"text":"\n\n☑","font":"minecraft:stats",color:"white","type":"text"}]
 
 
+# Gamemode Deletions
+kill @e[tag=gamemode.setback.point_visuals]
+
 #execute as @a[tag=in_game] run function load:spawn
 #tag @a[tag=in_game] remove in_game
 tag @a[tag=escape] remove escape

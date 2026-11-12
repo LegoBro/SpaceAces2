@@ -8,7 +8,7 @@ data modify storage game_history:current game.game_id set from storage global:da
 
 
 # Version Number
-data modify storage game_history:current game.version set value ["Alpha",4]
+data modify storage game_history:current game.version set value ["Alpha",4,"Test 2"]
 
 data modify storage game_history:current game.gamemode set from storage space_aces:selected_gamemode gamemode
 data modify storage game_history:current game.map set from storage space_aces:selected_map map

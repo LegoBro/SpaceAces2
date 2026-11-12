@@ -18,4 +18,5 @@ execute if score Mission Numbers matches 1.. run return run function gamemode:co
 execute if score Prestart Numbers matches ..119 run return run function gamemode:loading_gamemode
 
 # Gamemode is running
+# Tick map first:
 return run function gamemode:running with storage space_aces:selected_gamemode gamemode

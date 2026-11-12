@@ -7,7 +7,7 @@ execute unless loaded 1023 92 0 run return run schedule function arena:reset/moo
 kill @e[tag=arena.moon_base]
 
 ## Skybox
-summon item_display 1024.0 100 0.0 {Tags:["skybox","arena","arena.moon_base"],item:{id:"minecraft:black_concrete",count:1,components:{"minecraft:item_model":"skybox/moon_base"}},view_range:10f,shadow_radius:0f,shadow_strength:0f,billboard:"fixed",item_display:"ground",brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[-127.9f,-127.9f,-127.9f]}}
+summon item_display 1024.0 100 0.0 {Tags:["skybox","arena","arena.moon_base"],item:{id:"minecraft:black_concrete",count:1,components:{"minecraft:item_model":"skybox/moon_base"}},view_range:100f,shadow_radius:0f,shadow_strength:0f,billboard:"fixed",item_display:"ground",brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[-127.9f,-127.9f,-127.9f]}}
 
 ## Terminal Holograms
 # Large Computer Screen
