@@ -2,6 +2,7 @@
 
 
 #this is usful for determining whether the bot can sprint or do the swimming animation in water
+#this also gets used to set movement keys so Space Aces can interpret what we're doing
 
 #find angle difference
 execute store result score @s sab.botAngleDiffMoveAndFace run data get entity @s Rotation[0]

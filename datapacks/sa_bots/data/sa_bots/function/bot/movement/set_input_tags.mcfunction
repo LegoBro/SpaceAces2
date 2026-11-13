@@ -1,5 +1,10 @@
 #executed by bot at 10Hz
 
+
+#don't mess with stuff if we're overriding movement keys
+execute if entity @s[tag=sab.doNotClearInputs] run return run tag @s remove sab.doNotClearInputs
+#=====
+
 #clear tags
 tag @s[tag=input.forward] remove input.forward
 tag @s[tag=input.left] remove input.left

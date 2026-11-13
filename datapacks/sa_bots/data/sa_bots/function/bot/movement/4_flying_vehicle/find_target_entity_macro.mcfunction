@@ -1,0 +1,1 @@
+$execute as $(plain_full) if entity @s[distance=..$(max_range)] unless entity @s[type=player,tag=!sab.activePlayer] at @s run function sa_bots:bot/movement/4_flying_vehicle/found_target_entity
