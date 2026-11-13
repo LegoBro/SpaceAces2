@@ -2,7 +2,7 @@
 
 execute as @e[type=item_display,tag=class.mechanic.manual_override.drone] if score @s id = #Class_Start id run tag @s add my_drone
 
-execute if entity @s[type=player] unless entity @n[type=item_display,tag=my_drone,distance=...01] run return run function class:4/mechanic/manual_override/return
+execute if entity @s[type=player] unless entity @n[type=item_display,tag=my_drone,distance=..0.01] run return run function class:4/mechanic/manual_override/return
 execute if entity @s[tag=sab.botEntity] unless entity @n[type=item_display,tag=my_drone,distance=..2] run return run function class:4/mechanic/manual_override/return
 
 scoreboard players add @n[tag=my_drone,distance=..1] i 1
