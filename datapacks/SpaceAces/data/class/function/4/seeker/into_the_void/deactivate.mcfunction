@@ -3,6 +3,8 @@ scoreboard players set @s ultimate_charge 0
 effect give @s speed 1 0 true
 scoreboard players set @s invis 5
 
+#scoreboard players operation
+scoreboard players operation place_id id = @s id
 execute as @e[distance=..5,tag=hb] unless score @s Team = #Class_Start Team run function class:4/seeker/into_the_void/weaken
 
 

@@ -2,6 +2,7 @@
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ .5 1.5 0
 particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force
 
+scoreboard players set #healing Numbers 0
 scoreboard players operation #damage Numbers = class.gunner.ultimate.explode_damage Numbers
 scoreboard players operation #critMult Numbers = class.gunner.ultimate.explode_critMult Numbers
 scoreboard players operation #falloff Numbers = class.gunner.ultimate.explode_falloff Numbers

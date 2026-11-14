@@ -10,6 +10,10 @@ function load:teams
 
 function class:reload
 
+bossbar add minecraft:blue ""
+bossbar add minecraft:red ""
+bossbar add minecraft:main ""
+
 #function gamemode:cycle
 
 # Forcloads the game

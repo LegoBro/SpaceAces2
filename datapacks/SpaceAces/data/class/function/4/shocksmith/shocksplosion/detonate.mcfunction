@@ -1,6 +1,7 @@
 summon minecraft:creeper ~ ~ ~ {ExplosionRadius:10b,Fuse:0s,ignited:1b,Invulnerable:true,Tags:["ignore.projectiles"]}
 
 # Load in boomer stats
+scoreboard players set #healing Numbers 0
 scoreboard players operation #damage Numbers = class.shocksmith.ultimate.detonate_damage Numbers
 scoreboard players operation #critMult Numbers = class.shocksmith.ultimate.detonate_critMult Numbers
 scoreboard players operation #falloff Numbers = class.shocksmith.ultimate.detonate_falloff Numbers

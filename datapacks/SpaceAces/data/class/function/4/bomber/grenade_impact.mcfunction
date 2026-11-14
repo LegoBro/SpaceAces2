@@ -2,6 +2,7 @@
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ .5 1.5 0
 particle minecraft:item{item:"minecraft:polished_basalt"} ~ ~ ~ 0.1 0.1 0.1 0.25 100
 
+scoreboard players set #healing Numbers 0
 scoreboard players operation #damage Numbers = class.bomber.primary.explode_damage Numbers
 scoreboard players operation #critMult Numbers = class.bomber.primary.explode_critMult Numbers
 scoreboard players operation #falloff Numbers = class.bomber.primary.explode_falloff Numbers

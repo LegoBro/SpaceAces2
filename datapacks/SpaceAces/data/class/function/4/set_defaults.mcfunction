@@ -93,12 +93,12 @@ data merge storage space_aces:class {\
             ammo: 3\
         },\
         "1":{\
-            maxDamage: 50,\
+            maxDamage: 75,\
             falloff:  1,\
             falloffStart:  50,\
             speed:  0,\
             critMult:  200,\
-            charge_speed:  2\
+            charge_speed:  3\
         },\
         "2":{\
             cooldown:  100,\
@@ -110,9 +110,13 @@ data merge storage space_aces:class {\
             speed:  15,\
             arcRate:  30\
         },\
+        passive:{\
+            step_charge: 3\
+        },\
         ultimate:{\
             charge: 500,\
             duration: 12,\
+            falloffStart: 15,\
         }\
     },\
     bomber:{\
@@ -415,24 +419,27 @@ data merge storage space_aces:class {\
             ammo: 50,\
             arcRate: -5,\
             falloff: 1,\
-            falloffStart: 5,\
-            fire_damage:10,\
-            self_fire_damage:5,\
+            falloffStart: 10,\
+            fire_damage: 5,\
+            self_fire_damage: 2,\
         },\
         "1":{\
             cooldown: 200,\
             duration: 100,\
             linger: 50,\
             critMult: 100,\
+            fire: 3,\
         },\
         "2":{\
             cooldown: 240,\
             duration: 200,\
-            percent_for_second:10\
+            percent_for_second: 10,\
+            base_amount: 3\
         },\
         ultimate:{\
-            charge: 500,\
+            charge: 750,\
             duration: 8,\
+            fire: 2,\
         }\
     },\
     rocketeer:{\
@@ -483,7 +490,7 @@ data merge storage space_aces:class {\
             reload: 1,\
             firerate: 10,\
             damage: 4,\
-            healing: 4,\
+            healing: 8,\
             critMult: 1.5,\
             falloff: 1,\
             falloffStart: 20,\
@@ -572,8 +579,8 @@ data merge storage space_aces:class {\
             falloffStart: 25,\
             speed: 16,\
             cost: 200,\
-            passive_recharge:3,\
-            spawn_amount:5,\
+            passive_recharge: 2,\
+            spawn_amount: 5,\
             max_ammo: 10,\
             explode_healing: 30,\
             explode_damage: 30,\

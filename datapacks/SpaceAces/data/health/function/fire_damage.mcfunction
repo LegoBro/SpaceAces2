@@ -3,6 +3,11 @@ scoreboard players operation fireDamage Numbers = @s fire
 scoreboard players operation fireDamage Numbers /= 10 Numbers
 scoreboard players add fireDamage Numbers 1
 scoreboard players operation @s[nbt=!{active_effects:[{id:"minecraft:fire_resistance"}]}] damage += fireDamage Numbers
+
+scoreboard players operation #hurter id = @s lastHurter
+execute as @e[type=#projectile:players,tag=hb] if score @s id = #hurter id run scoreboard players operation @s stat.game.damage_dealt += fireDamage Numbers
+execute as @e[type=#projectile:players,tag=hb] if score @s id = #hurter id run scoreboard players operation @s ultimate_charge += fireDamage Numbers
+
 scoreboard players operation @s fire -= fireDamage Numbers
 particle minecraft:flame ~ ~1.25 ~ 0.5 0.5 0.5 0.01 5
 scoreboard players reset @s fire_tick

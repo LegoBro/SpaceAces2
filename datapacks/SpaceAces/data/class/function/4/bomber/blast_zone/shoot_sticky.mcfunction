@@ -1,0 +1,3 @@
+summon item_display ^-1 ^0.3 ^ {Tags:["standby_sticky_bomb","sticky_bomb","raycast","grenade","new","projectile.invisible","sab.target.low_prior"],teleport_duration:2,item:{id:paper,components:{item_model:"class/bomber/sticky"}}}
+execute anchored eyes run tp @e[type=minecraft:item_display,tag=sticky_bomb,tag=new,sort=nearest,limit=1,distance=..3] ^ ^ ^ ~ ~
+execute as @e[type=minecraft:item_display,tag=standby_sticky_bomb,tag=new,sort=nearest,limit=1,distance=..3] at @s positioned ~ ~.25 ~ run function class:4/bomber/blast_zone/sticky_projectile

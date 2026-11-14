@@ -3,8 +3,8 @@
         "pack_format":121,
         
         "description": "Space Aces game engine",
-        "min_format":[121],
-        "max_format":[121]
+        "min_format":121,
+        "max_format":121
     },
     "filter": {
         "block": [

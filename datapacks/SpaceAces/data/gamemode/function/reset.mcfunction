@@ -36,9 +36,9 @@ kill @e[tag=gamemode.setback.point_visuals]
 #tag @a[tag=in_game] remove in_game
 tag @a[tag=escape] remove escape
 execute as @a[tag=spectator] run function player:load
-bossbar set blue players
-bossbar set red players
-bossbar set main players
+bossbar set minecraft:blue players
+bossbar set minecraft:red players
+bossbar set minecraft:main players
 execute as @a[tag=ready] run function player:load
 scoreboard players set ActiveMode Numbers -1
 scoreboard players reset * display
@@ -55,6 +55,9 @@ scoreboard players set wave Numbers 0
 scoreboard players reset Enemies display
 #execute positioned 29958 7 11 run kill @e[type=!minecraft:player,distance=..500,tag=!map_anchor,tag=!health_pack]
 execute unless entity @e[team=blue] unless entity @e[team=red] run function load:unload_teams
+
+# Go nuclear with resetting the map
+function class:4/helper/cleanup
 
 forceload remove all
 forceload add 0 0

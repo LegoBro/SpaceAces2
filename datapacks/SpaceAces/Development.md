@@ -140,7 +140,6 @@ Classes:
     effective range for selected item - tells Bots how far they can shoot with gun
     Assists after they die
     Reset jump attribute in lobby
-    Seeker ult is op but bad at same time
 
 Lobby:
     Join the game while countdown = weird
@@ -152,6 +151,7 @@ replace texts with translates...
 
 Gamemode:
     Lost on payload...
+    Delay Blue Spawning more on payload 30s total - also players
 
 Data points to capture:
     Class Statistics

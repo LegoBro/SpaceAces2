@@ -14,6 +14,8 @@ execute if entity @s[tag=!spawned] at @s run function player:load
 
 
 effect give @s minecraft:resistance infinite 4 true
+effect give @s[gamemode=adventure] minecraft:weakness 1 255 true
+effect give @s haste infinite 255 true
 
 # Branching dependant on teams
 function player:pick_tick

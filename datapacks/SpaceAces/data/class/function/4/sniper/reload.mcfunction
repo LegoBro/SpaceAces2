@@ -28,9 +28,12 @@ execute store result score class.sniper.2.falloffStart Numbers run data get stor
 execute store result score class.sniper.2.speed Numbers run data get storage space_aces:class sniper.2.speed
 execute store result score class.sniper.2.arcRate Numbers run data get storage space_aces:class sniper.2.arcRate
 
+execute store result score class.sniper.passive.step_charge Numbers run data get storage space_aces:class sniper.passive.step_charge
+
 execute store result score class.sniper.ultimate.charge Numbers run data get storage space_aces:class sniper.ultimate.charge
 execute store result score class.sniper.ultimate.duration Numbers run data get storage space_aces:class sniper.ultimate.duration 20
 execute store result score class.sniper.ultimate.maxDamage Numbers run data get storage space_aces:class sniper.ultimate.maxDamage -1
+execute store result score class.sniper.ultimate.falloffStart Numbers run data get storage space_aces:class sniper.ultimate.falloffStart
 
 
 ## Non-setting variables

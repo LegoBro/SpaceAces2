@@ -1,6 +1,7 @@
 execute positioned ^ ^ ^-0.5 run summon minecraft:creeper ^ ^ ^ {ExplosionRadius:1b,Fuse:0s,ignited:1b,Tags:["ignore","ignore.projectiles"]}
 
 # Load in boomer stats
+scoreboard players set #healing Numbers 0
 scoreboard players operation #damage Numbers = class.healer.2.impact_damage Numbers
 scoreboard players operation #critMult Numbers = class.healer.2.impact_critMult Numbers
 scoreboard players operation #falloff Numbers = class.healer.2.impact_falloff Numbers

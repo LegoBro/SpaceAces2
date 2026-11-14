@@ -16,13 +16,16 @@ execute store result score class.pyro.primary.self_fire_damage Numbers run data 
 
 execute store result score class.pyro.1.cooldown Numbers run data get storage space_aces:class pyro.1.cooldown
 execute store result score class.pyro.1.duration Numbers run data get storage space_aces:class pyro.1.duration
+execute store result score class.pyro.1.fire Numbers run data get storage space_aces:class pyro.1.fire
 
 execute store result score class.pyro.2.cooldown Numbers run data get storage space_aces:class pyro.2.cooldown
 execute store result score class.pyro.2.duration Numbers run data get storage space_aces:class pyro.2.duration
 execute store result score class.pyro.2.percent_for_second Numbers run data get storage space_aces:class pyro.2.percent_for_second
+execute store result score class.pyro.2.base_amount Numbers run data get storage space_aces:class pyro.2.base_amount
 
 execute store result score class.pyro.ultimate.charge Numbers run data get storage space_aces:class pyro.ultimate.charge
 execute store result score class.pyro.ultimate.duration Numbers run data get storage space_aces:class pyro.ultimate.duration 20
+execute store result score class.pyro.ultimate.fire Numbers run data get storage space_aces:class pyro.ultimate.fire
 
 ## Calculated on Reload, no need every tick:
 ## Non-setting variables

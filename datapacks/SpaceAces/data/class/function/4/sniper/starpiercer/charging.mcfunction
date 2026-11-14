@@ -13,11 +13,18 @@ execute if score @s SelectedItem matches 1 if score @s ability.1.cooldown matche
 function class:4/sniper/jump/reset
 
 #execute if score @s ability.1.cooldown matches 0 run title @s subtitle ""
-execute if score @s ability.1.cooldown matches -9.. run title @s subtitle [{text:"",color:green},{text:"|||||",color:black}]
-execute if score @s ability.1.cooldown matches -10 run title @s subtitle [{text:"|",color:green},{text:"||||",color:black}]
-execute if score @s ability.1.cooldown matches -20 run title @s subtitle [{text:"||",color:green},{text:"|||",color:black}]
-execute if score @s ability.1.cooldown matches -30 run title @s subtitle [{text:"|||",color:green},{text:"||",color:black}]
-execute if score @s ability.1.cooldown matches -40 run title @s subtitle [{text:"||||",color:green},{text:"|",color:black}]
-execute if score @s ability.1.cooldown matches -50 run title @s subtitle [{text:"|||||",color:green}]
+
+scoreboard players operation #charge Numbers = @s ability.1.cooldown
+scoreboard players operation #charge Numbers *= 5 Numbers
+
+scoreboard players operation #charge Numbers /= class.sniper.1.maxDamage Numbers
+
+
+execute if score #charge Numbers matches ..0 run title @s subtitle [{text:"",color:green},{text:"|||||",color:black}]
+execute if score #charge Numbers matches 1 run title @s subtitle [{text:"|",color:green},{text:"||||",color:black}]
+execute if score #charge Numbers matches 2 run title @s subtitle [{text:"||",color:green},{text:"|||",color:black}]
+execute if score #charge Numbers matches 3 run title @s subtitle [{text:"|||",color:green},{text:"||",color:black}]
+execute if score #charge Numbers matches 4 run title @s subtitle [{text:"||||",color:green},{text:"|",color:black}]
+execute if score #charge Numbers matches 5.. run title @s subtitle [{text:"|||||",color:green}]
 title @s times 0 15 0
 title @s title ""

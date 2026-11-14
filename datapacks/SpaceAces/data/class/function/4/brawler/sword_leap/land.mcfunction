@@ -1,5 +1,6 @@
 effect give @s slowness 1 5 true
 
+scoreboard players set #healing Numbers 0
 scoreboard players operation #damage Numbers = class.brawler.1.damage Numbers
 scoreboard players operation #critMult Numbers = class.brawler.1.critMult Numbers
 scoreboard players operation #falloff Numbers = class.brawler.1.falloff Numbers

@@ -10,11 +10,12 @@ scoreboard players operation @s resist /= @s maxHealth
 
 
 scoreboard players operation @s resist /= class.pyro.2.percent_for_second Numbers
-scoreboard players add @s resist 1
+scoreboard players operation @s resist += class.pyro.2.base_amount Numbers
 
 execute store result storage class:pyro shield int 1.0 run scoreboard players get @s resist
 function class:4/pyro/adaptive_plating/macro with storage class:pyro
 scoreboard players operation @s resist *= 20 Numbers
+
 
 
 return 1

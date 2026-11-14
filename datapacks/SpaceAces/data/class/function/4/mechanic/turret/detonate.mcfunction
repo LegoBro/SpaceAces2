@@ -1,7 +1,7 @@
 scoreboard players reset @s rightClick
 execute as @n[tag=my_turret] at @s run summon creeper ~ ~ ~ {NoAI:true,Fuse:0}
 
-
+scoreboard players set #healing Numbers 0
 scoreboard players operation #damage Numbers = class.mechanic.2.explode_damage Numbers
 scoreboard players operation #critMult Numbers = class.mechanic.2.explode_critMult Numbers
 scoreboard players operation #falloff Numbers = class.mechanic.2.explode_falloff Numbers
