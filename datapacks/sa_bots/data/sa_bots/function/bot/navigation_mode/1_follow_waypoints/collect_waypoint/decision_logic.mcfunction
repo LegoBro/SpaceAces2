@@ -58,7 +58,7 @@ tag @s add sab.self
 $execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/fetch_data
 
 #update what sector the bot is in
-execute if score #sector sab.var matches 1.. run function sa_bots:bot/utility/bot_update_sector_and_nav_preference
+execute if score #collected_waypoint_sector sab.var matches 1.. run function sa_bots:bot/utility/bot_update_sector_and_nav_preference
 
 
 #get variables ready

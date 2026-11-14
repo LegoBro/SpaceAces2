@@ -12,7 +12,7 @@ tellraw @s [{text:"==\\/==",color:red,bold:true}," ",{translate:"sa_bot.heading.
 #calculate all
 tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.button.calculate_all"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 35"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.button.calculate_all"}}}]
 
-tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.button.calculate_all_more_info"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 32"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.button.calculate_all_more_info"}}}]
+#tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.button.calculate_all_more_info"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 32"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.button.calculate_all_more_info"}}}]
 
 #show nav channel
 execute unless score #show_nav_channel sab.var matches 1.. run tellraw @s ["\n",{translate:"sa_bot.menu.show_nav_channel",bold:true}, \

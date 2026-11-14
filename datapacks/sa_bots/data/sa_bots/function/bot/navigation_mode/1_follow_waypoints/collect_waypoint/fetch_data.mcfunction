@@ -3,9 +3,9 @@
 
 
 #get id
-execute store result score #id sab.var run data get entity @s UUID[3]
+execute store result score #collected_waypoint_id sab.var run data get entity @s UUID[3]
 #get sector (will be 0 if undefined or if we're a sub-route waypoint)
-execute store result score #sector sab.var run data get entity @s data.sector
+execute store result score #collected_waypoint_sector sab.var run data get entity @s data.sector
 
 #debug, show id/sector
 execute if score #debug_show_junction_decisions sab.var matches 1 run \
@@ -17,10 +17,10 @@ execute if score #debug_show_junction_decisions sab.var matches 1 run \
 execute if score #look_for_waypoint_tag sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/fetch_data_look_for_specific_tags
 
 #are we the one? if so, we found destination. pick a new one (we will re-run this function in a momment...)
-execute if score #goal_id sab.var = #id sab.var run \
+execute if score #goal_id sab.var = #collected_waypoint_id sab.var run \
     return run execute as @e[type=mannequin,tag=sab.self,distance=..1] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_reach_destination
 #=====
-execute if score #prev_goal_id sab.var = #id sab.var run \
+execute if score #prev_goal_id sab.var = #collected_waypoint_id sab.var run \
     return run execute as @e[type=mannequin,tag=sab.self,distance=..1] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/decision_reach_destination
 #=====
 
@@ -29,6 +29,6 @@ execute if score #prev_goal_id sab.var = #id sab.var run \
 scoreboard players set #connected_subroutes sab.var 0
 
 #if we're in the same sector as the destination, we need to do a special route check
-execute if score #goal_sector sab.var = #sector sab.var run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/find_best_route_within_sector
+execute if score #goal_sector sab.var = #collected_waypoint_sector sab.var run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/find_best_route_within_sector
 #otherwise, pick route by looking up the routes that were pre-generated already
-execute unless score #goal_sector sab.var = #sector sab.var run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/find_best_route_to_sector
+execute unless score #goal_sector sab.var = #collected_waypoint_sector sab.var run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/find_best_route_to_sector

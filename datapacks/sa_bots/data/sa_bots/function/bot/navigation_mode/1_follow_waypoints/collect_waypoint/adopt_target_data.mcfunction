@@ -4,6 +4,9 @@
 #clear tags
 function sa_bots:bot/navigation_mode/1_follow_waypoints/event/clear_old_event_stuff
 
+#remember what the last waypoint we visited was
+scoreboard players operation @s sab.botLastCollectedUUID = #collected_waypoint_id sab.var
+
 #if we're grounded, we might try lerping our move angle if there's enough ground near us
 scoreboard players set @s sab.botMovementYawLerpTime 0
 execute if score @s sab.groundedTime matches 2.. \

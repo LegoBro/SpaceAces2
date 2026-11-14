@@ -32,7 +32,7 @@ This datapack creates 16 Marker entities at x=0, y=50, z=0.
 These entities are summoned when a round is started with bots enabled.
 > e-0-0-0-1 ... Used to keep track of data for sector 1 (team occupancy, connections to other sectors)
 > ...
-> e-0-0-0-10 ... Used to keep track of data for sector 16 (team occupancy, connections to other sectors)
+> e-0-0-0-18 ... Used to keep track of data for sector 24 (team occupancy, connections to other sectors)
 
 Some of these entities serve a second purpose:
 > e-0-0-0-1 ... Used for rotation calculations

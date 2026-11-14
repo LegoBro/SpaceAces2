@@ -150,6 +150,7 @@ scoreboard objectives add sab.navSectorCacheChannelUC20 dummy
 scoreboard objectives add sab.markDistance dummy
 scoreboard objectives add sab.markEvent dummy
 scoreboard objectives add sab.markIndex dummy
+scoreboard objectives add sab.markId dummy
 scoreboard objectives add sab.markDanger dummy
 scoreboard objectives add sab.markDangerEnemyOnly dummy
 scoreboard objectives add sab.usingNavCacheChanel dummy
@@ -160,6 +161,7 @@ scoreboard objectives add sab.botLastTargetedWaypoint1 dummy
 scoreboard objectives add sab.botLastTargetedWaypoint2 dummy
 scoreboard objectives add sab.botDestinationUUID dummy
 scoreboard objectives add sab.botLastDestinationUUID dummy
+scoreboard objectives add sab.botLastCollectedUUID dummy
 
 #editor
 scoreboard objectives add sab.selected dummy

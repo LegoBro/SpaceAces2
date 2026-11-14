@@ -8,6 +8,7 @@ tag @s add sab.routeSort
 scoreboard players operation @s sab.markDistance = #distance_to_sector sab.var
 scoreboard players operation @s sab.markIndex = #set_index sab.var
 scoreboard players operation @s sab.markEvent = #set_event sab.var
+scoreboard players operation @s sab.markId = #mark_id sab.var
 execute if score #path_is_subroute sab.var matches 1 run tag @s add sab.markSubRoute
 
 #count how many connections lead to sub-routes

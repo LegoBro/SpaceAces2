@@ -22,6 +22,14 @@ execute if score @s sab.botInSector matches 13 as @e[type=marker,tag=sab.botWayp
 execute if score @s sab.botInSector matches 14 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.14] run function sa_bots:bot/utility/waypoint_get_id_and_sector
 execute if score @s sab.botInSector matches 15 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.15] run function sa_bots:bot/utility/waypoint_get_id_and_sector
 execute if score @s sab.botInSector matches 16 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.16] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 17 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.17] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 18 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.18] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 19 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.19] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 20 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.20] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 21 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.21] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 22 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.22] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 23 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.23] run function sa_bots:bot/utility/waypoint_get_id_and_sector
+execute if score @s sab.botInSector matches 24 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=3..200,tag=sab.sector.24] run function sa_bots:bot/utility/waypoint_get_id_and_sector
 
 #fallback: pick a completely random waypoint
 execute if score #found_destination sab.var matches 0 as @e[type=marker,tag=sab.botWaypointGeneric,tag=!wp.dontReRouteHere,limit=1,sort=random,distance=..200] run function sa_bots:bot/utility/waypoint_get_id_and_sector

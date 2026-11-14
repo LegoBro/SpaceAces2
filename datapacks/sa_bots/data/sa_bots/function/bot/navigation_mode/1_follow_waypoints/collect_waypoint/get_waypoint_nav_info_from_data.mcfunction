@@ -1,5 +1,6 @@
 #executed by a waypoint
 
+scoreboard players set #distance_at_this_waypoint sab.var 2147483647
 execute if score #goal_sector sab.var matches 1 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[1][0]
 execute if score #goal_sector sab.var matches 2 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[2][0]
 execute if score #goal_sector sab.var matches 3 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[3][0]
@@ -16,6 +17,14 @@ execute if score #goal_sector sab.var matches 13 store result score #distance_at
 execute if score #goal_sector sab.var matches 14 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[14][0]
 execute if score #goal_sector sab.var matches 15 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[15][0]
 execute if score #goal_sector sab.var matches 16 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[16][0]
+execute if score #goal_sector sab.var matches 17 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[17][0]
+execute if score #goal_sector sab.var matches 18 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[18][0]
+execute if score #goal_sector sab.var matches 19 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[19][0]
+execute if score #goal_sector sab.var matches 20 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[20][0]
+execute if score #goal_sector sab.var matches 21 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[21][0]
+execute if score #goal_sector sab.var matches 22 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[22][0]
+execute if score #goal_sector sab.var matches 23 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[23][0]
+execute if score #goal_sector sab.var matches 24 store result score #distance_at_this_waypoint sab.var run data get entity @s data.distanceToSector[24][0]
 
 #debug, show route information
 execute if score #debug_show_junction_decisions sab.var matches 1 run \

@@ -62,4 +62,5 @@ execute if score @s botPathEdit matches 61 run function sa_bots:editor/action/to
 execute if score @s botPathEdit matches 62 run function sa_bots:editor/action/toggle_score {name:"#debug_show_move_target",menu:"16_nav_debug"}
 execute if score @s botPathEdit matches 63 run function sa_bots:editor/action/toggle_score {name:"#debug_glowing_bots",menu:"16_nav_debug"}
 execute if score @s botPathEdit matches 64 run function sa_bots:editor/action/count_nodes_per_sector
+execute if score @s botPathEdit matches 65 run function sa_bots:editor/action/delete_edit_focus_waypoint
 #...

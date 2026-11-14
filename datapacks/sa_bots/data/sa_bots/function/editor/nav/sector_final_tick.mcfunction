@@ -14,8 +14,8 @@ execute if score #nav_calc_sequence sab.var matches 1.. run scoreboard players a
 execute unless score #nav_calc_sequence sab.var matches 1.. run scoreboard players reset #nav_calc_sector sab.var
 
 #next phase?
-execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 17.. if score #nav_calc_phase sab.var matches 0 run function sa_bots:editor/nav/_start_second_phase
+execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 25.. if score #nav_calc_phase sab.var matches 0 run function sa_bots:editor/nav/_start_second_phase
 #=====
 
 #end at the end
-execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 17.. run function sa_bots:editor/nav/_finish_all_nav
+execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 25.. run function sa_bots:editor/nav/_finish_all_nav
