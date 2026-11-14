@@ -23,6 +23,14 @@ execute if score #read2 sab.var matches 13 run tag @s add sab.sector_border.13
 execute if score #read2 sab.var matches 14 run tag @s add sab.sector_border.14
 execute if score #read2 sab.var matches 15 run tag @s add sab.sector_border.15
 execute if score #read2 sab.var matches 16 run tag @s add sab.sector_border.16
+execute if score #read2 sab.var matches 17 run tag @s add sab.sector_border.17
+execute if score #read2 sab.var matches 18 run tag @s add sab.sector_border.18
+execute if score #read2 sab.var matches 19 run tag @s add sab.sector_border.19
+execute if score #read2 sab.var matches 20 run tag @s add sab.sector_border.20
+execute if score #read2 sab.var matches 21 run tag @s add sab.sector_border.21
+execute if score #read2 sab.var matches 22 run tag @s add sab.sector_border.22
+execute if score #read2 sab.var matches 23 run tag @s add sab.sector_border.23
+execute if score #read2 sab.var matches 24 run tag @s add sab.sector_border.24
 
 #now remove that first entry in list
 data remove storage sa_bots:waypoint sector_neighbors[0]

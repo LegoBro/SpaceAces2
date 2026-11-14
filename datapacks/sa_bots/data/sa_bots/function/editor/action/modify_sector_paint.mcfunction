@@ -1,6 +1,6 @@
 $scoreboard players $(operation) @s sab.assignSector 1
-execute if score @s sab.assignSector matches ..-1 run scoreboard players set @s sab.assignSector 16
-execute if score @s sab.assignSector matches 17.. run scoreboard players set @s sab.assignSector 0
+execute if score @s sab.assignSector matches ..-1 run scoreboard players set @s sab.assignSector 24
+execute if score @s sab.assignSector matches 25.. run scoreboard players set @s sab.assignSector 0
 
 #feedback
 playsound block.note_block.hat master @s

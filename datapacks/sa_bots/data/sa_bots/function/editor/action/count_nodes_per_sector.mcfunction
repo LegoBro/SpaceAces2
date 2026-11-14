@@ -1,6 +1,8 @@
 #print counts per sector
 
 
+tellraw @s "\n\n\n"
+
 #show number of nodes in each sector
 execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.1]
 tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"1"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.1]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
@@ -34,6 +36,22 @@ execute store result score #count sab.var run execute if entity @e[type=marker,t
 tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"15"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.15]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
 execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.16]
 tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"16"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.16]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.17]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"17"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.17]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.18]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"18"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.18]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.19]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"19"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.19]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.20]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"20"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.20]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.21]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"21"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.21]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.22]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"22"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.22]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.23]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"23"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.23]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
+execute store result score #count sab.var run execute if entity @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.24]
+tellraw @s [" ",{translate:"sa_bot.nav_output.sector_n",with:[{text:"24"}],underlined:true,click_event:{action:"run_command",command:"tp @n[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.24]"}},": ",{score:{name:"#count",objective:"sab.var"},color:gold,underlined:false}]
 
 tellraw @s {text:"---",color:red,bold:true}
 

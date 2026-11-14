@@ -1,6 +1,6 @@
 $scoreboard players $(operation) #show_nav_channel sab.var 1
-execute if score #show_nav_channel sab.var matches ..-1 run scoreboard players set #show_nav_channel sab.var 16
-execute if score #show_nav_channel sab.var matches 17.. run scoreboard players set #show_nav_channel sab.var 0
+execute if score #show_nav_channel sab.var matches ..-1 run scoreboard players set #show_nav_channel sab.var 24
+execute if score #show_nav_channel sab.var matches 25.. run scoreboard players set #show_nav_channel sab.var 0
 
 #feedback
 playsound block.note_block.hat master @s

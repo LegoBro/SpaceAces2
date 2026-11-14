@@ -66,7 +66,7 @@ execute store result score #multiplier sab.var run attribute @s movement_speed g
 scoreboard players operation #x2 sab.var *= #multiplier sab.var
 scoreboard players operation #z2 sab.var *= #multiplier sab.var
 #terrain
-execute positioned ~ ~-0.2 ~ if block ~ ~ ~ #sa_bots:bot_odd_terrain run function sa_bots:bot/movement/1_grounded/terrain_velocity_multiplier
+execute positioned ~ ~-0.6 ~ if block ~ ~ ~ #sa_bots:bot_odd_terrain run function sa_bots:bot/movement/1_grounded/terrain_velocity_multiplier
 #crawling
 execute if score @s sab.botPose matches 1 run function sa_bots:bot/movement/1_grounded/crawling_velocity_multiplier
 #crouching

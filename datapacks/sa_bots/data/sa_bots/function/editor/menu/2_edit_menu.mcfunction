@@ -16,8 +16,8 @@ execute if score @s sab.waypointEditFocus matches 1.. run function sa_bots:edito
     {player_score:"@s sab.waypointEditFocus",command:"function sa_bots:editor/menu/edit/node_return_data_basic",context:"as"}
 tag @s remove sab.tellMe
 
-#view data
-tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.view_data"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 41"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.view_data"}}}]
+#view data / delete
+tellraw @s ["\n",{translate:"sa_bot.generic.button",color:white,with:[{translate:"sa_bot.menu.view_data"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 41"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.view_data"}}},"  ",{translate:"sa_bot.generic.button",color:dark_red,with:[{translate:"sa_bot.menu.delete"}],click_event:{action:"run_command",command:"/trigger botPathEdit set 65"},hover_event:{action:"show_text",value:{translate:"sa_bot.menu.delete"}}}]
 
 #list sub-menus
 #connections, tags

@@ -21,6 +21,14 @@ tag @s remove sab.sector_border.13
 tag @s remove sab.sector_border.14
 tag @s remove sab.sector_border.15
 tag @s remove sab.sector_border.16
+tag @s remove sab.sector_border.17
+tag @s remove sab.sector_border.18
+tag @s remove sab.sector_border.19
+tag @s remove sab.sector_border.20
+tag @s remove sab.sector_border.21
+tag @s remove sab.sector_border.22
+tag @s remove sab.sector_border.23
+tag @s remove sab.sector_border.24
 
 #iterate through the list
 execute store result score #read2 sab.var run data get storage sa_bots:waypoint sector_neighbors[0]

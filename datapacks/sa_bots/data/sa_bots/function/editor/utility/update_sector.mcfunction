@@ -20,6 +20,14 @@ tag @s remove sab.sector.13
 tag @s remove sab.sector.14
 tag @s remove sab.sector.15
 tag @s remove sab.sector.16
+tag @s remove sab.sector.17
+tag @s remove sab.sector.18
+tag @s remove sab.sector.19
+tag @s remove sab.sector.20
+tag @s remove sab.sector.21
+tag @s remove sab.sector.22
+tag @s remove sab.sector.23
+tag @s remove sab.sector.24
 
 #must have data to have sector tag
 execute unless data entity @s data.sector run return fail
@@ -43,3 +51,11 @@ execute if score #test sab.var matches 13 run tag @s add sab.sector.13
 execute if score #test sab.var matches 14 run tag @s add sab.sector.14
 execute if score #test sab.var matches 15 run tag @s add sab.sector.15
 execute if score #test sab.var matches 16 run tag @s add sab.sector.16
+execute if score #test sab.var matches 17 run tag @s add sab.sector.17
+execute if score #test sab.var matches 18 run tag @s add sab.sector.18
+execute if score #test sab.var matches 19 run tag @s add sab.sector.19
+execute if score #test sab.var matches 20 run tag @s add sab.sector.20
+execute if score #test sab.var matches 21 run tag @s add sab.sector.21
+execute if score #test sab.var matches 22 run tag @s add sab.sector.22
+execute if score #test sab.var matches 23 run tag @s add sab.sector.23
+execute if score #test sab.var matches 24 run tag @s add sab.sector.24

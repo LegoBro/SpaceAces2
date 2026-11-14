@@ -23,5 +23,13 @@ execute as e-0-0-0-d run function sa_bots:bot/debug/print_sector_occupancy_go
 execute as e-0-0-0-e run function sa_bots:bot/debug/print_sector_occupancy_go
 execute as e-0-0-0-f run function sa_bots:bot/debug/print_sector_occupancy_go
 execute as e-0-0-0-10 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-11 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-12 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-13 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-14 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-15 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-16 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-17 run function sa_bots:bot/debug/print_sector_occupancy_go
+execute as e-0-0-0-18 run function sa_bots:bot/debug/print_sector_occupancy_go
 
 tag @s remove sab.self
