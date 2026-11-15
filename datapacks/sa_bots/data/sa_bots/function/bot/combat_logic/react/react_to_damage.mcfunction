@@ -8,6 +8,10 @@
 execute unless score @s lastHurter matches -2147483648..2147483647 run return fail
 #=====
 
+#interrupt any scripted actions we may be taking
+execute if score @s sab.botScriptedAction matches 1..9999 if function sa_bots:bot/combat_logic/react/react_odds run \
+    function sa_bots:bot/combat_logic/react/cancel_scripted_action
+
 #do nothing if we're already targeting the person that shot us
 execute if entity @s[scores={sab.botAttackerEntityID=1..,sab.botTargetEntityID=1..}] if score @s lastHurter = @s sab.botAttackerEntityID run return fail
 #=====

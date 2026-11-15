@@ -28,7 +28,7 @@ execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/c
 #we might set ourself on fire to get more damage output
 execute if entity @s[tag=sab.botShootingActiveOpponent,scores={SelectedItem=0,displayHealth=75..,sab.botSkill=5..,sab.airTime=..5,sab.lockedOntoEnemy=1..,sab.botTargetEntityDistance=..18}] \
     unless score @s fire matches 1.. if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_looking_down run \
-    function sa_bots:bot/class_logic/use_ability_1_if_aiming_down
+    function sa_bots:bot/class_logic/use_primary_if_aiming_down
 
 
 

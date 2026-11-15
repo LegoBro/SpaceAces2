@@ -20,6 +20,7 @@ execute if score #2sec sab.var matches 7 as @e[type=marker,tag=sab.isSubrouteEnd
 #(this is not particularly efficient, but this is for development so it doesn't matter very much)
 execute if score #show_nav_channel sab.var matches 1.. store result storage sa_bots:waypoint_info show_nav_index int 1 run scoreboard players get #show_nav_channel sab.var
 execute as @e[type=marker,tag=sab.visualizeBotWaypoint] at @s run function sa_bots:editor/waypoint_visual/_wp_visual_tick
+execute as @e[type=marker,tag=sab.validateEventData] run function sa_bots:editor/utility/waypoint_validate_event_data
 
 
 #all vexes with "sab.wpSpawn" should spawn a Marker

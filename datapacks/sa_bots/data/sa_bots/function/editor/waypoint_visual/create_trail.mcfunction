@@ -15,11 +15,20 @@ execute if score #visualize_outgoing_ids sab.var matches 1 unless entity @s[dist
 execute if score #visualize_outgoing_ids sab.var matches 1 if entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^0.75 positioned ~ ~.4 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_outgoing_id
 
 #show event name if we're an event (if requested)
-execute if score #visualize_event_names sab.var matches 1 if score #read sab.var matches 1.. unless entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^2 positioned ~ ~.2 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_event_text with storage sa_bots:waypoint_info
-execute if score #visualize_event_names sab.var matches 1 if score #read sab.var matches 1.. if entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^0.75 positioned ~ ~.2 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_event_text with storage sa_bots:waypoint_info
+execute if score #visualize_event_names sab.var matches 1 if score #read sab.var matches 1.. unless score #read sab.var matches 10 unless entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^2 positioned ~ ~.2 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_event_text with storage sa_bots:waypoint_info
+execute if score #visualize_event_names sab.var matches 1 if score #read sab.var matches 1.. unless score #read sab.var matches 10 if entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^0.75 positioned ~ ~.2 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_event_text with storage sa_bots:waypoint_info
+execute if score #visualize_event_names sab.var matches 1 if score #read sab.var matches 10 unless entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^2 positioned ~ ~.2 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_event_text_green with storage sa_bots:waypoint_info
+execute if score #visualize_event_names sab.var matches 1 if score #read sab.var matches 10 if entity @s[distance=..2.25] facing entity @s feet positioned ^ ^ ^0.75 positioned ~ ~.2 ~ summon text_display run function sa_bots:editor/waypoint_visual/nametag_event_text_green with storage sa_bots:waypoint_info
 
 
 #are we a different sector than the source? if so, remember it
 scoreboard players set #read1 sab.var -1
 execute if data entity @s data.sector store result score #read1 sab.var run data get entity @s data.sector
 execute if score #read1 sab.var matches 0.. unless score #sector sab.var = #read1 sab.var run data modify storage sa_bots:waypoint sector_neighbors prepend from entity @s data.sector
+
+
+#we need to validate some event data at the end of this tick if we happened to run this
+tag @s add sab.validateEventData
+
+#remember if we're the a waypoint that needs to check if unobstructed
+execute if score #read sab.var matches 10 run tag @s add sab.waypointMightBeBlocked

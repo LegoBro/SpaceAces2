@@ -61,6 +61,11 @@ $execute as b-0-0-0-$(uuid4) run function sa_bots:bot/navigation_mode/1_follow_w
 execute if score #collected_waypoint_sector sab.var matches 1.. run function sa_bots:bot/utility/bot_update_sector_and_nav_preference
 
 
+#make sure we're reading the correct distance at this waypoint based on the nav type we're using
+execute if score #using_unconditional_nav sab.var matches ..0 run scoreboard players operation #distance_at_this_waypoint_confirm sab.var = #distance_at_this_waypoint sab.var
+execute if score #using_unconditional_nav sab.var matches 1..2 run scoreboard players operation #distance_at_this_waypoint_confirm sab.var = #distance_at_this_waypoint_uc sab.var
+execute if score #using_unconditional_nav sab.var matches 3 run scoreboard players operation #distance_at_this_waypoint_confirm sab.var = #distance_at_this_waypoint_open sab.var
+
 #get variables ready
 scoreboard players set #found_target sab.var 0
 scoreboard players set #chosen_outgoing sab.var -1
@@ -68,7 +73,7 @@ scoreboard players set #chosen_event sab.var 0
 scoreboard players set #event_failed sab.var 0
 
 #now sort through generated sab.routeSort markers to see which ones we want to take
-#note: "#distance_at_this_waypoint sab.var" is the distance to destination at this waypoint
+#note: "#distance_at_this_waypoint_confirm sab.var" is the distance to destination at this waypoint
 scoreboard players set #count sab.var 0
 scoreboard players set #count_valid sab.var 0
 execute unless entity @s[tag=sab.botRunAwayFromDestination] as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_count_valid

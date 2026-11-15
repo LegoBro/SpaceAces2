@@ -9,6 +9,7 @@ execute if entity @s[tag=sab.botSubroute] run data modify storage sa_bots:waypoi
 #yellow color if outgoing path has an event attached
 $execute store result score #read sab.var run data get entity @s data.outgoing[$(i)][2][0]
 execute if score #read sab.var matches 1.. run data modify storage sa_bots:waypoint trail_color set value "[1,1,0]"
+execute if score #read sab.var matches 10 run data modify storage sa_bots:waypoint trail_color set value "[0,1,0]"
 execute if score #read sab.var matches 1.. store result storage sa_bots:waypoint_info event_name_index int 1 run scoreboard players get #read sab.var
 
 #access the waypoint at index i

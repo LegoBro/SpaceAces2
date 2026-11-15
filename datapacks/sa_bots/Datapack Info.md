@@ -37,3 +37,4 @@ These entities are summoned when a round is started with bots enabled.
 Some of these entities serve a second purpose:
 > e-0-0-0-1 ... Used for rotation calculations
 > e-0-0-0-2 ... Used for bot movement vector
+> e-0-0-0-10 ... Used to grab execution coordinates sometimes

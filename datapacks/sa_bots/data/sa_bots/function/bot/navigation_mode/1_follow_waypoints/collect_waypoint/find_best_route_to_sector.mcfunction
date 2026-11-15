@@ -16,3 +16,5 @@ execute if data entity @s data.outgoing[0] run function sa_bots:bot/navigation_m
 
 #also figure out what our distance to destination is for comparison
 function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_waypoint_nav_info_from_data
+function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_waypoint_nav_info_from_data_unconditional
+function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_waypoint_nav_info_from_data_open

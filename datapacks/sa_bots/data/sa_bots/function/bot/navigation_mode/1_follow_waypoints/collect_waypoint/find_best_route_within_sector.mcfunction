@@ -35,6 +35,8 @@ execute if data entity @s data.outgoing[0] run function sa_bots:bot/navigation_m
 
 #also figure out what our distance to destination is for comparison
 function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_waypoint_nav_info_from_cache
+function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_waypoint_nav_info_from_cache_unconditional
+function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/get_waypoint_nav_info_from_cache_open
 
 #debug, bot remembers what nav cache channel it used
 execute if score #using_unconditional_nav sab.var matches 0 run scoreboard players operation @e[type=mannequin,tag=sab.self,distance=..1] sab.usingNavCacheChanel = #use_channel sab.var

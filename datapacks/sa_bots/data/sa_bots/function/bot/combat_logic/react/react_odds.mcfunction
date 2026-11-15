@@ -11,6 +11,8 @@ execute if score @s damage matches 30.. run scoreboard players add #random sab.v
 execute if score @s damage matches 40.. run scoreboard players add #random sab.var 1
 execute if score @s damage matches 50.. run scoreboard players add #random sab.var 1
 execute if score @s damage matches 60.. run scoreboard players add #random sab.var 1
+#more likely to react if we're doing a scripted action
+execute if score @s sab.botScriptedAction matches 1..9999 run scoreboard players add #random sab.var 2
 
 #roll higher than a 10 and we're allowed to react
 execute if score #random sab.var matches 10.. run return 0

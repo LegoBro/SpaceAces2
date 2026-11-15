@@ -3,7 +3,7 @@
 # 0 = no
 # 1 = yes
 # 2 = yes, but give up if something goes wrong
-# 3 = use open nav path (only do if there all blockable paths that are open AND this yields better resuts)
+# 3 = no, instead use open nav path (there are blockable paths that are open)
 scoreboard players set #var sab.var 0
 
 #look up the data from our sector
@@ -50,8 +50,17 @@ execute if entity @s[tag=sab.botHas6BlockJump] if data storage sa_bots:generic g
 #map-gated?
 #execute if data storage sa_bots:generic get_sector_flags.list[{map_gated:1}] run scoreboard players set #var sab.var 2
 
-#bot with movement abilities will always use mode 2
+#bot with movement abilities will always use unconditional nav
 execute if entity @s[tag=sab.botHasMovementAbilities] run scoreboard players set #var sab.var 1
+
+#if any blockable paths are open, we might use "open" nav
+scoreboard players set #count_blockable sab.var 0
+scoreboard players set #count_blockable_valid sab.var 0
+execute as @e[type=marker,tag=sab.waypointCanBeBlocked,distance=..200] at @s run function sa_bots:bot/utility/count_blockable_waypoint
+#if we weren't planning on using unconditional nav, use open nav with no question
+execute if score #var sab.var matches 0 if score #count_blockable sab.var matches 1.. if score #count_blockable_valid sab.var matches 1.. run scoreboard players set #var sab.var 3
+#if we were planning on using unconditional nav, we might switch to open nav if it gets us to our destination faster
+execute if score #var sab.var matches 1..2 if score #count_blockable sab.var matches 1.. if score #count_blockable_valid sab.var matches 1.. run function sa_bots:bot/utility/bot_update_nav_preference_consider_using_open
 
 
 #apply new nav settings
