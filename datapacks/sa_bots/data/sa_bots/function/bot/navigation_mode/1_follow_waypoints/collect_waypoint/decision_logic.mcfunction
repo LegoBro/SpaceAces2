@@ -17,7 +17,7 @@ scoreboard players set @s sab.botLookingForSubTargets 0
 # 2 = already generated a sub-target
 
 #are we chasing a sub-target? simply pop it off the stack and go for the next target we have. no need for all the complicated nonsense in this function
-execute unless data entity @s data.move_targets[0].metadata{is_sub_route:0} run \
+execute unless data entity @s data.move_targets[0].metadata{is_sub_target:0} run \
     return run function sa_bots:bot/waypoint_nav/pop_move_target_off_stack
 #=====
 
@@ -76,8 +76,8 @@ execute if entity @s[tag=sab.botRunAwayFromDestination] as @e[type=marker,distan
 execute if score #count_valid sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_from_valid
 execute unless score #count_valid sab.var matches 1.. if score #count sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_random
 
-#if we were using unconditional nav (mode 2), failed to execute an event, and got sent down a random pathway: give up on using unconditional nav
-execute if score #using_unconditional_nav sab.var matches 2.. if score #count_valid sab.var matches 0 \
+#if we were using unconditional nav (mode 2) or open-pathway nav (mode 3), failed to execute an event, and got sent down a random pathway: go back to using conditional nav
+execute if score #using_unconditional_nav sab.var matches 2..3 if score #count_valid sab.var matches 0 \
     if score #event_failed sab.var matches 1.. run scoreboard players set @s sab.botUsingUnconditionalNav 0
 
 #clean up tags

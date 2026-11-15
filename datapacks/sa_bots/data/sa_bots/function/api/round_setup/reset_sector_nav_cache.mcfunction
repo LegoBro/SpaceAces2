@@ -1,6 +1,10 @@
 data modify storage sa_bots:waypoint sector_nav_cache set value []
+data modify storage sa_bots:waypoint sector_nav_cache_unconditional set value []
+data modify storage sa_bots:waypoint sector_nav_cache_open set value []
 
 scoreboard players set #sector_nav_cache_channel sab.var 0
+scoreboard players set #sector_nav_cache_channel_uc sab.var 0
+scoreboard players set #sector_nav_cache_channel_open sab.var 0
 
 scoreboard players reset * sab.navSectorCacheChannel1
 scoreboard players reset * sab.navSectorCacheChannel2
@@ -43,3 +47,24 @@ scoreboard players reset * sab.navSectorCacheChannelUC17
 scoreboard players reset * sab.navSectorCacheChannelUC18
 scoreboard players reset * sab.navSectorCacheChannelUC19
 scoreboard players reset * sab.navSectorCacheChannelUC20
+
+scoreboard players reset * sab.navSectorCacheChannelOpen1
+scoreboard players reset * sab.navSectorCacheChannelOpen2
+scoreboard players reset * sab.navSectorCacheChannelOpen3
+scoreboard players reset * sab.navSectorCacheChannelOpen4
+scoreboard players reset * sab.navSectorCacheChannelOpen5
+scoreboard players reset * sab.navSectorCacheChannelOpen6
+scoreboard players reset * sab.navSectorCacheChannelOpen7
+scoreboard players reset * sab.navSectorCacheChannelOpen8
+scoreboard players reset * sab.navSectorCacheChannelOpen9
+scoreboard players reset * sab.navSectorCacheChannelOpen10
+scoreboard players reset * sab.navSectorCacheChannelOpen11
+scoreboard players reset * sab.navSectorCacheChannelOpen12
+scoreboard players reset * sab.navSectorCacheChannelOpen13
+scoreboard players reset * sab.navSectorCacheChannelOpen14
+scoreboard players reset * sab.navSectorCacheChannelOpen15
+scoreboard players reset * sab.navSectorCacheChannelOpen16
+scoreboard players reset * sab.navSectorCacheChannelOpen17
+scoreboard players reset * sab.navSectorCacheChannelOpen18
+scoreboard players reset * sab.navSectorCacheChannelOpen19
+scoreboard players reset * sab.navSectorCacheChannelOpen20

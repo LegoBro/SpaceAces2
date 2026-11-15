@@ -1,6 +1,7 @@
 #do navigation mode 3
 scoreboard players set @s sab.botNavigationMode 3
 scoreboard players set @s sab.botNavigationBoredom 0
+tag @s remove sab.botFollowingSubRoute
 
 #set tag indicating what we're doing
 #we're standing near a chem dispenser

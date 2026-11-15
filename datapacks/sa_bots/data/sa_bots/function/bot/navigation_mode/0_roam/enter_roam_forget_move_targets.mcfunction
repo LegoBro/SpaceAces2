@@ -12,4 +12,5 @@ scoreboard players set @s sab.botNavigationMode 0
 scoreboard players set @s sab.botRoamTime 0
 scoreboard players set @s sab.botLookingForSubTargets 0
 scoreboard players set @s sab.botMovementYawLerpTime 0
-execute if entity @s[tag=sab.doNotUpdateMoveTarget] run tag @s remove sab.doNotUpdateMoveTarget
+tag @s remove sab.doNotUpdateMoveTarget
+tag @s remove sab.botFollowingSubRoute

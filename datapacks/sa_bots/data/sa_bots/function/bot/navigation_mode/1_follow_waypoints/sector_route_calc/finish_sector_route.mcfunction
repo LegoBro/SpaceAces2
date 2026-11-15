@@ -4,10 +4,13 @@
 #$(channel) = the nav cache channel we used
 
 
-#must do a second pass for unconditional
-execute if score #nav_calc_phase sab.var matches 0 run \
-    return run function sa_bots:bot/navigation_mode/1_follow_waypoints/sector_route_calc/_start_second_phase
-#=====
+##must do a second pass for unconditional
+#execute if score #nav_calc_phase sab.var matches 0 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/sector_route_calc/_start_second_phase
+##=====
+##must do a third pass for open
+#execute if score #nav_calc_phase sab.var matches 1 run return run function sa_bots:bot/navigation_mode/1_follow_waypoints/sector_route_calc/_start_third_phase
+##=====
+# ^NOTE: second/third passes were disabled. we instead want to only do 1 pass
 
 #reset calc objective
 scoreboard players reset * sab.navCalc

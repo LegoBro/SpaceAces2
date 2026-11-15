@@ -14,7 +14,10 @@ data modify storage sa_bots:generic target.x set from entity @s Pos[0]
 data modify storage sa_bots:generic target.y set from entity @s Pos[1]
 data modify storage sa_bots:generic target.z set from entity @s Pos[2]
 
+#not a sub-route
+data modify storage sa_bots:generic target.metadata.is_sub_route set value 0
+
 #this is a sub-target
-data modify storage sa_bots:generic target.metadata.is_sub_route set value 1
-#"is_sub_route"=2 if we want to stand near the thing for a while
-execute if score #found_target sab.var matches 2 run data modify storage sa_bots:generic target.metadata.is_sub_route set value 2
+data modify storage sa_bots:generic target.metadata.is_sub_target set value 1
+#"is_sub_target"=2 if we want to stand near the thing for a while
+execute if score #found_target sab.var matches 2 run data modify storage sa_bots:generic target.metadata.is_sub_target set value 2

@@ -1,6 +1,9 @@
 #executed by a waypoint that just successfully found a line of sight to itself
 
 
+#check if this waypoint is a sub-route
+execute store result score #is_sub_route sab.var run execute if entity @s[tag=sab.botSubroute]
+
 #is there a spread bias definied? use it, then erase it
 execute if score #spread_bias_x sab.var matches -2147483648..2147483647 at @s if loaded ~ ~ ~ run \
     return run function sa_bots:bot/navigation_mode/1_follow_waypoints/spread/get_waypoint_target_struct_with_spread
@@ -20,4 +23,7 @@ data modify storage sa_bots:generic target.y set from entity @s Pos[1]
 data modify storage sa_bots:generic target.z set from entity @s Pos[2]
 
 #this is not a sub-target
-data modify storage sa_bots:generic target.metadata.is_sub_route set value 0
+data modify storage sa_bots:generic target.metadata.is_sub_target set value 0
+
+#store whether this is a sub-route
+execute store result storage sa_bots:generic target.metadata.is_sub_route int 1 run scoreboard players get #is_sub_route sab.var

@@ -3,6 +3,7 @@ scoreboard players set @s sab.botNavigationMode 2
 execute store result score @s sab.botChaseTargetTime run random value 60..100
 scoreboard players operation @s sab.botChaseTargetTime += @s sab.botAggression
 scoreboard players operation @s sab.botChaseTargetTime += @s sab.botAggression
+tag @s remove sab.botFollowingSubRoute
 
 #chase target
 execute if score @s sab.botSeekingEnemy matches 1.. run scoreboard players operation @s sab.botTargetEntityID = @s sab.botSeekingEnemy

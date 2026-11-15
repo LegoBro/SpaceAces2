@@ -18,7 +18,10 @@ data modify storage sa_bots:generic target.y set from entity e-0-0-0-1 Pos[1]
 data modify storage sa_bots:generic target.z set from entity e-0-0-0-1 Pos[2]
 
 #this is a sub-target
-data modify storage sa_bots:generic target.metadata.is_sub_route set value 1
+data modify storage sa_bots:generic target.metadata.is_sub_target set value 1
+
+#not a sub-route
+data modify storage sa_bots:generic target.metadata.is_sub_route set value 0
 
 
 #adopt data and scores from recently decided-upon target

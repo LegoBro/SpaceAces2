@@ -6,6 +6,7 @@ $execute as @e[type=marker,tag=sab.botWaypointGeneric,tag=!sab.sector.$(nav_inde
 $execute as @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.$(nav_index)] run scoreboard players set @s sab.navCalc 0
 $execute if score #nav_calc_phase sab.var matches 0 as @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.$(nav_index)] run data modify entity @s data.distanceToSector[$(nav_index)][0] set value 0
 $execute if score #nav_calc_phase sab.var matches 1 as @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.$(nav_index)] run data modify entity @s data.distanceToSector[$(nav_index)][1] set value 0
+$execute if score #nav_calc_phase sab.var matches 2 as @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector.$(nav_index)] run data modify entity @s data.distanceToSector[$(nav_index)][2] set value 0
 
 #nodes within the sector that are bordering other sectors will be the first to propagate outwards
 $tag @e[type=marker,tag=sab.botWaypointGeneric,tag=sab.sector_is_border,tag=sab.sector.$(nav_index)] add sab.nav_calc_next_tick

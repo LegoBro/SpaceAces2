@@ -9,3 +9,4 @@ $tag b-0-0-0-$(waypoint_target_string) add sab.nav_calc_next_tick
 $scoreboard players set b-0-0-0-$(waypoint_target_string) sab.navCalc 0
 $execute if score #nav_calc_phase sab.var matches 0 run scoreboard players set b-0-0-0-$(waypoint_target_string) sab.navSectorCacheChannel$(channel) 0
 $execute if score #nav_calc_phase sab.var matches 1 run scoreboard players set b-0-0-0-$(waypoint_target_string) sab.navSectorCacheChannelUC$(channel) 0
+$execute if score #nav_calc_phase sab.var matches 2 run scoreboard players set b-0-0-0-$(waypoint_target_string) sab.navSectorCacheChannelOpen$(channel) 0

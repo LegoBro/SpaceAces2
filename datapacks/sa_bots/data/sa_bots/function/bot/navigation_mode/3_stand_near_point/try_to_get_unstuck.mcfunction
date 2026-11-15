@@ -1,6 +1,6 @@
 #remove all sub-targets from the stack
-execute if data entity @s data.move_targets[0] unless data entity @s data.move_targets[0].metadata{is_sub_route:0} run data remove entity @s data.move_targets[0]
-execute if data entity @s data.move_targets[0] unless data entity @s data.move_targets[0].metadata{is_sub_route:0} run data remove entity @s data.move_targets[0]
+execute if data entity @s data.move_targets[0] unless data entity @s data.move_targets[0].metadata{is_sub_target:0} run data remove entity @s data.move_targets[0]
+execute if data entity @s data.move_targets[0] unless data entity @s data.move_targets[0].metadata{is_sub_target:0} run data remove entity @s data.move_targets[0]
 
 #get ready to track progress towards waypoint again
 scoreboard players set @s sab.botTimeSinceProgress 0

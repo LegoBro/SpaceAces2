@@ -14,6 +14,10 @@ execute if score @s sab.botScriptedAction matches 1.. run return fail
 execute if entity @s[tag=sab.botHasSpecificBuildSpot] run return fail
 #=====
 
+#kick out if we're in the middle of a sub-route
+execute if entity @s[tag=sab.botFollowingSubRoute] run return fail
+#=====
+
 
 #navigate to the person we're looking at
 scoreboard players set #get_id sab.var -1

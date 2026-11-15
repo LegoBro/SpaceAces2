@@ -13,8 +13,12 @@ scoreboard players set #nav_calc_sector_progress sab.var 0
 execute if score #nav_calc_sequence sab.var matches 1.. run scoreboard players add #nav_calc_sector sab.var 1
 execute unless score #nav_calc_sequence sab.var matches 1.. run scoreboard players reset #nav_calc_sector sab.var
 
-#next phase?
-execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 25.. if score #nav_calc_phase sab.var matches 0 run function sa_bots:editor/nav/_start_second_phase
+#next phases?
+execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 25.. if score #nav_calc_phase sab.var matches 0 run \
+    return run function sa_bots:editor/nav/_start_second_phase
+#=====
+execute if score #nav_calc_sequence sab.var matches 1.. if score #nav_calc_sector sab.var matches 25.. if score #nav_calc_phase sab.var matches 1 run \
+    return run function sa_bots:editor/nav/_start_third_phase
 #=====
 
 #end at the end

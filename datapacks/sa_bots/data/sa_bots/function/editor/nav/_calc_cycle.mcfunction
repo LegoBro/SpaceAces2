@@ -15,8 +15,10 @@ scoreboard players reset * sab.navCalcNextTick
 scoreboard players set #nav_this_tick sab.var 0
 execute if score #nav_calc_phase sab.var matches 0 run data modify storage sa_bots:waypoint command set value "function sa_bots:editor/nav/evaluate_waypoint with storage sa_bots:waypoint"
 execute if score #nav_calc_phase sab.var matches 1 run data modify storage sa_bots:waypoint command set value "function sa_bots:editor/nav/evaluate_waypoint_unconditional with storage sa_bots:waypoint"
+execute if score #nav_calc_phase sab.var matches 2 run data modify storage sa_bots:waypoint command set value "function sa_bots:editor/nav/evaluate_waypoint_open with storage sa_bots:waypoint"
 execute if score #nav_calc_phase sab.var matches 0 as @e[type=marker,tag=sab.nav_calc_next_tick] run function sa_bots:editor/nav/node_check_incoming
 execute if score #nav_calc_phase sab.var matches 1 as @e[type=marker,tag=sab.nav_calc_next_tick] run function sa_bots:editor/nav/node_check_incoming_unconditional
+execute if score #nav_calc_phase sab.var matches 2 as @e[type=marker,tag=sab.nav_calc_next_tick] run function sa_bots:editor/nav/node_check_incoming_open
 
 #output
 execute if score #nav_show_output sab.var matches 2.. if score #nav_calc_sector_progress sab.var matches 1.. run \

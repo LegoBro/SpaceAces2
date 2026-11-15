@@ -25,6 +25,11 @@ execute if entity @s[scores={health=..174,ability.2.cooldown=..0}] \
 execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/check_if_enemies_nearby_melee \
     if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_more_likely run function sa_bots:bot/class_logic/use_melee
 
+#we might set ourself on fire to get more damage output
+execute if entity @s[tag=sab.botShootingActiveOpponent,scores={SelectedItem=0,displayHealth=75..,sab.botSkill=5..,sab.airTime=..5,sab.lockedOntoEnemy=1..,sab.botTargetEntityDistance=..18}] \
+    unless score @s fire matches 1.. if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_prioritize_looking_down run \
+    function sa_bots:bot/class_logic/use_ability_1_if_aiming_down
+
 
 
 #use ultimate whenever enemies are nearby
@@ -39,6 +44,10 @@ tag @s remove sab.botWeaponHasUpwardArc
 #grenade is a slow projectile with downward arc
 tag @s[scores={SelectedItem=0}] add sab.botWeaponHasUpwardArc
 tag @s[scores={SelectedItem=1}] add sab.botWeaponHasDownwardArc
+
+#we might run at enemies while using ult
+tag @s[scores={ultimate.cooldown=1..},tag=!sab.botWantsToGetInMeleeRange] add sab.botWantsToGetInMeleeRange
+execute unless score @s ultimate.cooldown matches 1.. run tag @s[tag=sab.botWantsToGetInMeleeRange] remove sab.botWantsToGetInMeleeRange
 
 
 

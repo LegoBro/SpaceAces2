@@ -6,7 +6,8 @@
 
 #read data
 $execute if score #using_unconditional_nav sab.var matches ..0 store result score #distance_to_sector sab.var run data get entity @s data.distanceToSector[$(nav_index)][0]
-$execute if score #using_unconditional_nav sab.var matches 1.. store result score #distance_to_sector sab.var run data get entity @s data.distanceToSector[$(nav_index)][1]
+$execute if score #using_unconditional_nav sab.var matches 1..2 store result score #distance_to_sector sab.var run data get entity @s data.distanceToSector[$(nav_index)][1]
+$execute if score #using_unconditional_nav sab.var matches 3 store result score #distance_to_sector sab.var run data get entity @s data.distanceToSector[$(nav_index)][2]
 $scoreboard players set #set_index sab.var $(i)
 execute store result score #mark_id sab.var run data get entity @s UUID[3]
 

@@ -23,6 +23,7 @@ execute at e-0-0-0-1 run function sa_bots:bot/waypoint_nav/sub_target/create_sub
 #random chance of pausing
 execute store result score #random sab.var run random value -10..10
 scoreboard players operation #random sab.var += @s sab.botSkill
+execute if score @s sab.botTimeSinceCombat matches ..10 run scoreboard players add #random sab.var 6
 execute if score #random sab.var matches ..0 store result score @s sab.botPauseTime run random value 10..35
 #random chance of sneaking if not pausing
 execute store result score #random sab.var run random value -8..20

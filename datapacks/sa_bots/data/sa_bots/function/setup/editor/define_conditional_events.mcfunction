@@ -1,3 +1,4 @@
+#returns 2 if only accessible when pathway is open
 #returns 1 if conditional
 #returns 0 if not conditional
 
@@ -22,4 +23,4 @@ execute if score #read sab.var matches 6 run return 1
 execute if score #read sab.var matches 7 run return 1
 execute if score #read sab.var matches 8 run return 1
 execute if score #read sab.var matches 9 run return 1
-execute if score #read sab.var matches 10 run return 1
+execute if score #read sab.var matches 10 run return 2

@@ -12,11 +12,14 @@ data modify storage sa_bots:generic target.x set from entity e-0-0-0-10 Pos[0]
 data modify storage sa_bots:generic target.y set from entity e-0-0-0-10 Pos[1]
 data modify storage sa_bots:generic target.z set from entity e-0-0-0-10 Pos[2]
 #this is a sub-target that we want to stand next to for a while
-data modify storage sa_bots:generic target.metadata.is_sub_route set value 2
+data modify storage sa_bots:generic target.metadata.is_sub_target set value 2
+#not a sub-route
+data modify storage sa_bots:generic target.metadata.is_sub_route set value 0
 
 #do navigation mode 3
 scoreboard players set @s sab.botNavigationMode 3
 scoreboard players set @s sab.botNavigationBoredom 0
+tag @s remove sab.botFollowingSubRoute
 
 #set tag indicating what we're doing
 #we're using a sniper spot

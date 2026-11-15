@@ -11,8 +11,11 @@ data modify storage sa_bots:generic target.x set from entity @s Pos[0]
 data modify storage sa_bots:generic target.y set from entity @s Pos[1]
 data modify storage sa_bots:generic target.z set from entity @s Pos[2]
 
+#not a sub-route
+data modify storage sa_bots:generic target.metadata.is_sub_route set value 0
+
 #this is an entity that can potentially move
-data modify storage sa_bots:generic target.metadata.is_sub_route set value -1
+data modify storage sa_bots:generic target.metadata.is_sub_target set value -1
 
 
 #while we've got this entity as the execution context:

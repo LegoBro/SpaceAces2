@@ -6,7 +6,7 @@
 
 #create (or update) move_target, which is set to the target entity's position
 scoreboard players set #found_target sab.var 0
-execute unless data entity @s data.move_targets[0].metadata{is_sub_route:-1} run data modify entity @s data.move_targets prepend value {id:0,uuid:"0",x:0,y:0,z:0,metadata:{is_sub_route:-1}}
+execute unless data entity @s data.move_targets[0].metadata{is_sub_target:-1} run data modify entity @s data.move_targets prepend value {id:0,uuid:"0",x:0,y:0,z:0,metadata:{is_sub_target:-1}}
 scoreboard players operation #get_id sab.var = @s sab.botTargetEntityID
 scoreboard players operation #team sab.var = @s Team
 execute as @e[type=#projectile:has_hb,tag=hb,distance=1..25] if score @s id = #get_id sab.var unless score @s Team = #team sab.var run function sa_bots:bot/navigation_mode/2_combat/chase_target/get_waypoint_position

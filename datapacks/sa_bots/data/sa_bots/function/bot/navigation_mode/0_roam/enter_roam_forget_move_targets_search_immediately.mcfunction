@@ -14,3 +14,4 @@ data modify entity @s data.move_targets set value []
 scoreboard players set @s sab.botNavigationMode 0
 scoreboard players set @s sab.botRoamTime 0
 scoreboard players set @s sab.botLookingForSubTargets 0
+tag @s remove sab.botFollowingSubRoute

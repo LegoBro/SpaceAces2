@@ -2,7 +2,8 @@
 #"sab.botUsingUnconditionalNav"
 # 0 = no
 # 1 = yes
-# 1 = yes, but give up if something goes wrong
+# 2 = yes, but give up if something goes wrong
+# 3 = use open nav path (only do if there all blockable paths that are open AND this yields better resuts)
 scoreboard players set #var sab.var 0
 
 #look up the data from our sector
@@ -22,8 +23,16 @@ execute if score @s sab.botInSector matches 13 run data modify storage sa_bots:g
 execute if score @s sab.botInSector matches 14 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[14]
 execute if score @s sab.botInSector matches 15 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[15]
 execute if score @s sab.botInSector matches 16 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[16]
+execute if score @s sab.botInSector matches 17 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[17]
+execute if score @s sab.botInSector matches 18 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[18]
+execute if score @s sab.botInSector matches 19 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[19]
+execute if score @s sab.botInSector matches 20 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[20]
+execute if score @s sab.botInSector matches 21 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[21]
+execute if score @s sab.botInSector matches 22 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[22]
+execute if score @s sab.botInSector matches 23 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[23]
+execute if score @s sab.botInSector matches 24 run data modify storage sa_bots:generic get_sector_flags set from storage sa_bots:waypoint sector_conditional_events[24]
 #no sector? quit out and don't use conditional nav
-execute unless score @s sab.botInSector matches 1..16 run return run scoreboard players set @s sab.botUsingUnconditionalNav 0
+execute unless score @s sab.botInSector matches 1..24 run return run scoreboard players set @s sab.botUsingUnconditionalNav 0
 #=====
 
 #sneak under stuff?
@@ -36,10 +45,13 @@ execute if score @s size matches 110.. if score @s sab.botUsingUnconditionalNav 
 execute if entity @s[tag=sab.botHas6BlockJump] if data storage sa_bots:generic get_sector_flags.list[{6_block_jump_gated:1}] run scoreboard players set #var sab.var 2
 
 #movement-gated?
-execute if entity @s[tag=sab.botHasMovementAbilities] if data storage sa_bots:generic get_sector_flags.list[{movement_gated:1}] run scoreboard players set #var sab.var 2
+#execute if entity @s[tag=sab.botHasMovementAbilities] if data storage sa_bots:generic get_sector_flags.list[{movement_gated:1}] run scoreboard players set #var sab.var 2
 
 #map-gated?
-execute if data storage sa_bots:generic get_sector_flags.list[{map_gated:1}] run scoreboard players set #var sab.var 2
+#execute if data storage sa_bots:generic get_sector_flags.list[{map_gated:1}] run scoreboard players set #var sab.var 2
+
+#bot with movement abilities will always use mode 2
+execute if entity @s[tag=sab.botHasMovementAbilities] run scoreboard players set #var sab.var 1
 
 
 #apply new nav settings

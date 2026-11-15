@@ -21,6 +21,10 @@ scoreboard players set @s sab.botWaypointApproachZ 1
 execute if score @s sab.botMoveLastTickX < @s sab.botMoveTargetX run scoreboard players set @s sab.botWaypointApproachX -1
 execute if score @s sab.botMoveLastTickZ < @s sab.botMoveTargetZ run scoreboard players set @s sab.botWaypointApproachZ -1
 
+#remember if we're following a sub-route or not (if following a sub-route, we should not interrupt ourselves)
+tag @s[tag=sab.botFollowingSubRoute] remove sab.botFollowingSubRoute
+execute if data entity @s data.move_targets[0].metadata{is_sub_route:1} run tag @s add sab.botFollowingSubRoute
+
 #remember the last 2 waypoints we targeted (only if not a sub-target)
 execute store result score #test sab.var run data get entity @s data.move_targets[0].id
 execute unless score #test sab.var matches 1.. run return 0

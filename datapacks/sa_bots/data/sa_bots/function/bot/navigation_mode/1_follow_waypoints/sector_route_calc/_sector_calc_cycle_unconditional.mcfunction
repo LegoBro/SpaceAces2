@@ -12,7 +12,7 @@ execute as @e[type=marker,tag=sab.nav_calc_next_tick] run function sa_bots:edito
 
 #nothing happened? finalize the current sector and quit out
 execute if score #nav_this_tick sab.var matches 0 run \
-    return run function sa_bots:bot/navigation_mode/1_follow_waypoints/sector_route_calc/finish_sector_route with storage sa_bots:waypoint
+    return run function sa_bots:bot/navigation_mode/1_follow_waypoints/sector_route_calc/finish_sector_route_unconditional with storage sa_bots:waypoint
 #=====
 #-------------------------
 

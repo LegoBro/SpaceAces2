@@ -10,5 +10,8 @@ data modify storage sa_bots:generic target.x set from entity @s Pos[0]
 data modify storage sa_bots:generic target.y set from entity @s Pos[1]
 data modify storage sa_bots:generic target.z set from entity @s Pos[2]
 
+#store whether this is a sub-route
+execute store result storage sa_bots:generic target.metadata.is_sub_route int 1 run scoreboard players get #is_sub_route sab.var
+
 #this is not a sub-target
-data modify storage sa_bots:generic target.metadata.is_sub_route set value 0
+data modify storage sa_bots:generic target.metadata.is_sub_target set value 0

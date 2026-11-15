@@ -12,3 +12,4 @@ scoreboard players set @s sab.botChaseTargetTime 12
 
 #go for it
 scoreboard players set @s sab.botNavigationMode 2
+tag @s remove sab.botFollowingSubRoute

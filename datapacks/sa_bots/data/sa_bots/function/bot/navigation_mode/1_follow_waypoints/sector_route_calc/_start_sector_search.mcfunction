@@ -37,27 +37,6 @@ execute if score #use_channel sab.var matches 17 run scoreboard players reset * 
 execute if score #use_channel sab.var matches 18 run scoreboard players reset * sab.navSectorCacheChannel18
 execute if score #use_channel sab.var matches 19 run scoreboard players reset * sab.navSectorCacheChannel19
 execute if score #use_channel sab.var matches 20 run scoreboard players reset * sab.navSectorCacheChannel20
-#unconditional
-execute if score #use_channel sab.var matches 1 run scoreboard players reset * sab.navSectorCacheChannelUC1
-execute if score #use_channel sab.var matches 2 run scoreboard players reset * sab.navSectorCacheChannelUC2
-execute if score #use_channel sab.var matches 3 run scoreboard players reset * sab.navSectorCacheChannelUC3
-execute if score #use_channel sab.var matches 4 run scoreboard players reset * sab.navSectorCacheChannelUC4
-execute if score #use_channel sab.var matches 5 run scoreboard players reset * sab.navSectorCacheChannelUC5
-execute if score #use_channel sab.var matches 6 run scoreboard players reset * sab.navSectorCacheChannelUC6
-execute if score #use_channel sab.var matches 7 run scoreboard players reset * sab.navSectorCacheChannelUC7
-execute if score #use_channel sab.var matches 8 run scoreboard players reset * sab.navSectorCacheChannelUC8
-execute if score #use_channel sab.var matches 9 run scoreboard players reset * sab.navSectorCacheChannelUC9
-execute if score #use_channel sab.var matches 10 run scoreboard players reset * sab.navSectorCacheChannelUC10
-execute if score #use_channel sab.var matches 11 run scoreboard players reset * sab.navSectorCacheChannelUC11
-execute if score #use_channel sab.var matches 12 run scoreboard players reset * sab.navSectorCacheChannelUC12
-execute if score #use_channel sab.var matches 13 run scoreboard players reset * sab.navSectorCacheChannelUC13
-execute if score #use_channel sab.var matches 14 run scoreboard players reset * sab.navSectorCacheChannelUC14
-execute if score #use_channel sab.var matches 15 run scoreboard players reset * sab.navSectorCacheChannelUC15
-execute if score #use_channel sab.var matches 16 run scoreboard players reset * sab.navSectorCacheChannelUC16
-execute if score #use_channel sab.var matches 17 run scoreboard players reset * sab.navSectorCacheChannelUC17
-execute if score #use_channel sab.var matches 18 run scoreboard players reset * sab.navSectorCacheChannelUC18
-execute if score #use_channel sab.var matches 19 run scoreboard players reset * sab.navSectorCacheChannelUC19
-execute if score #use_channel sab.var matches 20 run scoreboard players reset * sab.navSectorCacheChannelUC20
 
 #reset variables
 scoreboard players operation #nav_calc_sector sab.var = #goal_sector sab.var
