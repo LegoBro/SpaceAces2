@@ -25,3 +25,6 @@ scoreboard players operation #success sab.var = @s id
 
 #bots keep track of how many teammates are following them
 execute if entity @s[tag=sab.botEntity] run scoreboard players add @s sab.botFollowers 1
+
+#bot should not be doing any fancy tricks while navigating! followers might not be able to keep up
+scoreboard players set @s[tag=sab.botEntity,scores={sab.botSkill=4..,sab.botUsingUnconditionalNav=1..2}] sab.botUsingUnconditionalNav 0

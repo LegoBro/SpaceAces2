@@ -26,6 +26,7 @@ scoreboard players set #lowest_percent_hp_teammate sab.var 100
 #filter out targets based on various factors
 scoreboard players operation #skill sab.var = @s sab.botSkill
 scoreboard players operation #team sab.var = @s Team
+scoreboard players operation #bot_id_combat sab.var = @s id
 execute store result score #shoot_teammates sab.var run execute if entity @s[tag=sab.botMayShootTeammates]
 execute as @e[type=#projectile:has_hb,tag=sab.possibleTarget,distance=..25] run function sa_bots:bot/combat_logic/check_for_targets/filter_possible_targets
 #---------------------

@@ -26,6 +26,7 @@ scoreboard players operation #dz sab.var -= #bot_observed_z sab.var
 #capture entity coordinates so we can compare to what we saw last time
 scoreboard players set #observe_player sab.var 1
 execute store result score #observe_x sab.var run data get entity @s Pos[0] 100
+execute store result score #observe_y sab.var run data get entity @s Pos[1] 100
 execute store result score #observe_z sab.var run data get entity @s Pos[2] 100
 
 #lead the shot by a lot if we're using a slow-moving projectile

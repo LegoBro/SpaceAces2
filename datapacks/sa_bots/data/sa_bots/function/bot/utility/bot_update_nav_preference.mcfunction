@@ -53,6 +53,10 @@ execute if entity @s[tag=sab.botHas6BlockJump] if data storage sa_bots:generic g
 #bot with movement abilities will always use unconditional nav
 execute if entity @s[tag=sab.botHasMovementAbilities] run scoreboard players set #var sab.var 1
 
+
+#if we're a leader, don't use unconditional nav. our followers might not be able to reach us if we do something movement-gated.
+execute if entity @s[scores={sab.botFollowers=1..,sab.botSkill=4..}] if score #var sab.var matches 1..2 run scoreboard players set #var sab.var 0
+
 #if any blockable paths are open, we might use "open" nav
 scoreboard players set #count_blockable sab.var 0
 scoreboard players set #count_blockable_valid sab.var 0

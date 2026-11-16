@@ -71,6 +71,9 @@ scoreboard objectives add sab.botMoveRotationOffset dummy
 scoreboard objectives add sab.botMoveRotationOffsetTime dummy
 scoreboard objectives add sab.botObserveTargetX dummy
 scoreboard objectives add sab.botObserveTargetZ dummy
+scoreboard objectives add sab.botTargetLastSeenX dummy
+scoreboard objectives add sab.botTargetLastSeenY dummy
+scoreboard objectives add sab.botTargetLastSeenZ dummy
 scoreboard objectives add sab.botInSector dummy
 scoreboard objectives add sab.botInSectorPrevious dummy
 scoreboard objectives add sab.botSeekingEnemy dummy
@@ -89,6 +92,8 @@ scoreboard objectives add sab.botChaseTargetTime dummy
 scoreboard objectives add sab.botLimitedTaskTime dummy
 scoreboard objectives add sab.botLookForHealthCooldown dummy
 scoreboard objectives add sab.dHealth dummy
+scoreboard objectives add sab.botWantsToDetonateStickyBomb dummy
+scoreboard objectives add sab.botShootStickyBombQuota dummy
 
 #bot waypoint navigation
 scoreboard objectives add sab.botWPSearchCooldown dummy

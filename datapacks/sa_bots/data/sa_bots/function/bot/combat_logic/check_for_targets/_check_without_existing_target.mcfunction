@@ -7,10 +7,17 @@
 #if we find one, store it in "@s sab.botTargetEntityID"
 
 
+#get ready to check up on our own deployables
+scoreboard players set #check_deployables sab.var 0
+
 #---------------------
 #tag anything in our FOV that we might want to shoot
 function sa_bots:bot/combat_logic/check_for_targets/aggregate_possible_targets
 #---------------------
+
+#classes that shoot sticky bombs remember how many of them can hit targets
+execute if entity @s[tag=sab.botMonitorsStickyBombs] if score #check_deployables sab.var matches 1.. run \
+    scoreboard players operation @s sab.botWantsToDetonateStickyBomb > #check_deployables sab.var
 
 
 #shoot_priority:

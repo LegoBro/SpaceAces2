@@ -34,3 +34,7 @@ execute if entity @s[tag=sab.possibleTarget] run scoreboard players add #target_
 execute if entity @s[tag=sab.possibleTargetSustainer] run scoreboard players add #target_count_sustainer sab.var 1
 tag @s[tag=sab.possibleTargetSeeOnly] add sab.possibleTarget
 execute if entity @s[tag=sab.possibleTargetSeeOnly] run scoreboard players add #target_count_see_only sab.var 1
+
+
+#special case: check any sticky bombs that we own. if they're near an enemy player, we will try to detonate them
+execute if entity @s[tag=standby_sticky_bomb] if score @s owner = #bot_id_combat sab.var run function sa_bots:bot/combat_logic/check_for_targets/check_if_stickybomb_can_do_damage

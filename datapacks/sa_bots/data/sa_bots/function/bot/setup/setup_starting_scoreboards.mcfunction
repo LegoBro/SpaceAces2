@@ -12,6 +12,7 @@ scoreboard players set @s sab.dUltimateCharge -1
 scoreboard players set @s sab.reEvaluateBehaviorTime 0
 scoreboard players set @s sab.botUsingUnconditionalNav 0
 scoreboard players set @s sab.dHealth -1
+scoreboard players set @s sab.botWantsToDetonateStickyBomb 0
 #...
 
 #inputs

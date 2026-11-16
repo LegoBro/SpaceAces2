@@ -5,6 +5,7 @@
 scoreboard players set @s SelectedItem 0
 scoreboard players set @s sab.botRightClick10Hz -1
 tag @s[tag=input.swap_hands] remove input.swap_hands
+scoreboard players reset @s sab.botWantsToDetonateStickyBomb
 
 #we're not stuck!
 scoreboard players set @s sab.botTimeSinceProgress 0

@@ -81,6 +81,9 @@ execute if score @s Class matches 3 run tag @s add sab.botShootsAtLongDistance
 #some classes go for headshots at long range
 execute if score @s Class matches 3 run tag @s add sab.botLikesHeadshotsAtLongRange
 
+#some classes monitor deployables
+execute if score @s Class matches 4 run tag @s add sab.botMonitorsStickyBombs
+
 #some classes may tweak aggression or cooperativeness when at skill 4+
 execute if score @s sab.botSkill matches 4.. run function sa_bots:bot/setup/class/set_class_behavior_adjustments
 
