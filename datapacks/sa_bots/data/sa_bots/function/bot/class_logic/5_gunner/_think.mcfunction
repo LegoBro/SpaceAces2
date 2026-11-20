@@ -28,6 +28,9 @@ execute if entity @s[scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/c
 execute if score @s ultimate_charge >= class.gunner.ultimate.charge Numbers \
     if entity @s[tag=sab.botShootingActiveOpponent,scores={sab.lockedOntoEnemy=1..}] if function sa_bots:bot/class_logic/random_chance_10hz_skill_based_less_likely run function sa_bots:bot/class_logic/use_ultimate
 
+#override behavior when doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/5_gunner/scripted_actions
+
 
 #put the correct item in our hands
 execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air

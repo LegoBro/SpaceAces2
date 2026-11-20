@@ -1,4 +1,4 @@
-#executed by a bot
+#executed by a bot entity at 20hz
 #this should only be executed when the bot has a target within 25m (sab.botTargetEntityID matches 1..)
 #note: target can't be on our own team
 

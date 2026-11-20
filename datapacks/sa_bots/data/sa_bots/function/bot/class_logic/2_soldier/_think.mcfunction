@@ -38,6 +38,10 @@ tag @s[scores={SelectedItem=1}] add sab.botWeaponSlowProjectile
 tag @s[scores={SelectedItem=1}] add sab.botWeaponHasDownwardArc
 
 
+#override behavior when doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/2_soldier/scripted_actions
+
+
 #put the correct item in our hands
 execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
 execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -61 0 container.0

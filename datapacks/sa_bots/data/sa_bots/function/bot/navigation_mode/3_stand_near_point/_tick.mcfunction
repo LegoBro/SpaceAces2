@@ -1,4 +1,4 @@
-#executed by a bot
+#executed by a bot entity at 20hz
 
 
 #keep track of whether we're making progress toward our target

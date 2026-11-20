@@ -1,4 +1,4 @@
-#executed by a bot
+#executed by a bot entity at 20hz
 
 
 #count down time until we search for waypoints again

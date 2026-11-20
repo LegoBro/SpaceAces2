@@ -33,6 +33,7 @@ execute if score #shoot_at_head sab.var matches 1 if entity @s[type=#projectile:
 #\/ stuff that doesn't move (or at least not very quickly) \/
 execute if entity @s[tag=hb_mechanic_turret] run scoreboard players set #var sab.var 101
 execute if entity @s[tag=chem_dispenser] run scoreboard players set #var sab.var 102
+execute if entity @s[tag=standby_sticky_bomb] run scoreboard players set #var sab.var 102
 execute if entity @s[tag=rocket_wall] run scoreboard players set #var sab.var 103
 execute if entity @s[tag=vis_mine] run scoreboard players set #var sab.var 104
 

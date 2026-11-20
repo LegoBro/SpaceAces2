@@ -21,9 +21,9 @@ execute if score #observe_player sab.var matches 1.. run function sa_bots:bot/co
 scoreboard players set @s sab.botLookTime 30
 
 #if we lose line-of-sight later on, classes that monitor sticky bombs will shoot some sticky bombs
-execute if entity @s[tag=sab.botMonitorsStickyBombs,scores={sab.botSkill=2..4}] store result score @s sab.botShootStickyBombQuota run random value 0..3
-execute if entity @s[tag=sab.botMonitorsStickyBombs,scores={sab.botSkill=5..7}] store result score @s sab.botShootStickyBombQuota run random value 1..4
-execute if entity @s[tag=sab.botMonitorsStickyBombs,scores={sab.botSkill=8..}] store result score @s sab.botShootStickyBombQuota run random value 2..5
+execute if score #found_target sab.var matches 1..2 if entity @s[tag=sab.botMonitorsStickyBombs,scores={sab.botSkill=2..4}] store result score @s sab.botShootStickyBombQuota run random value 0..3
+execute if score #found_target sab.var matches 1..2 if entity @s[tag=sab.botMonitorsStickyBombs,scores={sab.botSkill=5..7}] store result score @s sab.botShootStickyBombQuota run random value 1..4
+execute if score #found_target sab.var matches 1..2 if entity @s[tag=sab.botMonitorsStickyBombs,scores={sab.botSkill=8..}] store result score @s sab.botShootStickyBombQuota run random value 2..5
 
 #when we make first LOS contact after not being able to see the enemy:
 #we might move towards the target depending on how confident we are

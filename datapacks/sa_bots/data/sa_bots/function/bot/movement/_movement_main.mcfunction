@@ -11,6 +11,7 @@ execute if score @s sab.botNavigationMode matches 0 run function sa_bots:bot/nav
 execute if score @s sab.botNavigationMode matches 1 run function sa_bots:bot/navigation_mode/1_follow_waypoints/_tick
 execute if score @s sab.botNavigationMode matches 2 run function sa_bots:bot/navigation_mode/2_combat/_tick
 execute if score @s sab.botNavigationMode matches 3 run function sa_bots:bot/navigation_mode/3_stand_near_point/_tick
+execute if score @s sab.botNavigationMode matches 4 run function sa_bots:bot/navigation_mode/4_manual_control/_tick
 #------------------------
 
 #jot down our coordinates so we can compare next tick

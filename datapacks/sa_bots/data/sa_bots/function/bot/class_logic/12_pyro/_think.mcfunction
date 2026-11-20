@@ -51,6 +51,10 @@ execute unless score @s ultimate.cooldown matches 1.. run tag @s[tag=sab.botWant
 
 
 
+
+#override behavior when doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/12_pyro/scripted_actions
+
 #put the correct item in our hands
 execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
 execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -51 0 container.0

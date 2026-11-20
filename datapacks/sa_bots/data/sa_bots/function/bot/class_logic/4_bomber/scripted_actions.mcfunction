@@ -22,3 +22,8 @@ execute if score @s sab.botScriptedAction matches 1001..2000 run function sa_bot
 
 #horizontal sticky jump
 execute if score @s sab.botScriptedAction matches 2001..2999 run function sa_bots:bot/class_logic/4_bomber/scripted_horizontal_sticky_jump
+
+
+
+#special behavior overrides that can apply to any class
+execute if score @s sab.botScriptedAction matches 10000.. run function sa_bots:bot/class_logic/0_fallback/scripted_actions

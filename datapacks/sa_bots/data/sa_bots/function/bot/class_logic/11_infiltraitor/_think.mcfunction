@@ -34,6 +34,9 @@ execute if score @s ultimate_charge >= class.infiltraitor.ultimate.charge Number
 
 
 
+#override behavior when doing a scripted action
+execute if score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/11_infiltraitor/scripted_actions
+
 #put the correct item in our hands
 execute unless score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand with air
 execute if score @s SelectedItem matches 0 run item replace entity @s weapon.mainhand from block 15 -52 0 container.0

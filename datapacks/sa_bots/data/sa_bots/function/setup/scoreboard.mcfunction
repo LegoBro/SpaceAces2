@@ -47,6 +47,7 @@ scoreboard objectives add sab.botForceAnglePitch100 dummy
 scoreboard objectives add sab.botForceAngleTime dummy
 scoreboard objectives add sab.botTargetAngleDifferenceYaw dummy
 scoreboard objectives add sab.botTargetAngleDifferencePitch dummy
+scoreboard objectives add sab.botManualControlTime dummy
 scoreboard objectives add sab.botNavThinkTime dummy
 scoreboard objectives add sab.reEvaluateBehaviorTime dummy
 scoreboard objectives add sab.botRightClick10Hz dummy

@@ -15,7 +15,7 @@ execute if entity @s[scores={reload=0,totalShots=..6,sab.botSkill=6..}] unless e
 
 #shoot stickybombs at saved coordinates when instructed to do so
 execute if entity @s[tag=!sab.botJumpNextLedge,scores={SelectedItem=0,sab.botShootStickyBombQuota=1..,sab.botTargetLastSeenX=-2147483648..2147483647,reload=..0,sab.botMoveState=0..1}] \
-    unless score @s sab.botLookMode matches 2 unless score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/4_bomber/shoot_stickybomb_at_last_seen_position
+    unless score @s sab.botLookMode matches 2..3 unless score @s sab.botScriptedAction matches 1.. run function sa_bots:bot/class_logic/4_bomber/shoot_stickybomb_at_last_seen_position
 #todo: make logic for bots shooting stickybombs at choke points, control points, etc
 
 
