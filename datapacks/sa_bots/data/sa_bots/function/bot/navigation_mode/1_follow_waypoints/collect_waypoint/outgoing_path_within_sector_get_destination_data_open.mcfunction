@@ -14,5 +14,8 @@ execute store result score #mark_id sab.var run data get entity @s UUID[3]
 #event 10 requires us to have a reference to this waypoint
 execute if score #set_event sab.var matches 10 run data modify storage sa_bots:generic uuid4 set from entity @s data.uuid4
 
+#should this waypoint be avoided?
+execute store result score #avoid_waypoint sab.var run execute if entity @s[tag=sab.avoidWaypoint]
+
 #store retreived data on a marker
 execute summon marker run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/marker_prepare_data

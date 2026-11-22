@@ -34,5 +34,6 @@ execute if score @s sab.botTask matches 21 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 22 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 23 run return run function sa_bots:bot/entity_task/_improvise_base_task
 execute if score @s sab.botTask matches 24 run return run function sa_bots:bot/entity_task/_improvise_base_task
-execute if score @s sab.botTask matches 25.. run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 25 run return run function sa_bots:bot/entity_task/_improvise_base_task
+execute if score @s sab.botTask matches 26.. run return run function sa_bots:bot/entity_task/_improvise_base_task
 #...

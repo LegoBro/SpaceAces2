@@ -1,6 +1,6 @@
 scoreboard players set #found_destination sab.var 0
 
-#specified enemy must exist and be on our team
+#specified player must exist and be on our team
 scoreboard players operation #team sab.var = @s Team
 scoreboard players add @s sab.botFollowingPlayer 0
 scoreboard players operation #get_id sab.var = @s sab.botFollowingPlayer

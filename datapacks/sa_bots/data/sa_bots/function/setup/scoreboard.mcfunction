@@ -80,6 +80,8 @@ scoreboard objectives add sab.botInSectorPrevious dummy
 scoreboard objectives add sab.botSeekingEnemy dummy
 scoreboard objectives add sab.botFollowingPlayer dummy
 scoreboard objectives add sab.botFollowers dummy
+scoreboard objectives add sab.botFollowingPlayerDefensive dummy
+scoreboard objectives add sab.botFollowersDefensive dummy
 scoreboard objectives add sab.botUsingUnconditionalNav dummy
 scoreboard objectives add sab.botScriptedAction dummy
 scoreboard objectives add sab.botTimeSinceCombat dummy

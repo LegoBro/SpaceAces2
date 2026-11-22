@@ -14,6 +14,12 @@ execute if score @s sab.botFollowers matches 1.. positioned ^ ^1.8 ^-1 summon te
 execute if score @s sab.botFollowingPlayer matches 1.. positioned ^ ^1.7 ^-1 summon text_display run function sa_bots:bot/debug/show_text_macro \
     {scale:"1.1f",text:'FOLLOWING'}
 
+#defending leader/follower
+execute if score @s sab.botFollowersDefensive matches 1.. positioned ^ ^1.8 ^-1 summon text_display run function sa_bots:bot/debug/show_text_macro \
+    {scale:"1.1f",text:'LEADINGdefense'}
+execute if score @s sab.botFollowingPlayerDefensive matches 1.. positioned ^ ^1.7 ^-1 summon text_display run function sa_bots:bot/debug/show_text_macro \
+    {scale:"1.1f",text:'FOLLOWINGdefense'}
+
 #tasks
 execute if data entity @s data.tasks[0] run data modify storage sa_bots:waypoint_info text_dump set from entity @s data.tasks[0].name
 execute if data entity @s data.tasks[0] positioned ~ ~2.2 ~ summon text_display run function sa_bots:bot/debug/show_text_macro \

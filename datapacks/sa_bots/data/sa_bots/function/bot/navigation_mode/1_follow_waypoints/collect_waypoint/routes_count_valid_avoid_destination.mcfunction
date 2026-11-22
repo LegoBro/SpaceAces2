@@ -19,8 +19,11 @@ execute if score #force_subroute sab.var matches 1 if score #connected_subroutes
 #=====
 
 #valid route if we get the bot further from the destination
-execute if score @s sab.markDistance > #distance_at_this_waypoint_confirm sab.var run tag @s add sab.routeValid
-execute if score @s sab.markDistance > #distance_at_this_waypoint_confirm sab.var run scoreboard players add #count_valid sab.var 1
+execute if score @s[tag=!sab.markAvoidWaypoint] sab.markDistance > #distance_at_this_waypoint_confirm sab.var run tag @s add sab.routeValid
+execute if score @s[tag=!sab.markAvoidWaypoint] sab.markDistance > #distance_at_this_waypoint_confirm sab.var run scoreboard players add #count_valid sab.var 1
 
 #count all routes
 scoreboard players add #count sab.var 1
+
+#count routes must be avoided
+execute if entity @s[tag=sab.markAvoidWaypoint] run scoreboard players add #count_avoid sab.var 1

@@ -15,6 +15,10 @@ scoreboard players set @s sab.botNavThinkTime 40
 scoreboard players set @s sab.botLastDestinationUUID -1
 execute if score #found_destination sab.var matches 1 if data entity @s data.destinations[0] store result score @s sab.botLastDestinationUUID run data get entity @s data.destinations[0].id
 
+#forget who we were following if this is a fallback from another task
+scoreboard players reset @s sab.botFollowingPlayer
+scoreboard players reset @s sab.botFollowingPlayerDefensive
+
 #set id and sector from storage
 data modify entity @s data.destinations set value []
 data modify entity @s data.destinations prepend from storage sa_bots:generic get_waypoint

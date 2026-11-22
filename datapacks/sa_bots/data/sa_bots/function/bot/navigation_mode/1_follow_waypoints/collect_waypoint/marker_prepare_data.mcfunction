@@ -17,6 +17,9 @@ execute if score #path_is_subroute sab.var matches 1 run scoreboard players add 
 #if this is event #10, store reference to the next marker
 execute if score #set_event sab.var matches 10 run data modify entity @s data.target_uuid4 set from storage sa_bots:generic uuid4
 
+#mark if this route should be avoided
+execute if score #avoid_waypoint sab.var matches 1 run tag @s add sab.markAvoidWaypoint
+
 
 #make sure this dies! it will be killed manually if valid, but if invalid it will be ignored and garbage collected
 scoreboard players set @s sab.lifespan 1

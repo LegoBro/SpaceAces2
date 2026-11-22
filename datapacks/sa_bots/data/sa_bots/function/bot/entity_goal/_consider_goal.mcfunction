@@ -75,6 +75,24 @@ execute if score @s sab.botGoal matches 1 unless score @s sab.botFollowers match
 
 
 #--------------------------
+#special behavior for "DEFEND" mode
+
+#if we have followers, we must stay in "DEFEND" mode
+execute if score @s sab.botFollowersDefensive matches 1.. run function sa_bots:bot/entity_goal/leader_refresh_follower_count
+execute if score @s sab.botFollowersDefensive matches 1.. run scoreboard players set @s sab.botGoal 2
+
+#don't follow anyone else if we're a leader
+execute if score @s sab.botFollowersDefensive matches 1.. run scoreboard players reset @s sab.botFollowingPlayerDefensive
+
+#if we've left "DEFEND" mode, we are no longer following a player
+execute unless score @s sab.botGoal matches 2 run scoreboard players reset @s sab.botFollowingPlayerDefensive
+
+#"DEFEND" goal: we might follow other players and hang out near them (if we aren't already a leader)
+execute if score @s sab.botGoal matches 2 unless score @s sab.botFollowersDefensive matches 1.. run function sa_bots:bot/entity_goal/defend_consider_following_someone
+#--------------------------
+
+
+#--------------------------
 #special behavior for certain gamemodes
 
 #control point: detect when the active control point changes

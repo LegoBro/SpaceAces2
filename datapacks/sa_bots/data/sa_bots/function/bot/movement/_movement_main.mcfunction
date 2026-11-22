@@ -50,7 +50,7 @@ scoreboard players remove @s[scores={sab.botJumpCooldown=1..}] sab.botJumpCooldo
 
 #------------------------
 #show various debug info
-function sa_bots:bot/debug/_entity_debug_tick
+execute if score #debug_bot_entity_ticking sab.var matches 1 run function sa_bots:bot/debug/_entity_debug_tick
 #------------------------
 
 #------------------------

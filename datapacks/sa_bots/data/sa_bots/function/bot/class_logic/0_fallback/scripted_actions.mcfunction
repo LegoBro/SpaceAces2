@@ -8,6 +8,7 @@ tag @s[tag=input.swap_hands] remove input.swap_hands
 scoreboard players reset @s sab.botWantsToDetonateStickyBomb
 scoreboard players set @s sab.botForceAngleTime 0
 scoreboard players set @s sab.botIgnoreAimTime 0
+tag @s[tag=sab.botRotateFast] remove sab.botRotateFast
 
 #victory animations
 execute if score @s sab.botScriptedAction matches 10000..10999 run function sa_bots:bot/class_logic/0_fallback/victory_animation_1

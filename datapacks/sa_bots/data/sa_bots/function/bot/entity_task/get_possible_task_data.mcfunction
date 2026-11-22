@@ -11,7 +11,7 @@ execute if score #choice sab.var matches ..0 run data modify storage sa_bots:gen
 execute if score #choice sab.var matches 1 run data modify storage sa_bots:generic new_task set value {id:1,name:"FIND_NEAREST_ENEMY",is_base_task:1,flags:{is_base_task:1,priority:22}}
 execute if score #choice sab.var matches 2 run data modify storage sa_bots:generic new_task set value {id:2,name:"FIND_SPECIFIC_ENEMY",is_base_task:1,flags:{is_base_task:1,priority:23}}
 execute if score #choice sab.var matches 3 run data modify storage sa_bots:generic new_task set value {id:3,name:"FIND_NEAREST_TEAMMATE",is_base_task:1,flags:{is_base_task:1,priority:12}}
-execute if score #choice sab.var matches 4 run data modify storage sa_bots:generic new_task set value {id:4,name:"FIND_SPECIFIC_TEAMMATE",is_base_task:1,flags:{is_base_task:1,priority:13}}
+execute if score #choice sab.var matches 4 run data modify storage sa_bots:generic new_task set value {id:4,name:"FIND_SPECIFIC_TEAMMATE",is_base_task:1,flags:{is_base_task:1,priority:14}}
 execute if score #choice sab.var matches 5 run data modify storage sa_bots:generic new_task set value {id:5,name:"FIND_HEALING",is_base_task:0,flags:{is_base_task:0,priority:30}}
 execute if score #choice sab.var matches 6 run data modify storage sa_bots:generic new_task set value {id:6,name:"GO_TO_PATROL_POINT",is_base_task:1,flags:{is_base_task:1,priority:4}}
 execute if score #choice sab.var matches 7 run data modify storage sa_bots:generic new_task set value {id:7,name:"GO_TO_SNIPER_SPOT",is_base_task:1,flags:{is_base_task:1,priority:5}}
@@ -33,4 +33,5 @@ execute if score #choice sab.var matches 22 run data modify storage sa_bots:gene
 execute if score #choice sab.var matches 23 run data modify storage sa_bots:generic new_task set value {id:23,name:"GO_TO_TURRET_SPOT_FRONT_LINE",is_base_task:1,flags:{is_base_task:1,priority:20,force_build:1}}
 execute if score #choice sab.var matches 24 run data modify storage sa_bots:generic new_task set value {id:24,name:"GO_TO_SNIPER_SPOT_FRONT_LINE",is_base_task:1,flags:{is_base_task:1,priority:5}}
 execute if score #choice sab.var matches 25 run data modify storage sa_bots:generic new_task set value {id:25,name:"GO_TO_EXPLOSIVE_VANTAGE_POINT",is_base_task:1,flags:{is_base_task:1,priority:5}}
+execute if score #choice sab.var matches 26 run data modify storage sa_bots:generic new_task set value {id:26,name:"GO_TO_SECTOR_OF_SPECIFIC_TEAMMATE",is_base_task:1,flags:{is_base_task:1,priority:13}}
 #...

@@ -76,6 +76,7 @@ scoreboard players set #event_failed sab.var 0
 #note: "#distance_at_this_waypoint_confirm sab.var" is the distance to destination at this waypoint
 scoreboard players set #count sab.var 0
 scoreboard players set #count_valid sab.var 0
+scoreboard players set #count_avoid sab.var 0
 execute unless entity @s[tag=sab.botRunAwayFromDestination] as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_count_valid
 execute if entity @s[tag=sab.botRunAwayFromDestination] as @e[type=marker,distance=..1,tag=sab.routeSort] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_count_valid_avoid_destination
 execute if score #count_valid sab.var matches 1.. run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/routes_pick_from_valid
@@ -118,7 +119,9 @@ execute if score #look_for_waypoint_tag sab.var matches 100000.. run \
 
 
 #if we didn't find anything valid, go into "roam" mode for a while
-execute if score #found_target sab.var matches 0 unless entity @s[tag=sab.doNotUpdateMoveTarget] run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets
+execute if score #found_target sab.var matches 0 unless score #count_avoid sab.var matches 1.. unless entity @s[tag=sab.doNotUpdateMoveTarget] run function sa_bots:bot/navigation_mode/0_roam/enter_roam_forget_move_targets
+#...or wait for a second, in the case that we're avoiding some obstacle
+execute if score #found_target sab.var matches 0 if score #count_avoid sab.var matches 1.. run scoreboard players set @s sab.botPauseTime 3
 
 
 #cleanup

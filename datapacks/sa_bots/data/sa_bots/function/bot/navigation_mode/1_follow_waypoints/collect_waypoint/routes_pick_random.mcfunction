@@ -13,4 +13,4 @@ execute if score #collected_waypoint_sector sab.var matches 0 if score #count sa
     as @e[type=marker,distance=..1,tag=sab.routeSort] if score @s sab.markId = #get_id sab.var run tag @s add sab.routeBanned
 
 #pick random
-execute as @e[type=marker,distance=..1,tag=sab.routeSort,tag=!sab.routeBanned,limit=1,sort=random] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/route_pick_go
+execute as @e[type=marker,distance=..1,tag=sab.routeSort,tag=!sab.routeBanned,tag=!sab.markAvoidWaypoint,limit=1,sort=random] run function sa_bots:bot/navigation_mode/1_follow_waypoints/collect_waypoint/route_pick_go

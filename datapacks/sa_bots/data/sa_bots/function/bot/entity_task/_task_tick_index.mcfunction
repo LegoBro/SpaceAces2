@@ -40,4 +40,5 @@ execute if score @s sab.botTask matches 22 run return run function sa_bots:bot/e
 execute if score @s sab.botTask matches 23 run return run function sa_bots:bot/entity_task/23_find_turret_spot_near_front_line/_logic_tick
 execute if score @s sab.botTask matches 24 run return run function sa_bots:bot/entity_task/24_find_sniper_spot_near_front_line/_logic_tick
 execute if score @s sab.botTask matches 25 run return run function sa_bots:bot/entity_task/25_find_vantage_point_near_front_line/_logic_tick
+execute if score @s sab.botTask matches 26 run return run function sa_bots:bot/entity_task/26_go_to_sector_of_specific_teammate/_logic_tick
 #...

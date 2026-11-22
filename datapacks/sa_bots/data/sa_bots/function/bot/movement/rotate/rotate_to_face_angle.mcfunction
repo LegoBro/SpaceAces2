@@ -22,6 +22,7 @@ scoreboard players operation #pitch sab.var -= @s sab.botForceAnglePitch100
 
 #set aim speed based on skill
 scoreboard players operation #var sab.var = @s sab.botSkill
+execute if entity @s[tag=sab.botRotateFast] run scoreboard players set #var sab.var 10
 
 #rotate to look towards target
 execute if score #var sab.var matches ..2 run function sa_bots:bot/movement/rotate/aim_speeds/1
