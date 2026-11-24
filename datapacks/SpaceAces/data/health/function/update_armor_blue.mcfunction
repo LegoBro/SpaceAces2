@@ -7,6 +7,4 @@ item replace entity @s[tag=pro,tag=!invis,team=blue] armor.chest with minecraft:
 item replace entity @s[tag=!pro,tag=!invis,team=blue] armor.feet with minecraft:leather_boots[!attribute_modifiers,dyed_color=1114367,enchantment_glint_override=false,enchantments={"binding_curse":1},unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 item replace entity @s[tag=pro,tag=!invis,team=blue] armor.feet with minecraft:chainmail_boots[!minecraft:attribute_modifiers,minecraft:enchantments={"minecraft:binding_curse":1},enchantment_glint_override=false,minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 
-function health:update
-
 return 1

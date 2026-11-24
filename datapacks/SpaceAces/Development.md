@@ -149,6 +149,10 @@ Spectate:
 
 replace texts with translates...
 
+Bugs:
+    Mechanic bots can get glowing while "driving" their drone
+    Mechanic turrets can't really hit some deployables
+
 Gamemode:
     Lost on payload...
     Delay Blue Spawning more on payload 30s total - also players
@@ -177,3 +181,10 @@ Benchmarks:
     Advanced Duplication - make x copies of games[0] game
     
     (/function sa_bots:setup/bots/default_bot_settings)
+
+ Texture Requests:
+    Blocks:
+        Cinnabar (see snow bowl near magma)
+    UI:
+        Bossbar
+        Team Prefix Icons

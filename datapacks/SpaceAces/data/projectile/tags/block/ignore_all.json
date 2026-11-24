@@ -30,6 +30,8 @@
 		"waxed_exposed_copper_grate",
 		"#pressure_plates",
 		"moving_piston",
-		"resin_clump"
+		"resin_clump",
+		"#cave_vines",
+		"vine"
 	]
 }

@@ -20,7 +20,7 @@ give @s written_book[written_book_content={title:"Arena Teleports",author:"Admin
     {"text":"\nReef Bunker",color:"#30e7ff",click_event:{"action":"run_command",command:"/tp @s 14335 100 0"}},\
     {"text":"\nSewage",color:"#60b44f",click_event:{"action":"run_command",command:"/tp @s 15359 100 0"}},\
     {"text":"\nSnow Bowl",color:"#b3b3b3",click_event:{"action":"run_command",command:"/tp @s 16383 100 0"}},\
-    {"text":"\n???",color:"#f700ff",click_event:{"action":"run_command",command:"/tp @s 17407 100 0"}},\
+    {"text":"\nSatellite",color:"#e4ddc0",click_event:{"action":"run_command",command:"/tp @s 17407 100 0"}},\
     {"text":"\n???",color:"#f700ff",click_event:{"action":"run_command",command:"/tp @s 18431 100 0"}},\
     {"text":"\n???",color:"#f700ff",click_event:{"action":"run_command",command:"/tp @s 19455 100 0"}}\
     ]\

@@ -42,6 +42,12 @@ data merge storage space_aces:maps {\
             "center":"11263 99 0",\
             "gamemodes":[]\
         },\
+        {\
+            "name":"satellite",\
+            "player_count":[1,16],\
+            "center":"17407 100 0",\
+            "gamemodes":[]\
+        },\
     ]\
 }
 

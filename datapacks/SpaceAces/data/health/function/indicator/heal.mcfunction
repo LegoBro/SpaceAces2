@@ -3,7 +3,6 @@
 scoreboard players operation #healing healing = @s healing
 scoreboard players operation #Class_Start id = @s id
 
-effect give @s minecraft:poison 1 0 true
 # Renew the indicator
 execute anchored eyes positioned ^ ^ ^ as @e[tag=heal_indicator,distance=..5] if score @s owner = #Class_Start id run return run function health:indicator/heal/renew
 # Spawn new indicator

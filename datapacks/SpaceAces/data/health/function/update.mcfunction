@@ -1,5 +1,5 @@
 ## Updates the display for the health
-scoreboard players set @s[scores={displayHealth=101..}] displayHealth 100
+#scoreboard players set @s[scores={displayHealth=101..}] displayHealth 100
 attribute @s[scores={displayHealth=100}] minecraft:max_health base set 20
 attribute @s[scores={displayHealth=95..99}] minecraft:max_health base set 19
 attribute @s[scores={displayHealth=90..94}] minecraft:max_health base set 18

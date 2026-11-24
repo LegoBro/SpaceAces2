@@ -1,0 +1,3 @@
+give @s pig_spawn_egg[item_model="dev/weak_health_pack",entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["weak_health_pack"]},custom_name={color:"#FB85FF","italic":false,"translate":"dev.weak_health_pack"}] 1
+give @s axolotl_spawn_egg[item_model="dev/strong_health_pack",entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["strong_health_pack"]},custom_name={color:"#934f96","italic":false,"translate":"dev.strong_health_pack"}] 1
+give @s axolotl_spawn_egg[item_model="dev/ult_pack",entity_data={id:"minecraft:marker",CustomNameVisible:1b,Tags:["ult_pack"]},custom_name={color:"#93e9ec","italic":false,"translate":"dev.ult_pack"}] 1

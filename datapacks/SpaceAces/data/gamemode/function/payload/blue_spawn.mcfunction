@@ -1,0 +1,1 @@
+execute as @a[tag=in_game,team=blue] at @s run function gamemode:comp/respawn/team

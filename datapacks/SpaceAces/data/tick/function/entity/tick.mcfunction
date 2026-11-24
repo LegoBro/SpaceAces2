@@ -18,7 +18,10 @@ kill @s[tag=kill,tag=laser,scores={crouching=3..}]
 
 
 # BOT
-execute if entity @s[tag=bot] at @s run function enemies:tick
+execute if entity @s[tag=bot] at @s run return run function enemies:tick
+
+execute if entity @s[type=item_display,tag=health_pack.icon] run function tick:entity/health_pack/icon
+
 # !items
 kill @s[type=minecraft:item]
 

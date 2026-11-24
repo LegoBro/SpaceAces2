@@ -15,3 +15,10 @@ tellraw @s[tag= dev.gamemode.payload,tag=dev.gamemode] [{text:"  [x] "},{transla
 
 tellraw @s[tag=!dev.gamemode.setback,tag=dev.gamemode] [{text:"  [ ] "},{translate:"gamemode.setback",color:yellow,click_event:{action:"run_command",command:"trigger dev set 2020"}}]
 tellraw @s[tag= dev.gamemode.setback,tag=dev.gamemode] [{text:"  [x] "},{translate:"gamemode.setback",color:green, click_event:{action:"run_command",command:"trigger dev set 2020"}}]
+
+# Weather
+tellraw @s[tag=!dev.weather] [{text:" [ ] "},{translate:"dev.weather",color:green ,click_event:{action:"run_command",command:"trigger dev set 5000"}}]
+tellraw @s[tag= dev.weather] [{text:" [x] "},{translate:"dev.weather",color:green ,click_event:{action:"run_command",command:"trigger dev set 5000"}}]
+
+tellraw @s[tag=dev.weather] [{text:"  "},{translate:"dev.weather.get_cloud_emitter",color:green ,click_event:{action:"suggest_command",command:"/data get entity @n[type=marker,tag=weather.cloud_emitter] data.weather"}}]
+tellraw @s[tag=dev.weather] [{text:"  "},{translate:"dev.weather.set_cloud_emitter",color:green ,click_event:{action:"suggest_command",command:"/data modify entity @n[type=marker,tag=weather.cloud_emitter] data.weather. set value "}}]

@@ -5,5 +5,5 @@ execute at @a run playsound minecraft:ui.toast.challenge_complete master @s 8 20
 schedule function gamemode:reset 10s
 tag @e[team=red] add winner
 data modify storage game_history:current game.winner set value "red"
-
+execute as @e[team=red,type=mannequin,tag=hb] at @s run function sa_bots:bot/class_logic/0_fallback/pick_random_victory_animation
 return 1

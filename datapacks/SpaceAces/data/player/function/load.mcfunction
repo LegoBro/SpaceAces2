@@ -32,4 +32,6 @@ gamemode adventure @s[gamemode=!adventure]
 tag @a remove winner
 tag @s remove stats
 
+attribute @s minecraft:jump_strength modifier remove minecraft:class.sniper.scope
+
 return 1

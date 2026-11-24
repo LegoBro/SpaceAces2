@@ -1,4 +1,4 @@
-item replace entity @s container.0 with minecraft:paper[item_model="rocketeer/grenade"]
+#item replace entity @s container.0 with minecraft:paper[item_model="rocketeer/grenade"]
 scoreboard players operation @s damage = class.rocketeer.1.damage Numbers
 scoreboard players operation @s critMult = class.rocketeer.1.critMult Numbers
 scoreboard players operation @s falloff = class.rocketeer.1.falloff Numbers

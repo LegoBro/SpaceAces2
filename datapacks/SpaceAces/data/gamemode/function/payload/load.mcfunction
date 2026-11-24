@@ -35,7 +35,8 @@ execute store result bossbar minecraft:main max run scoreboard players get gamem
 # Delayed spawn
 scoreboard players set bot.delayed_blue_spawn Numbers 1
 schedule function sa_bots:api/activation/deactivate_all_bots_blue 6s
-schedule function sa_bots:api/activation/activate_all_bots_blue 20s
+schedule function gamemode:payload/blue_start 6s
+schedule function sa_bots:api/activation/activate_all_bots_blue 30s
 scoreboard players set @a[tag=in_game,team=blue] i -600
 
 scoreboard players set gamemode.respawn.time.red Numbers 200

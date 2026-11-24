@@ -1,6 +1,7 @@
 ## Vis Mine becomes active
 tp @s ^ ^ ^0.5
 execute unless entity @s[tag=projectile.impact.hitbox] run summon armor_stand ^ ^ ^-0.5 {Invisible:1b,attributes:[{id:"minecraft:scale",base:0}],Tags:["deploying.vis_mine","ignore.projectiles","class.deployable","new"]}
+execute if entity @s[tag=projectile.impact.hitbox] run summon armor_stand ^ ^ ^ {Invisible:1b,attributes:[{id:"minecraft:scale",base:0}],Tags:["deploying.vis_mine","ignore.projectiles","class.deployable","new"]}
 
 tag @s remove kill
 tag @s remove raycast

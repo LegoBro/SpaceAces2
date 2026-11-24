@@ -147,7 +147,8 @@ data merge storage space_aces:class {\
             detonate_damage: 25,\
             detonate_critMult: 1.0,\
             detonate_falloff: 5,\
-            detonate_falloffStart: 0\
+            detonate_falloffStart: 0,\
+            health: 15\
         },\
         "1":{\
             cooldown: 20,\
@@ -283,7 +284,7 @@ data merge storage space_aces:class {\
         primary:{\
             reload: 2,\
             firerate: 0,\
-            damage: 6,\
+            damage: 4,\
             critMult: 1.5,\
             falloff: 1,\
             falloffStart: 25,\

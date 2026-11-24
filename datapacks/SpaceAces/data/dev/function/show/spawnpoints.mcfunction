@@ -5,3 +5,7 @@ execute as @e[type=marker,tag=red_spawn_point] at @s run particle block_crumble{
 execute as @e[type=marker,tag=general_spawn_point] at @s run particle block_crumble{block_state:white_concrete} ~ ~1 ~ 0 0 0 0 1 normal @a[tag=dev.spawnpoints]
 
 execute as @a[tag=dev.spawnpoints,gamemode=!adventure] at @s if entity @n[type=marker,tag=gamemode.spawnpoint,distance=..5] run title @s actionbar [{text:"Progression: "},{nbt:"data.progress",entity:"@n[type=marker,tag=gamemode.spawnpoint]"},", Current: ",{score:{name:"@n[type=marker,tag=gamemode.spawnpoint]",objective:"gamemode.spawnpoint.progress"},color:"green"}," Respawn Time: ",{nbt:"data.respawn_time",entity:"@n[type=marker,tag=gamemode.spawnpoint]"}]
+
+# Health Packs
+execute as @e[tag=strong_health_pack] at @s run particle heart
+execute as @e[tag=weak_health_pack] at @s run particle minecraft:damage_indicator

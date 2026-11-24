@@ -27,7 +27,8 @@ execute if entity @s[tag=input.right] as @n[type=item_display,tag=my_drone] at @
 execute store result score gametime Numbers run time query gametime
 scoreboard players operation gametime Numbers %= 3 Numbers
 
-execute if score gametime Numbers matches 0 run function class:4/mechanic/manual_override/shoot
+function class:4/helper/tag_enemies
+execute if score gametime Numbers matches 0 facing entity @n[tag=is_enemy,distance=..5] eyes run function class:4/mechanic/manual_override/shoot
 
 # Cleanup
 tag @e[type=item_display] remove my_drone

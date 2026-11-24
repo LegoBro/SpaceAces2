@@ -6,5 +6,4 @@ item replace entity @s[tag=pro,tag=!invis,tag=!escape,team=red] armor.chest with
 item replace entity @s[tag=!pro,tag=!invis,tag=!escape,team=red] armor.feet with minecraft:leather_boots[!minecraft:attribute_modifiers,minecraft:enchantments={"minecraft:binding_curse":1},enchantment_glint_override=false,minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]},dyed_color=16711680]
 item replace entity @s[tag=pro,tag=!invis,tag=!escape,team=red] armor.feet with minecraft:golden_boots[!minecraft:attribute_modifiers,minecraft:enchantments={"minecraft:binding_curse":1},enchantment_glint_override=false,minecraft:unbreakable={},tooltip_display={hidden_components:["unbreakable"]}]
 
-function health:update
 return 1

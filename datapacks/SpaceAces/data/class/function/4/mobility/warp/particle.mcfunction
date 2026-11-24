@@ -1,0 +1,1 @@
+$particle vibration{arrival_in_ticks:7,destination:{type:"block",pos:[$(end_x),$(end_y),$(end_z)]}} $(start_x) $(start_y) $(start_z) 0.25 0.25 0.25 0 50 normal
