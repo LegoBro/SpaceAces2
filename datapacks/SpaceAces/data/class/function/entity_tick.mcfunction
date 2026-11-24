@@ -28,3 +28,5 @@ execute if entity @s[tag=class.brawler.tornado] positioned ~ ~ ~ run return run 
 execute if entity @s[tag=class.mechanic.projector] positioned ~ ~ ~ run return run function class:4/mechanic/projector/standby
 
 execute if entity @s[tag=class.shocksmith.shocksplosion] positioned ~ ~ ~ run return run function class:4/shocksmith/shocksplosion/standby
+
+execute if entity @s[tag=class.helper.part] run return run function class:4/helper/death/part/tick

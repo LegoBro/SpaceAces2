@@ -53,6 +53,8 @@ scoreboard objectives add menu dummy
 scoreboard objectives add timeSinceLastRespawn dummy
 scoreboard objectives add respawnTime dummy
 
+scoreboard objectives add class.animation dummy
+
 # Player - Energy
 #scoreboard objectives add energy food
 scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm

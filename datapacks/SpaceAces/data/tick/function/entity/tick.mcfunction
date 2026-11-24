@@ -5,6 +5,7 @@ execute if entity @s[type=minecraft:item_frame] at @s run return run function ti
 execute if entity @s[tag=raycast,tag=!kill,tag=!class.deployable] at @s run return run function tick:raycast
 
 execute if entity @s[tag=raycast,tag=class.deployable] at @s run function tick:raycast
+execute if entity @s[tag=class.helper.animation] run function class:4/helper/animation
 execute if entity @s[tag=class.deployable] run return run function class:entity_tick
 
 

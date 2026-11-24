@@ -1,8 +1,10 @@
 
 
-execute if score @s i >= class.scientist.2.reload_rate Numbers run scoreboard players set @s i 0
+scoreboard players operation #interval Numbers = @s i
+scoreboard players operation #interval Numbers %= class.scientist.2.healing_rate Numbers
+
 ## If counter isn't at 0, skip
-execute if score @s i matches 1.. run return 0
+execute if score #interval Numbers matches 1.. run return 0
 
 particle minecraft:angry_villager ~ ~1 ~ 0.4 0.4 0.4 0 1 force @a
 execute as @e[type=#projectile:players,tag=hb,distance=..3] if score @s Team = #target_team Numbers run tag @s add class.target

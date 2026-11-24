@@ -34,7 +34,8 @@ data merge storage space_aces:maps {\
             "name":"snow_bowl",\
             "player_count":[1,32],\
             "center":"16383 99 0",\
-            "gamemodes":[]\
+            "gamemodes":[],\
+            "creator":"Flamingosaurus"\
         },\
         {\
             "name":"gray_caves",\
@@ -46,7 +47,15 @@ data merge storage space_aces:maps {\
             "name":"satellite",\
             "player_count":[1,16],\
             "center":"17407 100 0",\
-            "gamemodes":[]\
+            "gamemodes":[],\
+            "creator":"Robeens, Flamingosaurus"\
+        },\
+        {\
+            "name":"crystal_capture",\
+            "player_count":[1,10],\
+            "center":"18431 100 0",\
+            "gamemodes":[],\
+            "creator":"Robeens"\
         },\
     ]\
 }

@@ -6,11 +6,6 @@ execute as @a at @s run function player:tick
 execute as @e[type=!player,tag=!tick.ignore] at @s run function tick:entity/tick
 
 
-
-
-
-
-
 # Gamemode running/setup
 function gamemode:tick
 
