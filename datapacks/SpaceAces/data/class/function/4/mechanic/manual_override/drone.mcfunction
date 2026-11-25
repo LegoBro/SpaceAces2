@@ -6,7 +6,7 @@ execute if entity @s[type=player] unless entity @n[type=item_display,tag=my_dron
 execute if entity @s[tag=sab.botEntity] unless entity @n[type=item_display,tag=my_drone,distance=..2] run return run function class:4/mechanic/manual_override/return
 
 scoreboard players add @n[tag=my_drone,distance=..1] i 1
-execute if score @n[tag=my_drone,distance=..1] i >= class.mechanic.ultimate.duration Numbers run return run kill @n[tag=my_drone,distance=..1]
+execute if score @n[tag=my_drone,distance=..1] i >= class.mechanic.ultimate.duration Numbers as @n[tag=my_drone,distance=..1] run return run function class:4/mechanic/manual_override/death
 
 ## Phase in for animation stuff
 execute if score @n[tag=my_drone,distance=..1] i matches ..5 run return 5

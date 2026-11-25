@@ -11,6 +11,10 @@ scoreboard objectives add xpos dummy
 scoreboard objectives add ypos dummy
 scoreboard objectives add zpos dummy
 
+scoreboard objectives add xmot dummy
+scoreboard objectives add ymot dummy
+scoreboard objectives add zmot dummy
+
 # Gamemodes
 scoreboard objectives add gamemode dummy
 

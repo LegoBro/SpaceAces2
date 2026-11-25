@@ -11,7 +11,7 @@ scoreboard players operation place_id id = @s id
 function class:4/helper/tag_team
 execute at @n[tag=my_turret] as @e[type=#projectile:players,tag=hb] if score @s id = place_id id facing entity @e[distance=..10,tag=hb,tag=!is_on_team] feet run function projectile:boomer/create
 
-kill @e[tag=my_turret]
+execute as @n[tag=my_turret] at @s run function class:4/mechanic/turret/death
 
 scoreboard players set @s sab.hasTurret 0
 

@@ -1,11 +1,18 @@
 
+scoreboard players set @n[tag=turret_base,tag=!hb,distance=..0.01] sab.lifespan 2
+
+# Animation
+scoreboard players add @s i 1
+execute if score @s i matches 22 run item replace entity @s container.0 with stone[item_model="class/mechanic/turret/head"]
+execute if score @s i matches 22 run item replace entity @n[tag=turret_base,tag=!hb,distance=..0.01] container.0 with stone[item_model="class/mechanic/turret/base"]
+execute if score @s i matches ..22 run return 0
 
 # Get Owner
 scoreboard players operation place_id id = @s owner
 scoreboard players operation Team Team = @s Team
 
 execute as @e[type=#projectile:players,tag=hb] if score @s id = place_id id run tag @s add target.owner
-execute as @n[type=#projectile:players,tag=hb,tag=target.owner] unless score @s Class matches 9 run kill @e[distance=..1,tag=turret_base,sort=nearest,limit=1]
+execute as @n[type=#projectile:players,tag=hb,tag=target.owner] unless score @s Class matches 9 as @e[distance=..1,tag=turret_base,tag=class.deployable,sort=nearest,limit=1] run function class:4/mechanic/turret/death
 
 # Tag potential enemies
 execute if entity @s[tag=standard] as @e[tag=!ignore.projectiles,tag=!invis,distance=..30,tag=!ignore,tag=hb] unless score @s Team = Team Team run tag @s add target.enemy
@@ -39,8 +46,8 @@ tag @e[type=#projectile:players,tag=hb] remove target.owner
 tag @e remove target.enemy
 tag @e remove los_pass
 
-scoreboard players set @n[tag=turret_base,tag=!hb,distance=..0.01] sab.lifespan 5
-execute if score @s health matches ..0 run kill @s
+
+execute if score @s health matches ..0 run function class:4/mechanic/turret/death
 
 #say test
 return 1

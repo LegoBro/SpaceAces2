@@ -1,4 +1,6 @@
 summon minecraft:creeper ~ ~ ~ {ExplosionRadius:10b,Fuse:0s,ignited:1b,Invulnerable:true,Tags:["ignore.projectiles"]}
+particle minecraft:item{item:"minecraft:yellow_concrete_powder"} ~ ~ ~ 1 0 1 0.5 1000 force @a
+particle item{item:"yellow_stained_glass"} ~ ~ ~ 1 0 1 0.7 1000 force @a
 
 # Load in boomer stats
 scoreboard players set #healing Numbers 0

@@ -6,4 +6,4 @@ scoreboard players set @s ultimate.cooldown 0
 effect clear @s
 gamemode adventure
 tag @s remove class.mechanic.manual_override.drone_operator
-kill @e[tag=my_drone]
+execute as @e[tag=my_drone] run function class:4/mechanic/manual_override/death
